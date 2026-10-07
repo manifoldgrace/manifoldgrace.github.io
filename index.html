@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Manifold Grace | Grace Rosemary Nettey</title>
+
+  <meta name="description"
+        content="Manifold Grace is the public knowledge and portfolio space of Grace Rosemary Nettey, connecting research, technology, music, education, public life, heritage and creative practice.">
+
+  <meta name="author" content="Grace Rosemary Nettey">
+
+  <style>
+    :root {
+      --background: #faf9f7;
+      --text: #171717;
+      --muted: #686868;
+      --line: #dedbd6;
+      --card: #ffffff;
+      --accent: #171717;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      min-height: 62vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.75rem;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 9vw, 7.5rem);
+      font-weight: 500;
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      margin: 0;
+    }
+
+    .name {
+      margin-top: 28px;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+    }
+
+    .intro {
+      max-width: 700px;
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .areas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.88rem;
+      background: rgba(255,255,255,.45);
+    }
+
+    section {
+      padding: 72px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      min-height: 175px;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition:
+        transform 180ms ease,
+        border-color 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #999;
+    }
+
+    .card h2 {
+      margin: 0;
+      font-size: 1.45rem;
+      font-weight: 550;
+    }
+
+    .card p {
+      margin: 16px 0 0;
+      color: var(--muted);
+    }
+
+    .arrow {
+      margin-top: 26px;
+      font-size: 1.3rem;
+    }
+
+    .profile-links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .profile-link {
+      border-top: 1px solid var(--line);
+      padding: 18px 2px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .profile-link span {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer {
+      padding: 50px 0 65px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 90px 0;
+      }
+
+      .grid,
+      .profile-links {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: 150px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .card {
+        transition: none;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Grace Rosemary Nettey",
+    "alternateName": "Grace Rose",
+    "url": "https://manifoldgrace.github.io/",
+    "sameAs": [
+      "https://orcid.org/0009-0005-9805-5273",
+      "https://www.linkedin.com/in/gracerose-uk",
+      "https://link.me/gracerose",
+      "https://scholar.google.com/citations?user=nJoBMaIAAAAJ&hl=en",
+      "https://uk.pinterest.com/GracefulPerspectives/"
+    ],
+    "knowsAbout": [
+      "Artificial intelligence ethics",
+      "Technology",
+      "Governance",
+      "Education",
+      "Music",
+      "Public life"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+
+      <a href="/" class="brand">
+        Manifold Grace
+      </a>
+
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="professional.html">Professional</a>
+        <a href="creative.html">Creative</a>
+        <a href="archive.html">Archive</a>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+
+      <div class="eyebrow">
+        Public knowledge · portfolio · archive
+      </div>
+
+      <h1>
+        Manifold<br>Grace
+      </h1>
+
+      <div class="name">
+        Grace Rosemary Nettey
+      </div>
+
+      <p class="intro">
+        A multidimensional public space connecting research,
+        technology, music, education, public life, heritage
+        and creative practice.
+      </p>
+
+      <div class="areas">
+        <span class="tag">Research</span>
+        <span class="tag">Technology</span>
+        <span class="tag">Music</span>
+        <span class="tag">Education</span>
+        <span class="tag">Public Life</span>
+        <span class="tag">Heritage</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="wrap">
+
+      <div class="section-label">
+        Explore the manifold
+      </div>
+
+      <div class="grid">
+
+        <a class="card" href="research.html">
+          <div>
+            <h2>Research</h2>
+            <p>
+              AI ethics, governance, technology,
+              interdisciplinary inquiry and scholarship.
+            </p>
+          </div>
+          <div class="arrow">↗</div>
+        </a>
+
+        <a class="card" href="professional.html">
+          <div>
+            <h2>Professional</h2>
+            <p>
+              Technology, education, public service,
+              professional development and practice.
+            </p>
+          </div>
+          <div class="arrow">↗</div>
+        </a>
+
+        <a class="card" href="creative.html">
+          <div>
+            <h2>Creative</h2>
+            <p>
+              Music, sound, visual research,
+              performance and creative practice.
+            </p>
+          </div>
+          <div class="arrow">↗</div>
+        </a>
+
+        <a class="card" href="archive.html">
+          <div>
+            <h2>Archive</h2>
+            <p>
+              Heritage, genealogy, historical work,
+              selected projects and evolving records.
+            </p>
+          </div>
+          <div class="arrow">↗</div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="wrap">
+
+      <div class="section-label">
+        Public profiles
+      </div>
+
+      <div class="profile-links">
+
+        <a class="profile-link"
+           href="https://orcid.org/0009-0005-9805-5273"
+           target="_blank"
+           rel="noopener">
+          ORCID
+          <span>Research identity ↗</span>
+        </a>
+
+        <a class="profile-link"
+           href="https://scholar.google.com/citations?user=nJoBMaIAAAAJ&hl=en"
+           target="_blank"
+           rel="noopener">
+          Google Scholar
+          <span>Scholarship ↗</span>
+        </a>
+
+        <a class="profile-link"
+           href="https://www.linkedin.com/in/gracerose-uk"
+           target="_blank"
+           rel="noopener">
+          LinkedIn
+          <span>Professional ↗</span>
+        </a>
+
+        <a class="profile-link"
+           href="https://link.me/gracerose"
+           target="_blank"
+           rel="noopener">
+          Linkme
+          <span>Public hub ↗</span>
+        </a>
+
+        <a class="profile-link"
+           href="https://uk.pinterest.com/GracefulPerspectives/"
+           target="_blank"
+           rel="noopener">
+          Graceful Perspectives
+          <span>Visual research ↗</span>
+        </a>
+
+        <a class="profile-link"
+           href="https://github.com/manifoldgrace"
+           target="_blank"
+           rel="noopener">
+          GitHub
+          <span>Projects ↗</span>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+
+<footer>
+  <div class="wrap">
+    Manifold Grace · Grace Rosemary Nettey
+  </div>
+</footer>
+
+</body>
+</html>
