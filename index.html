@@ -2,25 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manifold Grace | Grace Rosemary Nettey</title>
-
-  <meta name="description"
-        content="Manifold Grace is the public knowledge and portfolio space of Grace Rosemary Nettey, connecting research, technology, music, education, public life, heritage and creative practice.">
-
+  <meta name="description" content="Manifold Grace is the public knowledge and portfolio space of Grace Rosemary Nettey, connecting research, technology, music, education, public life, heritage and creative practice.">
   <meta name="author" content="Grace Rosemary Nettey">
 
   <style>
     :root {
-      --background: #faf9f7;
-      --text: #171717;
-      --muted: #686868;
-      --line: #dedbd6;
-      --card: #ffffff;
-      --accent: #171717;
+      --bg: #0a0a0a;
+      --bg-secondary: #1a1a1a;
+      --text: #f5f5f5;
+      --text-muted: #a0a0a0;
+      --border: #2a2a2a;
+      --accent: #ffffff;
+      --hover: #e0e0e0;
     }
 
     * {
@@ -33,210 +28,362 @@
 
     body {
       margin: 0;
-      background: var(--background);
+      background: var(--bg);
       color: var(--text);
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Helvetica,
-        Arial,
-        sans-serif;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      letter-spacing: 0.3px;
     }
 
     a {
       color: inherit;
       text-decoration: none;
+      transition: color 200ms ease;
+    }
+
+    a:hover {
+      color: var(--hover);
     }
 
     .wrap {
-      width: min(1100px, 90%);
+      width: min(1000px, 92%);
       margin: 0 auto;
     }
 
+    /* Header & Navigation */
     header {
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 100;
     }
 
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 28px;
     }
 
     .brand {
-      font-weight: 650;
+      font-weight: 600;
       letter-spacing: -0.02em;
+      font-size: 1.1rem;
     }
 
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 22px;
-      color: var(--muted);
-      font-size: 0.95rem;
+      gap: 28px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: all 200ms ease;
     }
 
     .nav-links a:hover {
       color: var(--text);
+      border-bottom-color: var(--accent);
     }
 
+    /* Hero Section */
     .hero {
-      min-height: 62vh;
+      min-height: 65vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 80px 0;
+      padding: 120px 0 80px;
     }
 
     .eyebrow {
-      color: var(--muted);
+      color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.75rem;
-      margin-bottom: 20px;
+      letter-spacing: 0.15em;
+      font-size: 0.7rem;
+      margin-bottom: 28px;
+      font-weight: 600;
     }
 
     h1 {
-      font-size: clamp(3rem, 9vw, 7.5rem);
-      font-weight: 500;
-      line-height: 0.95;
-      letter-spacing: -0.055em;
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
       margin: 0;
     }
 
     .name {
-      margin-top: 28px;
-      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      margin-top: 32px;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
     }
 
     .intro {
-      max-width: 700px;
-      margin-top: 24px;
-      color: var(--muted);
-      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 680px;
+      margin-top: 26px;
+      color: var(--text-muted);
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      line-height: 1.8;
     }
 
     .areas {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 32px;
+      gap: 12px;
+      margin-top: 36px;
     }
 
     .tag {
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 0.88rem;
-      background: rgba(255,255,255,.45);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 8px 13px;
+      font-size: 0.8rem;
+      background: transparent;
+      color: var(--text-muted);
+      font-weight: 500;
+      transition: all 200ms ease;
     }
 
+    .tag:hover {
+      border-color: var(--text);
+      color: var(--text);
+    }
+
+    /* Sections */
     section {
-      padding: 72px 0;
-      border-top: 1px solid var(--line);
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
     }
 
     .section-label {
-      color: var(--muted);
-      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 25px;
+      letter-spacing: 0.15em;
+      margin-bottom: 32px;
+      font-weight: 600;
     }
 
+    /* Grid Cards */
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      gap: 20px;
     }
 
     .card {
-      min-height: 175px;
-      padding: 26px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--card);
+      min-height: 160px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      background: var(--bg-secondary);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition:
-        transform 180ms ease,
-        border-color 180ms ease;
+      transition: all 220ms ease;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      border-color: #999;
+      border-color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+      transform: translateY(-3px);
     }
 
     .card h2 {
       margin: 0;
-      font-size: 1.45rem;
-      font-weight: 550;
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
     }
 
     .card p {
-      margin: 16px 0 0;
-      color: var(--muted);
+      margin: 14px 0 0;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
     }
 
     .arrow {
-      margin-top: 26px;
-      font-size: 1.3rem;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      opacity: 0.6;
+      transition: opacity 200ms ease;
     }
 
-    .profile-links {
+    .card:hover .arrow {
+      opacity: 1;
+    }
+
+    /* Social Links Section */
+    .social-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .social-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
     }
 
-    .profile-link {
-      border-top: 1px solid var(--line);
-      padding: 18px 2px;
+    .social-link {
+      border: 1px solid var(--border);
+      padding: 24px;
+      background: var(--bg-secondary);
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
-      gap: 12px;
+      min-height: 120px;
+      transition: all 220ms ease;
+      position: relative;
+      overflow: hidden;
     }
 
-    .profile-link span {
-      color: var(--muted);
+    .social-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 220ms ease;
+    }
+
+    .social-link:hover {
+      border-color: var(--text);
+      background: rgba(255, 255, 255, 0.02);
+      transform: translateY(-4px);
+    }
+
+    .social-link:hover::before {
+      opacity: 1;
+    }
+
+    .social-link-name {
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .social-link-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .social-link-arrow {
+      margin-top: 16px;
+      font-size: 1.2rem;
+      opacity: 0.5;
+      transition: opacity 220ms ease;
+    }
+
+    .social-link:hover .social-link-arrow {
+      opacity: 1;
+    }
+
+    /* Alternative: Minimal Social Links */
+    .social-minimal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .social-dot {
+      position: relative;
+      padding-left: 16px;
+    }
+
+    .social-dot::before {
+      content: '·';
+      position: absolute;
+      left: 6px;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+    }
+
+    .social-dot:first-child::before {
+      content: '';
+      padding-left: 0;
+    }
+
+    .social-dot:first-child {
+      padding-left: 0;
+    }
+
+    .social-dot a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: all 200ms ease;
+    }
+
+    .social-dot a:hover {
+      color: var(--text);
+      border-bottom-color: var(--accent);
+    }
+
+    /* Footer */
+    footer {
+      padding: 56px 0 72px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
       font-size: 0.85rem;
     }
 
-    footer {
-      padding: 50px 0 65px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 720px) {
+    /* Responsive */
+    @media (max-width: 768px) {
       nav {
-        align-items: flex-start;
         flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
       }
 
       .nav-links {
-        gap: 14px;
+        gap: 18px;
+        font-size: 0.9rem;
       }
 
       .hero {
-        min-height: auto;
-        padding: 90px 0;
+        padding: 80px 0 60px;
       }
 
-      .grid,
-      .profile-links {
+      .grid {
         grid-template-columns: 1fr;
       }
 
-      .card {
-        min-height: 150px;
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 7vw, 3.5rem);
+      }
+
+      .social-minimal {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .social-dot {
+        padding-left: 0;
+      }
+
+      .social-dot::before {
+        content: '';
       }
     }
 
@@ -245,8 +392,8 @@
         scroll-behavior: auto;
       }
 
-      .card {
-        transition: none;
+      * {
+        transition: none !important;
       }
     }
   </style>
@@ -265,14 +412,7 @@
       "https://scholar.google.com/citations?user=nJoBMaIAAAAJ&hl=en",
       "https://uk.pinterest.com/GracefulPerspectives/"
     ],
-    "knowsAbout": [
-      "Artificial intelligence ethics",
-      "Technology",
-      "Governance",
-      "Education",
-      "Music",
-      "Public life"
-    ]
+    "knowsAbout": ["AI ethics", "Technology", "Governance", "Education", "Music", "Public life"]
   }
   </script>
 </head>
@@ -282,187 +422,149 @@
 <header>
   <div class="wrap">
     <nav aria-label="Main navigation">
-
-      <a href="/" class="brand">
-        Manifold Grace
-      </a>
-
+      <a href="/" class="brand">Manifold Grace</a>
       <div class="nav-links">
         <a href="about.html">About</a>
         <a href="research.html">Research</a>
         <a href="professional.html">Professional</a>
         <a href="creative.html">Creative</a>
+        <a href="faith.html">Faith</a>
         <a href="archive.html">Archive</a>
       </div>
-
     </nav>
   </div>
 </header>
-
 
 <main>
 
   <section class="hero">
     <div class="wrap">
-
-      <div class="eyebrow">
-        Public knowledge · portfolio · archive
-      </div>
-
-      <h1>
-        Manifold<br>Grace
-      </h1>
-
-      <div class="name">
-        Grace Rosemary Nettey
-      </div>
-
+      <div class="eyebrow">Public knowledge · Portfolio · Archive</div>
+      <h1>Manifold<br>Grace</h1>
+      <div class="name">Grace Rosemary Nettey</div>
       <p class="intro">
-        A multidimensional public space connecting research,
-        technology, music, education, public life, heritage
-        and creative practice.
+        A multidimensional public space connecting research, technology, music, education, public life, heritage and creative practice.
       </p>
-
       <div class="areas">
         <span class="tag">Research</span>
         <span class="tag">Technology</span>
         <span class="tag">Music</span>
         <span class="tag">Education</span>
         <span class="tag">Public Life</span>
-        <span class="tag">Heritage</span>
+        <span class="tag">Faith & Justice</span>
       </div>
-
     </div>
   </section>
 
-
   <section>
     <div class="wrap">
-
-      <div class="section-label">
-        Explore the manifold
-      </div>
-
+      <div class="section-label">Explore</div>
       <div class="grid">
-
         <a class="card" href="research.html">
           <div>
             <h2>Research</h2>
-            <p>
-              AI ethics, governance, technology,
-              interdisciplinary inquiry and scholarship.
-            </p>
+            <p>AI ethics, governance, law, policy, socio-technical systems and scholarship.</p>
           </div>
           <div class="arrow">↗</div>
         </a>
-
         <a class="card" href="professional.html">
           <div>
             <h2>Professional</h2>
-            <p>
-              Technology, education, public service,
-              professional development and practice.
-            </p>
+            <p>Practice, career, education, teaching, professional development and institutions.</p>
           </div>
           <div class="arrow">↗</div>
         </a>
-
         <a class="card" href="creative.html">
           <div>
             <h2>Creative</h2>
-            <p>
-              Music, sound, visual research,
-              performance and creative practice.
-            </p>
+            <p>Saxophone, music, performance, sound, gospel, worship and creative technology.</p>
           </div>
           <div class="arrow">↗</div>
         </a>
-
-        <a class="card" href="archive.html">
+        <a class="card" href="faith.html">
           <div>
-            <h2>Archive</h2>
-            <p>
-              Heritage, genealogy, historical work,
-              selected projects and evolving records.
-            </p>
+            <h2>Faith & Theology</h2>
+            <p>Theology, Christian public life, church, ministry and faith in institutional systems.</p>
           </div>
           <div class="arrow">↗</div>
         </a>
-
       </div>
-
     </div>
   </section>
 
-
-  <section>
+  <!-- SOCIAL LINKS SECTION - OPTION 1: CARD GRID -->
+  <section class="social-section">
     <div class="wrap">
-
-      <div class="section-label">
-        Public profiles
+      <div class="section-label">Connect & Follow</div>
+      <div class="social-grid">
+        <a class="social-link" href="https://link.me/gracerose" target="_blank" rel="noopener">
+          <div>
+            <div class="social-link-name">Linkme</div>
+            <div class="social-link-desc">Complete knowledge index & public hub</div>
+          </div>
+          <div class="social-link-arrow">↗</div>
+        </a>
+        <a class="social-link" href="https://orcid.org/0009-0005-9805-5273" target="_blank" rel="noopener">
+          <div>
+            <div class="social-link-name">ORCID</div>
+            <div class="social-link-desc">Research identity & publications</div>
+          </div>
+          <div class="social-link-arrow">↗</div>
+        </a>
+        <a class="social-link" href="https://scholar.google.com/citations?user=nJoBMaIAAAAJ&hl=en" target="_blank" rel="noopener">
+          <div>
+            <div class="social-link-name">Google Scholar</div>
+            <div class="social-link-desc">Scholarly work & citations</div>
+          </div>
+          <div class="social-link-arrow">↗</div>
+        </a>
+        <a class="social-link" href="https://www.linkedin.com/in/gracerose-uk" target="_blank" rel="noopener">
+          <div>
+            <div class="social-link-name">LinkedIn</div>
+            <div class="social-link-desc">Professional experience & network</div>
+          </div>
+          <div class="social-link-arrow">↗</div>
+        </a>
+        <a class="social-link" href="https://uk.pinterest.com/GracefulPerspectives/" target="_blank" rel="noopener">
+          <div>
+            <div class="social-link-name">Pinterest</div>
+            <div class="social-link-desc">Visual research & inspiration</div>
+          </div>
+          <div class="social-link-arrow">↗</div>
+        </a>
+        <a class="social-link" href="https://github.com/manifoldgrace" target="_blank" rel="noopener">
+          <div>
+            <div class="social-link-name">GitHub</div>
+            <div class="social-link-desc">Projects & technical work</div>
+          </div>
+          <div class="social-link-arrow">↗</div>
+        </a>
       </div>
-
-      <div class="profile-links">
-
-        <a class="profile-link"
-           href="https://orcid.org/0009-0005-9805-5273"
-           target="_blank"
-           rel="noopener">
-          ORCID
-          <span>Research identity ↗</span>
-        </a>
-
-        <a class="profile-link"
-           href="https://scholar.google.com/citations?user=nJoBMaIAAAAJ&hl=en"
-           target="_blank"
-           rel="noopener">
-          Google Scholar
-          <span>Scholarship ↗</span>
-        </a>
-
-        <a class="profile-link"
-           href="https://www.linkedin.com/in/gracerose-uk"
-           target="_blank"
-           rel="noopener">
-          LinkedIn
-          <span>Professional ↗</span>
-        </a>
-
-        <a class="profile-link"
-           href="https://link.me/gracerose"
-           target="_blank"
-           rel="noopener">
-          Linkme
-          <span>Public hub ↗</span>
-        </a>
-
-        <a class="profile-link"
-           href="https://uk.pinterest.com/GracefulPerspectives/"
-           target="_blank"
-           rel="noopener">
-          Graceful Perspectives
-          <span>Visual research ↗</span>
-        </a>
-
-        <a class="profile-link"
-           href="https://github.com/manifoldgrace"
-           target="_blank"
-           rel="noopener">
-          GitHub
-          <span>Projects ↗</span>
-        </a>
-
-      </div>
-
     </div>
   </section>
+
+  <!-- OPTIONAL: MINIMAL SOCIAL FOOTER -->
+  <!-- Uncomment to use minimal dot-style social links in footer instead
+  <section class="social-section" style="padding: 40px 0;">
+    <div class="wrap">
+      <div class="section-label">Online</div>
+      <div class="social-minimal">
+        <span class="social-dot"><a href="https://link.me/gracerose" target="_blank" rel="noopener">Linkme</a></span>
+        <span class="social-dot"><a href="https://orcid.org/0009-0005-9805-5273" target="_blank" rel="noopener">ORCID</a></span>
+        <span class="social-dot"><a href="https://scholar.google.com/citations?user=nJoBMaIAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a></span>
+        <span class="social-dot"><a href="https://www.linkedin.com/in/gracerose-uk" target="_blank" rel="noopener">LinkedIn</a></span>
+        <span class="social-dot"><a href="https://uk.pinterest.com/GracefulPerspectives/" target="_blank" rel="noopener">Pinterest</a></span>
+        <span class="social-dot"><a href="https://github.com/manifoldgrace" target="_blank" rel="noopener">GitHub</a></span>
+      </div>
+    </div>
+  </section>
+  -->
 
 </main>
 
-
 <footer>
   <div class="wrap">
-    Manifold Grace · Grace Rosemary Nettey
+    Manifold Grace — Grace Rosemary Nettey
   </div>
 </footer>
 
