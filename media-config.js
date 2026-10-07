@@ -1,7 +1,7 @@
 window.MANIFOLD_MEDIA_CONFIG = Object.freeze({
-  // Set this after deploying the secure API worker, for example:
-  // apiBase: "https://manifold-media.example.workers.dev"
+  // Set after deploying the secure API worker.
   apiBase: "",
   maxDurationSeconds: 300,
-  maxBytes: 536870912
+  maxBytes: 536870912,
+  maxImageBytes: 26214400
 });
