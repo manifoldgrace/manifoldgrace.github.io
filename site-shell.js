@@ -28,6 +28,8 @@
   });
 
   const secondary = [
+    ["Inspirations","inspirations.html"],
+    ["Biography","biographical-record.html"],
     ["Research Links","research-links.html"],
     ["Case Studies","case-studies.html"],
     ["Papers","papers.html"],
