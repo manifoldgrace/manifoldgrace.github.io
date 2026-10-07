@@ -4,8 +4,9 @@ compatibility_date = "2026-10-07"
 
 [vars]
 ALLOWED_ORIGIN = "https://manifoldgrace.github.io"
-MEDIA_FOLDER = "manifold-grace/live-sessions"
+MEDIA_FOLDER = "manifold-grace"
 MAX_VIDEO_BYTES = "536870912"
+MAX_IMAGE_BYTES = "26214400"
 
 # Add secrets outside source control:
 # wrangler secret put CLOUDINARY_API_SECRET
