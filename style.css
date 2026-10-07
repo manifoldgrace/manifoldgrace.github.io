@@ -159,3 +159,26 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 .record-index a{border:1px solid var(--line);padding:9px 12px;color:var(--muted)}
 .record-index a:hover{color:var(--text);border-color:#777}
 @media(max-width:800px){.archetype-grid,.bio-layout{grid-template-columns:1fr}.bio-infobox{order:-1}}
+
+.purpose-menu{max-width:980px}
+.purpose-menu details{border-top:1px solid var(--line)}
+.purpose-menu details:last-child{border-bottom:1px solid var(--line)}
+.purpose-menu summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0;color:var(--text);font-weight:650;font-size:clamp(1rem,1.8vw,1.25rem)}
+.purpose-menu summary::-webkit-details-marker{display:none}
+.purpose-detail{padding:0 0 20px;max-width:800px}
+.purpose-detail p:first-child{margin-top:0}
+.purpose-story-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+.purpose-story{min-height:180px;border:1px solid var(--line);background:var(--panel);padding:20px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px}
+.purpose-story span,.purpose-story small{color:#777;font-size:.8rem}
+.purpose-story.empty{background:linear-gradient(145deg,#121212,#0c0c0c)}
+.purpose-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);margin-top:24px}
+.purpose-checks>div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.purpose-checks>div:nth-child(odd){padding-right:18px}
+.purpose-checks>div:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}
+.purpose-checks span{color:#777;text-align:right}
+.purpose-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.purpose-actions span{border:1px solid var(--line);padding:10px 13px;color:#777;background:var(--panel)}
+@media(max-width:760px){
+  .purpose-story-grid,.purpose-checks{grid-template-columns:1fr}
+  .purpose-checks>div:nth-child(odd),.purpose-checks>div:nth-child(even){padding-left:0;padding-right:0;border-left:0}
+}
