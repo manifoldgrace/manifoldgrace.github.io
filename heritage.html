@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heritage | Grace Rose</title>
+  <meta name="description" content="Heritage — two corridors of family history: Ga-Dangme/Accra and English adoptive-biological kinship. Documented genealogy and ongoing research.">
+  <meta name="author" content="Grace Rosemary Nettey">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg-secondary: #1a1a1a;
+      --text: #f5f5f5;
+      --text-muted: #a0a0a0;
+      --border: #2a2a2a;
+      --accent: #ffffff;
+      --hover: #e0e0e0;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      letter-spacing: 0.3px;
+    }
+    a { color: inherit; text-decoration: none; transition: color 200ms ease; }
+    a:hover { color: var(--hover); }
+    .wrap { width: min(1000px, 92%); margin: 0 auto; }
+    header {
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .brand { font-weight: 600; letter-spacing: -0.02em; font-size: 1.1rem; }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+    .nav-links a {
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: all 200ms ease;
+    }
+    .nav-links a:hover {
+      color: var(--text);
+      border-bottom-color: var(--accent);
+    }
+    .page-header {
+      padding: 90px 0 54px;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: clamp(2.3rem, 7vw, 4rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0;
+    }
+    .page-intro {
+      max-width: 700px;
+      margin-top: 22px;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    main { padding: 70px 0; }
+    section { margin-bottom: 72px; }
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin: 0 0 18px;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin: 28px 0 12px;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+    p, li {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin: 0 0 18px;
+    }
+    ul { padding-left: 20px; }
+    .status-label {
+      display: inline-block;
+      margin: 0 0 18px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.02);
+    }
+    .panel {
+      border: 1px solid var(--border);
+      background: var(--bg-secondary);
+      padding: 26px;
+      margin: 18px 0;
+    }
+    .corridor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 28px 0;
+    }
+    .corridor-card {
+      border: 1px solid var(--border);
+      background: var(--bg-secondary);
+      padding: 24px;
+      transition: all 220ms ease;
+    }
+    .corridor-card:hover {
+      border-color: var(--text);
+      background: rgba(255,255,255,0.02);
+    }
+    .corridor-card h3 {
+      margin-top: 0;
+    }
+    .link-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 18px 0;
+    }
+    .link-item {
+      border: 1px solid var(--border);
+      padding: 18px;
+      background: rgba(255,255,255,0.01);
+      transition: all 220ms ease;
+      text-decoration: none;
+    }
+    .link-item:hover {
+      border-color: var(--text);
+      transform: translateY(-2px);
+    }
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin: 54px 0;
+    }
+    .definition-block {
+      border-left: 3px solid var(--border);
+      padding-left: 20px;
+      margin: 24px 0;
+      color: var(--text-muted);
+    }
+    footer {
+      padding: 56px 0 72px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    @media (max-width: 768px) {
+      nav { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .nav-links { gap: 16px; }
+      .page-header { padding-top: 70px; }
+      .corridor-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a href="/" class="brand">Manifold Grace</a>
+      <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="professional.html">Professional</a>
+        <a href="creative.html">Creative</a>
+        <a href="faith.html">Faith</a>
+        <a href="heritage.html">Heritage</a>
+        <a href="archive.html">Archive</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="page-header">
+      <h1>Heritage</h1>
+      <p class="page-intro">
+        Two corridors · one family archive. My heritage is reconstructed through a paternal Ga-Dangme line rooted in Accra, Ghana, and a maternal English line that includes both biological ancestry and legally established adoptive kinship.
+      </p>
+    </div>
+
+    <section>
+      <p>
+        This page records only what is <strong>documented, strongly supported, or clearly marked as under research</strong>. Living family members' names are withheld for privacy and safeguarding reasons; research is organized by generation and relationship instead.
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>01 — Ghanaian corridor</h2>
+      
+      <h3>Ga-Dangme · Accra · Nettey family tradition</h3>
+      
+      <span class="status-label">Recent generations DOCUMENTED · Earlier genealogy UNDER RESEARCH</span>
+
+      <p>
+        Paternal heritage is rooted in coastal Accra, with family associations across key Ga communities including <strong>Jamestown, Gbese, Ngleshie-Alata, Swalaba and Sonmenaa</strong>.
+      </p>
+
+      <h3>Recorded generations</h3>
+      <ul>
+        <li>Current generation (my father's generation)</li>
+        <li>Grandfather's generation: recorded genealogical work and family-history research</li>
+        <li>Earlier Nettey generations: currently under reconstruction</li>
+      </ul>
+
+      <h3>My grandfather's research archive</h3>
+      <div class="panel">
+        <p>
+          My grandfather carried out substantial family-history research including documented work on:
+        </p>
+        <ul>
+          <li>Family elders and descendants across multiple branches</li>
+          <li>Accra family geography and community associations</li>
+          <li>The <strong>Asafoatse Nettey family tradition</strong> and wider kinship networks</li>
+          <li>Earlier generational records (exact lineage bridge remains under active research)</li>
+        </ul>
+        <p>
+          Materials from my grandfather's archive are being systematically reviewed. His death in 2023 preserved a substantial body of genealogical work and family documentation.
+        </p>
+      </div>
+
+      <h3>Research status</h3>
+      <p>
+        Recent generations and Accra family geography are supported through documented family records and oral history. The exact genealogical bridge to earlier generations remains under research.
+      </p>
+
+      <h3>Further research</h3>
+      <div class="link-section">
+        <a href="#research-notes" class="link-item">
+          <strong>Research notes</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Ghanaian corridor investigation and methodology</p>
+        </a>
+        <a href="#genealogy-db" class="link-item">
+          <strong>Genealogy database</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Nettey family records and generational structure</p>
+        </a>
+        <a href="#sources" class="link-item">
+          <strong>Source register</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Accra family documentation and primary sources</p>
+        </a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>02 — English corridor</h2>
+      
+      <h3>Biological ancestry · legal adoption · Symondson family</h3>
+      
+      <span class="status-label">Adoptive lineage DOCUMENTED · Biological ancestry SUPPORTED · Extensions UNDER RESEARCH</span>
+
+      <p>
+        Maternal heritage includes documented English ancestry alongside an important legal-adoptive corridor that forms a primary axis of family identity and historical record.
+      </p>
+
+      <h3>The adoptive lineage</h3>
+      <div class="panel">
+        <p>
+          My grandmother's generation was legally adopted into the <strong>Symondson family</strong>, creating a formally documented kinship that shapes the recorded family history. This adoptive line connects to documented family records extending through multiple generations.
+        </p>
+      </div>
+
+      <h3>The Symondson family record</h3>
+      <p>The wider Symondson family record includes:</p>
+      <ul>
+        <li>Published genealogy with traceable generations</li>
+        <li>Military service records</li>
+        <li>Musical and civic histories</li>
+        <li>Professional records across law, public service and institutional life</li>
+      </ul>
+
+      <h3>Historical connection: Henry Symondson (1832–1911)</h3>
+      <div class="panel">
+        <p>
+          <strong>Henry Symondson (1832–1911)</strong> — recorded as a musician and Staff Sergeant in the Royal South Middlesex Militia. This lineage is documented in published genealogical sources and represents a meaningful musical heritage connection within the adoptive family record.
+        </p>
+        <p>
+          This historical connection is particularly relevant given my own musical practice and creative background.
+        </p>
+      </div>
+
+      <h3>Research status</h3>
+      <p>
+        The adoptive kinship is legally documented. The published Symondson genealogy is strongly supported and available through genealogical databases. Earlier biological ancestry is under active research with reference to available records.
+      </p>
+
+      <h3>External genealogy reference</h3>
+      <div class="panel">
+        <p>
+          The Symondson family genealogy is documented through:
+        </p>
+        <p>
+          <strong><a href="https://kimsimmonds.net/charts/pedigree_kim_10.html" target="_blank" rel="noopener">Kim Simmonds genealogy database</a></strong> — published pedigree charts and family records with comprehensive source documentation.
+        </p>
+      </div>
+
+      <h3>Further research</h3>
+      <div class="link-section">
+        <a href="#research-notes" class="link-item">
+          <strong>Research notes</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">English corridor investigation and adoptive kinship</p>
+        </a>
+        <a href="#genealogy-db" class="link-item">
+          <strong>Genealogy database</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Symondson family records and military service</p>
+        </a>
+        <a href="#sources" class="link-item">
+          <strong>Source register</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Published genealogy and primary source citations</p>
+        </a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>03 — Collateral historical connection</h2>
+      
+      <h3>The Beaufort connection: collateral adoption and wider genealogy</h3>
+      
+      <span class="status-label">Collateral adoption DOCUMENTED · Extended genealogy SUPPORTED · Biological descent NOT ESTABLISHED</span>
+
+      <p>
+        A collateral branch of the adoptive Symondson family married into the <strong>Deakin family</strong>.
+      </p>
+
+      <p>
+        The published genealogy of that branch traces through the <strong>Beaufort family to John of Gaunt and Edward III</strong>.
+      </p>
+
+      <h3>How to interpret this connection</h3>
+      <div class="panel">
+        <p>
+          This connection is carefully treated as a <strong>collateral adoptive-family connection</strong> — a traceable genealogical link through the adopted family's marriage network — not as proof of biological descent from the Beaufort or Plantagenet lines.
+        </p>
+        <p>
+          The distinction matters: my adopted grandmother's family married into a family whose genealogy traces to medieval nobility. This is a historical and genealogical fact worth preserving. It is not a biological inheritance claim.
+        </p>
+      </div>
+
+      <h3>Research status</h3>
+      <p>
+        The collateral Symondson-Deakin connection is documented in published genealogy. The wider Beaufort genealogy is well-established in heraldic and historical records. However, this represents a <em>family connection through adoption and marriage</em>, not a biological lineage claim.
+      </p>
+
+      <h3>Further research</h3>
+      <div class="link-section">
+        <a href="#research-notes" class="link-item">
+          <strong>Research notes</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Collateral connections and genealogical methodology</p>
+        </a>
+        <a href="#genealogy-db" class="link-item">
+          <strong>Genealogy database</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Deakin and Beaufort family records</p>
+        </a>
+        <a href="#sources" class="link-item">
+          <strong>Source register</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Published genealogy and heraldic sources</p>
+        </a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>04 — Wider family histories under research</h2>
+      
+      <h3>Law · public service · military service · music · civic life</h3>
+      
+      <span class="status-label">Families and professions UNDER RESEARCH · Proposed connections NOT YET ESTABLISHED</span>
+
+      <p>
+        The English corridor intersects with wider histories of:
+      </p>
+      <ul>
+        <li><strong>Law and legal practice</strong></li>
+        <li><strong>Public service and administration</strong></li>
+        <li><strong>Military service and militia records</strong></li>
+        <li><strong>Music and musical performance</strong></li>
+        <li><strong>Civic and institutional life</strong></li>
+      </ul>
+
+      <p>
+        Some proposed connections involving families such as <strong>Dolben, Digby and Noel</strong> remain under investigation. These are not presented here as established lineage until research is completed and sources verified.
+      </p>
+
+      <h3>Research status</h3>
+      <p>
+        Active investigation ongoing. Materials being collected and cross-referenced. Claims withheld pending verification.
+      </p>
+
+      <h3>Further research</h3>
+      <div class="link-section">
+        <a href="#research-notes" class="link-item">
+          <strong>Research notes</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Families under investigation and working hypotheses</p>
+        </a>
+        <a href="#sources" class="link-item">
+          <strong>Source register</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Working materials and preliminary findings</p>
+        </a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Why preserve both corridors</h2>
+      
+      <p>
+        These two corridors reflect different forms of continuity and kinship:
+      </p>
+
+      <div class="corridor-grid">
+        <div class="corridor-card">
+          <h3>Accra / Ga-Dangme</h3>
+          <p>
+            Lineage and place-based family history; community associations and oral tradition. Rooted in coastal Accra and wider Ga networks.
+          </p>
+        </div>
+        <div class="corridor-card">
+          <h3>English biological and adoptive kinship</h3>
+          <p>
+            Legal kinship and documented genealogy; cultural and professional inheritance. Rooted in formal adoption and traceable genealogical records.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        Manifold Grace preserves both corridors while keeping <strong>forms of relationship distinct</strong>: biological descent, legal adoption, collateral connection, and community belonging are treated as separate categories of family identity.
+      </p>
+
+      <h3>What this approach respects</h3>
+      <ul>
+        <li><strong>Genealogical accuracy</strong> — distinguishing between documented, supported, and under-research claims</li>
+        <li><strong>Legal and human relationships</strong> — honoring both biological and adoptive kinship as real and meaningful</li>
+        <li><strong>Cultural continuity</strong> — recognizing multiple axes of family belonging and inheritance</li>
+        <li><strong>Privacy and safeguarding</strong> — protecting living family members while preserving family history</li>
+      </ul>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Status labels explained</h2>
+
+      <h3>DOCUMENTED</h3>
+      <div class="definition-block">
+        Supported by primary sources (legal records, published genealogy, military records, official documentation). Verified through multiple independent sources where possible.
+      </div>
+
+      <h3>SUPPORTED</h3>
+      <div class="definition-block">
+        Based on well-established published sources, oral family history from direct witnesses, or strong circumstantial evidence. More verifiable than under-research claims but may require additional documentation.
+      </div>
+
+      <h3>UNDER RESEARCH</h3>
+      <div class="definition-block">
+        Active investigation in progress. Sources are being collected, cross-referenced, and evaluated. No claim made regarding accuracy or completeness until research is concluded.
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Research infrastructure</h2>
+
+      <p>
+        Heritage research is organized across the following resources:
+      </p>
+
+      <div class="link-section">
+        <a href="#" class="link-item">
+          <strong>Research notes</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Detailed methodology, research questions, and findings-in-progress for each corridor.</p>
+        </a>
+        <a href="https://kimsimmonds.net/charts/pedigree_kim_10.html" target="_blank" rel="noopener" class="link-item">
+          <strong>Genealogy database</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Kim Simmonds published genealogy with structured records, dates, relationships, and source citations.</p>
+        </a>
+        <a href="#" class="link-item">
+          <strong>Source register</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Complete register of primary and secondary sources: published genealogies, military records, legal documents, oral histories.</p>
+        </a>
+        <a href="#" class="link-item">
+          <strong>Methodology</strong>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Documentation of research approach, source evaluation, and standards for labeling claims.</p>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Grace Rose · Manifold Grace · Heritage archive maintained as part of public research and knowledge practice.
+  </div>
+</footer>
+
+</body>
+</html>
