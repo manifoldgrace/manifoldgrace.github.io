@@ -1,60 +1,66 @@
 # Manifold Grace media backend
 
-This folder is a reference backend for the **Live Sessions & Debates** page.
+This folder contains the reference backend for secure owner uploads used across Manifold Grace.
+
+## Collections
+
+The Worker supports allow-listed collections:
+
+- `live-sessions` — video, maximum 5 minutes
+- `public-speaking` — video or image
+- `faith` — video or image
+- `photos` — image only, maximum 3 published images per named slot
+- `venture` — image only, maximum 3 published images per named slot
+- `creative` — video or image
 
 ## Architecture
 
-The public site stays on GitHub Pages. GitHub Pages is static and should **not** contain API secrets or an upload token.
+GitHub Pages remains static and contains no API secret.
 
-The upload flow is therefore split:
+1. The owner selects media in a page form.
+2. The browser requests a signed upload from the Worker using the private `UPLOAD_KEY`.
+3. The Worker validates the collection, media type and claimed file size, then signs a Cloudinary upload without exposing `CLOUDINARY_API_SECRET`.
+4. The browser uploads directly to Cloudinary over HTTPS into that collection's `pending` folder.
+5. The browser sends the resulting public ID to `/api/validate`.
+6. The Worker reads authoritative provider metadata and validates media type, format, byte size and (for video) duration.
+7. Portfolio slot limits are checked server-side where configured.
+8. Valid media is moved to `published`; invalid media is removed.
+9. `GET /api/media` returns sanitised published metadata only.
 
-1. The owner selects one video in `live-sessions.html`.
-2. The browser requests a signed upload from this Worker.
-3. The Worker checks the private `UPLOAD_KEY` and signs a Cloudinary upload without exposing `CLOUDINARY_API_SECRET`.
-4. The browser sends the video **directly to Cloudinary over HTTPS** into a private-to-the-site `pending` folder.
-5. The browser sends the resulting `public_id` back to `/api/validate`.
-6. The Worker fetches authoritative media metadata and rejects/deletes files that are longer than 300 seconds, too large, or in a disallowed format.
-7. A valid clip is moved from `pending` to the `published` folder. Only that folder is exposed by `GET /api/clips`, so an interrupted validation request cannot accidentally publish an unchecked upload.
-8. `GET /api/clips` returns a sanitised public list for the website.
+The legacy `GET /api/clips` route remains for the Live Sessions page.
 
 ## Security properties
 
-- No Cloudinary API secret is committed to GitHub.
-- The private upload key is a Worker secret, not JavaScript source.
-- The page does not store the upload key in localStorage or sessionStorage.
-- Uploads are signed server-side and sent directly to the media provider.
-- Origin checks restrict normal browser calls to the configured Manifold Grace origin.
-- Authentication is still required even if an attacker spoofs an Origin header.
-- Metadata is sanitised before signing and before returning to the public page.
-- The signing endpoint also checks the browser-reported file size to prevent accidental oversized uploads before transfer; server-side metadata remains authoritative.
-- Server-side checks are authoritative for duration, byte size, media type and format.
-- Unvalidated uploads never appear in the public feed.
-- Invalid uploads are deleted.
-- Public output is JSON only and the frontend inserts text with `textContent`, reducing XSS risk.
-- Playback is opt-in: no autoplay.
+- Cloudinary API secret and private upload key are never committed to GitHub.
+- The page does not store the private upload key in localStorage or sessionStorage.
+- Only allow-listed collections and media types can be signed.
+- Server-side validation is authoritative.
+- Unvalidated uploads do not appear in public galleries.
+- Invalid media is deleted.
+- Public output is JSON and frontend captions are inserted with DOM text nodes rather than arbitrary HTML.
+- Browser-origin checks restrict normal site traffic to Manifold Grace; authentication is still required for writes.
+- Media playback is opt-in and does not autoplay.
 
-## Required secrets / variables
-
-Configure the Worker with:
+## Required Worker configuration
 
 - `CLOUDINARY_CLOUD_NAME`
 - `CLOUDINARY_API_KEY`
-- `CLOUDINARY_API_SECRET` **as a secret**
-- `UPLOAD_KEY` **as a long random secret**
+- `CLOUDINARY_API_SECRET` as a secret
+- `UPLOAD_KEY` as a long random secret
 - `ALLOWED_ORIGIN=https://manifoldgrace.github.io`
-- optional `MEDIA_FOLDER=manifold-grace/live-sessions`
+- optional `MEDIA_FOLDER=manifold-grace`
 - optional `MAX_VIDEO_BYTES=536870912`
+- optional `MAX_IMAGE_BYTES=26214400`
 
-Never place `UPLOAD_KEY` or `CLOUDINARY_API_SECRET` in `media-config.js`.
+Never put `UPLOAD_KEY` or `CLOUDINARY_API_SECRET` in `media-config.js`.
 
-## Deployment outline
+## Deployment
 
-1. Create a Cloudinary account/project and obtain its cloud name and API credentials.
-2. Create a Cloudflare Worker and deploy `worker.js`.
-3. Add the variables/secrets above in Worker settings (or with Wrangler).
+1. Create the Cloudinary project.
+2. Deploy `worker.js` to a Cloudflare Worker.
+3. Add the variables and secrets above in Worker settings.
 4. Test `GET /api/health`.
-5. Put the Worker HTTPS URL in `media-config.js` as `apiBase`.
-6. Redeploy GitHub Pages.
-7. Test with a short expendable clip before using original material.
+5. Put the Worker HTTPS URL into `media-config.js` as `apiBase`.
+6. Test first with expendable media before using originals.
 
-The page is intentionally non-destructive while `apiBase` is blank: visitors can view the prepared interface, but no upload can occur until a secure backend is explicitly connected.
+Until `apiBase` is configured, the public pages remain readable and upload forms fail safely rather than exposing credentials or pretending an upload succeeded.
