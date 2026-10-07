@@ -71,3 +71,61 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 .progress-shell{height:4px;background:var(--line);overflow:hidden;margin-top:18px}
 .progress-bar{width:0;height:100%;background:var(--text);transition:width .18s linear}
 @media(max-width:760px){.form-grid{grid-template-columns:1fr}}
+
+[hidden]{display:none!important}
+.shell-head{display:flex;justify-content:space-between;align-items:center;gap:28px}
+.nav-links a[aria-current="page"]{color:var(--text)}
+.footer-links{display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:18px}
+.footer-links a{color:var(--muted)}
+.footer-links a:hover{color:var(--text)}
+.footer-note{font-size:.82rem;margin:0;color:#777}
+.personal-note{max-width:960px;border-left:1px solid #555;padding:6px 0 6px clamp(18px,3vw,38px)}
+.personal-note p{font-family:"Snell Roundhand","Segoe Print","Bradley Hand",cursive;font-size:clamp(1.05rem,1.6vw,1.35rem);line-height:1.75;color:#d7d2c9;margin:0 0 18px}
+.personal-note .signature{display:block;margin-top:12px;font-size:1.15em;color:var(--text)}
+.numbered-corpus details,.case-groups details,.portfolio-slot{border-top:1px solid var(--line);padding:18px 0}
+.numbered-corpus details:last-child,.case-groups details:last-child,.portfolio-slot:last-child{border-bottom:1px solid var(--line)}
+.numbered-corpus summary,.case-groups summary,.portfolio-slot summary{cursor:pointer;color:var(--text);font-weight:600;letter-spacing:-.01em}
+.numbered-corpus ol{margin:18px 0 4px;padding-left:28px}
+.numbered-corpus li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.numbered-corpus li:last-child{border-bottom:0}
+.numbered-corpus a:hover{color:var(--text)}
+.search-label{display:block;margin:24px 0 8px;color:var(--text);font-size:.9rem}
+.site-search{width:min(720px,100%);border:1px solid var(--line);background:#0d0d0d;color:var(--text);padding:13px 14px;font:inherit}
+.site-search:focus{outline:1px solid #777;outline-offset:1px}
+.case-item{padding:18px 0 8px;max-width:850px}
+.case-item+.case-item{border-top:1px solid rgba(255,255,255,.06)}
+.text-link{display:inline-block;margin-top:8px;color:var(--text);border-bottom:1px solid #666}
+.paper-actions{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.button-link{display:inline-block;border:1px solid #777;background:var(--text);color:var(--bg);padding:10px 15px;font-weight:650}
+.button-link.secondary{background:transparent;color:var(--text);border-color:var(--line)}
+.pdf-shell{border:1px solid var(--line);background:#050505;margin-top:24px;overflow:hidden}
+.pdf-reader{display:block;width:100%;height:min(78vh,980px);min-height:560px;border:0;background:#050505}
+.small-note{font-size:.82rem;color:#85817b}
+.systems-grid,.life-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.system-node{border:1px solid var(--line);background:var(--panel);padding:20px;display:grid;gap:7px}
+.system-node span{color:var(--muted);font-size:.92rem}
+.clean-list,.archive-index{margin:20px 0 0;padding-left:24px}
+.clean-list li,.archive-index li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.media-empty{border:1px dashed #444;padding:22px;margin-top:20px;color:var(--muted);background:#0e0e0e}
+.media-empty.compact{padding:16px}
+.media-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;margin-top:18px}
+.media-item{margin:0;border:1px solid var(--line);background:var(--panel);overflow:hidden}
+.media-item img,.media-item video{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#050505}
+.media-item video{aspect-ratio:16/9;object-fit:contain}
+.media-item figcaption{padding:14px;display:grid;gap:5px}
+.media-item figcaption small{color:#777}
+.media-item figcaption p{margin:4px 0 0;font-size:.9rem}
+.photo-grid .media-item img{aspect-ratio:3/4;object-position:center}
+.owner-tool{max-width:760px}
+.portfolio-slots{display:grid;gap:0}
+.venture-list{max-width:900px}
+.cv-layout>div{padding:34px 0;border-bottom:1px solid var(--line)}
+.social-grid{align-items:stretch}
+@media(max-width:900px){
+  .shell-head{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:760px){
+  .systems-grid,.life-grid{grid-template-columns:1fr}
+  .pdf-reader{min-height:65vh;height:65vh}
+  .personal-note p{font-family:"Segoe Print","Bradley Hand",cursive;font-size:1rem;line-height:1.7}
+}
