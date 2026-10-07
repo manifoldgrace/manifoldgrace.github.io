@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Live Sessions & Debates | Manifold Grace</title>
+  <meta name="description" content="Selected short clips from TikTok Live sessions, public discussions and debates involving Grace Rosemary Nettey.">
+  <meta name="author" content="Grace Rosemary Nettey">
+  <link rel="stylesheet" href="style.css">
+  <script src="media-config.js" defer></script>
+  <script src="live-sessions.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a href="/" class="brand">Manifold Grace</a>
+    <nav aria-label="Main navigation"><div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="professional.html">Professional</a>
+      <a href="creative.html">Creative</a>
+      <a href="live-sessions.html">Live Sessions</a>
+      <a href="faith.html">Faith</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="recognition.html">Recognition</a>
+      <a href="archive.html">Archive</a>
+    </div></nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero"><div class="wrap">
+    <div class="eyebrow">Manifold Grace · Public discussion archive</div>
+    <h1>Live Sessions & Debates</h1>
+    <p class="page-intro">A developing archive of short excerpts from TikTok Live sessions, public discussions and debates. Clips are intended to preserve useful arguments, questions, exchanges and moments of public reasoning without presenting an edited snippet as a substitute for the full conversation.</p>
+  </div></div>
+
+  <section><div class="wrap">
+    <span class="status">ARCHIVE IN DEVELOPMENT</span>
+    <h2>What this page will hold</h2>
+    <p>The archive will focus on clips of up to five minutes at a time, selected because they capture a substantive point: an argument, a challenge, a clarification, an evidence-based contribution, a disagreement or a useful exchange. Where a clip comes from a longer live session, the surrounding context should be described sufficiently for a viewer to understand what question was being discussed.</p>
+    <p>No clips are published yet. When material becomes available, each item can carry a title, topic, date and short contextual note, allowing the collection to develop into a searchable record of public-facing discussion rather than a loose social-media reel.</p>
+  </div></section>
+
+  <section><div class="wrap">
+    <span class="status">PUBLISHED CLIPS</span>
+    <h2>Selected excerpts</h2>
+    <p>Published clips will appear here in reverse chronological order. Video is loaded with browser controls and metadata only, so visitors decide whether to play an item rather than having clips autoplay.</p>
+    <p>Only files that pass the server-side publishing checks are returned to this public list. The upload system is designed to keep the private upload credential out of the website source code and to reject material that exceeds the five-minute limit or falls outside the permitted video formats.</p>
+    <div id="clipStatus" class="notice" role="status" aria-live="polite">No clips published yet.</div>
+    <div id="clipGrid" class="video-grid" aria-live="polite"></div>
+  </div></section>
+
+  <section><div class="wrap">
+    <span class="status">OWNER UPLOAD</span>
+    <h2>Upload a clip</h2>
+    <p>This uploader is prepared for individual clips in common web and mobile video formats, including MP4, WebM, MOV / QuickTime, M4V and OGV. A browser-side check gives immediate feedback where video metadata can be read, while the backend performs the authoritative validation after upload.</p>
+    <p>The upload credential is entered only when needed and is kept in memory for the current page session; it is never written into this repository or saved to browser storage. The video itself is uploaded directly to the media provider over HTTPS, so the signing service does not have to relay a large video file.</p>
+
+    <details class="upload-panel">
+      <summary>Open owner uploader</summary>
+      <form id="uploadForm" novalidate>
+        <div class="form-grid">
+          <label>Title
+            <input id="clipTitle" name="title" type="text" maxlength="120" required autocomplete="off">
+          </label>
+          <label>Topic
+            <input id="clipTopic" name="topic" type="text" maxlength="80" autocomplete="off">
+          </label>
+          <label>Recorded date
+            <input id="clipDate" name="recorded_date" type="date">
+          </label>
+          <label>Private upload key
+            <input id="uploadKey" name="upload_key" type="password" required autocomplete="off" spellcheck="false">
+          </label>
+        </div>
+
+        <label>Context
+          <textarea id="clipDescription" name="description" maxlength="500" rows="4" placeholder="Briefly explain the question, exchange or surrounding context."></textarea>
+        </label>
+
+        <label class="file-picker">Video file
+          <input id="videoFile" name="video" type="file"
+            accept="video/mp4,video/webm,video/quicktime,video/x-m4v,video/ogg,.mp4,.webm,.mov,.m4v,.ogv"
+            required>
+        </label>
+
+        <p class="form-help">One clip at a time · maximum duration 5:00 · no autoplay · server-side format, duration and size validation.</p>
+        <div class="progress-shell" aria-hidden="true"><div id="uploadProgress" class="progress-bar"></div></div>
+        <p id="uploadStatus" class="notice" role="status" aria-live="polite">Choose a clip when you are ready.</p>
+        <button id="uploadButton" class="button" type="submit">Upload securely</button>
+      </form>
+    </details>
+  </div></section>
+
+  <section><div class="wrap">
+    <span class="status">EDITORIAL STANDARD</span>
+    <h2>Context, provenance & disputes</h2>
+    <p>Short clips can distort a longer discussion if they are detached from the question being answered or the sequence of the exchange. For that reason, this archive should record dates and context where known and should distinguish a direct quotation or visible event from an interpretation of what the exchange means.</p>
+    <p>If a claim made in a debate is disputed, the archive can retain the clip while separately noting the strength of the available evidence: documented, highly probable, probable, plausible, unresolved or contradicted. The purpose is preservation and analysis, not presenting every statement made in a live discussion as established fact.</p>
+  </div></section>
+</main>
+
+<footer><div class="wrap">Manifold Grace · Grace Rosemary Nettey</div></footer>
+</body>
+</html>
