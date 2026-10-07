@@ -4,46 +4,168 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photos | Manifold Grace</title>
-  <meta name="description" content="Selected visual material and visual research from Grace Rosemary Nettey's public creative archive.">
+  <meta name="description" content="A structured professional photo portfolio for Grace Rosemary Nettey, organised for cross-industry use.">
   <meta name="author" content="Grace Rosemary Nettey">
   <link rel="stylesheet" href="style.css">
-  
+  <script src="site-config.js" defer></script>
+  <script src="site-shell.js" defer></script>
+  <script src="media-config.js" defer></script><script src="media-library.js" defer></script>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <a href="/" class="brand">Manifold Grace</a>
-    <nav aria-label="Main navigation">
-      <div class="nav-links">
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="professional.html">Professional</a>
-        <a href="creative.html">Creative</a>
-        <a href="live-sessions.html">Live Sessions</a>
-        <a href="faith.html">Faith</a>
-        <a href="heritage.html">Heritage</a>
-        <a href="recognition.html">Recognition</a>
-        <a href="archive.html">Archive</a>
-      </div></nav>
-  </div>
-</header>
+<header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main>
-  <div class="page-hero"><div class="wrap">
-    <div class="eyebrow">Manifold Grace · Grace Rosemary Nettey</div>
-    <h1>Photos</h1>
-    <p class="page-intro">A small visual doorway into the wider creative archive: photography, visual references and curation connected to Graceful Perspectives.</p>
-  </div></div>
+  <div class="page-hero"><div class="wrap"><div class="eyebrow">Manifold Grace · Grace Rosemary Nettey</div><h1>Photos</h1><p class="page-intro">A restrained photo portfolio influenced by professional agency presentation but adapted for a multidisciplinary public profile. The categories make it easy for creative, corporate, speaking, media or casting-related visitors to find the kind of image they need without turning the page into an endless gallery.</p></div></div>
   
 <section><div class="wrap">
-  <span class="status">VISUAL REFERENCE</span>
-  <h2>Graceful Perspectives</h2>
-  <p>My Pinterest practice combines inspiration with visual research, planning, continuing professional development, reading references, techniques, Black history, nature, style and selected photographic material.</p>
-  <div class="grid">
-    <a class="link-card" href="https://uk.pinterest.com/GracefulPerspectives/" target="_blank" rel="noopener"><strong>Open Graceful Perspectives</strong><small>Public Pinterest profile</small></a>
-    <a class="link-card" href="creative.html"><strong>Creative practice</strong><small>Music, sound and visual curation</small></a>
-  </div>
+  <span class="status">PROFESSIONAL PHOTO SET</span><h2>Portfolio standard</h2>
+  <p>The page is organised around useful image types rather than chronological posting. Each category holds no more than three images at this stage, keeping the presentation selective enough for professional viewing while allowing different sides of the work to be represented.</p>
+  <p>Images should be current enough to be recognisable, appropriately lit and free from unnecessary location or personal metadata. The goal is not to impose a physical ideal; it is to give different industries a clear, accurate visual reference.</p>
 </div></section>
+<section><div class="wrap portfolio-slots">
+  <details class="portfolio-slot" open>
+    <summary>01 · Headshot / portrait</summary>
+    <p>A clear face-forward portrait suitable for professional profiles, speaking pages, press references or biography use.</p>
+    <p class="small-note">Maximum three published images in this category. Select images for clarity, expression and professional usefulness rather than quantity.</p>
+    <div data-media-status class="notice">No images published in this category yet.</div>
+    <div class="media-gallery photo-grid" data-media-gallery data-collection="photos" data-media-type="image" data-slot="headshot"></div>
+    <details class="upload-panel owner-tool"><summary>Upload headshot / portrait</summary>
+  <form data-media-upload data-collection="photos" data-media-type="image" data-slot="headshot">
+    <div class="form-grid">
+      <label>Title<input name="title" type="text" maxlength="120" autocomplete="off"></label>
+      <label>Recorded / created date<input name="recorded_date" type="date"></label>
+      <label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+    </div>
+    <label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+    <label>File<input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.avif,.heic,.heif" required></label>
+    <div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+    <p class="notice" data-upload-status role="status">Choose a file when you are ready.</p>
+    <button class="button" type="submit">Upload securely</button>
+  </form></details>
+  </details>
+  <details class="portfolio-slot" open>
+    <summary>02 · Full length</summary>
+    <p>A neutral full-length image that shows overall presentation without relying on elaborate styling or scenery.</p>
+    <p class="small-note">Maximum three published images in this category. Select images for clarity, expression and professional usefulness rather than quantity.</p>
+    <div data-media-status class="notice">No images published in this category yet.</div>
+    <div class="media-gallery photo-grid" data-media-gallery data-collection="photos" data-media-type="image" data-slot="full-length"></div>
+    <details class="upload-panel owner-tool"><summary>Upload full length</summary>
+  <form data-media-upload data-collection="photos" data-media-type="image" data-slot="full-length">
+    <div class="form-grid">
+      <label>Title<input name="title" type="text" maxlength="120" autocomplete="off"></label>
+      <label>Recorded / created date<input name="recorded_date" type="date"></label>
+      <label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+    </div>
+    <label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+    <label>File<input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.avif,.heic,.heif" required></label>
+    <div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+    <p class="notice" data-upload-status role="status">Choose a file when you are ready.</p>
+    <button class="button" type="submit">Upload securely</button>
+  </form></details>
+  </details>
+  <details class="portfolio-slot" open>
+    <summary>03 · Side profile</summary>
+    <p>A clean profile-angle photograph, useful where a more traditional agency-style visual set is expected.</p>
+    <p class="small-note">Maximum three published images in this category. Select images for clarity, expression and professional usefulness rather than quantity.</p>
+    <div data-media-status class="notice">No images published in this category yet.</div>
+    <div class="media-gallery photo-grid" data-media-gallery data-collection="photos" data-media-type="image" data-slot="side-profile"></div>
+    <details class="upload-panel owner-tool"><summary>Upload side profile</summary>
+  <form data-media-upload data-collection="photos" data-media-type="image" data-slot="side-profile">
+    <div class="form-grid">
+      <label>Title<input name="title" type="text" maxlength="120" autocomplete="off"></label>
+      <label>Recorded / created date<input name="recorded_date" type="date"></label>
+      <label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+    </div>
+    <label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+    <label>File<input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.avif,.heic,.heif" required></label>
+    <div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+    <p class="notice" data-upload-status role="status">Choose a file when you are ready.</p>
+    <button class="button" type="submit">Upload securely</button>
+  </form></details>
+  </details>
+  <details class="portfolio-slot" open>
+    <summary>04 · Three-quarter / mid-length</summary>
+    <p>A flexible portrait crop for corporate, editorial and creative contexts.</p>
+    <p class="small-note">Maximum three published images in this category. Select images for clarity, expression and professional usefulness rather than quantity.</p>
+    <div data-media-status class="notice">No images published in this category yet.</div>
+    <div class="media-gallery photo-grid" data-media-gallery data-collection="photos" data-media-type="image" data-slot="three-quarter"></div>
+    <details class="upload-panel owner-tool"><summary>Upload three-quarter / mid-length</summary>
+  <form data-media-upload data-collection="photos" data-media-type="image" data-slot="three-quarter">
+    <div class="form-grid">
+      <label>Title<input name="title" type="text" maxlength="120" autocomplete="off"></label>
+      <label>Recorded / created date<input name="recorded_date" type="date"></label>
+      <label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+    </div>
+    <label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+    <label>File<input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.avif,.heic,.heif" required></label>
+    <div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+    <p class="notice" data-upload-status role="status">Choose a file when you are ready.</p>
+    <button class="button" type="submit">Upload securely</button>
+  </form></details>
+  </details>
+  <details class="portfolio-slot" open>
+    <summary>05 · Natural / lifestyle</summary>
+    <p>A relaxed but intentional image showing personality in an ordinary or contextual setting without disclosing private location details.</p>
+    <p class="small-note">Maximum three published images in this category. Select images for clarity, expression and professional usefulness rather than quantity.</p>
+    <div data-media-status class="notice">No images published in this category yet.</div>
+    <div class="media-gallery photo-grid" data-media-gallery data-collection="photos" data-media-type="image" data-slot="lifestyle"></div>
+    <details class="upload-panel owner-tool"><summary>Upload natural / lifestyle</summary>
+  <form data-media-upload data-collection="photos" data-media-type="image" data-slot="lifestyle">
+    <div class="form-grid">
+      <label>Title<input name="title" type="text" maxlength="120" autocomplete="off"></label>
+      <label>Recorded / created date<input name="recorded_date" type="date"></label>
+      <label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+    </div>
+    <label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+    <label>File<input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.avif,.heic,.heif" required></label>
+    <div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+    <p class="notice" data-upload-status role="status">Choose a file when you are ready.</p>
+    <button class="button" type="submit">Upload securely</button>
+  </form></details>
+  </details>
+  <details class="portfolio-slot" open>
+    <summary>06 · Professional / technical environment</summary>
+    <p>Studio, AV, sound-desk, academic, speaking or other working environments that visibly support the professional story.</p>
+    <p class="small-note">Maximum three published images in this category. Select images for clarity, expression and professional usefulness rather than quantity.</p>
+    <div data-media-status class="notice">No images published in this category yet.</div>
+    <div class="media-gallery photo-grid" data-media-gallery data-collection="photos" data-media-type="image" data-slot="professional-tech"></div>
+    <details class="upload-panel owner-tool"><summary>Upload professional / technical environment</summary>
+  <form data-media-upload data-collection="photos" data-media-type="image" data-slot="professional-tech">
+    <div class="form-grid">
+      <label>Title<input name="title" type="text" maxlength="120" autocomplete="off"></label>
+      <label>Recorded / created date<input name="recorded_date" type="date"></label>
+      <label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+    </div>
+    <label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+    <label>File<input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.avif,.heic,.heif" required></label>
+    <div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+    <p class="notice" data-upload-status role="status">Choose a file when you are ready.</p>
+    <button class="button" type="submit">Upload securely</button>
+  </form></details>
+  </details>
+  <details class="portfolio-slot" open>
+    <summary>07 · Creative / editorial</summary>
+    <p>More expressive imagery for music, art, media or editorial contexts, while remaining consistent with the wider Manifold Grace identity.</p>
+    <p class="small-note">Maximum three published images in this category. Select images for clarity, expression and professional usefulness rather than quantity.</p>
+    <div data-media-status class="notice">No images published in this category yet.</div>
+    <div class="media-gallery photo-grid" data-media-gallery data-collection="photos" data-media-type="image" data-slot="creative-editorial"></div>
+    <details class="upload-panel owner-tool"><summary>Upload creative / editorial</summary>
+  <form data-media-upload data-collection="photos" data-media-type="image" data-slot="creative-editorial">
+    <div class="form-grid">
+      <label>Title<input name="title" type="text" maxlength="120" autocomplete="off"></label>
+      <label>Recorded / created date<input name="recorded_date" type="date"></label>
+      <label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+    </div>
+    <label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+    <label>File<input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.avif,.heic,.heif" required></label>
+    <div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+    <p class="notice" data-upload-status role="status">Choose a file when you are ready.</p>
+    <button class="button" type="submit">Upload securely</button>
+  </form></details>
+  </details>
+</div></section>
+<section><div class="wrap"><h2>Visual research</h2><p>The modelling-style portfolio is distinct from visual research. Inspiration boards, photography references, planning and other image collections remain under Graceful Perspectives rather than being mixed into this professional set.</p><p>This keeps Photos useful to people who need a quick professional visual reference while Creative can carry the broader aesthetic and experimental material.</p>
+<a class="link-card" href="https://uk.pinterest.com/GracefulPerspectives/" target="_blank" rel="noopener"><strong>Graceful Perspectives</strong><small>Visual research and curation</small></a></div></section>
 </main>
-<footer><div class="wrap">Manifold Grace · Grace Rosemary Nettey</div></footer>
+<footer><div class="wrap" data-site-footer></div></footer>
 </body>
 </html>
