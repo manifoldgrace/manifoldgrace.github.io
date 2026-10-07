@@ -129,3 +129,33 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
   .pdf-reader{min-height:65vh;height:65vh}
   .personal-note p{font-family:"Segoe Print","Bradley Hand",cursive;font-size:1rem;line-height:1.7}
 }
+
+.observation-grid{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.observation-grid span{border:1px solid var(--line);padding:8px 11px;color:var(--muted);font-size:.84rem}
+.archetype-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:26px}
+.archetype-card{border:1px solid var(--line);background:var(--panel);padding:22px}
+.archetype-card h3{font-size:1.18rem;margin:4px 0 10px}
+.archetype-card p{margin:0 0 14px}
+.archetype-card ol{margin:0;padding-left:22px}
+.archetype-card li{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.archetype-card li:last-child{border-bottom:0}
+.archetype-kicker{font-size:.72rem;letter-spacing:.16em;color:#777}
+.bio-layout{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,.8fr);gap:30px;align-items:start}
+.bio-infobox{border:1px solid var(--line);background:var(--panel)}
+.bio-infobox-title{padding:14px 16px;border-bottom:1px solid var(--line);font-weight:650}
+.bio-infobox dl{margin:0}
+.bio-infobox dl>div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06)}
+.bio-infobox dl>div:last-child{border-bottom:0}
+.bio-infobox dt{color:#85817b;font-size:.8rem}
+.bio-infobox dd{margin:0;color:var(--text);font-size:.88rem}
+.media-module-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px;margin-top:24px}
+.media-module{border:1px solid var(--line);background:var(--panel);overflow:hidden}
+.module-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.module-bar a{color:var(--muted);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
+.module-bar a:hover{color:var(--text)}
+.module-body{padding:18px;min-height:120px}
+.module-body p{margin:0}
+.record-index{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.record-index a{border:1px solid var(--line);padding:9px 12px;color:var(--muted)}
+.record-index a:hover{color:var(--text);border-color:#777}
+@media(max-width:800px){.archetype-grid,.bio-layout{grid-template-columns:1fr}.bio-infobox{order:-1}}
