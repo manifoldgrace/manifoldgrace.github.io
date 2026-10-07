@@ -3,6 +3,7 @@
   const site = window.MANIFOLD_SITE || {};
   const navItems = [
     ["About","about.html"],
+    ["My Book","my-book.html"],
     ["Research","research.html"],
     ["Professional","professional.html"],
     ["Creative","creative.html"],
