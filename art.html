@@ -11,6 +11,8 @@
   <script src="site-config.js" defer></script>
   <script src="site-shell.js" defer></script>
   
+  <script src="media-config.js" defer></script>
+  <script src="media-library.js" defer></script>
 </head>
 <body>
 <header><div class="wrap shell-head">
@@ -34,7 +36,26 @@
   <p>No painting series is published on Manifold Grace yet. When work is added, the page will favour a small number of strong images and expandable process notes rather than a dense wall of thumbnails.</p>
   <p>This leaves room for the visual language to evolve without locking the portfolio into an aesthetic that later work may outgrow.</p>
 </div></section>
-</main>
+<section><div class="wrap">
+<span class="status">SELECTED MEDIA</span><h2>Art media</h2>
+<p>Finished paintings, work-in-progress documentation and process images can be added here with concise notes on medium, technique and development.</p><p>Media is kept selective so the page remains a portfolio rather than a feed. Upload controls are collapsed and intended only for owner use.</p>
+<div data-media-status class="notice">No media published here yet.</div>
+<div class="media-gallery" data-media-gallery data-collection="creative" data-slot="art"></div>
+<details class="upload-panel owner-tool"><summary>Upload an image</summary>
+<form data-media-upload data-collection="creative" data-media-type="image" data-slot="art">
+<div class="form-grid">
+<label>Title<input name="title" type="text" maxlength="120"></label>
+<label>Created / recorded date<input name="recorded_date" type="date"></label>
+<label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+</div>
+<label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+<label>File<input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.avif,.heic,.heif" required></label>
+<div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+<p class="notice" data-upload-status>Choose a file when you are ready.</p>
+<button class="button" type="submit">Upload securely</button>
+</form></details>
+
+</div></section></main>
 <footer><div class="wrap" data-site-footer></div></footer>
 </body>
 </html>
