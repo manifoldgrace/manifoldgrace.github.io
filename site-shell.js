@@ -52,4 +52,17 @@
     note.textContent = "Manifold Grace · selected public record · private life remains private";
     footer.replaceChildren(top,note);
   });
+
+  document.querySelectorAll("[data-profile-link]").forEach((a) => {
+    const key = a.getAttribute("data-profile-link");
+    const url = site.links && site.links[key];
+    if (url) {
+      a.href = url;
+      a.target = "_blank";
+      a.rel = "noopener";
+    } else {
+      const container = a.closest("[data-hide-if-missing]") || a;
+      container.hidden = true;
+    }
+  });
 })();
