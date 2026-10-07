@@ -40,7 +40,13 @@ export default {
         requireOwner(request, env);
         const body = await safeJson(request);
         const timestamp = Math.floor(Date.now() / 1000);
-        const folder = env.MEDIA_FOLDER || DEFAULT_FOLDER;
+        const baseFolder = env.MEDIA_FOLDER || DEFAULT_FOLDER;
+        const folder = baseFolder + "/pending";
+        const maxBytes = Number(env.MAX_VIDEO_BYTES || DEFAULT_MAX_BYTES);
+        const claimedBytes = Number(body.fileBytes || 0);
+        if (!Number.isFinite(claimedBytes) || claimedBytes <= 0 || claimedBytes > maxBytes) {
+          throw httpError(413, "The selected file exceeds the configured upload-size limit.");
+        }
         const context = makeContext(body);
         const uploadParams = {
           context,
@@ -62,8 +68,10 @@ export default {
         requireOwner(request, env);
         const body = await safeJson(request);
         const publicId = String(body.publicId || "");
-        const folder = env.MEDIA_FOLDER || DEFAULT_FOLDER;
-        if (!publicId || !publicId.startsWith(folder + "/")) {
+        const baseFolder = env.MEDIA_FOLDER || DEFAULT_FOLDER;
+        const pendingFolder = baseFolder + "/pending";
+        const publishedFolder = baseFolder + "/published";
+        if (!publicId || !publicId.startsWith(pendingFolder + "/")) {
           throw httpError(400, "Invalid media identifier.");
         }
 
@@ -86,7 +94,12 @@ export default {
           throw httpError(422, "The uploaded file failed server-side video validation and was removed.");
         }
 
-        return json({ ok: true, clip: publicClip(resource) }, 200, cors);
+        const leaf = publicId.slice((pendingFolder + "/").length).replace(/[^a-zA-Z0-9_.-]/g, "-");
+        const publishedId = publishedFolder + "/" + leaf;
+        await renameResource(env, publicId, publishedId);
+        const published = await getResource(env, publishedId);
+
+        return json({ ok: true, clip: publicClip(published) }, 200, cors);
       }
 
       return json({ error: "Not found." }, 404, cors);
@@ -188,6 +201,30 @@ async function getResource(env, publicId) {
   return cloudinaryAdmin(env, "/resources/video/upload/" + encodeURIComponent(publicId));
 }
 
+async function renameResource(env, fromPublicId, toPublicId) {
+  const timestamp = Math.floor(Date.now() / 1000);
+  const params = {
+    from_public_id: fromPublicId,
+    overwrite: "false",
+    timestamp,
+    to_public_id: toPublicId
+  };
+  const signature = await cloudinarySignature(params, env.CLOUDINARY_API_SECRET);
+  const body = new URLSearchParams({
+    from_public_id: fromPublicId,
+    to_public_id: toPublicId,
+    overwrite: "false",
+    timestamp: String(timestamp),
+    api_key: env.CLOUDINARY_API_KEY,
+    signature
+  });
+  const response = await fetch(
+    "https://api.cloudinary.com/v1_1/" + encodeURIComponent(env.CLOUDINARY_CLOUD_NAME) + "/video/rename",
+    { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body }
+  );
+  if (!response.ok) throw httpError(502, "Validated media could not be published.");
+}
+
 async function destroyResource(env, publicId) {
   const timestamp = Math.floor(Date.now() / 1000);
   const params = { public_id: publicId, timestamp };
@@ -222,7 +259,7 @@ function publicClip(resource) {
 }
 
 async function listClips(env) {
-  const folder = env.MEDIA_FOLDER || DEFAULT_FOLDER;
+  const folder = (env.MEDIA_FOLDER || DEFAULT_FOLDER) + "/published";
   const all = [];
   let nextCursor = "";
 
