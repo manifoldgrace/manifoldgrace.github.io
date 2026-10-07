@@ -1,0 +1,13 @@
+name = "manifold-grace-media"
+main = "worker.js"
+compatibility_date = "2026-10-07"
+
+[vars]
+ALLOWED_ORIGIN = "https://manifoldgrace.github.io"
+MEDIA_FOLDER = "manifold-grace/live-sessions"
+MAX_VIDEO_BYTES = "536870912"
+
+# Add secrets outside source control:
+# wrangler secret put CLOUDINARY_API_SECRET
+# wrangler secret put UPLOAD_KEY
+# CLOUDINARY_CLOUD_NAME and CLOUDINARY_API_KEY may be configured as Worker variables.
