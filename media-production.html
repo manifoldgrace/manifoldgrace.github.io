@@ -11,6 +11,8 @@
   <script src="site-config.js" defer></script>
   <script src="site-shell.js" defer></script>
   
+  <script src="media-config.js" defer></script>
+  <script src="media-library.js" defer></script>
 </head>
 <body>
 <header><div class="wrap shell-head">
@@ -34,7 +36,38 @@
   <p>Individual entries can unpack signal flow, system architecture, latency, routing, tracking, microphones, control systems, troubleshooting or production decisions in plain language. This creates useful evidence for both creative and technical audiences.</p>
   <p>Where an environment involves commercial clients or private systems, the explanation will stop before confidential details, credentials or security-sensitive configuration.</p>
 </div></section>
-</main>
+<section><div class="wrap">
+<span class="status">SELECTED MEDIA</span><h2>Studio & production media</h2>
+<p>Selected studio, sound-desk, live-event and audiovisual environments can be published here where they accurately reflect professional or creative practice.</p><p>Media is kept selective so the page remains a portfolio rather than a feed. Upload controls are collapsed and intended only for owner use.</p>
+<div data-media-status class="notice">No media published here yet.</div>
+<div class="media-gallery" data-media-gallery data-collection="creative" data-slot="media-production"></div>
+<details class="upload-panel owner-tool"><summary>Upload an image</summary>
+<form data-media-upload data-collection="creative" data-media-type="image" data-slot="media-production">
+<div class="form-grid">
+<label>Title<input name="title" type="text" maxlength="120"></label>
+<label>Created / recorded date<input name="recorded_date" type="date"></label>
+<label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+</div>
+<label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+<label>File<input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.avif,.heic,.heif" required></label>
+<div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+<p class="notice" data-upload-status>Choose a file when you are ready.</p>
+<button class="button" type="submit">Upload securely</button>
+</form></details>
+<details class="upload-panel owner-tool"><summary>Upload a video clip</summary>
+<form data-media-upload data-collection="creative" data-media-type="video" data-slot="media-production">
+<div class="form-grid">
+<label>Title<input name="title" type="text" maxlength="120"></label>
+<label>Created / recorded date<input name="recorded_date" type="date"></label>
+<label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+</div>
+<label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+<label>File<input type="file" accept="video/mp4,video/webm,video/quicktime,video/x-m4v,video/ogg,.mp4,.webm,.mov,.m4v,.ogv" required></label>
+<div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+<p class="notice" data-upload-status>Choose a file when you are ready.</p>
+<button class="button" type="submit">Upload securely</button>
+</form></details>
+</div></section></main>
 <footer><div class="wrap" data-site-footer></div></footer>
 </body>
 </html>
