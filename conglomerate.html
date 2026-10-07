@@ -7,34 +7,40 @@
   <meta name="description" content="Future serial-entrepreneurship and venture portfolio concept by Grace Rosemary Nettey.">
   <meta name="author" content="Grace Rosemary Nettey">
   <link rel="stylesheet" href="style.css">
-  
   <script src="site-config.js" defer></script>
   <script src="site-shell.js" defer></script>
-  
+  <script src="media-config.js" defer></script><script src="media-library.js" defer></script>
 </head>
 <body>
-<header><div class="wrap shell-head">
-  <a href="/" class="brand">Manifold Grace</a>
-  <nav data-site-nav aria-label="Main navigation"></nav>
-</div></header>
+<header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main>
-  <div class="page-hero"><div class="wrap">
-    <div class="eyebrow">Manifold Grace · Grace Rosemary Nettey</div>
-    <h1>Venture / Conglomerate</h1>
-    <p class="page-intro">A concise record of a future serial-entrepreneurship concept. This page describes intention rather than presenting undeveloped ventures as operating businesses.</p>
-  </div></div>
+  <div class="page-hero"><div class="wrap"><div class="eyebrow">Manifold Grace · Grace Rosemary Nettey</div><h1>Venture / Conglomerate</h1><p class="page-intro">A concise record of a future serial-entrepreneurship concept. This page describes intention rather than presenting undeveloped ventures as operating businesses.</p></div></div>
   
 <section><div class="wrap venture-list">
   <span class="status">FUTURE CONCEPT · NOT CURRENTLY OPERATING AS A CONGLOMERATE</span>
   <h2>Venture portfolio</h2>
   <ul class="clean-list">
     <li><strong>Model:</strong> staged serial entrepreneurship across distinct businesses.</li>
-    <li><strong>Current position:</strong> concept and business-plan material exist; execution is intentionally phased.</li>
+    <li><strong>Current position:</strong> business-plan material exists; execution is intentionally phased.</li>
     <li><strong>Principle:</strong> each venture should stand on its own economics, governance and operational case.</li>
-    <li><strong>Sequence:</strong> validate one opportunity before expanding into the next rather than attempting everything simultaneously.</li>
+    <li><strong>Sequence:</strong> validate one opportunity before expanding into the next.</li>
     <li><strong>Public status:</strong> no investment solicitation or claim of active group operations is made here.</li>
   </ul>
-  <div class="media-empty compact">Business-plan imagery can be added here when the secure image uploader is connected.</div>
+  <div data-media-status class="notice">No venture imagery published yet.</div>
+  <div class="media-gallery photo-grid" data-media-gallery data-collection="venture" data-media-type="image" data-slot="business-plan"></div>
+  <details class="upload-panel owner-tool"><summary>Upload business-plan or concept imagery</summary>
+  <form data-media-upload data-collection="venture" data-media-type="image" data-slot="business-plan">
+    <div class="form-grid">
+      <label>Title<input name="title" type="text" maxlength="120" autocomplete="off"></label>
+      <label>Recorded / created date<input name="recorded_date" type="date"></label>
+      <label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
+    </div>
+    <label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
+    <label>File<input type="file" accept="image/jpeg,image/png,image/webp,image/avif,image/heic,image/heif,.jpg,.jpeg,.png,.webp,.avif,.heic,.heif" required></label>
+    <div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
+    <p class="notice" data-upload-status role="status">Choose a file when you are ready.</p>
+    <button class="button" type="submit">Upload securely</button>
+  </form></details>
 </div></section>
 </main>
 <footer><div class="wrap" data-site-footer></div></footer>
