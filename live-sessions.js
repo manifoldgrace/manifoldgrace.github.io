@@ -212,7 +212,8 @@
         title: $("clipTitle").value.trim(),
         topic: $("clipTopic").value.trim(),
         recordedDate: $("clipDate").value,
-        description: $("clipDescription").value.trim()
+        description: $("clipDescription").value.trim(),
+        fileBytes: file.size
       };
       if (!metadata.title) throw new Error("Add a title for this clip.");
 
