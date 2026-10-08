@@ -311,3 +311,46 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
   .publication-visual{min-height:220px}
   main section{padding:42px 0}
 }
+
+
+/* Encyclopaedic biographical index */
+.bio-contents{padding-top:34px}
+.bio-accordion-list{margin-top:18px;border-top:1px solid var(--line)}
+.bio-accordion{border-bottom:1px solid var(--line)}
+.bio-accordion summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:22px 2px;
+  color:var(--text);
+  font-size:clamp(1.15rem,2.25vw,1.55rem);
+  font-weight:500;
+  letter-spacing:-.025em;
+}
+.bio-accordion summary::-webkit-details-marker{display:none}
+.bio-accordion summary::after{
+  content:"⌄";
+  flex:0 0 auto;
+  color:var(--muted);
+  font-size:1.25em;
+  line-height:1;
+  transform:translateY(-2px);
+  transition:transform .18s ease,color .18s ease;
+}
+.bio-accordion[open] summary::after{transform:rotate(180deg) translateY(2px);color:var(--text)}
+.bio-accordion-body{
+  padding:0 0 28px;
+  max-width:980px;
+}
+.bio-accordion-body>p:first-child{margin-top:0}
+.bio-accordion-body .grid,
+.bio-accordion-body .media-module-grid,
+.bio-accordion-body .record-index{margin-top:20px}
+@media(max-width:760px){
+  .bio-contents{padding-top:24px}
+  .bio-accordion summary{padding:19px 0;font-size:1.18rem}
+  .bio-accordion-body{padding-bottom:24px}
+}
