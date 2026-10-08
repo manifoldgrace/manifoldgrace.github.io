@@ -564,57 +564,6 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 }
 
 
-/* Biographical record — personal life */
-.personal-life-cards{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;
-  margin-top:6px;
-}
-.personal-life-card{
-  border:1px solid var(--line);
-  background:linear-gradient(180deg,#151515 0%,#0f0f0f 100%);
-  padding:20px;
-  min-height:220px;
-  position:relative;
-}
-.personal-life-card::after{
-  content:"";
-  position:absolute;
-  width:34px;
-  height:34px;
-  border:1px solid #34312e;
-  border-radius:50%;
-  right:18px;
-  top:18px;
-}
-.personal-life-card>span{
-  display:block;
-  color:#777;
-  font-size:.65rem;
-  letter-spacing:.16em;
-  margin-bottom:26px;
-}
-.personal-life-card>strong{
-  display:block;
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:1.28rem;
-  font-weight:400;
-  line-height:1.2;
-  margin-bottom:14px;
-  max-width:85%;
-}
-.personal-life-card p{
-  margin:0;
-  font-size:.88rem;
-  line-height:1.55;
-  color:#9d9891;
-}
-@media(max-width:860px){
-  .personal-life-cards{grid-template-columns:1fr}
-  .personal-life-card{min-height:0}
-}
-
 
 /* Biographical record — compact inline photographs */
 .bio-accordion-body figure,
@@ -663,5 +612,53 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
     width:clamp(84px,23vw,104px);
     max-width:104px;
     margin-left:10px;
+  }
+}
+
+
+/* Biographical record — Wikipedia-style infobox portrait */
+.bio-infobox-body{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 150px;
+  align-items:stretch;
+}
+.bio-infobox-body dl{min-width:0}
+.bio-infobox-body .bio-infobox-portrait{
+  margin:0;
+  border-left:1px solid var(--line);
+  background:#0d0d0d;
+  min-width:0;
+  overflow:hidden;
+}
+.bio-infobox-body .bio-infobox-portrait img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+@media(max-width:800px){
+  .bio-infobox-body{
+    grid-template-columns:minmax(0,1fr) 112px;
+  }
+  .bio-infobox-body .bio-infobox-portrait{
+    min-height:100%;
+  }
+  .bio-infobox-body dl>div{
+    grid-template-columns:82px 1fr;
+    gap:8px;
+    padding:10px 12px;
+  }
+  .bio-infobox-body dt{font-size:.74rem}
+  .bio-infobox-body dd{font-size:.82rem}
+}
+@media(max-width:420px){
+  .bio-infobox-body{
+    grid-template-columns:minmax(0,1fr) 96px;
+  }
+  .bio-infobox-body dl>div{
+    grid-template-columns:70px 1fr;
+    padding:9px 10px;
   }
 }
