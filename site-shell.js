@@ -12,6 +12,7 @@
     ["Public","public.html"],
     ["Faith","faith.html"],
     ["Heritage","heritage.html"],
+    ["Sociology","sociology.html"],
     ["Recognition","recognition.html"],
     ["Venture","conglomerate.html"],
     ["Archive","archive.html"]
