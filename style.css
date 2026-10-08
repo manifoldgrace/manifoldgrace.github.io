@@ -258,3 +258,32 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 .achievement-checklist{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--line);max-width:900px}
 .achievement-checklist li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;padding:13px 0;border-bottom:1px solid var(--line);color:var(--text)}
 .achievement-checklist .tick{font-weight:700;color:var(--text);line-height:1.7}
+
+/* Homepage portrait composition */
+@media(max-width:760px){
+  .home-hero.portrait-backdrop::after{
+    top:44px;
+    right:10px;
+    width:168px;
+    opacity:0;
+    background-position:center top;
+    -webkit-mask-image:radial-gradient(ellipse at 56% 40%,#000 40%,rgba(0,0,0,.84) 58%,transparent 82%);
+    mask-image:radial-gradient(ellipse at 56% 40%,#000 40%,rgba(0,0,0,.84) 58%,transparent 82%);
+  }
+  .home-hero.portrait-backdrop .home-kicker{
+    max-width:54%;
+  }
+  .home-hero.portrait-backdrop .home-title{
+    max-width:54%;
+    font-size:clamp(3.1rem,16vw,4.65rem);
+    line-height:.87;
+    margin-top:20px;
+  }
+  .home-hero.portrait-backdrop .home-name{
+    max-width:54%;
+    font-size:clamp(1.45rem,6.6vw,2rem);
+  }
+  .home-hero.portrait-backdrop .home-intro{
+    margin-top:46px;
+  }
+}
