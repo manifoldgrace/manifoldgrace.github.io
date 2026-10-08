@@ -13,7 +13,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 .nav-links a:hover,.link-card:hover{color:var(--text)}
 .page-hero{padding:86px 0 52px;border-bottom:1px solid var(--line)}
 .eyebrow,.status{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
-h1{font-size:clamp(2.8rem,8vw,5.5rem);font-weight:300;letter-spacing:-.055em;line-height:1;margin:14px 0 22px}
+h1{font-size:clamp(2.5rem,7vw,4.9rem);font-weight:300;letter-spacing:-.055em;line-height:1;margin:14px 0 22px}
 .page-intro{max-width:760px;color:var(--muted);font-size:1.08rem}
 main section{padding:56px 0;border-bottom:1px solid var(--line)}
 h2{font-size:1.55rem;font-weight:500;letter-spacing:-.025em;margin:0 0 18px}
@@ -35,7 +35,7 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 }
 .home-hero{min-height:calc(100svh - 88px);display:grid;align-items:center;padding:clamp(64px,9vw,128px) 0}
 .home-kicker{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:600}
-.home-title{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(4.4rem,11vw,10rem);font-weight:300;letter-spacing:-.075em;line-height:.82;margin:22px 0 32px;max-width:9ch}
+.home-title{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(4rem,9.5vw,8.8rem);font-weight:300;letter-spacing:-.075em;line-height:.82;margin:22px 0 32px;max-width:9ch}
 .home-name{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Helvetica,Arial,sans-serif;font-size:clamp(1.8rem,3.4vw,3.4rem);font-weight:400;letter-spacing:-.05em;margin:0 0 20px}
 .home-intro{max-width:760px;color:var(--muted);font-size:clamp(1.05rem,1.6vw,1.35rem);line-height:1.65}
 .home-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
@@ -45,7 +45,7 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 .home-nav a:hover{color:var(--text)}
 @media(max-width:760px){
   .home-hero{min-height:auto;padding:70px 0 84px}
-  .home-title{font-size:clamp(4rem,23vw,6.8rem);line-height:.84}
+  .home-title{font-size:clamp(3.65rem,20vw,6rem);line-height:.84}
   .home-name{font-size:clamp(1.65rem,8vw,2.4rem)}
 }
 
@@ -80,8 +80,8 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 .footer-links a:hover{color:var(--text)}
 .footer-note{font-size:.82rem;margin:0;color:#777}
 .personal-note{max-width:960px;border-left:1px solid #555;padding:6px 0 6px clamp(18px,3vw,38px)}
-.personal-note p{font-family:"Snell Roundhand","Segoe Print","Bradley Hand",cursive;font-size:clamp(1.05rem,1.6vw,1.35rem);line-height:1.75;color:#d7d2c9;margin:0 0 18px}
-.personal-note .signature{display:block;margin-top:12px;font-size:1.15em;color:var(--text)}
+.personal-note p{font-family:"Bradley Hand","Segoe Print","Noteworthy","Chalkboard SE",cursive;font-size:clamp(1.18rem,1.9vw,1.55rem);line-height:1.68;letter-spacing:.005em;color:#d7d2c9;margin:0 0 18px}
+.personal-note .signature{display:block;margin-top:16px;font-size:1.35em;color:var(--text)}
 .numbered-corpus details,.case-groups details,.portfolio-slot{border-top:1px solid var(--line);padding:18px 0}
 .numbered-corpus details:last-child,.case-groups details:last-child,.portfolio-slot:last-child{border-bottom:1px solid var(--line)}
 .numbered-corpus summary,.case-groups summary,.portfolio-slot summary{cursor:pointer;color:var(--text);font-weight:600;letter-spacing:-.01em}
@@ -127,7 +127,7 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 @media(max-width:760px){
   .systems-grid,.life-grid{grid-template-columns:1fr}
   .pdf-reader{min-height:65vh;height:65vh}
-  .personal-note p{font-family:"Segoe Print","Bradley Hand",cursive;font-size:1rem;line-height:1.7}
+  .personal-note p{font-family:"Bradley Hand","Segoe Print","Noteworthy","Chalkboard SE",cursive;font-size:1.12rem;line-height:1.68}
 }
 
 .observation-grid{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
@@ -203,3 +203,12 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
   .book-cover-placeholder{min-height:0;max-width:320px;width:78%;margin:0 auto}
   .book-project-cover{max-width:210px;width:58%}
 }
+
+.focus-carousel{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,32%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 0 12px;margin-top:24px;scrollbar-width:thin}
+.focus-card{scroll-snap-align:start;border:1px solid var(--line);background:var(--panel);padding:20px;min-height:190px;display:flex;flex-direction:column;gap:9px}
+.focus-card span{font-size:.72rem;letter-spacing:.16em;color:#777}
+.focus-card strong{font-size:1.08rem}
+.focus-card small{color:var(--muted);line-height:1.55}
+.identity-pending{opacity:.68;cursor:default}
+.identity-pending:hover{transform:none;border-color:var(--line);color:inherit}
+@media(max-width:760px){.focus-carousel{grid-auto-columns:82%}}
