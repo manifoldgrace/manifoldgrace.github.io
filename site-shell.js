@@ -6,6 +6,7 @@
     ["My Books","my-book.html"],
     ["50 by 30","50-things.html"],
     ["Research","research.html"],
+    ["Trading","trading.html"],
     ["Professional","professional.html"],
     ["Creative","creative.html"],
     ["Public","public.html"],
