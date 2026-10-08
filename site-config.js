@@ -1,7 +1,7 @@
 window.MANIFOLD_SITE = Object.freeze({
   name: "Manifold Grace",
-  person: "Grace Rosemary Nettey",
-  publicName: "Grace Rose",
+  person: "Grace",
+  publicName: "Grace",
   links: {
     orcid: "https://orcid.org/0009-0005-9805-5273",
     scholar: "https://scholar.google.com/citations?user=nJoBMaIAAAAJ&hl=en",
