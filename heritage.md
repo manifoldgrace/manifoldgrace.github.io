@@ -14,7 +14,7 @@ permalink: /heritage/
 
 My paternal family is **Ga-Dangme from Accra**. The immediate family line preserved in the family archive is:
 
-**Grace → Felix Herbert Nii Nertey Sackey-Nettey → Christopher Akai Nettey → Herbert Mills Nettey**
+**Grace → father → Christopher Akai Nettey → Herbert Mills Nettey**
 
 Christopher Akai Nettey died on **15 May 2023 aged 88**. His genealogical work on elders, descendants, wives, children and family branches remains a central source for the archive.
 
