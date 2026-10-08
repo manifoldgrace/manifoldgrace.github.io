@@ -4,6 +4,7 @@
   const navItems = [
     ["About","about.html"],
     ["My Books","my-book.html"],
+    ["Knowledge","knowledge.html"],
     ["Research","research.html"],
     ["Trading","trading.html"],
     ["Professional","professional.html"],
