@@ -16,29 +16,45 @@ This page records only what is **documented, strongly supported, or clearly mark
 
 ## 01 — Ghanaian corridor
 
-### Ga-Dangme · Accra · Nettey family tradition
+### Ga-Dangme · Accra · Nettey family archive
 
-**Status: Recent generations DOCUMENTED · Earlier genealogy UNDER RESEARCH**
+**Status: Immediate line DOCUMENTED · Wider Swalaba/Sonmenaa/Gbese association STRONGLY SUPPORTED · Earlier generational bridge UNDER RESEARCH**
 
-Paternal heritage is rooted in coastal Accra, with family associations across key Ga communities including **Jamestown, Gbese, Ngleshie-Alata, Swalaba and Sonmenaa**.
+My paternal family is **Ga-Dangme from Accra**. The immediate family chain preserved in family records runs from me through my father to my paternal grandfather **Christopher Akai Nettey** (died 15 May 2023, aged 88) and to my great-grandfather **Herbert Mills Nettey**.
 
-**Recorded generations:**
-- Current generation (my father's generation)
-- Grandfather's generation: recorded genealogical work and family-history research
-- Earlier Nettey generations: currently under reconstruction
+My grandfather undertook substantial genealogical research into elders, descendants, wives, children and family branches. Recovering and digitising his original papers is now one of the archive's highest-priority tasks.
 
-**My grandfather's research archive** includes documented work on:
-- Family elders and descendants across multiple branches
-- Accra family geography and community associations
-- The **Asafoatse Nettey family tradition** and wider kinship networks
-- Earlier generational records (exact lineage bridge remains under active research)
+The wider historical association with **Swalaba, Sonmenaa and Gbese** is increasingly well-supported. Public reporting identifies the **Asafoatse C.B. Nettey Family of the Swalaba Quarter of Sonmenaa in Gbese** and records a sequence of Gbese Asafoatse office-holders. This establishes an important historical and geographical family environment, but it does not by itself fill every parent-to-child generation between my documented line and those earlier office-holders.
 
-**Research status:** Recent generations and Accra family geography are supported through documented family records and oral history. The exact genealogical bridge to earlier generations remains under research; materials from my grandfather's archive are being systematically reviewed.
+A 1936 West African Court of Appeal case records **Akai Kofi Nettey** as the eldest surviving son of **Nii Nettey Quarshie** in litigation concerning Horse Road, Ussher Town. This is a genuine parent-child relationship within the historical Nettey record; **Herbert Mills Nettey's exact placement in that branch remains more to explore**.
 
-**See also:**
-- [Research notes: Ghanaian corridor](#) *(link to research page)*
-- [Genealogy database: Nettey family records](#) *(link to genealogy database or repository)*
-- [Source register: Accra family documentation](#) *(link to source register)*
+The British Library Endangered Archives Programme separately catalogues:
+- **EAP1161/1/3/3/121** — Christopher Brandford Nettey of Horse Road, dated 20 September 1947.
+- **EAP1161/1/3/3/122** — E. Q. Nettey of Accra, dated 20 September 1947.
+
+These are fixed municipal/property anchors. Shared names, dates or consecutive shelfmarks are not treated as proof of biological kinship without the underlying documents.
+
+### Evidence rules
+
+- **Documented family line:** Grace → father → Christopher Akai Nettey → Herbert Mills Nettey.
+- **Strongly supported historical environment:** Ga-Dangme Accra; Swalaba / Sonmenaa / Gbese; public history of the Asafoatse C.B. Nettey family.
+- **More to explore:** Herbert Mills Nettey's parents, siblings, exact gate/house and precise relationship to the earlier Asafoatse Nettey lineage.
+- **Identity safeguards:** Christopher Akai Nettey (my grandfather) remains distinct from Asafoatse Christopher Akai Nettey IV; Herbert Mills Nettey remains distinct from contemporary Herbert Akai Nettey unless a source bridges them.
+- **Method:** absence from an online index is unresolved, not disproof; contradictory evidence is recorded when it exists.
+
+### Parallel Nettey research branch
+
+The 1959 High Court (Land Division) case *Norquaye-Tetteh v. Malm & Anor.* [1959] GLR 368 is retained as a separate Nettey branch and archival lead. It is **not presently represented as proven direct ancestry**.
+
+### Current archival frontier
+
+The online phase is paused until one or more of these primary-source sets becomes available:
+
+1. **Grandfather's original genealogy papers**
+2. **PRAAD / Judicial Service records for suits 129/1958 and 130/1958**
+3. **Lands Commission deed material connected with the 3 December 1958 registration**
+
+**Current assessment:** the broader family and geographic association is well-supported; the remaining task is proving the exact parent-to-child and gate-to-gate links.
 
 ---
 
