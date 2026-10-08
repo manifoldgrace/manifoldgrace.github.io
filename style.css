@@ -356,3 +356,107 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 }
 
 
+
+
+/* Trading / market-study terminal */
+.trading-hero{padding-bottom:34px}
+.market-data-note{max-width:980px;font-size:.86rem;color:#8f8b84}
+.market-tape{border-bottom:1px solid var(--line);background:#080808;min-height:64px;display:flex;align-items:center}
+.market-tape .tradingview-widget-container{width:100%}
+.market-terminal-section{padding:0!important;background:#050505}
+.market-terminal{
+  min-height:calc(100svh - 92px);
+  background:#050505;
+  display:grid;
+  grid-template-rows:auto minmax(620px,1fr);
+}
+.market-terminal-toolbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:14px max(4vw,20px);
+  border-bottom:1px solid var(--line);
+  background:#0b0b0b;
+}
+.market-terminal-toolbar strong{font-size:.92rem}
+.market-terminal-toolbar span{color:#777;font-size:.78rem}
+.market-fullscreen{
+  border:1px solid #555;
+  background:transparent;
+  color:var(--text);
+  padding:9px 12px;
+  font:inherit;
+  font-size:.82rem;
+  cursor:pointer;
+}
+.market-fullscreen:hover{border-color:#999}
+.market-chart-shell{
+  min-height:620px;
+  height:calc(100svh - 150px);
+  background:#050505;
+}
+.market-chart-shell .tradingview-widget-container{
+  width:100%;
+  height:100%;
+}
+.market-terminal:fullscreen{
+  width:100vw;
+  height:100vh;
+  min-height:100vh;
+}
+.market-terminal:fullscreen .market-chart-shell{
+  height:calc(100vh - 58px);
+}
+.market-review-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+  gap:18px;
+  align-items:stretch;
+  margin-top:24px;
+}
+.market-widget-card{
+  border:1px solid var(--line);
+  background:var(--panel);
+  min-height:560px;
+  overflow:hidden;
+}
+.market-widget-card>header{
+  position:static;
+  padding:14px 16px;
+  border-bottom:1px solid var(--line);
+  background:#101010;
+  backdrop-filter:none;
+}
+.market-widget-card>header strong{font-size:.92rem}
+.market-widget-card .tradingview-widget-container{height:100%;width:100%}
+.market-study-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:22px;
+}
+.market-study-card{
+  border:1px solid var(--line);
+  background:var(--panel);
+  padding:20px;
+}
+.market-study-card span{
+  display:block;
+  color:#777;
+  font-size:.72rem;
+  letter-spacing:.14em;
+  margin-bottom:8px;
+}
+.market-study-card strong{display:block;margin-bottom:7px}
+.market-study-card p{margin:0;font-size:.9rem}
+.trading-disclaimer{font-size:.82rem;color:#777;max-width:940px}
+@media(max-width:900px){
+  .market-review-grid,.market-study-grid{grid-template-columns:1fr}
+  .market-widget-card{min-height:520px}
+}
+@media(max-width:760px){
+  .market-terminal{grid-template-rows:auto minmax(500px,1fr)}
+  .market-terminal-toolbar{align-items:flex-start;flex-direction:column}
+  .market-chart-shell{min-height:500px;height:70svh}
+}
