@@ -80,7 +80,7 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 .footer-links a:hover{color:var(--text)}
 .footer-note{font-size:.82rem;margin:0;color:#777}
 .personal-note{max-width:960px;border-left:1px solid #555;padding:6px 0 6px clamp(18px,3vw,38px)}
-.personal-note p{font-family:"Bradley Hand","Segoe Print","Noteworthy","Chalkboard SE",cursive;font-size:clamp(1.18rem,1.9vw,1.55rem);line-height:1.68;letter-spacing:.005em;color:#d7d2c9;margin:0 0 18px}
+.personal-note p{font-family:"Segoe Print","Bradley Hand","Snell Roundhand",cursive;font-size:clamp(1.18rem,1.9vw,1.55rem);line-height:1.68;letter-spacing:.005em;color:#d7d2c9;margin:0 0 18px}
 .personal-note .signature{display:block;margin-top:16px;font-size:1.35em;color:var(--text)}
 .numbered-corpus details,.case-groups details,.portfolio-slot{border-top:1px solid var(--line);padding:18px 0}
 .numbered-corpus details:last-child,.case-groups details:last-child,.portfolio-slot:last-child{border-bottom:1px solid var(--line)}
@@ -127,7 +127,7 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 @media(max-width:760px){
   .systems-grid,.life-grid{grid-template-columns:1fr}
   .pdf-reader{min-height:65vh;height:65vh}
-  .personal-note p{font-family:"Bradley Hand","Segoe Print","Noteworthy","Chalkboard SE",cursive;font-size:1.12rem;line-height:1.68}
+  .personal-note p{font-family:"Segoe Print","Bradley Hand","Snell Roundhand",cursive;font-size:1.12rem;line-height:1.68}
 }
 
 .observation-grid{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
@@ -254,3 +254,7 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 @media(prefers-reduced-motion:reduce){
   .portrait-backdrop::after{animation:none;opacity:.18}
 }
+
+.achievement-checklist{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--line);max-width:900px}
+.achievement-checklist li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;padding:13px 0;border-bottom:1px solid var(--line);color:var(--text)}
+.achievement-checklist .tick{font-weight:700;color:var(--text);line-height:1.7}
