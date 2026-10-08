@@ -229,25 +229,25 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
   background-size:contain;
   pointer-events:none;
   opacity:0;
-  filter:saturate(.82) contrast(.96);
+  filter:saturate(.92) contrast(1.04) brightness(1.12);
   -webkit-mask-image:radial-gradient(ellipse at 58% 42%,#000 35%,rgba(0,0,0,.78) 52%,transparent 78%);
   mask-image:radial-gradient(ellipse at 58% 42%,#000 35%,rgba(0,0,0,.78) 52%,transparent 78%);
   animation:graceStampOnce 6.8s ease-in-out .35s 1 forwards;
 }
 .portrait-color::after{background-image:url("assets/grace-stamp.webp")}
-.portrait-bw::after{background-image:url("assets/grace-stamp-bw.webp");filter:grayscale(1) contrast(.94)}
+.portrait-bw::after{background-image:url("assets/grace-stamp-bw.webp");filter:grayscale(1) contrast(1.05) brightness(1.18)}
 .page-hero.portrait-backdrop>.wrap{padding-right:clamp(180px,30vw,360px)}
 .home-hero.portrait-backdrop>.wrap{padding-right:clamp(180px,26vw,330px)}
 @keyframes graceStampOnce{
   0%{opacity:0;transform:translateY(6px) scale(.985)}
-  16%{opacity:.68;transform:translateY(0) scale(1)}
-  68%{opacity:.60;transform:translateY(0) scale(1)}
+  14%{opacity:.86;transform:translateY(0) scale(1)}
+  72%{opacity:.78;transform:translateY(0) scale(1)}
   100%{opacity:0;transform:translateY(-2px) scale(1.005)}
 }
 @media(max-width:760px){
-  .portrait-backdrop::after{top:18px;right:12px;width:118px}
+  .portrait-backdrop::after{top:16px;right:10px;width:142px}
   .page-hero.portrait-backdrop>.wrap,.home-hero.portrait-backdrop>.wrap{padding-right:0}
-  .page-hero.portrait-backdrop .eyebrow,.page-hero.portrait-backdrop h1{max-width:calc(100% - 132px)}
+  .page-hero.portrait-backdrop .eyebrow,.page-hero.portrait-backdrop h1{max-width:calc(100% - 154px)}
   .home-hero.portrait-backdrop .home-kicker,.home-hero.portrait-backdrop .home-title{max-width:calc(100% - 126px)}
   .page-hero.portrait-backdrop .page-intro,.home-hero.portrait-backdrop .home-intro{margin-top:34px;max-width:100%}
 }
