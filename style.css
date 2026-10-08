@@ -524,3 +524,41 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
   .cv-banner-copy>em{letter-spacing:.16em;line-height:1.55}
   .cv-banner-portrait{width:54%;height:90%;top:0;opacity:.34}
 }
+
+
+/* Knowledge — Topics in 12 */
+.topics12-shell{display:grid;grid-template-columns:220px minmax(0,1fr);gap:clamp(34px,6vw,86px);align-items:start;max-width:1500px;margin:0 auto;padding:20px max(4vw,22px) 90px}
+.topics12-rail{position:sticky;top:110px;align-self:start;padding:10px 0 24px}
+.topics12-rail-label{font-size:.66rem;letter-spacing:.18em;color:#666;margin-bottom:22px}
+.topics12-rail nav{display:grid;gap:21px}
+.topics12-rail a{display:grid;grid-template-columns:32px 1fr;gap:15px;align-items:baseline;color:#85817b;font-size:.86rem;line-height:1.25}
+.topics12-rail a span{font-size:.68rem;letter-spacing:.12em;color:#555}
+.topics12-rail a:hover{color:var(--text)}
+.topics12-content{min-width:0}
+.topics12-intro{max-width:830px;padding-bottom:30px;border-bottom:1px solid var(--line)}
+.topics12-domain{padding:54px 0 58px;border-bottom:1px solid var(--line)}
+.topics12-domain-head{display:flex;align-items:flex-start;gap:20px;margin-bottom:24px}
+.topics12-domain-head>span{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3rem,7vw,5.6rem);line-height:.8;color:#3f3d3a;font-weight:400}
+.topics12-domain-head small{display:block;color:#666;font-size:.66rem;letter-spacing:.16em;margin-bottom:5px}
+.topics12-domain-head h2{margin:0;font-size:clamp(1.7rem,3vw,2.7rem);font-weight:500}
+.syllabus-carousel{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(285px,360px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:5px 0 20px;scrollbar-width:thin;scrollbar-color:#555 #0b0b0b}
+.syllabus-card{scroll-snap-align:start;aspect-ratio:1/1;border:1px solid var(--line);background:#101010;padding:22px;display:flex;flex-direction:column;justify-content:space-between;min-height:285px}
+.syllabus-number{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.6rem,5vw,4.6rem);line-height:1;color:#3e3b37;font-variant-numeric:tabular-nums}
+.syllabus-card small{font-size:.62rem;letter-spacing:.14em;color:#666}
+.syllabus-card h3{font-size:clamp(1.25rem,2vw,1.6rem);font-weight:500;letter-spacing:-.025em;margin:8px 0 10px}
+.syllabus-card p{margin:0;color:#9a9690;font-size:.86rem;line-height:1.55}
+.topics12-synthesis{padding:60px 0 10px;max-width:900px}
+@media(max-width:900px){
+  .topics12-shell{grid-template-columns:1fr;padding-top:0}
+  .topics12-rail{position:relative;top:auto;border-bottom:1px solid var(--line);padding:0 0 24px;overflow-x:auto}
+  .topics12-rail nav{display:flex;gap:10px;min-width:max-content}
+  .topics12-rail a{display:flex;gap:7px;align-items:center;border:1px solid var(--line);padding:9px 11px;white-space:nowrap}
+  .topics12-rail-label{margin-bottom:10px}
+}
+@media(max-width:760px){
+  .topics12-shell{padding-left:18px;padding-right:18px;gap:26px}
+  .topics12-domain{padding:40px 0 44px}
+  .topics12-domain-head{gap:14px}
+  .syllabus-carousel{grid-auto-columns:82vw}
+  .syllabus-card{min-height:0}
+}
