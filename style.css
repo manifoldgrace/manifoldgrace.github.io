@@ -212,3 +212,45 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 .identity-pending{opacity:.68;cursor:default}
 .identity-pending:hover{transform:none;border-color:var(--line);color:inherit}
 @media(max-width:760px){.focus-carousel{grid-auto-columns:82%}}
+
+/* Ephemeral portrait stamp: integrated into the black backdrop, never a content card. */
+.portrait-backdrop{position:relative;overflow:hidden;isolation:isolate}
+.portrait-backdrop>.wrap{position:relative;z-index:1}
+.portrait-backdrop::after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:22px;
+  right:max(2.5vw,18px);
+  width:clamp(180px,24vw,320px);
+  aspect-ratio:11/15;
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:contain;
+  pointer-events:none;
+  opacity:0;
+  filter:saturate(.82) contrast(.96);
+  -webkit-mask-image:radial-gradient(ellipse at 58% 42%,#000 35%,rgba(0,0,0,.78) 52%,transparent 78%);
+  mask-image:radial-gradient(ellipse at 58% 42%,#000 35%,rgba(0,0,0,.78) 52%,transparent 78%);
+  animation:graceStampOnce 6.8s ease-in-out .35s 1 forwards;
+}
+.portrait-color::after{background-image:url("assets/grace-stamp.webp")}
+.portrait-bw::after{background-image:url("assets/grace-stamp-bw.webp");filter:grayscale(1) contrast(.94)}
+.page-hero.portrait-backdrop>.wrap{padding-right:clamp(180px,30vw,360px)}
+.home-hero.portrait-backdrop>.wrap{padding-right:clamp(180px,26vw,330px)}
+@keyframes graceStampOnce{
+  0%{opacity:0;transform:translateY(6px) scale(.985)}
+  18%{opacity:.54;transform:translateY(0) scale(1)}
+  58%{opacity:.46;transform:translateY(0) scale(1)}
+  100%{opacity:0;transform:translateY(-2px) scale(1.005)}
+}
+@media(max-width:760px){
+  .portrait-backdrop::after{top:18px;right:12px;width:118px}
+  .page-hero.portrait-backdrop>.wrap,.home-hero.portrait-backdrop>.wrap{padding-right:0}
+  .page-hero.portrait-backdrop .eyebrow,.page-hero.portrait-backdrop h1{max-width:calc(100% - 132px)}
+  .home-hero.portrait-backdrop .home-kicker,.home-hero.portrait-backdrop .home-title{max-width:calc(100% - 126px)}
+  .page-hero.portrait-backdrop .page-intro,.home-hero.portrait-backdrop .home-intro{margin-top:34px;max-width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  .portrait-backdrop::after{animation:none;opacity:.18}
+}
