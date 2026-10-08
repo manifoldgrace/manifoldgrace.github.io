@@ -55,7 +55,7 @@
     });
     const note = document.createElement("p");
     note.className = "footer-note";
-    note.textContent = "Manifold Grace · selected public record · private life remains private";
+    note.textContent = "Manifold Grace · selected public record · privacy status: parents and siblings are referenced by relationship only and are not named";
     footer.replaceChildren(top,note);
   });
 
