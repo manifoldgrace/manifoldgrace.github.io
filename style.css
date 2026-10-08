@@ -695,3 +695,31 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
     padding:5px 6px;
   }
 }
+
+
+/* Wikipedia-style lower biography lists */
+.wiki-link-list,
+.wiki-reference-list,
+.wiki-note-list{
+  margin:0;
+  padding-left:1.4rem;
+  max-width:900px;
+}
+.wiki-link-list li,
+.wiki-reference-list li,
+.wiki-note-list li{
+  margin:.42rem 0;
+  padding-left:.15rem;
+  color:var(--muted);
+  line-height:1.55;
+}
+.wiki-link-list a,
+.wiki-reference-list a{
+  color:#6ea8ff;
+  text-decoration:none;
+}
+.wiki-link-list a:hover,
+.wiki-reference-list a:hover{
+  color:#9bc4ff;
+  text-decoration:underline;
+}
