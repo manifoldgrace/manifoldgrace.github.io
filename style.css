@@ -614,3 +614,41 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
   .personal-life-cards{grid-template-columns:1fr}
   .personal-life-card{min-height:0}
 }
+
+
+/* Biographical record — compact inline photographs */
+.bio-accordion-body figure,
+.bio-accordion-body > img{
+  float:right;
+  width:min(28%,220px);
+  max-width:220px;
+  margin:4px 0 16px 22px;
+}
+.bio-accordion-body figure{
+  border:1px solid var(--line);
+  background:#0d0d0d;
+}
+.bio-accordion-body figure img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.bio-accordion-body figure figcaption{
+  padding:7px 9px 8px;
+  color:#777;
+  font-size:.68rem;
+  line-height:1.35;
+}
+.bio-accordion-body::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+@media(max-width:760px){
+  .bio-accordion-body figure,
+  .bio-accordion-body > img{
+    width:min(42%,160px);
+    max-width:160px;
+    margin:3px 0 12px 16px;
+  }
+}
