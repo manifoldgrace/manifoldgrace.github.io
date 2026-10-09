@@ -228,14 +228,14 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
   background-position:center top;
   background-size:contain;
   pointer-events:none;
-  opacity:.26;
+  opacity:.22;
   filter:saturate(.92) contrast(1.04) brightness(1.12);
   -webkit-mask-image:radial-gradient(ellipse at 58% 42%,#000 35%,rgba(0,0,0,.78) 52%,transparent 78%);
   mask-image:radial-gradient(ellipse at 58% 42%,#000 35%,rgba(0,0,0,.78) 52%,transparent 78%);
   animation:none;
 }
 .portrait-color::after{background-image:url("assets/grace-stamp.webp")}
-.portrait-bw::after{background-image:url("assets/grace-stamp-bw.webp");filter:none}
+.portrait-bw::after{display:none!important;background-image:none!important}
 .page-hero.portrait-backdrop>.wrap{padding-right:clamp(180px,30vw,360px)}
 .home-hero.portrait-backdrop>.wrap{padding-right:clamp(180px,26vw,330px)}
 
@@ -819,3 +819,14 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 @media(max-width:430px){
   .devotion-video-rail{grid-auto-columns:84%}
 }
+
+/* Full-viewport ambient motion: static image opacity, seamless transform loop, no crossfade. */
+body{position:relative;isolation:isolate;background:#080909}
+body::before{content:"";pointer-events:none;position:fixed;inset:-55vmax;z-index:-1;opacity:.20;
+  background:conic-gradient(from 14deg at 50% 50%, #080808 0deg,#141c22 46deg,#0c0e10 92deg,#272126 138deg,#0a0b0d 188deg,#172328 240deg,#0a0a0b 300deg,#080808 360deg);
+  filter:blur(100px);animation:manifoldOrbit 115s linear infinite;will-change:transform}
+@keyframes manifoldOrbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+body>header,body>main,body>footer{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){body::before{animation:none}}
+/* Colour portrait remains static. Grayscale decorative portrait is suppressed globally. */
+.portrait-bw::after{display:none!important;animation:none!important}
