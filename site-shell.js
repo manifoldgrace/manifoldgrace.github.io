@@ -37,6 +37,7 @@
     ["Biography","biographical-record.html"],
     ["Research Links","research-links.html"],
     ["Case Studies","case-studies.html"],
+    ["AI Research Lab","ai-research-lab.html"],
     ["Papers","papers.html"],
     ["Digital CV","cv.html"],
     ["Public Speaking","public-speaking.html"],
