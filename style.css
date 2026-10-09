@@ -830,3 +830,7 @@ body>header,body>main,body>footer{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce){body::before{animation:none}}
 /* Colour portrait remains static. Grayscale decorative portrait is suppressed globally. */
 .portrait-bw::after{display:none!important;animation:none!important}
+
+/* Grayscale stamp was removed: reclaim layout space on pages formerly using it. */
+.page-hero.portrait-bw>.wrap,.home-hero.portrait-bw>.wrap{padding-right:0!important}
+.page-hero.portrait-bw h1,.page-hero.portrait-bw .eyebrow{max-width:none!important}
