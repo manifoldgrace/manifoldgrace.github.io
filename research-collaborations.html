@@ -112,6 +112,69 @@
 @media(max-width:960px){.rc .rc-paper-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:720px){.rc .rc-paper-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:460px){.rc .rc-paper-list{grid-template-columns:1fr 1fr;gap:9px}.rc .rc-paper-record summary{min-height:230px;padding:12px 9px}.rc .rc-paper-record .rc-pub-title{font-size:1.2rem}.rc .rc-paper-record .rc-pub-label{font-size:.55rem}.rc .rc-paper-record .rc-pub-subtitle{font-size:.7rem}.rc .rc-paper-record .rc-pub-foot{font-size:.65rem}.rc .rc-paper-record .rc-pub-details{padding:11px}.rc .rc-paper-record .rc-pub-details p{font-size:.78rem}}
+
+/* Research stationery: subtle rustic paper, never crumpled or artificially aged. */
+.rc .rc-paper,
+.rc .rc-paper-record summary{
+  border:1px solid #cbbfa9;
+  border-radius:2px;
+  background:
+    repeating-linear-gradient(to bottom,transparent 0px,transparent 29px,rgba(75,112,144,.10) 30px,transparent 31px),
+    linear-gradient(108deg,rgba(255,255,255,.38) 0%,rgba(255,255,255,0) 37%),
+    #f4efe4;
+  box-shadow:2px 5px 13px rgba(0,0,0,.20);
+  color:#1d2c29;
+  filter:none;
+}
+.rc .rc-paper{transform:none}
+.rc .rc-paper:hover{transform:translateY(-3px)}
+.rc .rc-paper[aria-pressed="true"]{transform:translateY(-2px);outline:3px solid #d0b480}
+.rc .rc-paper:after,.rc .rc-paper-record summary:after{
+  content:"";position:absolute;top:0;bottom:0;left:21px;
+  border-left:1px solid rgba(163,79,77,.26);pointer-events:none;
+}
+.rc .rc-paper-record summary{position:relative}
+.rc .rc-paper-record .rc-pub-label{
+  color:#214a7a;font-family:"Bradley Hand","Segoe Print","Comic Sans MS",cursive;
+  letter-spacing:.02em;font-size:.78rem;text-transform:none;font-weight:700;
+  background:rgba(248,245,236,.90);padding:2px 5px;align-self:flex-start;position:relative;z-index:1;
+}
+.rc .rc-paper-record .rc-pub-title,
+.rc .rc-paper-head{
+  color:#17241d;font-weight:700;
+  background:rgba(250,247,238,.93);
+  box-decoration-break:clone;-webkit-box-decoration-break:clone;
+  padding:5px 8px;
+  text-shadow:none;position:relative;z-index:1;
+}
+.rc .rc-paper-record .rc-pub-subtitle,
+.rc .rc-paper-sub{
+  color:#273b35;font-weight:500;
+  background:rgba(249,247,240,.95);
+  padding:6px 9px;border-left:2px solid #426b98;
+  position:relative;z-index:1;
+}
+.rc .rc-paper-record .rc-pub-foot,.rc .rc-paper-bottom{
+  color:#24362f;font-weight:700;border-top:1px solid #b2a894;
+  background:rgba(247,243,232,.95);padding:9px 7px;
+  position:relative;z-index:1;
+}
+.rc .rc-paper-index{
+  color:#28517e;font-weight:700;letter-spacing:.065em;
+  background:rgba(249,247,239,.93);padding:2px 5px;
+  align-self:flex-start;position:relative;z-index:1;
+}
+.rc .rc-paper-record .rc-pub-details{background:#171b1c}
+.rc .rc-paper-record .rc-pub-details p{color:#f1ece2}
+.rc .rc-paper-record .rc-pub-details small{color:#d1cec6}
+.rc .rc-publication-search::placeholder{color:#c6c1b6}
+@media(max-width:460px){
+  .rc .rc-paper-record .rc-pub-title{font-size:1.15rem;padding:3px 5px}
+  .rc .rc-paper-record .rc-pub-subtitle{font-size:.7rem;padding:4px 5px}
+  .rc .rc-paper-record .rc-pub-label{font-size:.65rem}
+  .rc .rc-paper-record .rc-pub-foot{font-size:.6rem}
+}
+@media(prefers-reduced-motion:reduce){.rc .rc-paper,.rc .rc-paper-record summary{transition:none}}
 </style></head>
 <body><header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main class="rc">
