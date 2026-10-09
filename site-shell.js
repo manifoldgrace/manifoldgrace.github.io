@@ -2,11 +2,11 @@
   "use strict";
   const site = window.MANIFOLD_SITE || {};
   const navItems = [
+    ["Research Collaborations","research-collaborations.html"],
     ["About","about.html"],
     ["My Books","my-book.html"],
     ["Knowledge","knowledge.html"],
     ["Research","research.html"],
-    ["Collaborations","research-collaborations.html"],
     ["Trading","trading.html"],
     ["Professional","professional.html"],
     ["Socials","socials.html"],
@@ -29,6 +29,7 @@
       const a = document.createElement("a");
       a.href = href;
       a.textContent = label;
+      if (href === "research-collaborations.html") { a.classList.add("nav-research-feature"); a.setAttribute("aria-label","Research Collaborations — featured"); }
       if (path === href.toLowerCase()) a.setAttribute("aria-current","page");
       wrap.appendChild(a);
     });
