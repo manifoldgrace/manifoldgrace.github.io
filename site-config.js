@@ -13,7 +13,7 @@ window.MANIFOLD_SITE = Object.freeze({
     doi: "https://doi.org/10.5281/zenodo.17439725",
     researchgate: "",
     medium: "",
-    dev: "",
+    dev: "https://dev.to/gracerosen",
     soundcloud: "",
     spotify: "",
     x: "",
