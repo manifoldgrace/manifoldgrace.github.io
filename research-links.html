@@ -30,7 +30,8 @@
   <p>This is a navigation layer rather than a paper or essay: a numbered reference corpus for sources I return to across disciplines. The emphasis is on authoritative, primary or institutionally useful destinations that can anchor deeper reading rather than on producing a long undifferentiated bookmarks list.</p>
   <p>The structure is intentionally expandable. New sources can be added inside the correct discipline without changing the page architecture, and the search box below filters across titles and descriptions while the numbered sections preserve the wider taxonomy.</p>
   <label class="search-label" for="linkSearch">Search this corpus</label>
-  <input id="linkSearch" class="site-search" type="search" placeholder="e.g. regulation, theology, economics, AI, Parliament">
+  <div style="position:relative;max-width:760px"><span aria-hidden="true" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#c3c3c3">⌕</span><input id="linkSearch" class="site-search" type="search" style="padding-left:37px;width:100%" placeholder="e.g. regulation, theology, economics, AI, Parliament"></div>
+  <div id="linkNoMatch" hidden role="status" style="margin:15px 0;padding:15px;border:1px solid #555"><strong>No matching source found.</strong> Would you like to propose a category for review? <a id="linkProposal" href="https://github.com/manifoldgrace/manifoldgrace.github.io/issues/new" target="_blank" rel="noopener noreferrer" style="color:#9ecdf8;text-decoration:underline;display:block;margin-top:8px">Yes — prepare a public category proposal ↗</a><small>Do not include unpublished research, private correspondence or personal information in a public GitHub issue.</small></div>
 </div></section>
 
 <section><div class="wrap numbered-corpus">
