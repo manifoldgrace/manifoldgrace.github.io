@@ -31,20 +31,34 @@
 <span class="status">CREATIVE EXPERIMENT · AI CONCEPT</span>
 <h2 id="portrait-animation-title">Portrait in motion</h2>
 <p>A first hairstyle study using Grace’s portrait reference, presented as an animated montage.</p>
-<figure style="margin:24px 0;max-width:420px">
+<div class="creative-video-pair">
+<figure style="margin:0;max-width:420px">
 <video id="grace-portrait-video" controls autoplay muted loop playsinline preload="metadata" aria-label="Grace’s animated hairstyle portrait montage" style="display:block;width:100%;aspect-ratio:9/16;border-radius:16px;background:#111">
 <source src="assets/video/grace-hairstyle-animation.mp4" type="video/mp4">
 <a href="assets/video/grace-hairstyle-animation.mp4">Watch the portrait animation</a>
 </video>
 <figcaption class="small-note" style="margin-top:12px">AI concept · animated still portraits · 22 seconds. Use the player controls to pause or enable sound.</figcaption>
 </figure>
+<figure style="margin:0;max-width:420px">
+<video id="grace-book-video" controls autoplay muted loop playsinline preload="metadata" aria-label="Grace’s animated book-cover showcase" style="display:block;width:100%;aspect-ratio:9/16;border-radius:16px;background:#111">
+<source src="assets/video/grace-book-covers.mp4" type="video/mp4">
+<a href="assets/video/grace-book-covers.mp4">Watch the book-cover video</a>
+</video>
+<figcaption class="small-note" style="margin-top:12px">Book-cover concepts · three covers with gentle zooms and sliding transitions · 14 seconds.</figcaption>
+</figure>
+</div>
 </div></section>
+<style>
+.creative-video-pair{display:grid;grid-template-columns:repeat(2,minmax(0,420px));gap:24px;margin:24px 0;align-items:start}
+@media(max-width:640px){.creative-video-pair{grid-template-columns:minmax(0,420px)}}
+</style>
 <script>
 (() => {
-const video = document.getElementById('grace-portrait-video');
-if (video && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+document.querySelectorAll('.creative-video-pair video').forEach(video => {
 video.autoplay = false;
 video.pause();
+});
 }
 })();
 </script>
