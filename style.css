@@ -228,22 +228,17 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
   background-position:center top;
   background-size:contain;
   pointer-events:none;
-  opacity:0;
+  opacity:.26;
   filter:saturate(.92) contrast(1.04) brightness(1.12);
   -webkit-mask-image:radial-gradient(ellipse at 58% 42%,#000 35%,rgba(0,0,0,.78) 52%,transparent 78%);
   mask-image:radial-gradient(ellipse at 58% 42%,#000 35%,rgba(0,0,0,.78) 52%,transparent 78%);
-  animation:graceStampOnce 6.8s ease-in-out .35s 1 forwards;
+  animation:none;
 }
 .portrait-color::after{background-image:url("assets/grace-stamp.webp")}
-.portrait-bw::after{background-image:url("assets/grace-stamp-bw.webp");filter:grayscale(1) contrast(1.05) brightness(1.18)}
+.portrait-bw::after{background-image:url("assets/grace-stamp-bw.webp");filter:none}
 .page-hero.portrait-backdrop>.wrap{padding-right:clamp(180px,30vw,360px)}
 .home-hero.portrait-backdrop>.wrap{padding-right:clamp(180px,26vw,330px)}
-@keyframes graceStampOnce{
-  0%{opacity:0;transform:translateY(6px) scale(.985)}
-  14%{opacity:.86;transform:translateY(0) scale(1)}
-  70%{opacity:.74;transform:translateY(0) scale(1)}
-  100%{opacity:.24;transform:translateY(-2px) scale(1.005)}
-}
+
 @media(max-width:760px){
   header .wrap{padding:18px 0;gap:18px}
   .nav-links{gap:10px 18px;font-size:.88rem}
@@ -257,7 +252,7 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
   .page-hero.portrait-backdrop .page-intro,.home-hero.portrait-backdrop .home-intro{margin-top:26px;max-width:100%}
 }
 @media(prefers-reduced-motion:reduce){
-  .portrait-backdrop::after{animation:none;opacity:.18}
+  .portrait-backdrop::after{animation:none;opacity:.26}
 }
 
 .achievement-checklist{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--line);max-width:900px}
