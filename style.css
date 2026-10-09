@@ -886,3 +886,13 @@ body>header,body>main,body>footer{position:relative;z-index:1}
 /* Grayscale stamp was removed: reclaim layout space on pages formerly using it. */
 .page-hero.portrait-bw>.wrap,.home-hero.portrait-bw>.wrap{padding-right:0!important}
 .page-hero.portrait-bw h1,.page-hero.portrait-bw .eyebrow{max-width:none!important}
+
+/* Expandable learning levels for the 24-domain knowledge atlas */
+.domain-depth{margin-top:20px;border:1px solid var(--line);background:#101010;padding:15px 20px;color:var(--muted)}
+.domain-depth summary{cursor:pointer;color:var(--text);font-size:.88rem;letter-spacing:.02em}
+.domain-depth ol{padding-left:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px 26px;margin:22px 0 5px}
+.domain-depth li{line-height:1.6;font-size:.84rem}
+.domain-depth ol>li{padding-right:10px}
+.domain-depth ul{padding-left:19px;margin-top:7px}
+.domain-depth ul li{color:#9e9b96;font-size:.77rem}
+@media(max-width:600px){.domain-depth ol{grid-template-columns:1fr}}
