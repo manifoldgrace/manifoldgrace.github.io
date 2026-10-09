@@ -9,13 +9,38 @@
 .social-embed-viewport{height:340px;width:min(340px,100%);overflow:hidden;border:1px solid #444;background:#101010;margin-top:8px}
 .social-embed-viewport iframe{width:390px;height:650px;border:0;transform:scale(.77);transform-origin:top left}
 @media(max-width:720px){.network-links{grid-template-columns:1fr}}
+
+/* Oct 2026: concise featured previews, preserving the full existing social directory */
+#social-featured{padding:30px 0 18px;border-bottom:1px solid var(--line)}
+#social-featured .social-feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:20px}
+#social-featured .social-feature-card{border:1px solid #363a42;border-radius:14px;background:#15181e;color:var(--text);padding:16px;min-width:0;display:flex;flex-direction:column;gap:9px}
+#social-featured .social-feature-card:hover{border-color:#8fc4ff}
+#social-featured .social-feature-card:focus-visible,.social-directory-search:focus-visible{outline:3px solid #99c4ff;outline-offset:3px}
+#social-featured .profile-top{display:flex;gap:11px;align-items:center}
+#social-featured .profile-mark{width:41px;height:41px;border-radius:10px;background:#283b53;color:#d5e7ff;display:grid;place-items:center;font-weight:750;flex:none}
+#social-featured .profile-title{font-weight:700;color:#f6f7fb;line-height:1.2}
+#social-featured .profile-subtitle{font-size:.77rem;color:#b4b8c1}
+#social-featured .profile-mini{border-top:1px solid #374050;padding-top:12px;min-height:60px;color:#abbdd4;font-size:.79rem;line-height:1.45}
+#social-featured .profile-action{color:#8fc4ff;font-weight:650;text-decoration:underline;margin-top:auto}
+.social-directory-search{width:min(480px,100%);background:#161a21;color:#f4f6fa;border:1px solid #4a5261;border-radius:10px;padding:12px 14px;font:inherit;margin:10px 0 20px}
+#community-sport .network-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:900px){#social-featured .social-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){#social-featured .social-feature-grid{grid-template-columns:1fr}#community-sport .network-links{grid-template-columns:1fr}}
 </style></head><body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main><div class="page-hero"><div class="wrap"><div class="eyebrow">SOCIALS · RESEARCH · CREATIVE</div><h1>Social Directory</h1>
 <p class="page-intro">A scannable directory of online presences across professional, scientific and creative platforms. Verified destinations are blue hyperlinks; unverified profile addresses remain visible as planned slots rather than misleading clickable links.</p>
 </div></div>
-<section><div class="wrap"><span class="status">CROSS-PLATFORM INDEX</span><h2>Explore by platform type</h2><p>8 verified destinations and 35 platform slots. Expand each category; the Linkme row includes an optional embedded preview wherever the provider permits it.</p>
-<details class="network-group" open><summary>Profiles & hubs <small>1 linked · 2 reserved</small></summary><ul class="network-links"><li class="network-entry"><a href="https://link.me/gracerose" target="_blank" rel="noopener noreferrer"><strong>Linkme</strong></a> <small>Main link hub</small><details class="social-embed"><summary>Open mini page preview</summary><div class="social-embed-viewport"><iframe loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin" title="Linkme profile preview" src="https://link.me/gracerose"></iframe></div><p class="small-note">Some platforms block embedded previews. <a href="https://link.me/gracerose" target="_blank" rel="noopener noreferrer">Open Linkme directly</a> if the preview cannot load.</p></details></li><li class="network-entry network-pending"><strong>Linktree</strong> <small>Profile URL not verified — no link published</small></li>
+<section id="social-featured" aria-labelledby="social-featured-heading"><div class="wrap"><span class="status">AT A GLANCE</span><h2 id="social-featured-heading">Featured profiles</h2><p>Eight confirmed public destinations. Scan the platform, open its profile, or browse the expandable index below. LinkMe offers a miniature page preview in the directory where embedding is supported.</p><div class="social-feature-grid"><a class="social-feature-card" href="https://link.me/gracerose" target="_blank" rel="noopener noreferrer" aria-label="Open LinkMe profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">LM</span><span><span class="profile-title">LinkMe</span><span class="profile-subtitle">Link hub</span></span></span><span class="profile-mini">Visual hub for verified professional, creative and social destinations.</span><span class="profile-action">View profile ↗</span></a>
+<a class="social-feature-card" href="https://github.com/manifoldgrace" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">GH</span><span><span class="profile-title">GitHub</span><span class="profile-subtitle">Engineering</span></span></span><span class="profile-mini">Projects, repositories and technical work.</span><span class="profile-action">View profile ↗</span></a>
+<a class="social-feature-card" href="https://www.linkedin.com/in/gracerose-uk" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">in</span><span><span class="profile-title">LinkedIn</span><span class="profile-subtitle">Professional</span></span></span><span class="profile-mini">Career, work history and professional connections.</span><span class="profile-action">View profile ↗</span></a>
+<a class="social-feature-card" href="https://uk.pinterest.com/GracefulPerspectives/" target="_blank" rel="noopener noreferrer" aria-label="Open Pinterest profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">P</span><span><span class="profile-title">Pinterest</span><span class="profile-subtitle">Visual collections</span></span></span><span class="profile-mini">Boards, visual references and creative collections.</span><span class="profile-action">View profile ↗</span></a>
+<a class="social-feature-card" href="https://orcid.org/0009-0005-9805-5273" target="_blank" rel="noopener noreferrer" aria-label="Open ORCID profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">iD</span><span><span class="profile-title">ORCID</span><span class="profile-subtitle">Academic identity</span></span></span><span class="profile-mini">Persistent researcher identifier.</span><span class="profile-action">View profile ↗</span></a>
+<a class="social-feature-card" href="https://scholar.google.com/citations?user=nJoBMaIAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Open Google Scholar profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">GS</span><span><span class="profile-title">Google Scholar</span><span class="profile-subtitle">Academic profile</span></span></span><span class="profile-mini">Public citations and research listings.</span><span class="profile-action">View profile ↗</span></a>
+<a class="social-feature-card" href="https://zenodo.org/records/17439725" target="_blank" rel="noopener noreferrer" aria-label="Open Zenodo profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">Z</span><span><span class="profile-title">Zenodo</span><span class="profile-subtitle">Open research</span></span></span><span class="profile-mini">Public papers, preprints and research records.</span><span class="profile-action">View profile ↗</span></a>
+<a class="social-feature-card" href="https://dev.to/gracerosen" target="_blank" rel="noopener noreferrer" aria-label="Open DEV Community profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">DEV</span><span><span class="profile-title">DEV Community</span><span class="profile-subtitle">Technology writing</span></span></span><span class="profile-mini">Programming and engineering posts.</span><span class="profile-action">View profile ↗</span></a></div></div></section>
+<section><div class="wrap"><span class="status">CROSS-PLATFORM INDEX</span><h2>Explore by platform type</h2><label for="social-directory-search">Find a platform</label><input id="social-directory-search" class="social-directory-search" type="search" placeholder="Search social, creative or academic links…" autocomplete="off"><p>8 verified profile destinations and 35 reserved platform slots, plus one external sport reference. Expand each category; the Linkme row includes an optional embedded preview wherever the provider permits it.</p>
+<details class="network-group" open><summary>Profiles & hubs <small>1 linked · 2 reserved</small></summary><ul class="network-links"><li class="network-entry"><a href="https://link.me/gracerose" target="_blank" rel="noopener noreferrer"><strong>Linkme</strong></a> <small>Main link hub</small><details class="social-embed" id="linkme-embed"><summary>Open mini page preview</summary><div class="social-embed-viewport"><iframe loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin" title="Linkme profile preview" src="https://link.me/gracerose"></iframe></div><p class="small-note">Some platforms block embedded previews. <a href="https://link.me/gracerose" target="_blank" rel="noopener noreferrer">Open Linkme directly</a> if the preview cannot load.</p></details></li><li class="network-entry network-pending"><strong>Linktree</strong> <small>Profile URL not verified — no link published</small></li>
 <li class="network-entry network-pending"><strong>Wix</strong> <small>Profile URL not verified — no link published</small></li></ul></details>
 <details class="network-group" open><summary>Engineering & career <small>3 linked · 5 reserved</small></summary><ul class="network-links"><li class="network-entry"><a href="https://github.com/manifoldgrace" target="_blank" rel="noopener noreferrer"><strong>GitHub</strong></a> <small>Repository and project folio</small></li>
 <li class="network-entry"><a href="https://www.linkedin.com/in/gracerose-uk" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong></a> <small>Professional history</small></li>
@@ -54,5 +79,26 @@
 <li class="network-entry network-pending"><strong>Bluesky</strong> <small>Profile URL not verified — no link published</small></li>
 <li class="network-entry network-pending"><strong>Mastodon</strong> <small>Profile URL not verified — no link published</small></li>
 <li class="network-entry network-pending"><strong>Twitch</strong> <small>Profile URL not verified — no link published</small></li></ul></details>
+<details class="network-group" id="community-sport"><summary>Community &amp; sport <small>1 external reference · no personal affiliation implied</small></summary><ul class="network-links"><li class="network-entry"><a href="https://www.heartsofoaksc.com/" target="_blank" rel="noopener noreferrer"><strong>Hearts of Oak SC</strong></a><small>Accra, Ghana · Official football club website and community reference</small></li></ul><p class="small-note">A third-party organisation, provided as a reference. The link does not claim a personal affiliation or role.</p></details>
 <p class="small-note">Platforms may prevent in-page previews through their security headers. An unverified slot does not claim that an account exists or that it belongs to Grace.</p>
-</div></section></main><footer><div class="wrap" data-site-footer></div></footer></body></html>
+</div></section></main><footer><div class="wrap" data-site-footer></div></footer><script>
+(() => {
+  'use strict';
+  const search = document.getElementById('social-directory-search');
+  if (!search) return;
+  const groups = [...document.querySelectorAll('.network-group')];
+  const entries = [...document.querySelectorAll('.network-entry')];
+  search.addEventListener('input', () => {
+    const query = search.value.trim().toLowerCase();
+    for (const entry of entries) {
+      entry.hidden = !!query && !entry.textContent.toLowerCase().includes(query);
+    }
+    for (const group of groups) {
+      const matching = [...group.querySelectorAll('.network-entry')].some(el => !el.hidden);
+      group.hidden = !!query && !matching;
+      if (query && matching) group.open = true;
+      if (!query) group.hidden = false;
+    }
+  });
+})();
+</script></body></html>
