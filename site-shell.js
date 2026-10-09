@@ -13,7 +13,6 @@
     ["Faith","faith.html"],
     ["Society","society.html"],
     ["Heritage","heritage.html"],
-    ["Sociology","sociology.html"],
     ["Recognition","recognition.html"],
     ["Resourcefulness","resourcefulness.html"],
     ["Venture","conglomerate.html"]
