@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Research Lab | Manifold Grace</title>
+<meta name="description" content="Interactive educational AI engineering laboratory: five runnable experiments, source-code explanations, architecture diagrams, security notes and research questions.">
+<link rel="stylesheet" href="style.css">
+<script src="site-config.js" defer></script><script src="site-shell.js" defer></script>
+<style>
+.lab{--link:#92c7ff;font-size:.96rem}.lab a,.lab a:visited{color:var(--link);text-decoration:underline;text-underline-offset:3px}
+.lab h2{margin-bottom:8px}.lab h3{margin:8px 0}.lab p{margin:8px 0}.lab small{color:var(--muted)}
+.lab-header{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.lab-structure{display:grid;grid-template-columns:minmax(190px,230px) minmax(0,1fr) minmax(185px,245px);gap:16px;margin-top:22px;align-items:start}
+.lab-side{border-top:1px solid #555;padding:13px 0}.lab-side a{display:block;padding:6px 0}.lab-side label{display:block;margin-bottom:5px}
+.lab-project{display:block;text-align:left;width:100%;padding:12px 9px;border:0;border-bottom:1px solid #333;background:transparent;color:var(--text);font:inherit;cursor:pointer}
+.lab-project[aria-current=true]{border-left:3px solid #92c7ff;padding-left:6px;background:#181818}
+.lab-main{min-width:0;border-top:2px solid #777;padding:14px 0}.lab-tabs{display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid #444;padding-bottom:12px}
+.lab-tabs button,.lab-action{background:#171717;color:var(--text);border:1px solid #555;padding:9px 12px;cursor:pointer;font:inherit}
+.lab-tabs button[aria-selected=true]{border-color:#92c7ff;color:#92c7ff}
+.lab-action:focus-visible,.lab-project:focus-visible,.lab-tabs button:focus-visible,.lab a:focus-visible{outline:2px solid #92c7ff;outline-offset:3px}
+.lab-form{display:grid;gap:12px;margin:15px 0}.lab-form label{display:grid;gap:5px}
+.lab-form input,.lab-form textarea,.lab-form select{width:100%;background:#0e0e0e;border:1px solid #666;color:#fff;padding:10px;font:inherit}
+.lab-output{min-height:70px;margin-top:16px;padding:14px;border-left:3px solid #92c7ff;background:#141414;color:#e5e5e5;white-space:pre-wrap;overflow-wrap:anywhere;font-family:ui-monospace,monospace;font-size:.85rem}
+.lab-code{max-height:470px;overflow:auto;background:#101010;color:#e5e5e5;padding:16px;border:1px solid #333;font: .82rem/1.6 ui-monospace,monospace;white-space:pre}
+.lab-sequence{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:14px 0}
+.lab-node{padding:9px 10px;border:1px solid #666;background:#151515;color:#ddd;font-size:.85rem}
+.lab-arrow{color:#92c7ff}
+.lab-subject details{padding:14px 0;border-bottom:1px solid #333}.lab-subject summary{cursor:pointer;font-weight:600;color:#e9e9e9}
+.lab-note{border-left:2px solid #888;padding-left:14px}.lab-status{color:#b8e5bc;font-size:.85rem}
+.lab-legend{font-size:.83rem;color:var(--muted)}.lab-track{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;margin:16px 0;padding-bottom:10px}
+.lab-track button{min-width:220px;max-width:250px;flex:1;scroll-snap-align:start}
+@media(max-width:980px){.lab-structure{grid-template-columns:minmax(180px,230px) minmax(0,1fr)}.lab-context{grid-column:1/-1}}
+@media(max-width:650px){.lab-structure{display:block}.lab-side{margin-bottom:16px}.lab-selector{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.lab-project{font-size:.88rem}.lab-main{margin-top:20px}}
+</style>
+</head>
+<body><header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
+<main class="lab"><div class="page-hero"><div class="wrap">
+<div class="eyebrow">RESEARCH / INTERACTIVE LEARNING ENVIRONMENT</div><h1>AI Research Laboratory</h1>
+<p class="page-intro">Open each project, change inputs, run a small experiment, inspect the exact algorithm and trace the architecture from data to output. Designed for understanding how AI systems are assembled, tested and secured.</p>
+<p class="lab-status">● Five browser-side experiments available · No login or external execution</p><p class="lab-legend">Educational demonstration only. No real model training, cloud instances, data uploads or remote terminal connections occur on this page. Never enter confidential or identifying records.</p>
+</div></div>
+<section><div class="wrap">
+<div class="lab-header"><div><span class="status">INTERACTIVE PROJECT WORKBENCH</span><h2>Experiment explorer</h2></div><a href="research.html#doctoral-ai-projects">← Research project carousel</a></div>
+<div class="lab-structure">
+<aside class="lab-side" aria-label="Project explorer"><h3>01 · Projects</h3><div class="lab-selector" id="lab-project-list"></div>
+<details><summary>Connected tools (proposed)</summary><ul><li><a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">JupyterLab</a></li><li><a href="https://github.com/features/codespaces" target="_blank" rel="noopener noreferrer">GitHub Codespaces</a></li><li><a href="https://mlflow.org/" target="_blank" rel="noopener noreferrer">MLflow</a></li></ul><small>External links only; none are authenticated through this website.</small></details></aside>
+<div class="lab-main"><div class="lab-tabs" role="tablist" aria-label="Research workspace views">
+<button type="button" role="tab" data-tab="run" aria-selected="true">Test</button>
+<button type="button" role="tab" data-tab="code" aria-selected="false">Annotated code</button>
+<button type="button" role="tab" data-tab="architecture" aria-selected="false">Architecture</button>
+<button type="button" role="tab" data-tab="security" aria-selected="false">Security</button></div>
+<div id="lab-workspace" role="tabpanel" aria-live="polite"></div></div>
+<aside class="lab-side lab-context"><h3>03 · Context &amp; infrastructure</h3>
+<p><strong>Compute:</strong> Local browser JavaScript</p>
+<p><strong>Storage:</strong> No research datasets sent to server</p>
+<p><strong>Model API:</strong> Not connected</p>
+<p><strong>Job queue:</strong> Not connected</p>
+<p><strong>Cost:</strong> No cloud compute invoked</p>
+<details open><summary>Real lab architecture</summary><ol><li>Authenticate researcher</li><li>Authorise project and dataset</li><li>Submit configured job</li><li>Run isolated compute worker</li><li>Store versioned artifacts</li><li>Log results and provenance</li></ol></details>
+<details><summary>Required future integrations</summary><ul><li>Private identity and role service</li><li>API gateway and rate limits</li><li>Jupyter or isolated compute</li><li>Private object storage</li><li>Job queue / experiment tracking</li><li>Secret manager / audit trail</li></ul></details></aside>
+</div></div></section>
+<section id="lab-questions"><div class="wrap"><span class="status">RESEARCH INTERVIEW &amp; ETHICS WORKSHOP</span><h2>Advanced engineering questions &amp; ethical dilemmas</h2>
+<p>Expand each question to reveal a short answer, an architectural sequence and an invitation to explore the relevant technical or ethical trade-off. These are learning prompts, not universal solutions.</p>
+<div id="lab-questions-list"></div>
+</div></section>
+<section><div class="wrap"><h2>From a teaching demo to a real doctoral lab</h2><p>This page intentionally runs transparent, deterministic JavaScript algorithms so you can inspect every transformation. Deploying real notebooks, pretrained models, protected research data or GPU jobs requires a separately authenticated backend, secure provider connections and resource controls. A public GitHub Pages website cannot safely store API keys or execute private server-side jobs.</p>
+<ul><li><a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">Notebook execution layer — Jupyter</a></li><li><a href="https://mlflow.org/" target="_blank" rel="noopener noreferrer">Experiment tracking — MLflow</a></li><li><a href="https://dvc.org/" target="_blank" rel="noopener noreferrer">Versioned research data — DVC</a></li><li><a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer">Application security baseline — OWASP</a></li></ul>
+</div></section></main><footer><div class="wrap" data-site-footer></div></footer>
+<script>
+"use strict";
+const LAB_PROJECTS=[["Literature mapping","NLP · evidence synthesis","Trace sources → tokenise abstracts → score themes → inspect ranked evidence.","AI-assisted literature mapping"],["Dataset preparation","Data engineering · FAIR","Ingest records → validate → deduplicate → split → audit transformations.","Dataset construction &amp; annotation"],["Model benchmarking","ML · evaluation","Select threshold → predict outcomes → calculate precision, recall and errors.","Model training &amp; benchmarking"],["Governance audit","Responsible AI · fairness","Compare groups → measure selection rates → inspect trade-offs and limitations.","Bias, reliability &amp; explainability audit"],["Scenario simulation","Scientific modelling · uncertainty","Set initial conditions → iterate dynamics → compare simulated outcomes.","Simulation &amp; scenario analysis"]];
+const LAB_CODES=["function run(text, term) {\n  const docs = text.split(/\\n+/).map(s => s.trim()).filter(Boolean);\n  const word = term.toLowerCase().trim();\n  return docs.map((source, i) => ({\n    id: i + 1, source,\n    score: (source.toLowerCase().match(new RegExp(word.replace(/[.*+?^${}()|[\\]\\\\]/g, \"\\\\$&\"), \"g\")) || []).length\n  })).sort((a,b) => b.score - a.score);\n}\n// The count is a transparent baseline, NOT semantic understanding.","function run(rows) {\n  const seen = new Set(), clean = [], excluded = [];\n  for (const row of rows) {\n    const [id, measurement] = row.split(\",\").map(x => x.trim());\n    const value = Number(measurement);\n    if (!id || measurement === \"\" || !Number.isFinite(value) || seen.has(id)) {\n      excluded.push(row);\n      continue;\n    }\n    seen.add(id); clean.push({id, value});\n  }\n  return {clean, excluded};\n}\n// Production pipelines also retain provenance and enforce schemas.","function run(threshold) {\n  const probabilities = [.91,.73,.68,.44,.32,.15];\n  const truth = [1,1,0,1,0,0];\n  const predicted = probabilities.map(p => Number(p >= threshold));\n  const TP = predicted.filter((p,i) => p===1 && truth[i]===1).length;\n  const FP = predicted.filter((p,i) => p===1 && truth[i]===0).length;\n  const FN = predicted.filter((p,i) => p===0 && truth[i]===1).length;\n  return {TP,FP,FN,precision:TP/(TP+FP||1),recall:TP/(TP+FN||1)};\n}\n// Never tune thresholds on a held-out test set.","function run(threshold) {\n  const groupA = [.92,.76,.51,.38,.2];\n  const groupB = [.88,.61,.42,.24,.12];\n  const selection = xs => xs.filter(x => x >= threshold).length/xs.length;\n  return {a:selection(groupA),b:selection(groupB)};\n}\n// Selection-rate parity alone cannot establish fairness.","function run(growth, steps) {\n  let population = 100, history = [population];\n  for(let t=0;t<steps;t++) {\n    population += growth*population*(1-population/300);\n    history.push(Number(population.toFixed(2)));\n  }\n  return history;\n}\n// A simple logistic process, not a validated physical model."];
+const LAB_QUESTIONS=[["Advanced AI engineering",[["How do you prevent training-serving skew?","Version preprocessing and feature definitions; validate production distributions against the training baseline.","Training data → feature contract → serving pipeline → drift monitor"],["How would you architect secure multi-tenant model inference?","Isolate tenant identities, authorization, secrets, storage and workloads; monitor cross-tenant access.","Identity → authorization → request isolation → inference → audit"],["When should you choose RAG rather than fine-tuning?","Use retrieval for mutable source knowledge and citations; fine-tuning for stable behavioural adaptations.","User prompt → authorised retrieval → grounded context → model"],["How do you ensure reproducible model experiments?","Pin datasets, code, environment, random seeds, hyperparameters, metrics and model artifacts.","Dataset hash → code commit → run config → metrics → registry"],["How do you handle long-running distributed GPU training failures?","Checkpoint models, monitor nodes, retry safely and validate resumed training state.","Scheduler → workers → checkpoints → recovery → evaluation"],["How can you reduce latency without degrading model quality?","Profile end-to-end stages; evaluate batching, caching, quantisation and routing with quality gates.","Request → router → model → cache → response monitor"]]],["Advanced ethics dilemmas implemented in algorithms",[["Can demographic parity conflict with accuracy?","Different base rates and labels can create competing statistical targets. Compare metrics, harms and policy context.","Subgroup labels → predictions → parity metric ↔ error metric"],["Should an AI explain every decision?","Explainability supports contestability, but exposing sensitive training information can undermine privacy.","Decision → explanation filter → disclosure review → appeal"],["What if training data contains unfair historical outcomes?","Audit labels and sampling, assess counterfactual impacts, and test mitigations before deployment.","Historical labels → bias audit → mitigation → monitored model"],["Who gets access to restricted research datasets?","Purpose limitation and research permissions should be enforced in code, not delegated to prompts.","Authenticated researcher → policy check → scoped dataset"],["How should a model respond when confidence is low?","Calibrate uncertainty; permit abstention, escalation or human review for consequential decisions.","Prediction → confidence threshold → abstain or review"],["Can an efficient model still be environmentally irresponsible?","Measure energy and hardware lifecycle alongside quality, accessibility and social benefit.","Compute demand → power estimate → benefit/risk review"]]]];
+const PROJECT_SECURITY=[
+"Research papers can carry hostile instructions. Treat documents as untrusted data, verify licensing, and avoid putting private abstracts into public AI APIs.",
+"Enforce source permissions and retention, detect personal data, use immutable source hashes, schema validation and a separate access-controlled storage tier.",
+"Prevent training/test leakage. Pin dependency versions, isolate compute, track model provenance and restrict who can export trained artifacts.",
+"Protect sensitive group attributes, use minimum-necessary access, guard small groups against reidentification and audit fairness decisions.",
+"Validate simulation parameters, cap resource use, sandbox executable code and never promote unvalidated synthetic outputs as scientific evidence."
+];
+const list=document.getElementById("lab-project-list");
+const workspace=document.getElementById("lab-workspace");
+let active=0,tab="run";
+const escaped=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+LAB_PROJECTS.forEach((p,i)=>{const b=document.createElement("button");b.className="lab-project";b.type="button";b.textContent=(i+1)+". "+p[0];b.addEventListener("click",()=>{active=i;tab="run";show();});list.append(b);});
+document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>{tab=b.dataset.tab;show();}));
+function fields(i){
+const templates=[
+'<label>Search term<input id="input-term" value="governance" maxlength="50"></label><label>Abstracts (one per line)<textarea id="input-text" rows="7">AI governance and public accountability.\nMachine learning in health research.\nGovernance mechanisms for trustworthy AI.</textarea></label>',
+'<label>CSV records (id,measurement)<textarea id="input-text" rows="8">A,12\nB,18\nB,19\nC,not-a-number\nD,15</textarea></label>',
+'<label>Decision threshold <output id="threshold-label">0.50</output><input id="input-threshold" type="range" min="0" max="1" value="0.50" step="0.05"></label>',
+'<label>Approval threshold <output id="threshold-label">0.50</output><input id="input-threshold" type="range" min="0" max="1" value="0.50" step="0.05"></label>',
+'<label>Growth rate<input id="input-growth" type="number" min="0" max="1" step="0.05" value="0.25"></label><label>Iterations<input id="input-steps" type="number" min="1" max="30" step="1" value="10"></label>'
+];return templates[i];
+}
+function compute(i){
+if(i===0){const term=document.getElementById("input-term").value.toLowerCase().trim();const docs=document.getElementById("input-text").value.split(/\n+/).map(s=>s.trim()).filter(Boolean).slice(0,100);return docs.map((source,n)=>({paper:n+1,score:term?source.toLowerCase().split(term).length-1:0,text:source})).sort((a,b)=>b.score-a.score);}
+if(i===1){const seen=new Set(),clean=[],excluded=[];const lines=document.getElementById("input-text").value.split(/\n/).filter(x=>x.trim()).slice(0,100);for(const line of lines){const pieces=line.split(",");const id=(pieces[0]||"").trim(),raw=(pieces[1]||"").trim(),v=Number(raw);if(pieces.length!==2||!id||!raw||!Number.isFinite(v)||seen.has(id)){excluded.push(line);continue;}seen.add(id);clean.push({id,value:v});}return {clean,excluded};}
+if(i===2){const t=Number(document.getElementById("input-threshold").value),pred=[.91,.73,.68,.44,.32,.15].map(x=>Number(x>=t)),truth=[1,1,0,1,0,0];const tp=pred.filter((x,n)=>x===1&&truth[n]===1).length,fp=pred.filter((x,n)=>x===1&&truth[n]===0).length,fn=pred.filter((x,n)=>x===0&&truth[n]===1).length,tn=pred.filter((x,n)=>x===0&&truth[n]===0).length;return {threshold:t,TP:tp,FP:fp,FN:fn,TN:tn,precision:Number((tp/(tp+fp||1)).toFixed(3)),recall:Number((tp/(tp+fn||1)).toFixed(3))};}
+if(i===3){const t=Number(document.getElementById("input-threshold").value),a=[.92,.76,.51,.38,.2],b=[.88,.61,.42,.24,.12],rate=xs=>xs.filter(x=>x>=t).length/xs.length;return {threshold:t,groupA_selection_rate:rate(a),groupB_selection_rate:rate(b),absolute_rate_gap:Number(Math.abs(rate(a)-rate(b)).toFixed(3)),caution:"This is one metric, not a complete fairness assessment."};}
+let growth=Number(document.getElementById("input-growth").value),steps=Number(document.getElementById("input-steps").value);if(!Number.isFinite(growth)||growth<0||growth>1||!Number.isInteger(steps)||steps<1||steps>30)return {error:"Use a growth rate from 0 to 1 and 1–30 iterations."};let n=100,history=[n];for(let j=0;j<steps;j++){n+=growth*n*(1-n/300);history.push(Number(n.toFixed(2)));}return {initial:100,carrying_capacity:300,growth_rate:growth,history};}
+function show(){
+document.querySelectorAll(".lab-project").forEach((b,i)=>b.setAttribute("aria-current",String(i===active)));
+document.querySelectorAll("[data-tab]").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.tab===tab)));
+let p=LAB_PROJECTS[active];
+let head='<h3>'+escaped(p[0])+'</h3><small>'+escaped(p[1])+'</small><p>'+escaped(p[2])+'</p>';
+if(tab==="run"){workspace.innerHTML=head+'<div class="lab-form">'+fields(active)+'</div><button class="lab-action" id="lab-run" type="button">▶ Run local experiment</button><button class="lab-action" id="lab-reset" type="button">Reset example</button><div class="lab-output" id="lab-output" role="status">Change an input and select Run to inspect the output.</div><p class="lab-legend">Outputs use small illustrative data and transparent algorithms, not remotely hosted trained AI models.</p>';
+document.getElementById("lab-run").addEventListener("click",()=>{try{document.getElementById("lab-output").textContent=JSON.stringify(compute(active),null,2);}catch(err){document.getElementById("lab-output").textContent="Input error: "+err.message;}});
+document.getElementById("lab-reset").addEventListener("click",show);const slider=document.getElementById("input-threshold");if(slider)slider.addEventListener("input",()=>document.getElementById("threshold-label").textContent=slider.value);
+} else if(tab==="code"){workspace.innerHTML=head+'<p><strong>Annotated reference implementation</strong> — readable JavaScript showing the core algorithm. The Test tab executes an equivalent browser implementation with input validation.</p><pre class="lab-code"><code>'+escaped(LAB_CODES[active])+'</code></pre><p class="lab-note">Sequence: input parsing → validation → transformation → analysis → visible output. Production services also need authentication, persistent storage, version control, tests, deployment and monitoring.</p>';
+} else if(tab==="architecture"){const nodes=p[2].split("→").map(x=>x.trim());workspace.innerHTML=head+'<h3>Processing sequence</h3><div class="lab-sequence">'+nodes.map((n,i)=>(i?'<span class="lab-arrow" aria-hidden="true">→</span>':'')+'<span class="lab-node">'+escaped(n)+'</span>').join("")+'</div><details open><summary>Layer annotations</summary><ol><li><strong>Frontend:</strong> capture parameters, display outputs and provide source-code navigation.</li><li><strong>API boundary:</strong> validate input, authenticate, authorise and apply rate limits when connected.</li><li><strong>Compute:</strong> isolate algorithms from private credentials and restricted datasets.</li><li><strong>Data layer:</strong> version artifacts and log provenance for reproducibility.</li><li><strong>Monitoring:</strong> trace performance, failures, usage and security events.</li></ol></details>';
+}else{workspace.innerHTML=head+'<h3>Threats &amp; safeguards</h3><p class="lab-note">'+escaped(PROJECT_SECURITY[active])+'</p><ol><li>Never place API keys in browser JavaScript.</li><li>Use server-side permission checks; hiding interface elements is not security.</li><li>Isolate code execution and apply resource/time limits.</li><li>Minimise data collection, log safely and maintain deletion controls.</li><li>Review model outputs before consequential decisions.</li></ol>';}
+}
+const qroot=document.getElementById("lab-questions-list");
+for(const [heading,qs] of LAB_QUESTIONS){const section=document.createElement("section");section.className="lab-subject";section.style.padding="22px 0";const h=document.createElement("h3");h.textContent=heading;section.append(h);
+for(const [question,answer,diagram] of qs){const details=document.createElement("details");const summary=document.createElement("summary");summary.textContent=question;details.append(summary);const p=document.createElement("p");p.textContent=answer;details.append(p);const div=document.createElement("div");div.className="lab-sequence";diagram.split("→").forEach((part,i)=>{if(i){const arrow=document.createElement("span");arrow.className="lab-arrow";arrow.textContent="→";div.append(arrow);}const node=document.createElement("span");node.className="lab-node";node.textContent=part.trim();div.append(node);});details.append(div);section.append(details);}qroot.append(section);}
+const query=new URLSearchParams(location.search);const selected=Number(query.get("project"));if(Number.isInteger(selected)&&selected>=1&&selected<=5)active=selected-1;
+show();
+</script>
+</body></html>
