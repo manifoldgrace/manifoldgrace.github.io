@@ -266,6 +266,21 @@
 .qa-check select,.qa-check textarea{width:100%;background:#0e0e0e;color:#fff;border:1px solid #777;padding:9px;font:inherit}
 .qa-evidence-label{font-size:.78rem;color:#c5cfce}
 </style>
+<section id="project-to-next" aria-labelledby="project-to-next-title"><div class="wrap">
+<span class="status">PROJECT → CLOSURE → NEXT WORK</span><h2 id="project-to-next-title">Finish this project. Begin the next.</h2>
+<p>The next thing is a new discovery and scoping cycle. A completed live system moves into operations; a completed research project leaves a documented contribution and questions for future work.</p>
+<div class="project-next-scroll" tabindex="0" role="region" aria-label="Compact project closure sequence"><details><summary>1. Confirm the brief</summary><p>Agree the purpose, affected people, requirements, constraints and acceptance criteria. Adapt evidence requirements to the project type and consequences of error.</p></details><details><summary>2. Verify the work</summary><p>Review implementation, data/model assumptions, security, ethics and integration. Complete functional, accessibility and acceptance checks; record unresolved gaps.</p></details><details><summary>3. Fix and regress</summary><p>Reproduce defects, make reviewed changes and rerun relevant tests. Repeat until acceptance criteria are met or a decision is made to restrict, redirect or stop.</p></details><details><summary>4. Release or conclude</summary><p>For a deployed product, verify the release and rollback path. For a research study, validate findings and publish or archive authorised outputs. A no-release or negative-result decision can also close a project.</p></details><details><summary>5. Hand over ownership</summary><p>Transfer artifacts, evidence, limitations, support duties and outstanding actions. A live service continues under operational ownership; it does not need to be retired merely because development closes.</p></details><details><summary>6. Close the project</summary><p>Record acceptance or termination, final results, lessons, resource commitments, retention decisions and accountable owners. Archive authorised evidence and close or transfer remaining actions.</p></details><details><summary>7. Select the next work</summary><p>Review unmet needs, lessons, risks and opportunities. Choose the next project by expected value, feasibility and available capacity, rather than expanding the previous project indefinitely.</p></details><details><summary>8. Begin new discovery</summary><p>Create a fresh brief, hypothesis, owner, scope and success criteria. Reuse justified components and evidence, but revalidate assumptions when purpose, users, data or stakes change.</p></details></div>
+<details class="lab-note"><summary>CI/CD and model loops within the sequence</summary><p>Software changes follow review → automated checks → preview → acceptance → release → monitoring → correction. Data/model changes also require appropriate evaluation, versioning and impact review. Repeat the necessary loop without losing the project’s exit criteria. Pipeline quality gates are planned work here, not an established repository workflow.</p></details>
+<details class="lab-note"><summary>Different project shapes, shared closure</summary><p>A study may end in a report, an audit in findings and remedial actions, a model experiment in a reproducible evaluation, and a product in a supported release. Each needs a clear outcome, evidence, limitations, an owner for ongoing duties and an explicit closure decision. Some projects stop before release when evidence does not justify proceeding.</p></details>
+<p class="lab-note"><strong>Current transition:</strong> finish live QA and establish repeatable quality gates, document acceptance and handover, then choose the next bounded model-backed experiment.</p>
+</div></section>
+<style>
+.project-next-scroll{max-height:280px;overflow-y:auto;border:1px solid #536668;padding:6px 16px;margin:18px 0}
+.project-next-scroll details{padding:12px 0;border-bottom:1px solid #333}
+.project-next-scroll summary{cursor:pointer;color:#eee3cb;font-size:.9rem}
+.project-next-scroll p{font-size:.84rem;line-height:1.65;max-width:800px}
+.project-next-scroll:focus-visible{outline:2px solid #92c7ff;outline-offset:3px}
+</style>
 </main><footer><div class="wrap" data-site-footer></div></footer>
 <script>
 "use strict";
