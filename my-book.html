@@ -26,6 +26,14 @@
 .mg-cover-3 .mg-cover-top{background:linear-gradient(#172b3d,#172b3dee)}.mg-cover-3 strong{color:#eee3cd}.mg-cover-3 .mg-cover-series{color:#adc6d2}
 .mg-cover-1 .mg-cover-portrait{background-position:42% 35%}.mg-cover-2 .mg-cover-portrait{background-position:60% 20%}.mg-cover-3 .mg-cover-portrait{background-position:center 40%}
 @media(max-width:760px){.book-project-cover.mg-cover{width:210px;max-width:75%;margin:0 auto 12px}}
+
+/* Continuous photographic covers: no title panels across portraits. */
+.book-project-cover.mg-cover .mg-cover-top{display:none}
+.book-project-cover.mg-cover .mg-cover-portrait{inset:0;background-position:center top;z-index:0}
+.book-project-cover.mg-cover .mg-cover-author{position:relative;z-index:1;background:transparent;text-shadow:0 1px 4px #000,0 2px 8px #000}
+.biography-book-tint{background:none}
+.biography-book-edition{display:none}
+.biography-book-photo{background-position:center top;filter:none;transform:none}
 </style>
 </head>
 <body>
@@ -43,14 +51,14 @@
       <div class="biography-book-stage">
         <div class="biography-book" role="img" aria-label="Three-dimensional hardcover concept for Full Biography, featuring Grace's existing professional portrait, a dark photographic cover, gold lettering and a visible book spine">
           <div class="biography-book-spine" aria-hidden="true">
-            <span>FULL BIOGRAPHY</span><small>MANIFOLD GRACE</small>
+            <small>MANIFOLD GRACE</small>
           </div>
           <div class="biography-book-cover" aria-hidden="true">
             <div class="biography-book-photo"></div>
             <div class="biography-book-tint"></div>
             <div class="biography-book-text">
               <span class="biography-book-edition">A LIFE IN FULL · THE PERSONAL RECORD</span>
-              <strong>FULL<br>BIOGRAPHY</strong>
+              
               <div class="biography-book-author">GRACE ROSEMARY NETTEY</div>
               <small>MANIFOLD GRACE</small>
             </div>
