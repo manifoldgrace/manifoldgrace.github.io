@@ -3,19 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Knowledge | Manifold Grace</title>
+  <title>Knowledge VS Thinking | Manifold Grace</title>
   <meta name="description" content="Knowledge architecture, study maps and cross-domain synthesis within Manifold Grace.">
   <meta name="author" content="Grace">
   <link rel="stylesheet" href="style.css">
   <script src="site-config.js" defer></script>
-  <script src="site-shell.js" defer></script>
-</head>
+  <script src="site-shell.js?v=20261009-thinking" defer></script>
+<style>
+.thinking-map{margin:30px 0;border:1px solid #3d5455;padding:clamp(10px,2vw,24px);background:#0c1719}
+.thinking-map svg{display:block;width:100%;height:auto;min-width:650px}
+.thinking-map{overflow-x:auto}.thinking-map figcaption{font-size:.8rem;color:#b7cccb;margin-top:12px}
+.thinking-practices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
+.thinking-practices article{border-top:1px solid #536668;padding:18px 0}
+.thinking-practices h3{font:normal 1.25rem/1.3 Georgia,serif;margin:0 0 12px;color:#eee3cb}
+.thinking-practices p{font-size:.94rem;line-height:1.7;margin:0}
+.thinking-prompts{margin-top:24px;border:1px solid #536668;padding:20px}
+.thinking-prompts summary{cursor:pointer;color:#eee3cb}.thinking-prompts li{margin:10px 0;color:#bbb}
+</style></head>
 <body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main>
   <div class="page-hero"><div class="wrap">
     <div class="eyebrow">KNOWLEDGE · STUDY ARCHITECTURE</div>
-    <h1>Knowledge</h1>
+    <h1>Knowledge VS Thinking</h1>
     <p class="page-intro">A structured knowledge space for mapping disciplines, syllabi, relationships and synthesis across domains without collapsing distinct fields into one general overview.</p>
   <form action="research-collaborations.html" method="get" role="search" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:24px;max-width:720px">
     <label for="research-directory-query" style="flex-basis:100%;font-size:.84rem;color:#ddd">⌕ Search the research collaboration topic library</label>
@@ -35,6 +45,64 @@
       <a class="link-card" href="systems.html"><strong>Systems</strong><small>Institutional and whole-system relationships</small></a>
       <a class="link-card" href="research.html"><strong>Research</strong><small>Questions, methods and current research themes</small></a>
     </div>
+  </div></section>
+
+  <section id="thinking" aria-labelledby="thinking-title"><div class="wrap">
+    <span class="status">IDEATION · CRITICAL THOUGHT · OBJECTIVITY</span>
+    <h2 id="thinking-title">Thinking</h2>
+    <p>Knowledge gives us material to work with. Thinking examines that material, connects it, questions it and develops possibilities. Neither replaces the other: informed thinking remains open to evidence, experience and revision.</p>
+    <p>Careful thinkers attend to what they know, how they know it, what they assume and what could change their minds. Objectivity is a practice of making reasoning open to scrutiny—not a claim to have no perspective.</p>
+    <figure class="thinking-map">
+      <svg viewBox="0 0 900 570" role="img" aria-labelledby="thinking-map-title thinking-map-desc" xmlns="http://www.w3.org/2000/svg">
+        <title id="thinking-map-title">A thinking cycle: frame, explore, test and revise</title>
+        <desc id="thinking-map-desc">Start with a question, examine evidence and assumptions, generate alternatives, test reasoning and consequences, reach a provisional judgement, then revise. Purpose, context, perspectives and uncertainty inform every stage.</desc>
+        <defs><marker id="thinking-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#b7cccb"/></marker></defs>
+        <g fill="none" stroke="#b7cccb" stroke-width="2" marker-end="url(#thinking-arrow)">
+          <path d="M270 112H324"/><path d="M574 112H628"/><path d="M760 173V290"/>
+          <path d="M630 352H577"/><path d="M326 352H273"/>
+          <path d="M140 292V175"/>
+        </g>
+        <g fill="#152326" stroke="#688486" stroke-width="1.5">
+          <rect x="20" y="50" width="250" height="123" rx="12"/><rect x="325" y="50" width="250" height="123" rx="12"/>
+          <rect x="630" y="50" width="250" height="123" rx="12"/><rect x="630" y="292" width="250" height="123" rx="12"/>
+          <rect x="325" y="292" width="250" height="123" rx="12"/><rect x="20" y="292" width="250" height="123" rx="12"/>
+        </g>
+        <g fill="#f5eee1" font-family="Georgia,serif" font-size="25" text-anchor="middle">
+          <text x="145" y="87">1. Frame the question</text><text x="450" y="87">2. Examine the basis</text>
+          <text x="755" y="87">3. Generate possibilities</text><text x="755" y="329">4. Test the reasoning</text>
+          <text x="450" y="329">5. Judge provisionally</text><text x="145" y="329">6. Reflect and revise</text>
+        </g>
+        <g fill="#c2cfce" font-family="Arial,sans-serif" font-size="18" text-anchor="middle">
+          <text x="145" y="122">Purpose · terms · scope</text><text x="145" y="149">Whose problem is this?</text>
+          <text x="450" y="122">Evidence · lived experience</text><text x="450" y="149">Assumptions · missing context</text>
+          <text x="755" y="122">Alternatives · connections</text><text x="755" y="149">What else could explain it?</text>
+          <text x="755" y="364">Logic · counterevidence</text><text x="755" y="391">Consequences · practical tests</text>
+          <text x="450" y="364">Confidence · trade-offs</text><text x="450" y="391">What remains uncertain?</text>
+          <text x="145" y="364">Feedback · new evidence</text><text x="145" y="391">What would change my mind?</text>
+        </g>
+        <text x="450" y="226" fill="#dbc598" font-family="Arial,sans-serif" font-size="19" text-anchor="middle">At every stage: context · perspective · fairness · uncertainty</text>
+        <text x="450" y="479" fill="#f5eee1" font-family="Georgia,serif" font-size="23" text-anchor="middle">Explore freely. Evaluate carefully. Return when needed.</text>
+        <text x="450" y="517" fill="#b7cccb" font-family="Arial,sans-serif" font-size="17" text-anchor="middle">A flexible cycle—not a rigid sequence or a test of who counts as a thinker.</text>
+      </svg>
+      <figcaption>An original thinking map for Manifold Grace. The stages overlap and may be revisited.</figcaption>
+    </figure>
+    <div class="thinking-practices">
+      <article><h3>Purpose, questions &amp; definitions</h3><p>Clarify the problem, the decision and the meaning of key terms. Notice whether the question itself contains an assumption, narrows the options or leaves someone out.</p></article>
+      <article><h3>Evidence &amp; provenance</h3><p>Distinguish observations, testimony, data, interpretation and speculation. Ask who produced or introduced a source, when, by which method and with what limitations. Preserve the contribution of people who locate and curate evidence.</p></article>
+      <article><h3>Experience &amp; context</h3><p>Listen carefully to firsthand accounts and reconstruct the chain of events before judging it. Consider history, culture, institutions and circumstances; separate an observed event from a proposed mechanism or wider explanation.</p></article>
+      <article><h3>Assumptions &amp; mental models</h3><p>Surface what is being taken for granted. Examine inherited categories and expectations. Ask whether a useful model has been mistaken for the whole reality.</p></article>
+      <article><h3>Bias &amp; intellectual humility</h3><p>Notice confirmation bias, anchoring, availability, group pressure and motivated reasoning. Seek evidence that could challenge a preferred account and apply comparable standards to competing claims.</p></article>
+      <article><h3>Logic &amp; causal reasoning</h3><p>Check whether conclusions follow from premises. Consider alternative causes, confounding factors, selection effects, timing and feedback loops. A correlation can prompt investigation without settling causation.</p></article>
+      <article><h3>Perspectives &amp; fair interpretation</h3><p>Consider affected people, opposing arguments and absent voices. State an argument in a form its supporter would recognise before evaluating it. Openness does not require treating every claim as equally supported.</p></article>
+      <article><h3>Ideation &amp; imagination</h3><p>Generate several possibilities before choosing one. Use analogy, sketches, mind maps, questions, cross-domain connections and “what if” scenarios. Keep idea generation spacious, then assess the ideas against evidence and constraints.</p></article>
+      <article><h3>Objectivity &amp; uncertainty</h3><p>Make methods and reasoning explicit, distinguish fact from value judgement and record uncertainty. Ask what is missing, how confident a conclusion should be and what evidence would justify updating it.</p></article>
+      <article><h3>Systems, ethics &amp; consequences</h3><p>Trace relationships, incentives, power and unintended effects. Consider who benefits, who carries costs, which values are at stake and how a proposal may work over different timescales.</p></article>
+      <article><h3>Reflection &amp; testing</h3><p>Keep a reasoning journal, compare predictions with outcomes and invite constructive challenge. Use small experiments where appropriate. Record why a view changed so learning remains visible.</p></article>
+      <article><h3>Conditions that support thought</h3><p>Make room for focused attention, rest, walks, quiet, conversation and accessible tools. Capture ideas before they disappear. Reduce unnecessary cognitive load and alternate concentrated work with time for ideas to develop.</p></article>
+    </div>
+    <details class="thinking-prompts"><summary>Questions to use while thinking</summary>
+      <ul><li>What exactly am I trying to understand or decide?</li><li>What is observed, what is inferred and what is still unknown?</li><li>Which assumptions, perspectives or incentives may shape this account?</li><li>What are the strongest alternative explanations?</li><li>What would disconfirm my preferred explanation?</li><li>Who is affected, and what consequences have I overlooked?</li><li>How could I test the idea, and what would change my mind?</li></ul>
+    </details>
   </div></section>
 </main>
 <footer><div class="wrap" data-site-footer></div></footer>

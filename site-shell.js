@@ -5,7 +5,7 @@
     ["Research Collaborations","research-collaborations.html"],
     ["About","about.html"],
     ["My Books","my-book.html"],
-    ["Knowledge","knowledge.html"],
+    ["Knowledge VS Thinking","knowledge.html"],
     ["Research","research.html"],
     ["Trading","trading.html"],
     ["Professional","professional.html"],
@@ -37,6 +37,7 @@
   });
 
   const secondary = [
+    ["Thinking","knowledge.html#thinking"],
     ["Inspirations","inspirations.html"],
     ["Biography","biographical-record.html"],
     ["Research Collaborations","research-collaborations.html"],
