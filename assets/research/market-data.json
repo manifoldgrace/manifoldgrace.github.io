@@ -1,0 +1,215 @@
+{
+  "checked": "2026-10-09",
+  "companies": [
+    {
+      "name": "Google DeepMind",
+      "group": "Frontier research",
+      "lane": "Research engineering",
+      "url": "https://deepmind.google/careers/",
+      "angle": "Reproduction, ablations and distributed experiments"
+    },
+    {
+      "name": "Anthropic",
+      "group": "Frontier research",
+      "lane": "Research engineering",
+      "url": "https://www.anthropic.com/careers",
+      "angle": "Evaluation, interpretability and experimental evidence"
+    },
+    {
+      "name": "Microsoft Research",
+      "group": "Research & infrastructure",
+      "lane": "Research engineering",
+      "url": "https://www.microsoft.com/en-us/research/careers/",
+      "angle": "Small-model evaluation and research translation"
+    },
+    {
+      "name": "NVIDIA",
+      "group": "Research & infrastructure",
+      "lane": "Systems engineering",
+      "url": "https://www.nvidia.com/en-gb/research/research-scientists/",
+      "angle": "Inference performance and hardware-aware experiments"
+    },
+    {
+      "name": "Amazon / AWS",
+      "group": "Research & infrastructure",
+      "lane": "Applied science",
+      "url": "https://www.amazon.jobs/content/en/job-categories/applied-science",
+      "angle": "Experiment design and production model validation"
+    },
+    {
+      "name": "IBM",
+      "group": "Research & infrastructure",
+      "lane": "Research / governance",
+      "url": "https://www.ibm.com/uk-en/careers/research",
+      "angle": "AI foundations and governance evidence"
+    },
+    {
+      "name": "Capgemini",
+      "group": "Consulting & delivery",
+      "lane": "Solution architecture",
+      "url": "https://careers.capgemini.com/job/Telford-AI-Solutions-Architect/1370777933/",
+      "angle": "Architecture decisions and live-service ownership"
+    },
+    {
+      "name": "G-Research",
+      "group": "Quantitative research",
+      "lane": "Research / ML engineering",
+      "url": "https://www.gresearch.com/vacancies/",
+      "angle": "Reproducible quantitative experiments and performance"
+    },
+    {
+      "name": "Mistral AI",
+      "group": "Growth-company watch",
+      "lane": "Research engineering",
+      "url": "https://mistral.ai/careers/",
+      "angle": "Adaptation and research-to-production constraints"
+    },
+    {
+      "name": "Cohere",
+      "group": "Growth-company watch",
+      "lane": "Research / enterprise AI",
+      "url": "https://cohere.com/careers",
+      "angle": "Enterprise retrieval and multilingual evaluation"
+    },
+    {
+      "name": "Wayve",
+      "group": "Growth-company watch",
+      "lane": "Embodied AI research",
+      "url": "https://wayve.ai/careers/",
+      "angle": "Simulation, generalisation and safety evidence"
+    },
+    {
+      "name": "Isomorphic Labs",
+      "group": "Growth-company watch",
+      "lane": "Scientific AI research",
+      "url": "https://www.isomorphiclabs.com/work-with-us",
+      "angle": "Scientific validation and interdisciplinary research"
+    },
+    {
+      "name": "Holistic AI",
+      "group": "Growth-company watch",
+      "lane": "AI governance",
+      "url": "https://www.holisticai.com/careers",
+      "angle": "Assurance and governance evidence"
+    },
+    {
+      "name": "Helsing",
+      "group": "Growth-company watch",
+      "lane": "AI research engineering",
+      "url": "https://helsing.ai/jobs",
+      "angle": "Defence-domain evaluation; consider mission fit"
+    },
+    {
+      "name": "Synthesia",
+      "group": "Growth-company watch",
+      "lane": "Generative media research",
+      "url": "https://www.synthesia.io/careers",
+      "angle": "Media evaluation, provenance and consent"
+    },
+    {
+      "name": "ElevenLabs",
+      "group": "Growth-company watch",
+      "lane": "Audio research engineering",
+      "url": "https://elevenlabs.io/careers",
+      "angle": "Speech evaluation, multilingual coverage and misuse controls"
+    }
+  ],
+  "papers": [
+    {
+      "id": "phi4",
+      "company": "Microsoft",
+      "title": "Phi-4 Technical Report",
+      "year": "2024",
+      "type": "Technical report",
+      "url": "https://www.microsoft.com/en-us/research/publication/phi-4-technical-report/",
+      "quote": "centrally focused on data quality",
+      "fact": "Describes a 14-billion-parameter model and a training recipe incorporating synthetic data.",
+      "question": "Does data quality improve task performance at a lower serving cost?",
+      "limit": "Reported benchmarks require independent reproduction; model size alone does not establish total cost."
+    },
+    {
+      "id": "gemini",
+      "company": "Google / Gemini Team",
+      "title": "Gemini 2.5 Technical Report",
+      "year": "2025",
+      "type": "Technical report",
+      "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v2_5_report.pdf",
+      "quote": "Advanced Reasoning, Multimodality, Long Context",
+      "fact": "Documents the Gemini 2.X family, including Gemini 2.5 Pro and Flash.",
+      "question": "Which workloads benefit from reasoning and multimodal capability?",
+      "limit": "Provider evaluations are not evidence of customer adoption or profitability."
+    },
+    {
+      "id": "llama",
+      "company": "Meta",
+      "title": "The Llama 3 Herd of Models",
+      "year": "2024",
+      "type": "Research paper",
+      "url": "https://ai.meta.com/research/publications/the-llama-3-herd-of-models/",
+      "quote": "multilinguality, coding, reasoning, and tool usage",
+      "fact": "Presents foundation models and empirical evaluation, including a 405B-parameter model.",
+      "question": "When does self-hosting offer control worth its infrastructure cost?",
+      "limit": "Assess licence terms, operating costs and task-specific results separately."
+    },
+    {
+      "id": "nvidia",
+      "company": "NVIDIA",
+      "title": "Enterprise Reference Architecture",
+      "year": "2025",
+      "type": "Architecture whitepaper",
+      "url": "https://docs.nvidia.com/enterprise-reference-architectures/white-paper.pdf",
+      "quote": "",
+      "fact": "Vendor reference architecture for enterprise AI infrastructure.",
+      "question": "What hardware, networking and integration demand would this design imply?",
+      "limit": "A vendor design is not proof of orders, margins or market share; PDF retrieval may depend on the provider."
+    },
+    {
+      "id": "cadences",
+      "company": "Anthropic",
+      "title": "Economic Index: Cadences",
+      "year": "2026",
+      "type": "Provider usage report",
+      "url": "https://www.anthropic.com/research/economic-index-june-2026-report",
+      "quote": "Claude usage mirrors the workweek",
+      "fact": "Examines Claude usage rhythms, outputs and initial user-survey findings.",
+      "question": "Which tasks show sustained use, and where might demand develop?",
+      "limit": "Platform-specific observations and user expectations do not measure the whole labour market or causal job displacement."
+    },
+    {
+      "id": "capgemini",
+      "company": "Capgemini Research Institute",
+      "title": "Harnessing the value of AI",
+      "year": "2025",
+      "type": "Enterprise survey report",
+      "url": "https://www.capgemini.com/gb-en/insights/research-library/generative-ai-in-organisations-2025/",
+      "quote": "Unlocking scalable advantage",
+      "fact": "Examines strategies for scaling enterprise AI responsibly and effectively.",
+      "question": "What would turn a pilot into measurable recurring business value?",
+      "limit": "Consultancy survey evidence is not an audited forecast of any company\u2019s revenue."
+    },
+    {
+      "id": "rag",
+      "company": "Lewis et al. / NeurIPS",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "year": "2020",
+      "type": "Research paper",
+      "url": "https://papers.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
+      "quote": "knowledge-intensive NLP tasks",
+      "fact": "Introduces and evaluates retrieval-augmented generation on knowledge-intensive tasks.",
+      "question": "Does retrieval improve grounded answers on the actual business corpus?",
+      "limit": "Retrieval is not a guarantee of truth, safe disclosure or current information."
+    },
+    {
+      "id": "dsit",
+      "company": "DSIT / G&T",
+      "title": "AI Labour Market Survey 2025",
+      "year": "2026 release",
+      "type": "Commissioned market report",
+      "url": "https://www.gov.uk/government/publications/ai-labour-market-survey-2025-report/ai-labour-market-survey-2025-report-executive-summary",
+      "quote": "candidates lacking work experience",
+      "fact": "Reports employer skills gaps, recruitment difficulties and adoption intentions.",
+      "question": "What evidence of experience would address the reported hiring barriers?",
+      "limit": "Survey respondents are not the entire workforce; recommendations are G&T\u2019s views, not government policy."
+    }
+  ]
+}

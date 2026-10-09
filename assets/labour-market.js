@@ -1,0 +1,6 @@
+
+(() => {"use strict";const tabs=[...document.querySelectorAll('[role=tab]')];
+function activate(id,focus=false){const name=id.startsWith('paper-')?'papers':id;const chosen=tabs.find(t=>t.getAttribute('aria-controls')===name)||tabs[0];tabs.forEach(t=>{const on=t===chosen;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on});if(focus)chosen.focus();}
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>{const id=t.getAttribute('aria-controls');history.replaceState(null,'','#'+id);activate(id)});t.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%tabs.length;if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;if(e.key==='Home')n=0;if(e.key==='End')n=tabs.length-1;if(n!==undefined){e.preventDefault();tabs[n].click();tabs[n].focus()}})});activate(location.hash.slice(1));window.addEventListener('hashchange',()=>activate(location.hash.slice(1)));
+document.getElementById('export-strategy').addEventListener('click',()=>{const note=document.getElementById('strategy-note').value;const b=new Blob(['AI labour market strategy — evidence snapshot 2026-10-09\n\n'+note],{type:'text/plain;charset=utf-8'});const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='AI-market-strategy.txt';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)});
+})();

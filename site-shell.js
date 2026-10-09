@@ -8,6 +8,7 @@
     ["My Books","my-book.html"],
     ["Knowledge VS Thinking","knowledge.html"],
     ["Research","research.html"],
+    ["Labour Market Analysis","labour-market-analysis.html"],
     ["Trading","trading.html"],
     ["Socials","socials.html"],
     ["Services","services.html"],
