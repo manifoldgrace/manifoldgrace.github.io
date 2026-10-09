@@ -14,6 +14,10 @@
 | `socials.html` | Featured visual profile directory (eight confirmed URLs), expandable platform index preserved, search control, LinkMe preview, Hearts of Oak SC external reference | [64053ca](https://github.com/manifoldgrace/manifoldgrace.github.io/commit/64053cac53a774072c624006d01a3dec96fb7c7e) |
 | `site-shell.js` | Added **Socials** to the primary menu while retaining its footer link and other site navigation | [f11c0c0](https://github.com/manifoldgrace/manifoldgrace.github.io/commit/f11c0c02c1e9be58db90b7f6fbfaeb3898c91391) |
 
+### Additional Socials preview enhancement
+
+- `socials.html`: The featured GitHub card now requests up to four recent **public** repository names from the GitHub public API; it gracefully falls back to the static GitHub profile link if unavailable. [Commit 916fbf5](https://github.com/manifoldgrace/manifoldgrace.github.io/commit/916fbf59f71bf575a635dc24f47cb7a6add532f5).
+
 ## Research publication coverage
 
 - **Preprints (3):** CESI v1.0 (Zenodo 17266802), The Cosmology of Cognition (17290625), Delegated Agency / Moral Outsourcing of Automation (17294405).
