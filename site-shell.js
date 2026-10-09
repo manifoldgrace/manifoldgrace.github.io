@@ -6,6 +6,7 @@
     ["My Books","my-book.html"],
     ["Knowledge","knowledge.html"],
     ["Research","research.html"],
+    ["Collaborations","research-collaborations.html"],
     ["Trading","trading.html"],
     ["Professional","professional.html"],
     ["Socials","socials.html"],
@@ -37,6 +38,7 @@
   const secondary = [
     ["Inspirations","inspirations.html"],
     ["Biography","biographical-record.html"],
+    ["Research Collaborations","research-collaborations.html"],
     ["Research Links","research-links.html"],
     ["Case Studies","case-studies.html"],
     ["AI Research Lab","ai-research-lab.html"],
