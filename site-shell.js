@@ -11,6 +11,7 @@
     ["Creative","creative.html"],
     ["Public","public.html"],
     ["Faith","faith.html"],
+    ["Society","society.html"],
     ["Heritage","heritage.html"],
     ["Sociology","sociology.html"],
     ["Recognition","recognition.html"],
