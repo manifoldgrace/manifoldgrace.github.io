@@ -11,6 +11,41 @@
   <script src="site-config.js" defer></script>
   <script src="site-shell.js" defer></script>
   
+<style>
+/* One-page professional CV. All original education and portfolio sections remain below. */
+#cv-onepage-section{padding:40px 0 46px;background:#0b0d0f}
+.mg-onepage{color:#233238;background:#fafaf8;width:min(794px,100%);margin:0 auto;border:1px solid #3d4445;box-shadow:0 18px 35px rgba(0,0,0,.3);font-family:'Lato','Segoe UI',Arial,sans-serif;font-size:13px;line-height:1.55;max-width:100%}
+.mg-onepage *{box-sizing:border-box}
+.mg-onepage-top{padding:32px 42px 24px;background:#18252a;color:#fff}
+.mg-onepage-accent{height:2px;width:55px;background:#d8e5e1;margin-bottom:15px}
+.mg-onepage-eyebrow{color:#b4cdca;letter-spacing:.12em;font-size:10px;font-weight:700}
+.mg-onepage h2{font-family:Georgia,'Times New Roman',serif;color:#fff;font-size:34px;font-weight:400;line-height:1.13;letter-spacing:-.025em;margin:17px 0 12px}
+.mg-onepage-subtitle{color:#d5e3e0;font-size:10px;font-weight:700;letter-spacing:.045em;margin:0 0 17px}
+.mg-onepage-contact{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:7px 16px;color:#e1e7e6;border-top:1px solid #55706e;padding-top:12px;font-size:10px}
+.mg-onepage-contact a{color:inherit;text-decoration:none}
+.mg-onepage-contact a:hover{text-decoration:underline}
+.mg-onepage-inner{padding:28px 42px 24px}
+.mg-onepage .mg-op-sect{padding:0;margin:0 0 23px;border:0}
+.mg-onepage .mg-op-sect h3{font-family:inherit;font-size:10.5px;font-weight:750;text-transform:uppercase;letter-spacing:.035em;color:#4f817c;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid #c7d2d0}
+.mg-onepage .mg-op-sect p,.mg-onepage .mg-op-sect li{color:#233238;font-size:12px;line-height:1.55;margin:0}
+.mg-onepage .mg-op-skills{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
+.mg-onepage .mg-op-skills strong,.mg-onepage .mg-op-jobhead strong{font-size:10.3px;color:#18252a}
+.mg-onepage .mg-op-skills p{color:#65777b;font-size:10.5px;margin:4px 0 0}
+.mg-onepage .mg-op-work{display:grid;gap:14px}
+.mg-onepage .mg-op-jobhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.mg-onepage .mg-op-jobhead span{color:#4f817c;font-size:10px}
+.mg-onepage .mg-op-job .mg-op-setting{font-size:10.6px;font-weight:700;color:#65777b;margin:3px 0 5px}
+.mg-onepage .mg-op-job p:not(.mg-op-setting){font-size:11.5px}
+.mg-onepage .mg-op-edu{margin:0;padding-left:20px;display:grid;gap:9px}
+.mg-onepage .mg-op-edu li{font-size:11px}
+.mg-onepage .mg-op-edu li::marker{color:#4f817c}
+.mg-onepage .mg-op-edu strong{color:#18252a}
+.mg-onepage .mg-onepage-foot{border-top:1px solid #b9c6c4;display:flex;justify-content:space-between;gap:16px;margin-top:26px;padding-top:10px;color:#65777b;font-size:9px}
+.mg-onepage-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px;margin:20px auto 0}
+.mg-onepage-actions a,.mg-onepage-actions button{font:inherit;color:#a8d4ff!important;text-decoration:underline;text-underline-offset:3px;background:transparent;border:0;padding:7px;cursor:pointer}
+@media(max-width:650px){.mg-onepage-top{padding:24px 22px 19px}.mg-onepage-inner{padding:22px}.mg-onepage h2{font-size:27px}.mg-onepage-subtitle{font-size:9px;line-height:1.55}.mg-onepage .mg-op-skills{gap:15px 14px}.mg-onepage .mg-op-sect p,.mg-onepage .mg-op-sect li{font-size:11px}.mg-onepage .mg-op-edu li{font-size:10px}.mg-onepage .mg-onepage-foot{font-size:8px}}
+@media print{@page{size:A4;margin:0}body.mgcv-print-only{background:#fff!important}body.mgcv-print-only .mg-onepage{width:210mm;min-height:297mm;border:0;box-shadow:none}body.mgcv-print-only .mg-onepage-top{padding:35px 42px 27px}body.mgcv-print-only .mg-onepage-inner{padding:30px 42px 25px}body.mgcv-print-only .mg-onepage-actions{display:none}}
+</style>
 </head>
 <body>
 <header><div class="wrap shell-head">
@@ -24,18 +59,21 @@
     <p class="page-intro">A concise public CV designed for quick professional reading.</p>
   </div></div>
   
-<section class="cv-banner-section"><div class="wrap">
-  <div class="cv-banner">
-    <div class="cv-banner-copy">
-      <span>PROFESSIONAL PROFILE</span>
-      <strong>GRACE</strong>
-      <em>TECHNOLOGY · GOVERNANCE · SYSTEMS</em>
-      <p>AI Governance & Ethics &nbsp;|&nbsp; Risk, Compliance & Data Protection &nbsp;|&nbsp; Business Systems &nbsp;|&nbsp; Digital Transformation &nbsp;|&nbsp; Research & Policy</p>
-      <small>HEALTHCARE &nbsp;|&nbsp; FINANCIAL SERVICES &nbsp;|&nbsp; EDUCATION &nbsp;|&nbsp; ENTERPRISE TECHNOLOGY</small>
-    </div>
-    <div class="cv-banner-portrait" aria-hidden="true"></div>
-  </div>
-</div></section>
+<section id="cv-onepage-section" aria-label="One-page CV summary"><div class="wrap"><article class="mg-onepage" aria-label="Grace Rosemary Nettey one-page professional CV">
+<div class="mg-onepage-top">
+<div class="mg-onepage-accent" aria-hidden="true"></div>
+<div class="mg-onepage-eyebrow">MANIFOLD GRACE&nbsp; / &nbsp;PROFESSIONAL PROFILE</div>
+<h2>Grace Rosemary Nettey</h2>
+<p class="mg-onepage-subtitle">AI GOVERNANCE&nbsp; · &nbsp;ENTERPRISE SYSTEMS&nbsp; · &nbsp;RESEARCH &amp; ENABLEMENT</p>
+<div class="mg-onepage-contact"><span>Beckenham, London&nbsp; · &nbsp;<a href="mailto:gracerosen@aol.com">gracerosen@aol.com</a></span><a href="https://manifoldgrace.github.io/">manifoldgrace.github.io</a></div>
+</div>
+<div class="mg-onepage-inner">
+<section class="mg-op-sect"><h3>Overview</h3><p>Interdisciplinary professional connecting enterprise technology, institutional operations and evidence-led AI governance. Experience across healthcare, finance, media, sport and education combines AV/IT service delivery, user enablement, governance documentation and stakeholder coordination with research into responsible digital transformation.</p></section>
+<section class="mg-op-sect"><h3>Transferable strengths</h3><div class="mg-op-skills"><div><strong>AI &amp; GOVERNANCE</strong><p>Ethics · Risk · Policy analysis · Responsible adoption</p></div><div><strong>DIGITAL SYSTEMS</strong><p>Enterprise AV/IT · UC · UAT · UX &amp; accessibility</p></div><div><strong>DELIVERY &amp; PEOPLE</strong><p>Stakeholders · Training · Documentation · Coordination</p></div><div><strong>RESEARCH &amp; SERVICE</strong><p>Sociotechnical research · Public service · Community</p></div></div></section>
+<section class="mg-op-sect"><h3>Selected experience</h3><div class="mg-op-work"><div class="mg-op-job"><div class="mg-op-jobhead"><strong>ENTERPRISE TECHNOLOGY / DELIVERY</strong><span>01 / 03</span></div><p class="mg-op-setting">UBS · Barclays · J.P. Morgan · Reuters · Tottenham Hotspur · L’Oréal</p><p>AV/IT and unified-communications support, system testing, live operations, user guidance and cross-team coordination in complex professional environments.</p></div><div class="mg-op-job"><div class="mg-op-jobhead"><strong>HEALTHCARE / GOVERNANCE</strong><span>02 / 03</span></div><p class="mg-op-setting">NHS · clinical services · workforce &amp; education</p><p>Clinical audit and governance administration, workforce learning support, confidential information handling and technical service operations.</p></div><div class="mg-op-job"><div class="mg-op-jobhead"><strong>EDUCATION / ENABLEMENT</strong><span>03 / 03</span></div><p class="mg-op-setting">Schools · St Joseph’s College · community coaching</p><p>Learning support, facilitation, training resources, inclusive communication and technology-enabled teaching or events.</p></div></div></section>
+<section class="mg-op-sect"><h3>Study, research &amp; professional development</h3><ul class="mg-op-edu"><li><strong>Postgraduate study:</strong> AI, Ethics &amp; Society — Birkbeck, University of London (2024–26); focus on ethics, governance, institutions and AI’s societal implications.</li><li><strong>Earlier university and vocational learning:</strong> business/marketing, jazz, music technology and children’s education; CIW web/network study and technical vendor training.</li><li><strong>Independent enquiry:</strong> BCS professional engagement; research on responsible technology, systems and institutional accountability; published CESI conceptual preprint.</li></ul></section>
+<div class="mg-onepage-foot"><span>Selected one-page profile&nbsp; · &nbsp;Detailed evidence and project work: manifoldgrace.github.io</span><span>2026</span></div>
+</div></article><nav class="mg-onepage-actions" aria-label="One-page CV actions"><a href="cv-one-page.html" target="_blank" rel="noopener">Open printable full-page version ↗</a><a href="#mg-qualification-map">Explore detailed qualifications &amp; RPL ↓</a></nav></div></section>
 
 
 
