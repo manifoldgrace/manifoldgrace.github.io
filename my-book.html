@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="style.css">
   <script src="site-config.js" defer></script>
   <script src="site-shell.js" defer></script>
+<script src="assets/bank-request-config.js" defer></script>
+<script src="assets/bank-request.js" defer></script>
 </head>
 <body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
@@ -151,8 +153,9 @@
     <span class="status">HOW THIS PAGE SHOULD EVOLVE</span>
     <h2>From development shelf to publication shelf</h2>
     <p>The structure is designed to work much like a serious author site: each book can eventually have a full visual block, definitive cover, synopsis, extract, audiobook or talk clip, edition details and links to publishers, libraries, repositories or booksellers. The Manifold Grace version keeps the site's existing restrained black editorial language rather than adopting another author's branding.</p>
-    <p>Accuracy still matters more than polish: existing content is acknowledged as existing content, unpublished work is labelled unpublished, provisional titles remain provisional, and no “buy” or “order” controls appear until there is an edition genuinely available to obtain.</p>
+    <p>Accuracy still matters more than polish: existing content is acknowledged as existing content, unpublished work is labelled unpublished, provisional titles remain provisional, and purchase controls will appear when an edition is available. The enquiry box below is for publication questions and availability requests; it does not place an order for an unpublished book.</p>
   </div></section>
+<section id="enquiry"><div class="wrap" style="--mg-surface:var(--panel);--mg-input-border:var(--line);--mg-button-text:#fff"><mg-bank-request page="books"></mg-bank-request></div></section>
 </main>
 
 <footer><div class="wrap" data-site-footer></div></footer>
