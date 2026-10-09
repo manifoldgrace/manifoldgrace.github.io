@@ -611,6 +611,58 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 }
 
 
+/* Early-life photo placement: consistent column widths, with text wrapping
+   alongside each image rather than allowing floats to drift into Education. */
+.bio-accordion-body .bio-early-block{
+  display:flow-root;
+  margin:0 0 20px;
+}
+.bio-accordion-body .bio-early-block > p{
+  margin:0;
+}
+.bio-accordion-body .bio-early-block > figure.bio-early-photo{
+  width:min(22%,180px);
+  max-width:180px;
+  margin-top:4px;
+  margin-bottom:10px;
+}
+.bio-accordion-body .bio-early-block--right > figure.bio-early-photo{
+  float:right;
+  margin-right:0;
+  margin-left:20px;
+}
+.bio-accordion-body .bio-early-block--left > figure.bio-early-photo{
+  float:left;
+  margin-left:0;
+  margin-right:20px;
+}
+.bio-accordion-body .bio-early-block > figure.bio-early-photo figcaption{
+  font-size:.7rem;
+  line-height:1.35;
+}
+@media(max-width:760px){
+  .bio-accordion-body .bio-early-block{
+    margin-bottom:16px;
+  }
+  .bio-accordion-body .bio-early-block > figure.bio-early-photo{
+    width:clamp(100px,27vw,132px);
+    max-width:132px;
+    margin-top:3px;
+    margin-bottom:8px;
+  }
+  .bio-accordion-body .bio-early-block--right > figure.bio-early-photo{margin-left:12px}
+  .bio-accordion-body .bio-early-block--left > figure.bio-early-photo{margin-right:12px}
+  .bio-accordion-body .bio-early-block > figure.bio-early-photo figcaption{
+    font-size:.65rem;
+    padding:5px 6px 6px;
+  }
+}
+@media(max-width:360px){
+  .bio-accordion-body .bio-early-block > figure.bio-early-photo{
+    width:96px;
+  }
+}
+
 /* Biographical record — Wikipedia-style infobox portrait */
 .bio-infobox-body{
   display:grid;
