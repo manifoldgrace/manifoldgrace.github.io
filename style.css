@@ -189,6 +189,88 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
 .book-cover-placeholder span,.book-project-cover span{font-size:.72rem;letter-spacing:.16em;color:#777}
 .book-cover-placeholder strong{font-size:clamp(2rem,5vw,4rem);font-weight:300;letter-spacing:-.05em;line-height:.95}
 .book-cover-placeholder small{color:#777}
+
+/* Full Biography: tangible photographic hardcover, using the existing portrait. */
+.biography-book-stage{
+  position:relative;isolation:isolate;display:grid;place-items:center;overflow:visible;
+  width:100%;min-height:495px;padding:42px 32px 55px;
+  background:radial-gradient(ellipse at 50% 30%,#3c3126 0%,#1d1b1c 51%,#101112 88%);
+  border:1px solid #302b29;perspective:1200px
+}
+.biography-book-stage::before{
+  content:"";position:absolute;inset:auto 0 0;height:25%;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.45) 36%,#271f19 100%);
+  opacity:.8;pointer-events:none
+}
+.biography-book-stage::after{
+  content:"";position:absolute;left:12%;right:12%;bottom:25px;height:27px;
+  background:rgba(0,0,0,.78);filter:blur(18px);border-radius:50%;z-index:0;pointer-events:none
+}
+.biography-book{
+  position:relative;z-index:1;width:min(305px,85%);aspect-ratio:2/3;
+  transform:rotateY(-13deg) rotateZ(-2deg);
+  transform-style:preserve-3d;
+  filter:drop-shadow(20px 24px 13px rgba(0,0,0,.55))
+}
+.biography-book::after{
+  content:"";position:absolute;right:-6px;top:5px;width:8px;height:calc(100% - 10px);
+  background:repeating-linear-gradient(90deg,#d3c8b6 0 1px,#74695e 2px 3px);
+  transform-origin:left;transform:rotateY(78deg);box-shadow:3px 0 6px #0006
+}
+.biography-book-spine{
+  position:absolute;left:-28px;top:0;bottom:0;width:30px;
+  transform-origin:right center;transform:rotateY(-56deg);
+  background:linear-gradient(90deg,#050607,#44352a 22%,#18191b 65%,#090a0b);
+  border:1px solid #7c6953;box-shadow:inset 1px 0 1px #ac8664,inset -2px 0 5px #000;
+  display:flex;align-items:center;justify-content:space-between;flex-direction:column;
+  padding:17px 2px;color:#d6c3a0
+}
+.biography-book-spine span{writing-mode:vertical-rl;font:600 12px Georgia,serif;letter-spacing:.19em}
+.biography-book-spine small{writing-mode:vertical-rl;font:9px Georgia,serif;letter-spacing:.1em}
+.biography-book-cover{
+  position:absolute;inset:0;overflow:hidden;
+  border:1px solid #947c65;background:#151515;
+  box-shadow:inset 4px 0 8px #0008, inset 1px 0 #c49b72,3px 0 3px #0009
+}
+.biography-book-photo{
+  position:absolute;inset:0;
+  background-image:url("assets/professional-black-suit.webp");
+  background-size:cover;background-position:center 27%;
+  filter:saturate(.78) contrast(1.06);
+  transform:scale(1.02)
+}
+.biography-book-tint{
+  position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(9,10,11,.93) 0%,rgba(9,10,11,.72) 21%,transparent 46%,rgba(9,10,11,.18) 65%,rgba(9,10,11,.95) 87%,#0b0b0c 100%),
+  linear-gradient(90deg,rgba(6,6,7,.3),transparent 22%,transparent 78%,rgba(5,5,6,.23));
+}
+.biography-book-text{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;text-align:center;
+  justify-content:space-between;padding:22px 14px 18px;color:#f4eee4;
+  text-shadow:0 2px 8px #000c;letter-spacing:.025em
+}
+.biography-book-edition{font-size:8px;font-weight:600;letter-spacing:.19em;color:#dcc49f}
+.biography-book-text strong{
+  color:#f7ece0;font:normal clamp(27px,3.3vw,34px)/.98 Georgia,"Times New Roman",serif;
+  letter-spacing:.12em;margin:-6px 0 auto;padding-top:12px
+}
+.biography-book-author{
+  font:normal 12px/1.35 Georgia,"Times New Roman",serif;
+  letter-spacing:.18em;color:#f6e9d7;border-top:1px solid #bea27e;padding-top:11px;margin-top:auto
+}
+.biography-book-text small{font-size:8px;letter-spacing:.2em;color:#c4a984;margin-top:12px}
+@media(max-width:760px){
+  .biography-book-stage{min-height:470px;padding:38px 20px 45px;max-width:430px;margin-inline:auto}
+  .biography-book{width:min(285px,82%)}
+  .biography-book-text strong{font-size:30px}
+}
+@media(max-width:420px){
+  .biography-book-stage{min-height:430px}
+  .biography-book{width:min(252px,81%)}
+  .biography-book-text strong{font-size:27px}
+}
+@media(prefers-reduced-motion:reduce){.biography-book{transition:none;animation:none}}
+
 .book-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 .book-shelf{display:grid;gap:0;margin-top:26px}
 .book-project{display:grid;grid-template-columns:210px minmax(0,1fr);gap:28px;padding:30px 0;border-top:1px solid var(--line);align-items:start}
