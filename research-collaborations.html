@@ -83,6 +83,35 @@
 @media(max-width:820px){.rc .rc-detail{grid-template-columns:1fr}.rc .rc-links{grid-template-columns:repeat(2,1fr)}.rc .rc-workflow{grid-template-columns:1fr}.rc .rc-track{grid-auto-columns:clamp(206px,52vw,285px)}}
 @media(max-width:540px){.rc .rc-header{align-items:start;flex-direction:column}.rc .rc-links{grid-template-columns:1fr}.rc .rc-track{grid-auto-columns:75vw;gap:12px}.rc .rc-paper{padding:14px 12px}.rc .rc-paper-head{font-size:clamp(1.5rem,7vw,2.15rem)}}
 @media(prefers-reduced-motion:reduce){.rc .rc-paper{transition:none}}
+/* Read-only research paper index */
+.rc .rc-papers-intro{max-width:850px}
+.rc .rc-paper-filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.rc .rc-paper-filters button{background:#161b19;color:#efefe7;border:1px solid #777;border-radius:50px;padding:9px 16px;cursor:pointer;font-size:.86rem}
+.rc .rc-paper-filters button[aria-pressed="true"]{background:#fff;color:#171717;border-color:#fff;font-weight:700}
+.rc .rc-paper-filters button:focus-visible{outline:3px solid #9bc8fa;outline-offset:2px}
+.rc .rc-publication-search{width:min(100%,620px);display:block;padding:13px 15px;margin-top:16px;background:#14191a;color:#fff;border:1px solid #777;border-radius:3px}
+.rc .rc-paper-count{font-size:.86rem;color:#cbc7be;margin:0 0 18px}
+.rc .rc-paper-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:start}
+.rc .rc-paper-record{min-width:0;background:#171a1b;border:1px solid #4a4a48}
+.rc .rc-paper-record[hidden]{display:none!important}
+.rc .rc-paper-record details{height:100%}
+.rc .rc-paper-record summary{display:flex;flex-direction:column;cursor:pointer;background:repeating-linear-gradient(0deg,transparent 0 26px,rgba(35,58,50,.1) 27px,transparent 28px),#eee9dc;color:#213127;min-height:335px;aspect-ratio:210/297;padding:22px 19px 21px;list-style:none;border-bottom:1px solid #76776e}
+.rc .rc-paper-record summary::-webkit-details-marker{display:none}
+.rc .rc-paper-record summary:focus-visible{outline:3px solid #8cc3ff;outline-offset:-3px}
+.rc .rc-paper-record .rc-pub-label{font-size:.65rem;letter-spacing:.15em;font-weight:700;color:#566959;text-transform:uppercase}
+.rc .rc-paper-record .rc-pub-title{font:400 clamp(1.25rem,1.8vw,1.8rem)/1.12 Georgia,'Times New Roman',serif;margin:auto 0 15px;color:#203c31;overflow-wrap:anywhere}
+.rc .rc-paper-record .rc-pub-subtitle{font-size:.8rem;line-height:1.4;color:#526055;display:block}
+.rc .rc-paper-record .rc-pub-foot{display:block;border-top:1px solid #b1b2a7;margin-top:auto;padding-top:11px;font-size:.73rem;color:#425146}
+.rc .rc-paper-record .rc-pub-details{padding:18px 17px 20px}
+.rc .rc-paper-record .rc-pub-details p{font-size:.89rem;line-height:1.6;color:#e1ded5;margin:0 0 12px}
+.rc .rc-paper-record .rc-pub-details a{display:block;color:#a5d4fc;font-size:.87rem;margin-top:9px;text-decoration:underline}
+.rc .rc-paper-record .rc-pub-details small{display:block;color:#aba8a3;margin-top:11px;font-size:.76rem}
+.rc .rc-paper-empty{padding:18px;border:1px solid #65615a;background:#151a18}
+.rc .rc-paper-empty[hidden]{display:none}
+.rc .rc-pub-privacy{max-width:880px;font-size:.88rem;color:#c7c5bb;margin:22px 0 0}
+@media(max-width:960px){.rc .rc-paper-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:720px){.rc .rc-paper-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:460px){.rc .rc-paper-list{grid-template-columns:1fr 1fr;gap:9px}.rc .rc-paper-record summary{min-height:230px;padding:12px 9px}.rc .rc-paper-record .rc-pub-title{font-size:1.2rem}.rc .rc-paper-record .rc-pub-label{font-size:.55rem}.rc .rc-paper-record .rc-pub-subtitle{font-size:.7rem}.rc .rc-paper-record .rc-pub-foot{font-size:.65rem}.rc .rc-paper-record .rc-pub-details{padding:11px}.rc .rc-paper-record .rc-pub-details p{font-size:.78rem}}
 </style></head>
 <body><header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main class="rc">
@@ -90,6 +119,94 @@
 <p class="page-intro rc-lede">A shared starting point for developing research across artificial intelligence, society and independent disciplines. Browse a growing library of paper-sized topic cards, choose a question, and start a structured research brief with collaborators anywhere in the world.</p>
 <div class="rc-intro-links"><a class="rc-text-link" href="research.html">Research overview ↗</a><a class="rc-text-link" href="research-links.html">Research links ↗</a><a class="rc-text-link" href="knowledge.html">Knowledge maps ↗</a><a class="rc-text-link" href="case-studies.html">Case studies ↗</a></div>
 </div></div>
+
+<section id="rcPaperShelf" aria-labelledby="rcPapersHeading"><div class="wrap">
+<span class="rc-section-label">PUBLICATIONS · READ-ONLY RESEARCH SHELF</span>
+<h2 id="rcPapersHeading">Research papers and developing work</h2>
+<p class="rc-papers-intro">Explore the public record without editing the underlying documents. Five externally published research outputs are linked to their original Zenodo records. Three additional research strands are shown as brief, publicly established descriptions rather than unpublished manuscripts. This is a curated starting index, not a claim that 200 completed papers exist.</p>
+<label class="rc-search-label" for="rcPaperSearch">⌕ Search published research and developing work</label>
+<input class="rc-publication-search" id="rcPaperSearch" type="search" placeholder="e.g. cognition, infrastructure, justice, animals" autocomplete="off">
+<div class="rc-paper-filters" role="group" aria-label="Filter publication status">
+<button type="button" data-paper-filter="all" aria-pressed="true">All records</button>
+<button type="button" data-paper-filter="preprint" aria-pressed="false">Preprints</button>
+<button type="button" data-paper-filter="report" aria-pressed="false">Reports</button>
+<button type="button" data-paper-filter="deliverable" aria-pressed="false">Project deliverables</button>
+<button type="button" data-paper-filter="developing" aria-pressed="false">In development</button>
+</div>
+<p id="rcPaperCount" class="rc-paper-count" role="status" aria-live="polite">8 research records</p>
+<div class="rc-paper-list" id="rcPublicationCards"><article class="rc-paper-record" data-type="preprint" data-name="The Chronological Ethical Self-Inventory (CESI v1.0) An ethical self-inventory framework A structured conceptual framework combining chronology, ethics and philosophy to examine experiences across education, work and society, with attention to accountability and applied learning.">
+<details><summary><span class="rc-pub-label">PREPRINT · 2025 · P-01</span>
+<span class="rc-pub-title">The Chronological Ethical Self-Inventory (CESI v1.0)</span><span class="rc-pub-subtitle">An ethical self-inventory framework</span>
+<span class="rc-pub-foot">READ-ONLY PREVIEW · EXPAND ↓</span></summary>
+<div class="rc-pub-details"><p>A structured conceptual framework combining chronology, ethics and philosophy to examine experiences across education, work and society, with attention to accountability and applied learning.</p>
+<p><strong>Source status:</strong> Public preprint. DOI: 10.5281/zenodo.17266802</p>
+<a href="https://doi.org/10.5281/zenodo.17266802" target="_blank" rel="noopener noreferrer">Read complete public record ↗</a>
+<a href="papers.html#publication-cesi">Research context & publication listing ↗</a>
+<small>Read-only information · Authorised public repository</small></div></details></article>
+<article class="rc-paper-record" data-type="preprint" data-name="The Cosmology of Cognition Introducing the Adaptive Flow Framework Conceptual research exploring how attention, memory, emotion and agency interact in cognition, thinking and learning.">
+<details><summary><span class="rc-pub-label">PREPRINT · 2025 · P-02</span>
+<span class="rc-pub-title">The Cosmology of Cognition</span><span class="rc-pub-subtitle">Introducing the Adaptive Flow Framework</span>
+<span class="rc-pub-foot">READ-ONLY PREVIEW · EXPAND ↓</span></summary>
+<div class="rc-pub-details"><p>Conceptual research exploring how attention, memory, emotion and agency interact in cognition, thinking and learning.</p>
+<p><strong>Source status:</strong> Public preprint. DOI: 10.5281/zenodo.17290625</p>
+<a href="https://doi.org/10.5281/zenodo.17290625" target="_blank" rel="noopener noreferrer">Read complete public record ↗</a>
+<a href="papers.html#publication-cosmology">Research context & publication listing ↗</a>
+<small>Read-only information · Authorised public repository</small></div></details></article>
+<article class="rc-paper-record" data-type="preprint" data-name="Delegated Agency and the Moral Outsourcing of Automation Ethics &amp; the Wakeflow Ecosystem An author-labelled public draft/preprint examining moral responsibility when organisations delegate decisions to AI-enabled systems, including human agency, opacity, accountability and the limits of efficiency-based reasoning.">
+<details><summary><span class="rc-pub-label">PREPRINT · 2025 · P-03</span>
+<span class="rc-pub-title">Delegated Agency and the Moral Outsourcing of Automation</span><span class="rc-pub-subtitle">Ethics &amp; the Wakeflow Ecosystem</span>
+<span class="rc-pub-foot">READ-ONLY PREVIEW · EXPAND ↓</span></summary>
+<div class="rc-pub-details"><p>An author-labelled public draft/preprint examining moral responsibility when organisations delegate decisions to AI-enabled systems, including human agency, opacity, accountability and the limits of efficiency-based reasoning.</p>
+<p><strong>Source status:</strong> Public preprint. DOI: 10.5281/zenodo.17294405</p>
+<a href="https://doi.org/10.5281/zenodo.17294405" target="_blank" rel="noopener noreferrer">Read complete public record ↗</a>
+<a href="papers.html#publication-delegated-agency">Research context & publication listing ↗</a>
+<small>Read-only information · Authorised public repository</small></div></details></article>
+<article class="rc-paper-record" data-type="report" data-name="Loyal Residency An Ethical Framework for Civic Continuity and Climate-Conscious Town Development Policy-oriented work on long-term residency, civic contribution, stewardship, intergenerational fairness, neighbourhood continuity and environmentally conscious development.">
+<details><summary><span class="rc-pub-label">REPORT · 2025 · R-01</span>
+<span class="rc-pub-title">Loyal Residency</span><span class="rc-pub-subtitle">An Ethical Framework for Civic Continuity and Climate-Conscious Town Development</span>
+<span class="rc-pub-foot">READ-ONLY PREVIEW · EXPAND ↓</span></summary>
+<div class="rc-pub-details"><p>Policy-oriented work on long-term residency, civic contribution, stewardship, intergenerational fairness, neighbourhood continuity and environmentally conscious development.</p>
+<p><strong>Source status:</strong> Published report. DOI: 10.5281/zenodo.17439986</p>
+<a href="https://doi.org/10.5281/zenodo.17439986" target="_blank" rel="noopener noreferrer">Read complete public record ↗</a>
+<a href="papers.html#publication-loyal-residency">Research context & publication listing ↗</a>
+<small>Read-only information · Authorised public repository</small></div></details></article>
+<article class="rc-paper-record" data-type="deliverable" data-name="London Smart Piezoelectric Flooring Pilot Dossier Turning London’s Footsteps into Clean Energy A proposed smart-city pilot combining piezoelectric energy harvesting and AI-optimised infrastructure management, covering accessibility, engineering constraints, environmental alignment and public-space deployment.">
+<details><summary><span class="rc-pub-label">DELIVERABLE · 2025 · D-01</span>
+<span class="rc-pub-title">London Smart Piezoelectric Flooring Pilot Dossier</span><span class="rc-pub-subtitle">Turning London’s Footsteps into Clean Energy</span>
+<span class="rc-pub-foot">READ-ONLY PREVIEW · EXPAND ↓</span></summary>
+<div class="rc-pub-details"><p>A proposed smart-city pilot combining piezoelectric energy harvesting and AI-optimised infrastructure management, covering accessibility, engineering constraints, environmental alignment and public-space deployment.</p>
+<p><strong>Source status:</strong> Public project deliverable. DOI: 10.5281/zenodo.17439725</p>
+<a href="https://doi.org/10.5281/zenodo.17439725" target="_blank" rel="noopener noreferrer">Read complete public record ↗</a>
+<a href="papers.html#publication-piezo">Research context & publication listing ↗</a>
+<small>Read-only information · Authorised public repository</small></div></details></article>
+<article class="rc-paper-record" data-type="developing" data-name="Administrative Identity Fatigue Narrative Reconfiguration and Vocational Fragmentation Research in development examining recurring CV tailoring, recruitment filters and how repeated administrative demands interact with experiences of vocational identity.">
+<details><summary><span class="rc-pub-label">RESEARCH IN DEVELOPMENT · W-01</span>
+<span class="rc-pub-title">Administrative Identity Fatigue</span><span class="rc-pub-subtitle">Narrative Reconfiguration and Vocational Fragmentation</span>
+<span class="rc-pub-foot">READ-ONLY PREVIEW · EXPAND ↓</span></summary>
+<div class="rc-pub-details"><p>Research in development examining recurring CV tailoring, recruitment filters and how repeated administrative demands interact with experiences of vocational identity.</p>
+<p><strong>Status:</strong> Working research description already publicly listed on Manifold Grace. The underlying draft is not published or available to edit here.</p>
+<a href="papers.html#additional-research-themes">Research context & publication listing ↗</a>
+<small>Read-only information · Description only; manuscript remains private</small></div></details></article>
+<article class="rc-paper-record" data-type="developing" data-name="Shared Fiscal Responsibility for Remote and AI-Mediated Work Developing policy report An emerging report exploring how fiscal responsibilities might be allocated as work becomes increasingly remote, automated and mediated by AI.">
+<details><summary><span class="rc-pub-label">RESEARCH IN DEVELOPMENT · W-02</span>
+<span class="rc-pub-title">Shared Fiscal Responsibility for Remote and AI-Mediated Work</span><span class="rc-pub-subtitle">Developing policy report</span>
+<span class="rc-pub-foot">READ-ONLY PREVIEW · EXPAND ↓</span></summary>
+<div class="rc-pub-details"><p>An emerging report exploring how fiscal responsibilities might be allocated as work becomes increasingly remote, automated and mediated by AI.</p>
+<p><strong>Status:</strong> Working research description already publicly listed on Manifold Grace. The underlying draft is not published or available to edit here.</p>
+<a href="papers.html#additional-research-themes">Research context & publication listing ↗</a>
+<small>Read-only information · Description only; manuscript remains private</small></div></details></article>
+<article class="rc-paper-record" data-type="developing" data-name="When Ethical Blindness in Pet Food Harms the Creatures We Care For Animal welfare and technological ethics A developing research strand on systems of animal care, veterinary integrity, industrial practices and connections to technology ethics.">
+<details><summary><span class="rc-pub-label">RESEARCH IN DEVELOPMENT · W-03</span>
+<span class="rc-pub-title">When Ethical Blindness in Pet Food Harms the Creatures We Care For</span><span class="rc-pub-subtitle">Animal welfare and technological ethics</span>
+<span class="rc-pub-foot">READ-ONLY PREVIEW · EXPAND ↓</span></summary>
+<div class="rc-pub-details"><p>A developing research strand on systems of animal care, veterinary integrity, industrial practices and connections to technology ethics.</p>
+<p><strong>Status:</strong> Working research description already publicly listed on Manifold Grace. The underlying draft is not published or available to edit here.</p>
+<a href="papers.html#additional-research-themes">Research context & publication listing ↗</a>
+<small>Read-only information · Description only; manuscript remains private</small></div></details></article></div>
+<p id="rcPaperEmpty" class="rc-paper-empty" hidden>No matching research record. <a href="#browse">Search the 200 research starting topics ↗</a></p>
+<p class="rc-pub-privacy">The five public outputs remain hosted at their canonical repositories. Unpublished Google Drive documents, draft findings, private correspondence and collaborator permissions are not copied onto this public website. New titles and full texts are added only once their release status is confirmed.</p>
+<p><a href="papers.html" style="color:#9ecdf8;text-decoration:underline">Browse the full Papers &amp; Publications index ↗</a></p>
+</div></section>
 <section id="browse"><div class="wrap">
 <div class="rc-header"><div><p class="rc-section-label">TOPIC LIBRARY</p><h2>Browse 200 research starting points</h2><p>Each A4-inspired card represents a research domain. Select it to see focused paper topics and a consistent brief you can use with a colleague or research group.</p></div></div>
 <div class="rc-search-wrap"><label class="rc-search-label" for="rcSearch">Search subjects, disciplines or research questions</label><div class="rc-search-field"><span aria-hidden="true">⌕</span><input id="rcSearch" type="search" autocomplete="off" placeholder="e.g. healthcare, jazz, agriculture, education, ethics"></div></div>
@@ -129,5 +246,21 @@ document.getElementById("rcNewCategory").addEventListener("input",updateIssue);
 document.getElementById("rcCopy").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(makeBrief());copyStatus.textContent="Research brief copied. Paste it into your shared document.";}catch(e){copyStatus.textContent="Clipboard unavailable. Open the document first, then use your browser's copy controls."; }});
 document.getElementById("rcEmail").addEventListener("click",()=>{const sub="Research collaboration update — "+(selected?.name||"New topic");const body="Research area: "+(selected?.name||"")+"\nWorking question: [add question]\nDocument link: [paste the access-controlled Google Docs or Word link]\nLatest changes:\nNext actions:\nVersion / date:\n";window.location.href="mailto:?subject="+encodeURIComponent(sub)+"&body="+encodeURIComponent(body);});
 const initialQuery=new URLSearchParams(window.location.search).get("q");if(initialQuery)search.value=initialQuery.slice(0,160);render();})();
+</script>
+
+<script>
+(()=>{
+"use strict";
+const input=document.getElementById("rcPaperSearch"),cards=[...document.querySelectorAll(".rc-paper-record")],status=document.getElementById("rcPaperCount"),empty=document.getElementById("rcPaperEmpty"),filters=[...document.querySelectorAll("[data-paper-filter]")];
+if(!input||!status)return;
+let filter="all";
+function refresh(){const q=input.value.trim().toLocaleLowerCase();let shown=0;
+for(const card of cards){const match=(filter==="all"||card.dataset.type===filter)&&(!q||card.dataset.name.toLocaleLowerCase().includes(q));card.hidden=!match;if(match)shown++;}
+status.textContent=shown+" of "+cards.length+" research records";empty.hidden=shown!==0;
+}
+input.addEventListener("input",refresh);
+for(const button of filters)button.addEventListener("click",()=>{filter=button.dataset.paperFilter;for(const b of filters)b.setAttribute("aria-pressed",String(b===button));refresh();});
+refresh();
+})();
 </script>
 </body></html>
