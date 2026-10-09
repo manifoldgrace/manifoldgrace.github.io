@@ -32,6 +32,7 @@
 @media(max-width:980px){.lab-structure{grid-template-columns:minmax(180px,230px) minmax(0,1fr)}.lab-context{grid-column:1/-1}}
 @media(max-width:650px){.lab-structure{display:block}.lab-side{margin-bottom:16px}.lab-selector{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.lab-project{font-size:.88rem}.lab-main{margin-top:20px}}
 </style>
+<style>.lab-remote-links{padding-left:24px;max-width:750px}.lab-remote-links li{padding:9px 0;border-bottom:1px solid #353535}.lab-remote-links a,.lab-remote-links a:visited{color:#92c7ff;text-decoration:underline}</style>
 </head>
 <body><header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main class="lab"><div class="page-hero"><div class="wrap">
@@ -62,6 +63,18 @@
 <section id="lab-questions"><div class="wrap"><span class="status">RESEARCH INTERVIEW &amp; ETHICS WORKSHOP</span><h2>Advanced engineering questions &amp; ethical dilemmas</h2>
 <p>Expand each question to reveal a short answer, an architectural sequence and an invitation to explore the relevant technical or ethical trade-off. These are learning prompts, not universal solutions.</p>
 <div id="lab-questions-list"></div>
+</div></section>
+<section id="remote-coding"><div class="wrap">
+<span class="status">CLOUD DEVELOPMENT · OPEN SOURCE CODE</span>
+<h2>Open the working Python projects remotely</h2>
+<p>Each project now has a full, editable Python script in this repository, separate from the small browser demonstration. The scripts run with the Python standard library; they use synthetic data and provide real source-code walkthroughs for studying algorithms.</p>
+<ol class="lab-remote-links"><li><a href="https://github.com/manifoldgrace/manifoldgrace.github.io/blob/main/lab-experiments/01-literature-map.py" target="_blank" rel="noopener noreferrer"><strong>01 · Literature mapping — view Python source</strong></a></li><li><a href="https://github.com/manifoldgrace/manifoldgrace.github.io/blob/main/lab-experiments/02-dataset-pipeline.py" target="_blank" rel="noopener noreferrer"><strong>02 · Dataset construction — view Python source</strong></a></li><li><a href="https://github.com/manifoldgrace/manifoldgrace.github.io/blob/main/lab-experiments/03-model-benchmark.py" target="_blank" rel="noopener noreferrer"><strong>03 · Model benchmark — view Python source</strong></a></li><li><a href="https://github.com/manifoldgrace/manifoldgrace.github.io/blob/main/lab-experiments/04-governance-audit.py" target="_blank" rel="noopener noreferrer"><strong>04 · Governance audit — view Python source</strong></a></li><li><a href="https://github.com/manifoldgrace/manifoldgrace.github.io/blob/main/lab-experiments/05-simulation.py" target="_blank" rel="noopener noreferrer"><strong>05 · Scientific simulation — view Python source</strong></a></li></ol>
+<p><a href="https://github.com/codespaces/new?repo=manifoldgrace/manifoldgrace.github.io" target="_blank" rel="noopener noreferrer"><strong>Launch a GitHub Codespace for this repository ↗</strong></a> · <a href="https://github.com/manifoldgrace/manifoldgrace.github.io/blob/main/lab-experiments/README.md" target="_blank" rel="noopener noreferrer">Read run instructions</a></p>
+<details><summary>How remote execution fits the architecture</summary>
+<div class="lab-sequence"><span class="lab-node">Website</span><span class="lab-arrow">→</span><span class="lab-node">GitHub identity</span><span class="lab-arrow">→</span><span class="lab-node">Codespaces development VM</span><span class="lab-arrow">→</span><span class="lab-node">Python scripts</span><span class="lab-arrow">→</span><span class="lab-node">Terminal results</span></div>
+<p>GitHub Codespaces is an external, account-based hosted development environment; it may be subject to access requirements and usage charges. This is not a private multi-user HPC cluster, nor does this public repository provide regulated-data storage.</p>
+</details>
+<p class="lab-legend">Do not upload restricted datasets or API secrets to a public repository. A research production service needs separately managed identity, private storage, compute isolation and project-level permissions.</p>
 </div></section>
 <section><div class="wrap"><h2>From a teaching demo to a real doctoral lab</h2><p>This page intentionally runs transparent, deterministic JavaScript algorithms so you can inspect every transformation. Deploying real notebooks, pretrained models, protected research data or GPU jobs requires a separately authenticated backend, secure provider connections and resource controls. A public GitHub Pages website cannot safely store API keys or execute private server-side jobs.</p>
 <ul><li><a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">Notebook execution layer — Jupyter</a></li><li><a href="https://mlflow.org/" target="_blank" rel="noopener noreferrer">Experiment tracking — MLflow</a></li><li><a href="https://dvc.org/" target="_blank" rel="noopener noreferrer">Versioned research data — DVC</a></li><li><a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer">Application security baseline — OWASP</a></li></ul>
