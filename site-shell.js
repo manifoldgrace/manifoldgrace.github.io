@@ -14,6 +14,7 @@
     ["Faith","faith.html"],
     ["Society","society.html"],
     ["Heritage","heritage.html"],
+    ["Sociology","sociology.html"],
     ["Recognition","recognition.html"],
     ["Resourcefulness","resourcefulness.html"],
     ["Venture","conglomerate.html"]
@@ -57,7 +58,7 @@
     });
     const note = document.createElement("p");
     note.className = "footer-note";
-    note.textContent = "Manifold Grace · selected public record";
+    note.textContent = "Manifold Grace · selected public record · privacy status: parents and siblings are referenced by relationship only and are not named";
     footer.replaceChildren(top,note);
   });
 
