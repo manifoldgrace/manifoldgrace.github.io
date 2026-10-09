@@ -1002,3 +1002,16 @@ body>header,body>main,body>footer{position:relative;z-index:1}
  .bio-infobox-body dd{font-size:.8rem;line-height:1.45}
  .bio-infobox-body .bio-infobox-portrait img{object-position:50% 15%}
 }
+
+/* Featured research collaborations tab — first in the main ribbon. */
+.nav-links a.nav-research-feature,
+.nav-links a.nav-research-feature:visited{
+  background:#fff !important;color:#111 !important;border:1px solid #fff;
+  border-radius:3px;padding:8px 14px;font-weight:700;letter-spacing:.005em;
+  display:inline-flex;align-items:center;white-space:nowrap;text-decoration:none;
+  box-shadow:none;transition:border-color .18s ease,transform .18s ease;
+}
+.nav-links a.nav-research-feature:hover{background:#f2f0eb !important;color:#111 !important;transform:translateY(-1px)}
+.nav-links a.nav-research-feature[aria-current="page"]{outline:2px solid #dbb66d;outline-offset:2px}
+.nav-links a.nav-research-feature:focus-visible{outline:3px solid #8ac5ff;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.nav-links a.nav-research-feature{transition:none}}
