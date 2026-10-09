@@ -9,6 +9,34 @@
   <link rel="stylesheet" href="style.css">
   <script src="site-config.js" defer></script>
   <script src="site-shell.js" defer></script>
+
+  <style>
+    /* Research-only doctoral project gallery: text-first, blue links, no fading. */
+    .doctoral-project-heading{display:flex;justify-content:space-between;align-items:end;gap:24px}
+    .doctoral-project-heading>div:first-child{max-width:850px}
+    .doctoral-project-heading h2{margin-top:12px}
+    .doctoral-project-heading p{margin:0}
+    .doctoral-project-controls{display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .doctoral-project-controls output{min-width:4.2em;text-align:center;font-size:.83rem;color:var(--muted);font-variant-numeric:tabular-nums}
+    .doctoral-project-arrow{width:42px;height:42px;background:transparent;color:var(--text);border:1px solid #666;font:inherit;font-size:1.3rem;cursor:pointer}
+    .doctoral-project-arrow:hover{border-color:var(--text);background:#1e1e1e}
+    .doctoral-project-arrow:focus-visible,.doctoral-project-track:focus-visible,.doctoral-project a:focus-visible{outline:2px solid #8fc4ff;outline-offset:3px}
+    .doctoral-project-arrow:disabled{color:#666;border-color:#333;cursor:default}
+    .doctoral-project-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,calc((100% - 32px)/3));gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#686868 #111;padding:14px 1px 20px;margin-top:24px;position:relative}
+    .doctoral-project{scroll-snap-align:start;min-width:0;border-top:2px solid #555;border-bottom:1px solid var(--line);padding:16px 10px 18px 0;display:flex;flex-direction:column;gap:10px}
+    .doctoral-project-kicker{font-size:.73rem;letter-spacing:.12em;color:var(--muted)}
+    .doctoral-project h3{font-size:1.23rem;line-height:1.35;margin:0;min-height:3.2em}
+    .doctoral-project p{margin:0;line-height:1.6;font-size:.92rem}
+    .doctoral-project ol{padding-left:20px;margin:0}
+    .doctoral-project li{padding:4px 0;font-size:.89rem}
+    .doctoral-project-output{margin-top:auto!important;padding-top:8px;border-top:1px solid var(--line)}
+    .doctoral-project-tools{font-size:.84rem!important}
+    .doctoral-project a,.doctoral-project a:visited{color:#8fc4ff;text-decoration:underline;text-underline-offset:3px}
+    .doctoral-project a:hover{color:#c4deff}
+    .doctoral-project-note{font-size:.85rem;color:var(--muted);margin:8px 0 0}
+    @media(max-width:950px){.doctoral-project-track{grid-auto-columns:minmax(290px,calc((100% - 16px)/2))}}
+    @media(max-width:650px){.doctoral-project-heading{align-items:start;flex-direction:column}.doctoral-project-track{grid-auto-columns:87%;gap:12px}.doctoral-project h3{min-height:0}}
+  </style>
 </head>
 <body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
@@ -26,6 +54,87 @@
     <article class="focus-card"><span>06</span><strong>Advocacy & public service</strong><small>Institutional accountability, public systems and evidence-led civic engagement.</small></article>
   </div>
 </div></section>
+
+<section id="doctoral-ai-projects" aria-labelledby="doctoral-ai-projects-title">
+  <div class="wrap">
+    <div class="doctoral-project-heading">
+      <div>
+        <span class="status">AI RESEARCH LAB · PROJECT EXAMPLES</span>
+        <h2 id="doctoral-ai-projects-title">Five AI projects for doctoral research</h2>
+        <p>Explore representative doctoral-level workflows, from gathering evidence to running reproducible experiments. Each example includes the research task, practical steps, intended output and links to established tools. These are proposed starter projects, not claims of completed experiments or connected laboratory services.</p>
+      </div>
+      <div class="doctoral-project-controls" aria-label="Project carousel controls">
+        <button type="button" class="doctoral-project-arrow" data-project-step="-1" aria-label="Previous project" aria-controls="doctoral-project-track">&#8592;</button>
+        <output id="doctoral-project-position" aria-live="polite" aria-atomic="true">1 of 5</output>
+        <button type="button" class="doctoral-project-arrow" data-project-step="1" aria-label="Next project" aria-controls="doctoral-project-track">&#8594;</button>
+      </div>
+    </div>
+    <div class="doctoral-project-track" id="doctoral-project-track" role="region" aria-label="Doctoral AI research project examples" aria-roledescription="carousel" tabindex="0">
+      <article class="doctoral-project" role="group" aria-roledescription="slide" aria-label="Project 1 of 5">
+        <span class="doctoral-project-kicker">01 / EVIDENCE</span>
+        <h3>AI-assisted literature mapping</h3>
+        <p>Identify themes and research gaps across a scholarly literature corpus using NLP, while keeping researcher review central.</p>
+        <ol>
+          <li>Collect papers and record search criteria.</li>
+          <li>Deduplicate, embed and cluster abstracts.</li>
+          <li>Review inclusions, interpretations and gaps.</li>
+        </ol>
+        <p class="doctoral-project-output"><strong>Output:</strong> Evidence map, bibliography and auditable screening log.</p>
+        <p class="doctoral-project-tools">Explore: <a href="https://www.zotero.org/" target="_blank" rel="noopener noreferrer">Zotero</a> · <a href="https://openalex.org/" target="_blank" rel="noopener noreferrer">OpenAlex</a> · <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">Jupyter</a></p>
+      </article>
+      <article class="doctoral-project" role="group" aria-roledescription="slide" aria-label="Project 2 of 5">
+        <span class="doctoral-project-kicker">02 / RESEARCH DATA</span>
+        <h3>Dataset construction &amp; annotation</h3>
+        <p>Build a trustworthy dataset for scientific AI work, with explicit permissions, quality checks and traceable transformations.</p>
+        <ol>
+          <li>Import appropriately licensed data.</li>
+          <li>Clean, label and test data quality.</li>
+          <li>Version datasets, splits and metadata.</li>
+        </ol>
+        <p class="doctoral-project-output"><strong>Output:</strong> Versioned dataset, data dictionary and provenance record.</p>
+        <p class="doctoral-project-tools">Explore: <a href="https://dvc.org/" target="_blank" rel="noopener noreferrer">DVC</a> · <a href="https://labelstud.io/" target="_blank" rel="noopener noreferrer">Label Studio</a> · <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">Jupyter</a></p>
+      </article>
+      <article class="doctoral-project" role="group" aria-roledescription="slide" aria-label="Project 3 of 5">
+        <span class="doctoral-project-kicker">03 / EXPERIMENTATION</span>
+        <h3>Model training &amp; benchmarking</h3>
+        <p>Compare a defensible baseline against alternative machine-learning models, with reproducible evaluation.</p>
+        <ol>
+          <li>Define hypotheses, baseline and metrics.</li>
+          <li>Train models with appropriate data splits.</li>
+          <li>Compare performance, uncertainty and errors.</li>
+        </ol>
+        <p class="doctoral-project-output"><strong>Output:</strong> Results table, experiment log and reproducible notebook.</p>
+        <p class="doctoral-project-tools">Explore: <a href="https://scikit-learn.org/stable/" target="_blank" rel="noopener noreferrer">scikit-learn</a> · <a href="https://mlflow.org/" target="_blank" rel="noopener noreferrer">MLflow</a> · <a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer">Colab</a></p>
+      </article>
+      <article class="doctoral-project" role="group" aria-roledescription="slide" aria-label="Project 4 of 5">
+        <span class="doctoral-project-kicker">04 / AI GOVERNANCE</span>
+        <h3>Bias, reliability &amp; explainability audit</h3>
+        <p>Investigate where an AI model performs inconsistently and document governance implications using measurable tests.</p>
+        <ol>
+          <li>Choose evaluation criteria and test sets.</li>
+          <li>Inspect failures, robustness and subgroup metrics.</li>
+          <li>Document limitations and mitigation options.</li>
+        </ol>
+        <p class="doctoral-project-output"><strong>Output:</strong> Evaluation report, model card and risk register.</p>
+        <p class="doctoral-project-tools">Explore: <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST AI RMF</a> · <a href="https://shap.readthedocs.io/" target="_blank" rel="noopener noreferrer">SHAP</a> · <a href="https://huggingface.co/docs/hub/model-cards" target="_blank" rel="noopener noreferrer">Model cards</a></p>
+      </article>
+      <article class="doctoral-project" role="group" aria-roledescription="slide" aria-label="Project 5 of 5">
+        <span class="doctoral-project-kicker">05 / SCIENTIFIC MODELLING</span>
+        <h3>Simulation &amp; scenario analysis</h3>
+        <p>Use computational models to explore complex systems, uncertainty and the consequences of changing assumptions.</p>
+        <ol>
+          <li>Specify mechanisms and testable assumptions.</li>
+          <li>Simulate alternative scenarios and conditions.</li>
+          <li>Check sensitivity against observed evidence.</li>
+        </ol>
+        <p class="doctoral-project-output"><strong>Output:</strong> Reproducible simulation, uncertainty plots and methods note.</p>
+        <p class="doctoral-project-tools">Explore: <a href="https://mesa.readthedocs.io/" target="_blank" rel="noopener noreferrer">Mesa</a> · <a href="https://www.pymc.io/" target="_blank" rel="noopener noreferrer">PyMC</a> · <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer">Jupyter</a></p>
+      </article>
+    </div>
+    <p class="doctoral-project-note">Swipe sideways on touchscreens, scroll horizontally, or use the arrows to explore all five. The named services are external tools; secure private research execution would require a separately hosted backend.</p>
+  </div>
+</section>
+
 <section><div class="wrap"><h2>Research architecture</h2><p>The research area is divided by function rather than by prestige: reference links for navigation, case studies for bounded problems, papers for longer outputs, and Systems for questions that only make sense when institutions are mapped together.</p><p>This keeps working material, published material and source infrastructure separate while allowing them to connect.</p><div class="grid">
 <a class="link-card" href="research-links.html"><strong>Research Links</strong><small>Numbered global reference corpus</small></a>
 <a class="link-card" href="case-studies.html"><strong>Case Studies</strong><small>Grouped by research area and evidence status</small></a>
@@ -42,4 +151,53 @@
 </div></div></section>
 </main>
 <footer><div class="wrap" data-site-footer></div></footer>
+
+<script>
+(function () {
+  'use strict';
+  const track = document.getElementById('doctoral-project-track');
+  const counter = document.getElementById('doctoral-project-position');
+  const buttons = Array.from(document.querySelectorAll('[data-project-step]'));
+  if (!track || !counter || !buttons.length) return;
+  const slides = Array.from(track.querySelectorAll('.doctoral-project'));
+  function currentIndex() {
+    const left = track.getBoundingClientRect().left;
+    let best = 0;
+    let distance = Infinity;
+    slides.forEach(function (slide, index) {
+      const next = Math.abs(slide.getBoundingClientRect().left - left);
+      if (next < distance) { best = index; distance = next; }
+    });
+    return best;
+  }
+  function updateControls() {
+    counter.textContent = (currentIndex() + 1) + ' of ' + slides.length;
+    buttons.forEach(function (button) {
+      const step = Number(button.dataset.projectStep);
+      button.disabled = step < 0 ? track.scrollLeft <= 2 : track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    });
+  }
+  function stepCarousel(direction) {
+    const index = currentIndex();
+    const destination = slides[Math.max(0, Math.min(slides.length - 1, index + direction))];
+    if (!destination) return;
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    const target = Math.min(maxScroll, Math.max(0, destination.offsetLeft - slides[0].offsetLeft));
+    track.scrollTo({left:target,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  }
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () { stepCarousel(Number(button.dataset.projectStep)); });
+  });
+  track.addEventListener('keydown', function (event) {
+    if (event.target !== track) return;
+    if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      event.preventDefault();
+      stepCarousel(event.key === 'ArrowRight' ? 1 : -1);
+    }
+  });
+  track.addEventListener('scroll', updateControls, {passive:true});
+  window.addEventListener('resize', updateControls);
+  updateControls();
+})();
+</script>
 </body></html>
