@@ -72,7 +72,7 @@
       form.addEventListener('submit', event => {
         event.preventDefault();
         for (const key of ['name', 'item']) {
-          form.elements[key].setCustomValidity(form.elements[key].value.trim() ? '' : 'Please enter a value.');
+          form.elements.namedItem(key).setCustomValidity(form.elements.namedItem(key).value.trim() ? '' : 'Please enter a value.');
         }
         if (!form.reportValidity()) return;
         const data = new FormData(form);
@@ -105,7 +105,7 @@
         summary.scrollIntoView({block:'nearest'});
       });
       for (const key of ['name', 'item']) {
-        form.elements[key].addEventListener('input', () => form.elements[key].setCustomValidity(''));
+        form.elements.namedItem(key).addEventListener('input', () => form.elements.namedItem(key).setCustomValidity(''));
       }
       link.addEventListener('click', () => {
         status.textContent = 'Your email app has been requested. You must press Send there. This website cannot confirm email delivery.';
@@ -121,12 +121,12 @@
       });
       root.querySelector('.edit').addEventListener('click', () => {
         summary.hidden = true;
-        form.elements.item.focus();
+        form.elements.namedItem('item').focus();
       });
       this.addEventListener('mg-select-item', event => {
         const title = String(event.detail?.title || '').slice(0,160);
-        form.elements.item.value = title;
-        form.elements.item.focus();
+        form.elements.namedItem('item').value = title;
+        form.elements.namedItem('item').focus();
         this.scrollIntoView({block:'start'});
       });
     }
