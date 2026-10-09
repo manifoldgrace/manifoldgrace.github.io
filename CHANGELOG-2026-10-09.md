@@ -29,7 +29,7 @@
 ## Publication boundaries and accuracy
 
 - **Trojan Horse:** The full manuscript, personal case studies and unpublished analysis were **not uploaded** to the public repository; only a short preview appears on `my-book.html#trojan-horse`.
-- **CV:** APL/RPL mapping is described as proposed recognition evidence, not awarded university credit. MPhil/PhD is aspirational or to be confirmed and not presented as conferred.
+- **CV:** Education is presented through institutions attended, subjects studied, vocational training and prior-learning mapping. Doctoral research is described as a future pathway rather than a present qualification.
 - **Socials:** Links are only active where a destination was previously established. Other platforms remain unlinked until verified. A third-party external link to [Hearts of Oak SC](https://www.heartsofoaksc.com/) has had Facebook click-tracking parameters removed and does not imply affiliation.
 - **Existing pages:** Prior book projects, CV experience, older Zenodo entries and social links were preserved.
 - **Future automation:** A recurring authenticated Zenodo sync was **not** enabled by these commits. Private uploads are not indexed.
@@ -48,3 +48,11 @@ Check:
 ## Not part of this release
 
 Other changes mentioned across earlier chats and unprovided files are not represented as completed by this log. Each requires a separately verified implementation.
+
+## Education presentation update — 9 October 2026
+
+Public education entries now focus on institutions attended, programmes and subjects studied, vocational training, and recognition of prior learning. Individual marks, credit totals, and assessment outcomes are omitted from the published summaries. Programme titles are contextualised as areas of study, without asserting credentials beyond the documented record.
+
+- [Biographical education](https://github.com/manifoldgrace/manifoldgrace.github.io/commit/76639c7df014fc529489acc4cd365dd6e9134291): retained educational history and subject areas, with outcome disclosures removed.
+- [Digital CV education map](https://github.com/manifoldgrace/manifoldgrace.github.io/commit/df527be6be8c497cd76ed56ee78b539f89a3bb1b): revised all eight expandable levels, labels and notes.
+- [Public commentary](https://github.com/manifoldgrace/manifoldgrace.github.io/commit/c93c9c675b4ea9d722ab9c9ac82f976824572de1): retained the account of technical study disruption while removing the specific examination outcome.
