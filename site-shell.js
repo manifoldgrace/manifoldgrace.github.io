@@ -15,6 +15,7 @@
     ["Heritage","heritage.html"],
     ["Sociology","sociology.html"],
     ["Recognition","recognition.html"],
+    ["Resourcefulness","resourcefulness.html"],
     ["Venture","conglomerate.html"]
   ];
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
