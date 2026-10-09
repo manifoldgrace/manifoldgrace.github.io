@@ -4,11 +4,11 @@
   const navItems = [
     ["Research Collaborations","research-collaborations.html"],
     ["About","about.html"],
+    ["Professional","professional.html"],
     ["My Books","my-book.html"],
     ["Knowledge VS Thinking","knowledge.html"],
     ["Research","research.html"],
     ["Trading","trading.html"],
-    ["Professional","professional.html"],
     ["Socials","socials.html"],
     ["Services","services.html"],
     ["Creative","creative.html"],
