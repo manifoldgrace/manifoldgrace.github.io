@@ -26,6 +26,28 @@
     <p class="page-intro">Professional media environments are part of both my technical and creative history. This page brings together sound desks, studios, live events, audiovisual systems and production practice without reducing that experience to a list of equipment.</p>
   </div></div>
   
+
+<section id="portrait-animation" aria-labelledby="portrait-animation-title"><div class="wrap">
+<span class="status">CREATIVE EXPERIMENT · AI CONCEPT</span>
+<h2 id="portrait-animation-title">Portrait in motion</h2>
+<p>A first hairstyle study using Grace’s portrait reference, presented as an animated montage.</p>
+<figure style="margin:24px 0;max-width:420px">
+<video id="grace-portrait-video" controls autoplay muted loop playsinline preload="metadata" aria-label="Grace’s animated hairstyle portrait montage" style="display:block;width:100%;aspect-ratio:9/16;border-radius:16px;background:#111">
+<source src="assets/video/grace-hairstyle-animation.mp4" type="video/mp4">
+<a href="assets/video/grace-hairstyle-animation.mp4">Watch the portrait animation</a>
+</video>
+<figcaption class="small-note" style="margin-top:12px">AI concept · animated still portraits · 22 seconds. Use the player controls to pause or enable sound.</figcaption>
+</figure>
+</div></section>
+<script>
+(() => {
+const video = document.getElementById('grace-portrait-video');
+if (video && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+video.autoplay = false;
+video.pause();
+}
+})();
+</script>
 <section><div class="wrap">
   <span class="status">PROFESSIONAL PRACTICE</span><h2>Studios, desks & live environments</h2>
   <p>My working environments have included audiovisual support, conferencing, sound and production contexts, live events and technically demanding spaces where reliability matters because other people are depending on the system in real time.</p>
