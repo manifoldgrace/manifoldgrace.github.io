@@ -235,7 +235,7 @@ footer{padding:46px 0 60px;color:var(--muted);font-size:.85rem}
   animation:none;
 }
 .portrait-color::after{background-image:url("assets/grace-stamp.webp")}
-.portrait-bw::after{display:none!important;background-image:none!important}
+.portrait-bw::after{display:none!important;background:none!important}
 .page-hero.portrait-backdrop>.wrap{padding-right:clamp(180px,30vw,360px)}
 .home-hero.portrait-backdrop>.wrap{padding-right:clamp(180px,26vw,330px)}
 
