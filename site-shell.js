@@ -14,8 +14,7 @@
     ["Heritage","heritage.html"],
     ["Sociology","sociology.html"],
     ["Recognition","recognition.html"],
-    ["Venture","conglomerate.html"],
-    ["Archive","archive.html"]
+    ["Venture","conglomerate.html"]
   ];
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   document.querySelectorAll("[data-site-nav]").forEach((nav) => {
