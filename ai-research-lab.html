@@ -105,6 +105,21 @@
 <div class="lab-tabs" role="tablist" aria-label="Projects six to ten" id="extra-project-tabs"></div>
 <div id="extra-workspace" role="tabpanel"></div>
 </div></section>
+<section id="experiment-log"><div class="wrap">
+<span class="status">NEXT STEP · REPRODUCIBLE EXPERIMENTS</span>
+<h2>Record, compare &amp; explain</h2>
+<p>Run a baseline, change one input, then compare the outputs. Build an evidence record before extending a prototype with a trained model.</p>
+<ol class="extra-steps"><li>Run baseline</li><li>Record expectation</li><li>Save result</li><li>Change one input</li><li>Run again</li><li>Compare results</li><li>Explain differences</li><li>Export evidence</li></ol>
+<p class="lab-legend">Records remain in this page session. Export before refreshing or leaving. No server storage or model connection is added; image files themselves are not included.</p>
+<div class="lab-form"><label>Run label<input id="record-label" maxlength="100" placeholder="Baseline or threshold change"></label><label>Expected result<textarea id="record-expected" rows="2" maxlength="1000" placeholder="What should change, and why?"></textarea></label><label>Observation<textarea id="record-note" rows="2" maxlength="1000" placeholder="What happened? What remains uncertain?"></textarea></label></div>
+<p id="record-pending" role="status">Run any of the ten projects to capture its latest result.</p>
+<div class="lab-tabs"><button type="button" class="lab-action" id="record-save" disabled>Save latest run</button><button type="button" class="lab-action" id="record-export" disabled>Export JSON</button><button type="button" class="lab-action" id="record-clear" disabled>Clear records</button></div>
+<p id="record-status" role="status"></p>
+<div class="lab-form"><label>Baseline<select id="record-baseline" disabled></select></label><label>Comparison<select id="record-comparison" disabled></select></label></div>
+<button type="button" class="lab-action" id="record-compare" disabled>Compare saved runs</button>
+<div id="record-result" class="lab-output" role="status">Save two runs of the same project to inspect their differences.</div>
+<details class="lab-note"><summary>What this adds to an interview answer</summary><p>Explain the hypothesis, baseline, single changed variable, observed differences and limitations. Exported records include the project, inputs, output, timestamp and a fingerprint of the executable demo scripts. These records support reproducibility; they do not prove model accuracy, fairness or production security.</p><p>The next stage is a versioned evaluation dataset with expected outcomes, then a model-backed comparison under the same tests. Production use would need authenticated private storage, audit trails and independently evaluated models.</p></details>
+</div></section>
 <section id="lab-questions"><div class="wrap"><span class="status">RESEARCH INTERVIEW &amp; ETHICS WORKSHOP</span><h2>Advanced engineering questions &amp; ethical dilemmas</h2>
 <p>Expand each question to reveal a short answer, an architectural sequence and an invitation to explore the relevant technical or ethical trade-off. These are learning prompts, not universal solutions.</p>
 <div id="lab-questions-list"></div>
@@ -242,4 +257,31 @@ show();
 })();
 </script>
 
+
+<script>
+(() => {
+"use strict";
+const records=[];let latest=null;const maxRecords=20;
+const el=id=>document.getElementById(id);
+function scriptFingerprint(){const text=[...document.querySelectorAll('script:not([src])')].map(s=>s.textContent).join('\n');let hash=2166136261;for(let i=0;i<text.length;i++){hash^=text.charCodeAt(i);hash=Math.imul(hash,16777619);}return 'fnv1a32-'+(hash>>>0).toString(16).padStart(8,'0');}
+function capture(isExtra){const panel=el(isExtra?'extra-workspace':'lab-workspace');const output=el(isExtra?'extra-output':'lab-output');if(!panel||!output)return;let result;try{result=JSON.parse(output.textContent);}catch{latest=null;el('record-save').disabled=true;el('record-pending').textContent='This run returned an input error. Correct it and rerun before saving.';return;}
+const inputs={};panel.querySelectorAll('input,textarea,select').forEach(input=>{if(input.type==='file'){inputs[input.id]={file_name:input.files[0]?.name||null,file_bytes:input.files[0]?.size||null,content_included:false};}else inputs[input.id]=input.value;});
+const canvas=panel.querySelector('canvas');if(canvas)inputs.image_note='Pixels are not exported; retain the original image separately for reproduction.';
+latest={project:panel.querySelector('h3').textContent,recorded_at:new Date().toISOString(),inputs,output:result,implementation:scriptFingerprint()};
+el('record-save').disabled=false;el('record-pending').textContent='Ready to save: '+latest.project+'. Add an expectation and observation below the experiment.';
+}
+document.addEventListener('click',event=>{const id=event.target.closest('button')?.id;if(id==='lab-run'||id==='extra-run')capture(id==='extra-run');});
+function refresh(){const options=records.map((r,i)=>({value:String(i),label:(i+1)+'. '+r.project+' — '+r.label}));for(const id of ['record-baseline','record-comparison']){const select=el(id);select.replaceChildren(...options.map(o=>{const n=document.createElement('option');n.value=o.value;n.textContent=o.label;return n;}));select.disabled=records.length<2;}
+if(records.length>1){el('record-baseline').value=String(records.length-2);el('record-comparison').value=String(records.length-1);}
+el('record-export').disabled=!records.length;el('record-clear').disabled=!records.length;el('record-compare').disabled=records.length<2;
+}
+el('record-save').onclick=()=>{if(!latest)return;if(records.length>=maxRecords){el('record-status').textContent='The session limit is 20 records. Export and clear them before saving more.';return;}const record=JSON.parse(JSON.stringify(latest));record.label=el('record-label').value.trim()||'Run '+(records.length+1);record.expected=el('record-expected').value.trim();record.observation=el('record-note').value.trim();records.push(record);refresh();el('record-status').textContent='Saved '+records.length+' session record(s). Export before leaving this page.';latest=null;el('record-save').disabled=true;el('record-pending').textContent='Run another experiment to capture a new result.';};
+function differences(a,b,path=''){const changes=[];if(JSON.stringify(a)===JSON.stringify(b))return changes;if(a&&b&&typeof a==='object'&&typeof b==='object'&&Array.isArray(a)===Array.isArray(b)){for(const k of new Set([...Object.keys(a),...Object.keys(b)])){changes.push(...differences(a[k],b[k],path?path+'.'+k:k));}}else changes.push({field:path||'value',baseline:a===undefined?'[missing]':a,comparison:b===undefined?'[missing]':b});return changes;}
+el('record-compare').onclick=()=>{const a=records[Number(el('record-baseline').value)],b=records[Number(el('record-comparison').value)];if(!a||!b)return;if(a===b){el('record-result').textContent='Choose two different records.';return;}if(a.project!==b.project){el('record-result').textContent='Choose two runs of the same project for a meaningful comparison.';return;}el('record-result').textContent=JSON.stringify({project:a.project,baseline:a.label,comparison:b.label,changed_inputs:differences(a.inputs,b.inputs),changed_outputs:differences(a.output,b.output),baseline_expectation:a.expected,comparison_expectation:b.expected,observations:[a.observation,b.observation],interpretation:'Differences show what changed; assess whether the change supports your hypothesis. Unchanged output is also a useful result.'},null,2);};
+el('record-export').onclick=()=>{const blob=new Blob([JSON.stringify({schema_version:1,exported_at:new Date().toISOString(),page:location.origin+location.pathname,scope:'Session records of browser demonstration algorithms; no trained-model evaluation.',records},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='ai-lab-experiment-records.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);el('record-status').textContent='Export requested. Keep the JSON file with your research notes.';};
+el('record-clear').onclick=()=>{records.length=0;latest=null;el('record-save').disabled=true;refresh();el('record-result').textContent='Save two runs of the same project to inspect their differences.';el('record-status').textContent='Session records cleared.';el('record-pending').textContent='Run any project to capture a new result.';};
+})();
+</script>
+
 </body></html>
+
