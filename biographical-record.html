@@ -9,6 +9,21 @@
   <link rel="stylesheet" href="style.css">
   <script src="site-config.js" defer></script>
   <script src="site-shell.js" defer></script>
+
+  <style>
+    #early-technical-healthcare-certificates{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:24px 0}
+    #early-technical-healthcare-certificates>summary{padding:18px 2px;font-size:clamp(1rem,2vw,1.2rem);gap:16px;flex-wrap:wrap}
+    #early-technical-healthcare-certificates>summary>span:first-child{flex:1 1 230px}
+    #early-technical-healthcare-certificates .certificate-count{font-size:.78rem;color:var(--muted);letter-spacing:0;white-space:nowrap}
+    #early-technical-healthcare-certificates>summary::after{transform:translateY(-2px)}
+    #early-technical-healthcare-certificates[open]>summary::after{transform:rotate(180deg) translateY(2px);color:var(--text)}
+    #early-technical-healthcare-certificates>summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+    #early-technical-healthcare-certificates .certificate-catalogue-body{padding:0 2px 18px}
+    #early-technical-healthcare-certificates h4{margin:24px 0 12px;font-size:1rem;color:var(--text)}
+    #early-technical-healthcare-certificates ol{padding-left:1.6rem}
+    #early-technical-healthcare-certificates li{margin:0 0 16px;line-height:1.65}
+    #early-technical-healthcare-certificates .certificate-record-note{font-size:.88rem;color:var(--muted)}
+  </style>
 </head>
 <body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
@@ -111,7 +126,42 @@
         <p>Grace's <a href="cv.html">early career</a> developed through project-based work across technology, healthcare and professional-services environments. She gained <a href="cv.html">corporate experience at Reuters through Brook Street</a>, supporting a SharePoint data-migration project and user-guide creation; she subsequently worked across <a href="cv.html">NHS administrative and IT settings</a>, including Lewisham and primary-care environments.</p>
         <p>She subsequently moved further into enterprise systems and audiovisual support, including <a href="cv.html">work at JP Morgan in Canary Wharf</a>. Her <a href="professional.html">professional record</a> shows the recurring combination of technical systems, user support, administration, communication and service delivery within complex organisations.</p>
 <h3>Healthcare systems and patient administration</h3><p>Her NHS work connected information systems with the practical needs of staff and patients. During her early healthcare career, she was mentored in clinical governance by a Ghanaian doctor. Supplied certificates document training in PIMS Appointments and PIMS Outpatients, supporting the patient-information and service-coordination strand of her early career.</p>
-<details><summary>Early technical and healthcare certificates</summary><ul><li>Firebrand — Certificate of Accomplishment for Professional CIW Designer training.</li><li>Lewisham HealthCare NHS Trust — PIMS Appointments training completed.</li><li>Lewisham Hospital NHS Trust — PIMS Outpatients training completed.</li></ul></details>
+<details class="bio-certificate-catalogue" id="early-technical-healthcare-certificates">
+  <summary><span>Early technical and healthcare certificates</span><span class="certificate-count">20 types</span></summary>
+  <div class="certificate-catalogue-body">
+    <p>This catalogue connects early workplace training with later technical development. It highlights learning that transfers across technology, healthcare, education and organisational work.</p>
+    <h4>Programming, digital systems and technical quality</h4>
+    <ol>
+      <li><strong>Python programming — Learn Python 3.</strong> Codecademy. Transferable value: scripting, automation and data handling.</li>
+      <li><strong>Back-end application development — Create a Back-End App with JavaScript Skill Path.</strong> Codecademy. Transferable value: application logic, APIs and digital-service development.</li>
+      <li><strong>Web design — Professional CIW Designer training.</strong> Firebrand Certificate of Accomplishment. Transferable value: usable web interfaces, website structure and digital communication.</li>
+      <li><strong>Full-stack engineering — Full-Stack Engineer career path.</strong> Codecademy profile certificate entry. Transferable value: connecting front-end interfaces with back-end services.</li>
+      <li><strong>Machine-learning operations — MLOps Tools: MLflow and Hugging Face.</strong> LinkedIn Learning. Transferable value: model workflows, experiment tracking and reproducibility.</li>
+      <li><strong>Recommender systems — Learn Recommender Systems.</strong> Codecademy profile certificate entry. Transferable value: recommendation methods and understanding personalised digital systems.</li>
+      <li><strong>Application state management — Learn Redux: Fundamentals.</strong> Codecademy. Transferable value: organising state and behaviour in interactive applications.</li>
+      <li><strong>Systems programming introduction — First Look: Rust.</strong> LinkedIn Learning. Transferable value: familiarity with a systems-programming language and its approach to memory safety.</li>
+      <li><strong>AV control systems — Crestron Core Certificate, CTI-CCT.</strong> Crestron Technical Institute. Transferable value: integrated audiovisual systems, control and technical support.</li>
+      <li><strong>Architecture engineering and quality — Architecture Engineering with Emphasis on Quality.</strong> BCS Quality SG Certificate of Attendance. Transferable value: systems architecture, quality considerations and technical evaluation.</li>
+    </ol>
+    <h4>Healthcare information systems and communication</h4>
+    <ol start="11">
+      <li><strong>Medical terminology — Medical Terminology 4415-01.</strong> City &amp; Guilds / Mediterm Training, 2011. Transferable value: accurate clinical vocabulary, record interpretation and communication.</li>
+      <li><strong>Patient appointment administration — PIMS Appointments.</strong> Lewisham HealthCare NHS Trust; training completed. Transferable value: appointment coordination and accurate patient-information handling.</li>
+      <li><strong>Outpatient administration — PIMS Outpatients.</strong> Lewisham Hospital NHS Trust; training completed. Transferable value: outpatient workflows, service coordination and records administration.</li>
+    </ol>
+    <h4>Safeguarding, inclusion and workplace safety</h4>
+    <ol start="14">
+      <li><strong>Equality and diversity — Equality &amp; Diversity, NHS Induction.</strong> Lewisham Hospital NHS Trust, 2002. Transferable value: inclusive service delivery and respectful professional practice.</li>
+      <li><strong>Workplace health and safety — Health &amp; Safety Awareness.</strong> Skills for Health / NHS Professionals, 2003. Transferable value: recognising hazards and supporting safer workplaces.</li>
+      <li><strong>Child safeguarding — Safeguarding Children, Level 1.</strong> Skills for Health, 2022. Transferable value: recognising concerns and understanding reporting responsibilities in healthcare, education and care.</li>
+      <li><strong>Adult safeguarding — Safeguarding Adults, Level 1.</strong> Skills for Health, 2022. Transferable value: recognising vulnerability, concerns and appropriate escalation.</li>
+      <li><strong>Prevent awareness — Prevent Training.</strong> Skills for Health, 2022. Transferable value: safeguarding awareness and appropriate referral routes.</li>
+      <li><strong>Fire safety — Fire Safety.</strong> Skills for Health, 2022. Transferable value: fire prevention, emergency awareness and workplace procedures.</li>
+      <li><strong>Resuscitation awareness — Resuscitation, Level 1.</strong> Skills for Health, 2022. Transferable value: awareness of emergency response and escalation in healthcare settings.</li>
+    </ol>
+    <p class="certificate-record-note">The entries record certificates, course records and attendance evidence already supplied. Dates identify historical training; refresher-dependent healthcare training is recorded as part of the learning history.</p>
+  </div>
+</details>
 <p>These experiences built a foundation in accurate records, usable guidance, technical troubleshooting and communication across professional teams. They also linked her earlier creative and vocational learning with organisational systems and public service.</p>
       </div>
     </details>
