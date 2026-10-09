@@ -8,6 +8,7 @@
     ["Research","research.html"],
     ["Trading","trading.html"],
     ["Professional","professional.html"],
+    ["Socials","socials.html"],
     ["Services","services.html"],
     ["Creative","creative.html"],
     ["Public","public.html"],
