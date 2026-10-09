@@ -1,49 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Directory | Manifold Grace</title>
-  <meta name="description" content="Verified social, research, creative and professional links for Grace.">
-  <meta name="author" content="Grace">
-  <link rel="stylesheet" href="style.css">
-  <script src="site-config.js" defer></script>
-  <script src="site-shell.js" defer></script>
-  
-<style>.social-expanded{margin-top:22px}.social-expanded details{border-top:1px solid var(--line);padding:14px 0}.social-expanded summary{color:var(--text);font-weight:600;cursor:pointer}.social-expanded ul{columns:2}.social-expanded li{padding:6px 0}.social-expanded a,.social-expanded a:visited{color:#91c5ff;text-decoration:underline}@media(max-width:650px){.social-expanded ul{columns:1}}</style></head>
-<body>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Social Directory | Manifold Grace</title><meta name="description" content="A structured, expandable cross-platform directory of social, academic, professional and creative profiles.">
+<link rel="stylesheet" href="style.css"><script src="site-config.js" defer></script><script src="site-shell.js" defer></script>
+<style>
+.network-group{border-top:1px solid var(--line);padding:12px 0}.network-group summary{cursor:pointer;color:var(--text);font-size:1.12rem;font-weight:600;padding:10px 0}.network-group summary small{display:block;font-size:.78rem;color:#8d8d8d;font-weight:400}
+.network-links{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+.network-entry{padding:13px 0;border-bottom:1px solid #303030;min-width:0}.network-entry a,.network-entry a:visited{color:#8fc4ff;text-decoration:underline}
+.network-entry small{display:block;color:#9a9a9a}.network-pending strong{font-weight:500;color:#b2b2b2}
+.social-embed{padding:9px 0}.social-embed summary{font-size:.85rem;font-weight:500}
+.social-embed-viewport{height:340px;width:min(340px,100%);overflow:hidden;border:1px solid #444;background:#101010;margin-top:8px}
+.social-embed-viewport iframe{width:390px;height:650px;border:0;transform:scale(.77);transform-origin:top left}
+@media(max-width:720px){.network-links{grid-template-columns:1fr}}
+</style></head><body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
-<main>
-  <div class="page-hero"><div class="wrap"><div class="eyebrow">Manifold Grace · Grace</div><h1>Social Directory</h1><p class="page-intro">A minimal directory of verified public profiles. Direct links are only shown when the exact profile URL is known, avoiding broken links or accidental links to another person with a similar name.</p></div></div>
-  
-<section><div class="wrap">
-  <span class="status">VERIFIED LINKS</span><h2>Public identity</h2>
-  <p>The directory keeps platform links separate from the main portfolio so the website does not become a second Linkme. Manifold Grace remains the explanatory source; social networks are distribution and discovery channels.</p>
-  <p>Platforms without a verified direct profile URL are intentionally hidden until the correct address is supplied. That rule applies to X, Vimeo, Facebook, YouTube, Instagram, TikTok, Snapchat, SoundCloud, Spotify, ResearchGate, Medium and DEV where the exact public destination has not yet been confirmed.</p>
-  <div class="grid social-grid">
-    <a class="link-card" href="https://www.linkedin.com/in/gracerose-uk" target="_blank" rel="noopener"><strong>LinkedIn</strong><small>Professional profile</small></a>
-    <a class="link-card" href="https://github.com/manifoldgrace" target="_blank" rel="noopener"><strong>GitHub</strong><small>Technical projects</small></a>
-    <a class="link-card" href="https://uk.pinterest.com/GracefulPerspectives/" target="_blank" rel="noopener"><strong>Pinterest · Graceful Perspectives</strong><small>Visual research and curation</small></a>
-    <a class="link-card" href="https://link.me/gracerose" target="_blank" rel="noopener"><strong>Linkme</strong><small>Broader public link hub</small></a>
-    <a class="link-card" href="https://orcid.org/0009-0005-9805-5273" target="_blank" rel="noopener"><strong>ORCID</strong><small>Research identity</small></a>
-    <a class="link-card" href="https://scholar.google.com/citations?user=nJoBMaIAAAAJ&hl=en" target="_blank" rel="noopener"><strong>Google Scholar</strong><small>Scholarship profile</small></a>
-    <a class="link-card" href="https://zenodo.org/records/17439725" target="_blank" rel="noopener"><strong>Zenodo</strong><small>Open research repository</small></a>
-
-    <div data-hide-if-missing><a class="link-card" data-profile-link="x"><strong>X</strong><small>Public social profile</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="vimeo"><strong>Vimeo</strong><small>Video profile</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="facebook"><strong>Facebook</strong><small>Public social profile</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="youtube"><strong>YouTube</strong><small>Video channel</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="instagram"><strong>Instagram</strong><small>Visual social profile</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="tiktok"><strong>TikTok</strong><small>Short-form and live profile</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="snapchat"><strong>Snapchat</strong><small>Public profile</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="soundcloud"><strong>SoundCloud</strong><small>Audio profile</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="spotify"><strong>Spotify</strong><small>Music profile</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="researchgate"><strong>ResearchGate</strong><small>Research profile</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="medium"><strong>Medium</strong><small>Essays and writing</small></a></div>
-    <div data-hide-if-missing><a class="link-card" data-profile-link="dev"><strong>DEV Community</strong><small>Engineering notes</small></a></div>
-  </div>
-</div></section>
-<section><div class="wrap"><span class="status">EXTENDED DIRECTORY</span><h2>Platforms and profile availability</h2><p>This reference list separates known destinations from profiles not yet verified. A generic platform link is not represented as your personal account, and third-party full-page previews require each platform's embedding permissions.</p><div class="social-expanded"><details open><summary>Professional, academic and developer</summary><ul><li><a href="https://github.com/manifoldgrace">GitHub projects</a></li><li><a href="https://www.linkedin.com/in/gracerose-uk">LinkedIn</a></li><li><a href="https://orcid.org/0009-0005-9805-5273">ORCID</a></li><li><a href="https://scholar.google.com/citations?user=nJoBMaIAAAAJ&amp;hl=en">Google Scholar</a></li><li><a href="https://dev.to/gracerosen">DEV Community</a></li><li><a href="https://zenodo.org/records/17439725">Zenodo</a></li><li>ResearchGate — direct profile pending</li><li>Medium — direct profile pending</li><li>Academia.edu — direct profile pending</li><li>Stack Overflow — direct profile pending</li><li>GitLab — direct profile pending</li><li>Hugging Face — direct profile pending</li></ul></details><details><summary>Visual, video and social</summary><ul><li><a href="https://link.me/gracerose">Linkme</a> — link hub</li><li><a href="https://uk.pinterest.com/GracefulPerspectives/">Pinterest</a></li><li>X — direct profile pending</li><li>Vimeo — pending</li><li>Facebook — pending</li><li>Snapchat — pending</li><li>TikTok — pending</li><li>Instagram — pending</li><li>YouTube — pending</li><li>Threads — pending</li><li>Bluesky — pending</li><li>Linktree — pending</li><li>Behance — pending</li><li>Flickr — pending</li></ul></details><details><summary>Music, creative and publishing</summary><ul><li>Spotify — pending</li><li>SoundCloud — pending</li><li>Bandcamp — pending</li><li>DistroKid — pending</li><li>Apple Music — pending</li><li>Wix — pending</li><li>Substack — pending</li><li>Vercel — pending</li><li>Google Sites — pending</li><li>Issuu — pending</li><li>Vocal Media — pending</li><li>Mixcloud — pending</li></ul></details></div></div></section></main>
-<footer><div class="wrap" data-site-footer></div></footer>
-</body>
-</html>
+<main><div class="page-hero"><div class="wrap"><div class="eyebrow">SOCIALS · RESEARCH · CREATIVE</div><h1>Social Directory</h1>
+<p class="page-intro">A scannable directory of online presences across professional, scientific and creative platforms. Verified destinations are blue hyperlinks; unverified profile addresses remain visible as planned slots rather than misleading clickable links.</p>
+</div></div>
+<section><div class="wrap"><span class="status">CROSS-PLATFORM INDEX</span><h2>Explore by platform type</h2><p>8 verified destinations and 35 platform slots. Expand each category; the Linkme row includes an optional embedded preview wherever the provider permits it.</p>
+<details class="network-group" open><summary>Profiles & hubs <small>1 linked · 2 reserved</small></summary><ul class="network-links"><li class="network-entry"><a href="https://link.me/gracerose" target="_blank" rel="noopener noreferrer"><strong>Linkme</strong></a> <small>Main link hub</small><details class="social-embed"><summary>Open mini page preview</summary><div class="social-embed-viewport"><iframe loading="lazy" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin" title="Linkme profile preview" src="https://link.me/gracerose"></iframe></div><p class="small-note">Some platforms block embedded previews. <a href="https://link.me/gracerose" target="_blank" rel="noopener noreferrer">Open Linkme directly</a> if the preview cannot load.</p></details></li><li class="network-entry network-pending"><strong>Linktree</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Wix</strong> <small>Profile URL not verified — no link published</small></li></ul></details>
+<details class="network-group" open><summary>Engineering & career <small>3 linked · 5 reserved</small></summary><ul class="network-links"><li class="network-entry"><a href="https://github.com/manifoldgrace" target="_blank" rel="noopener noreferrer"><strong>GitHub</strong></a> <small>Repository and project folio</small></li>
+<li class="network-entry"><a href="https://www.linkedin.com/in/gracerose-uk" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong></a> <small>Professional history</small></li>
+<li class="network-entry"><a href="https://dev.to/gracerosen" target="_blank" rel="noopener noreferrer"><strong>DEV Community</strong></a> <small>Engineering essays &amp; code</small></li><li class="network-entry network-pending"><strong>CodePen</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Hugging Face</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Stack Overflow</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>GitLab</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Notion</strong> <small>Profile URL not verified — no link published</small></li></ul></details>
+<details class="network-group" ><summary>Academic & research <small>3 linked · 8 reserved</small></summary><ul class="network-links"><li class="network-entry"><a href="https://orcid.org/0009-0005-9805-5273" target="_blank" rel="noopener noreferrer"><strong>ORCID</strong></a> <small>Persistent research identity</small></li>
+<li class="network-entry"><a href="https://scholar.google.com/citations?user=nJoBMaIAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer"><strong>Google Scholar</strong></a> <small>Academic citation profile</small></li>
+<li class="network-entry"><a href="https://zenodo.org/records/17439725" target="_blank" rel="noopener noreferrer"><strong>Zenodo</strong></a> <small>Research publication record</small></li><li class="network-entry network-pending"><strong>Medium</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>ResearchGate</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Substack</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Kaggle</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Research Square</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>OSF</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Figshare</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Academia.edu</strong> <small>Profile URL not verified — no link published</small></li></ul></details>
+<details class="network-group" ><summary>Visual, music & media <small>1 linked · 11 reserved</small></summary><ul class="network-links"><li class="network-entry"><a href="https://uk.pinterest.com/GracefulPerspectives/" target="_blank" rel="noopener noreferrer"><strong>Pinterest</strong></a> <small>Visual research &amp; collections</small></li><li class="network-entry network-pending"><strong>Vimeo</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>YouTube</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Spotify</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>SoundCloud</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>DistroKid</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Behance</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Dribbble</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Patreon</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Bandcamp</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Flickr</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Canva</strong> <small>Profile URL not verified — no link published</small></li></ul></details>
+<details class="network-group" ><summary>Social networks <small>0 linked · 9 reserved</small></summary><ul class="network-links"><li class="network-entry network-pending"><strong>X</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Facebook</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Snapchat</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>TikTok</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Instagram</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Threads</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Bluesky</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Mastodon</strong> <small>Profile URL not verified — no link published</small></li>
+<li class="network-entry network-pending"><strong>Twitch</strong> <small>Profile URL not verified — no link published</small></li></ul></details>
+<p class="small-note">Platforms may prevent in-page previews through their security headers. An unverified slot does not claim that an account exists or that it belongs to Grace.</p>
+</div></section></main><footer><div class="wrap" data-site-footer></div></footer></body></html>
