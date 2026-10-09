@@ -128,6 +128,6 @@ document.getElementById("rcPropose").addEventListener("click",()=>{proposal.data
 document.getElementById("rcNewCategory").addEventListener("input",updateIssue);
 document.getElementById("rcCopy").addEventListener("click",async()=>{try{await navigator.clipboard.writeText(makeBrief());copyStatus.textContent="Research brief copied. Paste it into your shared document.";}catch(e){copyStatus.textContent="Clipboard unavailable. Open the document first, then use your browser's copy controls."; }});
 document.getElementById("rcEmail").addEventListener("click",()=>{const sub="Research collaboration update — "+(selected?.name||"New topic");const body="Research area: "+(selected?.name||"")+"\nWorking question: [add question]\nDocument link: [paste the access-controlled Google Docs or Word link]\nLatest changes:\nNext actions:\nVersion / date:\n";window.location.href="mailto:?subject="+encodeURIComponent(sub)+"&body="+encodeURIComponent(body);});
-render();})();
+const initialQuery=new URLSearchParams(window.location.search).get("q");if(initialQuery)search.value=initialQuery.slice(0,160);render();})();
 </script>
 </body></html>
