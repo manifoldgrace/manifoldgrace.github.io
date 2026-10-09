@@ -26,13 +26,16 @@
 #community-sport .network-links{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:900px){#social-featured .social-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){#social-featured .social-feature-grid{grid-template-columns:1fr}#community-sport .network-links{grid-template-columns:1fr}}
+
+#social-featured .github-repos-preview{display:block;margin-top:9px;color:#d2e5ff;font-size:.73rem;line-height:1.65}
+#social-featured .github-repos-preview span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 </style></head><body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main><div class="page-hero"><div class="wrap"><div class="eyebrow">SOCIALS · RESEARCH · CREATIVE</div><h1>Social Directory</h1>
 <p class="page-intro">A scannable directory of online presences across professional, scientific and creative platforms. Verified destinations are blue hyperlinks; unverified profile addresses remain visible as planned slots rather than misleading clickable links.</p>
 </div></div>
 <section id="social-featured" aria-labelledby="social-featured-heading"><div class="wrap"><span class="status">AT A GLANCE</span><h2 id="social-featured-heading">Featured profiles</h2><p>Eight confirmed public destinations. Scan the platform, open its profile, or browse the expandable index below. LinkMe offers a miniature page preview in the directory where embedding is supported.</p><div class="social-feature-grid"><a class="social-feature-card" href="https://link.me/gracerose" target="_blank" rel="noopener noreferrer" aria-label="Open LinkMe profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">LM</span><span><span class="profile-title">LinkMe</span><span class="profile-subtitle">Link hub</span></span></span><span class="profile-mini">Visual hub for verified professional, creative and social destinations.</span><span class="profile-action">View profile ↗</span></a>
-<a class="social-feature-card" href="https://github.com/manifoldgrace" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">GH</span><span><span class="profile-title">GitHub</span><span class="profile-subtitle">Engineering</span></span></span><span class="profile-mini">Projects, repositories and technical work.</span><span class="profile-action">View profile ↗</span></a>
+<a class="social-feature-card" href="https://github.com/manifoldgrace" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">GH</span><span><span class="profile-title">GitHub</span><span class="profile-subtitle">Engineering</span></span></span><span class="profile-mini">Projects, repositories and technical work.<span id="mg-social-github-repos" class="github-repos-preview" aria-live="polite">Recent public repositories will appear here when available.</span></span><span class="profile-action">View profile ↗</span></a>
 <a class="social-feature-card" href="https://www.linkedin.com/in/gracerose-uk" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">in</span><span><span class="profile-title">LinkedIn</span><span class="profile-subtitle">Professional</span></span></span><span class="profile-mini">Career, work history and professional connections.</span><span class="profile-action">View profile ↗</span></a>
 <a class="social-feature-card" href="https://uk.pinterest.com/GracefulPerspectives/" target="_blank" rel="noopener noreferrer" aria-label="Open Pinterest profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">P</span><span><span class="profile-title">Pinterest</span><span class="profile-subtitle">Visual collections</span></span></span><span class="profile-mini">Boards, visual references and creative collections.</span><span class="profile-action">View profile ↗</span></a>
 <a class="social-feature-card" href="https://orcid.org/0009-0005-9805-5273" target="_blank" rel="noopener noreferrer" aria-label="Open ORCID profile"><span class="profile-top"><span class="profile-mark" aria-hidden="true">iD</span><span><span class="profile-title">ORCID</span><span class="profile-subtitle">Academic identity</span></span></span><span class="profile-mini">Persistent researcher identifier.</span><span class="profile-action">View profile ↗</span></a>
@@ -100,5 +103,27 @@
       if (!query) group.hidden = false;
     }
   });
+})();
+</script><script>
+(async () => {
+  'use strict';
+  const root = document.getElementById('mg-social-github-repos');
+  if (!root) return;
+  try {
+    const response = await fetch('https://api.github.com/users/manifoldgrace/repos?per_page=5&sort=updated', {
+      headers: {Accept: 'application/vnd.github+json'}
+    });
+    if (!response.ok) return;
+    const repos = (await response.json()).filter(repo => !repo.private).slice(0,4);
+    if (!repos.length) return;
+    root.replaceChildren();
+    for (const repo of repos) {
+      const item = document.createElement('span');
+      item.textContent = '↳ ' + repo.name;
+      root.appendChild(item);
+    }
+  } catch (_) {
+    // Remain usable with the permanent GitHub profile link if blocked or offline.
+  }
 })();
 </script></body></html>
