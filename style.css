@@ -1051,3 +1051,10 @@ body>footer [data-site-footer] a:active{
 /* Featured navigation label remains readable on the black ribbon. */
 body>header [data-site-nav] a.nav-research-feature,
 body>header [data-site-nav] a.nav-research-feature:hover{background:#000!important;color:#fff!important;border-color:#fff}
+
+/* Research Collaborations ribbon label. */
+body>header [data-site-nav] a.nav-research-feature,
+body>header [data-site-nav] a.nav-research-feature:visited,
+body>header [data-site-nav] a.nav-research-feature:hover,
+body>header [data-site-nav] a.nav-research-feature:focus,
+body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!important}
