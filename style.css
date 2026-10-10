@@ -1016,13 +1016,13 @@ body>header,body>main,body>footer{position:relative;z-index:1}
 .nav-links a.nav-research-feature:focus-visible{outline:3px solid #8ac5ff;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.nav-links a.nav-research-feature{transition:none}}
 
-/* White page backgrounds. Text and foreground colours are unchanged. */
-:root{--panel:#ffffff}
-html,body,body>header,body>footer,main,main>section{
-  background-color:#ffffff!important;
+/* Solid black site backdrop with contrasting text. */
+:root{--bg:#000000;--panel:#151515}
+html,body,body>header,body>footer,main,main>section,.page-hero,.home-hero{
+  background-color:#000000!important;
   background-image:none!important;
 }
-body::before,body::after{background:none!important}
+body::before,body::after{display:none!important;background:none!important;animation:none!important}
 
 /* White brand and main navigation labels, preserved in place. */
 body>header .brand,
@@ -1047,3 +1047,7 @@ body>footer [data-site-footer] a:focus,
 body>footer [data-site-footer] a:active{
   color:#ffffff!important;
 }
+
+/* Featured navigation label remains readable on the black ribbon. */
+body>header [data-site-nav] a.nav-research-feature,
+body>header [data-site-nav] a.nav-research-feature:hover{background:#000!important;color:#fff!important;border-color:#fff}
