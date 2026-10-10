@@ -19,6 +19,18 @@
 .thinking-practices p{font-size:.94rem;line-height:1.7;margin:0}
 .thinking-prompts{margin-top:24px;border:1px solid #536668;padding:20px}
 .thinking-prompts summary{cursor:pointer;color:#eee3cb}.thinking-prompts li{margin:10px 0;color:#bbb}
+
+/* Compact, swipeable thinking practices — preserves full text without page sprawl. */
+.thinking-practices{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(255px,32%,355px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:4px;scrollbar-width:thin;overscroll-behavior-x:contain;padding:5px 4px 20px;margin-top:9px}
+.thinking-practices article{scroll-snap-align:start;border:1px solid #536668;border-top:2px solid #b3ae8f;background:#111a1b;padding:18px 19px;min-height:225px}
+.thinking-practices article h3{margin:0 0 12px;font-size:1.18rem}
+.thinking-practices article p{font-size:.9rem;line-height:1.68;color:#d4d3ca}
+.thinking-arrows{display:flex;align-items:center;gap:9px;margin:26px 0 10px;justify-content:flex-end}
+.thinking-arrows span{margin-right:auto;color:#babeb7;font-size:.82rem}
+.thinking-arrows button{border:1px solid #6b7979;border-radius:100%;background:#161c1d;color:#fff;width:42px;height:42px;font-size:1.25rem;cursor:pointer}
+.thinking-arrows button:hover{border-color:#deca96}
+.thinking-arrows button:focus-visible{outline:3px solid #8fcaff;outline-offset:2px}
+@media(max-width:740px){.thinking-practices{grid-auto-columns:77vw}}
 </style></head>
 <body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
@@ -39,7 +51,7 @@
     <h2>Knowledge maps</h2>
     <p>The purpose is to keep each discipline legible in its own right while making it possible to move laterally between related theories, institutions, methods, evidence and questions.</p>
     <div class="grid">
-      <a class="link-card" href="topics-in-12.html"><strong>Knowledge Domains · 24</strong><small>Twenty-four interdisciplinary domains with syllabus carousels and expandable study levels</small></a>
+      <a class="link-card" href="topics-in-12.html"><strong>Knowledge Domains · 40</strong><small>484 syllabus topics across 40 disciplines · searchable, collapsible domains and nested research questions</small></a>
       <a class="link-card" href="research-collaborations.html"><strong>Research Collaborations</strong><small>Search 200 research starting topics across AI and independent disciplines</small></a>
       <a class="link-card" href="research-links.html"><strong>Research Links</strong><small>Structured source and reference infrastructure</small></a>
       <a class="link-card" href="systems.html"><strong>Systems</strong><small>Institutional and whole-system relationships</small></a>
@@ -86,7 +98,7 @@
       </svg>
       <figcaption>An original thinking map for Manifold Grace. The stages overlap and may be revisited.</figcaption>
     </figure>
-    <div class="thinking-practices">
+    <div class="thinking-arrows" aria-label="Browse thinking practices"><span>Explore each thinking practice →</span><button id="thinkingPrev" type="button" aria-label="Previous thinking practice">←</button><button id="thinkingNext" type="button" aria-label="Next thinking practice">→</button></div><div class="thinking-practices" id="thinkingCarousel" tabindex="0" aria-label="Swipeable thinking practices">
       <article><h3>Purpose, questions &amp; definitions</h3><p>Clarify the problem, the decision and the meaning of key terms. Notice whether the question itself contains an assumption, narrows the options or leaves someone out.</p></article>
       <article><h3>Evidence &amp; provenance</h3><p>Distinguish observations, testimony, data, interpretation and speculation. Ask who produced or introduced a source, when, by which method and with what limitations. Preserve the contribution of people who locate and curate evidence.</p></article>
       <article><h3>Experience &amp; context</h3><p>Listen carefully to firsthand accounts and reconstruct the chain of events before judging it. Consider history, culture, institutions and circumstances; separate an observed event from a proposed mechanism or wider explanation.</p></article>
@@ -120,5 +132,16 @@
   </div></section>
 </main>
 <footer><div class="wrap" data-site-footer></div></footer>
+
+<script>
+(()=>{
+ const track=document.getElementById("thinkingCarousel");
+ if(!track)return;
+ function move(dir){const card=track.querySelector("article");const width=card?card.getBoundingClientRect().width+14:track.clientWidth*.85;track.scrollBy({left:dir*width,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"instant":"smooth"});}
+ document.getElementById("thinkingPrev").addEventListener("click",()=>move(-1));
+ document.getElementById("thinkingNext").addEventListener("click",()=>move(1));
+ track.addEventListener("keydown",e=>{if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();move(e.key==="ArrowRight"?1:-1);}});
+})();
+</script>
 </body>
 </html>
