@@ -83,6 +83,9 @@ background-size:130% 130%;animation:quietBackdrop 38s ease-in-out infinite alter
 #worked-with .amida-brand-pair{width:150px;max-width:150px;height:48px;gap:6px}
 #worked-with .amida-brand-pair img{width:72px;max-width:72px;height:44px;max-height:44px}
 }
+</style><style>
+#worked-with .amida-brand-pair{box-sizing:border-box;width:100%;max-width:100%;gap:8px;padding:0;overflow:hidden;min-width:0}
+#worked-with .amida-brand-pair img{box-sizing:border-box;width:calc((100% - 8px)/2)!important;max-width:calc((100% - 8px)/2)!important;min-width:0;flex:1 1 0;object-fit:contain}
 </style></head>
 <body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
@@ -123,19 +126,21 @@ background-size:130% 130%;animation:quietBackdrop 38s ease-in-out infinite alter
 <script>
 (()=>{const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('.experience-reel').forEach(reel=>{
- const track=reel.firstElementChild;let paused=reduced,hover=false,last=0,position=0,direction=1;
+ const track=reel.firstElementChild;let paused=reduced,hover=false,last=0,position=0;
  const toggle=document.querySelector('[data-reel-toggle="'+reel.id+'"]');
  const sync=()=>toggle.textContent=paused?'Play':'Pause';sync();
  toggle.addEventListener('click',()=>{position=reel.scrollLeft;paused=!paused;sync()});
  reel.addEventListener('mouseenter',()=>hover=true);reel.addEventListener('mouseleave',()=>{position=reel.scrollLeft;hover=false});
  reel.addEventListener('focusin',()=>hover=true);reel.addEventListener('focusout',()=>{position=reel.scrollLeft;hover=false});
  reel.addEventListener('touchstart',()=>{paused=true;sync()},{passive:true});
+ const originals=[...track.children];
+ originals.forEach(card=>{const copy=card.cloneNode(true);copy.dataset.loopCopy='true';copy.setAttribute('aria-hidden','true');copy.querySelectorAll('img').forEach(img=>img.alt='');track.append(copy)});
  const cards=[...track.children];
  function showWholeCards(){if(innerWidth>=1000){const slot=(reel.clientWidth-126)/8;cards.forEach(card=>{card.style.width=slot+'px';card.style.flexBasis=slot+'px'})}else{cards.forEach(card=>{card.style.width='';card.style.flexBasis=''})}const left=reel.scrollLeft,right=left+reel.clientWidth;const origin=track.offsetLeft;let shown=0;
- cards.forEach(card=>{const start=card.offsetLeft-origin,end=start+card.offsetWidth;const whole=start>=left-1&&end<=right+1&&(innerWidth<1000||shown<7);if(whole)shown++;card.style.visibility=whole?'visible':'hidden';card.setAttribute('aria-hidden',String(!whole))});}
+ cards.forEach(card=>{const start=card.offsetLeft-origin,end=start+card.offsetWidth;const whole=start>=left-1&&end<=right+1&&(innerWidth<1000||shown<7);if(whole)shown++;card.style.visibility=whole?'visible':'hidden';card.setAttribute('aria-hidden',String(!whole||card.dataset.loopCopy==='true'))});}
  reel.addEventListener('scroll',showWholeCards,{passive:true});new ResizeObserver(showWholeCards).observe(reel);showWholeCards();
  function frame(now){const delta=last?Math.min(now-last,60):0;last=now;
- if(!paused&&!hover&&!document.hidden){const max=reel.scrollWidth-reel.clientWidth;position=Math.max(0,Math.min(max,position+direction*delta*.1));if(position>=max)direction=-1;if(position<=0)direction=1;reel.scrollLeft=position}
+ if(!paused&&!hover&&!document.hidden){const cycle=cards[originals.length].offsetLeft-cards[0].offsetLeft;position+=delta*.1;if(cycle>0&&position>=cycle)position%=cycle;reel.scrollLeft=position}
  showWholeCards();requestAnimationFrame(frame)}requestAnimationFrame(frame);
 })})();
 </script></body></html>
