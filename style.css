@@ -1017,7 +1017,7 @@ body>header,body>main,body>footer{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce){.nav-links a.nav-research-feature{transition:none}}
 
 /* White page backgrounds. Text and foreground colours are unchanged. */
-:root{--bg:#ffffff;--panel:#ffffff}
+:root{--panel:#ffffff}
 html,body,body>header,body>footer,main,main>section{
   background-color:#ffffff!important;
   background-image:none!important;
