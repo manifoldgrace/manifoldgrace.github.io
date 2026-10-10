@@ -52,7 +52,7 @@ background-size:130% 130%;animation:quietBackdrop 38s ease-in-out infinite alter
 #worked-with .amida-brand-pair img{width:71px;max-width:71px;height:58px;max-height:58px}
 #worked-with .experience-description{margin:8px 0 10px}
 #worked-with .experience-controls{margin:0}
-@media(min-width:1000px){#worked-with .experience-logo{width:calc((min(1188px,100vw - 144px) - 108px)/7);flex-basis:calc((min(1188px,100vw - 144px) - 108px)/7)}#worked-with .experience-logo>img,#worked-with .experience-logo.logo-lcm>img,#worked-with img[src*="firebrand"],#worked-with .amida-brand-pair{width:100%;max-width:100%}}
+@media(min-width:1000px){#worked-with .experience-logo{width:calc((min(1188px,100vw - 144px) - 126px)/8);flex-basis:calc((min(1188px,100vw - 144px) - 126px)/8)}#worked-with .experience-logo>img,#worked-with .experience-logo.logo-lcm>img,#worked-with img[src*="firebrand"],#worked-with .amida-brand-pair{width:100%;max-width:100%}}
 @media(max-width:600px){#worked-with .experience-logo{width:130px;flex-basis:130px}#worked-with .experience-logo>img,#worked-with .experience-logo.logo-lcm>img,#worked-with img[src*="firebrand"]{width:130px;max-width:130px}#worked-with .amida-brand-pair{width:130px;max-width:130px;gap:6px}#worked-with .amida-brand-pair img{width:62px;max-width:62px}}
 </style></head>
 <body>
@@ -102,8 +102,8 @@ document.querySelectorAll('.experience-reel').forEach(reel=>{
  reel.addEventListener('focusin',()=>hover=true);reel.addEventListener('focusout',()=>{position=reel.scrollLeft;hover=false});
  reel.addEventListener('touchstart',()=>{paused=true;sync()},{passive:true});
  const cards=[...track.children];
- function showWholeCards(){if(innerWidth>=1000){const slot=(reel.clientWidth-108)/7;cards.forEach(card=>{card.style.width=slot+'px';card.style.flexBasis=slot+'px'})}else{cards.forEach(card=>{card.style.width='';card.style.flexBasis=''})}const left=reel.scrollLeft,right=left+reel.clientWidth;const origin=track.offsetLeft;
- cards.forEach(card=>{const start=card.offsetLeft-origin,end=start+card.offsetWidth;const whole=start>=left-1&&end<=right+1;card.style.visibility=whole?'visible':'hidden';card.setAttribute('aria-hidden',String(!whole))});}
+ function showWholeCards(){if(innerWidth>=1000){const slot=(reel.clientWidth-126)/8;cards.forEach(card=>{card.style.width=slot+'px';card.style.flexBasis=slot+'px'})}else{cards.forEach(card=>{card.style.width='';card.style.flexBasis=''})}const left=reel.scrollLeft,right=left+reel.clientWidth;const origin=track.offsetLeft;let shown=0;
+ cards.forEach(card=>{const start=card.offsetLeft-origin,end=start+card.offsetWidth;const whole=start>=left-1&&end<=right+1&&(innerWidth<1000||shown<7);if(whole)shown++;card.style.visibility=whole?'visible':'hidden';card.setAttribute('aria-hidden',String(!whole))});}
  reel.addEventListener('scroll',showWholeCards,{passive:true});new ResizeObserver(showWholeCards).observe(reel);showWholeCards();
  function frame(now){const delta=last?Math.min(now-last,60):0;last=now;
  if(!paused&&!hover&&!document.hidden){const max=reel.scrollWidth-reel.clientWidth;position=Math.max(0,Math.min(max,position+direction*delta*.28));if(position>=max)direction=-1;if(position<=0)direction=1;reel.scrollLeft=position}
