@@ -36,7 +36,7 @@ for(let i=0;i<methods.length;i++){
 }
 const buttons=[...btns.querySelectorAll("button")],thumbs=[...rail.querySelectorAll("button")];
 const motion=()=>reduced.matches?"instant":"smooth";
-function show(i,focus=false){
+function show(i,focus=false,initial=false){
  current=(i+methods.length)%methods.length;
  const m=methods[current];
  img.src="assets/learning/brain-modalities/"+m.id+".svg";
@@ -46,7 +46,7 @@ function show(i,focus=false){
  count.textContent=(current+1)+" / "+methods.length;
  buttons.forEach((b,j)=>{b.setAttribute("aria-selected",String(j===current));b.tabIndex=j===current?0:-1;});
  thumbs.forEach((b,j)=>b.setAttribute("aria-pressed",String(j===current)));
- thumbs[current].scrollIntoView({block:"nearest",inline:"nearest",behavior:motion()});
+ if(!initial)thumbs[current].scrollIntoView({block:"nearest",inline:"nearest",behavior:motion()});
  if(focus)buttons[current].focus({preventScroll:true});
 }
 prev.addEventListener("click",()=>show(current-1));
@@ -56,5 +56,5 @@ img.addEventListener("pointerdown",e=>{if(e.pointerType==="touch")downX=e.client
 img.addEventListener("pointerup",e=>{if(downX===null)return;const delta=e.clientX-downX;downX=null;if(Math.abs(delta)>45)show(current+(delta<0?1:-1));});
 img.addEventListener("pointercancel",()=>{downX=null;});
 root.querySelector("#brainAtlasPanel").addEventListener("keydown",e=>{if(e.target.closest("button"))return;if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();show(current+(e.key==="ArrowRight"?1:-1));}});
-show(0);
+show(0,false,true);
 })();
