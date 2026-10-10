@@ -1036,3 +1036,14 @@ body>header [data-site-nav] a.nav-research-feature:visited,
 body>header [data-site-nav] a.nav-research-feature:hover{
   color:#ffffff!important;
 }
+
+/* White footer navigation and public-record note; content preserved. */
+body>footer [data-site-footer],
+body>footer [data-site-footer] .footer-note,
+body>footer [data-site-footer] a,
+body>footer [data-site-footer] a:visited,
+body>footer [data-site-footer] a:hover,
+body>footer [data-site-footer] a:focus,
+body>footer [data-site-footer] a:active{
+  color:#ffffff!important;
+}
