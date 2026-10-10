@@ -112,7 +112,7 @@ document.querySelectorAll(".gallery").forEach(gallery=>{
  const pause=button("Play · 8 seconds",()=>{if(timer){clearInterval(timer);timer=null;pause.textContent="Play · 8 seconds";}else{timer=setInterval(()=>show(index+1),8000);pause.textContent="Pause";}});
  button("Previous",()=>show(index-1));button("Next",()=>show(index+1));controls.append(status);gallery.before(controls);show(0);
  const reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
- if(!reduce&&gallery.closest("#research-context, #brain-methods"))pause.click();
+ if(!reduce&&gallery.closest(".lab-illustrations, #research-context, #brain-methods"))pause.click();
  gallery.addEventListener("focusin",()=>{if(timer){clearInterval(timer);timer=null;pause.textContent="Play · 8 seconds";}});
 });
 })();
