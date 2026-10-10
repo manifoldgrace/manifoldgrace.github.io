@@ -7,6 +7,7 @@
     ["Professional","professional.html"],
     ["My Books","my-book.html"],
     ["Knowledge VS Thinking","knowledge.html"],
+    ["Learning Lab","learning-lab.html"],
     ["Research","research.html"],
     ["Labour Market Analysis","labour-market-analysis.html"],
     ["Trading","trading.html"],
