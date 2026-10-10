@@ -60,6 +60,42 @@
 .mg-art-9 .mg-cover-portrait{background-position:33.333333333333336% 100%!important}
 .mg-art-10 .mg-cover-portrait{background-position:66.66666666666667% 100%!important}
 .mg-art-10 .mg-cover-top{text-align:left!important}.mg-art-10 strong{font-style:italic!important}
+
+/* Original author-cover assets and a gently moving, no-fade book collection. */
+.biography-book-photo{background-image:url("assets/books/full-biography.webp")!important;background-size:cover!important;background-position:center center!important;filter:none!important;opacity:1!important}
+.biography-book-cover .biography-book-text{display:none}
+.book-project-cover.mg-cover:is(.mg-art-9,.mg-art-10,.mg-art-11,.mg-art-12) .mg-cover-portrait{inset:0!important;background-size:cover!important;background-repeat:no-repeat!important;background-position:center center!important;opacity:1!important;filter:none!important}
+.mg-art-9 .mg-cover-portrait{background-image:url("assets/books/trojan-horse.webp")!important}
+.mg-art-10 .mg-cover-portrait{background-image:url("assets/books/breaking-barriers.webp")!important}
+.mg-art-11 .mg-cover-portrait{background-image:url("assets/books/garden-produce.webp")!important}
+.mg-art-12 .mg-cover-portrait{background-image:url("assets/books/minimalist-aesthetic.webp")!important}
+.book-project-cover.mg-cover:is(.mg-art-9,.mg-art-10,.mg-art-11,.mg-art-12) .mg-cover-top,.book-project-cover.mg-cover:is(.mg-art-9,.mg-art-10,.mg-art-11,.mg-art-12) .mg-cover-author{display:none!important}
+.mg-gallery{margin:22px 0 38px;position:relative}
+.mg-gallery-toolbar,.mg-shelf-toolbar{display:flex;align-items:center;gap:10px;justify-content:flex-end;margin:17px 0 11px}
+.mg-gallery-toolbar span,.mg-shelf-toolbar span{color:#c8c2b9;font-size:.84rem;margin-right:auto}
+.mg-gallery-btn,.mg-shelf-btn{border:1px solid #817b70;border-radius:40px;min-width:42px;min-height:42px;background:#161a19;color:#fff;font-size:1.25rem;cursor:pointer}
+.mg-gallery-btn:hover,.mg-shelf-btn:hover{background:#2c302d;border-color:#e1c996}
+.mg-gallery-btn:focus-visible,.mg-shelf-btn:focus-visible{outline:3px solid #99cfff;outline-offset:2px}
+.mg-gallery-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(190px,28%);gap:17px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:6px;padding:12px 6px 23px;scrollbar-width:thin;overscroll-behavior-inline:contain}
+.mg-gallery-tile{scroll-snap-align:center;display:block;border:1px solid #494840;background:#161817;padding:11px;transition:transform .28s ease,border-color .28s ease;cursor:pointer;text-align:left;color:#f3efe3;min-width:0}
+.mg-gallery-tile:hover,.mg-gallery-tile[aria-pressed="true"]{border-color:#ddbd83;transform:translateY(-4px)}
+.mg-gallery-tile img{width:100%;aspect-ratio:2/3;display:block;object-fit:cover;object-position:center;filter:none!important;opacity:1!important}
+.mg-gallery-tile span{display:block;font-size:.8rem;margin-top:11px;overflow-wrap:anywhere;color:#e6e1d4}
+.mg-gallery-tile small{display:block;color:#bdb8af;font-size:.7rem;margin-top:3px}
+.book-shelf{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:18px;scrollbar-width:thin;overscroll-behavior-inline:contain;padding:9px 4px 26px;margin-top:8px;align-items:stretch}
+.book-shelf>.book-project{flex:0 0 min(900px,97%);scroll-snap-align:start;align-self:stretch;display:grid;grid-template-columns:minmax(160px,215px) minmax(0,1fr);gap:27px;padding:20px;border:1px solid #45443e;background:#131514;min-width:0}
+.book-shelf>.book-project:last-child{border-bottom:1px solid #45443e}
+.book-shelf .book-project-cover.mg-cover{width:100%;max-width:215px;margin:0;min-height:0;align-self:start}
+.book-shelf .book-project-body{min-width:0}
+.book-shelf .book-project-body p{color:#cfcac3}
+@media(max-width:700px){
+ .mg-gallery-track{grid-auto-columns:minmax(200px,64vw);gap:12px}
+ .book-shelf>.book-project{flex-basis:91%;grid-template-columns:1fr;gap:12px;padding:15px}
+ .book-shelf .book-project-cover.mg-cover{width:clamp(170px,60%,220px);max-width:220px;margin:0 auto 6px}
+ .book-shelf .book-project-body h3{font-size:1.4rem}
+}
+@media(max-width:420px){.mg-gallery-track{grid-auto-columns:74vw}.book-shelf>.book-project{flex-basis:95%}}
+@media(prefers-reduced-motion:reduce){.mg-gallery-tile{transition:none}}
 </style>
 </head>
 <body>
@@ -103,13 +139,40 @@
     </div>
   </div></section>
 
-  <section><div class="wrap">
+  
+<section id="book-cover-gallery" class="mg-gallery-section" aria-labelledby="mgBookGalleryHeading"><div class="wrap">
+<span class="status">COVER CONCEPTS · IN DEVELOPMENT</span>
+<h2 id="mgBookGalleryHeading">The book-cover collection</h2>
+<p>Five distinct visual concepts using Grace’s portrait references. These are provisional covers, not announcements of published editions. Swipe through the designs or use the arrows; the images remain static, without fading.</p>
+<div class="mg-gallery">
+<div class="mg-gallery-toolbar"><span id="mgGalleryStatus" role="status" aria-live="polite">1 of 5 covers</span><button class="mg-gallery-btn" id="mgGalleryPrev" type="button" aria-label="Previous cover">←</button><button class="mg-gallery-btn" id="mgGalleryNext" type="button" aria-label="Next cover">→</button><button class="mg-gallery-btn" id="mgGalleryPause" type="button" aria-label="Pause cover carousel" aria-pressed="false">Ⅱ</button></div>
+<div class="mg-gallery-track" id="mgCoverCarousel" tabindex="0" aria-label="Five book cover designs">
+<button class="mg-gallery-tile" type="button" aria-pressed="true"><img loading="lazy" src="assets/books/full-biography.webp" alt="Full Biography cover concept with Grace Nettey's portrait"><span>Full Biography</span><small>Life and professional record</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/garden-produce.webp" alt="Garden and Produce cover concept featuring Grace and a garden harvest"><span>Garden &amp; Produce</span><small>Horticulture and growing</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/minimalist-aesthetic.webp" alt="Minimalist Aesthetic cover concept with Grace in a bright interior"><span>The Minimalist Aesthetic</span><small>Calm, intentional design</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/trojan-horse.webp" alt="Trojan Horse cover concept with Grace in a formal wood-panelled setting"><span>Trojan Horse</span><small>Institutions and public trust</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/breaking-barriers.webp" alt="Breaking Barriers cover concept with Grace and mustard-coloured typography"><span>Breaking Barriers</span><small>Resilience and opportunity</small></button>
+</div></div></div></section>
+<section><div class="wrap">
     <span class="status">WORKS IN DEVELOPMENT</span>
     <h2>Existing book projects</h2>
     <p>Each title below has an existing content base. That may include manuscript pages, notes, essays, research, archival material, frameworks, source collections or earlier developed discussions. The status labels describe the stage of development rather than suggesting that the underlying work does not yet exist.</p>
     <p>Final titles, covers, editions, publication dates and commercial arrangements may still change. As each project matures, this page can replace working descriptors with the definitive title, synopsis, extracts, audio, publication details and external library or bookseller links.</p>
 
-    <div class="book-shelf">
+    <div class="mg-shelf-toolbar" aria-label="Browse the book collection"><span id="mgShelfCount" role="status" aria-live="polite">Book 1 of 13</span><button id="mgShelfPrev" class="mg-shelf-btn" type="button" aria-label="Previous book">←</button><button id="mgShelfNext" class="mg-shelf-btn" type="button" aria-label="Next book">→</button></div><div class="book-shelf" id="mgBookShelf" tabindex="0" aria-label="Swipeable book collection">
+<article class="book-project" id="garden-produce">
+<div class="book-project-cover mg-cover mg-art-11" role="img" aria-label="Garden and Produce — provisional cover"><div class="mg-cover-portrait" aria-hidden="true"></div></div>
+<div class="book-project-body"><span class="status">WORKING BOOK CONCEPT · IN DEVELOPMENT</span><h3>Garden &amp; Produce</h3>
+<p>Horticulture, food growing and seasonal observation explored through a developing collection of gardening notes, practical investigation and environmental interests.</p>
+<details><summary>Areas for further development</summary><p>Plant selection, soil, propagation, sustainable practice, household gardening and the relationships between food, community and wellbeing. Full research notes and any unpublished findings remain private.</p></details>
+<div class="book-actions"><span class="text-link" aria-disabled="true">Book concept in development</span></div></div></article>
+<article class="book-project" id="minimalist-aesthetic">
+<div class="book-project-cover mg-cover mg-art-12" role="img" aria-label="The Minimalist Aesthetic — provisional cover"><div class="mg-cover-portrait" aria-hidden="true"></div></div>
+<div class="book-project-body"><span class="status">WORKING BOOK CONCEPT · IN DEVELOPMENT</span><h3>The Minimalist Aesthetic</h3>
+<p>A developing exploration of intentional environments, personal style, beauty in simplicity and the relationship between restraint, clarity and thoughtful living.</p>
+<details><summary>Areas for further development</summary><p>Practical design principles, visual coherence, purposeful selection of possessions and environments, and the difference between minimalism as an aesthetic and as a way of organising everyday life.</p></details>
+<div class="book-actions"><span class="text-link" aria-disabled="true">Book concept in development</span></div></div></article>
+
 
       <article class="book-project">
         <div class="book-project-cover mg-cover mg-art-0" role="img" aria-label="50 by 30 — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 02</span><strong>50 by 30</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
@@ -256,5 +319,43 @@
 </main>
 
 <footer><div class="wrap" data-site-footer></div></footer>
-</body>
+
+<script>
+(()=>{
+"use strict";
+const gallery=document.getElementById("mgCoverCarousel"),shelf=document.getElementById("mgBookShelf");
+if(!gallery||!shelf)return;
+const tiles=[...gallery.querySelectorAll(".mg-gallery-tile")],books=[...shelf.children];
+const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let current=0,paused=reduced,interval=null;
+const behaviour=()=>reduced?"instant":"smooth";
+function show(i,animated=true){
+ current=(i+tiles.length)%tiles.length;
+ tiles[current].scrollIntoView({behavior:animated?behaviour():"instant",inline:"center",block:"nearest"});
+ tiles.forEach((tile,j)=>tile.setAttribute("aria-pressed",String(j===current)));
+ document.getElementById("mgGalleryStatus").textContent=(current+1)+" of "+tiles.length+" covers";
+}
+tiles.forEach((tile,i)=>tile.addEventListener("click",()=>{stop();show(i)}));
+function stop(){paused=true;document.getElementById("mgGalleryPause").textContent="▶";document.getElementById("mgGalleryPause").setAttribute("aria-label","Resume cover carousel");document.getElementById("mgGalleryPause").setAttribute("aria-pressed","true");}
+document.getElementById("mgGalleryPrev").addEventListener("click",()=>{stop();show(current-1)});
+document.getElementById("mgGalleryNext").addEventListener("click",()=>{stop();show(current+1)});
+document.getElementById("mgGalleryPause").addEventListener("click",()=>{
+ paused=!paused;
+ document.getElementById("mgGalleryPause").textContent=paused?"▶":"Ⅱ";
+ document.getElementById("mgGalleryPause").setAttribute("aria-label",paused?"Resume cover carousel":"Pause cover carousel");
+ document.getElementById("mgGalleryPause").setAttribute("aria-pressed",String(paused));
+});
+gallery.addEventListener("pointerdown",stop,{passive:true});
+gallery.addEventListener("focusin",stop);
+gallery.addEventListener("keydown",e=>{if(e.key!=="ArrowLeft"&&e.key!=="ArrowRight")return;e.preventDefault();stop();show(current+(e.key==="ArrowRight"?1:-1))});
+if(!reduced){interval=window.setInterval(()=>{if(!paused && !document.hidden)show(current+1)},5000)}
+else stop();
+let activeBook=0;
+function bookTo(index){activeBook=Math.min(books.length-1,Math.max(0,index));books[activeBook].scrollIntoView({inline:"start",block:"nearest",behavior:behaviour()});document.getElementById("mgShelfCount").textContent="Book "+(activeBook+1)+" of "+books.length;}
+document.getElementById("mgShelfPrev").addEventListener("click",()=>bookTo(activeBook-1));
+document.getElementById("mgShelfNext").addEventListener("click",()=>bookTo(activeBook+1));
+shelf.addEventListener("scroll",()=>{let best=0,min=Infinity;books.forEach((book,i)=>{const d=Math.abs(book.offsetLeft-shelf.offsetLeft-shelf.scrollLeft);if(d<min){min=d;best=i}});activeBook=best;document.getElementById("mgShelfCount").textContent="Book "+(best+1)+" of "+books.length;},{passive:true});
+shelf.addEventListener("keydown",e=>{if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();bookTo(activeBook+(e.key==="ArrowRight"?1:-1));}});
+})();
+</script></body>
 </html>
