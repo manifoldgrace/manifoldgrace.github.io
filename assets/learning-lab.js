@@ -60,3 +60,59 @@ $("cpd-add").addEventListener("submit",event=>{event.preventDefault();const titl
 $("cpd-export").addEventListener("click",()=>exportCSV([["Learning goal","Status"],...goals.map(x=>[x.title,x.status])],"cpd-learning-plan.csv"));
 render();renderGoals();
 })();
+(() => {
+"use strict";
+const modes=[["Memory palace","Place one item at each familiar location; walk the route mentally.","Strong mnemonic evidence for trained tasks; generalisation varies.","Front door → hallway → kitchen → garden","loci"],["Spaced repetition","Retrieve, check feedback, then return after an increasing interval.","Strong evidence for distributed practice.","Revisit after one day, three days, then seven days.","space"],["Active recall","Hide the source and retrieve before checking the answer.","Strong evidence, especially with corrective feedback.","Answer before revealing your study list.","recall"],["Chunking","Group related items into meaningful units that suit your capacity.","Grouping helps encoding; no universal five-to-seven-item rule.","Build two or three meaningful groups.","chunk"],["Acronyms & acrostics","Use initial letters to create a memorable cue.","Useful for particular lists; check full meanings too.","Write an acronym or a sentence using initials.","acronym"],["Explain simply","Explain the idea to a beginner, then identify missing steps.","Related to self-explanation; the named Feynman routine is not independently guaranteed.","Write a plain-language explanation.","teach"],["Mind mapping","Connect a central idea to labelled branches and relationships.","An organisation tool; add retrieval rather than copying alone.","Write branches as Parent → Child → Example.","map"],["Link & story","Connect items in a vivid story, keeping their order clear.","A mnemonic aid whose benefit depends on task and use.","Write a short story including every item.","story"],["Multi-sensory engagement","Combine a relevant image, spoken phrase or movement with meaning.","Benefits depend on the task; this is not learning-style matching.","Optional: read aloud or sketch; avoid sensory overload.","sense"],["Blank-page recall","Reconstruct keywords on blank paper, then check and correct.","A format of retrieval practice, rather than a distinct validated treatment.","Write remembered keywords before revealing the source.","blank"]];
+const $=id=>document.getElementById(id);
+let mode=0, started=0, items=[], ready=false;
+let records=[];try{records=JSON.parse(localStorage.getItem("mg-memory-studio-v1")||"[]");if(!Array.isArray(records))records=[];}catch{}
+records=records.filter(x=>x&&typeof x.mode==="string"&&Number.isFinite(x.total)&&Number.isFinite(x.correct)).slice(-300);
+function history(){
+ const node=$("studio-history");node.replaceChildren();
+ records.slice(-15).reverse().forEach(r=>{const p=document.createElement("p");p.textContent=r.mode+" · "+r.correct+"/"+r.total+" · "+r.seconds.toFixed(1)+" s · "+(r.effort||"effort not rated")+" · review "+(Date.now()>=r.due?"due now":new Date(r.due).toLocaleDateString());node.append(p);});
+}
+function choose(n){mode=n;$("studio-title").textContent=modes[n][0];$("studio-instruction").textContent=modes[n][3];}
+document.querySelectorAll("[data-memory-mode]").forEach(b=>b.addEventListener("click",()=>{choose(Number(b.dataset.memoryMode));$("memory-studio").open=true;$("studio-title").scrollIntoView({block:"center"});}));
+$("studio-start").addEventListener("click",()=>{
+ items=$("studio-source").value.split("\n").map(x=>x.trim()).filter(Boolean);
+ if(!items.length){$("studio-status").textContent="Add at least one study item.";return;}
+ ready=false;$("studio-source").hidden=false;$("studio-cue").hidden=false;$("studio-hide").hidden=false;$("studio-recall-label").hidden=true;$("studio-check").hidden=true;$("studio-score").hidden=true;$("studio-feedback").replaceChildren();$("studio-status").textContent="Study your items and prepare your cue. Hide when ready.";
+});
+$("studio-hide").addEventListener("click",()=>{
+ $("studio-source").hidden=true;$("studio-cue").hidden=true;$("studio-hide").hidden=true;$("studio-recall-label").hidden=false;$("studio-recall").value="";$("studio-check").hidden=false;started=performance.now();$("studio-recall").focus();
+});
+$("studio-check").addEventListener("click",()=>{
+ const elapsed=(performance.now()-started)/1000;
+ $("studio-feedback").textContent="Source: "+items.join(" · ");
+ $("studio-source").hidden=false;$("studio-cue").hidden=false;$("studio-score").hidden=false;$("studio-correct").max=items.length;$("studio-check").hidden=true;ready=elapsed;
+});
+$("studio-save").addEventListener("click",()=>{
+ if(ready===false)return;const correct=Number($("studio-correct").value);
+ if(!Number.isInteger(correct)||correct<0||correct>items.length){$("studio-status").textContent="Enter a whole number from 0 to "+items.length+".";return;}
+ const previous=records.filter(x=>x.mode===modes[mode][0]&&x.signature===items.join("\n")).length;
+ const days=[1,3,7][Math.min(previous,2)];
+ records.push({mode:modes[mode][0],signature:items.join("\n"),total:items.length,correct,seconds:ready,effort:$("studio-effort").value,date:new Date().toISOString(),due:Date.now()+days*86400000});
+ records=records.slice(-300);ready=false;
+ try{localStorage.setItem("mg-memory-studio-v1",JSON.stringify(records));$("studio-status").textContent="Recorded "+correct+"/"+items.length+". Next review in "+days+" day(s).";}catch{$("studio-status").textContent="Recorded for this visit. Storage unavailable: export before leaving.";}
+ $("studio-score").hidden=true;history();
+});
+$("studio-export").addEventListener("click",()=>{
+ const rows=[["Technique","Items","Correct","Seconds","Effort","Attempt","Review due"],...records.map(r=>[r.mode,r.total,r.correct,r.seconds.toFixed(1),r.effort,r.date,new Date(r.due).toISOString()])];
+ const data=rows.map(row=>row.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(",")).join("\r\n");
+ const url=URL.createObjectURL(new Blob([data],{type:"text/csv"}));const a=document.createElement("a");a.href=url;a.download="memory-studio.csv";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+choose(0);history();
+document.querySelectorAll(".gallery").forEach(gallery=>{
+ const figures=Array.from(gallery.querySelectorAll("figure"));if(figures.length<2)return;
+ gallery.classList.add("carousel");let index=0,timer=null;
+ const controls=document.createElement("div");controls.className="carousel-controls";
+ const status=document.createElement("span");status.setAttribute("aria-live","polite");
+ function show(n){index=(n+figures.length)%figures.length;figures.forEach((f,i)=>f.hidden=i!==index);status.textContent=(index+1)+" / "+figures.length;}
+ function button(label,action){const b=document.createElement("button");b.type="button";b.textContent=label;b.addEventListener("click",action);controls.append(b);return b;}
+ const pause=button("Play · 8 seconds",()=>{if(timer){clearInterval(timer);timer=null;pause.textContent="Play · 8 seconds";}else{timer=setInterval(()=>show(index+1),8000);pause.textContent="Pause";}});
+ button("Previous",()=>show(index-1));button("Next",()=>show(index+1));controls.append(status);gallery.before(controls);show(0);
+ const reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ if(!reduce&&gallery.closest("#research-context, #brain-methods"))pause.click();
+ gallery.addEventListener("focusin",()=>{if(timer){clearInterval(timer);timer=null;pause.textContent="Play · 8 seconds";}});
+});
+})();
