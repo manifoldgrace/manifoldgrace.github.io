@@ -1007,11 +1007,11 @@ body>header,body>main,body>footer{position:relative;z-index:1}
 .nav-links a.nav-research-feature,
 .nav-links a.nav-research-feature:visited{
   background:#fff !important;color:#111 !important;border:1px solid #fff;
-  border-radius:3px;padding:8px 14px;font-weight:700;letter-spacing:.005em;
+  border-radius:3px;padding:4px 10px;font-size:.84rem;line-height:1.55;font-weight:650;letter-spacing:0;
   display:inline-flex;align-items:center;white-space:nowrap;text-decoration:none;
   box-shadow:none;transition:border-color .18s ease,transform .18s ease;
 }
-.nav-links a.nav-research-feature:hover{background:#f2f0eb !important;color:#111 !important;transform:translateY(-1px)}
+.nav-links a.nav-research-feature:hover{background:#f2f0eb !important;color:#111 !important;transform:none}
 .nav-links a.nav-research-feature[aria-current="page"]{outline:2px solid #dbb66d;outline-offset:2px}
 .nav-links a.nav-research-feature:focus-visible{outline:3px solid #8ac5ff;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.nav-links a.nav-research-feature{transition:none}}
