@@ -7,6 +7,55 @@
   <meta name="description" content="Forty interdisciplinary domains with nested study levels and scrollable syllabus maps.">
   <meta name="author" content="Grace">
   <link rel="stylesheet" href="style.css">
+
+<style id="knowledge-domain-expansion-v2">
+.topics12-page .topics12-rail{max-height:calc(100vh - 124px);overflow:auto;overscroll-behavior:contain}
+.topics12-page .topics12-rail nav{gap:5px}
+.topics12-page .topics12-rail a{padding:5px 0;font-size:.82rem}
+.topics12-page .topics12-domain{display:block;padding:0!important;margin:0;border-bottom:1px solid #343633;scroll-margin-top:105px}
+.topics12-page .topics12-domain-toggle{display:block;cursor:pointer;list-style:none;padding:15px 10px;border:1px solid transparent}
+.topics12-page .topics12-domain-toggle::-webkit-details-marker{display:none}
+.topics12-page .topics12-domain-toggle:focus-visible,.topics12-page button:focus-visible,.topics12-page .domain-topic-panel summary:focus-visible{outline:3px solid #9fcaff;outline-offset:2px}
+.topics12-page .topics12-domain-toggle:hover{background:#171918;border-color:#444}
+.topics12-page .topics12-domain[open]>.topics12-domain-toggle{border-color:#6a6353;background:#111614}
+.topics12-page .topics12-domain-toggle .topics12-domain-head{margin:0;align-items:center;gap:12px}
+.topics12-page .topics12-domain-toggle .topics12-domain-head>span{font-size:2rem;line-height:1;color:#bcaa87;min-width:52px}
+.topics12-page .topics12-domain-toggle .topics12-domain-head h2{font-size:clamp(1.12rem,1.7vw,1.5rem);line-height:1.3}
+.topics12-page .topics12-domain-toggle .topics12-domain-head small{font-size:.59rem}
+.topics12-page .topics12-domain-toggle:after{content:"+";float:right;font-size:1.25rem;color:#d5cfc1;margin-top:-32px;margin-right:7px}
+.topics12-page .topics12-domain[open]>.topics12-domain-toggle:after{content:"−"}
+.topics12-page .syllabus-carousel{padding:10px 4px 18px;grid-auto-columns:minmax(235px,295px)}
+.topics12-page .syllabus-card{aspect-ratio:auto;min-height:225px;padding:19px;cursor:pointer;transition:border-color .18s ease,transform .18s ease;background:#141716}
+.topics12-page .syllabus-card:hover,.topics12-page .syllabus-card[aria-pressed="true"]{border-color:#d3be8c;transform:translateY(-2px)}
+.topics12-page .syllabus-card[aria-pressed="true"]{outline:2px solid #c4a873;outline-offset:-2px}
+.topics12-page .syllabus-card .syllabus-number{font-size:2.9rem;color:#b5a888}
+.topics12-page .syllabus-card small{color:#b8b2a6}
+.topics12-page .syllabus-card h3{color:#f1e9d8}
+.topics12-page .syllabus-card p{color:#d1cec6}
+.topics12-page .knowledge-controls{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin:12px 2px 0}
+.topics12-page .knowledge-controls span{color:#c9c5bc;font-size:.75rem;margin-right:auto}
+.topics12-page .knowledge-arrow{border:1px solid #73726d;border-radius:99px;background:#171918;color:#fff;min-width:39px;min-height:39px;font-size:1.16rem;cursor:pointer}
+.topics12-page .knowledge-arrow:hover{border-color:#dfc995}
+.topics12-page .domain-topic-panel{border:1px solid #706557;background:#121817;padding:clamp(16px,2.5vw,27px);margin:14px 3px 25px}
+.topics12-page .domain-topic-panel[hidden]{display:none}
+.topics12-page .domain-topic-panel h3{color:#f5ebd5;margin:0 0 7px;font:400 clamp(1.35rem,2.5vw,1.95rem)/1.2 Georgia,serif}
+.topics12-page .domain-topic-panel p{color:#c9c7c0}
+.topics12-page .topic-level{margin:10px 0;border:1px solid #46504c;background:#181d1c;padding:0 12px}
+.topics12-page .topic-level>summary{padding:12px 0;cursor:pointer;font-weight:650;color:#ece8de;list-style:disclosure-closed}
+.topics12-page .topic-level[open]>summary{list-style:disclosure-open}
+.topics12-page .topic-level ul{margin:0 0 17px;padding-left:24px}
+.topics12-page .topic-level li{color:#e2ded5;font-size:.9rem;margin:4px 0}
+.topics12-page .topic-level .topic-nested{margin:8px 0 15px;border-left:2px solid #a8b9af;padding-left:12px}
+.topics12-page .topic-nested>summary{cursor:pointer;color:#a7cfef}
+.topics12-page .topic-nested p{margin:7px 0 12px;font-size:.85rem;line-height:1.6}
+.topics12-page .knowledge-search{display:block;width:100%;background:#141918;border:1px solid #777;color:#fff;padding:13px 15px;border-radius:3px;margin:13px 0 10px;max-width:700px;font:inherit}
+.topics12-page .knowledge-search::placeholder{color:#bfbdb5}
+.topics12-page .knowledge-count{color:#d5cec0;font-size:.82rem}
+.topics12-page .knowledge-notfound[hidden]{display:none}
+@media(max-width:900px){.topics12-page .topics12-rail{max-height:none;overflow-x:auto;overflow-y:hidden}.topics12-page .topics12-rail nav{gap:10px}.topics12-page .topics12-rail a{padding:8px 10px}.topics12-page .topics12-shell{gap:10px}}
+@media(max-width:760px){.topics12-page .syllabus-carousel{grid-auto-columns:76vw}.topics12-page .topics12-domain-toggle .topics12-domain-head>span{font-size:1.5rem;min-width:37px}.topics12-page .topics12-domain-toggle .topics12-domain-head h2{font-size:1.15rem}.topics12-page .topics12-domain-toggle:after{margin-top:-27px}.topics12-page .topic-level{padding:0 9px}}
+@media(prefers-reduced-motion:reduce){.topics12-page .syllabus-card{transition:none}}
+</style>
   <script src="site-config.js" defer></script>
   <script src="site-shell.js" defer></script>
 </head>
@@ -68,7 +117,7 @@
     </aside>
 
     <div class="topics12-content">
-      <div class="topics12-intro">
+      <div class="topics12-intro"><label for="knowledgeSearch" class="status" style="display:block;width:max-content">⌕ SEARCH KNOWLEDGE DOMAINS</label><input class="knowledge-search" id="knowledgeSearch" type="search" placeholder="Find a discipline, concept or method" autocomplete="off"><p class="knowledge-count" id="knowledgeCount" role="status" aria-live="polite">40 domains · 484 topics</p><p class="knowledge-notfound" id="knowledgeNotFound" hidden>No match in this catalogue. <a href="research-collaborations.html">Explore or suggest a research category ↗</a></p>
         <span class="status">HOW TO READ THIS</span>
         <p>Forty disciplines and 484 syllabus topics form an extensible map, not a claim of final completeness. Open a field, swipe its topic cards and select a topic for deeper concepts, methods, evidence, alternative perspectives and research questions.</p>
       </div>
@@ -222,5 +271,70 @@
 </main>
 
 <footer><div class="wrap" data-site-footer></div></footer>
+
+<script>
+(()=>{
+"use strict";
+const domainProfiles=["Interviews, social surveys and social-network analysis|Census statistics, ethnography and institutional records|Class, race, gender, locality and historical comparison|How do institutions and social structures shape outcomes?","Comparative institutional analysis, policy tracing and electoral research|Legislation, manifestos, official records and polling|Parties, ideologies, jurisdictions and levels of government|Who holds power, and how is public accountability established?","Economic modelling, econometrics and historical comparison|National accounts, prices, employment and household data|Distribution, incentives, institutions and market failure|Which assumptions explain the observed economic outcome?","Experimental design, psychological measurement and longitudinal studies|Validated scales, behavioural observations and peer-reviewed studies|Development, cultural context, individual variation and bias|How reliable and transferable is the observed psychological effect?","Ethnography, participant observation and oral-history methods|Fieldnotes, interviews, artefacts and community testimony|Kinship, colonial legacies, power and reflexivity|Whose account shapes the interpretation of culture?","Spatial analysis, GIS, mapping and place-based fieldwork|Census geography, environmental data and archives|Scale, time, migration, inequalities and accessibility|How do location and spatial boundaries change the finding?","Comparative social-policy research and service evaluation|Eligibility rules, official data and service-user evidence|Equity, legal duties, cost, access and unintended consequences|Who benefits from a policy and who is excluded?","Case comparison, crime statistics and socio-legal analysis|Court records, police data and victimisation surveys|Institutional bias, harm, due process and prevention|How should risks of misclassification and under-reporting be treated?","Treaty analysis, comparative geopolitics and historical process tracing|International agreements, diplomacy and multilateral datasets|Security, sovereignty, cooperation and power|How do competing national and international interests interact?","Classroom observation, learning evaluation and policy research|Curricula, assessment records and learner testimony|Accessibility, age, institution, social context and equity|Which educational outcomes are genuinely measured?","Doctrinal analysis, jurisprudence and socio-legal research|Statutes, case law, decisions and administrative files|Jurisdiction, legal rights, procedural fairness and enforcement|What remedy or accountability route follows a legal breach?","Qualitative, quantitative, comparative and mixed methods|Sampling frames, original sources, protocols and coding logs|Validity, positionality, bias, reproducibility and ethics|Would an independent researcher reach a comparable conclusion?","Argument reconstruction, conceptual analysis and thought experiments|Primary philosophical texts, formal arguments and scholarly critique|Tradition, counterexamples, logic and conceptual precision|What makes the proposition justified or defeasible?","Source criticism, chronology and archival comparison|Letters, newspapers, censuses, archives and oral histories|Periodisation, memory, power and alternative interpretations|How does provenance change the historical narrative?","Algorithmic analysis, software testing and system design|Source code, specifications, benchmarks and reproducible logs|Correctness, complexity, usability, security and reliability|Does the system behave correctly under failure and misuse?","Model evaluation, experimental benchmarks and audit design|Training data documentation, metrics, error analyses and model cards|Robustness, fairness, human oversight and real-world deployment|What can this model reliably do and where does it fail?","Proof, abstraction, symbolic manipulation and numerical reasoning|Theorems, worked examples, formal proofs and simulations|Assumptions, limiting cases, generalisation and error|Can every inference be justified from stated assumptions?","Statistical estimation, study design and reproducible computation|Datasets, code, confidence intervals and diagnostic plots|Sampling bias, causality, missing data and uncertainty|What findings survive reasonable alternative assumptions?","Organisational case studies, process mapping and strategy analysis|Business records, operational KPIs and stakeholder interviews|Governance, people, markets and implementation|How do strategy and incentives affect measurable performance?","Financial modelling, accounting analysis and audit methods|Financial statements, transactions, market data and regulations|Disclosure, solvency, risk, incentives and consumer rights|What uncertainty or accounting choice changes the conclusion?","Statutory interpretation, regulatory impact and comparative cases|Legislation, guidance, enforcement decisions and court records|Rights, compliance burden, jurisdiction and remedy|Are obligations clear, proportionate and enforceable?","Content analysis, audience research and media production methods|Editorial archives, broadcasts, user analytics and source logs|Representation, provenance, persuasion and platforms|How does media framing affect interpretation and trust?","Exegesis, historical theology and comparative textual analysis|Sacred texts, translations, creeds and academic commentaries|Tradition, genre, context and denominational interpretation|How do distinct interpretive assumptions change conclusions?","Field sampling, environmental modelling and lab measurement|Species surveys, climate datasets, soil and water measurements|Ecological scale, uncertainty, stewardship and environmental justice|What is the long-term environmental consequence?","Laboratory experiments, sequence analysis and biological modelling|Microscopy, genomic data, clinical observations and specimens|Mechanisms, evolution, reproducibility and biosafety|Are the biological results independently reproducible?","Chemical synthesis, spectroscopy and controlled laboratory tests|Reaction data, spectra, calibration and material characterisation|Scale, hazards, energy use and sustainability|Do measurements support the proposed chemical mechanism?","Theoretical derivation, simulation and observation|Instrument readings, imaging, experimental runs and telescope data|Scale, measurement uncertainty and competing models|Which observation discriminates rival physical explanations?","Clinical research, epidemiology and quality improvement|Trial registries, health records, outcomes and guidelines|Patient consent, health inequalities, validity and safety|What evidence supports clinical benefit without disproportionate harm?","Requirements analysis, modelling, prototyping and verification|Technical drawings, test reports, standards and operational logs|Safety, lifecycle cost, maintainability and risk|Does a design meet requirements under real operating conditions?","Architectural observation, urban mapping and participatory design|Plans, building surveys, usage data and heritage records|Accessibility, ecology, culture, materials and regulation|How does the built environment perform for its actual users?","Agronomic trials, soil testing and seasonal observation|Crop records, soil analyses, yield data and weather|Food security, ecological trade-offs and land stewardship|Which methods are sustainable and transferable to growers?","Geological fieldwork, remote sensing and system modelling|Maps, cores, satellite imagery, seismic and climate records|Deep time, uncertainty, hazard and planetary boundaries|How sensitive is the finding to location, time and measurement?","Corpus analysis, phonetic study and translation comparison|Audio recordings, grammars, dictionaries and annotated text|Register, dialect, social power and cultural setting|Does the interpretation preserve the source language and context?","Close reading, comparative criticism and editorial practice|Primary texts, manuscripts, editions and literary archives|Voice, form, genre, reception and cultural history|Which textual features support the proposed reading?","Visual analysis, design research and creative experimentation|Sketchbooks, works, technical images and audience feedback|Authorship, accessibility, technique and representation|What makes a design effective, ethical and contextually appropriate?","Score analysis, transcription, performance research and aural study|Scores, recordings, rehearsals and interviews|Historical tradition, musical form, technique and context|How can a musical claim be demonstrated through listening and analysis?","Oral history, cross-border archives and interdisciplinary analysis|Family papers, public records, interviews and material heritage|Decoloniality, migration, kinship and source provenance|Which links are documented and which remain open questions?","Excavation, survey, stratigraphy and heritage science|Artefacts, field notes, conservation files and site records|Dating, ethics, ownership and interpretation|Can provenance and context substantiate the heritage claim?","Metadata analysis, information retrieval and archival appraisal|Catalogues, records, citations, taxonomies and preservation logs|Discoverability, provenance, ethics and knowledge access|Can another reader trace the source and reproduce the retrieval?","Performance testing, coaching observation and sports sociology|Training records, movement video, surveys and competition data|Athlete consent, safeguarding, fairness and accessibility|How does measurement improve participation and outcomes responsibly?"];
+const domains=[...document.querySelectorAll(".topics12-domain")];
+const search=document.getElementById("knowledgeSearch"),count=document.getElementById("knowledgeCount"),none=document.getElementById("knowledgeNotFound");
+const motion=()=>window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth";
+const make=(tag,className,txt)=>{let x=document.createElement(tag);if(className)x.className=className;if(txt!==undefined)x.textContent=txt;return x};
+function facet(label,items,open=false){const det=make("details","topic-level");if(open)det.open=true;det.append(make("summary","",label));const ul=make("ul");for(const item of items){if(!item)continue;ul.append(make("li","",item));}det.append(ul);return det;}
+function buildPanel(domain,card){
+ const title=card.querySelector("h3")?.textContent||"Topic";
+ const description=(card.querySelector("p")?.textContent||"").replace(/\.$/,"");
+ const name=domain.querySelector("h2")?.textContent||"Knowledge domain";
+ const id=Number(domain.id.split("-").pop());
+ const [methods,evidence,perspectives,question]=domainProfiles[id-1].split("|");
+ const panel=domain.querySelector(".domain-topic-panel"),heading=make("h3","",title),intro=make("p","",description+".");
+ panel.replaceChildren(make("small","status",name+" / DEEPER STUDY"),heading,intro);
+ let conceptTerms=description.split(/,|;|\s+and\s+/i).map(x=>x.trim()).filter(Boolean).slice(0,7);
+ const root=facet("01 · Key concepts and subdisciplines",conceptTerms,true);
+ for(const term of conceptTerms){let d=make("details","topic-nested");d.append(make("summary","",term),make("p","","Trace the definition, historical development, relevant theories, mechanisms and important exceptions for “"+term+"” within "+title+"."));root.append(d);}
+ panel.append(root,facet("02 · Theories, perspectives and comparison",[perspectives,"Compare competing explanations for "+title+".","Check which definitions, historical periods and jurisdictions change the interpretation."]),
+ facet("03 · Methods and research design",[methods,"Choose an appropriate method for "+title+"; justify sampling, comparison and evaluation criteria."]),
+ facet("04 · Evidence, sources and provenance",[evidence,"Record original authors, source curators and dates; distinguish direct evidence, inference and unverified claims.","Identify missing observations, conflicts and measurement limitations."]),
+ facet("05 · Applications, critique and open questions",[question,"Test alternative mechanisms and unintended consequences.","Specify a falsifiable, comparable or otherwise defensible research question for "+title+"."]));
+ const footer=make("p","knowledge-count","Further levels remain expandable as new disciplines, research methods and original sources are mapped.");panel.append(footer);
+ panel.hidden=false;
+ for(const btn of domain.querySelectorAll(".syllabus-card"))btn.setAttribute("aria-pressed",String(btn===card));
+ panel.scrollIntoView({behavior:motion(),block:"nearest"});
+}
+domains.forEach((domain,index)=>{
+ const carousel=domain.querySelector(".syllabus-carousel"),cards=[...domain.querySelectorAll(".syllabus-card")];
+ const control=make("div","knowledge-controls"),info=make("span","",cards.length+" syllabus areas · swipe or use arrows");
+ const prev=make("button","knowledge-arrow","←"),next=make("button","knowledge-arrow","→");
+ prev.type=next.type="button";prev.setAttribute("aria-label","Previous "+domain.querySelector("h2").textContent+" topic");next.setAttribute("aria-label","Next "+domain.querySelector("h2").textContent+" topic");
+ prev.onclick=()=>carousel.scrollBy({left:-carousel.clientWidth*.75,behavior:motion()});
+ next.onclick=()=>carousel.scrollBy({left:carousel.clientWidth*.75,behavior:motion()});
+ control.append(info,prev,next);
+ carousel.before(control);
+ const panel=make("section","domain-topic-panel");panel.hidden=true;panel.id="topic-panel-"+index;panel.setAttribute("aria-live","polite");carousel.after(panel);
+ for(const card of cards){card.setAttribute("tabindex","0");card.setAttribute("role","button");card.setAttribute("aria-expanded","false");card.setAttribute("aria-controls",panel.id);
+  card.addEventListener("click",()=>{const open=card.getAttribute("aria-expanded")==="true";
+   for(const other of cards){other.setAttribute("aria-expanded","false");other.setAttribute("aria-pressed","false");}
+   if(open){panel.hidden=true;return;}
+   card.setAttribute("aria-expanded","true");buildPanel(domain,card);});
+  card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();card.click();}});
+ }
+});
+document.querySelectorAll(".topics12-rail a[href^='#domain-']").forEach(a=>a.addEventListener("click",()=>{
+ const d=document.getElementById(a.hash.slice(1));if(d)d.open=true;
+}));
+function filter(){const q=search.value.trim().toLocaleLowerCase();let visibleDomains=0,visibleTopics=0;
+ for(const domain of domains){const name=domain.querySelector("h2").textContent.toLocaleLowerCase();const nameMatch=name.includes(q),cards=[...domain.querySelectorAll(".syllabus-card")];let matched=0;
+ for(const card of cards){const match=!q||nameMatch||card.textContent.toLocaleLowerCase().includes(q);card.hidden=!match;if(match)matched++;}
+ domain.hidden=matched===0;
+ if(matched){visibleDomains++;visibleTopics+=matched;if(q)domain.open=true;}
+ }
+ count.textContent=visibleDomains+" domains · "+visibleTopics+" topics";none.hidden=visibleDomains!==0;
+ if(q&&visibleDomains===0){none.querySelector("a").href="research-collaborations.html?q="+encodeURIComponent(q);}
+}
+search.addEventListener("input",filter);
+const hash=window.location.hash.slice(1);if(hash&&hash.startsWith("domain-")){const d=document.getElementById(hash);if(d)d.open=true;}
+domains[0].open=true;filter();
+})();
+</script>
 </body>
 </html>
