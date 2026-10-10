@@ -1023,3 +1023,16 @@ html,body,body>header,body>footer,main,main>section{
   background-image:none!important;
 }
 body::before,body::after{background:none!important}
+
+/* White brand and main navigation labels, preserved in place. */
+body>header .brand,
+body>header [data-site-nav] a,
+body>header [data-site-nav] a:visited,
+body>header [data-site-nav] a:hover,
+body>header [data-site-nav] a:focus,
+body>header [data-site-nav] a:active,
+body>header [data-site-nav] a.nav-research-feature,
+body>header [data-site-nav] a.nav-research-feature:visited,
+body>header [data-site-nav] a.nav-research-feature:hover{
+  color:#ffffff!important;
+}
