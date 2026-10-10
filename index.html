@@ -135,7 +135,7 @@ document.querySelectorAll('.experience-reel').forEach(reel=>{
  cards.forEach(card=>{const start=card.offsetLeft-origin,end=start+card.offsetWidth;const whole=start>=left-1&&end<=right+1&&(innerWidth<1000||shown<7);if(whole)shown++;card.style.visibility=whole?'visible':'hidden';card.setAttribute('aria-hidden',String(!whole))});}
  reel.addEventListener('scroll',showWholeCards,{passive:true});new ResizeObserver(showWholeCards).observe(reel);showWholeCards();
  function frame(now){const delta=last?Math.min(now-last,60):0;last=now;
- if(!paused&&!hover&&!document.hidden){const max=reel.scrollWidth-reel.clientWidth;position=Math.max(0,Math.min(max,position+direction*delta*.28));if(position>=max)direction=-1;if(position<=0)direction=1;reel.scrollLeft=position}
+ if(!paused&&!hover&&!document.hidden){const max=reel.scrollWidth-reel.clientWidth;position=Math.max(0,Math.min(max,position+direction*delta*.1));if(position>=max)direction=-1;if(position<=0)direction=1;reel.scrollLeft=position}
  showWholeCards();requestAnimationFrame(frame)}requestAnimationFrame(frame);
 })})();
 </script></body></html>
