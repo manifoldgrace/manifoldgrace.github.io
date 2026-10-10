@@ -1015,3 +1015,11 @@ body>header,body>main,body>footer{position:relative;z-index:1}
 .nav-links a.nav-research-feature[aria-current="page"]{outline:2px solid #dbb66d;outline-offset:2px}
 .nav-links a.nav-research-feature:focus-visible{outline:3px solid #8ac5ff;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.nav-links a.nav-research-feature{transition:none}}
+
+/* White page backgrounds. Text and foreground colours are unchanged. */
+:root{--bg:#ffffff;--panel:#ffffff}
+html,body,body>header,body>footer,main,main>section{
+  background-color:#ffffff!important;
+  background-image:none!important;
+}
+body::before,body::after{background:none!important}
