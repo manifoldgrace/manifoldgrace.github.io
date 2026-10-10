@@ -16,6 +16,34 @@
       "angle": "Evaluation, interpretability and experimental evidence"
     },
     {
+      "name": "OpenAI",
+      "group": "Frontier research",
+      "lane": "Applied AI / research engineering",
+      "url": "https://openai.com/careers/",
+      "angle": "Model evaluation, applied research systems and trustworthy AI deployment"
+    },
+    {
+      "name": "Meta AI",
+      "group": "Frontier research",
+      "lane": "ML infrastructure / research engineering",
+      "url": "https://www.metacareers.com/",
+      "angle": "Large-scale ML systems, experimentation and privacy-aware evaluation"
+    },
+    {
+      "name": "Apple",
+      "group": "Frontier research",
+      "lane": "ML engineering / applied research",
+      "url": "https://www.apple.com/careers/uk/",
+      "angle": "On-device ML, accessible products and evaluation reproducibility"
+    },
+    {
+      "name": "Salesforce",
+      "group": "Frontier research",
+      "lane": "AI platform / research engineering",
+      "url": "https://careers.salesforce.com/en/",
+      "angle": "Enterprise agents, data governance and applied AI evaluation"
+    },
+    {
       "name": "Microsoft Research",
       "group": "Research & infrastructure",
       "lane": "Research engineering",
@@ -44,6 +72,90 @@
       "angle": "AI foundations and governance evidence"
     },
     {
+      "name": "Arm",
+      "group": "Research & infrastructure",
+      "lane": "Systems / platform engineering",
+      "url": "https://careers.arm.com/en/search-jobs",
+      "angle": "Compute architecture, performance evaluation and infrastructure"
+    },
+    {
+      "name": "Databricks",
+      "group": "Research & infrastructure",
+      "lane": "ML platform / solutions engineering",
+      "url": "https://www.databricks.com/company/careers/open-positions",
+      "angle": "Data pipelines, ML operations and reproducibility"
+    },
+    {
+      "name": "Cloudflare",
+      "group": "Research & infrastructure",
+      "lane": "Cloud / edge platform engineering",
+      "url": "https://www.cloudflare.com/careers/",
+      "angle": "Edge reliability, security and low-latency observability"
+    },
+    {
+      "name": "Snowflake",
+      "group": "Research & infrastructure",
+      "lane": "Data infrastructure / platform engineering",
+      "url": "https://careers.snowflake.com/",
+      "angle": "Data governance, scalable pipelines and engineering reliability"
+    },
+    {
+      "name": "Red Hat",
+      "group": "Research & infrastructure",
+      "lane": "Cloud / open-source platform engineering",
+      "url": "https://www.redhat.com/en/jobs",
+      "angle": "Linux, containers, orchestration and platform operations"
+    },
+    {
+      "name": "Canonical",
+      "group": "Research & infrastructure",
+      "lane": "Linux / DevOps / cloud engineering",
+      "url": "https://canonical.com/careers",
+      "angle": "Automation, Ubuntu infrastructure and cloud operations"
+    },
+    {
+      "name": "Elastic",
+      "group": "Research & infrastructure",
+      "lane": "Search / observability engineering",
+      "url": "https://jobs.elastic.co/",
+      "angle": "Logs, monitoring, search pipelines and incident response"
+    },
+    {
+      "name": "MongoDB",
+      "group": "Research & infrastructure",
+      "lane": "Database / solutions engineering",
+      "url": "https://www.mongodb.com/company/careers",
+      "angle": "Data modelling, platform reliability and application architecture"
+    },
+    {
+      "name": "Palantir",
+      "group": "Research & infrastructure",
+      "lane": "Forward-deployed / platform engineering",
+      "url": "https://www.palantir.com/careers/",
+      "angle": "Operational data integration, governance and systems delivery"
+    },
+    {
+      "name": "Oracle",
+      "group": "Research & infrastructure",
+      "lane": "Cloud infrastructure / systems engineering",
+      "url": "https://www.oracle.com/uk/careers/",
+      "angle": "Enterprise platforms, networking and database performance"
+    },
+    {
+      "name": "Cisco",
+      "group": "Research & infrastructure",
+      "lane": "Network / collaboration / cloud engineering",
+      "url": "https://jobs.cisco.com/",
+      "angle": "Networks, video systems, enterprise AV and automation"
+    },
+    {
+      "name": "GitLab",
+      "group": "Research & infrastructure",
+      "lane": "DevOps platform / developer tooling",
+      "url": "https://about.gitlab.com/jobs/",
+      "angle": "CI/CD, security reviews and developer experience"
+    },
+    {
       "name": "Capgemini",
       "group": "Consulting & delivery",
       "lane": "Solution architecture",
@@ -51,11 +163,109 @@
       "angle": "Architecture decisions and live-service ownership"
     },
     {
+      "name": "Accenture",
+      "group": "Consulting & delivery",
+      "lane": "Cloud / AI consulting",
+      "url": "https://www.accenture.com/gb-en/careers",
+      "angle": "Cloud transformation, ethical AI delivery and client outcomes"
+    },
+    {
+      "name": "Deloitte",
+      "group": "Consulting & delivery",
+      "lane": "Technology transformation / AI assurance",
+      "url": "https://www.deloitte.com/uk/en/careers.html",
+      "angle": "Governance, risk and enterprise change evidence"
+    },
+    {
+      "name": "EY",
+      "group": "Consulting & delivery",
+      "lane": "Technology consulting / AI governance",
+      "url": "https://www.ey.com/en_uk/careers",
+      "angle": "Trust, auditability and enterprise controls"
+    },
+    {
+      "name": "PwC",
+      "group": "Consulting & delivery",
+      "lane": "Cloud / data / responsible AI consulting",
+      "url": "https://www.pwc.co.uk/careers.html",
+      "angle": "Assurance, architecture and cross-sector delivery"
+    },
+    {
+      "name": "KPMG",
+      "group": "Consulting & delivery",
+      "lane": "AI governance / technology risk consulting",
+      "url": "https://www.kpmgcareers.co.uk/",
+      "angle": "Responsible AI controls, compliance and assessments"
+    },
+    {
+      "name": "Thoughtworks",
+      "group": "Consulting & delivery",
+      "lane": "Software / platform engineering",
+      "url": "https://www.thoughtworks.com/careers",
+      "angle": "Engineering practices, inclusive design and architecture"
+    },
+    {
+      "name": "PA Consulting",
+      "group": "Consulting & delivery",
+      "lane": "Digital innovation / public-sector delivery",
+      "url": "https://www.paconsulting.com/careers",
+      "angle": "Service redesign, evidence and institutional outcomes"
+    },
+    {
+      "name": "CGI",
+      "group": "Consulting & delivery",
+      "lane": "Cloud / DevOps / service delivery",
+      "url": "https://www.cgi.com/uk/en-gb/careers",
+      "angle": "Public-sector and enterprise service resilience"
+    },
+    {
+      "name": "BJSS",
+      "group": "Consulting & delivery",
+      "lane": "Cloud / software engineering",
+      "url": "https://www.bjss.com/careers",
+      "angle": "Cloud delivery, automation and multidisciplinary engineering"
+    },
+    {
+      "name": "Slalom",
+      "group": "Consulting & delivery",
+      "lane": "Cloud / data / solution consulting",
+      "url": "https://www.slalom.com/careers",
+      "angle": "Client-centred transformation and applied analytics"
+    },
+    {
+      "name": "NTT DATA",
+      "group": "Consulting & delivery",
+      "lane": "Infrastructure / cloud transformation",
+      "url": "https://uk.nttdata.com/careers",
+      "angle": "Enterprise migration, network operations and governance"
+    },
+    {
       "name": "G-Research",
       "group": "Quantitative research",
       "lane": "Research / ML engineering",
       "url": "https://www.gresearch.com/vacancies/",
       "angle": "Reproducible quantitative experiments and performance"
+    },
+    {
+      "name": "XTX Markets",
+      "group": "Quantitative research",
+      "lane": "Research engineering / low-latency systems",
+      "url": "https://about.xtxmarkets.com/careers/",
+      "angle": "Quantitative experimentation and latency-aware infrastructure"
+    },
+    {
+      "name": "Man Group",
+      "group": "Quantitative research",
+      "lane": "Data / quantitative platform engineering",
+      "url": "https://www.man.com/careers",
+      "angle": "Research data pipelines, reproducibility and operational controls"
+    },
+    {
+      "name": "Qube Research & Technologies",
+      "group": "Quantitative research",
+      "lane": "Cloud / platform / research engineering",
+      "url": "https://www.qube-rt.com/careers/",
+      "angle": "Data-intensive systems and reproducible technical research"
     },
     {
       "name": "Mistral AI",
@@ -112,6 +322,34 @@
       "lane": "Audio research engineering",
       "url": "https://elevenlabs.io/careers",
       "angle": "Speech evaluation, multilingual coverage and misuse controls"
+    },
+    {
+      "name": "Faculty",
+      "group": "Growth-company watch",
+      "lane": "Applied AI / solutions engineering",
+      "url": "https://faculty.ai/en-gb/join-the-team",
+      "angle": "Responsible deployment, public-sector use and model evaluation"
+    },
+    {
+      "name": "Darktrace",
+      "group": "Growth-company watch",
+      "lane": "Software / AI cybersecurity",
+      "url": "https://www.darktrace.com/careers",
+      "angle": "Defensive cyber analytics, monitoring and model assurance"
+    },
+    {
+      "name": "Quantexa",
+      "group": "Growth-company watch",
+      "lane": "Data engineering / decision intelligence",
+      "url": "https://www.quantexa.com/careers/start-with-us/",
+      "angle": "Entity resolution, decision systems and data provenance"
+    },
+    {
+      "name": "PhysicsX",
+      "group": "Growth-company watch",
+      "lane": "Applied ML / simulation engineering",
+      "url": "https://www.physicsx.ai/about",
+      "angle": "Scientific AI, engineering simulation and reproducibility"
     }
   ],
   "papers": [
@@ -185,7 +423,7 @@
       "quote": "Unlocking scalable advantage",
       "fact": "Examines strategies for scaling enterprise AI responsibly and effectively.",
       "question": "What would turn a pilot into measurable recurring business value?",
-      "limit": "Consultancy survey evidence is not an audited forecast of any company\u2019s revenue."
+      "limit": "Consultancy survey evidence is not an audited forecast of any company’s revenue."
     },
     {
       "id": "rag",
@@ -209,7 +447,8 @@
       "quote": "candidates lacking work experience",
       "fact": "Reports employer skills gaps, recruitment difficulties and adoption intentions.",
       "question": "What evidence of experience would address the reported hiring barriers?",
-      "limit": "Survey respondents are not the entire workforce; recommendations are G&T\u2019s views, not government policy."
+      "limit": "Survey respondents are not the entire workforce; recommendations are G&T’s views, not government policy."
     }
-  ]
+  ],
+  "companies_updated": "2026-10-10"
 }
