@@ -1082,7 +1082,7 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 /* Small aligned photographs, visible side by side within stacked sections. */
 .portfolio-slots .portfolio-slot{min-width:0;max-width:100%}
 .portfolio-slots .photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));max-width:100%;margin-inline:0;gap:16px;align-items:stretch}
-.portfolio-slots .photo-grid .media-item a{display:block;width:160px;max-width:100%;margin:12px auto}
+.portfolio-slots .photo-grid .media-item a{display:block;width:calc(100% - 24px);max-width:200px;margin:12px auto}
 .portfolio-slots .photo-grid .media-item img{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:auto;object-fit:contain;background:transparent}
 .portfolio-slots .photo-grid .media-item figcaption{padding:10px;font-size:.85rem}
 .portfolio-slots .photo-grid .media-item a:focus-visible{outline:2px solid #8fc4ff;outline-offset:3px}
@@ -1097,3 +1097,10 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 .portfolio-slots .headshot-top-row .media-item a,.portfolio-slots .headshot-studio-row .media-item a{max-width:calc(100% - 24px)}
 .portfolio-slots .headshot-afro-row{grid-template-columns:minmax(0,264px);max-width:264px}
 .portfolio-slots .headshot-afro-row .media-item a{width:240px;max-width:calc(100% - 24px)}
+
+/* Full-length photographs share the available width and keep complete proportions. */
+.portfolio-slots #photos-full-length{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;max-width:none}
+.portfolio-slots #photos-full-length .media-item{min-width:0}
+.portfolio-slots #photos-full-length .media-item a{width:100%;max-width:none;margin:0}
+.portfolio-slots #photos-full-length .media-item img{width:100%;height:auto}
+@media(max-width:340px){.portfolio-slots #photos-full-length{grid-template-columns:minmax(0,1fr)}}
