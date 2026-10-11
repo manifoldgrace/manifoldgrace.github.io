@@ -1104,3 +1104,7 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 .portfolio-slots #photos-full-length .media-item a{width:100%;max-width:none;margin:0}
 .portfolio-slots #photos-full-length .media-item img{width:100%;height:auto}
 @media(max-width:340px){.portfolio-slots #photos-full-length{grid-template-columns:minmax(0,1fr)}}
+
+/* Section 4 uses the same portrait framing for every preview. */
+.portfolio-slots #photos-three-quarter .media-item a{width:200px;max-width:calc(100% - 24px);aspect-ratio:4/5;overflow:hidden}
+.portfolio-slots #photos-three-quarter .media-item img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
