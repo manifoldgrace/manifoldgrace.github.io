@@ -3,3 +3,4 @@ window.AGENCY_PORTAL_CONFIG = Object.freeze({
   supabaseUrl: '',
   publishableKey: ''
 });
+

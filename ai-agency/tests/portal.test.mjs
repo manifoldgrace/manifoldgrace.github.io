@@ -31,3 +31,4 @@ test('database migration protects every table with ownership and MFA; audit is r
  assert.equal((sql.match(/'aal2'/g)||[]).length,5);
  assert.match(sql,/Workspace identity cannot change/);assert.match(sql,/Task identity cannot change/);
 });
+

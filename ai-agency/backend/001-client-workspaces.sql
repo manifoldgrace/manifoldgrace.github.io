@@ -69,3 +69,4 @@ end $$;
 create trigger agency_task_changes after insert or update on public.agency_tasks for each row execute function public.agency_task_audit();
 revoke all on function public.agency_business_audit(),public.agency_business_timestamp(),public.agency_task_audit() from public,anon,authenticated;
 commit;
+

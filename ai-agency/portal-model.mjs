@@ -18,3 +18,4 @@ export function connectionReady(config) {
     /^(sb_publishable_|eyJ)/.test(config.publishableKey));
 }
 export function mayOpenWorkspace(aal) { return aal === 'aal2'; }
+
