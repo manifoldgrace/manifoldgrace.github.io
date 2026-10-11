@@ -5,13 +5,11 @@
   const API_BASE = String(config.apiBase || "").replace(/\/$/, "");
   const MAX_DURATION = Number(config.maxDurationSeconds || 300);
   const MAX_BYTES = Number(config.maxBytes || 536870912);
-  const ALLOWED_EXTENSIONS = new Set(["mp4", "webm", "mov", "m4v", "ogv"]);
+  const ALLOWED_EXTENSIONS = new Set(["mp4", "mov", "m4v"]);
   const ALLOWED_MIME = new Set([
     "video/mp4",
-    "video/webm",
     "video/quicktime",
-    "video/x-m4v",
-    "video/ogg"
+    "video/x-m4v"
   ]);
 
   const $ = (id) => document.getElementById(id);
@@ -75,7 +73,7 @@
   async function preflightFile(file) {
     if (!file) throw new Error("Choose a video file first.");
     if (!fileTypeAllowed(file)) {
-      throw new Error("Use MP4, WebM, MOV/QuickTime, M4V or OGV video.");
+      throw new Error("Use MP4, MOV/QuickTime or M4V video.");
     }
     if (file.size <= 0) throw new Error("The selected file is empty.");
     if (file.size > MAX_BYTES) {
@@ -87,24 +85,6 @@
       throw new Error("This clip is longer than five minutes.");
     }
     return duration;
-  }
-
-  function xhrUpload(url, formData, onProgress) {
-    return new Promise((resolve, reject) => {
-      const xhr = new XMLHttpRequest();
-      xhr.open("POST", url, true);
-      xhr.responseType = "json";
-      xhr.upload.onprogress = (event) => {
-        if (event.lengthComputable) onProgress((event.loaded / event.total) * 100);
-      };
-      xhr.onerror = () => reject(new Error("The video upload connection failed."));
-      xhr.onload = () => {
-        const body = xhr.response || {};
-        if (xhr.status >= 200 && xhr.status < 300) resolve(body);
-        else reject(new Error(body.error?.message || body.error || "The media provider rejected the upload."));
-      };
-      xhr.send(formData);
-    });
   }
 
   async function api(path, options = {}) {
@@ -217,32 +197,7 @@
       };
       if (!metadata.title) throw new Error("Add a title for this clip.");
 
-      setStatus("Requesting a secure one-time upload signature…");
-      const signed = await api("/api/sign", {
-        method: "POST",
-        headers: { "Authorization": "Bearer " + uploadKey },
-        body: JSON.stringify(metadata)
-      });
-
-      const formData = new FormData();
-      formData.append("file", file);
-      Object.entries(signed.uploadParams).forEach(([key, value]) => formData.append(key, String(value)));
-      formData.append("api_key", signed.apiKey);
-      formData.append("signature", signed.signature);
-
-      setStatus("Uploading directly to secure media storage…");
-      const uploaded = await xhrUpload(
-        "https://api.cloudinary.com/v1_1/" + encodeURIComponent(signed.cloudName) + "/video/upload",
-        formData,
-        setProgress
-      );
-
-      setStatus("Validating duration, format and size on the server…");
-      await api("/api/validate", {
-        method: "POST",
-        headers: { "Authorization": "Bearer " + uploadKey },
-        body: JSON.stringify({ publicId: uploaded.public_id })
-      });
+      await window.ManifoldUpload.upload(file,"video",uploadKey,{...metadata,collection:"live-sessions"},setStatus,setProgress);
 
       setProgress(100);
       setStatus("Published successfully.");

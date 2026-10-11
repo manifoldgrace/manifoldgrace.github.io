@@ -11,8 +11,10 @@
   <script src="site-config.js" defer></script>
   <script src="site-shell.js" defer></script>
   
-  <script src="media-config.js" defer></script>
-  <script src="media-library.js" defer></script>
+  <script src="media-config.js?v=uploads-1" defer></script>
+  <script src="media-file-tools.js?v=1" defer></script>
+  <script src="media-upload-client.js?v=1" defer></script>
+  <script src="media-library.js?v=uploads-1" defer></script>
 </head>
 <body>
 <header><div class="wrap shell-head">
@@ -98,7 +100,7 @@ video.pause();
 <label>Private upload key<input name="upload_key" type="password" required autocomplete="off"></label>
 </div>
 <label>Context<textarea name="description" maxlength="500" rows="3"></textarea></label>
-<label>File<input type="file" accept="video/mp4,video/webm,video/quicktime,video/x-m4v,video/ogg,.mp4,.webm,.mov,.m4v,.ogv" required></label>
+<label>File<input type="file" accept="video/mp4,video/quicktime,video/x-m4v,.mp4,.mov,.m4v" required></label>
 <div class="progress-shell"><div class="progress-bar" data-upload-progress></div></div>
 <p class="notice" data-upload-status>Choose a file when you are ready.</p>
 <button class="button" type="submit">Upload securely</button>

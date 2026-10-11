@@ -1,14 +1,11 @@
+# Optional standalone Cloudflare deployment; production is deployed with Sites.
 name = "manifold-grace-media"
 main = "worker.js"
-compatibility_date = "2026-10-07"
+compatibility_date = "2026-10-11"
 
-[vars]
-ALLOWED_ORIGIN = "https://manifoldgrace.github.io"
-MEDIA_FOLDER = "manifold-grace"
-MAX_VIDEO_BYTES = "536870912"
-MAX_IMAGE_BYTES = "26214400"
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "YOUR_PRIVATE_MEDIA_BUCKET"
 
-# Add secrets outside source control:
-# wrangler secret put CLOUDINARY_API_SECRET
-# wrangler secret put UPLOAD_KEY
-# CLOUDINARY_CLOUD_NAME and CLOUDINARY_API_KEY may be configured as Worker variables.
+# Configure UPLOAD_KEY and OWNER_EMAIL as secrets outside source control.
+# The /owner route requires Sites authenticated identity headers.

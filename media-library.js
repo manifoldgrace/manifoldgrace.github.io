@@ -6,7 +6,7 @@
   const MAX_IMAGE_BYTES=Number(config.maxImageBytes||26214400);
   const MAX_DURATION=Number(config.maxDurationSeconds||300);
 
-  const VIDEO_EXT=new Set(["mp4","webm","mov","m4v","ogv"]);
+  const VIDEO_EXT=new Set(["mp4","mov","m4v"]);
   const IMAGE_EXT=new Set(["jpg","jpeg","png","webp","avif","heic","heif"]);
   const ext=(name)=>String(name||"").toLowerCase().split(".").pop();
 
@@ -43,7 +43,7 @@
     if(!file) throw new Error("Choose a file first.");
     const e=ext(file.name);
     if(type==="video"){
-      if(!VIDEO_EXT.has(e)) throw new Error("Use MP4, WebM, MOV, M4V or OGV video.");
+      if(!VIDEO_EXT.has(e)) throw new Error("Use MP4, MOV or M4V video.");
       if(file.size>MAX_VIDEO_BYTES) throw new Error("This video exceeds the configured upload-size limit.");
       const d=await durationOf(file);
       if(d!==null&&d>MAX_DURATION+0.25) throw new Error("This video is longer than five minutes.");
@@ -52,21 +52,6 @@
     if(!IMAGE_EXT.has(e)) throw new Error("Use JPG, PNG, WebP, AVIF, HEIC or HEIF image.");
     if(file.size>MAX_IMAGE_BYTES) throw new Error("This image exceeds the configured upload-size limit.");
     return null;
-  }
-
-  function directUpload(url,formData,onProgress){
-    return new Promise((resolve,reject)=>{
-      const xhr=new XMLHttpRequest();
-      xhr.open("POST",url,true); xhr.responseType="json";
-      xhr.upload.onprogress=(event)=>{if(event.lengthComputable)onProgress((event.loaded/event.total)*100);};
-      xhr.onerror=()=>reject(new Error("The media upload connection failed."));
-      xhr.onload=()=>{
-        const body=xhr.response||{};
-        if(xhr.status>=200&&xhr.status<300)resolve(body);
-        else reject(new Error(body.error?.message||body.error||"The media provider rejected the upload."));
-      };
-      xhr.send(formData);
-    });
   }
 
   function renderItem(item){
@@ -146,17 +131,7 @@
           recordedDate:form.querySelector('[name="recorded_date"]')?.value||"",
           description:form.querySelector('[name="description"]')?.value?.trim()||""
         };
-        setStatus("Requesting secure upload signature…");
-        const signed=await api("/api/sign",{method:"POST",headers:{"Authorization":"Bearer "+key},body:JSON.stringify(metadata)});
-        const fd=new FormData(); fd.append("file",file);
-        Object.entries(signed.uploadParams).forEach(([k,v])=>fd.append(k,String(v)));
-        fd.append("api_key",signed.apiKey); fd.append("signature",signed.signature);
-        setStatus("Uploading securely…");
-        const uploaded=await directUpload("https://api.cloudinary.com/v1_1/"+encodeURIComponent(signed.cloudName)+"/"+type+"/upload",fd,setProgress);
-        setStatus("Validating before publication…");
-        await api("/api/validate",{method:"POST",headers:{"Authorization":"Bearer "+key},body:JSON.stringify({
-          publicId:uploaded.public_id,collection,mediaType:type,slot
-        })});
+        await window.ManifoldUpload.upload(file,type,key,metadata,setStatus,setProgress);
         setProgress(100); setStatus("Published successfully.");
         form.reset();
         document.querySelectorAll('[data-media-gallery][data-collection="'+collection+'"]').forEach(refreshGallery);
