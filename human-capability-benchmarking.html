@@ -48,6 +48,11 @@
   .cap-key{grid-template-columns:repeat(2,minmax(0,1fr))}
   .test-grid{grid-template-columns:1fr}
 }
+
+.summary-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:12px 0}
+.summary-actions a{color:#9bcaf0;text-decoration:underline;padding:8px 0}
+#summary-preview{display:block;width:min(794px,100%);aspect-ratio:210/297;border:1px solid #677274;margin:20px auto;background:#fafaf8}
+#summary-preview[hidden],#summary-link[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -220,6 +225,16 @@
 </form>
 <button class="cap-btn" type="button" id="battery-score">Score battery & update chart</button>
 <button class="cap-btn" type="button" id="battery-clear">Clear local battery result</button>
+<div class="battery-box" id="a4-summary-controls">
+<h3>Your A4 battery summary</h3>
+<p>Complete the battery to produce your own clickable, one-page profile, styled like the Digital CV. Each link is a dated snapshot of that participant’s results; it does not replace the live chart.</p>
+<div class="cap-form"><label>Display name (optional)<input id="summary-name" maxlength="80" placeholder="Participant or chosen name"></label></div>
+<p><label><input id="summary-formal" type="checkbox"> Include up to two latest formal assessment entries in my summary.</label></p>
+<p class="private-flag">Formal scores are excluded by default. The generated link contains the included results; anyone you give it to can read them. No report is uploaded. Copy only the summary you wish to share.</p>
+<div class="summary-actions"><a id="summary-link" target="_blank" rel="noopener noreferrer" hidden>Open my A4 battery summary ↗</a><button id="summary-copy" class="cap-btn" type="button" disabled>Copy my summary link</button></div>
+<p id="summary-status" role="status">Your summary link will appear after a completed battery.</p>
+<iframe id="summary-preview" title="A4 participant battery summary preview" referrerpolicy="no-referrer" loading="lazy" hidden></iframe>
+</div>
 <div id="battery-output" class="cap-note" role="status">No observer-battery result yet.</div><div id="results-chart" aria-live="polite"></div><div id="battery-history"></div>
 </div>
 
@@ -363,7 +378,25 @@
     const h=$('#formal-history');h.replaceChildren();if(formal.length){textNode(h,'h4','Dated professional measurements · private');formal.forEach(f=>textNode(h,'p',label(f.cap)+': '+describe(f)+' · reference: '+f.source));}
     const bh=$('#battery-history');bh.replaceChildren();if(attempts.length){textNode(bh,'h4','Battery history · same questions, possible practice effects');attempts.forEach((t,i)=>textNode(bh,'p',(i===0?'Experimental baseline':'Retest '+i)+' · '+t.date+' · '+Object.entries(t.results).map(([k,v])=>label(k)+' '+v.correct+'/3').join('; ')));}
     if(sample&&latest){const k=sample.domain;row(k).querySelector('.position-live').textContent+=' · MCQ sample midrank P'+sample.percentile.toFixed(1)+' (n='+sample.n+')';}
+    updateSummary();
   };
+  // Participant-generated snapshots use the URL fragment, without server-side result storage.
+  const compactResults=t=>t?Object.fromEntries(Object.entries(t.results).map(([k,v])=>[k,v.correct])):null;
+  const updateSummary=()=>{
+    const latest=attempts.at(-1),includeFormal=$('#summary-formal').checked;
+    const selected=includeFormal?formal.slice(-2).map(f=>({cap:f.cap,instrument:f.instrument.slice(0,80),source:f.source.slice(0,100),date:f.date,nowDate:f.nowDate,old:f.old,now:f.now,mean:f.mean,sd:f.sd,dir:f.dir,normal:f.normal,matched:f.matched})):[];
+    const link=$('#summary-link'),frame=$('#summary-preview'),copy=$('#summary-copy');
+    if(!latest&&!selected.length){link.hidden=true;link.removeAttribute('href');frame.hidden=true;frame.removeAttribute('src');copy.disabled=true;$('#summary-status').textContent='Complete the battery to obtain your A4 summary link.';return;}
+    const snapshot={schema:1,version:'MCQ-v1',name:$('#summary-name').value.trim().slice(0,80)||'Participant',created:new Date().toISOString(),date:latest?.date||null,results:compactResults(latest),first:compactResults(attempts[0]),firstDate:attempts[0]?.date||null,attempts:attempts.length,rt:rtResult?{median:rtResult.median}:null,sample:sample?{...sample}:null,formal:selected};
+    const bytes=new TextEncoder().encode(JSON.stringify(snapshot));let binary='';bytes.forEach(b=>binary+=String.fromCharCode(b));
+    const encoded=btoa(binary).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'');
+    link.href=new URL('capability-summary.html',location.href).href+'#result='+encoded;link.hidden=false;copy.disabled=false;
+    frame.src=link.href;frame.hidden=false;
+    $('#summary-status').textContent='Your dated A4 summary is ready. Open it to print/save as PDF or copy the link to share this snapshot.';
+  };
+  $('#summary-name').addEventListener('change',updateSummary);
+  $('#summary-formal').addEventListener('change',updateSummary);
+  $('#summary-copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('#summary-link').href);$('#summary-status').textContent='Summary link copied.';}catch{$('#summary-status').textContent='Copy the address from the open A4 summary page; clipboard access is unavailable here.';}});
   $('#keep-results').addEventListener('change',()=>{if($('#keep-results').checked)save();else removeLocal('mg-cap-v2');});
   $('#base-calc').addEventListener('click',()=>{
     const f={cap:$('#base-cap').value,instrument:$('#base-instrument').value.trim(),source:$('#base-source').value.trim(),date:$('#base-date').value,nowDate:$('#base-now-date').value,mean:number('#base-mean'),sd:number('#base-sd'),old:number('#base-old'),now:number('#base-new'),rel:number('#base-rel'),practice:number('#base-practice'),dir:$('#base-direction').value==='low'?-1:1,normal:$('#base-normal').checked,matched:$('#base-matched').checked};
@@ -381,7 +414,7 @@
   });
   $('#battery-clear').addEventListener('click',()=>{attempts=[];sample=null;removeLocal('mg-cap-battery');$('#battery-form').reset();$('#battery-progress').textContent='0/15 answered · MCQ-v1 · untimed';$('#battery-output').textContent='Local battery history cleared.';$('#sample-output').textContent='Sample comparison cleared.';refresh();save();});
   const sampleStats=values=>{const sorted=[...values].sort((a,b)=>a-b),n=sorted.length,mean=sorted.reduce((a,b)=>a+b,0)/n,median=n%2?sorted[(n-1)/2]:(sorted[n/2-1]+sorted[n/2])/2;const counts=new Map();sorted.forEach(x=>counts.set(x,(counts.get(x)||0)+1));const max=Math.max(...counts.values()),mode=max===1?'none (all unique)':[...counts].filter(([x,c])=>c===max).map(([x])=>x).join(', ');return {n,mean,median,mode,sd:n>1?Math.sqrt(sorted.reduce((a,x)=>a+(x-mean)**2,0)/(n-1)):null};};
-  $('#sample-calc').addEventListener('click',()=>{const domain=$('#sample-domain').value,source=$('#sample-source').value.trim(),input=$('#sample-values').value.trim(),values=input?input.split(/[\s,;]+/).map(Number):[],latest=attempts.at(-1);if(!latest||!source||!$('#sample-match').checked||values.length<2||values.some(x=>!Number.isInteger(x)||x<0||x>3)){$('#sample-output').textContent='Complete your battery, supply sample provenance, confirm the matching protocol and enter at least two integer scores from 0 to 3.';return;}const v=latest.results[domain].correct,st=sampleStats(values),below=values.filter(x=>x<v).length,tied=values.filter(x=>x===v).length,percentile=100*(below+.5*tied)/values.length;sample={domain,percentile,n:st.n};$('#sample-output').textContent='Source: '+source+'\nN '+st.n+' · mean '+st.mean.toFixed(2)+' · median '+st.median+' · mode '+st.mode+' · sample SD '+st.sd.toFixed(2)+'\nYou: '+v+'/3 · difference from mean '+(v-st.mean).toFixed(2)+' · difference from median '+(v-st.median).toFixed(2)+'\nSample midrank P'+percentile.toFixed(1)+'; '+below+' lower and '+tied+' tied. This positions you within the supplied sample only. Small samples and three-item scores offer limited precision; no national classification follows.';refresh();});
+  $('#sample-calc').addEventListener('click',()=>{const domain=$('#sample-domain').value,source=$('#sample-source').value.trim(),input=$('#sample-values').value.trim(),values=input?input.split(/[\s,;]+/).map(Number):[],latest=attempts.at(-1);if(!latest||!source||!$('#sample-match').checked||values.length<2||values.some(x=>!Number.isInteger(x)||x<0||x>3)){$('#sample-output').textContent='Complete your battery, supply sample provenance, confirm the matching protocol and enter at least two integer scores from 0 to 3.';return;}const v=latest.results[domain].correct,st=sampleStats(values),below=values.filter(x=>x<v).length,tied=values.filter(x=>x===v).length,percentile=100*(below+.5*tied)/values.length;sample={domain,percentile,n:st.n,source:source.slice(0,100),mean:st.mean,median:st.median,mode:st.mode,sd:st.sd};$('#sample-output').textContent='Source: '+source+'\nN '+st.n+' · mean '+st.mean.toFixed(2)+' · median '+st.median+' · mode '+st.mode+' · sample SD '+st.sd.toFixed(2)+'\nYou: '+v+'/3 · difference from mean '+(v-st.mean).toFixed(2)+' · difference from median '+(v-st.median).toFixed(2)+'\nSample midrank P'+percentile.toFixed(1)+'; '+below+' lower and '+tied+' tied. This positions you within the supplied sample only. Small samples and three-item scores offer limited precision; no national classification follows.';refresh();});
   $('#sample-clear').addEventListener('click',()=>{sample=null;$('#sample-values').value='';$('#sample-output').textContent='No sample loaded.';refresh();});
 
   // Five-trial browser reaction demonstrator.
