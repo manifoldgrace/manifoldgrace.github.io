@@ -1131,3 +1131,10 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 /* Section 6: three times the standard 200px portrait preview width. */
 .portfolio-slots #photos-professional-tech{grid-template-columns:minmax(0,1fr);width:100%;max-width:624px}
 .portfolio-slots #photos-professional-tech .media-item a{width:600px;max-width:calc(100% - 24px)}
+
+/* Keep the 600px business portrait; the office photograph sits alongside it. */
+.portfolio-slots #photos-professional-tech{grid-template-columns:minmax(0,624px) minmax(0,362px);gap:16px;max-width:1002px}
+.portfolio-slots #photos-professional-tech .media-item:nth-child(2) a{width:338px;max-width:calc(100% - 24px)}
+@media(max-width:800px){.portfolio-slots #photos-professional-tech{grid-template-columns:minmax(0,1fr);max-width:624px}}
+/* A modestly smaller, centred landscape editorial portrait. */
+.portfolio-slots .editorial-feature-row{max-width:664px;margin-inline:auto;width:100%}
