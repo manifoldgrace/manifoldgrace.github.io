@@ -5,6 +5,7 @@
     ["Research Collaborations","research-collaborations.html"],
     ["About","about.html"],
     ["Professional","professional.html"],
+    ["Photos","photos.html"],
     ["My Books","my-book.html"],
     ["Knowledge VS Thinking","knowledge.html"],
     ["Learning Lab","learning-lab.html"],
@@ -50,7 +51,6 @@
     ["Digital CV","cv.html"],
     ["Public Speaking","public-speaking.html"],
     ["Live Sessions","live-sessions.html"],
-    ["Photos","photos.html"],
     ["Socials","socials.html"],
     ["Products","products.html"]
   ];

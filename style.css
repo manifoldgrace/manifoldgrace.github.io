@@ -1084,3 +1084,7 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 .portfolio-slots .photo-grid .media-item img,.portfolio-slots .photo-grid .media-item video{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
 .portfolio-slots .photo-grid .media-item a{display:block}
 .portfolio-slots .photo-grid:empty{display:none}
+
+.portfolio-slots .photo-grid .media-item img{width:auto;max-width:100%;margin-inline:auto;display:block}
+.portfolio-slots .more-photos{margin-block:1.5rem}
+.portfolio-slots .more-photos>summary{cursor:pointer;padding-block:.75rem}
