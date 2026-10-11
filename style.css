@@ -1116,5 +1116,12 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 .portfolio-slots .lifestyle-natural-row .media-item{min-width:0}
 .portfolio-slots .lifestyle-natural-row .media-item a{width:calc(100% - 24px);max-width:none;aspect-ratio:4/5;overflow:hidden}
 .portfolio-slots .lifestyle-natural-row .media-item img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
-.portfolio-slots .lifestyle-tea-row{grid-template-columns:repeat(2,minmax(0,210px));max-width:436px;margin-top:28px}
-.portfolio-slots .lifestyle-tea-row .media-item a{width:160px;max-width:calc(100% - 24px)}
+.portfolio-slots .lifestyle-casual-row{grid-template-columns:minmax(0,210px);max-width:210px;margin-top:28px}
+.portfolio-slots .lifestyle-casual-row .media-item a{width:160px;max-width:calc(100% - 24px)}
+
+/* Editorial: one larger landscape image above matching portrait previews. */
+.portfolio-slots .editorial-feature-row{grid-template-columns:minmax(0,1fr);max-width:880px}
+.portfolio-slots .editorial-feature-row .media-item a{width:calc(100% - 24px);max-width:none}
+.portfolio-slots .editorial-secondary-row{grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));max-width:880px}
+.portfolio-slots .editorial-secondary-row .media-item a{width:200px;max-width:calc(100% - 24px);aspect-ratio:4/5;overflow:hidden}
+.portfolio-slots .editorial-secondary-row .media-item img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}

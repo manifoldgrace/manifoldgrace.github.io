@@ -33,7 +33,6 @@
       const a = document.createElement("a");
       a.href = href;
       a.textContent = label;
-      if (href === "research-collaborations.html") { a.classList.add("nav-research-feature"); a.setAttribute("aria-label","Research Collaborations — featured"); }
       if (path === href.toLowerCase()) a.setAttribute("aria-current","page");
       wrap.appendChild(a);
     });
