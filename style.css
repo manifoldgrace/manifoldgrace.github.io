@@ -1099,7 +1099,7 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 .portfolio-slots .headshot-afro-row .media-item a{width:240px;max-width:calc(100% - 24px)}
 
 /* Full-length photographs share the available width and keep complete proportions. */
-.portfolio-slots #photos-full-length{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;max-width:none}
+.portfolio-slots #photos-full-length{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;max-width:520px}
 .portfolio-slots #photos-full-length .media-item{min-width:0}
 .portfolio-slots #photos-full-length .media-item a{width:100%;max-width:none;margin:0}
 .portfolio-slots #photos-full-length .media-item img{width:100%;height:auto}
@@ -1125,3 +1125,5 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 .portfolio-slots .editorial-secondary-row{grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));max-width:880px}
 .portfolio-slots .editorial-secondary-row .media-item a{width:200px;max-width:calc(100% - 24px);aspect-ratio:4/5;overflow:hidden}
 .portfolio-slots .editorial-secondary-row .media-item img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+
+.portfolio-slots #photos-full-length .media-item a{max-width:255px;margin-inline:auto}
