@@ -1127,3 +1127,7 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 .portfolio-slots .editorial-secondary-row .media-item img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
 
 .portfolio-slots #photos-full-length .media-item a{max-width:255px;margin-inline:auto}
+
+/* Section 6: three times the standard 200px portrait preview width. */
+.portfolio-slots #photos-professional-tech{grid-template-columns:minmax(0,1fr);width:100%;max-width:624px}
+.portfolio-slots #photos-professional-tech .media-item a{width:600px;max-width:calc(100% - 24px)}
