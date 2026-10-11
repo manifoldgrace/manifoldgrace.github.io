@@ -1082,8 +1082,11 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 /* Small aligned photographs, visible side by side within stacked sections. */
 .portfolio-slots .portfolio-slot{min-width:0;max-width:100%}
 .portfolio-slots .photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));max-width:100%;margin-inline:0;gap:16px;align-items:stretch}
-.portfolio-slots .photo-grid .media-item a{display:block;width:160px;max-width:100%;aspect-ratio:210/297;margin:12px auto;background:#050505}
-.portfolio-slots .photo-grid .media-item img{display:block;width:100%;height:100%;max-width:100%;aspect-ratio:auto;object-fit:contain}
+.portfolio-slots .photo-grid .media-item a{display:block;width:160px;max-width:100%;margin:12px auto}
+.portfolio-slots .photo-grid .media-item img{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:auto;object-fit:contain;background:transparent}
 .portfolio-slots .photo-grid .media-item figcaption{padding:10px;font-size:.85rem}
 .portfolio-slots .photo-grid .media-item a:focus-visible{outline:2px solid #8fc4ff;outline-offset:3px}
 .portfolio-slots .photo-grid:empty{display:none}
+
+.portfolio-slots .photo-grid .media-item a.trim-screen-border{aspect-ratio:var(--photo-ratio);overflow:hidden}
+.portfolio-slots .photo-grid .media-item a.trim-screen-border img{margin-top:var(--photo-offset)}
