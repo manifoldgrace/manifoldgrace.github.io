@@ -15,7 +15,7 @@ window.MANIFOLD_SITE = Object.freeze({
     medium: "",
     dev: "https://dev.to/gracerosen",
     soundcloud: "",
-    spotify: "",
+    spotify: "https://open.spotify.com/user/31cxuhsalz2kbzj22gp3e32ktqzy",
     x: "",
     vimeo: "",
     facebook: "",
