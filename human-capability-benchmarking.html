@@ -30,7 +30,18 @@
 .cap-note{border-left:3px solid var(--cap-accent);padding:10px 14px;background:#121819;margin:14px 0}
 .cap-source-list li{margin:8px 0}
 .cap-source-list a{color:#91c5ff;text-decoration:underline}
+.bench{font-size:.76rem;color:#d9ddd9}.bench strong{color:#f0e1c7}.result-live{color:#d7f1d9}.position-live{font-weight:700}
+.compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.compare-grid>div,.battery-box{border:1px solid var(--cap-line);padding:14px;background:var(--cap-soft)}
+.cap-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.cap-form label{display:grid;gap:4px;font-size:.78rem}
+.cap-form input,.cap-form select{width:100%;background:#0e1112;color:#fff;border:1px solid #60696a;padding:8px;font:inherit}
+.cap-btn{background:#141b1d;color:#fff;border:1px solid #718082;padding:9px 12px;cursor:pointer;margin:4px 4px 4px 0}
+.cap-btn:focus-visible,.cap input:focus-visible,.cap select:focus-visible{outline:2px solid #9bcaf0;outline-offset:2px}
+.battery-q{padding:12px 0;border-bottom:1px solid #394244}.battery-q p{margin:0 0 7px}.battery-q label{display:block;padding:3px 0;font-size:.86rem}
+.battery-progress{font-size:.8rem;color:#aeb9b9}.private-flag{font-size:.75rem;color:#cdb58b}
+#baseline-output,#battery-output,#rt-output{white-space:pre-wrap}
 @media(max-width:760px){
+  .compare-grid{grid-template-columns:1fr}.cap-form{grid-template-columns:repeat(2,minmax(0,1fr))}
   .cap-table{font-size:.72rem}
   .cap-table th,.cap-table td{padding:7px 4px}
   .cap-table th:nth-child(1){width:29%}.cap-table th:nth-child(2){width:39%}.cap-table th:nth-child(3){width:14%}.cap-table th:nth-child(4){width:18%}
@@ -64,77 +75,155 @@
 <section id="capability-table"><div class="wrap">
 <span class="status">AT-A-GLANCE CONTROL TABLE</span>
 <h2>Capability map</h2>
-<p>“Pending” means that conversation evidence may suggest a hypothesis, but no numerical classification will be published until a suitable benchmark and task result exist. Reference codes are expanded in the Sources dropdown below.</p>
+<p>The table now shows the published reference statistic wherever one has been verified. A participant result is stored separately. If a task is not genuinely compatible with the published instrument, the page says so rather than manufacturing a percentile. Reference codes are expanded in the Sources dropdown below.</p>
 <table class="cap-table" aria-label="Human capability benchmark table">
 <thead><tr><th>Capability</th><th>Operational measure / reference</th><th>Score</th><th>Position</th></tr></thead>
 <tbody>
 <tr class="group"><td colspan="4">Memory, learning & reasoning</td></tr>
-<tr><td>Working memory</td><td>Digit/span or updating task; UKB numeric memory <span class="norm">UKB</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Immediate verbal recall</td><td>Word-list immediate recall; age-appropriate norms <span class="norm">ANDI / HCAP</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Delayed verbal recall</td><td>Delayed word-list recall <span class="norm">ANDI / HCAP</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Visual memory</td><td>Visual-location or pairs errors; UKB reports median errors <span class="norm">UKB</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Prospective memory</td><td>Remember-to-act task; UKB success proportion <span class="norm">UKB</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Associative learning</td><td>Paired-associate / concept-link task <span class="norm">CANTAB-style domain</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Verbal comprehension</td><td>Age-adjusted standardized verbal index where licensed <span class="norm">ACS/WAIS convention</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Verbal fluency</td><td>Words in 60 seconds; age-banded norms <span class="norm">Murphy / UK category norms</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Abstract / fluid reasoning</td><td>Novel rule or matrix-style reasoning; UKB verbal-numerical reasoning as population reference <span class="norm">UKB</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Numerical reasoning</td><td>Timed novel quantitative items <span class="norm">UKB / standardized score</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Visual-spatial reasoning</td><td>Line orientation / rotation / spatial sequence <span class="norm">ANDI</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Categorisation</td><td>Semantic category production and rule induction <span class="norm">UK category norms</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr data-cap="working-memory"><td>Working memory</td><td>Numeric span / updating. <span class="norm">UKB</span><small>UKB age 40–70: mean 6.70, SD 1.34 on its numeric-memory protocol.</small></td><td class="bench"><strong>Ref 6.70±1.34</strong><br><span class="result-live">You: —</span></td><td class="position-live">Await compatible score</td></tr>
+<tr data-cap="immediate-recall"><td>Immediate verbal recall</td><td>Word-list immediate recall. <span class="norm">ELSA-HCAP / ANDI</span><small>HCAP supplies scored word-list variables; exact age-matched descriptive norm must match the administered protocol.</small></td><td class="bench"><strong>Ref: age/protocol matched</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not yet classified</td></tr>
+<tr data-cap="delayed-recall"><td>Delayed verbal recall</td><td>Delayed word-list recall. <span class="norm">ELSA-HCAP / ANDI</span><small>Use the same list/protocol at baseline and retest; practice effects matter.</small></td><td class="bench"><strong>Ref: age/protocol matched</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not yet classified</td></tr>
+<tr data-cap="visual-memory"><td>Visual memory</td><td>Pairs/location errors. <span class="norm">UKB</span><small>UKB age 40–70: median 3 errors, IQR 3; lower is better.</small></td><td class="bench"><strong>Ref median 3 (IQR 3)</strong><br><span class="result-live">You: —</span></td><td class="position-live">Median comparison only</td></tr>
+<tr data-cap="prospective-memory"><td>Prospective memory</td><td>Remember-to-act task. <span class="norm">UKB</span><small>UKB age 40–70: 93.9% succeeded on its single prospective-memory item.</small></td><td class="bench"><strong>Ref 93.9% success</strong><br><span class="result-live">You: —</span></td><td class="position-live">Prevalence, not percentile</td></tr>
+<tr><td>Associative learning</td><td>Paired-associate / concept-link task <span class="norm">CANTAB-style domain</span></td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr data-cap="verbal-comprehension"><td>Verbal comprehension</td><td>Age-adjusted standardized verbal index where licensed. <span class="norm">Wechsler convention</span><small>Index scores commonly use mean 100, SD 15.</small></td><td class="bench"><strong>Ref 100±15</strong><br><span class="result-live">You: —</span></td><td class="position-live">Await formal/compatible score</td></tr>
+<tr data-cap="verbal-fluency"><td>Verbal fluency</td><td>Words in 60 seconds; exact letter/category matters. <span class="norm">Murphy et al.</span><small>COWAT-S means: 18–34 17.72±4.51; 35–49 17.10±4.78; further age bands in source.</small></td><td class="bench"><strong>Ref age-banded</strong><br><span class="result-live">You: —</span></td><td class="position-live">Use source percentile table</td></tr>
+<tr data-cap="abstract-reasoning"><td>Abstract / fluid reasoning</td><td>Novel rule reasoning. <span class="norm">UKB context</span><small>UKB verbal-numerical reasoning age 40–70: mean 5.99, SD 2.16 on a 13-item/2-minute protocol.</small></td><td class="bench"><strong>Ref 5.99±2.16</strong><br><span class="result-live">You: —</span></td><td class="position-live">Only if protocol matched</td></tr>
+<tr data-cap="numerical-reasoning"><td>Numerical reasoning</td><td>Timed novel quantitative items. <span class="norm">UKB context</span><small>Contained within UKB verbal-numerical task; custom MCQ score is not the same instrument.</small></td><td class="bench"><strong>Ref task-dependent</strong><br><span class="result-live">You: —</span></td><td class="position-live">Experimental until normed</td></tr>
+<tr><td>Visual-spatial reasoning</td><td>Line orientation / rotation / spatial sequence <span class="norm">ANDI</span></td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Categorisation</td><td>Semantic category production and rule induction <span class="norm">UK category norms</span></td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
 
 <tr class="group"><td colspan="4">Attention, speed & executive control</td></tr>
-<tr><td>Processing speed</td><td>Timed coding/search analogue; standardized or age-banded norm <span class="norm">ANDI / ACS</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Simple reaction time</td><td>Milliseconds; repeated trials; median preferred <span class="norm">UKB</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Choice reaction time</td><td>Milliseconds and errors across alternatives <span class="norm">CANTAB-style domain</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Selective attention</td><td>Target detection amid distractors; accuracy + latency</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Sustained attention</td><td>Longer vigilance task; misses, false alarms and variability</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Divided attention</td><td>Dual-task cost relative to single-task baseline</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Impulse / response inhibition</td><td>Go/no-go plus interference task <span class="norm">Murphy executive norms</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Cognitive flexibility</td><td>Rule-switch cost, accuracy after rule change</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Task switching</td><td>Switch-cost latency/error difference; trail-style sequencing <span class="norm">ANDI / UKB-related trails</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Planning</td><td>Minimum-move planning puzzles; completion and excess moves</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Sequencing</td><td>Ordered multi-step reconstruction; time + accuracy</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Organisation / structure</td><td>Information-organisation task; scoring rubric + reliability check</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Planning & prioritisation</td><td>Constraint-based scheduling task; objective quality score</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Error detection & correction</td><td>Injected-error review: detection rate, correction accuracy, time</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Metacognitive calibration</td><td>Confidence minus actual accuracy; calibration error</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Decision quality</td><td>Consistency with stated objectives under controlled trade-offs</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Risk / speed / value calibration</td><td>Choices under known probabilities; regret and consistency metrics</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Processing speed</td><td>Timed coding/search analogue; standardized or age-banded norm <span class="norm">ANDI / ACS</span></td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr data-cap="reaction-time"><td>Simple reaction time</td><td>Milliseconds across repeated trials. <span class="norm">UKB context</span><small>UKB matching-task median 546 ms, IQR 130; browser/device timing is not directly equivalent.</small></td><td class="bench"><strong>Ref median 546 ms</strong><br><span class="result-live">You: —</span></td><td class="position-live">Context only</td></tr>
+<tr><td>Choice reaction time</td><td>Milliseconds and errors across alternatives <span class="norm">CANTAB-style domain</span></td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Selective attention</td><td>Target detection amid distractors; accuracy + latency</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Sustained attention</td><td>Longer vigilance task; misses, false alarms and variability</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Divided attention</td><td>Dual-task cost relative to single-task baseline</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr data-cap="inhibition"><td>Impulse / response inhibition</td><td>Go/no-go plus interference task. <span class="norm">Murphy et al.</span><small>Published Stroop/Hayling norms are age-banded and protocol-specific.</small></td><td class="bench"><strong>Ref age-banded</strong><br><span class="result-live">You: —</span></td><td class="position-live">Await compatible task</td></tr>
+<tr><td>Cognitive flexibility</td><td>Rule-switch cost, accuracy after rule change</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Task switching</td><td>Switch-cost latency/error difference; trail-style sequencing <span class="norm">ANDI / UKB-related trails</span></td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Planning</td><td>Minimum-move planning puzzles; completion and excess moves</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Sequencing</td><td>Ordered multi-step reconstruction; time + accuracy</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Organisation / structure</td><td>Information-organisation task; scoring rubric + reliability check</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr data-cap="planning-prioritisation"><td>Planning & prioritisation</td><td>Constraint-based scheduling task; objective quality score.<small>Can be longitudinally compared within the same battery.</small></td><td class="bench"><strong>Ref: none yet</strong><br><span class="result-live">You: —</span></td><td class="position-live">Experimental raw score</td></tr>
+<tr data-cap="error-detection"><td>Error detection & correction</td><td>Injected-error review: detection rate, correction accuracy and time.<small>No national norm for this custom task yet.</small></td><td class="bench"><strong>Ref: none yet</strong><br><span class="result-live">You: —</span></td><td class="position-live">Experimental raw score</td></tr>
+<tr data-cap="metacognition"><td>Metacognitive calibration</td><td>Confidence compared with actual accuracy; lower calibration error is better.<small>Requires a benchmark collected with the same tasks/confidence scale.</small></td><td class="bench"><strong>Ref: none yet</strong><br><span class="result-live">You: —</span></td><td class="position-live">Experimental raw score</td></tr>
+<tr><td>Decision quality</td><td>Consistency with stated objectives under controlled trade-offs</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Risk / speed / value calibration</td><td>Choices under known probabilities; regret and consistency metrics</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
 
 <tr class="group"><td colspan="4">Creative, social & emotional capability</td></tr>
-<tr><td>Creative reframing</td><td>Alternative-framing task; novelty, usefulness and number of valid reframes</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Divergent thinking</td><td>Alternative-uses style task; fluency, flexibility, originality</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Strategy formation</td><td>Novel scenario planning scored against explicit constraints</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Perspective-taking</td><td>Multi-agent scenario inference; competing-viewpoint accuracy</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Social cognition</td><td>Social inference / intention task; accuracy and uncertainty</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Emotion recognition</td><td>Validated emotion-identification task where appropriate <span class="norm">CANTAB domain</span></td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Empathic reasoning</td><td>Scenario-based identification of another person's likely needs; separate from self-report empathy</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Emotionality / reactivity</td><td>Self-report + repeated behavioural context; not inferred from “shouting” alone</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Emotion regulation</td><td>Validated self-report or controlled reappraisal task; distinct from emotionality</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Stress tolerance</td><td>Performance stability under mild time pressure; subjective cost reported separately</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Creative reframing</td><td>Alternative-framing task; novelty, usefulness and number of valid reframes</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Divergent thinking</td><td>Alternative-uses style task; fluency, flexibility, originality</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Strategy formation</td><td>Novel scenario planning scored against explicit constraints</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr data-cap="perspective-taking"><td>Perspective-taking</td><td>Multi-agent scenario inference; competing-viewpoint accuracy.<small>Custom observer items measure reasoning, not diagnosis.</small></td><td class="bench"><strong>Ref: none yet</strong><br><span class="result-live">You: —</span></td><td class="position-live">Experimental raw score</td></tr>
+<tr><td>Social cognition</td><td>Social inference / intention task; accuracy and uncertainty</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Emotion recognition</td><td>Validated emotion-identification task where appropriate <span class="norm">CANTAB domain</span></td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Empathic reasoning</td><td>Scenario-based identification of another person's likely needs; separate from self-report empathy</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Emotionality / reactivity</td><td>Self-report + repeated behavioural context; not inferred from “shouting” alone</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Emotion regulation</td><td>Validated self-report or controlled reappraisal task; distinct from emotionality</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Stress tolerance</td><td>Performance stability under mild time pressure; subjective cost reported separately</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
 
 <tr class="group"><td colspan="4">Self-regulation, work style & adaptive functioning</td></tr>
-<tr><td>Self-discipline</td><td>Longitudinal behaviour + validated trait measure; not equated with overwork</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Distraction resistance</td><td>Performance loss with irrelevant stimuli</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Task initiation</td><td>Latency to begin predefined tasks across interest levels</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Goal maintenance</td><td>Completion of delayed multi-step goal with interruptions</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Time management</td><td>Planned-versus-actual duration and deadline adherence across repeated tasks</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Persistence</td><td>Persistence after failure or complexity; benefit and time-cost recorded separately</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Resilience / recovery</td><td>Recovery after setback across repeated real tasks; not a single cognitive score</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Learning agility</td><td>Improvement slope after feedback across repeated unfamiliar tasks</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Adaptability</td><td>Performance after changed rules, context or tools</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Communication</td><td>Accuracy, clarity, audience adaptation and information retention</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Independent work</td><td>Completion quality under low supervision; context-sensitive</td><td class="pending">Pending</td><td>—</td></tr>
-<tr><td>Collaboration</td><td>Shared-task contribution, coordination and correction; requires multi-person evidence</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Self-discipline</td><td>Longitudinal behaviour + validated trait measure; not equated with overwork</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Distraction resistance</td><td>Performance loss with irrelevant stimuli</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Task initiation</td><td>Latency to begin predefined tasks across interest levels</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Goal maintenance</td><td>Completion of delayed multi-step goal with interruptions</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Time management</td><td>Planned-versus-actual duration and deadline adherence across repeated tasks</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Persistence</td><td>Persistence after failure or complexity; benefit and time-cost recorded separately</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Resilience / recovery</td><td>Recovery after setback across repeated real tasks; not a single cognitive score</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Learning agility</td><td>Improvement slope after feedback across repeated unfamiliar tasks</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Adaptability</td><td>Performance after changed rules, context or tools</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Communication</td><td>Accuracy, clarity, audience adaptation and information retention</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Independent work</td><td>Completion quality under low supervision; context-sensitive</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
+<tr><td>Collaboration</td><td>Shared-task contribution, coordination and correction; requires multi-person evidence</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: —</span></td><td class="position-live">Not classified</td></tr>
 </tbody>
 </table>
-<p class="cap-note"><strong>Current conclusion:</strong> no final “higher than average” or “lower than average” labels are entered yet. Longitudinal chat evidence can generate hypotheses about strengths and variability, but the user requested a numerical basis; the table therefore waits for standardized or transparently benchmarked results.</p>
+<p class="cap-note"><strong>Current conclusion:</strong> the blank cells have been removed. Published averages/medians are shown where verified; otherwise the table explicitly says that no compatible norm has yet been located. A higher/lower classification appears only after a compatible numerical result exists.</p>
+</div></section>
+
+<section id="comparison-engine"><div class="wrap">
+<span class="status">NUMERICAL COMPARISON ENGINE</span>
+<h2>How population averages and individual scores are compared</h2>
+<div class="compare-grid">
+<div><h3>Mean + SD</h3><p>When the participant completes the <strong>same or genuinely compatible task</strong>, the page calculates <code>z = (score − mean) / SD</code>. If lower scores are better, the direction is reversed. A normal-distribution percentile can then be estimated from z. Example conventions: z=0 is the mean; z≈+1 is about P84; z≈−1 is about P16.</p></div>
+<div><h3>Median + IQR</h3><p>For skewed data such as reaction-time or error counts, median and IQR are retained. The page does <strong>not</strong> turn them into a z-score unless the original distribution or validated percentile table supports that step. A raw difference from the median is not automatically a percentile.</p></div>
+<div><h3>Proportions</h3><p>A reference such as “93.9% succeeded” describes prevalence. One person's pass/fail result cannot be converted into a meaningful percentile from that percentage alone.</p></div>
+<div><h3>Standard scores</h3><p>Formal reports may already provide standard, scaled, T or percentile scores. Those can be placed directly on their published scale (for example 100±15 or 10±3) without reverse-engineering raw test items.</p></div>
+</div>
+<details><summary>Progress from a previous formal assessment</summary>
+<p>Progress is strongest when the <strong>same standardized instrument</strong> is repeated under comparable conditions. A raw difference can be reported descriptively; where reliability and test–retest/practice-effect data are available, a Reliable Change Index (RCI) or standardized regression method can test whether change exceeds expected measurement error and practice effects. Scores from different instruments can be displayed side by side after standardization, but should not automatically be called “improvement”.</p>
+</details>
+
+<div class="battery-box" id="private-baseline">
+<h3>Private baseline calculator</h3>
+<p class="private-flag">Confidential values entered here stay in this browser only. They are not written to the public repository or sent to a server.</p>
+<div class="cap-form">
+<label>Capability<select id="base-cap">
+<option value="verbal-comprehension">Verbal comprehension</option>
+<option value="working-memory">Working memory</option>
+<option value="processing-speed">Processing speed</option>
+<option value="verbal-fluency">Verbal fluency</option>
+<option value="abstract-reasoning">Abstract reasoning</option>
+<option value="inhibition">Response inhibition</option>
+<option value="immediate-recall">Immediate recall</option>
+<option value="delayed-recall">Delayed recall</option>
+</select></label>
+<label>Norm mean<input id="base-mean" type="number" step="any" placeholder="100"></label>
+<label>Norm SD<input id="base-sd" type="number" step="any" placeholder="15"></label>
+<label>Earlier score<input id="base-old" type="number" step="any"></label>
+<label>Current score<input id="base-new" type="number" step="any"></label>
+<label>Reliability (optional)<input id="base-rel" type="number" step=".01" min="0" max="1" placeholder=".80"></label>
+<label>Expected practice change<input id="base-practice" type="number" step="any" placeholder="0"></label>
+<label>Direction<select id="base-direction"><option value="high">Higher is better</option><option value="low">Lower is better</option></select></label>
+</div>
+<button class="cap-btn" type="button" id="base-calc">Calculate & update chart</button>
+<button class="cap-btn" type="button" id="base-clear">Clear local baseline</button>
+<div id="baseline-output" class="cap-note">Enter a previous standardized score and its published mean/SD to establish a numerical baseline.</div>
+</div>
 </div></section>
 
 <section id="planned-tests"><div class="wrap">
 <span class="status">SPACE-SAVING TEST PLAN</span>
 <h2>Candidate tests to run</h2>
 <p>These are non-diagnostic research tasks. Where a proprietary clinical instrument is the appropriate comparator, the site will not reproduce protected test items; it will instead use an original analogue or recommend formal administration by a qualified professional if a clinical interpretation is needed.</p>
+<div class="battery-box" id="observer-battery">
+<h3>Observer mini-battery · try it yourself</h3>
+<p>Visitors can work through this short original MCQ battery and obtain raw domain scores. Completing it updates the relevant rows in the table <strong>on that visitor's browser only</strong>. Because these items do not yet have a representative UK normative sample, the result is labelled experimental rather than falsely described as a national percentile.</p>
+<p class="battery-progress" id="battery-progress">15 questions · five domains · four options each.</p>
+<form id="battery-form">
+<div class="battery-q"><p><strong>1 · Verbal:</strong> “Transparent” is to “opaque” as “explicit” is to:</p><label><input type="radio" name="q1" value="0"> concise</label><label><input type="radio" name="q1" value="1"> implicit</label><label><input type="radio" name="q1" value="0"> literal</label><label><input type="radio" name="q1" value="0"> detailed</label></div>
+<div class="battery-q"><p><strong>2 · Verbal:</strong> Which statement preserves the distinction between evidence and interpretation?</p><label><input type="radio" name="q2" value="0"> If B followed A, A caused B.</label><label><input type="radio" name="q2" value="1"> A preceded B; causation requires additional evidence.</label><label><input type="radio" name="q2" value="0"> Interpretation is always subjective and useless.</label><label><input type="radio" name="q2" value="0"> A reliable source proves every related claim.</label></div>
+<div class="battery-q"><p><strong>3 · Verbal:</strong> “Allocate” most nearly means:</p><label><input type="radio" name="q3" value="0"> conceal</label><label><input type="radio" name="q3" value="0"> combine</label><label><input type="radio" name="q3" value="1"> assign</label><label><input type="radio" name="q3" value="0"> postpone</label></div>
+
+<div class="battery-q"><p><strong>4 · Numerical:</strong> A task takes 24 minutes. A process improvement reduces time by 25%. New time?</p><label><input type="radio" name="q4" value="0"> 6 min</label><label><input type="radio" name="q4" value="1"> 18 min</label><label><input type="radio" name="q4" value="0"> 20 min</label><label><input type="radio" name="q4" value="0"> 22 min</label></div>
+<div class="battery-q"><p><strong>5 · Numerical:</strong> Sequence: 3, 6, 12, 24, ?</p><label><input type="radio" name="q5" value="0"> 30</label><label><input type="radio" name="q5" value="0"> 36</label><label><input type="radio" name="q5" value="1"> 48</label><label><input type="radio" name="q5" value="0"> 60</label></div>
+<div class="battery-q"><p><strong>6 · Numerical:</strong> If 5 records contain 2 errors each, and 3 more records contain 1 error each, total errors?</p><label><input type="radio" name="q6" value="0"> 8</label><label><input type="radio" name="q6" value="0"> 10</label><label><input type="radio" name="q6" value="1"> 13</label><label><input type="radio" name="q6" value="0"> 16</label></div>
+
+<div class="battery-q"><p><strong>7 · Abstract:</strong> All K are M. No M are R. Which must be true?</p><label><input type="radio" name="q7" value="1"> No K are R.</label><label><input type="radio" name="q7" value="0"> All R are K.</label><label><input type="radio" name="q7" value="0"> Some K are R.</label><label><input type="radio" name="q7" value="0"> Nothing can be inferred.</label></div>
+<div class="battery-q"><p><strong>8 · Abstract:</strong> If a rule changes from “sort by colour” to “sort by shape,” the best first action is:</p><label><input type="radio" name="q8" value="0"> keep the old rule until an error occurs</label><label><input type="radio" name="q8" value="1"> update the decision criterion before the next item</label><label><input type="radio" name="q8" value="0"> use both rules randomly</label><label><input type="radio" name="q8" value="0"> stop permanently</label></div>
+<div class="battery-q"><p><strong>9 · Abstract:</strong> Which relationship is strongest evidence of transmission?</p><label><input type="radio" name="q9" value="0"> two events occurred in the same year</label><label><input type="radio" name="q9" value="0"> two documents use similar words</label><label><input type="radio" name="q9" value="1"> a dated message forwards the proposal to the decision group</label><label><input type="radio" name="q9" value="0"> both people worked in the same industry</label></div>
+
+<div class="battery-q"><p><strong>10 · Error detection:</strong> A report says “12 participants completed the study” and later says “all 13 participants completed every task.” What should be flagged?</p><label><input type="radio" name="q10" value="1"> an internal numerical inconsistency</label><label><input type="radio" name="q10" value="0"> a spelling error only</label><label><input type="radio" name="q10" value="0"> nothing</label><label><input type="radio" name="q10" value="0"> proof of fraud</label></div>
+<div class="battery-q"><p><strong>11 · Error detection:</strong> Which claim overreaches the evidence “A emailed B before policy C changed”?</p><label><input type="radio" name="q11" value="0"> A contacted B before the change.</label><label><input type="radio" name="q11" value="1"> A caused policy C to change.</label><label><input type="radio" name="q11" value="0"> The chronology may justify further investigation.</label><label><input type="radio" name="q11" value="0"> More transmission evidence would help.</label></div>
+<div class="battery-q"><p><strong>12 · Error detection:</strong> A table labels milliseconds as seconds. This is primarily:</p><label><input type="radio" name="q12" value="0"> a moral disagreement</label><label><input type="radio" name="q12" value="1"> a unit/measurement error</label><label><input type="radio" name="q12" value="0"> evidence of bias</label><label><input type="radio" name="q12" value="0"> a sampling frame</label></div>
+
+<div class="battery-q"><p><strong>13 · Perspective:</strong> Two departments disagree because one optimises cost and the other safety. Best interpretation?</p><label><input type="radio" name="q13" value="0"> one must be dishonest</label><label><input type="radio" name="q13" value="1"> they may be applying different legitimate value priorities</label><label><input type="radio" name="q13" value="0"> cost and safety can never be compared</label><label><input type="radio" name="q13" value="0"> seniority decides who is right</label></div>
+<div class="battery-q"><p><strong>14 · Perspective:</strong> A manager does not mention a worker's contribution. Which conclusion is safest?</p><label><input type="radio" name="q14" value="0"> the manager deliberately erased it</label><label><input type="radio" name="q14" value="0"> the contribution never happened</label><label><input type="radio" name="q14" value="1"> the omission is factual; motive requires separate evidence</label><label><input type="radio" name="q14" value="0"> the worker deserves an award</label></div>
+<div class="battery-q"><p><strong>15 · Perspective:</strong> When evidence supports several explanations, the strongest response is:</p><label><input type="radio" name="q15" value="0"> choose the most flattering explanation</label><label><input type="radio" name="q15" value="0"> choose the most common explanation</label><label><input type="radio" name="q15" value="1"> preserve competing explanations and test them</label><label><input type="radio" name="q15" value="0"> treat uncertainty as failure</label></div>
+</form>
+<button class="cap-btn" type="button" id="battery-score">Score battery & update chart</button>
+<button class="cap-btn" type="button" id="battery-clear">Clear local battery result</button>
+<div id="battery-output" class="cap-note">No observer-battery result yet.</div>
+</div>
+
+<div class="battery-box" id="reaction-test">
+<h3>Reaction-time demonstrator</h3>
+<p>This browser task produces a personal median across five trials. The UK Biobank figure is displayed as context only because its matching task, hardware and sample are different.</p>
+<button class="cap-btn" type="button" id="rt-start">Start 5 trials</button>
+<button class="cap-btn" type="button" id="rt-target" disabled>Wait for green…</button>
+<div id="rt-output" class="cap-note">Not started.</div>
+</div>
 <div class="test-grid">
 <details><summary>Memory battery</summary><p>Immediate recall, delayed recall, working-memory updating, visual-location memory and prospective memory. Record raw score, retention percentage and confidence.</p></details>
 <details><summary>Reaction & processing speed</summary><p>Simple and choice reaction-time trials, using median latency, error rate and within-person variability.</p></details>
@@ -170,6 +259,8 @@
 <ul class="cap-source-list">
 <li><strong>UKB — UK Biobank cognitive data.</strong> A published analysis of 480,416 participants aged roughly 40–70 reported numeric-memory mean 6.70 (SD 1.34), verbal-numerical-reasoning mean 5.99 (SD 2.16), reaction-time median 546 ms (IQR 130), visual-memory errors median 3 (IQR 3), and 93.9% success on the prospective-memory item. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4844168/" target="_blank" rel="noopener noreferrer">Open paper ↗</a></li>
 <li><strong>Murphy — adult lifespan executive-function norms.</strong> UK neuropsychology researchers published age-banded Stroop, letter-fluency and Hayling norms across ages 18–92. For example, the 35–49 group had mean Stroop correct 119.25 (SD 20.71) and COWAT-S mean 17.10 (SD 4.78); the paper provides percentile tables for each age band. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12976820/" target="_blank" rel="noopener noreferrer">Open paper ↗</a></li>
+<li><strong>ELSA-HCAP / UK Data Service.</strong> Study 8502 provides harmonised cognitive-assessment datasets and score dictionaries covering tasks such as letter cancellation, backwards count and immediate/delayed memory measures. Some instruments are licensed; this page therefore cites the protocol rather than copying protected items. <a href="https://www.elsa-project.ac.uk/hcap" target="_blank" rel="noopener noreferrer">ELSA-HCAP ↗</a> · <a href="https://doc.ukdataservice.ac.uk/doc/8502/read8502.htm" target="_blank" rel="noopener noreferrer">UKDS study 8502 ↗</a></li>
+<li><strong>Reliable change.</strong> Neuropsychological change research recommends comparing retest differences with measurement error and, where relevant, practice effects rather than treating every numerical increase as true improvement. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3499091/" target="_blank" rel="noopener noreferrer">Methods review ↗</a></li>
 <li><strong>ANDI — Advanced Neuropsychological Diagnostics Infrastructure.</strong> Aggregated control datasets include Trail Making A/B, letter and semantic fluency, Stroop, delayed verbal and visual recall, coding and other neuropsychological measures across large pooled samples. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5071354/" target="_blank" rel="noopener noreferrer">Open database paper ↗</a></li>
 <li><strong>UK category-production norms.</strong> UK researchers published semantic-category production data for 117 concrete and abstract categories, useful for categorisation and semantic-fluency research. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10126059/" target="_blank" rel="noopener noreferrer">Open paper ↗</a></li>
 <li><strong>CANTAB normative work.</strong> Cambridge Cognition reports adult normative samples of around 750 participants per collection block across episodic memory, emotion recognition, executive functioning, working memory and other domains, with age-related effects. <a href="https://cambridgecognition.com/age-related-cognitive-changes-in-the-cambridge-neuropsychological-test-automated-battery-cantab-normative-sample/" target="_blank" rel="noopener noreferrer">Summary ↗</a></li>
@@ -183,4 +274,108 @@
 </div></section>
 </main>
 <footer><div class="wrap" data-site-footer></div></footer>
-</body></html>
+<script>
+(()=> {
+  const $=s=>document.querySelector(s);
+  const row=cap=>document.querySelector('[data-cap="'+cap+'"]');
+  const setRow=(cap,result,position)=>{
+    const r=row(cap); if(!r) return;
+    const res=r.querySelector('.result-live'); const pos=r.querySelector('.position-live');
+    if(res) res.textContent='You: '+result;
+    if(pos) pos.textContent=position;
+  };
+  const erf=x=>{
+    const sign=x<0?-1:1; x=Math.abs(x);
+    const a1=.254829592,a2=-.284496736,a3=1.421413741,a4=-1.453152027,a5=1.061405429,p=.3275911;
+    const t=1/(1+p*x);
+    return sign*(1-(((((a5*t+a4)*t+a3)*t+a2)*t+a1)*t)*Math.exp(-x*x));
+  };
+  const pct=z=>Math.max(.1,Math.min(99.9,100*.5*(1+erf(z/Math.sqrt(2)))));
+  const band=p=>p<16?'Lower than reference range':p>84?'Higher than reference range':'Within broad reference range';
+
+  // Private formal baseline calculator.
+  const calc=$('#base-calc');
+  if(calc) calc.addEventListener('click',()=>{
+    const cap=$('#base-cap').value, mean=+$('#base-mean').value, sd=+$('#base-sd').value;
+    const old=+$('#base-old').value, now=+$('#base-new').value, rel=parseFloat($('#base-rel').value);
+    const practice=parseFloat($('#base-practice').value)||0, dir=$('#base-direction').value==='low'?-1:1;
+    if(!Number.isFinite(mean)||!Number.isFinite(sd)||sd<=0||!Number.isFinite(old)||!Number.isFinite(now)){
+      $('#baseline-output').textContent='Enter a valid mean, SD, earlier score and current score.'; return;
+    }
+    const z0=dir*(old-mean)/sd, z1=dir*(now-mean)/sd, p0=pct(z0), p1=pct(z1);
+    let out='Earlier: z '+z0.toFixed(2)+' · P'+p0.toFixed(1)+'\nCurrent: z '+z1.toFixed(2)+' · P'+p1.toFixed(1)+'\nChange: '+(z1-z0>=0?'+':'')+(z1-z0).toFixed(2)+' SD on this reference scale.';
+    if(Number.isFinite(rel)&&rel>0&&rel<1){
+      const sem=sd*Math.sqrt(1-rel), sed=Math.sqrt(2)*sem;
+      const rci=dir*((now-old)-practice)/sed;
+      out+='\nPractice-adjusted RCI: '+rci.toFixed(2)+(Math.abs(rci)>=1.96?' (exceeds ±1.96)':' (within ±1.96)');
+    } else {
+      out+='\nReliable change not calculated: add a suitable test–retest reliability if the same instrument was repeated.';
+    }
+    $('#baseline-output').textContent=out;
+    setRow(cap,now+' (formal/current)', 'P'+p1.toFixed(1)+' · '+band(p1));
+    const data={cap,mean,sd,old,now,rel:Number.isFinite(rel)?rel:null,practice,dir};
+    localStorage.setItem('mg-cap-baseline',JSON.stringify(data));
+  });
+  const clearBase=$('#base-clear');
+  if(clearBase) clearBase.addEventListener('click',()=>{
+    localStorage.removeItem('mg-cap-baseline'); $('#baseline-output').textContent='Local baseline cleared.';
+  });
+
+  // Original observer MCQ.
+  const scoreBtn=$('#battery-score');
+  if(scoreBtn) scoreBtn.addEventListener('click',()=>{
+    const form=$('#battery-form');
+    const domains={
+      'verbal-comprehension':[1,2,3],
+      'numerical-reasoning':[4,5,6],
+      'abstract-reasoning':[7,8,9],
+      'error-detection':[10,11,12],
+      'perspective-taking':[13,14,15]
+    };
+    const results={}; let answered=0,total=0;
+    for(const [cap,qs] of Object.entries(domains)){
+      let correct=0,done=0;
+      qs.forEach(n=>{const el=form.querySelector('input[name="q'+n+'"]:checked'); if(el){done++;answered++;correct+=+el.value;} total++;});
+      const pc=done?100*correct/done:0;
+      results[cap]={correct,done,pc};
+      if(done===qs.length) setRow(cap,correct+'/'+qs.length+' ('+pc.toFixed(0)+'%)','Experimental · not nationally normed');
+    }
+    const domainText=Object.entries(results).map(([k,v])=>k.replaceAll('-',' ')+': '+v.correct+'/'+v.done).join('\n');
+    $('#battery-output').textContent='Answered '+answered+'/'+total+'.\n'+domainText+'\nThese are raw scores. With four options per item, chance expectation is 25%; chance is not the population average.';
+    localStorage.setItem('mg-cap-battery',JSON.stringify(results));
+  });
+  const clearBattery=$('#battery-clear');
+  if(clearBattery) clearBattery.addEventListener('click',()=>{
+    localStorage.removeItem('mg-cap-battery'); $('#battery-form').reset(); $('#battery-output').textContent='Local battery result cleared.';
+  });
+
+  // Five-trial browser reaction demonstrator.
+  let rtTrial=0,rtTimes=[],rtTimer=null,rtReady=false,rtStart=0;
+  const rtStartBtn=$('#rt-start'),rtTarget=$('#rt-target');
+  const prep=()=>{
+    rtReady=false; rtTarget.disabled=false; rtTarget.textContent='Wait for green…'; rtTarget.style.background='';
+    const delay=900+Math.random()*1800;
+    rtTimer=setTimeout(()=>{rtReady=true;rtStart=performance.now();rtTarget.textContent='TAP NOW';rtTarget.style.background='#315f38';},delay);
+  };
+  if(rtStartBtn) rtStartBtn.addEventListener('click',()=>{rtTrial=0;rtTimes=[];$('#rt-output').textContent='Trial 1 of 5';prep();});
+  if(rtTarget) rtTarget.addEventListener('click',()=>{
+    if(!rtReady){clearTimeout(rtTimer);$('#rt-output').textContent='Too early — trial restarted.';prep();return;}
+    const ms=performance.now()-rtStart;rtTimes.push(ms);rtTrial++;rtReady=false;rtTarget.disabled=true;rtTarget.style.background='';
+    if(rtTrial>=5){
+      const sorted=[...rtTimes].sort((a,b)=>a-b),med=sorted[2];
+      $('#rt-output').textContent='Median browser reaction time: '+med.toFixed(0)+' ms across 5 trials. UKB context: median 546 ms on a different matching task; no percentile is assigned.';
+      setRow('reaction-time',med.toFixed(0)+' ms median','Browser task · not directly norm-equivalent');
+      localStorage.setItem('mg-cap-rt',JSON.stringify({times:rtTimes,median:med}));
+    } else {$('#rt-output').textContent='Recorded '+ms.toFixed(0)+' ms · trial '+(rtTrial+1)+' of 5';setTimeout(prep,500);}
+  });
+
+  // Restore only locally entered values on this browser.
+  try{
+    const b=JSON.parse(localStorage.getItem('mg-cap-baseline')||'null');
+    if(b && Number.isFinite(b.now)){const z=(b.dir||1)*(b.now-b.mean)/b.sd,p=pct(z);setRow(b.cap,b.now+' (formal/current)','P'+p.toFixed(1)+' · '+band(p));}
+    const rs=JSON.parse(localStorage.getItem('mg-cap-battery')||'null');
+    if(rs) Object.entries(rs).forEach(([cap,v])=>{if(v.done===3)setRow(cap,v.correct+'/3 ('+v.pc.toFixed(0)+'%)','Experimental · not nationally normed');});
+    const rt=JSON.parse(localStorage.getItem('mg-cap-rt')||'null'); if(rt&&Number.isFinite(rt.median)) setRow('reaction-time',rt.median.toFixed(0)+' ms median','Browser task · not directly norm-equivalent');
+  }catch(e){}
+})();
+</script></body></html>
