@@ -1079,12 +1079,11 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 .spotify-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:520px){.spotify-listening summary{gap:12px;padding:18px}.spotify-record{flex-basis:48px;height:48px;font-size:1.3rem}.spotify-content{padding:0 18px 20px}.spotify-subtitle{font-size:.8rem}.spotify-toggle{flex-basis:24px}}
 
-/* Photo portfolio: vertical images at their original proportions. */
-.portfolio-slots .photo-grid{grid-template-columns:minmax(0,1fr);max-width:760px;margin-inline:auto}
-.portfolio-slots .photo-grid .media-item img,.portfolio-slots .photo-grid .media-item video{width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
-.portfolio-slots .photo-grid .media-item a{display:block}
+/* Compact portrait previews, listed vertically with uncropped photographs. */
+.portfolio-slots .photo-grid{grid-template-columns:minmax(0,210px);max-width:210px;margin-inline:0;gap:16px}
+.portfolio-slots .photo-grid .media-item a{display:block;width:160px;max-width:100%;aspect-ratio:210/297;margin:12px auto;background:#050505}
+.portfolio-slots .photo-grid .media-item img{display:block;width:100%;height:100%;max-width:100%;aspect-ratio:auto;object-fit:contain}
+.portfolio-slots .photo-grid .media-item video{display:block;width:160px;max-width:100%;height:226px;margin:12px auto;aspect-ratio:auto;object-fit:contain}
+.portfolio-slots .photo-grid .media-item figcaption{padding:10px;font-size:.85rem}
+.portfolio-slots .photo-grid .media-item a:focus-visible{outline:2px solid #8fc4ff;outline-offset:3px}
 .portfolio-slots .photo-grid:empty{display:none}
-
-.portfolio-slots .photo-grid .media-item img{width:auto;max-width:100%;margin-inline:auto;display:block}
-.portfolio-slots .more-photos{margin-block:1.5rem}
-.portfolio-slots .more-photos>summary{cursor:pointer;padding-block:.75rem}
