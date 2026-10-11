@@ -12,7 +12,7 @@
   <script src="media-config.js?v=uploads-1" defer></script><script src="media-file-tools.js?v=1" defer></script>
   <script src="media-upload-client.js?v=1" defer></script>
   <script src="media-library.js?v=uploads-1" defer></script>
-</head>
+<style>.agency-build-phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin:22px 0}.agency-build-phases details{border:1px solid #555;padding:15px 18px;background:#141414}.agency-build-phases summary{cursor:pointer;font-weight:600;line-height:1.5}.agency-build-phases p{font-size:.92rem;line-height:1.65}.agency-build-phases summary:focus-visible{outline:2px solid #9acfff;outline-offset:3px}#agency-build-case-study h3{margin-top:27px}#agency-build-case-study td{vertical-align:top}#agency-build-case-study a:focus-visible{outline:2px solid #9acfff;outline-offset:3px}</style></head>
 <body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main>
@@ -35,27 +35,39 @@
   </div>
 
   <section class="panel" aria-labelledby="purposed-mission"><h3 id="purposed-mission">Purposed Endeavours · Turning potential into purpose</h3><p>A collaborative social enterprise founded on the belief that people, not technology alone, drive innovation and social impact. Its mission connects knowledge, skills, opportunities and networks with ethical, sustainable and community-focused growth.</p><details><summary>Mission, focus &amp; collaboration</summary><p>The social-impact laboratory approach tests, measures and refines interventions. Focus areas span ESG and CSR, community wellbeing and inclusion, education and employability, and sport and health.</p><p>By aligning with ESG and CSR principles, Purposed Endeavours helps partners deliver measurable community benefit while building sustainable pathways for individuals.</p><a class="text-link" href="purposed-endeavours.html">Explore Purposed Endeavours</a></details></section>
+<section id="agency-build-case-study"><div class="wrap"><span class="status">BUSINESS PROCESS MANAGEMENT · AI SOLUTIONS · PROJECT ANALYSIS</span><h2>Agency.ai — designing an end-to-end agent service</h2>
+<p>Agency.ai is an emerging business-process-management and artificial-intelligence solutions venture. Its interface currently presents a catalogue of 50 potential agent-handled services across customer support, sales, marketing, administration, research, data, websites, operations, finance administration and education. A client can explore workflows and express interest in a scoped pilot.</p>
+<p>This development record examines how a business problem can be translated into a bounded, testable agent service. It serves as an evolving project portfolio and a reusable build framework, not a claim that all proposed integrations and agents are active.</p>
+<div class="grid"><a class="link-card" href="ai-agency/" target="_blank" rel="noopener noreferrer"><strong>Explore Agency.ai ↗</strong><small>View the 50-service catalogue and pilot enquiry interface</small></a><a class="link-card" href="ai-agency/login.html" target="_blank" rel="noopener noreferrer"><strong>Client workspace ↗</strong><small>Explore the account interface; secure registration requires backend activation</small></a></div>
+<h3>The proposed architecture</h3><p><strong>Client journey:</strong> discover service → define outcome → submit brief → agree scope and approvals → test pilot → review results.</p>
+<p><strong>Technical journey:</strong> public website → authenticated application/API → organisation-scoped database → workflow orchestrator → agent and approved tools → human review → logs and reporting.</p>
+<h3>Build process — twelve stages</h3><p>Open each step for its purpose and the evidence to retain when reviewing the implementation.</p>
+<div class="agency-build-phases"><details><summary>01 · Define the operational problem</summary><p>Identify business owner, trigger, volume, current time/cost, bottlenecks, boundaries and measurable outcomes. Compare an AI agent with a simpler rules-based workflow.</p><p><strong>Record for the portfolio:</strong> Business case and baseline.</p></details>
+<details><summary>02 · Map the process</summary><p>Document the current and proposed workflow, hand-offs, decisions, exceptions and people accountable for outcomes.</p><p><strong>Record for the portfolio:</strong> As-is and to-be process diagrams.</p></details>
+<details><summary>03 · Choose a scoped pilot</summary><p>Select one repeatable service, narrow its permissions and define success, exclusions and stopping conditions.</p><p><strong>Record for the portfolio:</strong> Pilot brief and acceptance criteria.</p></details>
+<details><summary>04 · Design inputs and outputs</summary><p>Specify request forms, required fields, knowledge sources, output formats, validation rules and missing-data responses.</p><p><strong>Record for the portfolio:</strong> Data contract and sample cases.</p></details>
+<details><summary>05 · Plan architecture</summary><p>Separate the public GitHub Pages interface from an authenticated application, API, database, agent runtime and third-party connectors. Draw data flows and trust boundaries.</p><p><strong>Record for the portfolio:</strong> System and data-flow diagrams.</p></details>
+<details><summary>06 · Implement identity and tenancy</summary><p>Use an established identity provider, email verification, MFA and server-enforced roles. Keep each client organisation's data isolated; do not store passwords or private datasets in static pages.</p><p><strong>Record for the portfolio:</strong> Auth test results and access matrix.</p></details>
+<details><summary>07 · Connect authorised tools</summary><p>Create narrowly scoped integrations for email, CRM, documents or other permitted services. Manage secrets server-side, validate incoming data and limit read/write privileges.</p><p><strong>Record for the portfolio:</strong> Connector inventory and permissions.</p></details>
+<details><summary>08 · Implement the agent workflow</summary><p>Define agent instructions, tool-call schemas, bounded execution steps, structured outputs, uncertainty rules, retry limits and escalation points. Use deterministic automation where it fits.</p><p><strong>Record for the portfolio:</strong> Workflow specification and versioned prompts.</p></details>
+<details><summary>09 · Add approvals and safeguards</summary><p>Require human approval for consequential actions, including payments, external publishing and sensitive account changes. Include privacy notices, retention rules, audit trails and failure recovery.</p><p><strong>Record for the portfolio:</strong> Risk register and approval checkpoints.</p></details>
+<details><summary>10 · Test systematically</summary><p>Test normal cases, malformed inputs, missing permissions, ambiguous requests, prompt injection, privacy leaks, service failures and unexpected tool outputs; compare results with a human-reviewed baseline.</p><p><strong>Record for the portfolio:</strong> Test matrix and reproducible findings.</p></details>
+<details><summary>11 · Deploy and monitor</summary><p>Deploy the backend securely; configure environments, version control, logging, monitoring, alerts, rollback and cost limits. Confirm the production service actually works before marketing it as active.</p><p><strong>Record for the portfolio:</strong> Release checklist and operational runbook.</p></details>
+<details><summary>12 · Evaluate and iterate</summary><p>Compare baseline with measured time, quality, escalation rate, errors, satisfaction and cost. Record what was built, changed, deferred or rejected and why.</p><p><strong>Record for the portfolio:</strong> Post-pilot evaluation and portfolio reflection.</p></details></div>
+<h3>Current build status and next implementation decisions</h3>
+<table style="width:100%;border-collapse:collapse"><thead><tr><th style="text-align:left;padding:10px;border-bottom:1px solid #666">Component</th><th style="text-align:left;padding:10px;border-bottom:1px solid #666">Status</th></tr></thead><tbody>
+<tr><td style="padding:10px;border-bottom:1px solid #444">Service catalogue and pilot-interest interface</td><td style="padding:10px;border-bottom:1px solid #444">Front-end available; individual services require feasibility and activation</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #444">Client account/workspace interface</td><td style="padding:10px;border-bottom:1px solid #444">Preview; secure registration awaits backend activation</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #444">Production agent orchestration and integrations</td><td style="padding:10px;border-bottom:1px solid #444">Proposed; not verified as deployed</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #444">Measured pilot performance and outcomes</td><td style="padding:10px;border-bottom:1px solid #444">To be documented after a controlled pilot</td></tr>
+</tbody></table>
+<details><summary>Evaluation questions for the project portfolio</summary><ul><li>Why was the problem selected, and was an agent necessary?</li><li>Which architecture, API, model and orchestration trade-offs were made?</li><li>What actually worked in tests, and which failures or constraints changed the design?</li><li>Were privacy, access controls, source provenance and approval boundaries demonstrable?</li><li>What measurable value did the pilot create relative to the previous process?</li><li>Which assumptions should be revisited in the next iteration?</li></ul></details>
+<p><small>Development journal: distinguish implemented functionality, planned work and independently verified outcomes. Public documentation excludes secrets, client data and unpublished commercial details.</small></p>
+</div></section>
   <div class="venture-diagrams">
     <article class="venture-diagram-card">
-      <div class="venture-diagram-head"><span>DIAGRAM 01</span><strong>Purposed Endeavours · portfolio structure</strong></div>
-      <div class="venture-tree" role="img" aria-label="Purposed Endeavours portfolio diagram with Graceworks Productions, Purposed Assembly, Heritage Bridge, Systemwave, The Purposed Reserve and Circolo Court and Club.">
-        <div class="venture-root">PURPOSED<br>ENDEAVOURS</div>
-        <div class="venture-trunk"></div>
-        <div class="venture-branches">
-          <div class="venture-node"><b>GRACEWORKS</b><small>Productions</small></div>
-          <div class="venture-node"><b>PURPOSED</b><small>Assembly</small><em>Comforts Key · Kingdomskids</em></div>
-          <div class="venture-node"><b>HERITAGE</b><small>Bridge</small></div>
-          <div class="venture-node"><b>SYSTEMWAVE</b><small>Technology</small><em>The Lab</em></div>
-          <div class="venture-node"><b>THE PURPOSED</b><small>Reserve</small></div>
-          <div class="venture-node"><b>CIRCOLO</b><small>Court & Club</small></div>
-        </div>
-      </div>
-      <p class="small-note">The first version shows the principal venture families and their immediate sub-projects.</p>
-    </article>
-
-    <article class="venture-diagram-card">
-      <div class="venture-diagram-head"><span>DIAGRAM 02</span><strong>Purposed Endeavours · heritage-expanded structure</strong></div>
-      <div class="venture-tree" role="img" aria-label="Second Purposed Endeavours portfolio diagram expanding Heritage Bridge into English Heritage and African Heritage.">
+      <div class="venture-diagram-head"><span>DIAGRAM 01</span><strong>Purposed Endeavours · heritage-expanded structure</strong></div>
+      <div class="venture-tree" role="img" aria-label="Purposed Endeavours portfolio diagram expanding Heritage Bridge into English Heritage and African Heritage.">
         <div class="venture-root">PURPOSED<br>ENDEAVOURS</div>
         <div class="venture-trunk"></div>
         <div class="venture-branches">
@@ -67,7 +79,7 @@
           <div class="venture-node"><b>CIRCOLO</b><small>Court & Club</small></div>
         </div>
       </div>
-      <p class="small-note">The second version preserves the same group structure while making the English and African heritage strands explicit beneath Heritage Bridge.</p>
+      <p class="small-note">The portfolio structure includes English Heritage and African Heritage beneath Heritage Bridge.</p>
     </article>
   </div>
   <div data-media-status class="notice">No venture imagery published yet.</div>
