@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Human Capability Benchmarking Experiment | Manifold Grace</title>
+<meta name="description" content="A non-diagnostic, evidence-led experiment separating observed capability, standardized benchmarks and future test scores.">
+<link rel="stylesheet" href="style.css">
+<script src="site-config.js" defer></script><script src="site-shell.js" defer></script>
+<style>
+.cap{--cap-line:#4d5556;--cap-soft:#151b1c;--cap-accent:#9bcaf0}
+.cap .wrap{max-width:1180px}
+.cap-intro{max-width:900px}
+.cap-table{width:100%;table-layout:fixed;border-collapse:collapse;margin:18px 0 8px;font-size:clamp(.72rem,1.25vw,.86rem);line-height:1.35}
+.cap-table th,.cap-table td{border-bottom:1px solid var(--cap-line);padding:8px 7px;vertical-align:top;overflow-wrap:anywhere}
+.cap-table th{text-align:left;color:#f2e5cf;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;position:sticky;top:0;background:#0d1112;z-index:1}
+.cap-table th:nth-child(1){width:26%}.cap-table th:nth-child(2){width:38%}.cap-table th:nth-child(3){width:16%}.cap-table th:nth-child(4){width:20%}
+.cap-table .group td{background:#151b1c;color:#cdb58b;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding-top:12px}
+.cap-table small{display:block;color:#aeb7b6;margin-top:3px}
+.pending{color:#cfcfcf}.norm{color:#a8d5f3}.pos{font-weight:700}
+.cap-key{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:16px 0}
+.cap-key div{border:1px solid var(--cap-line);padding:10px;background:var(--cap-soft);font-size:.8rem}
+.cap details{border-top:1px solid var(--cap-line);padding:13px 0}
+.cap summary{cursor:pointer;font-weight:650;color:#eee4d3}
+.cap details p,.cap details li{font-size:.88rem;line-height:1.6}
+.test-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.test-grid details{border:1px solid var(--cap-line);padding:12px;background:var(--cap-soft)}
+.test-grid summary{font-size:.86rem}
+.cap-note{border-left:3px solid var(--cap-accent);padding:10px 14px;background:#121819;margin:14px 0}
+.cap-source-list li{margin:8px 0}
+.cap-source-list a{color:#91c5ff;text-decoration:underline}
+@media(max-width:760px){
+  .cap-table{font-size:.72rem}
+  .cap-table th,.cap-table td{padding:7px 4px}
+  .cap-table th:nth-child(1){width:29%}.cap-table th:nth-child(2){width:39%}.cap-table th:nth-child(3){width:14%}.cap-table th:nth-child(4){width:18%}
+  .cap-key{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .test-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
+<main class="cap">
+<div class="page-hero"><div class="wrap">
+<div class="eyebrow">RESEARCH / HCI / PSYCHOMETRIC METHOD</div>
+<h1>Human Capability Benchmarking Experiment</h1>
+<p class="page-intro cap-intro">A structured experiment for separating three different kinds of evidence: long-run behavioural observations from human–AI interaction, published population or clinical-research benchmarks, and future task scores collected under defined conditions. It is not a diagnosis and does not treat conversational impressions as psychometric results.</p>
+</div></div>
+
+<section><div class="wrap">
+<span class="status">METHOD FIRST</span>
+<h2>How a higher-or-lower conclusion will be earned</h2>
+<p>The experiment will not label a capability “above average” or “below average” from opinion alone. Each measurable capability needs an operational task, a suitable comparison sample and a numerical result. Where a test supplies age-adjusted standard scores, those are preferred. Where only raw population data exist, the source population, age range, mean or median, dispersion and direction of better performance are recorded before comparison.</p>
+<div class="cap-key">
+<div><strong>Standard score</strong><br>Common index convention: mean 100, SD 15.</div>
+<div><strong>Scaled score</strong><br>Common subtest convention: mean 10, SD 3.</div>
+<div><strong>T-score</strong><br>Common convention: mean 50, SD 10.</div>
+<div><strong>Percentile</strong><br>P50 is the median; P84 is about +1 SD for a normal distribution.</div>
+</div>
+<p class="cap-note"><strong>Experimental classification rule:</strong> below P16 = lower than the reference mean by roughly one standard deviation or more; P16–P84 = broad reference range; above P84 = higher than the reference mean by roughly one standard deviation or more. Source-provided percentile cut-offs take priority where the distribution is skewed. “Mode” is retained when a source reports it, but many continuous cognitive datasets do not publish a useful modal value; median/IQR is often more appropriate for skewed timing or error data.</p>
+</div></section>
+
+<section id="capability-table"><div class="wrap">
+<span class="status">AT-A-GLANCE CONTROL TABLE</span>
+<h2>Capability map</h2>
+<p>“Pending” means that conversation evidence may suggest a hypothesis, but no numerical classification will be published until a suitable benchmark and task result exist. Reference codes are expanded in the Sources dropdown below.</p>
+<table class="cap-table" aria-label="Human capability benchmark table">
+<thead><tr><th>Capability</th><th>Operational measure / reference</th><th>Score</th><th>Position</th></tr></thead>
+<tbody>
+<tr class="group"><td colspan="4">Memory, learning & reasoning</td></tr>
+<tr><td>Working memory</td><td>Digit/span or updating task; UKB numeric memory <span class="norm">UKB</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Immediate verbal recall</td><td>Word-list immediate recall; age-appropriate norms <span class="norm">ANDI / HCAP</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Delayed verbal recall</td><td>Delayed word-list recall <span class="norm">ANDI / HCAP</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Visual memory</td><td>Visual-location or pairs errors; UKB reports median errors <span class="norm">UKB</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Prospective memory</td><td>Remember-to-act task; UKB success proportion <span class="norm">UKB</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Associative learning</td><td>Paired-associate / concept-link task <span class="norm">CANTAB-style domain</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Verbal comprehension</td><td>Age-adjusted standardized verbal index where licensed <span class="norm">ACS/WAIS convention</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Verbal fluency</td><td>Words in 60 seconds; age-banded norms <span class="norm">Murphy / UK category norms</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Abstract / fluid reasoning</td><td>Novel rule or matrix-style reasoning; UKB verbal-numerical reasoning as population reference <span class="norm">UKB</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Numerical reasoning</td><td>Timed novel quantitative items <span class="norm">UKB / standardized score</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Visual-spatial reasoning</td><td>Line orientation / rotation / spatial sequence <span class="norm">ANDI</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Categorisation</td><td>Semantic category production and rule induction <span class="norm">UK category norms</span></td><td class="pending">Pending</td><td>—</td></tr>
+
+<tr class="group"><td colspan="4">Attention, speed & executive control</td></tr>
+<tr><td>Processing speed</td><td>Timed coding/search analogue; standardized or age-banded norm <span class="norm">ANDI / ACS</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Simple reaction time</td><td>Milliseconds; repeated trials; median preferred <span class="norm">UKB</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Choice reaction time</td><td>Milliseconds and errors across alternatives <span class="norm">CANTAB-style domain</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Selective attention</td><td>Target detection amid distractors; accuracy + latency</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Sustained attention</td><td>Longer vigilance task; misses, false alarms and variability</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Divided attention</td><td>Dual-task cost relative to single-task baseline</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Impulse / response inhibition</td><td>Go/no-go plus interference task <span class="norm">Murphy executive norms</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Cognitive flexibility</td><td>Rule-switch cost, accuracy after rule change</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Task switching</td><td>Switch-cost latency/error difference; trail-style sequencing <span class="norm">ANDI / UKB-related trails</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Planning</td><td>Minimum-move planning puzzles; completion and excess moves</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Sequencing</td><td>Ordered multi-step reconstruction; time + accuracy</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Organisation / structure</td><td>Information-organisation task; scoring rubric + reliability check</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Planning & prioritisation</td><td>Constraint-based scheduling task; objective quality score</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Error detection & correction</td><td>Injected-error review: detection rate, correction accuracy, time</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Metacognitive calibration</td><td>Confidence minus actual accuracy; calibration error</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Decision quality</td><td>Consistency with stated objectives under controlled trade-offs</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Risk / speed / value calibration</td><td>Choices under known probabilities; regret and consistency metrics</td><td class="pending">Pending</td><td>—</td></tr>
+
+<tr class="group"><td colspan="4">Creative, social & emotional capability</td></tr>
+<tr><td>Creative reframing</td><td>Alternative-framing task; novelty, usefulness and number of valid reframes</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Divergent thinking</td><td>Alternative-uses style task; fluency, flexibility, originality</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Strategy formation</td><td>Novel scenario planning scored against explicit constraints</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Perspective-taking</td><td>Multi-agent scenario inference; competing-viewpoint accuracy</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Social cognition</td><td>Social inference / intention task; accuracy and uncertainty</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Emotion recognition</td><td>Validated emotion-identification task where appropriate <span class="norm">CANTAB domain</span></td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Empathic reasoning</td><td>Scenario-based identification of another person's likely needs; separate from self-report empathy</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Emotionality / reactivity</td><td>Self-report + repeated behavioural context; not inferred from “shouting” alone</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Emotion regulation</td><td>Validated self-report or controlled reappraisal task; distinct from emotionality</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Stress tolerance</td><td>Performance stability under mild time pressure; subjective cost reported separately</td><td class="pending">Pending</td><td>—</td></tr>
+
+<tr class="group"><td colspan="4">Self-regulation, work style & adaptive functioning</td></tr>
+<tr><td>Self-discipline</td><td>Longitudinal behaviour + validated trait measure; not equated with overwork</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Distraction resistance</td><td>Performance loss with irrelevant stimuli</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Task initiation</td><td>Latency to begin predefined tasks across interest levels</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Goal maintenance</td><td>Completion of delayed multi-step goal with interruptions</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Time management</td><td>Planned-versus-actual duration and deadline adherence across repeated tasks</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Persistence</td><td>Persistence after failure or complexity; benefit and time-cost recorded separately</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Resilience / recovery</td><td>Recovery after setback across repeated real tasks; not a single cognitive score</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Learning agility</td><td>Improvement slope after feedback across repeated unfamiliar tasks</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Adaptability</td><td>Performance after changed rules, context or tools</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Communication</td><td>Accuracy, clarity, audience adaptation and information retention</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Independent work</td><td>Completion quality under low supervision; context-sensitive</td><td class="pending">Pending</td><td>—</td></tr>
+<tr><td>Collaboration</td><td>Shared-task contribution, coordination and correction; requires multi-person evidence</td><td class="pending">Pending</td><td>—</td></tr>
+</tbody>
+</table>
+<p class="cap-note"><strong>Current conclusion:</strong> no final “higher than average” or “lower than average” labels are entered yet. Longitudinal chat evidence can generate hypotheses about strengths and variability, but the user requested a numerical basis; the table therefore waits for standardized or transparently benchmarked results.</p>
+</div></section>
+
+<section id="planned-tests"><div class="wrap">
+<span class="status">SPACE-SAVING TEST PLAN</span>
+<h2>Candidate tests to run</h2>
+<p>These are non-diagnostic research tasks. Where a proprietary clinical instrument is the appropriate comparator, the site will not reproduce protected test items; it will instead use an original analogue or recommend formal administration by a qualified professional if a clinical interpretation is needed.</p>
+<div class="test-grid">
+<details><summary>Memory battery</summary><p>Immediate recall, delayed recall, working-memory updating, visual-location memory and prospective memory. Record raw score, retention percentage and confidence.</p></details>
+<details><summary>Reaction & processing speed</summary><p>Simple and choice reaction-time trials, using median latency, error rate and within-person variability.</p></details>
+<details><summary>Attention & inhibition</summary><p>Visual search, sustained target detection, go/no-go and a colour-word interference analogue.</p></details>
+<details><summary>Switching & flexibility</summary><p>Alternating-rule and number/letter sequencing tasks; measure switch cost and errors.</p></details>
+<details><summary>Verbal fluency & categorisation</summary><p>Timed semantic and letter-generation tasks plus category-boundary judgements; compare only with compatible norms.</p></details>
+<details><summary>Reasoning</summary><p>Original verbal, numerical, abstract and visual-spatial items with difficulty calibration across repeated sets.</p></details>
+<details><summary>Planning & prioritisation</summary><p>Constraint-based scheduling and minimum-move puzzles. Score feasibility, efficiency and unnecessary steps.</p></details>
+<details><summary>Error detection</summary><p>Review a controlled document or system description containing seeded inconsistencies; score detection and correction.</p></details>
+<details><summary>Metacognition</summary><p>After each task, estimate confidence. Compare confidence with actual performance to calculate calibration error.</p></details>
+<details><summary>Creative association</summary><p>Alternative uses, reframing and remote-association-style original items. Separate idea quantity from novelty and usefulness.</p></details>
+<details><summary>Social reasoning</summary><p>Short scenarios with incomplete information; score perspective-taking, uncertainty handling and avoidance of unsupported motive claims.</p></details>
+<details><summary>Work-style longitudinal measures</summary><p>Track planned versus actual duration, start latency, interruptions, completion, recovery after setbacks and learning slope across real projects.</p></details>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<details open><summary>Peripheral considerations: what the scores can and cannot predict</summary>
+<p>Cognitive performance can be relevant to training and job performance, but no single score determines employability, business success or the “right” way of life. A 2026 review of contemporary meta-analytic evidence reported modest correlations between general mental ability and overall job performance in newer datasets, substantially below older headline estimates. Entrepreneurship research likewise finds associations between some personality patterns and entrepreneurial status or outcomes, but individual effects are generally small and heterogeneous.</p>
+<p>Employment outcomes also reflect opportunity, health, education, discrimination, labour-market conditions, social capital, accommodations, finance, sector choice and employer practice. UK official statistics therefore belong beside — not inside — the cognitive table. For example, the Buckland Review reported that around 3 in 10 working-age autistic people were in employment, compared with around 5 in 10 disabled people overall and 8 in 10 non-disabled people; that is an outcome statistic, not a cognitive-performance norm.</p>
+<p>Accordingly, high scores may support hypotheses about particular work demands; lower scores may identify support needs, compensating strengths or environments that fit better. Neither establishes a person's worth, career ceiling or entitlement to education.</p>
+</details>
+
+<details><summary>Observed interaction evidence: hypothesis layer only</summary>
+<p>Longitudinal conversations can provide ecological evidence about behaviours such as sustained research, error correction, conceptual association, planning, reframing and persistence. They are valuable because they occur across real tasks, but they are not standardized conditions. This layer will therefore be stored separately from numerical psychometric results and will never be used to manufacture a percentile.</p>
+</details>
+
+<details><summary>Age, education, language and test conditions</summary>
+<p>Norms can change materially with age, education, language, device, sleep, fatigue, practice effects and testing environment. A valid comparison must use the correct reference group and record the conditions under which the task was completed. Adult-only norms will not be used to classify a younger participant, and older-adult cohort data will not be treated as a universal population average.</p>
+</details>
+
+<details id="sources"><summary>Sources & benchmark notes</summary>
+<ul class="cap-source-list">
+<li><strong>UKB — UK Biobank cognitive data.</strong> A published analysis of 480,416 participants aged roughly 40–70 reported numeric-memory mean 6.70 (SD 1.34), verbal-numerical-reasoning mean 5.99 (SD 2.16), reaction-time median 546 ms (IQR 130), visual-memory errors median 3 (IQR 3), and 93.9% success on the prospective-memory item. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4844168/" target="_blank" rel="noopener noreferrer">Open paper ↗</a></li>
+<li><strong>Murphy — adult lifespan executive-function norms.</strong> UK neuropsychology researchers published age-banded Stroop, letter-fluency and Hayling norms across ages 18–92. For example, the 35–49 group had mean Stroop correct 119.25 (SD 20.71) and COWAT-S mean 17.10 (SD 4.78); the paper provides percentile tables for each age band. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12976820/" target="_blank" rel="noopener noreferrer">Open paper ↗</a></li>
+<li><strong>ANDI — Advanced Neuropsychological Diagnostics Infrastructure.</strong> Aggregated control datasets include Trail Making A/B, letter and semantic fluency, Stroop, delayed verbal and visual recall, coding and other neuropsychological measures across large pooled samples. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5071354/" target="_blank" rel="noopener noreferrer">Open database paper ↗</a></li>
+<li><strong>UK category-production norms.</strong> UK researchers published semantic-category production data for 117 concrete and abstract categories, useful for categorisation and semantic-fluency research. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10126059/" target="_blank" rel="noopener noreferrer">Open paper ↗</a></li>
+<li><strong>CANTAB normative work.</strong> Cambridge Cognition reports adult normative samples of around 750 participants per collection block across episodic memory, emotion recognition, executive functioning, working memory and other domains, with age-related effects. <a href="https://cambridgecognition.com/age-related-cognitive-changes-in-the-cambridge-neuropsychological-test-automated-battery-cantab-normative-sample/" target="_blank" rel="noopener noreferrer">Summary ↗</a></li>
+<li><strong>ACS / Wechsler score conventions.</strong> Pearson's Advanced Clinical Solutions documentation describes scaled scores with mean 10/SD 3, index scores with mean 100/SD 15, and T-scores with mean 50/SD 10. <a href="https://www.pearsonassessments.com/content/dam/school/global/clinical/us/assets/acs/acs-manual-chapter-1.pdf" target="_blank" rel="noopener noreferrer">Manual chapter ↗</a></li>
+<li><strong>ONS — socioeconomic outcomes, not psychometric norms.</strong> ONS 2021 disability outcomes reported employment 53.5% for disabled versus 81.6% for non-disabled people, with autism at 29.0% among respondents reporting it as their main impairment; degree attainment was 24.9% versus 42.7%. <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/disability/articles/outcomesfordisabledpeopleintheuk/2021" target="_blank" rel="noopener noreferrer">ONS release ↗</a></li>
+<li><strong>Buckland Review of Autism Employment.</strong> The 2024 government-backed review reports around 3 in 10 working-age autistic people in employment versus about 5 in 10 disabled people overall and 8 in 10 non-disabled people. <a href="https://www.gov.uk/government/publications/the-buckland-review-of-autism-employment-report-and-recommendations/the-buckland-review-of-autism-employment-report-and-recommendations" target="_blank" rel="noopener noreferrer">GOV.UK report ↗</a></li>
+<li><strong>Job-performance interpretation.</strong> A 2026 review of newer and older meta-analytic evidence reports that general mental ability predicts job performance, but contemporary corrected estimates are modest and vary with job characteristics. <a href="https://link.springer.com/article/10.1007/s10869-026-10146-8" target="_blank" rel="noopener noreferrer">Journal article ↗</a></li>
+<li><strong>Entrepreneurship interpretation.</strong> Zhao &amp; Seibert's meta-analysis found small individual Big Five differences between entrepreneurs and managers, with a moderate multivariate relationship across the set of traits (R=.37). <a href="https://pubmed.ncbi.nlm.nih.gov/16551182/" target="_blank" rel="noopener noreferrer">PubMed record ↗</a></li>
+</ul>
+</details>
+</div></section>
+</main>
+<footer><div class="wrap" data-site-footer></div></footer>
+</body></html>
