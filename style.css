@@ -1090,3 +1090,10 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 
 .portfolio-slots .photo-grid .media-item a.trim-screen-border{aspect-ratio:var(--photo-ratio);overflow:hidden}
 .portfolio-slots .photo-grid .media-item a.trim-screen-border img{margin-top:var(--photo-offset)}
+
+/* Requested headshot grouping: two portraits, three studio views, then Afro. */
+.portfolio-slots .headshot-top-row{grid-template-columns:repeat(2,minmax(0,210px));max-width:436px}
+.portfolio-slots .headshot-studio-row{grid-template-columns:repeat(3,minmax(0,210px));max-width:662px}
+.portfolio-slots .headshot-top-row .media-item a,.portfolio-slots .headshot-studio-row .media-item a{max-width:calc(100% - 24px)}
+.portfolio-slots .headshot-afro-row{grid-template-columns:minmax(0,264px);max-width:264px}
+.portfolio-slots .headshot-afro-row .media-item a{width:240px;max-width:calc(100% - 24px)}
