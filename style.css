@@ -1108,3 +1108,13 @@ body>header [data-site-nav] a.nav-research-feature:active{color:#ff6255!importan
 /* Section 4 uses the same portrait framing for every preview. */
 .portfolio-slots #photos-three-quarter .media-item a{width:200px;max-width:calc(100% - 24px);aspect-ratio:4/5;overflow:hidden}
 .portfolio-slots #photos-three-quarter .media-item img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+
+/* Lifestyle: relaxed portrait above a balanced pair, casual tea separately below. */
+.portfolio-slots .lifestyle-relaxed-row{grid-template-columns:minmax(0,1fr);max-width:520px}
+.portfolio-slots .lifestyle-relaxed-row .media-item a{width:calc(100% - 24px);max-width:none}
+.portfolio-slots .lifestyle-natural-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:520px}
+.portfolio-slots .lifestyle-natural-row .media-item{min-width:0}
+.portfolio-slots .lifestyle-natural-row .media-item a{width:calc(100% - 24px);max-width:none;aspect-ratio:4/5;overflow:hidden}
+.portfolio-slots .lifestyle-natural-row .media-item img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 30%}
+.portfolio-slots .lifestyle-tea-row{grid-template-columns:minmax(0,210px);max-width:210px;margin-top:28px}
+.portfolio-slots .lifestyle-tea-row .media-item a{width:160px;max-width:calc(100% - 24px)}
