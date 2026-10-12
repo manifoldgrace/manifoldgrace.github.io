@@ -2,3 +2,17 @@
 
 /* Sunshine travel identity and expandable guide library */
 .travel-page .sun-mark{display:inline-block;color:#d99432;font-family:Georgia,serif;font-size:.68em;vertical-align:12%;text-shadow:0 0 22px #f2c87c88}.travel-page .travel-hero{background:radial-gradient(circle at 82% 12%,#f9e4b3 0,#e1ece4 43%,#e1ece4 100%)}.travel-page .travel-guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}.travel-page .travel-guide-grid details{margin:0;padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}.travel-page .travel-guide-grid summary{font-family:Georgia,serif;font-size:1.14rem}.travel-page .travel-guide-grid p{margin:12px 0 0}.travel-page .travel-guide-grid a{display:inline-block;margin-top:10px;text-decoration:underline}.travel-page #travel-guides{background:#f6f0e4}@media(max-width:600px){.travel-page .travel-guide-grid{grid-template-columns:1fr}.travel-page .sun-mark{font-size:.56em}}
+
+/* Sunshine emblem and additive travel toolkit — existing destination styles preserved */
+.travel-page .travel-hero{position:relative;overflow:hidden}
+.travel-page .travel-hero::after{content:"";position:absolute;right:-58px;top:-70px;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,#f4c76b55 0 26%,#f4c76b25 27% 48%,transparent 70%);pointer-events:none}
+.travel-page .travel-hero .wrap{position:relative;z-index:1}
+.travel-page .sun-mark{font-size:.76em;color:#d58b28;text-shadow:0 0 24px #f4cc78aa}
+.travel-page #travel-toolkit{background:#fbf7ee}
+.travel-page .travel-toolkit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:24px}
+.travel-page .travel-toolkit-grid details{margin:0;border:1px solid #d9dfd3;border-radius:16px;background:#fffdf8;padding:22px;box-shadow:0 4px 18px #233b3a09}
+.travel-page .travel-toolkit-grid summary{font-family:Georgia,serif;font-size:1.15rem}
+.travel-page .travel-toolkit-grid details[open]{border-color:#d3b17a}
+.travel-page .travel-toolkit-grid li{margin:8px 0}
+.travel-page .travel-toolkit-note{margin-top:22px;color:#855c25;font-weight:600}
+@media(max-width:650px){.travel-page .travel-toolkit-grid{grid-template-columns:1fr}.travel-page .travel-hero::after{width:160px;height:160px;right:-50px;top:-40px}}
