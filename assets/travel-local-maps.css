@@ -1,0 +1,12 @@
+/* Interactive local maps, shared by geographic travel entries. */
+.travel-page .local-area-map{margin:18px 0 6px;min-width:0}
+.travel-page .local-area-map-viewport{position:relative;width:100%;height:360px;min-height:280px;border:1px solid #b8cbbd;border-radius:14px;overflow:hidden;background:#e1ece4;display:grid;place-items:center}
+.travel-page .local-area-map-frame{display:block;width:100%;height:100%;border:0}
+.travel-page .local-area-map-load{max-width:90%;margin:20px}
+.travel-page .local-area-map-caption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:10px 2px;font-size:.84rem;color:#455d54}
+.travel-page .local-area-map-caption a{text-decoration:underline}
+.travel-page .local-area-map-details{margin:14px 0;padding:12px 14px;border:1px solid #d9dfd3;border-radius:12px;background:#fffdf8}
+.travel-page .local-area-map-details>summary{font-size:1rem}
+.travel-page .map-panel{min-height:360px}
+.travel-page .map-panel iframe{height:360px!important;min-height:360px}
+@media(max-width:650px){.travel-page .local-area-map-viewport{height:320px}.travel-page .map-panel iframe{height:320px!important;min-height:320px}.travel-page .map-panel{min-height:320px}.travel-page .local-area-map-caption{display:block}.travel-page .local-area-map-caption a{display:block;margin-top:6px}}
