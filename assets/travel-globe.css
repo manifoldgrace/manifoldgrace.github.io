@@ -1,0 +1,20 @@
+/* Travel globe: user-controlled motion, no automatic rotation. */
+.travel-globe-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,1fr);gap:28px;align-items:center}
+.travel-globe-stage{min-width:0;position:relative;border-radius:24px;background:radial-gradient(ellipse at center,#e1ece4,#f6f0e4 72%);overflow:hidden}
+.travel-globe-stage canvas{display:block;width:100%;aspect-ratio:1;height:auto;touch-action:none;cursor:grab}
+.travel-globe-stage canvas.is-dragging{cursor:grabbing}
+.travel-globe-panel{background:#fffdf8;border:1px solid #d9dfd3;border-radius:18px;padding:24px;min-width:0}
+.travel-globe-panel label{display:block;font-weight:600;margin-bottom:8px}
+.travel-globe-panel select{width:100%;min-height:46px;padding:10px;border:1px solid #8d9e94;border-radius:8px;font:inherit;background:#fff;color:#233b3a}
+.travel-globe-panel h3{font-family:Georgia,serif;font-size:1.6rem;margin:22px 0 10px}
+.travel-globe-panel p{line-height:1.65}
+.travel-globe-panel a{display:inline-block;margin:8px 12px 8px 0;text-decoration:underline}
+.travel-globe-panel a:not([href]){display:none}
+.travel-globe-controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin:12px 0}
+.travel-globe-controls button{min-height:44px;min-width:44px;padding:8px 12px}
+.travel-globe-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;font-size:.88rem;padding:4px 12px 16px}
+.travel-globe-legend span::before{content:'';display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;background:#ee9971}
+.travel-globe-legend span:last-child::before{background:#f2c768}
+.travel-globe-credit{font-size:.82rem;margin-top:14px}
+#travel-globe{scroll-margin-top:24px}
+@media(max-width:850px){.travel-globe-layout{grid-template-columns:1fr}.travel-globe-stage{max-width:650px;width:100%;margin:0 auto}.travel-globe-panel{padding:20px}}
