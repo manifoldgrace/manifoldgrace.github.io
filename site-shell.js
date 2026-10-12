@@ -13,6 +13,7 @@
     ["Labour Market Analysis","labour-market-analysis.html"],
     ["Trading","trading.html"],
     ["Socials","socials.html"],
+    ["Travel","travel.html"],
     ["Services","services.html"],
     ["Creative","creative.html"],
     ["Public","public.html"],
