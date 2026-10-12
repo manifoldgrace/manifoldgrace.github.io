@@ -50,11 +50,28 @@ $("practice-cancel").addEventListener("click",()=>{attempt=null;$("practice-area
 function exportCSV(rows,name){const quote=value=>'"'+String(value).replace(/^[=+@-]/,"'"+String(value).charAt(0)).replaceAll('"','""')+'"';const data=rows.map(row=>row.map(quote).join(",")).join("\r\n");const url=URL.createObjectURL(new Blob(["\ufeff"+data],{type:"text/csv;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 $("export-sessions").addEventListener("click",()=>exportCSV([["Session","Task","Correct","Seconds"],...sessions.map(x=>[x.date,x.task,x.correct,x.seconds.toFixed(1)])],"learning-practice.csv"));
 function renderGoals(){
- const list=$("cpd-list");list.replaceChildren();
- goals.forEach((goal,i)=>{const row=document.createElement("div");row.className="cpd-row";const title=document.createElement("strong");title.textContent=goal.title;row.append(title);const select=document.createElement("select");select.setAttribute("aria-label","Status for "+goal.title);
- ["Planned","Exploring","Studying","Assessment booked","Completed"].forEach(status=>{const option=document.createElement("option");option.value=status;option.textContent=status;option.selected=status===goal.status;select.append(option);});
- select.addEventListener("change",()=>{goal.status=select.value;save("mg-learning-cpd-v1",goals);});row.append(select);
- const remove=document.createElement("button");remove.type="button";remove.textContent="Remove";remove.setAttribute("aria-label","Remove "+goal.title);remove.addEventListener("click",()=>{goals.splice(i,1);save("mg-learning-cpd-v1",goals);renderGoals();});row.append(remove);list.append(row);});
+ const quick=$("cpd-list"),other=$("cpd-rest");quick.replaceChildren();other.replaceChildren();
+ goals.forEach((goal,i)=>{
+  const row=document.createElement("div");row.className="cpd-row";
+  const label=document.createElement("label");label.className="cpd-check";
+  const check=document.createElement("input");check.type="checkbox";check.checked=goal.status==="Completed";
+  check.setAttribute("aria-label","Mark "+goal.title+" completed");
+  const title=document.createElement("span");title.textContent=goal.title;
+  label.append(check,title);row.append(label);
+  const badge=document.createElement("small");badge.className="cpd-state";badge.textContent=goal.status||"Planned";row.append(badge);
+  check.addEventListener("change",()=>{goal.status=check.checked?"Completed":"Planned";save("mg-learning-cpd-v1",goals);renderGoals()});
+  if(i>=5){
+   const tools=document.createElement("div");tools.className="cpd-tools";
+   const select=document.createElement("select");select.setAttribute("aria-label","Status for "+goal.title);
+   ["Planned","Exploring","Studying","Assessment booked","Completed"].forEach(status=>{const option=document.createElement("option");option.value=status;option.textContent=status;option.selected=status===goal.status;select.append(option)});
+   select.addEventListener("change",()=>{goal.status=select.value;save("mg-learning-cpd-v1",goals);renderGoals()});tools.append(select);
+   const remove=document.createElement("button");remove.type="button";remove.textContent="Remove";remove.setAttribute("aria-label","Remove "+goal.title);
+   remove.addEventListener("click",()=>{goals.splice(i,1);save("mg-learning-cpd-v1",goals);renderGoals()});tools.append(remove);row.append(tools);
+  }
+  (i<5?quick:other).append(row);
+ });
+ if(!goals.length){const empty=document.createElement("p");empty.className="lab-note";empty.textContent="No goals yet. Expand Manage to add one.";quick.append(empty)}
+ if(goals.length<=5){const empty=document.createElement("p");empty.className="lab-note";empty.textContent="All current goals appear above.";other.append(empty)}
 }
 $("cpd-add").addEventListener("submit",event=>{event.preventDefault();const title=$("cpd-title").value.trim();if(!title)return;goals.push({title,status:"Planned"});save("mg-learning-cpd-v1",goals);$("cpd-title").value="";renderGoals();});
 $("cpd-export").addEventListener("click",()=>exportCSV([["Learning goal","Status"],...goals.map(x=>[x.title,x.status])],"cpd-learning-plan.csv"));
