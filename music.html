@@ -17,7 +17,24 @@
   <script src="media-library.js?v=uploads-1" defer></script>
 <style>
 .studio-panel{border:1px solid #43575d;background:#0b1116;color:#e5f0f0;padding:clamp(14px,2.8vw,28px);margin-top:24px;border-radius:12px}.studio-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.studio-heading h3{margin:0}.studio-eyebrow{font-size:.72rem;color:#9bc4c5;letter-spacing:.12em;text-transform:uppercase}.studio-status-pill{border:1px solid #52716e;border-radius:22px;padding:6px 12px;font-size:.74rem;color:#aaddc9}.studio-screen{position:relative;margin:19px 0 10px;background:#0d1419;border:1px solid #355159;border-radius:8px;overflow:hidden}.studio-screen canvas,.studio-screen video{width:100%;height:clamp(210px,35vw,345px);display:block;object-fit:contain}.studio-screen [hidden]{display:none}.studio-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.studio-controls button,.studio-controls select,.studio-controls label{font:inherit;font-size:.85rem;background:#17252b;color:#edf8f7;border:1px solid #4e6b70;padding:9px 12px;border-radius:5px;cursor:pointer}.studio-controls select{cursor:pointer}.studio-controls button:hover,.studio-controls label:hover{border-color:#a6d6d0}.studio-controls input[type=file]{position:absolute;width:1px;height:1px;opacity:0}.studio-controls label:focus-within{outline:2px solid #95d7d4;outline-offset:3px}.studio-control-line{display:flex;align-items:center;gap:10px;margin:12px 0}.studio-control-line input[type=range]{flex:1;accent-color:#8de4d5}.studio-controls input[type=range]{accent-color:#8de4d5}.studio-track{font-size:.82rem;color:#aac1c1;overflow-wrap:anywhere}.studio-track strong{color:#f7f7f7}.studio-help{font-size:.86rem;color:#b3caca;line-height:1.6}.studio-panel :is(button,select,input):focus-visible{outline:2px solid #9ce3d8;outline-offset:3px}.studio-tech details{border-top:1px solid #42575e;padding:14px 0}.studio-tech summary{cursor:pointer;color:#e8efed}.studio-tech p{font-size:.9rem;line-height:1.65}@media(max-width:700px){.studio-controls{align-items:stretch}.studio-controls button,.studio-controls label{flex:1}.studio-screen canvas,.studio-screen video{height:230px}}
-</style><style>.original-music-shell{margin:18px 0 10px;padding:clamp(18px,3vw,30px);background:#101718;color:#edf5f0;border:1px solid #53635e;border-radius:10px}.original-music-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.original-music-top h3{margin:5px 0}.original-music-eyebrow{font-size:.73rem;letter-spacing:.12em;color:#a5d4c4}.original-music-state{font-size:.72rem;border:1px solid #718d83;border-radius:20px;padding:6px 10px;color:#c7e3d7}.original-music-albums{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:16px}.original-album{min-width:0}.original-album h3{margin:18px 0 5px;font-size:1.05rem}.original-album-year{font-size:.8rem;color:#bacac3}.original-album iframe{display:block;border-radius:12px}.original-album a{display:inline-block;color:#a7d8fd;margin-top:9px}.original-music-empty{text-align:center;padding:24px 8px 12px;max-width:750px;margin:auto}.original-music-empty strong{display:block;font-size:1.15rem}.original-music-empty p{font-size:.92rem;line-height:1.65;color:#c7d1cf}.original-music-note-icon{display:inline-block;font-size:2.5rem;color:#a9d9bb}.original-music-caption{font-size:.8rem!important}.original-music-details{border:1px solid #555;padding:15px 18px;margin:0 0 18px}.original-music-details summary{cursor:pointer;font-weight:600}.original-music-details p{font-size:.9rem;line-height:1.65}.original-music-details code{overflow-wrap:anywhere}@media(max-width:650px){.original-music-albums{grid-template-columns:1fr}}</style><script src="assets/original-music-catalog.js" defer></script><script src="assets/original-music-releases.js" defer></script></head>
+</style><style>.original-music-shell{margin:18px 0 10px;padding:clamp(18px,3vw,30px);background:#101718;color:#edf5f0;border:1px solid #53635e;border-radius:10px}.original-music-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.original-music-top h3{margin:5px 0}.original-music-eyebrow{font-size:.73rem;letter-spacing:.12em;color:#a5d4c4}.original-music-state{font-size:.72rem;border:1px solid #718d83;border-radius:20px;padding:6px 10px;color:#c7e3d7}.original-music-albums{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,350px),1fr));gap:16px}.original-album{min-width:0}.original-album h3{margin:18px 0 5px;font-size:1.05rem}.original-album-year{font-size:.8rem;color:#bacac3}.original-album iframe{display:block;border-radius:12px}.original-album a{display:inline-block;color:#a7d8fd;margin-top:9px}.original-music-empty{text-align:center;padding:24px 8px 12px;max-width:750px;margin:auto}.original-music-empty strong{display:block;font-size:1.15rem}.original-music-empty p{font-size:.92rem;line-height:1.65;color:#c7d1cf}.original-music-note-icon{display:inline-block;font-size:2.5rem;color:#a9d9bb}.original-music-caption{font-size:.8rem!important}.original-music-details{border:1px solid #555;padding:15px 18px;margin:0 0 18px}.original-music-details summary{cursor:pointer;font-weight:600}.original-music-details p{font-size:.9rem;line-height:1.65}.original-music-details code{overflow-wrap:anywhere}@media(max-width:650px){.original-music-albums{grid-template-columns:1fr}}</style><script src="assets/original-music-catalog.js" defer></script><script src="assets/original-music-releases.js" defer></script><style>
+#music-theory .theory-panel{background:#0b1116;color:#edf5f0;border:1px solid #53635e;border-radius:12px;padding:clamp(16px,3vw,30px)}
+#music-theory .theory-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+#music-theory .fifths-wheel{position:relative;aspect-ratio:1;max-width:440px;width:100%;margin:10px auto;background:radial-gradient(circle,transparent 36%,#1b2c31 37%,#1b2c31 38%,transparent 39%);border-radius:50%}
+#music-theory .fifths-wheel button{position:absolute;transform:translate(-50%,-50%);width:clamp(42px,11vw,66px);height:clamp(42px,11vw,66px);border-radius:50%;border:1px solid #617f80;background:#15242b;color:#fff;font:inherit;cursor:pointer;font-weight:600}
+#music-theory .fifths-wheel button[aria-pressed=true]{background:#b9e3d3;color:#071412;border-color:#b9e3d3}
+#music-theory .wheel-centre{position:absolute;inset:36% 28%;text-align:center;display:grid;align-content:center;pointer-events:none;font-size:.85rem;color:#b9e3d3}
+#music-theory .theory-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0}
+#music-theory select,#music-theory .theory-controls button{font:inherit;background:#17252b;color:#edf8f7;border:1px solid #617f80;padding:10px;border-radius:6px}
+#music-theory button{cursor:pointer}
+#music-theory :is(button,select):focus-visible{outline:3px solid #b9e3d3;outline-offset:4px}
+#music-theory dl{display:grid;grid-template-columns:minmax(110px,1fr) 2fr;gap:10px;margin:18px 0}
+#music-theory dt{color:#abc6c3}#music-theory dd{margin:0;overflow-wrap:anywhere}
+#music-theory details{padding:16px 0;border-top:1px solid #53635e}
+#music-theory summary{cursor:pointer;font-weight:600}
+#music-theory .theory-note{font-size:.88rem;color:#b8cecc}
+@media(max-width:720px){#music-theory .theory-grid{grid-template-columns:1fr}}
+</style></head>
 <body>
 <header><div class="wrap shell-head">
   <a href="/" class="brand">Manifold Grace</a>
@@ -35,6 +52,117 @@
   <p>My musical background includes classical foundations, jazz, church music and ensemble practice, with saxophone as the clearest instrumental through-line. The point of this page is not to force that background into one genre identity, but to document technique, repertoire, performance environments and the way musicianship has influenced later technical work.</p>
   <p>Photographs, performance extracts and practice notes can be added selectively where they demonstrate progression or context rather than simply filling a gallery.</p>
 </div></section>
+<section id="music-theory"><div class="wrap">
+<span class="status">MUSICIANSHIP · THEORY &amp; TRAINING</span>
+<h2>Explore the Circle of Fifths</h2>
+<p>Neighbouring keys share most notes; fifths organise their key signatures. Select a key to explore scales, relationships and practical harmony.</p>
+<div class="theory-panel">
+<div class="theory-grid">
+<div>
+<div class="fifths-wheel" id="fifths-wheel" role="group" aria-label="Major keys in clockwise fifths"><div class="wheel-centre"><strong>Circle<br>of Fifths</strong><span>Major keys</span></div></div>
+<p class="theory-note">Clockwise adds sharps; anticlockwise adds flats. The selector includes C♯, G♭ and C♭ spellings. Each wheel button is keyboard accessible.</p>
+</div>
+<div>
+<label for="theory-key">Explore a major key</label>
+<div class="theory-controls"><select id="theory-key"></select></div>
+<div id="theory-result" aria-live="polite" aria-atomic="true"></div>
+<div class="theory-controls"><button type="button" id="theory-scale">Hear major scale</button><button type="button" id="theory-chords">Hear I–IV–V–I</button><button type="button" id="theory-stop">Stop sound</button></div>
+<p class="theory-note" id="theory-audio-status" role="status">Audio plays only when you choose. Start with a comfortable device volume.</p>
+</div>
+</div>
+<details><summary>Key signatures, spellings &amp; saxophone practice</summary>
+<p><strong>Relative keys</strong> share a key signature: C major and A minor both have no sharps or flats. <strong>Parallel keys</strong> share a tonic: C major and C minor have different signatures. The minor signature shown is for natural minor; harmonic and melodic minor alter notes beyond it.</p>
+<p><strong>Enharmonic spellings:</strong> F♯ major and G♭ major sound alike in equal temperament but have six sharps and six flats respectively. C♯ and D♭ have seven sharps and five flats; C♭ and B have seven flats and five sharps. Letter spelling matters when reading notation.</p>
+<p><strong>Ten-minute practice:</strong> name the signature, play the major scale slowly, then its relative natural minor. Arpeggiate I, IV and V, listen to the return to I, then repeat in a neighbouring key. Increase tempo only after tone, fingering and rhythm are secure.</p>
+<p>Some parallel minors (D♭, G♭ and C♭ minor) require theoretical signatures with double flats. Their enharmonic alternatives (C♯, F♯ and B minor) are usually easier to read.</p>
+<p><strong>Concert pitch:</strong> the audio is in concert pitch. For B♭ tenor or soprano saxophone, the written key is a major second above the concert key; for E♭ alto or baritone, it is a major sixth above. For example, concert C major is written D major for B♭ instruments and A major for E♭ instruments; sounding octave also depends on the instrument.</p>
+<p><strong>Self-check:</strong> cover the result and name the relative minor, parallel minor and accidentals before revealing them again. Then explain why a move to the dominant changes just one note in a major scale.</p>
+</details>
+<details id="music-spirituality"><summary>Music, spirituality &amp; worship</summary>
+<p>Musical training can support attentive worship: listening to others, preparing faithfully, choosing singable keys and serving the congregation through clear, sensitive ensemble playing.</p>
+<p><strong>Psalm 150:3–5</strong> includes instruments in praise; <strong>Colossians 3:16</strong> connects psalms, hymns and spiritual songs with teaching and gratitude; <strong>1 Corinthians 14:26</strong> places edification at the centre of gathered contributions. Read these passages in context alongside the <a href="faith.html#practice">Faith page's account of music and service</a>.</p>
+<p>The Circle of Fifths describes musical relationships. Reflections on worship and Christian formation are a separate area of study; no particular key signature determines spiritual maturity or God's presence.</p>
+</details>
+</div>
+<noscript><p>The interactive wheel requires JavaScript. C major has no accidentals, its relative minor is A minor, and its parallel minor is C minor (three flats).</p></noscript>
+</div></section>
+<script>(()=>{
+'use strict';
+const root=document.querySelector('#music-theory'); if(!root)return;
+const keys=[
+['C',0,'A',0,0,'C D E F G A B','F','G',3],
+['G',1,'E',1,7,'G A B C D E F♯','C','D',2],
+['D',2,'B',2,2,'D E F♯ G A B C♯','G','A',1],
+['A',3,'F♯',3,9,'A B C♯ D E F♯ G♯','D','E',0],
+['E',4,'C♯',4,4,'E F♯ G♯ A B C♯ D♯','A','B',-1],
+['B',5,'G♯',5,11,'B C♯ D♯ E F♯ G♯ A♯','E','F♯',-2],
+['F♯',6,'D♯',6,6,'F♯ G♯ A♯ B C♯ D♯ E♯','B','C♯',-3],
+['D♭',-5,'B♭',-5,1,'D♭ E♭ F G♭ A♭ B♭ C','G♭','A♭',8],
+['A♭',-4,'F',-4,8,'A♭ B♭ C D♭ E♭ F G','D♭','E♭',7],
+['E♭',-3,'C',-3,3,'E♭ F G A♭ B♭ C D','A♭','B♭',6],
+['B♭',-2,'G',-2,10,'B♭ C D E♭ F G A','E♭','F',5],
+['F',-1,'D',-1,5,'F G A B♭ C D E','B♭','C',4],
+['C♯',7,'A♯',7,1,'C♯ D♯ E♯ F♯ G♯ A♯ B♯','F♯','G♯',-4],
+['G♭',-6,'E♭',-6,6,'G♭ A♭ B♭ C♭ D♭ E♭ F','C♭','D♭',9],
+['C♭',-7,'A♭',-7,11,'C♭ D♭ E♭ F♭ G♭ A♭ B♭','F♭','G♭',10]
+];
+const sharp=['F♯','C♯','G♯','D♯','A♯','E♯','B♯','F𝄪','C𝄪','G𝄪'];
+const flat=['B♭','E♭','A♭','D♭','G♭','C♭','F♭'];
+const signature=n=>{
+if(n===0)return 'No sharps or flats';
+const count=Math.abs(n),names=(n>0?sharp:flat).slice(0,Math.min(7,count));
+if(count>7){
+for(let i=0;i<count-7;i++)names[i]=names[i][0]+(n>0?'𝄪':'𝄫');
+return 'Theoretical signature: '+(count-7)+' double '+(n>0?'sharps':'flats')+' + '+(14-count)+' '+(n>0?'sharps':'flats')+' — '+names.join(', ');
+}
+return count+' '+(n>0?'sharp':'flat')+(count===1?'':'s')+' — '+names.join(', ');
+};
+const select=root.querySelector('#theory-key'),wheel=root.querySelector('#fifths-wheel'),result=root.querySelector('#theory-result');
+keys.forEach((k,i)=>{const o=document.createElement('option');o.value=String(i);o.textContent=k[0]+' major';select.append(o);});
+const buttons=keys.slice(0,12).map((k,i)=>{
+const b=document.createElement('button'),a=(i*30-90)*Math.PI/180;
+b.type='button';b.textContent=k[0];b.style.left=(50+41*Math.cos(a))+'%';b.style.top=(50+41*Math.sin(a))+'%';
+b.setAttribute('aria-label',k[0]+' major');b.setAttribute('aria-pressed','false');
+b.addEventListener('click',()=>{select.value=String(i);show();});wheel.append(b);return b;
+});
+function show(){
+stop(); const k=keys[Number(select.value)];
+buttons.forEach((b,i)=>b.setAttribute('aria-pressed',String(keys[i][4]===k[4])));
+result.replaceChildren();
+const heading=document.createElement('h3');heading.textContent=k[0]+' major';result.append(heading);
+const dl=document.createElement('dl');
+const rows=[['Key signature',signature(k[1])],['Major scale',k[5]+' '+k[0]],['Relative minor',k[2]+' minor — '+signature(k[3])],['Parallel minor',k[0]+' minor — '+signature(-k[8])],['Parallel major',k[0]+' major (for '+k[0]+' minor)'],['Harmony','I: '+k[0]+' · IV: '+k[6]+' · V: '+k[7]]];
+rows.forEach(([label,value])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;dl.append(dt,dd);});result.append(dl);
+}
+let context,voices=[],timer,generation=0;
+const status=root.querySelector('#theory-audio-status');
+function stop(){generation++;clearTimeout(timer);voices.forEach(v=>{try{v.stop();}catch{}});voices=[];status.textContent='Audio stopped. Choose a scale or chord progression to listen.';}
+async function play(chords){
+stop();const current=generation;
+try{
+const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)throw new Error('unsupported');
+context=context||new Audio();await context.resume();if(current!==generation)return;
+const pc=keys[Number(select.value)][4],base=60+pc;
+const groups=chords?[[0,4,7],[5,9,12],[7,11,14],[0,4,7]]:[0,2,4,5,7,9,11,12].map(n=>[n]);
+const start=context.currentTime+.08,step=chords?.8:.38,duration=chords?.7:.32;
+groups.forEach((notes,i)=>notes.forEach(n=>{
+const osc=context.createOscillator(),gain=context.createGain(),t=start+i*step;
+osc.type='sine';osc.frequency.value=440*Math.pow(2,(base+n-69)/12);
+gain.gain.setValueAtTime(0,t);gain.gain.linearRampToValueAtTime(.09/notes.length,t+.025);gain.gain.exponentialRampToValueAtTime(.001,t+duration);
+osc.connect(gain);gain.connect(context.destination);osc.start(t);osc.stop(t+duration+.02);voices.push(osc);
+osc.onended=()=>{osc.disconnect();gain.disconnect();};
+}));
+status.textContent='Playing '+keys[Number(select.value)][0]+(chords?' major: I–IV–V–I.':' major scale.');
+timer=setTimeout(()=>{voices=[];status.textContent='Playback complete.';},(groups.length*step+.2)*1000);
+}catch{status.textContent='Audio could not start in this browser. You can still explore all key relationships.';}
+}
+select.addEventListener('change',show);
+root.querySelector('#theory-scale').addEventListener('click',()=>play(false));
+root.querySelector('#theory-chords').addEventListener('click',()=>play(true));
+root.querySelector('#theory-stop').addEventListener('click',stop);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+show();
+})();</script>
 <section><div class="wrap">
   <span class="status">WORK IN PROGRESS</span><h2>Composition & musical language</h2>
   <p>My creative work includes compositions and projects held privately while recording and mixdowns are completed. Classical training, jazz and wider listening inform a musical language that allows discipline and creative freedom to coexist.</p>
