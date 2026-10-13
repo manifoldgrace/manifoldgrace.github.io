@@ -75,7 +75,7 @@
 <div><strong>Percentile</strong><br>P50 is the median; P84 is about +1 SD for a normal distribution.</div>
 </div>
 <p class="cap-note"><strong>Experimental classification rule:</strong> below P16 = lower performance relative to the reference; P16–P84 = broad reference range; above P84 = higher performance relative to the reference. These correspond approximately to ±1 SD only for a normal distribution. Source-provided percentile cut-offs take priority where the distribution is skewed. “Mode” is retained when a source reports it, but many continuous cognitive datasets do not publish a useful modal value; median/IQR is often more appropriate for skewed timing or error data.</p>
-<details open id="comparison-engine"><summary>How the comparison engine treats mean, median, mode and individual outcomes</summary>
+<details open id="comparison-method"><summary>How the comparison engine treats mean, median, mode and individual outcomes</summary>
 <div class="compare-grid">
 <div><h3>Mean + SD</h3><p>When the participant completed the <strong>same measure under compatible conditions</strong> and the reference source supports mean/SD interpretation, the page calculates a direction-adjusted z-score: <code>(participant − mean) / SD</code>. If the distribution is reasonably normal, that z-score can be converted to an estimated percentile. For measures where lower values are better, such as errors or latency, the direction is reversed before interpretation.</p></div>
 <div><h3>Median + IQR</h3><p>For skewed data such as reaction times and error counts, the published median and interquartile range are shown directly. The participant can be described as above or below the median in the favourable direction, but the page does <strong>not</strong> invent a z-score or percentile from median/IQR alone.</p></div>
@@ -154,6 +154,7 @@
 <tr><td>Collaboration</td><td>Shared-task contribution, coordination and correction; requires multi-person evidence</td><td class="bench"><strong>Ref: not yet located</strong><br><span class="result-live">You: not assessed</span></td><td class="position-live">Not classified</td></tr>
 </tbody>
 </table>
+<p class="cap-note" id="score-status" role="status">Loading assessment status…</p>
 <p class="cap-note"><strong>Current conclusion:</strong> each score has an explicit assessment status. Published averages/medians are shown where verified; otherwise the table explicitly says that no compatible norm has yet been located. A higher/lower classification appears only after a compatible numerical result exists.</p>
 </div></section>
 
@@ -206,6 +207,17 @@
 </div>
 </div></section>
 
+<section><div class="wrap"><details><summary>Which datasets can support which comparisons?</summary>
+<p>Employment, housing and education statistics describe social outcomes and barriers. They do not supply cognitive-test norms or predict an individual’s success from a quiz score. Neurodivergent is a broad category; autistic, ADHD, all-disabled and non-disabled comparison groups must retain their original definitions.</p>
+<ul class="cap-source-list">
+<li><a href="https://www.gov.uk/government/publications/the-buckland-review-of-autism-employment-report-and-recommendations/the-buckland-review-of-autism-employment-report-and-recommendations">Buckland Review</a> and <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10389/">Commons employment briefing</a>: population employment context; retain source year, denominator, age band and definitions.</li>
+<li><a href="https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/disability/articles/outcomesfordisabledpeopleintheuk/2021">ONS disability outcomes (2021)</a>: inspect the specific table and impairment categories before claiming an autism or ADHD comparison. “Non-disabled” does not mean “neurotypical”.</li>
+<li><a href="https://www.elsa-project.ac.uk/hcap">ELSA-HCAP</a>: dementia and cognitive ageing research. HCAP1 sampled adults aged 65 and over; it is not an age-matched norm for younger adults. Use documented study weights for population estimation.</li>
+<li><a href="https://biobank.ndph.ox.ac.uk/showcase/">UK Biobank Showcase</a>: protocol-specific research data. A website MCQ or tap task cannot inherit its percentiles merely because a domain name matches.</li>
+</ul>
+<p>For each dataset, preserve version, collection date, sample size, inclusion criteria, age range, measure, units, administration conditions, missing-data rule and weighting. Calculate comparisons separately for compatible cohorts; do not pool different batteries. Mean, median and mode need actual distributions or explicit published values: a data dictionary alone cannot supply them.</p>
+<p>Clinical baselines retain their original assessment date and instrument. Follow-ups track change on compatible measures; the website quiz begins its own separate experimental timeline. Practice, measurement error and changed test conditions remain visible when interpreting change.</p>
+</details></div></section>
 <section id="planned-tests"><div class="wrap">
 <span class="status">SPACE-SAVING TEST PLAN</span>
 <h2>Candidate tests to run</h2>
@@ -251,7 +263,7 @@
 </div>
 
 <div class="battery-box" id="sample-comparison">
-<h3>Compare with a documented sample</h3>
+<h3>Compare with a documented sample</h3><p><strong>Start with your own result:</strong> take the battery, see your domain scores, then compare with a documented matching sample when available. There is no automatic collection of visitors’ answers or shared leaderboard.</p>
 <p>Published averages are context, not a live connection to repository microdata. To calculate mean, median, mode and an empirical position, enter anonymised scores for <strong>one domain of this exact MCQ-v1 battery</strong> (0–3, one score per person). A convenience sample positions you within that sample only; it is not a UK, neurotypical or neurodivergent population norm. Do not paste names or confidential reports.</p>
 <div class="cap-form"><label>Domain<select id="sample-domain"><option value="verbal-comprehension">Verbal</option><option value="numerical-reasoning">Numerical</option><option value="abstract-reasoning">Abstract</option><option value="error-detection">Error detection</option><option value="perspective-taking">Perspective</option></select></label><label>Source / cohort / collection date<input id="sample-source" placeholder="Documented sample provenance"></label></div>
 <label for="sample-values">Comparable scores, separated by spaces or commas</label><textarea id="sample-values" rows="3" style="width:100%;background:#0e1112;color:white" placeholder="Enter real observed scores only"></textarea>
@@ -382,6 +394,8 @@
   const refresh=()=>{
     initial.forEach((v,k)=>{const r=row(k);r.querySelector('.result-live').textContent=v.result;r.querySelector('.position-live').textContent=v.position;});
     const latest=attempts.at(-1);
+    const status=$('#score-status');
+    if(status)status.textContent=latest?'Latest battery: '+latest.date+' · five domain scores recorded. '+(sample?'A documented sample comparison is loaded.':'Population position unavailable: no matching sample loaded.')+' Formal baselines: '+formal.length+'. Untested capabilities remain labelled awaiting assessment.':'No completed battery in this browser. SCORE: awaiting assessment; POSITION: no compatible participant result. Take the observer battery to populate five domain rows; clinical measurements remain separate.';
     if(latest)Object.entries(latest.results).forEach(([k,v])=>setRow(k,v.correct+'/3 ('+v.pc.toFixed(0)+'%) · MCQ-v1','Experimental · population position unavailable'));
     formal.forEach(f=>{const r=row(f.cap);if(!r)return;const raw=f.now!==null?f.now:f.old;const result=r.querySelector('.result-live');const prefix=latest?.results[f.cap]?'You: '+latest.results[f.cap].correct+'/3 MCQ-v1; ': 'You: ';result.textContent=prefix+'formal '+raw+' · '+f.instrument; r.querySelector('.position-live').textContent=(f.normal?'Formal estimated P'+pct(f.dir*(raw-f.mean)/f.sd).toFixed(1)+' · '+band(pct(f.dir*(raw-f.mean)/f.sd)):'Formal z '+(f.dir*(raw-f.mean)/f.sd).toFixed(2)+' · percentile unavailable')+(latest?.results[f.cap]?' · quiz separate':'');});
     if(rtResult)setRow('reaction-time',rtResult.median.toFixed(0)+' ms median','Browser task · not directly norm-equivalent');
@@ -391,7 +405,24 @@
     if(formalComparable.length){textNode(chart,'h4','Formal assessment layer · estimated percentile where the entered norm supports it');formalComparable.slice(-8).forEach(f=>{const raw=f.now!==null?f.now:f.old;const p=pct(f.dir*(raw-f.mean)/f.sd);const line=textNode(chart,'p',(f.label?f.label+' · ':'')+label(f.cap)+' · P'+p.toFixed(1)+' ');const bar=document.createElement('progress');bar.max=100;bar.value=p;bar.setAttribute('aria-label',label(f.cap)+' estimated percentile');line.append(bar);});}
     const h=$('#formal-history');h.replaceChildren();if(formal.length){textNode(h,'h4','Dated professional measurements · private');formal.forEach(f=>textNode(h,'p',(f.label?f.label+' · ':'')+label(f.cap)+': '+describe(f)+' · reference: '+f.source));}
     const bh=$('#battery-history');bh.replaceChildren();if(attempts.length){textNode(bh,'h4','Battery history · same questions, possible practice effects');attempts.forEach((t,i)=>textNode(bh,'p',(i===0?'Experimental baseline':'Retest '+i)+' · '+t.date+' · '+Object.entries(t.results).map(([k,v])=>label(k)+' '+v.correct+'/3').join('; ')));}
-    if(sample&&latest){const k=sample.domain;row(k).querySelector('.position-live').textContent+=' · MCQ sample midrank P'+sample.percentile.toFixed(1)+' (n='+sample.n+')';}
+    if(latest&&attempts.length>1){
+      textNode(chart,'h4','Change from your first MCQ-v1 attempt · raw points');
+      const first=attempts[0];
+      Object.entries(latest.results).forEach(([k,v])=>{
+        const before=first.results[k]?.correct;
+        if(typeof before==='number'){const delta=v.correct-before;textNode(chart,'p',label(k)+' · '+before+'/3 → '+v.correct+'/3 · '+(delta>=0?'+':'')+delta+' points');}
+      });
+      textNode(chart,'p','Descriptive change on repeated questions; this does not establish reliable cognitive improvement.');
+    }
+    if(sample&&latest){
+      const k=sample.domain;row(k).querySelector('.position-live').textContent+=' · MCQ sample midrank P'+sample.percentile.toFixed(1)+' (n='+sample.n+')';
+      textNode(chart,'h4',label(k)+' · supplied sample comparison');
+      [['Your score',latest.results[k].correct],['Sample mean',sample.mean],['Sample median',sample.median]].forEach(([name,value])=>{
+        const line=textNode(chart,'p',name+' · '+Number(value).toFixed(2)+'/3 ');
+        const bar=document.createElement('progress');bar.max=3;bar.value=value;bar.setAttribute('aria-label',name);line.append(bar);
+      });
+      textNode(chart,'p','Mode '+sample.mode+' · sample SD '+sample.sd.toFixed(2)+' · n='+sample.n+' · midrank P'+sample.percentile.toFixed(1)+' · '+sample.source+'. Sample position only; not a national or diagnostic classification.');
+    }
     updateSummary();
   };
   // Participant-generated snapshots use the URL fragment, without server-side result storage.
