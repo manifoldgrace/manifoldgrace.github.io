@@ -21,7 +21,7 @@
     ["Life Philosophy","life-philosophy.html"],
     ["Society","society.html"],
     ["Heritage","heritage.html"],
-    ["Sociology","sociology.html"],
+    ["Sociology","topics-in-12.html#domain-01"],
     ["Recognition","recognition.html"],
     ["Resourcefulness","resourcefulness.html"],
     ["Venture","conglomerate.html"]
