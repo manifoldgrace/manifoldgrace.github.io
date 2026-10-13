@@ -75,6 +75,16 @@
 <div><strong>Percentile</strong><br>P50 is the median; P84 is about +1 SD for a normal distribution.</div>
 </div>
 <p class="cap-note"><strong>Experimental classification rule:</strong> below P16 = lower performance relative to the reference; P16–P84 = broad reference range; above P84 = higher performance relative to the reference. These correspond approximately to ±1 SD only for a normal distribution. Source-provided percentile cut-offs take priority where the distribution is skewed. “Mode” is retained when a source reports it, but many continuous cognitive datasets do not publish a useful modal value; median/IQR is often more appropriate for skewed timing or error data.</p>
+<details open id="comparison-engine"><summary>How the comparison engine treats mean, median, mode and individual outcomes</summary>
+<div class="compare-grid">
+<div><h3>Mean + SD</h3><p>When the participant completed the <strong>same measure under compatible conditions</strong> and the reference source supports mean/SD interpretation, the page calculates a direction-adjusted z-score: <code>(participant − mean) / SD</code>. If the distribution is reasonably normal, that z-score can be converted to an estimated percentile. For measures where lower values are better, such as errors or latency, the direction is reversed before interpretation.</p></div>
+<div><h3>Median + IQR</h3><p>For skewed data such as reaction times and error counts, the published median and interquartile range are shown directly. The participant can be described as above or below the median in the favourable direction, but the page does <strong>not</strong> invent a z-score or percentile from median/IQR alone.</p></div>
+<div><h3>Mode</h3><p>Mode is used only where a discrete score distribution makes it informative. A multimodal distribution can have several modes; if every value is unique there is no useful mode. Mode is therefore supplementary rather than the primary benchmark for continuous cognitive performance.</p></div>
+<div><h3>Published percentiles / raw samples</h3><p>If a validated source provides age-banded percentile cut-offs, the participant is located directly against those cut-offs. If matching raw participant scores are available, the page can calculate an empirical midrank percentile from the supplied sample and also display that sample's mean, median, mode and SD.</p></div>
+<div><h3>Binary or prevalence outcomes</h3><p>A statistic such as “93.9% succeeded” is a prevalence figure. A participant's success or failure can be compared descriptively with that rate, but it does not by itself provide a psychometric percentile.</p></div>
+<div><h3>Progress over time</h3><p>Earlier professional scores are kept as dated baselines. A later score from the same instrument can be compared descriptively; where reliability and expected practice change are available, the page can also calculate a practice-adjusted Reliable Change Index. Different instruments remain separate even when they appear to measure a similar domain.</p></div>
+</div></details>
+<p><a class="cap-btn" href="#observer-battery" style="display:inline-block;text-decoration:none"><strong>Try the observer MCQ battery ↓</strong></a> <a class="cap-btn" href="#private-baseline" style="display:inline-block;text-decoration:none">Enter a prior formal assessment ↓</a></p>
 </div></section>
 
 <section id="capability-table"><div class="wrap">
@@ -82,7 +92,7 @@
 <h2>Capability map</h2>
 <p>The table now shows the published reference statistic wherever one has been verified. A participant result is stored separately. If a task is not genuinely compatible with the published instrument, the page says so rather than manufacturing a percentile. Reference codes are expanded in the Sources dropdown below.</p>
 <table class="cap-table" aria-label="Human capability benchmark table">
-<thead><tr><th>Capability</th><th>Operational measure / reference</th><th>Score</th><th>Position</th></tr></thead>
+<thead><tr><th>Capability</th><th>Operational measure / reference</th><th>Reference + participant score</th><th>Position / evidence status</th></tr></thead>
 <tbody>
 <tr class="group"><td colspan="4">Memory, learning & reasoning</td></tr>
 <tr data-cap="working-memory"><td>Working memory</td><td>Numeric span / updating. <span class="norm">UKB</span><small>UKB age 40–70: mean 6.70, SD 1.34 on its numeric-memory protocol.</small></td><td class="bench"><strong>Ref 6.70±1.34</strong><br><span class="result-live">You: not assessed</span></td><td class="position-live">Await compatible score</td></tr>
@@ -161,9 +171,11 @@
 </details>
 
 <div class="battery-box" id="private-baseline">
-<h3>Private assessment baseline &amp; follow-up</h3><p>Keep each earlier professional assessment as its own dated baseline. Record the exact instrument, edition and index; use the original report’s norms. A new quiz is a separate experimental measure and does not replace a clinical score.</p>
+<h3>Private assessment baseline &amp; follow-up</h3><p><strong>Earlier professional reports are baseline anchors.</strong> If you already have a psychologist's or clinician's report containing dated standard scores, scaled scores, T-scores, percentiles, raw scores or published reference statistics, enter only the fields needed for comparison below. Keep each report as a separate dated record. A future reassessment can then be compared with that baseline where the instrument and conditions are genuinely compatible.</p>
+<p>The public page does not contain clinician names, confidential report text or private scores. Those details are entered locally by the participant if they choose. A new website quiz is a separate experimental measure and does not replace a professional assessment.</p>
 <p class="private-flag">Values stay on this browser and device. Saving across visits is optional; on shared devices leave it off. The page does not submit scores or reports to a server. Browser storage is not encrypted and is accessible to scripts from this website.</p>
 <div class="cap-form">
+<label>Private assessment label<input id="base-label" maxlength="60" placeholder="e.g. Prior report A"></label>
 <label>Capability<select id="base-cap">
 <option value="verbal-comprehension">Verbal comprehension</option>
 <option value="working-memory">Working memory</option>
@@ -375,7 +387,9 @@
     if(rtResult)setRow('reaction-time',rtResult.median.toFixed(0)+' ms median','Browser task · not directly norm-equivalent');
     const chart=$('#results-chart');chart.replaceChildren();
     if(latest){textNode(chart,'h4','Your latest MCQ-v1 profile · raw accuracy');Object.entries(latest.results).forEach(([k,v])=>{const line=textNode(chart,'p',label(k)+' · '+v.correct+'/3 · '+v.pc.toFixed(0)+'% ');const bar=document.createElement('progress');bar.max=3;bar.value=v.correct;bar.setAttribute('aria-label',label(k)+' raw accuracy');line.append(bar);});}
-    const h=$('#formal-history');h.replaceChildren();if(formal.length){textNode(h,'h4','Dated professional measurements · private');formal.forEach(f=>textNode(h,'p',label(f.cap)+': '+describe(f)+' · reference: '+f.source));}
+    const formalComparable=formal.filter(f=>f.normal&&Number.isFinite(f.mean)&&Number.isFinite(f.sd)&&f.sd>0);
+    if(formalComparable.length){textNode(chart,'h4','Formal assessment layer · estimated percentile where the entered norm supports it');formalComparable.slice(-8).forEach(f=>{const raw=f.now!==null?f.now:f.old;const p=pct(f.dir*(raw-f.mean)/f.sd);const line=textNode(chart,'p',(f.label?f.label+' · ':'')+label(f.cap)+' · P'+p.toFixed(1)+' ');const bar=document.createElement('progress');bar.max=100;bar.value=p;bar.setAttribute('aria-label',label(f.cap)+' estimated percentile');line.append(bar);});}
+    const h=$('#formal-history');h.replaceChildren();if(formal.length){textNode(h,'h4','Dated professional measurements · private');formal.forEach(f=>textNode(h,'p',(f.label?f.label+' · ':'')+label(f.cap)+': '+describe(f)+' · reference: '+f.source));}
     const bh=$('#battery-history');bh.replaceChildren();if(attempts.length){textNode(bh,'h4','Battery history · same questions, possible practice effects');attempts.forEach((t,i)=>textNode(bh,'p',(i===0?'Experimental baseline':'Retest '+i)+' · '+t.date+' · '+Object.entries(t.results).map(([k,v])=>label(k)+' '+v.correct+'/3').join('; ')));}
     if(sample&&latest){const k=sample.domain;row(k).querySelector('.position-live').textContent+=' · MCQ sample midrank P'+sample.percentile.toFixed(1)+' (n='+sample.n+')';}
     updateSummary();
@@ -384,7 +398,7 @@
   const compactResults=t=>t?Object.fromEntries(Object.entries(t.results).map(([k,v])=>[k,v.correct])):null;
   const updateSummary=()=>{
     const latest=attempts.at(-1),includeFormal=$('#summary-formal').checked;
-    const selected=includeFormal?formal.slice(-2).map(f=>({cap:f.cap,instrument:f.instrument.slice(0,80),source:f.source.slice(0,100),date:f.date,nowDate:f.nowDate,old:f.old,now:f.now,mean:f.mean,sd:f.sd,dir:f.dir,normal:f.normal,matched:f.matched})):[];
+    const selected=includeFormal?formal.slice(-2).map(f=>({label:(f.label||'').slice(0,60),cap:f.cap,instrument:f.instrument.slice(0,80),source:f.source.slice(0,100),date:f.date,nowDate:f.nowDate,old:f.old,now:f.now,mean:f.mean,sd:f.sd,dir:f.dir,normal:f.normal,matched:f.matched})):[];
     const link=$('#summary-link'),frame=$('#summary-preview'),copy=$('#summary-copy');
     if(!latest&&!selected.length){link.hidden=true;link.removeAttribute('href');frame.hidden=true;frame.removeAttribute('src');copy.disabled=true;$('#summary-status').textContent='Complete the battery to obtain your A4 summary link.';return;}
     const snapshot={schema:1,version:'MCQ-v1',name:$('#summary-name').value.trim().slice(0,80)||'Participant',created:new Date().toISOString(),date:latest?.date||null,results:compactResults(latest),first:compactResults(attempts[0]),firstDate:attempts[0]?.date||null,attempts:attempts.length,rt:rtResult?{median:rtResult.median}:null,sample:sample?{...sample}:null,formal:selected};
@@ -399,7 +413,7 @@
   $('#summary-copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('#summary-link').href);$('#summary-status').textContent='Summary link copied.';}catch{$('#summary-status').textContent='Copy the address from the open A4 summary page; clipboard access is unavailable here.';}});
   $('#keep-results').addEventListener('change',()=>{if($('#keep-results').checked)save();else removeLocal('mg-cap-v2');});
   $('#base-calc').addEventListener('click',()=>{
-    const f={cap:$('#base-cap').value,instrument:$('#base-instrument').value.trim(),source:$('#base-source').value.trim(),date:$('#base-date').value,nowDate:$('#base-now-date').value,mean:number('#base-mean'),sd:number('#base-sd'),old:number('#base-old'),now:number('#base-new'),rel:number('#base-rel'),practice:number('#base-practice'),dir:$('#base-direction').value==='low'?-1:1,normal:$('#base-normal').checked,matched:$('#base-matched').checked};
+    const f={label:$('#base-label').value.trim(),cap:$('#base-cap').value,instrument:$('#base-instrument').value.trim(),source:$('#base-source').value.trim(),date:$('#base-date').value,nowDate:$('#base-now-date').value,mean:number('#base-mean'),sd:number('#base-sd'),old:number('#base-old'),now:number('#base-new'),rel:number('#base-rel'),practice:number('#base-practice'),dir:$('#base-direction').value==='low'?-1:1,normal:$('#base-normal').checked,matched:$('#base-matched').checked};
     if(!f.instrument||!f.source||!f.date||f.mean===null||f.sd===null||f.old===null||![f.mean,f.sd,f.old].every(Number.isFinite)||f.sd<=0||f.now!==null&&(!Number.isFinite(f.now)||!f.nowDate||f.nowDate<f.date)||f.rel!==null&&(!Number.isFinite(f.rel)||f.rel<=0||f.rel>=1)||f.practice!==null&&!Number.isFinite(f.practice)){$('#baseline-output').textContent='Enter instrument, reference source, baseline date, mean, positive SD and earlier score. Follow-up needs a valid score and date on/after baseline. Reliability must lie strictly between 0 and 1.';return;}
     formal.push(f);$('#baseline-output').textContent=describe(f);refresh();save();
   });
