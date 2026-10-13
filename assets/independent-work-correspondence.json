@@ -175,9 +175,10 @@
       "recipient": "Liam Conlon",
       "review": "2026-11-10",
       "policyReview": null,
-      "status": "Sent — outcome to review",
+      "status": "Referred to Ministry of Justice — 14 Aug 2026; departmental response to verify",
       "evidence": "Sent email record",
-      "role": "Direct or copied correspondence"
+      "role": "Direct or copied correspondence",
+      "progressEvidence": "MP office reply dated 14 August 2026 confirms the referral and intention to share the departmental response."
     },
     {
       "date": "2026-05-14",
@@ -208,9 +209,10 @@
       "recipient": "Liam Conlon",
       "review": "2026-11-10",
       "policyReview": null,
-      "status": "Sent — outcome to review",
+      "status": "Acknowledged by MP office — 12 May 2026; no specific policy action confirmed",
       "evidence": "Sent email record",
-      "role": "Direct or copied correspondence"
+      "role": "Direct or copied correspondence",
+      "progressEvidence": "MP office reply dated 12 May 2026 acknowledges the analysis and describes local priorities."
     },
     {
       "date": "2026-04-13",
@@ -296,9 +298,10 @@
       "recipient": "Liam Conlon",
       "review": "2026-11-10",
       "policyReview": null,
-      "status": "Sent — outcome to review",
+      "status": "Consideration indicated — 12 Mar 2026; TfL action to verify",
       "evidence": "Sent email record",
-      "role": "Direct or copied correspondence"
+      "role": "Direct or copied correspondence",
+      "progressEvidence": "MP office reply dated 12 March 2026 says the proposal will be considered for future TfL discussions."
     },
     {
       "date": "2025-10-25",
