@@ -3,6 +3,7 @@
   const site = window.MANIFOLD_SITE || {};
   const navItems = [
     ["Research Collaborations","research-collaborations.html"],
+    ["Independent Work & Impact","independent-work-impact.html"],
     ["About","about.html"],
     ["Professional","professional.html"],
     ["Photos","photos.html"],
