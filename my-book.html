@@ -118,6 +118,23 @@
   opacity:1;
   filter:none;
 }
+
+/* Supplied portraits, with fine classical serif titles rendered as accessible text. */
+.mg-photo-jacket{position:relative;display:block;aspect-ratio:2/3;overflow:hidden;background:#161e20;color:#fff2d5;border:1px solid #b39865;isolation:isolate}
+.mg-photo-jacket img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:0}
+.mg-photo-jacket .mg-jacket-type{position:absolute;inset:auto 0 0;z-index:1;padding:38px 12px 16px;background:linear-gradient(transparent,#111b20e8 28%);text-align:center;color:#fff2d5}
+.mg-photo-jacket .mg-jacket-title{display:block;margin:0;font:400 clamp(17px,2vw,25px)/1.15 'Baskerville','Palatino Linotype','Book Antiqua',Georgia,serif;letter-spacing:0;text-wrap:balance;color:inherit}
+.mg-photo-jacket .mg-jacket-subtitle{display:block;margin-top:8px;font:400 9px/1.45 'Baskerville',Georgia,serif;letter-spacing:.03em;color:inherit}
+.mg-photo-jacket .mg-jacket-author{display:block;margin-top:14px;padding-top:10px;border-top:1px solid #c5a76d;font:400 8px/1.5 'Baskerville',Georgia,serif;letter-spacing:.13em;color:inherit}
+.book-project-cover.mg-cover.mg-photo-jacket{display:block;padding:0;min-height:0;background:#161e20;border-left:1px solid #b39865}
+.mg-photo-jacket.mg-landscape-jacket img{object-fit:contain;object-position:center 28%;background:#ede6da}
+.biography-book-photo{background-image:url('assets/books/grace-black-suit-portrait.webp')!important;background-size:100% auto!important;background-repeat:no-repeat;background-position:center bottom!important;background-color:#101c21}
+.biography-book-cover .biography-book-text{display:block!important;position:absolute;inset:0 0 auto;padding:16px 10px;background:none;color:#fff2d5;text-align:center}
+.biography-book-text .mg-biography-title{font:400 27px/1.08 'Baskerville','Palatino Linotype',Georgia,serif;margin:0 0 10px;letter-spacing:0;text-transform:none;color:#fff2d5}
+.biography-book-text .biography-book-author{font:400 8px/1.5 'Baskerville',Georgia,serif;letter-spacing:.12em;color:#fff2d5}
+.mg-biography-gallery img{object-fit:contain!important;object-position:center bottom!important;background:#101c21}
+.mg-biography-gallery .mg-jacket-type{inset:0 0 auto;background:none;padding:16px 12px}
+
 </style>
 </head>
 <body>
@@ -133,7 +150,7 @@
   <section class="book-feature"><div class="wrap">
     <div class="book-feature-grid">
       <div class="biography-book-stage">
-        <div class="biography-book" role="img" aria-label="Three-dimensional hardcover concept for Full Biography, featuring Grace's existing professional portrait, a dark photographic cover, gold lettering and a visible book spine">
+        <div class="biography-book" role="img" aria-label="Three-dimensional hardcover concept for Full Biography, featuring Grace's supplied black-suit portrait against its original dark background, fine serif lettering and a visible book spine">
           <div class="biography-book-spine" aria-hidden="true">
             <small>MANIFOLD GRACE</small>
           </div>
@@ -143,7 +160,8 @@
             <div class="biography-book-text">
               <span class="biography-book-edition">A LIFE IN FULL · THE PERSONAL RECORD</span>
               
-              <div class="biography-book-author">GRACE ROSEMARY NETTEY</div>
+              <h3 class="mg-biography-title">Full Biography</h3>
+              <div class="biography-book-author">Grace Rosemary Nettey</div>
               <small>MANIFOLD GRACE</small>
             </div>
           </div>
@@ -165,19 +183,25 @@
 <section id="book-cover-gallery" class="mg-gallery-section" aria-labelledby="mgBookGalleryHeading"><div class="wrap">
 <span class="status">COVER CONCEPTS · IN DEVELOPMENT</span>
 <h2 id="mgBookGalleryHeading">The book-cover collection</h2>
-<p>Nine book-cover concepts, including five new portraits with refined classical English-style typography. These are provisional covers, not announcements of published editions. Swipe through the designs or use the arrows; the images remain static, without fading.</p>
+<p>Fourteen book-cover concepts with refined classical serif typography and Grace’s selected portraits. These are provisional covers, not announcements of published editions. Swipe through the designs or use the arrows; the images remain static, without fading.</p>
 <div class="mg-gallery">
-<div class="mg-gallery-toolbar"><span id="mgGalleryStatus" role="status" aria-live="polite">1 of 9 covers</span><button class="mg-gallery-btn" id="mgGalleryPrev" type="button" aria-label="Previous cover">←</button><button class="mg-gallery-btn" id="mgGalleryNext" type="button" aria-label="Next cover">→</button><button class="mg-gallery-btn" id="mgGalleryPause" type="button" aria-label="Pause cover carousel" aria-pressed="false">Ⅱ</button></div>
-<div class="mg-gallery-track" id="mgCoverCarousel" tabindex="0" aria-label="Nine book cover designs">
-<button class="mg-gallery-tile" type="button" aria-pressed="true"><img loading="lazy" src="assets/books/full-biography-identity-v2.webp" alt="Full Biography cover concept with Grace Nettey's portrait"><span>Full Biography</span><small>Life and professional record</small></button>
+<div class="mg-gallery-toolbar"><span id="mgGalleryStatus" role="status" aria-live="polite">1 of 14 covers</span><button class="mg-gallery-btn" id="mgGalleryPrev" type="button" aria-label="Previous cover">←</button><button class="mg-gallery-btn" id="mgGalleryNext" type="button" aria-label="Next cover">→</button><button class="mg-gallery-btn" id="mgGalleryPause" type="button" aria-label="Pause cover carousel" aria-pressed="false">Ⅱ</button></div>
+<div class="mg-gallery-track" id="mgCoverCarousel" tabindex="0" aria-label="Fourteen book cover designs">
+<button class="mg-gallery-tile" type="button" aria-pressed="true"><div class="mg-photo-jacket mg-biography-gallery"><img src="assets/books/grace-black-suit-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">Full Biography</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>Full Biography</span><small>Life and professional record</small></button>
 <button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/garden-produce-identity-v2.webp" alt="Garden and Produce cover concept featuring Grace and a garden harvest"><span>Garden &amp; Produce</span><small>Horticulture and growing</small></button>
 <button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/minimalist-aesthetic-identity-v2.webp" alt="Minimalist Aesthetic cover concept with Grace in a bright interior"><span>The Minimalist Aesthetic</span><small>Calm, intentional design</small></button>
 <button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/trojan-horse-identity-v2.webp" alt="Trojan Horse cover concept with Grace in a formal wood-panelled setting"><span>Trojan Horse</span><small>Institutions and public trust</small></button>
 <button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/breaking-barriers.avif" alt="Breaking Barriers cover with Grace by a London townhouse window and refined serif lettering"><span>Breaking Barriers</span><small>Resilience and opportunity</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/childhood-young-adult-memoir.avif" alt="Childhood &amp; Young-Adult Memoir refined portrait book cover with Grace Rosemary Nettey"><span>Childhood &amp; Young-Adult Memoir</span><small>Life and formative experiences</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/childhood-young-adult-memoir-v3.webp" alt="Childhood &amp; Young-Adult Memoir refined portrait book cover with Grace Rosemary Nettey"><span>Childhood &amp; Young-Adult Memoir</span><small>Life and formative experiences</small></button>
 <button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/family-history-genealogical-record.avif" alt="Family History &amp; Genealogical Record refined portrait book cover with Grace Rosemary Nettey"><span>Family History &amp; Genealogical Record</span><small>Family ancestry and heritage</small></button>
 <button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/faith-formation-public-life.avif" alt="Faith, Formation &amp; Public Life refined portrait book cover with Grace Rosemary Nettey"><span>Faith, Formation &amp; Public Life</span><small>Faith and public responsibility</small></button>
 <button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/collected-essays.avif" alt="Collected Essays refined portrait book cover with Grace Rosemary Nettey"><span>Collected Essays</span><small>Technology, ethics, identity and culture</small></button>
+
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><div class="mg-photo-jacket "><img src="assets/books/grace-horse-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">50 by 30</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>50 by 30</span><small>Supplied portrait cover</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><div class="mg-photo-jacket "><img src="assets/books/grace-ivory-seated-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">Black History Through Family &amp; Public Records</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>Black History Through Family &amp; Public Records</span><small>Supplied portrait cover</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><div class="mg-photo-jacket "><img src="assets/books/grace-panelled-room-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">AI, Ethics, Governance &amp; Society</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>AI, Ethics, Governance &amp; Society</span><small>Supplied portrait cover</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><div class="mg-photo-jacket "><img src="assets/books/grace-panelled-room-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">Systems, Governance &amp; Institutional Justice</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>Systems, Governance &amp; Institutional Justice</span><small>Supplied portrait cover</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><div class="mg-photo-jacket mg-landscape-jacket"><img src="assets/books/grace-sofa-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">The Chronological Ethical Self-Inventory</span><span class="mg-jacket-subtitle">CESI</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>The Chronological Ethical Self-Inventory</span><small>Supplied portrait cover</small></button>
 </div></div></div></section>
 <section><div class="wrap">
     <span class="status">WORKS IN DEVELOPMENT</span>
@@ -201,7 +225,7 @@
 
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-art-0" role="img" aria-label="50 by 30 — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 02</span><strong>50 by 30</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
+        <div class="book-project-cover mg-cover mg-photo-jacket "><img src="assets/books/grace-horse-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">50 by 30</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div>
         <div class="book-project-body">
           <span class="status">EXISTING CONTENT · BOOK IN DEVELOPMENT</span>
           <h3>50 by 30</h3>
@@ -212,7 +236,7 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-art-1 mg-refined-cover" role="img" aria-label="Childhood &amp; Young-Adult Memoir — refined cover"><img class="mg-refined-cover-image" src="assets/books/childhood-young-adult-memoir.avif" alt="" loading="lazy" decoding="async"></div>
+        <div class="book-project-cover mg-cover mg-art-1 mg-refined-cover" role="img" aria-label="Childhood &amp; Young-Adult Memoir — refined cover"><img class="mg-refined-cover-image" src="assets/books/childhood-young-adult-memoir-v3.webp" alt="" loading="lazy" decoding="async"></div>
         <div class="book-project-body">
           <span class="status">CONTENT EXISTS · IN DEVELOPMENT</span>
           <h3>Childhood & Young-Adult Memoir</h3>
@@ -233,7 +257,7 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-art-3" role="img" aria-label="Black History Through Family &amp; Public Records — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 05</span><strong>Black History Through Family &amp; Public Records</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
+        <div class="book-project-cover mg-cover mg-photo-jacket "><img src="assets/books/grace-ivory-seated-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">Black History Through Family &amp; Public Records</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div>
         <div class="book-project-body">
           <span class="status">SOURCE MATERIAL & DRAFT CONTENT · IN DEVELOPMENT</span>
           <h3>Black History Through Family & Public Records</h3>
@@ -243,7 +267,7 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-art-4" role="img" aria-label="AI, Ethics, Governance &amp; Society — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 06</span><strong>AI, Ethics, Governance &amp; Society</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
+        <div class="book-project-cover mg-cover mg-photo-jacket "><img src="assets/books/grace-panelled-room-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">AI, Ethics, Governance &amp; Society</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div>
         <div class="book-project-body">
           <span class="status">RESEARCH & DRAFT CONTENT · IN DEVELOPMENT</span>
           <h3>AI, Ethics, Governance & Society</h3>
@@ -254,7 +278,7 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-art-5" role="img" aria-label="Systems, Governance &amp; Institutional Justice — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 07</span><strong>Systems, Governance &amp; Institutional Justice</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
+        <div class="book-project-cover mg-cover mg-photo-jacket "><img src="assets/books/grace-panelled-room-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">Systems, Governance &amp; Institutional Justice</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div>
         <div class="book-project-body">
           <span class="status">RESEARCH & STRUCTURED CONTENT · IN DEVELOPMENT</span>
           <h3>Systems, Governance & Institutional Justice</h3>
@@ -286,7 +310,7 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-art-8" role="img" aria-label="The Chronological Ethical Self-Inventory — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 10</span><strong>The Chronological Ethical Self-Inventory</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
+        <div class="book-project-cover mg-cover mg-photo-jacket mg-landscape-jacket"><img src="assets/books/grace-sofa-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">The Chronological Ethical Self-Inventory</span><span class="mg-jacket-subtitle">CESI</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div>
         <div class="book-project-body">
           <span class="status">PUBLISHED PREPRINT · LONG-FORM DEVELOPMENT</span>
           <h3>The Chronological Ethical Self-Inventory (CESI)</h3>
