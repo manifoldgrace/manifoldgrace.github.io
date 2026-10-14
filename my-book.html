@@ -96,6 +96,28 @@
 }
 @media(max-width:420px){.mg-gallery-track{grid-auto-columns:74vw}.book-shelf>.book-project{flex-basis:95%}}
 @media(prefers-reduced-motion:reduce){.mg-gallery-tile{transition:none}}
+
+/* Portrait book jackets: final gold-and-ivory serif designs are part of the image. */
+.book-project-cover.mg-cover.mg-refined-cover{
+  position:relative;
+  aspect-ratio:2/3;
+  overflow:hidden;
+  padding:0;
+  border-left:1px solid #b39865;
+  background:#251e19;
+}
+.book-project-cover.mg-cover.mg-refined-cover > .mg-refined-cover-image{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  border:0;
+  opacity:1;
+  filter:none;
+}
 </style>
 </head>
 <body>
@@ -143,15 +165,19 @@
 <section id="book-cover-gallery" class="mg-gallery-section" aria-labelledby="mgBookGalleryHeading"><div class="wrap">
 <span class="status">COVER CONCEPTS · IN DEVELOPMENT</span>
 <h2 id="mgBookGalleryHeading">The book-cover collection</h2>
-<p>Five distinct visual concepts using Grace’s portrait references. These are provisional covers, not announcements of published editions. Swipe through the designs or use the arrows; the images remain static, without fading.</p>
+<p>Nine book-cover concepts, including five new portraits with refined classical English-style typography. These are provisional covers, not announcements of published editions. Swipe through the designs or use the arrows; the images remain static, without fading.</p>
 <div class="mg-gallery">
-<div class="mg-gallery-toolbar"><span id="mgGalleryStatus" role="status" aria-live="polite">1 of 5 covers</span><button class="mg-gallery-btn" id="mgGalleryPrev" type="button" aria-label="Previous cover">←</button><button class="mg-gallery-btn" id="mgGalleryNext" type="button" aria-label="Next cover">→</button><button class="mg-gallery-btn" id="mgGalleryPause" type="button" aria-label="Pause cover carousel" aria-pressed="false">Ⅱ</button></div>
-<div class="mg-gallery-track" id="mgCoverCarousel" tabindex="0" aria-label="Five book cover designs">
+<div class="mg-gallery-toolbar"><span id="mgGalleryStatus" role="status" aria-live="polite">1 of 9 covers</span><button class="mg-gallery-btn" id="mgGalleryPrev" type="button" aria-label="Previous cover">←</button><button class="mg-gallery-btn" id="mgGalleryNext" type="button" aria-label="Next cover">→</button><button class="mg-gallery-btn" id="mgGalleryPause" type="button" aria-label="Pause cover carousel" aria-pressed="false">Ⅱ</button></div>
+<div class="mg-gallery-track" id="mgCoverCarousel" tabindex="0" aria-label="Nine book cover designs">
 <button class="mg-gallery-tile" type="button" aria-pressed="true"><img loading="lazy" src="assets/books/full-biography-identity-v2.webp" alt="Full Biography cover concept with Grace Nettey's portrait"><span>Full Biography</span><small>Life and professional record</small></button>
 <button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/garden-produce-identity-v2.webp" alt="Garden and Produce cover concept featuring Grace and a garden harvest"><span>Garden &amp; Produce</span><small>Horticulture and growing</small></button>
 <button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/minimalist-aesthetic-identity-v2.webp" alt="Minimalist Aesthetic cover concept with Grace in a bright interior"><span>The Minimalist Aesthetic</span><small>Calm, intentional design</small></button>
 <button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/trojan-horse-identity-v2.webp" alt="Trojan Horse cover concept with Grace in a formal wood-panelled setting"><span>Trojan Horse</span><small>Institutions and public trust</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/breaking-barriers-identity-v2.webp" alt="Breaking Barriers cover concept with Grace and mustard-coloured typography"><span>Breaking Barriers</span><small>Resilience and opportunity</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/breaking-barriers.avif" alt="Breaking Barriers cover with Grace by a London townhouse window and refined serif lettering"><span>Breaking Barriers</span><small>Resilience and opportunity</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/childhood-young-adult-memoir.avif" alt="Childhood &amp; Young-Adult Memoir refined portrait book cover with Grace Rosemary Nettey"><span>Childhood &amp; Young-Adult Memoir</span><small>Life and formative experiences</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/family-history-genealogical-record.avif" alt="Family History &amp; Genealogical Record refined portrait book cover with Grace Rosemary Nettey"><span>Family History &amp; Genealogical Record</span><small>Family ancestry and heritage</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/faith-formation-public-life.avif" alt="Faith, Formation &amp; Public Life refined portrait book cover with Grace Rosemary Nettey"><span>Faith, Formation &amp; Public Life</span><small>Faith and public responsibility</small></button>
+<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/collected-essays.avif" alt="Collected Essays refined portrait book cover with Grace Rosemary Nettey"><span>Collected Essays</span><small>Technology, ethics, identity and culture</small></button>
 </div></div></div></section>
 <section><div class="wrap">
     <span class="status">WORKS IN DEVELOPMENT</span>
@@ -186,7 +212,7 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-art-1" role="img" aria-label="Childhood &amp; Young-Adult Memoir — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 03</span><strong>Childhood &amp; Young-Adult Memoir</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
+        <div class="book-project-cover mg-cover mg-art-1 mg-refined-cover" role="img" aria-label="Childhood &amp; Young-Adult Memoir — refined cover"><img class="mg-refined-cover-image" src="assets/books/childhood-young-adult-memoir.avif" alt="" loading="lazy" decoding="async"></div>
         <div class="book-project-body">
           <span class="status">CONTENT EXISTS · IN DEVELOPMENT</span>
           <h3>Childhood & Young-Adult Memoir</h3>
@@ -196,7 +222,7 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-art-2" role="img" aria-label="Family History &amp; Genealogical Record — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 04</span><strong>Family History &amp; Genealogical Record</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
+        <div class="book-project-cover mg-cover mg-art-2 mg-refined-cover" role="img" aria-label="Family History &amp; Genealogical Record — refined cover"><img class="mg-refined-cover-image" src="assets/books/family-history-genealogical-record.avif" alt="" loading="lazy" decoding="async"></div>
         <div class="book-project-body">
           <span class="status">RESEARCH & MANUSCRIPT MATERIAL · IN DEVELOPMENT</span>
           <h3 id="family-history">Family History &amp; Genealogical Record</h3>
@@ -239,7 +265,7 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-art-6" role="img" aria-label="Faith, Formation &amp; Public Life — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 08</span><strong>Faith, Formation &amp; Public Life</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
+        <div class="book-project-cover mg-cover mg-art-6 mg-refined-cover" role="img" aria-label="Faith, Formation &amp; Public Life — refined cover"><img class="mg-refined-cover-image" src="assets/books/faith-formation-public-life.avif" alt="" loading="lazy" decoding="async"></div>
         <div class="book-project-body">
           <span class="status">STUDY, NOTES & DRAFT CONTENT · IN DEVELOPMENT</span>
           <h3>Faith, Formation & Public Life</h3>
@@ -250,7 +276,7 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-art-7" role="img" aria-label="Collected Essays — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 09</span><strong>Collected Essays</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
+        <div class="book-project-cover mg-cover mg-art-7 mg-refined-cover" role="img" aria-label="Collected Essays: Technology, Ethics, Identity, Faith, Governance &amp; Culture — refined cover"><img class="mg-refined-cover-image" src="assets/books/collected-essays.avif" alt="" loading="lazy" decoding="async"></div>
         <div class="book-project-body">
           <span class="status">EXISTING ESSAYS & NOTES · IN DEVELOPMENT</span>
           <h3>Collected Essays: Technology, Ethics, Identity, Faith, Governance & Culture</h3>
@@ -290,7 +316,7 @@
 
       <!-- Book 12: Breaking Barriers — public synopsis only, full investigation reserved for manuscript -->
       <article class="book-project" id="breaking-barriers">
-        <div class="book-project-cover mg-cover mg-art-10" role="img" aria-label="Breaking Barriers — provisional cover"><div class="mg-cover-top"><span class="mg-cover-series">MANIFOLD GRACE · 12</span><strong>Breaking Barriers</strong><span class="mg-cover-rule" aria-hidden="true">◆</span></div><div class="mg-cover-portrait" aria-hidden="true"></div><div class="mg-cover-author">GRACE ROSEMARY NETTEY<small>MANIFOLD GRACE</small></div></div>
+        <div class="book-project-cover mg-cover mg-art-10 mg-refined-cover" role="img" aria-label="Breaking Barriers — refined cover"><img class="mg-refined-cover-image" src="assets/books/breaking-barriers.avif" alt="" loading="lazy" decoding="async"></div>
         <div class="book-project-body">
           <span class="status">NEW RESEARCH-LED MANUSCRIPT · WORKING TITLE</span>
           <h3>Breaking Barriers</h3>
