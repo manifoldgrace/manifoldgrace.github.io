@@ -7,10 +7,10 @@
   <meta name="description" content="Saxophone, performance, composition and genre-fluid musical practice by Grace.">
   <meta name="author" content="Grace">
   <link rel="stylesheet" href="style.css">
-  
+
   <script src="site-config.js" defer></script>
   <script src="site-shell.js" defer></script>
-  
+
   <script src="media-config.js?v=uploads-1" defer></script>
   <script src="media-file-tools.js?v=1" defer></script>
   <script src="media-upload-client.js?v=1" defer></script>
@@ -46,11 +46,11 @@
     <h1>Music</h1>
     <p class="page-intro">Music is both an artistic practice and part of my technical history. This page separates performance, musicianship and composition from the broader Creative landing page so each can develop with its own evidence and explanations.</p>
   </div></div>
-  
+
 <section><div class="wrap">
   <span class="status">PRACTICE</span><h2>Saxophone & musicianship</h2>
   <p>My musical background includes classical foundations, jazz, church music and ensemble practice, with saxophone as the clearest instrumental through-line. The point of this page is not to force that background into one genre identity, but to document technique, repertoire, performance environments and the way musicianship has influenced later technical work.</p>
-  <p>Photographs, performance extracts and practice notes can be added selectively where they demonstrate progression or context rather than simply filling a gallery.</p>
+
 </div></section>
 <section id="music-theory"><div class="wrap">
 <span class="status">MUSICIANSHIP · THEORY &amp; TRAINING</span>
@@ -163,11 +163,7 @@ root.querySelector('#theory-stop').addEventListener('click',stop);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
 show();
 })();</script>
-<section><div class="wrap">
-  <span class="status">WORK IN PROGRESS</span><h2>Composition & musical language</h2>
-  <p>My creative work includes compositions and projects held privately while recording and mixdowns are completed. Classical training, jazz and wider listening inform a musical language that allows discipline and creative freedom to coexist.</p>
-  <p>Publication is a separate stage of the work. Instrument maintenance, recording equipment and studio access have affected that stage, alongside other professional and study commitments. I am preparing work for release at a standard that reflects my training and artistic intentions.</p>
-</div></section>
+
 <section id="studio-monitor"><div class="wrap"><span class="status">INTERACTIVE AUDIO · PRODUCTION</span><h2>Music studio monitor</h2><p>A larger, studio-inspired listening and production display: monitor sound as a waveform or frequency spectrum, or view a producer's shared screen with their explicit permission.</p>
 <div class="studio-panel"><div class="studio-heading"><div><div class="studio-eyebrow">STUDIO MONITOR · BROWSER EDITION</div><h3>Audio &amp; session view</h3></div><span class="studio-status-pill">LOCAL TEST MODE</span></div>
 <div class="studio-screen"><canvas aria-label="Live sound waveform or frequency spectrum" role="img"></canvas><video hidden autoplay muted playsinline aria-label="Shared screen preview"></video></div>
@@ -175,7 +171,7 @@ show();
 <div class="studio-control-line"><label for="studio-seek" class="spotify-sr-only">Track position</label><input id="studio-seek" type="range" min="0" max="1000" value="0" aria-label="Track position"></div>
 <div class="studio-controls"><label for="studio-file">＋ Load audio<input id="studio-file" type="file" accept="audio/*"></label><button id="studio-play" type="button">▶ Play</button><label for="studio-mode">Display <select id="studio-mode"><option value="waveform">Waveform</option><option value="spectrum">Spectrum</option></select></label><label for="studio-volume">Volume <input id="studio-volume" type="range" min="0" max="100" value="100" aria-label="Audio volume"></label><button id="studio-screen" type="button">Preview a shared screen</button><button id="studio-screen-stop" type="button" hidden>Stop screen preview</button></div>
 <p id="studio-status" class="studio-help" role="status">Load an audio file for local visualisation. It remains on your device.</p></div>
-<div class="studio-tech"><details><summary>How could a remote producer show their studio here?</summary><p><strong>Stage 1 — available now:</strong> a visitor can deliberately select a screen or browser tab and preview it locally. This uses the browser's screen-capture permission. It does not upload or broadcast the feed.</p><p><strong>Stage 2 — future live collaboration:</strong> a producer could deliberately share their DAW or studio display through an authorised WebRTC session. A signalling service would exchange connection details, and the browser would receive a consent-based live video stream. Access control, session expiry, TURN relay where necessary, and explicit privacy controls would be required.</p><p><strong>Stage 3 — deeper production telemetry:</strong> real-time track names, transport state, mixer levels and timelines would need a compatible DAW integration or plug-in. Streaming a screen can show these visually without needing to reverse-engineer the DAW, but cannot itself provide editable track data.</p></details></div>
+
 </div></section>
 <script src="assets/music-studio.js" defer></script>
 <section id="listening"><div class="wrap"><span class="status">LISTENING</span><h2>My listening world</h2>
@@ -185,10 +181,10 @@ show();
 </details>
 <div data-hide-if-missing><a class="link-card" data-profile-link="soundcloud"><strong>SoundCloud</strong><small>Recordings and audio</small></a></div>
 </div></section>
-<section id="original-music-releases"><div class="wrap"><span class="status">ORIGINAL WORK · SPOTIFY RELEASES</span><h2>My music — recordings &amp; albums</h2><p>A separate home for my own compositions, performances and forthcoming releases, distinct from the music I listen to. When officially published Spotify releases are added to the site's release catalogue, their embedded players will appear here, with album playback and track selection handled by Spotify.</p><div class="original-music-shell"><div class="original-music-top"><div><span class="original-music-eyebrow">SPOTIFY · ORIGINAL MUSIC</span><h3>My releases</h3></div><span class="original-music-state">RELEASE CATALOGUE</span></div><div data-original-albums class="original-music-albums"></div><div data-original-status class="original-music-empty"><span class="original-music-note-icon" aria-hidden="true">♫</span><strong>Recordings and albums are in preparation</strong><p>My musical work is being developed with care. Following years of instrumental and musical training, I am preparing compositions and recordings for publication at a standard that reflects that work. Instrument servicing, replacement recording equipment, studio access and competing commitments have affected the release timetable. Rather than present incomplete material, I will add finished recordings and album artwork as they become ready for public listening.</p><p class="original-music-caption">No public releases linked here yet. This is a prepared catalogue, not an indication that the work does not exist.</p></div></div><details class="original-music-details"><summary>How the release player will be populated</summary><p>Once a recording or album has been distributed and is publicly available on Spotify, its official Spotify link can be added to <code>assets/original-music-catalog.js</code> along with its published title and year. The page automatically creates a playable Spotify embed for each published release; no redesign is needed. Unreleased project names and artwork remain private until publication is approved.</p><p>Spotify may require a listener to sign in or open Spotify for full playback. A static website cannot automatically discover private drafts or sync unreleased files to Spotify.</p></details></div></section>
+<section id="original-music-releases" hidden><div class="wrap"><h2>Recordings &amp; albums</h2><div data-original-albums class="original-music-albums"></div><div data-original-status hidden></div></div></section>
 <section><div class="wrap">
 <span class="status">SELECTED MEDIA</span><h2>Music media</h2>
-<p>Selected performances, classical repertoire and original works will be shared here as recordings and production are completed. Existing creative work remains private while it is prepared for publication.</p><p>I publish selectively, with attention to performance, recording quality and the finished mix.</p>
+<p>I publish selectively, with attention to performance, recording quality and the finished mix.</p>
 <div data-media-status class="notice">No media published here yet.</div>
 <div class="media-gallery" data-media-gallery data-collection="creative" data-slot="music"></div>
 <details class="upload-panel owner-tool"><summary>Upload an image</summary>
