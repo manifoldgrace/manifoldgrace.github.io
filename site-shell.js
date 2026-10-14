@@ -5,6 +5,7 @@
     ["Research Collaborations","research-collaborations.html"],
     ["Independent Work & Impact","independent-work-impact.html"],
     ["About","about.html"],
+    ["Life Timeline","life-timeline.html"],
     ["Professional","professional.html"],
     ["Photos","photos.html"],
     ["My Books","my-book.html"],
@@ -45,6 +46,7 @@
     ["Thinking","knowledge.html#thinking"],
     ["Inspirations","inspirations.html"],
     ["Biography","biographical-record.html"],
+    ["Life Timeline","life-timeline.html"],
     ["Research Collaborations","research-collaborations.html"],
     ["Research Links","research-links.html"],
     ["Case Studies","case-studies.html"],
@@ -84,3 +86,4 @@
     }
   });
 })();
+
