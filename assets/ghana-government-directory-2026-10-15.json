@@ -1,0 +1,3005 @@
+{
+  "title": "Ghana Government and Public Bodies",
+  "checked": "2026-10-15",
+  "scope": "23 ministries, 16 regions and the 261 assembly entries in the retrieved LGS regional directories; senior office-holders and selected operational bodies.",
+  "ministries": [
+    {
+      "id": "finance",
+      "name": "Finance",
+      "person": "Cassiel Ato Baah Forson",
+      "role": "Minister",
+      "email": "info@mofep.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://www.mofep.gov.gh/index.php/contact",
+      "leadership_source": "https://presidency.gov.gh/members-of-the-cabinet/",
+      "brief": "Public finance, budgets, revenue and economic policy.",
+      "related": [
+        "Ghana Revenue Authority",
+        "Controller and Accountant-General’s Department",
+        "Public Procurement Authority",
+        "State Interests and Governance Authority"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "health",
+      "name": "Health",
+      "person": "Kwabena Mintah Akandoh",
+      "role": "Minister",
+      "email": "info@moh.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://moh.gov.gh/contact-us/",
+      "leadership_source": "https://beijing.mfa.gov.gh/wp-content/uploads/2026/02/SONA20263_101932.pdf",
+      "brief": "Health policy, services and sector institutions.",
+      "related": [
+        "Ghana Health Service",
+        "National Health Insurance Authority",
+        "Food and Drugs Authority"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "interior",
+      "name": "The Interior",
+      "person": "Muntaka Mohammed-Mubarak",
+      "role": "Minister",
+      "email": "info@mint.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mint.gov.gh/contact",
+      "leadership_source": "https://beijing.mfa.gov.gh/wp-content/uploads/2026/02/SONA20263_101932.pdf",
+      "brief": "Internal security, public safety and migration.",
+      "related": [
+        "Ghana Police Service",
+        "Ghana Immigration Service",
+        "Ghana National Fire Service",
+        "Ghana Prisons Service",
+        "NADMO",
+        "National Peace Council"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "defence",
+      "name": "Defence",
+      "person": "Kenneth Gilbert Adjei",
+      "role": "Minister",
+      "email": "info@mod.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mod.gov.gh/mod/",
+      "leadership_source": "https://www.isd.gov.gh/president-mahama-reshuffles-ministerial-portfolios-in-latest-government-changes/",
+      "brief": "Defence policy and the armed forces.",
+      "related": [
+        "Ghana Armed Forces"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "person": "Haruna Iddrisu",
+      "role": "Minister",
+      "email": "pro@moe.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://curriculumresources.edu.gh/contact-us/",
+      "leadership_source": "https://presidency.gov.gh/members-of-the-cabinet/",
+      "brief": "Education policy, schools, tertiary education and skills.",
+      "related": [
+        "Ghana Education Service",
+        "Ghana Tertiary Education Commission",
+        "Commission for Technical and Vocational Education and Training",
+        "National Council for Curriculum and Assessment"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "energy",
+      "name": "Energy and Green Transition",
+      "person": "John Abdulai Jinapor",
+      "role": "Minister",
+      "email": "info@energymin.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://energymin.gov.gh/",
+      "leadership_source": "https://presidency.gov.gh/members-of-the-cabinet/",
+      "brief": "Energy policy, electricity, petroleum and transition.",
+      "related": [
+        "Energy Commission",
+        "GNPC",
+        "Volta River Authority",
+        "Electricity Company of Ghana",
+        "National Petroleum Authority"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "roads",
+      "name": "Roads and Highways",
+      "person": "Kwame Governs Agbodza",
+      "role": "Minister",
+      "email": "info@mrh.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mrh.gov.gh/contact-us/",
+      "leadership_source": "https://mrh.gov.gh/the-ministry/hon-minister/",
+      "brief": "Road policy, construction and maintenance.",
+      "related": [
+        "Ghana Highway Authority",
+        "Department of Urban Roads",
+        "Department of Feeder Roads"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "person": "Joseph Bukari Nikpe",
+      "role": "Minister",
+      "email": "info@mot.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mot.gov.gh/20/20/contact-ministry-of-transport",
+      "leadership_source": "https://mot.gov.gh/2/13/sector-ministers",
+      "brief": "Aviation, maritime, rail and road transport services.",
+      "related": [
+        "Ghana Civil Aviation Authority",
+        "Ghana Ports and Harbours Authority",
+        "Ghana Maritime Authority",
+        "Driver and Vehicle Licensing Authority",
+        "National Road Safety Authority"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "sport",
+      "name": "Sports and Recreation",
+      "person": "Kofi Iddie Adams",
+      "role": "Minister",
+      "email": "info@mosr.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mosr.gov.gh/",
+      "leadership_source": "https://mosr.gov.gh/",
+      "brief": "Sport development, participation and recreation.",
+      "related": [
+        "National Sports Authority"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "justice",
+      "name": "Attorney-General and Justice",
+      "person": "Dominic Akuritinga Ayine",
+      "role": "Minister",
+      "email": "info@mojagd.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mojagd.gov.gh/new/wp-content/uploads/2025/publications/SERVICE-CHARTER.pdf",
+      "leadership_source": "https://mojagd.gov.gh/minister/",
+      "brief": "Government legal services, justice policy and prosecution.",
+      "related": [
+        "Legal Aid Commission",
+        "Office of the Registrar of Companies",
+        "Economic and Organised Crime Office"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "lands",
+      "name": "Lands and Natural Resources",
+      "person": "Emmanuel Armah-Kofi Buah",
+      "role": "Minister",
+      "email": "mlnr.info@mlnr.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mlnr.gov.gh/contact-us/",
+      "leadership_source": "https://mlnr.gov.gh/member/the-minister/",
+      "brief": "Land, forests, minerals and natural-resource policy.",
+      "related": [
+        "Minerals Commission",
+        "Forestry Commission",
+        "Lands Commission"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "local",
+      "name": "Local Government, Chieftaincy and Religious Affairs",
+      "person": "Mahama Ayariga",
+      "role": "Minister",
+      "email": "clientservice@mlgcra.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mlgcra.gov.gh/",
+      "leadership_source": "https://presidency.gov.gh/ghanaians-expect-results-president-mahama-says-as-he-swears-in-ayariga-zanetor/",
+      "brief": "Local government policy, chieftaincy and religious affairs.",
+      "related": [
+        "Local Government Service",
+        "District Assemblies Common Fund",
+        "Births and Deaths Registry",
+        "Land Use and Spatial Planning Authority"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "foreign",
+      "name": "Foreign Affairs",
+      "person": "Samuel Okudzeto Ablakwa",
+      "role": "Minister",
+      "email": "info@mfa.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mfa.gov.gh/index.php/contact-us/",
+      "leadership_source": "https://mfa.gov.gh/",
+      "brief": "Diplomacy, international relations and overseas missions.",
+      "related": [
+        "Ghana High Commission, London"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "digital",
+      "name": "Communication, Digital Technology and Innovations",
+      "person": "Samuel Nartey George",
+      "role": "Minister",
+      "email": "info@moc.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://moc.gov.gh/contact-us/",
+      "leadership_source": "https://moc.gov.gh/2026/03/04/the-minister-for-communications-digital-technology-and-innovations-samuel-nartey-george-has-struck-a-deal-with-huawei-technologies-to-provide-free-ai-training-for-girls-in-ghana-as-part-of-the-gover/",
+      "brief": "Digital policy, communications and innovation.",
+      "related": [
+        "National Communications Authority",
+        "National Information Technology Agency",
+        "Cyber Security Authority",
+        "Data Protection Commission"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "environment",
+      "name": "Environment, Science and Technology",
+      "person": "Zanetor Agyeman-Rawlings",
+      "role": "Minister",
+      "email": "info@mesti.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mesti.gov.gh/contact/",
+      "leadership_source": "https://presidency.gov.gh/ghanaians-expect-results-president-mahama-says-as-he-swears-in-ayariga-zanetor/",
+      "brief": "Environment, scientific research and technology policy.",
+      "related": [
+        "Environmental Protection Authority",
+        "Council for Scientific and Industrial Research",
+        "Ghana Atomic Energy Commission"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "youth",
+      "name": "Youth Development and Empowerment",
+      "person": "George Opare Addo",
+      "role": "Minister",
+      "email": "info@myde.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://myde.gov.gh/publication/client-service-charter/",
+      "leadership_source": "https://presidency.gov.gh/members-of-the-cabinet/",
+      "brief": "Youth participation, development and empowerment.",
+      "related": [
+        "National Youth Authority"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "works",
+      "name": "Works, Housing and Water Resources",
+      "person": "Ahmed Ibrahim",
+      "role": "Minister",
+      "email": "info@mwhwr.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://mwhwr.gov.gh/contact-us/",
+      "leadership_source": "https://www.isd.gov.gh/president-mahama-reshuffles-ministerial-portfolios-in-latest-government-changes/",
+      "brief": "Housing, public works and water resources.",
+      "related": [
+        "Water Resources Commission",
+        "Ghana Water Limited"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "gender",
+      "name": "Gender, Children and Social Protection",
+      "person": "Agnes Naa Momo Lartey",
+      "role": "Minister",
+      "email": "info@mogcsp.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://www.mogcsp.gov.gh/contact/",
+      "leadership_source": "https://www.mogcsp.gov.gh/",
+      "brief": "Gender equality, children and social protection.",
+      "related": [
+        "LEAP",
+        "Non-Profit Organisation Secretariat"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "tourism",
+      "name": "Tourism, Culture and Creative Arts",
+      "person": "Abla Dzifa Gomashie",
+      "role": "Minister",
+      "email": "info@motcca.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://www.motac.gov.gh/contact-us/",
+      "leadership_source": "https://presidency.gov.gh/members-of-the-cabinet/",
+      "brief": "Tourism, cultural heritage and creative sectors.",
+      "related": [
+        "Ghana Tourism Authority",
+        "Ghana Museums and Monuments Board",
+        "National Commission on Culture"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "labour",
+      "name": "Labour, Jobs and Employment",
+      "person": "Emmanuel Kwadwo Agyekum",
+      "role": "Minister",
+      "email": "info@melr.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://www.ghaneps.gov.gh/epps/prepareViewCAOrganisation.do?id=19147",
+      "leadership_source": "https://www.isd.gov.gh/president-mahama-reshuffles-cabinet-reassigns-three-ministers/",
+      "brief": "Employment, labour policy and workplace relations; August reassignment notice uses “Labour, Employment and Job Creation”.",
+      "related": [
+        "National Pensions Regulatory Authority",
+        "SSNIT"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "agriculture",
+      "name": "Food and Agriculture",
+      "person": "Eric Opoku",
+      "role": "Minister",
+      "email": "info@mofa.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://www.mofa.gov.gh/",
+      "leadership_source": "https://www.mofa.gov.gh/site/about-us/the-structure-of-the-ministry",
+      "brief": "Agriculture, food systems, farming and extension.",
+      "related": [
+        "Ghana Cocoa Board"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "fisheries",
+      "name": "Fisheries and Aquaculture",
+      "person": "Emelia Arthur",
+      "role": "Minister",
+      "email": "info@mofad.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://www.mofaq.gov.gh/right-to-information/",
+      "leadership_source": "https://www.mofaq.gov.gh/leadership/",
+      "brief": "Fisheries, aquaculture and fishing communities.",
+      "related": [
+        "Fisheries Commission"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    },
+    {
+      "id": "trade",
+      "name": "Trade, Agribusiness and Industry",
+      "person": "Elizabeth Ofosu-Adjare",
+      "role": "Minister",
+      "email": "motichief@moti.gov.gh",
+      "contact_type": "Ministry office",
+      "source": "https://www.moti.gov.gh/new/contact.php",
+      "leadership_source": "https://www.mofep.gov.gh/index.php/news-and-events/2026-09-02/finance-minister-begins-consultations-with-trade-ministry-on-new-economy-programme",
+      "brief": "Trade, industry, agribusiness and enterprise.",
+      "related": [
+        "Ghana Enterprises Agency",
+        "Ghana Export Promotion Authority",
+        "Ghana Standards Authority"
+      ],
+      "category": "Ministry",
+      "region": "National"
+    }
+  ],
+  "national_institutions": [
+    {
+      "name": "Presidency",
+      "person": "John Dramani Mahama",
+      "role": "President",
+      "email": "office@presidency.gov.gh",
+      "source": "https://presidency.gov.gh/contact/",
+      "leadership_source": "https://presidency.gov.gh/profile/",
+      "brief": "National executive leadership.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Office inbox"
+    },
+    {
+      "name": "Vice-President’s Office",
+      "person": "Naana Jane Opoku-Agyemang",
+      "role": "Vice-President",
+      "email": "office@presidency.gov.gh",
+      "source": "https://presidency.gov.gh/contact/",
+      "leadership_source": "https://presidency.gov.gh/members-of-the-cabinet/",
+      "brief": "Vice-presidential correspondence through the Presidency.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Presidency referral"
+    },
+    {
+      "name": "Office of the Chief of Staff",
+      "person": "Julius Debrah",
+      "role": "Chief of Staff",
+      "email": "office@presidency.gov.gh",
+      "source": "https://presidency.gov.gh/contact/",
+      "leadership_source": "https://presidency.gov.gh/president-mahama-reiterates-his-determination-to-build-more-businesses/",
+      "brief": "Coordination within the Presidency.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Presidency office"
+    },
+    {
+      "name": "Government Communications",
+      "person": "Felix Kwakye Ofosu",
+      "role": "Minister of State / spokesperson",
+      "email": "comms@presidency.gov.gh",
+      "source": "https://presidency.gov.gh/contact/",
+      "leadership_source": "https://www.isd.gov.gh/president-mahama-reshuffles-cabinet-reassigns-three-ministers/",
+      "brief": "Government communications and press enquiries.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Communications office"
+    },
+    {
+      "name": "Special Initiatives",
+      "person": "Abdul-Rashid Pelpuo",
+      "role": "Minister of State",
+      "email": "office@presidency.gov.gh",
+      "source": "https://presidency.gov.gh/contact/",
+      "leadership_source": "https://www.isd.gov.gh/president-mahama-reshuffles-cabinet-reassigns-three-ministers/",
+      "brief": "Special initiatives within the Presidency.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Presidency referral"
+    },
+    {
+      "name": "Climate Change and Sustainability",
+      "person": "Issifu Seidu",
+      "role": "Minister of State",
+      "email": "office@presidency.gov.gh",
+      "source": "https://presidency.gov.gh/contact/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "brief": "Cross-government climate and sustainability coordination.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Presidency referral"
+    },
+    {
+      "name": "Parliament of Ghana",
+      "person": "Alban Sumana Kingsford Bagbin",
+      "role": "Speaker",
+      "email": "info@parliament.gh",
+      "source": "https://www.parliament.gh/speaker",
+      "leadership_source": "https://parliament.gh/news?CO=351",
+      "brief": "Lawmaking and executive oversight; the members directory provides constituency contacts.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Parliament office"
+    },
+    {
+      "name": "Judiciary / Judicial Service",
+      "person": "Paul Baffoe-Bonnie",
+      "role": "Chief Justice",
+      "email": "chiefjustice@jsg.gov.gh",
+      "source": "https://garia.org/wp-content/uploads/2024/04/LEADing-Justice-Initiatives-Brochure.pdf",
+      "leadership_source": "https://www.judicial.gov.gh/index.php/publications/news-publications/js-latest-news?start=32",
+      "brief": "Supreme Court, Court of Appeal, High Court, regional tribunals and lower courts. Use court registries for proceedings.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Published office address · 2024 brochure"
+    },
+    {
+      "name": "Ghana Audit Service",
+      "person": "Pamela Graham",
+      "role": "Auditor-General",
+      "email": "info@audit.gov.gh",
+      "source": "https://audit.gov.gh/20/we-are-here/1000",
+      "leadership_source": "https://audit.gov.gh/2/13/management-team",
+      "brief": "Public-sector audit and reporting.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Office inbox"
+    },
+    {
+      "name": "Commission on Human Rights and Administrative Justice",
+      "person": "Joseph Akanjolenur Whittal",
+      "role": "Commissioner",
+      "email": "info@chraj.gov.gh",
+      "source": "https://chraj.gov.gh/faqs/",
+      "leadership_source": "https://chraj.gov.gh/commission-members/",
+      "brief": "Human rights, administrative justice and anti-corruption.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Office inbox"
+    },
+    {
+      "name": "Office of the Special Prosecutor",
+      "person": "Kissi Agyebeng",
+      "role": "Special Prosecutor",
+      "email": "info@osp.gov.gh",
+      "source": "https://www.osp.gov.gh/contact/",
+      "leadership_source": "https://www.osp.gov.gh/about/our_people",
+      "brief": "Independent specialist anti-corruption investigation and prosecution.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Office inbox"
+    },
+    {
+      "name": "Electoral Commission",
+      "person": "Jean Mensa",
+      "role": "Chairperson",
+      "email": "info@ec.gov.gh",
+      "source": "https://ec.gov.gh/contact-us/",
+      "leadership_source": "https://ec.gov.gh/about-us/",
+      "brief": "Elections and electoral administration.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Office inbox"
+    },
+    {
+      "name": "Bank of Ghana",
+      "person": "Johnson Asiamah",
+      "role": "Governor",
+      "email": "bogsecretary@bog.gov.gh",
+      "source": "https://www.bog.gov.gh/",
+      "leadership_source": "https://www.ndpc.gov.gh/about/profile/57/commisioner/",
+      "brief": "Monetary policy and central banking.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Bank secretary’s office"
+    },
+    {
+      "name": "Office of the Head of Local Government Service",
+      "person": "Lord Mensah",
+      "role": "Head of Service",
+      "email": "ohlgs@lgs.gov.gh",
+      "source": "https://lgs.gov.gh/",
+      "leadership_source": "https://lgs.gov.gh/head-of-the-local-government-service-undertakes-familiarisation-tour-of-central-region/",
+      "brief": "Local-government administration and referral to regional and assembly offices.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "Office inbox"
+    },
+    {
+      "name": "Office of the Head of the Civil Service",
+      "person": "Evans Aggrey-Darkoh",
+      "role": "Head of Civil Service",
+      "email": "rcu@ohcs.gov.gh",
+      "source": "https://ohcs.gov.gh/rti/",
+      "leadership_source": "https://ohcs.gov.gh/about/",
+      "brief": "Civil-service management; the published RTI/reforms address is the information route.",
+      "category": "National institution",
+      "region": "National",
+      "contact_type": "RTI / reforms unit"
+    }
+  ],
+  "regions": [
+    {
+      "name": "Ahafo Regional Coordinating Council",
+      "region": "Ahafo",
+      "capital": "Goaso",
+      "person": "Charity Gardiner",
+      "role": "Regional Minister",
+      "email": "oahrcc@ahrcc.gov.gh",
+      "source": "https://ahrcc.gov.gh/contact-us/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/ahafo/",
+      "assemblies": [
+        {
+          "name": "Asunafo North Municipal",
+          "website": ""
+        },
+        {
+          "name": "Asutifi North District",
+          "website": "https://asutifinorth.gov.gh/"
+        },
+        {
+          "name": "Tano South Municipal",
+          "website": "http://tanosouth.gov.gh/"
+        },
+        {
+          "name": "Asutifi South District",
+          "website": "asutifisouth.gov.gh"
+        },
+        {
+          "name": "Asunafo South District",
+          "website": "https://asunafosouth.gov.gh"
+        },
+        {
+          "name": "Tano North Municipal",
+          "website": "https://tanonorthmunicipalassembly.com.gh"
+        }
+      ]
+    },
+    {
+      "name": "Ashanti Regional Coordinating Council",
+      "region": "Ashanti",
+      "capital": "Kumasi",
+      "person": "Frank Amoakohene",
+      "role": "Regional Minister",
+      "email": "info@arcc.gov.gh",
+      "source": "https://arcc.gov.gh/contact-us/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/ashanti/",
+      "assemblies": [
+        {
+          "name": "Kumasi Metropolitan",
+          "website": "kma.gov.gh"
+        },
+        {
+          "name": "Ahafo Ano North Municipal",
+          "website": "http://www.aanma.gov.gh"
+        },
+        {
+          "name": "Asante Akim Central Municipal",
+          "website": "https://aakcma.gov.gh"
+        },
+        {
+          "name": "Asante Akim South Municipal",
+          "website": "http://www.aasma.org.gh"
+        },
+        {
+          "name": "Asokore Mampong Municipal",
+          "website": "http://www.amma.gov.gh/"
+        },
+        {
+          "name": "Asokwa Municipal",
+          "website": "https://askma.gov.gh"
+        },
+        {
+          "name": "Atwima Nwabiagya Municipal",
+          "website": "http://atwimanma.gov.gh"
+        },
+        {
+          "name": "Bekwai Municipal",
+          "website": "https://www.bma.gov.gh"
+        },
+        {
+          "name": "Ejisu Municipal",
+          "website": "https://ejima.gov.gh"
+        },
+        {
+          "name": "Ejura Sekyredumasi Municipal",
+          "website": "https://esma.gov.gh"
+        },
+        {
+          "name": "Juaben Municipal",
+          "website": "http://juma.gov.gh"
+        },
+        {
+          "name": "Kwabre East Municipal",
+          "website": "aksda.gov.gh"
+        },
+        {
+          "name": "Kwadaso Municipal",
+          "website": "https://kwadma.gov.gh"
+        },
+        {
+          "name": "Mampong Municipal",
+          "website": "https://mampongmunicipalassembly.com/"
+        },
+        {
+          "name": "Obuasi Municipal",
+          "website": "oma.gov.gh"
+        },
+        {
+          "name": "Offinso Municipal",
+          "website": "https://ofma.gov.gh"
+        },
+        {
+          "name": "Oforikrom Municipal",
+          "website": "http://www.ofkma.gov.gh/"
+        },
+        {
+          "name": "Old Tafo Municipal",
+          "website": "http://otma.gov.gh"
+        },
+        {
+          "name": "Suame Municipal",
+          "website": "http://suamema.gov.gh"
+        },
+        {
+          "name": "Adansi Asokwa District",
+          "website": "https://adansiasokwa.com"
+        },
+        {
+          "name": "Adansi North District",
+          "website": "http://www.adansinorthdistrictassembly.com"
+        },
+        {
+          "name": "Adansi South District",
+          "website": "https://asda.gov.gh"
+        },
+        {
+          "name": "Afigya Kwabre North District",
+          "website": "http://www.aknda.gov.gh"
+        },
+        {
+          "name": "Afigya Kwabre South District",
+          "website": "aksda.gov.gh"
+        },
+        {
+          "name": "Ahafo Ano South East District",
+          "website": "http://aaseda.gov.gh"
+        },
+        {
+          "name": "Ahafo Ano South West District",
+          "website": "https://aaswda.gov.gh"
+        },
+        {
+          "name": "Akrofuom District",
+          "website": "https://ada.gov.gh"
+        },
+        {
+          "name": "Amansie Central District",
+          "website": "https://amansiecentral.gov.gh"
+        },
+        {
+          "name": "Amansie South District",
+          "website": "https://amsda.gov.gh"
+        },
+        {
+          "name": "Amansie West District",
+          "website": "https://amansiewestda.gov.gh"
+        },
+        {
+          "name": "Asante Akim North District",
+          "website": "https://aanda.gov.gh"
+        },
+        {
+          "name": "Atwima Kwanwoma District",
+          "website": "https://akdaghana.org"
+        },
+        {
+          "name": "Atwima Mponua District",
+          "website": "https://atmda.gov.gh"
+        },
+        {
+          "name": "Atwima Nwabiagya North District",
+          "website": "https://annda.org"
+        },
+        {
+          "name": "Bosome Freho District",
+          "website": "https://bfda.gov.gh"
+        },
+        {
+          "name": "Bosomtwe District",
+          "website": "http://www.bosomtwe.gov.gh"
+        },
+        {
+          "name": "Obuasi East District",
+          "website": "oeda.gov.gh"
+        },
+        {
+          "name": "Offinso North District",
+          "website": "https://offinsonorth.org"
+        },
+        {
+          "name": "Sekyere Afram Plains District",
+          "website": "http://www.sapda.org.gh"
+        },
+        {
+          "name": "Sekyere Central District",
+          "website": ""
+        },
+        {
+          "name": "Sekyere East District",
+          "website": "http://seda.gov.gh/"
+        },
+        {
+          "name": "Sekyere Kumawu District",
+          "website": ""
+        },
+        {
+          "name": "Sekyere South District",
+          "website": "http://ssda.gov.gh"
+        }
+      ]
+    },
+    {
+      "name": "Bono Regional Coordinating Council",
+      "region": "Bono",
+      "capital": "Sunyani",
+      "person": "Joseph Addae Akwaboa",
+      "role": "Regional Minister",
+      "email": "info@brcc.gov.gh",
+      "source": "https://brcc.gov.gh/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/bono/",
+      "assemblies": [
+        {
+          "name": "Berekum East Municipal",
+          "website": "https://bema.gov.gh"
+        },
+        {
+          "name": "Dormaa Central Municipal",
+          "website": "http://dcma.gov.gh"
+        },
+        {
+          "name": "Jaman South Municipal",
+          "website": "http://jsma.gov.gh/"
+        },
+        {
+          "name": "Sunyani Municipal",
+          "website": "http://www.sma.gov.gh"
+        },
+        {
+          "name": "Wenchi Municipal",
+          "website": "http://wma.gov.gh"
+        },
+        {
+          "name": "Tain District",
+          "website": "https://taindistrict.org"
+        },
+        {
+          "name": "Jaman North District",
+          "website": ""
+        },
+        {
+          "name": "Sunyani West District",
+          "website": "http://swda.gov.gh"
+        },
+        {
+          "name": "Dormaa East District",
+          "website": "https://deda.gov.gh"
+        },
+        {
+          "name": "Banda District",
+          "website": "http:// http://banda-da.gov.gh/"
+        },
+        {
+          "name": "Dormaa West District",
+          "website": "http://www.dwda.online"
+        },
+        {
+          "name": "Berekum West District",
+          "website": "https://bwda.gov.gh/"
+        }
+      ]
+    },
+    {
+      "name": "Bono East Regional Coordinating Council",
+      "region": "Bono East",
+      "capital": "Techiman",
+      "person": "Francis Owusu Antwi",
+      "role": "Regional Minister",
+      "email": "info@bonoeastrcc.gov.gh",
+      "source": "https://bonoeastrcc.gov.gh/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/bono-east-2/",
+      "assemblies": [
+        {
+          "name": "Atebubu Amantin Municipal",
+          "website": "https://aama.gov.gh"
+        },
+        {
+          "name": "Kintampo North Municipal",
+          "website": "http://kima.gov.gh"
+        },
+        {
+          "name": "Nkoranza South Municipal",
+          "website": "https://nksma.gov.gh"
+        },
+        {
+          "name": "Techiman Municipal",
+          "website": "https://tecma.gov.gh"
+        },
+        {
+          "name": "Sene West District",
+          "website": "https://sewda.gov.gh"
+        },
+        {
+          "name": "Pru East District",
+          "website": "https://peda.gov.gh"
+        },
+        {
+          "name": "Kintampo South District",
+          "website": "https://ksda.gov.gh"
+        },
+        {
+          "name": "Nkoranza North District",
+          "website": "http://nkoranzanorth.com"
+        },
+        {
+          "name": "Techiman North District",
+          "website": "https://tenda.gov.gh"
+        },
+        {
+          "name": "Sene East District",
+          "website": "http://www.seeda.gov.gh"
+        },
+        {
+          "name": "Pru West District",
+          "website": "http://www.pwda.gov.gh"
+        }
+      ]
+    },
+    {
+      "name": "Central Regional Coordinating Council",
+      "region": "Central",
+      "capital": "Cape Coast",
+      "person": "Ekow Panyin Okyere Eduamoah",
+      "role": "Regional Minister",
+      "email": "info@crcc.gov.gh",
+      "source": "https://crcc.gov.gh/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/central/",
+      "assemblies": [
+        {
+          "name": "Cape Coast Metropolitan",
+          "website": "ccma.gov.gh"
+        },
+        {
+          "name": "Agona West Municipal",
+          "website": "https://www.awma.gov.gh"
+        },
+        {
+          "name": "Assin Fosu Municipal",
+          "website": "http://www.afma.gov.gh"
+        },
+        {
+          "name": "Awutu Senya East Municipal",
+          "website": "https://asema.gov.gh"
+        },
+        {
+          "name": "Effutu Municipal",
+          "website": "https://effutuma.gov.gh"
+        },
+        {
+          "name": "Komenda-Edina-Eguafo-Abrim Municipal",
+          "website": "keeama.gov.gh"
+        },
+        {
+          "name": "Mfantsiman Municipal",
+          "website": "https://www.mfantsemanma.gov.gh"
+        },
+        {
+          "name": "Upper Denkyira East Municipal",
+          "website": "https://udema.gov.gh"
+        },
+        {
+          "name": "Abura/ Asebu/ Kwamankese District",
+          "website": "https://aakda.gov.gh"
+        },
+        {
+          "name": "Agona East District",
+          "website": "http://www.aeda.yolasite.com"
+        },
+        {
+          "name": "Ajumako/Enyan/Esiam District",
+          "website": "http://www.aeed.gov.gh"
+        },
+        {
+          "name": "Asikuma-Odoben-Brakwa-Breman District",
+          "website": "https://aobda.gov.gh"
+        },
+        {
+          "name": "Assin North District",
+          "website": "https://assinnorth.org"
+        },
+        {
+          "name": "Assin South District",
+          "website": "http://www.theassda.gov.gh"
+        },
+        {
+          "name": "Awutu Senya District",
+          "website": "http://www.awutusenyada.gov.gh"
+        },
+        {
+          "name": "Ekumfi District",
+          "website": "https://edacentral.gov.gh"
+        },
+        {
+          "name": "Gomoa Central District",
+          "website": "http://www.gcda.gov.gh"
+        },
+        {
+          "name": "Gomoa East District",
+          "website": "https://geda.gov.gh"
+        },
+        {
+          "name": "Gomoa West District",
+          "website": "http://gomoawda.gov.gh"
+        },
+        {
+          "name": "Hemang Lower Denkyira District",
+          "website": "https://thldda.gov.gh"
+        },
+        {
+          "name": "Twifu Ati Morkwa District",
+          "website": "http://tamda.info"
+        },
+        {
+          "name": "Upper Denkyira West District",
+          "website": "http://udwda.gov.gh"
+        }
+      ]
+    },
+    {
+      "name": "Eastern Regional Coordinating Council",
+      "region": "Eastern",
+      "capital": "Koforidua",
+      "person": "Rita Akosua Adjei Awatey",
+      "role": "Regional Minister",
+      "email": "ohlgs@lgs.gov.gh",
+      "source": "https://lgs.gov.gh/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "LGS referral to regional office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/eastern/",
+      "assemblies": [
+        {
+          "name": "Abuakwa North Municipal",
+          "website": "https://abuakwanma.gov.gh/"
+        },
+        {
+          "name": "Abuakwa South Municipal",
+          "website": "http://asma.gov.gh/"
+        },
+        {
+          "name": "Akwapim North Municipal",
+          "website": "http://anma.gov.gh/"
+        },
+        {
+          "name": "Birim Central Municipal",
+          "website": "http://www.bcma.gov.gh/"
+        },
+        {
+          "name": "Kwaebibirem Municipal",
+          "website": "https://www.kwaebibiremmunicipal.com/"
+        },
+        {
+          "name": "Kwahu West Municipal",
+          "website": "https://kwahuwest.gov.gh"
+        },
+        {
+          "name": "Lower Manya Krobo Municipal",
+          "website": "https://lmkma.gov.gh"
+        },
+        {
+          "name": "New Juaben North Municipal",
+          "website": "https://njnma.gov.gh/"
+        },
+        {
+          "name": "New Juaben South Municipal",
+          "website": "https://njsma.gov.gh/"
+        },
+        {
+          "name": "Nsawam Adoagyiri Municipal",
+          "website": "http://nama.gov.gh/"
+        },
+        {
+          "name": "Suhum Municipal",
+          "website": "https://suma.gov.gh/"
+        },
+        {
+          "name": "West Akim Municipal",
+          "website": "https://wama.gov.gh/"
+        },
+        {
+          "name": "Yilo Krobo Municipal",
+          "website": "https://ykma.org/"
+        },
+        {
+          "name": "Achiase District",
+          "website": "http://www.achdagh.com"
+        },
+        {
+          "name": "Akuapem South District",
+          "website": "http://aksma.gov.gh/"
+        },
+        {
+          "name": "Akyemansa District",
+          "website": "http://akmda.gov.gh"
+        },
+        {
+          "name": "Asene-Manso-Akroso District",
+          "website": "https://amada.gov.gh"
+        },
+        {
+          "name": "Asuogyaman District",
+          "website": "http://www.asuda.gov.gh"
+        },
+        {
+          "name": "Atiwa East District",
+          "website": "http://atiwaeast.gov.gh/"
+        },
+        {
+          "name": "Atiwa West District",
+          "website": ""
+        },
+        {
+          "name": "Ayensuano District",
+          "website": "http://ayensuanoda.gov.gh/"
+        },
+        {
+          "name": "Birim North District",
+          "website": "https://bnda.gov.gh"
+        },
+        {
+          "name": "Birim South District",
+          "website": "http://www.bsda.gov.gh"
+        },
+        {
+          "name": "Denkyembuor District",
+          "website": "http://dda.gov.gh/"
+        },
+        {
+          "name": "Fanteakwa North District",
+          "website": "https://www.fanteakwanorthdistrictassembly.com/"
+        },
+        {
+          "name": "Fanteakwa South District",
+          "website": "https://www.fsda.gov.gh"
+        },
+        {
+          "name": "Kwahu Afram Plains North District",
+          "website": "http://kapnda.gov.gh/"
+        },
+        {
+          "name": "Kwahu Afram Plains South District",
+          "website": "http://kapsda.gov.gh/"
+        },
+        {
+          "name": "Kwahu East District",
+          "website": "kwahueast.gov.gh/"
+        },
+        {
+          "name": "Kwahu South District",
+          "website": "https://kwahusouth.com/"
+        },
+        {
+          "name": "Okere District",
+          "website": "https://okda.gov.gh/"
+        },
+        {
+          "name": "Upper Manya Krobo District",
+          "website": "http://umkda.gov.gh"
+        },
+        {
+          "name": "Upper West Akim District",
+          "website": "http://uwada.gov.gh/"
+        }
+      ]
+    },
+    {
+      "name": "Greater Accra Regional Coordinating Council",
+      "region": "Greater Accra",
+      "capital": "Accra",
+      "person": "Linda Obenewaa Akweley Ocloo",
+      "role": "Regional Minister",
+      "email": "ohlgs@lgs.gov.gh",
+      "source": "https://lgs.gov.gh/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "LGS referral to regional office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/greater-accra/",
+      "assemblies": [
+        {
+          "name": "Accra Metropolitan",
+          "website": "ama.gov.gh"
+        },
+        {
+          "name": "Tema Metropolitan",
+          "website": "tma.gov.gh"
+        },
+        {
+          "name": "Ablekuma Central Municipal",
+          "website": "http://abcma.gov.gh"
+        },
+        {
+          "name": "Ablekuma North Municipal",
+          "website": "http://abnma.gov.gh"
+        },
+        {
+          "name": "Ablekuma West Municipal",
+          "website": "http://abwma.gov.gh"
+        },
+        {
+          "name": "Adenta Municipal",
+          "website": "adma.gov.gh/"
+        },
+        {
+          "name": "Ashaiman Municipal",
+          "website": "https://ashma.gov.gh"
+        },
+        {
+          "name": "Ayawaso Central Municipal",
+          "website": "https://acma.gov.gh"
+        },
+        {
+          "name": "Ayawaso East Municipal",
+          "website": "http://aema.gov.gh"
+        },
+        {
+          "name": "Ayawaso North Municipal",
+          "website": "https://ayawasonma.gov.gh"
+        },
+        {
+          "name": "Ayawaso West Municipal",
+          "website": "https://aywma.gov.gh"
+        },
+        {
+          "name": "Ga  South Municipal",
+          "website": "https://gsma.gov.gh"
+        },
+        {
+          "name": "Ga Central Municipal",
+          "website": "https://gcmagh.com"
+        },
+        {
+          "name": "Ga East Municipal",
+          "website": "http://gema.gov.gh"
+        },
+        {
+          "name": "Ga North Municipal",
+          "website": "http://gnma.gov.gh/"
+        },
+        {
+          "name": "Ga West Municipal",
+          "website": "https://gwma.gov.gh"
+        },
+        {
+          "name": "Korle Klottey Municipal",
+          "website": "https://kokma.gov.gh"
+        },
+        {
+          "name": "Kpone Katamanso Municipal",
+          "website": "https://kkma.gov.gh"
+        },
+        {
+          "name": "Krowor Municipal",
+          "website": "https://kroma.gov.gh"
+        },
+        {
+          "name": "La Dade-Kotopon Municipal",
+          "website": "https://ladma.gov.gh"
+        },
+        {
+          "name": "La-Nkwantanang Municipal",
+          "website": "https://lanmma.gov.gh"
+        },
+        {
+          "name": "Ledzokuku Municipal",
+          "website": "lekma.gov.gh"
+        },
+        {
+          "name": "Okaikwei North Municipal",
+          "website": "https://www.onmaonline.com"
+        },
+        {
+          "name": "Tema West Municipal",
+          "website": "http://twma.gov.gh"
+        },
+        {
+          "name": "Weija-Gbawe Municipal",
+          "website": "https://wgma.gov.gh"
+        },
+        {
+          "name": "Ada East District",
+          "website": "http://aeda.gov.gh"
+        },
+        {
+          "name": "Ada West District",
+          "website": "https://www.adawest.gov.gh"
+        },
+        {
+          "name": "Ningo-Prampram District",
+          "website": "http://nipda.gov.gh"
+        },
+        {
+          "name": "Shai-Osudoku District",
+          "website": "https://www.soda.gov.gh"
+        }
+      ]
+    },
+    {
+      "name": "North East Regional Coordinating Council",
+      "region": "North East",
+      "capital": "Nalerigu",
+      "person": "Ibrahim Tia",
+      "role": "Regional Minister",
+      "email": "info@nercc.gov.gh",
+      "source": "https://nercc.gov.gh/emails-for-official-correspondence-by-staff/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/north-east/",
+      "assemblies": [
+        {
+          "name": "East Mamprusi Municipal",
+          "website": "http://emma.gov.gh"
+        },
+        {
+          "name": "West Mamprusi Municipal",
+          "website": "http://wmma.gov.gh"
+        },
+        {
+          "name": "Bunkpurugu Nakpanduri District",
+          "website": ""
+        },
+        {
+          "name": "Chereponi District",
+          "website": ""
+        },
+        {
+          "name": "Mamprugu Moagduri District",
+          "website": "http://mmda.gov.gh"
+        },
+        {
+          "name": "Yunyoo Nasuan District",
+          "website": ""
+        }
+      ]
+    },
+    {
+      "name": "Northern Regional Coordinating Council",
+      "region": "Northern",
+      "capital": "Tamale",
+      "person": "Ali Adolf John",
+      "role": "Regional Minister",
+      "email": "ohlgs@lgs.gov.gh",
+      "source": "https://lgs.gov.gh/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "LGS referral to regional office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/northern/",
+      "assemblies": [
+        {
+          "name": "Tamale Metropolitan",
+          "website": "tamalemetro.gov.gh"
+        },
+        {
+          "name": "Gushegu Municipal",
+          "website": "gusheguma.gov.gh"
+        },
+        {
+          "name": "Nanumba North Municipal",
+          "website": "http://nnma.gov.gh"
+        },
+        {
+          "name": "Sagnerigu Municipal",
+          "website": "sagnariguassemblygh.com"
+        },
+        {
+          "name": "Savelugu Municipal",
+          "website": "http://saveluguma.gov.gh"
+        },
+        {
+          "name": "Yendi Municipal",
+          "website": "https://www.yendimunicipal.org"
+        },
+        {
+          "name": "Karaga District",
+          "website": "karagaassemblygh.com"
+        },
+        {
+          "name": "Kpandai District",
+          "website": "http://www.kpada.gov.gh"
+        },
+        {
+          "name": "Kumbungu District",
+          "website": ""
+        },
+        {
+          "name": "Mion District",
+          "website": ""
+        },
+        {
+          "name": "Nanton District",
+          "website": "nanton.gov.gh"
+        },
+        {
+          "name": "Nanumba South District",
+          "website": "nanumbasouthdistrict.gov.gh"
+        },
+        {
+          "name": "Saboba District",
+          "website": "sabobadagh.com"
+        },
+        {
+          "name": "Tatale Sanguli District",
+          "website": "https://tatalesanguli.org"
+        },
+        {
+          "name": "Tolon District",
+          "website": ""
+        },
+        {
+          "name": "Zabzugu District",
+          "website": "https://zabzugudistrict.gov.gh"
+        }
+      ]
+    },
+    {
+      "name": "Oti Regional Coordinating Council",
+      "region": "Oti",
+      "capital": "Dambai",
+      "person": "John Kwadwo Gyapong",
+      "role": "Regional Minister",
+      "email": "info@orcc.gov.gh",
+      "source": "https://orcc.gov.gh/contact/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/oti-region/",
+      "assemblies": [
+        {
+          "name": "Krachi  East Municipal",
+          "website": "http://krema.gov.gh/"
+        },
+        {
+          "name": "Nkwanta South Municipal",
+          "website": "www.nsma.gov.gh"
+        },
+        {
+          "name": "Biakoye District",
+          "website": "http://biakoye.gov.gh/"
+        },
+        {
+          "name": "Jasikan District",
+          "website": "http://jaskanma.gov.gh"
+        },
+        {
+          "name": "Kadjebi District",
+          "website": "http://kada.gov.gh/"
+        },
+        {
+          "name": "Krachi Nchumuru District",
+          "website": "www.knda.gov.gh"
+        },
+        {
+          "name": "Krachi West District",
+          "website": "http://krachiwestmunicipalassemblygovgh.com"
+        },
+        {
+          "name": "Nkwanta North District",
+          "website": "www.nknda.gov.gh"
+        },
+        {
+          "name": "Guan District",
+          "website": "www.guda.org.gh"
+        }
+      ]
+    },
+    {
+      "name": "Savannah Regional Coordinating Council",
+      "region": "Savannah",
+      "capital": "Damongo",
+      "person": "Salisu Be-Awuribe",
+      "role": "Regional Minister",
+      "email": "info@srcc.gov.gh",
+      "source": "https://www.ghaneps.gov.gh/epps/prepareViewCAOrganisation.do?id=23427",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/savannah/",
+      "assemblies": [
+        {
+          "name": "Bole District",
+          "website": ""
+        },
+        {
+          "name": "East Gonja Municipal",
+          "website": ""
+        },
+        {
+          "name": "West Gonja District",
+          "website": ""
+        },
+        {
+          "name": "Sawla Tuna Kalba District",
+          "website": ""
+        },
+        {
+          "name": "Central  Gonja District",
+          "website": ""
+        },
+        {
+          "name": "North Gonja District",
+          "website": ""
+        },
+        {
+          "name": "North East Gonja Distric",
+          "website": ""
+        }
+      ]
+    },
+    {
+      "name": "Upper East Regional Coordinating Council",
+      "region": "Upper East",
+      "capital": "Bolgatanga",
+      "person": "Donatus Akamugri Atanga",
+      "role": "Regional Minister",
+      "email": "info@uercc.gov.gh",
+      "source": "https://uercc.gov.gh/contact-us/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/upper-east/",
+      "assemblies": [
+        {
+          "name": "Bawku Municipal",
+          "website": "http://bawkuma.gov.gh"
+        },
+        {
+          "name": "Bolgatanga Municipal",
+          "website": "www.bolma.gov.gh"
+        },
+        {
+          "name": "Kassena Nankana East Municipal",
+          "website": "https://kassenanankanama.org/"
+        },
+        {
+          "name": "Bawku West District",
+          "website": "https://bwdaz.gov.gh"
+        },
+        {
+          "name": "Binduri District",
+          "website": "http://www.binduridistrict.org/"
+        },
+        {
+          "name": "Bolgatanga East District",
+          "website": "www.beda.gov.gh"
+        },
+        {
+          "name": "Bongo District",
+          "website": "www.bongodistrict.gov.gh"
+        },
+        {
+          "name": "Builsa North District",
+          "website": "http://www.bunma.gov.gh"
+        },
+        {
+          "name": "Builsa South District",
+          "website": "http://www.builsasouthda.org"
+        },
+        {
+          "name": "Garu District",
+          "website": "http://www.tdagov.wordpress.com"
+        },
+        {
+          "name": "Kassena Nankana West District",
+          "website": "www.knwda.gov.gh"
+        },
+        {
+          "name": "Nabdam District",
+          "website": "https://nabda.gov.gh/"
+        },
+        {
+          "name": "Pusiga District",
+          "website": "http://www.pusigada.com"
+        },
+        {
+          "name": "Talensi District",
+          "website": "http://www.talda.gov.gh"
+        },
+        {
+          "name": "Tempane District",
+          "website": "http://www.tempaneda.gov.gh"
+        }
+      ]
+    },
+    {
+      "name": "Upper West Regional Coordinating Council",
+      "region": "Upper West",
+      "capital": "Wa",
+      "person": "Charles Lwanga Puozuing",
+      "role": "Regional Minister",
+      "email": "info@uwrcc.gov.gh",
+      "source": "https://uwrcc.gov.gh/index.php/contact/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/upper-west/",
+      "assemblies": [
+        {
+          "name": "Wa Municipal",
+          "website": "http://www.wamunicipal.gov.gh"
+        },
+        {
+          "name": "Jirapa Municipal",
+          "website": "http:// www.jima.gov.gh"
+        },
+        {
+          "name": "Lawra Municipal",
+          "website": ""
+        },
+        {
+          "name": "Sissala East Municipal",
+          "website": "http://semagh.com"
+        },
+        {
+          "name": "Dafiama Bussie Issa District",
+          "website": "www.dbida.gov.gh"
+        },
+        {
+          "name": "Lambussie District",
+          "website": "http://www.lda.gov.gh"
+        },
+        {
+          "name": "Nandom District",
+          "website": "www.nandomdistrict.gov.gh"
+        },
+        {
+          "name": "Nadowli/Kaleo District",
+          "website": "http://www.nakda.gov.gh"
+        },
+        {
+          "name": "Sissala West District",
+          "website": "http://swdag.gov.gh"
+        },
+        {
+          "name": "Wa East District",
+          "website": "http://www.wedagh.com"
+        },
+        {
+          "name": "Wa West District",
+          "website": "http://wawda.gov.gh"
+        }
+      ]
+    },
+    {
+      "name": "Volta Regional Coordinating Council",
+      "region": "Volta",
+      "capital": "Ho",
+      "person": "James Gunu",
+      "role": "Regional Minister",
+      "email": "info@voltaregion.gov.gh",
+      "source": "https://voltaregion.gov.gh/index.php/contact/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/volta/",
+      "assemblies": [
+        {
+          "name": "Adaklu District",
+          "website": "http://www.adakludistrict.gov.gh"
+        },
+        {
+          "name": "Afadzato South District",
+          "website": "http://www.afsda.gov.gh"
+        },
+        {
+          "name": "Agotime-Ziope District",
+          "website": "www.azda.gov.gh"
+        },
+        {
+          "name": "Akatsi North District",
+          "website": "http://www.akatsi north.gov.gh"
+        },
+        {
+          "name": "Akatsi South District",
+          "website": "http://www.akstma.gov.gh"
+        },
+        {
+          "name": "Anloga District",
+          "website": "www.anda.gov.gh"
+        },
+        {
+          "name": "Central Tongu District",
+          "website": "www.ctda.gov.gh"
+        },
+        {
+          "name": "Ho Municipal",
+          "website": "www.hma.gov.gh"
+        },
+        {
+          "name": "Ho West District",
+          "website": "http://www.howestdistrict .com"
+        },
+        {
+          "name": "Hohoe Municipal",
+          "website": "http://www.hhma.gov.gh"
+        },
+        {
+          "name": "Keta Municipal",
+          "website": "www.ketama.gov.gh"
+        },
+        {
+          "name": "Ketu North Municipal",
+          "website": "www.knma.gov.gh"
+        },
+        {
+          "name": "Ketu South Municipal",
+          "website": "www.ketusouth.gov.gh"
+        },
+        {
+          "name": "Kpando Municipal",
+          "website": "http://kpma.gov.gh/"
+        },
+        {
+          "name": "North Dayi District",
+          "website": "https://northdayidistrict.com"
+        },
+        {
+          "name": "North Tongu District",
+          "website": "www.ntda.gov.gh"
+        },
+        {
+          "name": "South Dayi District",
+          "website": "http://www.sdda.gov.gh"
+        },
+        {
+          "name": "South Tongu District",
+          "website": "http://www.stda.gov.gh"
+        }
+      ]
+    },
+    {
+      "name": "Western Regional Coordinating Council",
+      "region": "Western",
+      "capital": "Sekondi",
+      "person": "Joseph Nelson",
+      "role": "Regional Minister",
+      "email": "info@wrcc.gov.gh",
+      "source": "https://wrcc.gov.gh/contact-us/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/western/",
+      "assemblies": [
+        {
+          "name": "Ahanta West Municipal",
+          "website": "https://ahantawest.gov.gh/"
+        },
+        {
+          "name": "Amenfi Central District",
+          "website": "http://acda.gov.gh/"
+        },
+        {
+          "name": "Wassa Amenfi East Municipal",
+          "website": "http://waema.gov.gh/"
+        },
+        {
+          "name": "Amenfi West Municipal",
+          "website": "http://wawma.gov.gh/"
+        },
+        {
+          "name": "Effia Kwesimintsim Municipal",
+          "website": "https://ekma.gov.gh/"
+        },
+        {
+          "name": "Ellembelle District",
+          "website": "http://eda.gov.gh/"
+        },
+        {
+          "name": "Jomoro Municipal",
+          "website": "http://jma.gov.gh/"
+        },
+        {
+          "name": "Mpohor District",
+          "website": "http://mda.gov.gh/"
+        },
+        {
+          "name": "Nzema East Municipal",
+          "website": "http://nema.gov.gh/"
+        },
+        {
+          "name": "Prestea Huni-Valley Municipal",
+          "website": "http://phma.gov.gh/"
+        },
+        {
+          "name": "Sekondi-Takoradi Metropolitan",
+          "website": "http://stma.gov.gh/"
+        },
+        {
+          "name": "Shama District",
+          "website": "https://shamadistrict.gov.gh/"
+        },
+        {
+          "name": "Tarkwa Nusaem Municipal",
+          "website": "http://tnma.gov.gh/"
+        },
+        {
+          "name": "Wassa East District",
+          "website": "http://weda.gov.gh/"
+        }
+      ]
+    },
+    {
+      "name": "Western North Regional Coordinating Council",
+      "region": "Western North",
+      "capital": "Sefwi Wiawso",
+      "person": "Wilbert Petty Brentum",
+      "role": "Regional Minister",
+      "email": "info@westernnorthrcc.gov.gh",
+      "source": "https://westernnorthrcc.gov.gh/contact-us/",
+      "leadership_source": "https://northernrcc.gov.gh/%F0%9D%97%A1%F0%9D%97%98%F0%9D%97%AA-%F0%9D%97%98%F0%9D%97%A5%F0%9D%97%94-%F0%9D%97%99%F0%9D%97%A2%F0%9D%97%A5-%F0%9D%97%9A%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A1%F0%9D%97%94-%F0%9D%97%A3%F0%9D%97%A5/",
+      "contact_type": "Regional council office",
+      "category": "Region",
+      "assemblies_source": "https://lgs.gov.gh/western-north-region/",
+      "assemblies": [
+        {
+          "name": "Aowin Municipal",
+          "website": "http://aoma.gov.gh/"
+        },
+        {
+          "name": "Bibiani Anhwiaso Bekwai Municipal",
+          "website": "http://babda.gov.gh/"
+        },
+        {
+          "name": "Sefwi Wiawso Municipal",
+          "website": "http://swma.gov.gh/"
+        },
+        {
+          "name": "Bia East District",
+          "website": "http://www.biaeastdistrict.com"
+        },
+        {
+          "name": "Bia West District",
+          "website": "www.bwdas.com"
+        },
+        {
+          "name": "Bodi District",
+          "website": "http://www.bodidistrictassembly.com"
+        },
+        {
+          "name": "Juaboso District",
+          "website": "http://www.juabosoda.com"
+        },
+        {
+          "name": "Sefwi Akontombra District",
+          "website": "http://www.sadistrictassembly.com"
+        },
+        {
+          "name": "Suaman District",
+          "website": "http://www.suada.gov.gh"
+        }
+      ]
+    }
+  ],
+  "public_bodies": [
+    {
+      "name": "Environmental Protection Authority",
+      "sector": "environment",
+      "brief": "Environmental assessment, pollution and environmental compliance.",
+      "email": "info@epa.gov.gh",
+      "source": "https://www.epa.gov.gh/new/contact-us/",
+      "person": "Nana Ama Browne Klutse",
+      "role": "Head of organisation",
+      "leadership_source": "https://paccpolicy.org/wp-content/uploads/2025/12/EELL-2025-Presentation-Prof-Klutse.pdf",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Forestry Commission",
+      "sector": "lands",
+      "brief": "Forest and wildlife management; reserves and protected areas.",
+      "email": "info.hq@fcghana.org",
+      "source": "https://fc.gov.gh/corporate-headquaters/",
+      "person": "Hugh C. A. Brown",
+      "role": "Head of organisation",
+      "leadership_source": "https://fc.gov.gh/chief-executive-fc-board/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Minerals Commission",
+      "sector": "lands",
+      "brief": "Mineral regulation, licensing, inspection and mining compliance.",
+      "email": "info@mincom.gov.gh",
+      "source": "https://brr.gov.gh/new/stakeholders",
+      "person": "Isaac Andrews Tandoh",
+      "role": "Head of organisation",
+      "leadership_source": "https://www.mincom.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Water Resources Commission",
+      "sector": "works",
+      "brief": "Water-resource management and water-use regulation.",
+      "email": "info@wrc.gov.gh",
+      "source": "https://wrc.gov.gh/contact-1/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://wrc.gov.gh/contact-1/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Health Service",
+      "sector": "health",
+      "brief": "Public health and health-service delivery.",
+      "email": "info@ghs.gov.gh",
+      "source": "https://ghs.gov.gh/reach-us",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://ghs.gov.gh/reach-us",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Health Insurance Authority",
+      "sector": "health",
+      "brief": "National health insurance administration.",
+      "email": "info@nhia.gov.gh",
+      "source": "https://www.ghaneps.gov.gh/epps/prepareViewCAOrganisation.do?id=20613",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://www.ghaneps.gov.gh/epps/prepareViewCAOrganisation.do?id=20613",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Food and Drugs Authority",
+      "sector": "health",
+      "brief": "Food, medicines and regulated products.",
+      "email": "fda@fda.gov.gh",
+      "source": "https://fdaghana.gov.gh/contact-us-2/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://fdaghana.gov.gh/contact-us-2/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Information Technology Agency",
+      "sector": "digital",
+      "brief": "Public-sector information technology.",
+      "email": "info@nita.gov.gh",
+      "source": "https://www.nita.gov.gh/contact",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://www.nita.gov.gh/contact",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Communications Authority",
+      "sector": "digital",
+      "brief": "Electronic communications regulation.",
+      "email": "info@nca.org.gh",
+      "source": "https://nca.org.gh/privacy-policy/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://nca.org.gh/privacy-policy/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Cyber Security Authority",
+      "sector": "digital",
+      "brief": "Cybersecurity regulation and coordination.",
+      "email": "info@csa.gov.gh",
+      "source": "https://www.csa.gov.gh/contacts.php",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://www.csa.gov.gh/contacts.php",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Data Protection Commission",
+      "sector": "digital",
+      "brief": "Personal data protection and privacy regulation.",
+      "email": "info@dpc.gov.gh",
+      "source": "https://dpc.gov.gh/contact/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://dpc.gov.gh/contact/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Public Records and Archives Administration Department",
+      "sector": "administration",
+      "brief": "Public records, historical archives and archival access.",
+      "email": "info@praad.gov.gh",
+      "source": "https://praad.gov.gh/index.php/who-we-are/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://praad.gov.gh/index.php/who-we-are/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Right to Information Commission",
+      "sector": "accountability",
+      "brief": "Oversight of access to public information.",
+      "email": "rticommission@rtic.gov.gh",
+      "source": "https://rtic.gov.gh/contact/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://rtic.gov.gh/contact/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Public Services Commission",
+      "sector": "administration",
+      "brief": "Public-service governance and employment standards.",
+      "email": "info@psc.gov.gh",
+      "source": "https://psc.gov.gh/president-mahama-reduces-ministries-to-23-in-civil-service-restructuring/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://psc.gov.gh/president-mahama-reduces-ministries-to-23-in-civil-service-restructuring/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Council of State",
+      "sector": "constitutional",
+      "brief": "Constitutional advisory institution.",
+      "email": "info@cos.gov.gh",
+      "source": "https://cos.gov.gh/contact-page/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://cos.gov.gh/contact-page/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Legal Aid Commission",
+      "sector": "justice",
+      "brief": "Public legal aid and access to justice.",
+      "email": "info@lac.gov.gh",
+      "source": "https://www.lac.gov.gh/contact-us/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://www.lac.gov.gh/contact-us/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Economic and Organised Crime Office",
+      "sector": "justice",
+      "brief": "Economic and organised crime investigations.",
+      "email": "eoco@eoco.gov.gh",
+      "source": "https://eoco.gov.gh/contacts",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://eoco.gov.gh/contacts",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Identification Authority",
+      "sector": "administration",
+      "brief": "National identity registration.",
+      "email": "info@nia.gov.gh",
+      "source": "https://nia.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://nia.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Immigration Service",
+      "sector": "interior",
+      "brief": "Immigration and migration services.",
+      "email": "info@immigration.gov.gh",
+      "source": "https://gis.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gis.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "LEAP",
+      "sector": "gender",
+      "brief": "Livelihood Empowerment Against Poverty programme.",
+      "email": "info@leap.gov.gh",
+      "source": "https://leap.mogcsp.gov.gh/contact/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://leap.mogcsp.gov.gh/contact/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Non-Profit Organisation Secretariat",
+      "sector": "gender",
+      "brief": "Non-profit organisation oversight and registration.",
+      "email": "info.npos@mogcsp.gov.gh",
+      "source": "https://npos.mogcsp.gov.gh/contact/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://npos.mogcsp.gov.gh/contact/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Department of Urban Roads",
+      "sector": "roads",
+      "brief": "Urban-road infrastructure.",
+      "email": "info@dur.gov.gh",
+      "source": "https://dur.gov.gh/contact-us/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://dur.gov.gh/contact-us/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana High Commission, London",
+      "sector": "foreign",
+      "brief": "Ghana’s diplomatic mission in the United Kingdom.",
+      "email": "chancery@ghc-uk.org",
+      "source": "https://london.mfa.gov.gh/contact?lang=en",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://london.mfa.gov.gh/contact?lang=en",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Revenue Authority",
+      "sector": "finance",
+      "brief": "Tax and customs administration.",
+      "email": "info@gra.gov.gh",
+      "source": "https://gra.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gra.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Controller and Accountant-General’s Department",
+      "sector": "finance",
+      "brief": "Government accounting and payroll.",
+      "email": "info@cagd.gov.gh",
+      "source": "https://cagd.gov.gh/contact",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://cagd.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Public Procurement Authority",
+      "sector": "finance",
+      "brief": "Public procurement regulation.",
+      "email": "info@ppa.gov.gh",
+      "source": "https://ppa.gov.gh/contact/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://ppa.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "State Interests and Governance Authority",
+      "sector": "finance",
+      "brief": "Oversight of specified state entities.",
+      "email": "info@siga.gov.gh",
+      "source": "https://siga.gov.gh/contact-us/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://siga.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Education Service",
+      "sector": "education",
+      "brief": "Pre-tertiary education administration.",
+      "email": "info@ges.gov.gh",
+      "source": "https://ges.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://ges.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Tertiary Education Commission",
+      "sector": "education",
+      "brief": "Tertiary education regulation.",
+      "email": "info@gtec.edu.gh",
+      "source": "https://gtec.edu.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gtec.edu.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Commission for Technical and Vocational Education and Training",
+      "sector": "education",
+      "brief": "TVET regulation and standards.",
+      "email": "info@ctvet.gov.gh",
+      "source": "https://ctvet.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://ctvet.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Council for Curriculum and Assessment",
+      "sector": "education",
+      "brief": "Pre-tertiary curriculum and assessment.",
+      "email": "info@nacca.gov.gh",
+      "source": "https://nacca.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://nacca.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Sports Authority",
+      "sector": "sport",
+      "brief": "Sport development and facilities.",
+      "email": "info@sportsauthority.gov.gh",
+      "source": "https://www.ghaneps.gov.gh/epps/prepareViewCAOrganisation.do?id=20608",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://sportsauthority.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Youth Authority",
+      "sector": "youth",
+      "brief": "Youth development and participation.",
+      "email": "admin@nya.gov.gh",
+      "source": "https://www.nya.gov.gh/home",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://nya.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Youth Employment Agency",
+      "sector": "youth",
+      "brief": "Youth employment programmes; its published September notice records Youth Ministry supervision.",
+      "email": "info@yea.gov.gh",
+      "source": "https://yea.gov.gh/contact-us/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://yea.gov.gh/jpage/index.php/component/content/article/88-news/387-ministry-of-youth-development-and-empowerment-assumes-supervisory-role-over-yea",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Pensions Regulatory Authority",
+      "sector": "labour",
+      "brief": "Pensions regulation.",
+      "email": "info@npra.gov.gh",
+      "source": "https://www.npra.gov.gh/contact-information/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://npra.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "SSNIT",
+      "sector": "labour",
+      "brief": "Social Security and National Insurance Trust.",
+      "email": "contactcentre@ssnit.org.gh",
+      "source": "https://www.ssnit.org.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://ssnit.org.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Tourism Authority",
+      "sector": "tourism",
+      "brief": "Tourism regulation and promotion.",
+      "email": "info@ghana.travel",
+      "source": "https://visitghana.com/contact/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://ghana.travel/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Museums and Monuments Board",
+      "sector": "tourism",
+      "brief": "Museums and historic monuments.",
+      "email": "Info@gmmb.gov.gh",
+      "source": "https://gmmb.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gmmb.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Commission on Culture",
+      "sector": "tourism",
+      "brief": "Cultural development.",
+      "email": "info@nccg.gov.gh",
+      "source": "https://ghanaculture.gov.gh/contact-us/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://ghanaculture.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Fisheries Commission",
+      "sector": "fisheries",
+      "brief": "Fisheries management and regulation.",
+      "email": "info@fishcom.gov.gh",
+      "source": "https://fishcom.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://fishcom.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Births and Deaths Registry",
+      "sector": "local",
+      "brief": "Civil registration.",
+      "email": "",
+      "source": "https://bdr.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://bdr.gov.gh/",
+      "contact_type": "Official contact page",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "NADMO",
+      "sector": "interior",
+      "brief": "National Disaster Management Organisation.",
+      "email": "info@nadmo.gov.gh",
+      "source": "https://nadmo.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://nadmo.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Police Service",
+      "sector": "interior",
+      "brief": "Policing and criminal investigations.",
+      "email": "",
+      "source": "https://police.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://police.gov.gh/",
+      "contact_type": "Official contact page",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana National Fire Service",
+      "sector": "interior",
+      "brief": "Fire prevention and response.",
+      "email": "",
+      "source": "https://gnfs.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gnfs.gov.gh/",
+      "contact_type": "Official contact page",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Prisons Service",
+      "sector": "interior",
+      "brief": "Prison administration.",
+      "email": "info@ghanaprisons.gov.gh",
+      "source": "https://ghanaprisons.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://ghanaprisons.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "GNPC",
+      "sector": "energy",
+      "brief": "Ghana National Petroleum Corporation.",
+      "email": "info@gnpcghana.com",
+      "source": "https://www.gnpcghana.com/contact-us",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gnpcghana.com/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Volta River Authority",
+      "sector": "energy",
+      "brief": "Power generation.",
+      "email": "corpcomm@vra.com",
+      "source": "https://vra.com/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://vra.com/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Electricity Company of Ghana",
+      "sector": "energy",
+      "brief": "Electricity distribution.",
+      "email": "ecgho@ecggh.com",
+      "source": "https://ecg.com.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://ecg.com.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Petroleum Authority",
+      "sector": "energy",
+      "brief": "Downstream petroleum regulation.",
+      "email": "info@npa.gov.gh",
+      "source": "https://brr.gov.gh/new/stakeholders",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://npa.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Energy Commission",
+      "sector": "energy",
+      "brief": "Energy regulation and planning.",
+      "email": "info@energycom.gov.gh",
+      "source": "https://brr.gov.gh/new/stakeholders",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://energycom.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Water Limited",
+      "sector": "works",
+      "brief": "Urban water supply.",
+      "email": "",
+      "source": "https://gwcl.com.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gwcl.com.gh/",
+      "contact_type": "Official contact page",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Lands Commission",
+      "sector": "lands",
+      "brief": "Land administration and registration.",
+      "email": "info@lc.gov.gh",
+      "source": "https://lc.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://lc.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Land Use and Spatial Planning Authority",
+      "sector": "local",
+      "brief": "Spatial planning standards and coordination.",
+      "email": "info@luspa.gov.gh",
+      "source": "https://luspa.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://luspa.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Council for Scientific and Industrial Research",
+      "sector": "environment",
+      "brief": "Scientific and industrial research.",
+      "email": "headoffice@csir.org.gh",
+      "source": "https://csir.org.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://csir.org.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Atomic Energy Commission",
+      "sector": "environment",
+      "brief": "Nuclear science and related research.",
+      "email": "",
+      "source": "https://gaec.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gaec.gov.gh/",
+      "contact_type": "Official contact page",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Standards Authority",
+      "sector": "trade",
+      "brief": "Standards and conformity assessment.",
+      "email": "info@gsa.gov.gh",
+      "source": "https://gsa.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gsa.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Enterprises Agency",
+      "sector": "trade",
+      "brief": "Micro, small and medium enterprise support.",
+      "email": "info@gea.gov.gh",
+      "source": "https://brr.gov.gh/new/stakeholders",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gea.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Export Promotion Authority",
+      "sector": "trade",
+      "brief": "Export promotion.",
+      "email": "gepa@gepa.gov.gh",
+      "source": "https://www.gepaghana.org/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://gepaghana.org/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Office of the Registrar of Companies",
+      "sector": "justice",
+      "brief": "Company registration and administration.",
+      "email": "info@orc.gov.gh",
+      "source": "https://orc.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://orc.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Commission for Civic Education",
+      "sector": "constitutional",
+      "brief": "Civic education.",
+      "email": "",
+      "source": "https://nccegh.org/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://nccegh.org/",
+      "contact_type": "Official contact page",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Statistical Service",
+      "sector": "administration",
+      "brief": "Official statistics.",
+      "email": "info@statsghana.gov.gh",
+      "source": "https://statsghana.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://statsghana.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Development Planning Commission",
+      "sector": "administration",
+      "brief": "National development planning.",
+      "email": "info@ndpc.gov.gh",
+      "source": "https://ndpc.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://ndpc.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "District Assemblies Common Fund",
+      "sector": "local",
+      "brief": "Local government funding.",
+      "email": "Info@commonfund.gov.gh",
+      "source": "https://commonfund.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://commonfund.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Internal Audit Agency",
+      "sector": "accountability",
+      "brief": "Public-sector internal audit coordination.",
+      "email": "info@iaa.gov.gh",
+      "source": "https://iaa.gov.gh/2026/07/10/iaa-kicks-off-zonal-enterprise-risk-management-training/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://iaa.gov.gh/",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Civil Aviation Authority",
+      "sector": "transport",
+      "brief": "Civil aviation safety and regulation.",
+      "email": "info@caa.com.gh",
+      "source": "https://brr.gov.gh/new/stakeholders",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://brr.gov.gh/new/stakeholders",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Ports and Harbours Authority",
+      "sector": "transport",
+      "brief": "Ports and harbour operations.",
+      "email": "headquarters@ghanaports.gov.gh",
+      "source": "https://brr.gov.gh/new/stakeholders",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://brr.gov.gh/new/stakeholders",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Maritime Authority",
+      "sector": "transport",
+      "brief": "Maritime regulation and safety.",
+      "email": "info@ghanamaritime.org",
+      "source": "https://brr.gov.gh/new/stakeholders",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://brr.gov.gh/new/stakeholders",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Driver and Vehicle Licensing Authority",
+      "sector": "transport",
+      "brief": "Driver and vehicle licensing.",
+      "email": "info@dvla.gov.gh",
+      "source": "https://brr.gov.gh/new/stakeholders",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://brr.gov.gh/new/stakeholders",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "National Road Safety Authority",
+      "sector": "transport",
+      "brief": "Road safety coordination.",
+      "email": "",
+      "source": "https://www.mot.gov.gh/",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://www.mot.gov.gh/",
+      "contact_type": "Transport ministry agency directory",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Ghana Gold Board (GoldBod)",
+      "sector": "lands",
+      "brief": "Gold trading and related statutory functions.",
+      "email": "info@goldbod.gov.gh",
+      "source": "https://brr.gov.gh/new/stakeholders",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://brr.gov.gh/new/stakeholders",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    },
+    {
+      "name": "Nuclear Regulatory Authority",
+      "sector": "environment",
+      "brief": "Nuclear and radiological regulation.",
+      "email": "official.mail@nra.gov.gh",
+      "source": "https://nra.gov.gh/contact",
+      "person": "",
+      "role": "Organisation contact",
+      "leadership_source": "https://nra.gov.gh/contact",
+      "contact_type": "Published organisation inbox",
+      "category": "Public body",
+      "region": "National"
+    }
+  ],
+  "structure_source": "https://psc.gov.gh/president-mahama-reduces-ministries-to-23-in-civil-service-restructuring/",
+  "appointment_updates": [
+    "https://www.isd.gov.gh/president-mahama-reshuffles-ministerial-portfolios-in-latest-government-changes/",
+    "https://www.isd.gov.gh/president-mahama-reshuffles-cabinet-reassigns-three-ministers/",
+    "https://presidency.gov.gh/ghanaians-expect-results-president-mahama-says-as-he-swears-in-ayariga-zanetor/"
+  ],
+  "specialist_officers": [
+    {
+      "name": "Minerals Commission — Kumasi",
+      "person": "Samuel Gyabaa",
+      "role": "Published regional / district officer",
+      "email": "samuel.gyabaa@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Kumasi"
+    },
+    {
+      "name": "Minerals Commission — Koforidua",
+      "person": "Desmond Boahen",
+      "role": "Published regional / district officer",
+      "email": "desmond.boahen@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Koforidua"
+    },
+    {
+      "name": "Minerals Commission — Takoradi",
+      "person": "Francis Annobil Jnr.",
+      "role": "Published regional / district officer",
+      "email": "francis.annobil@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Takoradi"
+    },
+    {
+      "name": "Minerals Commission — Tamale",
+      "person": "Frederick Gyebi",
+      "role": "Published regional / district officer",
+      "email": "frederick.gyebi@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Tamale"
+    },
+    {
+      "name": "Minerals Commission — Assin Fosu",
+      "person": "Charles Zantione",
+      "role": "Published regional / district officer",
+      "email": "charles.zantione@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Assin Fosu"
+    },
+    {
+      "name": "Minerals Commission — Obuasi / Dunkwa",
+      "person": "Victor Atsu Amekor",
+      "role": "Published regional / district officer",
+      "email": "victor.amekor@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Obuasi / Dunkwa"
+    },
+    {
+      "name": "Minerals Commission — Bibiani",
+      "person": "Emmanuel K. Bani",
+      "role": "Published regional / district officer",
+      "email": "emmanuel.bani@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Bibiani"
+    },
+    {
+      "name": "Minerals Commission — Tarkwa",
+      "person": "Emmanuel Oppong Arthur",
+      "role": "Published regional / district officer",
+      "email": "emmanuel.oppong@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Tarkwa"
+    },
+    {
+      "name": "Minerals Commission — Asankrangwa",
+      "person": "Clemence K. Adzormahe",
+      "role": "Published regional / district officer",
+      "email": "clemence.adzormahe@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Asankrangwa"
+    },
+    {
+      "name": "Minerals Commission — Kenyasi",
+      "person": "Yaw Amponsah",
+      "role": "Published regional / district officer",
+      "email": "yaw.amponsah@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Kenyasi"
+    },
+    {
+      "name": "Minerals Commission — Ho",
+      "person": "Isaac Mernu",
+      "role": "Published regional / district officer",
+      "email": "isaac.mernu@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Ho"
+    },
+    {
+      "name": "Minerals Commission — Hohoe",
+      "person": "Edem Nutifafa Gbodji",
+      "role": "Published regional / district officer",
+      "email": "edem.gbodji@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Hohoe"
+    },
+    {
+      "name": "Minerals Commission — Akim Oda",
+      "person": "Selorm Afenu",
+      "role": "Published regional / district officer",
+      "email": "selorm.afenu@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Akim Oda"
+    },
+    {
+      "name": "Minerals Commission — Bolgatanga",
+      "person": "Dickson Achindiba",
+      "role": "Published regional / district officer",
+      "email": "dickson.achindiba@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Bolgatanga"
+    },
+    {
+      "name": "Minerals Commission — Wa",
+      "person": "Francis Asare",
+      "role": "Published regional / district officer",
+      "email": "francis.asare@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Wa"
+    },
+    {
+      "name": "Minerals Commission — Cape Coast",
+      "person": "Jonathan Boateng",
+      "role": "Published regional / district officer",
+      "email": "jonathan.boateng@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Cape Coast"
+    },
+    {
+      "name": "Minerals Commission — Konongo",
+      "person": "Anthony Worlali",
+      "role": "Published regional / district officer",
+      "email": "anthony.worlali@mincom.gov.gh",
+      "source": "https://www.mincom.gov.gh/contact-us/",
+      "leadership_source": "https://www.mincom.gov.gh/contact-us/",
+      "contact_type": "Named official’s published work email",
+      "category": "Specialist officer",
+      "region": "Konongo"
+    }
+  ]
+}
