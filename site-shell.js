@@ -17,6 +17,7 @@
     ["Socials","socials.html"],
     ["Travel","travel.html"],
     ["Services","services.html"],
+    ["App Design Ideas","app-design-ideas.html"],
     ["Creative","creative.html"],
     ["Public","public.html"],
     ["Faith","faith.html"],
