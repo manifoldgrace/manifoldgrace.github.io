@@ -13,12 +13,18 @@
   }));
   function heritage() {
     const consent = byId('heritage-consent').checked;
-    byId('heritage-result').textContent = `${byId('heritage-intent').value}. ${byId('heritage-faith').value}. Requested research coverage: ${byId('heritage-depth').value} generations on both sides. ${consent ? 'Mutual permission would be required before records are shared.' : 'Record sharing remains off; a consent step would be needed.'} This previews preferences, not a kinship finding.`;
+    const admitted = byId('heritage-admission').value === 'approved';
+    const kinship = byId('heritage-kinship').value;
+    const eligible = consent && admitted && kinship === 'clear';
+    let gate = !admitted ? 'On hold: genealogy approval is required before swiping.' : !consent ? 'On hold: consent is required.' : kinship === 'close' ? 'Blocked: this pair falls within a prohibited kinship boundary.' : kinship === 'unknown' ? 'On hold: incomplete kinship evidence requires review.' : 'Eligible in this simulation: the pair has cleared the selected review scenario.';
+    byId('heritage-result').textContent = `${gate} Presets: ${byId('heritage-intent').value}; ${byId('heritage-faith').value}; ${byId('heritage-lineage').value}. Personal boundary: no shared ancestor within ${byId('heritage-depth').value} generations of either person. The stricter boundary governs a pair, alongside legal prohibitions. This is not an actual kinship finding.`;
+    byId('heritage-swipe').disabled = !eligible;
+    byId('heritage-swipe-result').textContent = '';
   }
   function dating() {
     byId('dating-result').textContent = `${byId('dating-intent').value}; ${byId('dating-faith').value.toLowerCase()}; children: ${byId('dating-children').value.toLowerCase()}; location: ${byId('dating-location').value}. ${byId('dating-verified').checked ? 'Identity-check stage required before direct contact.' : 'Identity-check preference not selected.'} No ancestry requirement.`;
   }
-  ['heritage-intent','heritage-faith','heritage-depth','heritage-consent'].forEach(id => byId(id).addEventListener('change', heritage));
+  ['heritage-intent','heritage-faith','heritage-depth','heritage-consent','heritage-lineage','heritage-admission','heritage-kinship'].forEach(id => byId(id).addEventListener('change', heritage));
   ['dating-intent','dating-faith','dating-children','dating-location','dating-verified'].forEach(id => byId(id).addEventListener('change', dating));
   const workflows = {
     research: ['Define the question and sources','Gather and compare evidence','Draft a sourced brief','Client reviews the deliverable'],
@@ -34,6 +40,10 @@
   byId('agent-task').addEventListener('change', agent);
   byId('agent-review').addEventListener('click', () => {
     byId('agent-result').textContent = 'Review stage: the client would inspect the output, request changes or approve the next action. This is a local interface demonstration.';
+  });
+  byId('heritage-swipe').addEventListener('click', () => {
+    if (byId('heritage-swipe').disabled) return;
+    byId('heritage-swipe-result').textContent = 'The app would show the next mutually eligible profile aligned with your presets. No real profiles are loaded.';
   });
   heritage(); dating(); agent();
 })();
