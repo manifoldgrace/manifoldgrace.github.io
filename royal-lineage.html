@@ -48,6 +48,13 @@
 #royal-lineage-page .rl-sequence>li.private .role{color:#aaa}
 #royal-lineage-page .rl-sequence>li.research{border-style:dashed}
 #royal-lineage-page .rl-sequence>li.research:before{background:#101010;border:2px solid var(--rl-warm)}
+#royal-lineage-page #gbese .rl-sequence>li.research:not(:last-child):after{border-left:2px dashed #b59f79}
+#royal-lineage-page #gbese .rl-sequence>li.rl-relative-placeholder{min-height:124px;border-style:dashed;background:#171512}
+#royal-lineage-page #gbese .rl-relative-placeholder h4{margin-bottom:4px}
+#royal-lineage-page #gbese .rl-relative-placeholder .rl-empty-name{display:block;border-bottom:1px dashed #7c7164;height:22px;margin:4px 0 12px;max-width:100%}
+#royal-lineage-page #gbese .rl-relative-placeholder p{color:#aea79b;font-size:.79rem}
+#royal-lineage-page #gbese .rl-historical-anchor h4+span{display:block;color:#c0ab8a;font-size:.82rem;margin:-4px 0 12px}
+#royal-lineage-page #gbese .rl-historical-anchor .rl-name-group{border-top:1px solid #433b32;padding-top:12px;margin-top:12px}
 #royal-lineage-page .rl-context{margin:0 16px 22px 50px;padding:15px;border:1px dashed #8f7454;background:#17130f;font-size:.85rem}
 #royal-lineage-page .rl-context h4{margin:0 0 8px;font-size:.97rem;color:#f1dfbf}
 #royal-lineage-page .rl-context p{margin:5px 0;color:#c6beb4;line-height:1.6}
@@ -83,18 +90,22 @@
 <section id="pedigree-chains"><div class="wrap">
 <span class="rl-overline">Ancestral architecture</span>
 <h2>Five connected branches, mapped by generation</h2>
-<p>The cards proceed from earlier recorded generations toward the present. Each vertical connector represents the parent–child relationship as identified in the family account or biography, <strong>not</strong> an already completed civil-registry verification of every link. Separate dashed panels identify historical context and connections still being traced.</p>
+<p>The cards proceed from earlier recorded generations toward the present. Solid timeline cards record relationships identified in the family biography. Dashed connectors and numbered blank spaces show where ancestors and supporting records will be entered as research continues. The number of blank spaces is adjustable; historical office succession is not being treated as proof of biological descent.</p>
 <div class="rl-legend" aria-label="Diagram key"><span><i class="rl-dot" aria-hidden="true"></i> Family-recorded relationship</span><span><i class="rl-dot context" aria-hidden="true"></i> Historical route under research</span><span><i class="rl-dot private" aria-hidden="true"></i> Living or not established deceased: relationship only</span></div>
 <div class="rl-paths">
 <article class="rl-lane" id="gbese">
 <div class="rl-lane-heading"><span class="rl-overline">01 / Ghana / Gbese</span><h3>Nettey family line</h3><p>Family biography identifies this branch with the royal family of Gbese.</p></div>
 <ol class="rl-sequence">
+<li class="research rl-historical-anchor"><span class="role">Published Gbese historical family reference · officeholder records</span><h4>Asafoatse Nii Tetteh Nettey</h4><span>Died 1859 · earlier Gbese Asafoatse history</span><div class="rl-name-group"><h4>Christopher Brandford Nettey I</h4><span>Historical Gbese Asafoatse officeholder</span></div><p>Both names appear in the <a href="https://gna.org.gh/2024/11/we-will-protect-our-legacy-asafoatse-c-b-nettey-family/">published family office history</a>. They are grouped as historical reference points, not presented as a proven father–child pair.</p></li>
+<li class="research rl-relative-placeholder"><span class="role">Ancestral research space · provisional</span><h4>Relative 1</h4><span class="rl-empty-name" aria-hidden="true"></span><p>Name · dates · relationship · source</p></li>
+<li class="research rl-relative-placeholder"><span class="role">Ancestral research space · provisional</span><h4>Relative 2</h4><span class="rl-empty-name" aria-hidden="true"></span><p>Name · dates · relationship · source</p></li>
+<li class="research rl-relative-placeholder"><span class="role">Ancestral research space · provisional</span><h4>Relative 3</h4><span class="rl-empty-name" aria-hidden="true"></span><p>Name · dates · relationship · source</p></li>
 <li><span class="role">Great-grandfather · Gbese</span><h4>Herbert Mills Cudjoe Nettey</h4><p>Named in Christopher's funeral biography as his father and associated with the Gbese royal family.</p><span class="rl-stamp">Biography · archival identity reconciliation ongoing</span></li>
 <li><span class="role">Grandfather · 1934–2023</span><h4>Christopher Akai “C.A.” Nettey</h4><p>21 December 1934 – 15 May 2023. Funeral biography records his named parents and family history.</p><a href="heritage.html#grandparent-christopher">Biographical record</a></li>
 <li class="private"><span class="role">Father · living generation</span><h4>Dad</h4><p>Name withheld in this visual family register.</p></li>
 <li class="private"><span class="role">Present generation</span><h4>Me</h4><p>Living descendants are not individually named here.</p></li>
 </ol>
-<aside class="rl-context"><h4>Older Gbese Asafoatse history — separate office chronology</h4><p>Asafoatse Nii Tetteh Nettey (d. 1859) and Christopher Brandford Nettey I (historical officeholder) appear in the <a href="https://gna.org.gh/2024/11/we-will-protect-our-legacy-asafoatse-c-b-nettey-family/">published family succession account</a>. <strong>The generations linking those figures to Herbert are not yet established as a continuous parent–child chain.</strong></p></aside>
+<p class="rl-caption" style="margin:0 16px 22px 50px">The numbered spaces reserve places for names and documents as the pedigree is assembled. Three are shown for layout; additional slots can be inserted, or unused slots removed, when the records establish the number of generations.</p>
 </article>
 <article class="rl-lane" id="ngleshie">
 <div class="rl-lane-heading"><span class="rl-overline">02 / Ghana / Jamestown</span><h3>Sackey-Jacobson family line</h3><p>Family biography identifies this branch with the royal family of Ngleshie-Alata.</p></div>
