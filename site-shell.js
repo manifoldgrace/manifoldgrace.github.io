@@ -25,6 +25,7 @@
     ["Life Philosophy","life-philosophy.html"],
     ["Society","society.html"],
     ["Heritage","heritage.html"],
+    ["Royal Lineage","royal-lineage.html"],
     ["Sociology","topics-in-12.html#domain-01"],
     ["Recognition","recognition.html"],
     ["Resourcefulness","resourcefulness.html"],
