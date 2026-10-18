@@ -11,67 +11,61 @@
 <script src="site-config.js" defer></script>
 <script src="site-shell.js" defer></script>
 <style id="royal-lineage-design">
-/* Distinctive multi-column chronological architecture inspired by vertical timeline references.
-   All rules are scoped to this page: existing site colours and pages are unchanged. */
-#royal-lineage-page{--rl-warm:#d8bd8f;--rl-ink:#ece7dc;--rl-soft:#bbb4a7;--rl-link:#b5d8ff}
-#royal-lineage-page .page-hero{padding-bottom:32px}
-#royal-lineage-page .intro{max-width:950px}
-#royal-lineage-page .rl-subnav{display:flex;flex-wrap:wrap;gap:8px;border-bottom:1px solid #565049;margin-top:28px;padding-bottom:12px}
-#royal-lineage-page .rl-subnav a{font-size:.93rem;padding:11px 17px;border:1px solid #46413a;color:#fff;background:#161514}
-#royal-lineage-page .rl-subnav a[aria-current="page"]{border-color:var(--rl-warm);color:#fff;background:#30251b}
-#royal-lineage-page a:not(.brand):not(.rl-subnav a){color:var(--rl-link);text-decoration:underline;text-underline-offset:3px}
-#royal-lineage-page .rl-overline{font-size:.74rem;text-transform:uppercase;letter-spacing:.15em;color:var(--rl-warm);font-weight:650}
-#royal-lineage-page .rl-legend{display:flex;flex-wrap:wrap;gap:10px 22px;margin:24px 0;color:#ddd2be;font-size:.88rem}
-#royal-lineage-page .rl-legend span{display:inline-flex;align-items:center;gap:9px}
-#royal-lineage-page .rl-dot{display:inline-block;width:16px;height:16px;border:1px solid var(--rl-warm);background:#211d18}
-#royal-lineage-page .rl-dot.context{border-style:dashed;background:transparent}
-#royal-lineage-page .rl-dot.private{border-color:#767676;background:#272727}
-#royal-lineage-page .rl-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start;margin-top:24px}
+/* Compact parallel genealogy: existing global colours remain unchanged. */
+#royal-lineage-page{--rl-warm:#d8bd8f;--rl-link:#b5d8ff}
+#royal-lineage-page .page-hero{padding:46px 0 26px}
+#royal-lineage-page .page-hero h1{margin:12px 0 14px}
+#royal-lineage-page .page-intro{max-width:1000px;font-size:1rem}
+#royal-lineage-page .rl-subnav{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 0}
+#royal-lineage-page .rl-subnav a{padding:7px 12px;border:1px solid #505050;background:#151515;font-size:.86rem;color:#f3ede4}
+#royal-lineage-page .rl-subnav a[aria-current="page"]{border-color:#b7a17e;background:#27211b}
+#royal-lineage-page a:not(.brand):not(.rl-subnav a){color:var(--rl-link);text-decoration:underline;text-underline-offset:2px}
+#royal-lineage-page .rl-overline{color:var(--rl-warm);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase}
+#royal-lineage-page main section{padding:32px 0}
+#royal-lineage-page h2{font-size:1.28rem;margin:6px 0 10px;font-weight:550;color:#fff}
+#royal-lineage-page .rl-key{font-size:.83rem;color:#c7c1b8;margin:6px 0 14px;max-width:86ch}
+#royal-lineage-page .rl-key b{color:#e1c89a}
+#royal-lineage-page .rl-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:13px}
 #royal-lineage-page .rl-paths.two{grid-template-columns:repeat(2,minmax(0,1fr))}
-#royal-lineage-page .rl-lane{min-width:0;border:1px solid #49423a;background:#101010}
-#royal-lineage-page .rl-lane-heading{padding:20px 21px;border-bottom:1px solid #4c4239;background:#1b1815;min-height:136px}
-#royal-lineage-page .rl-lane-heading .rl-overline{display:block;margin-bottom:8px}
-#royal-lineage-page .rl-lane-heading h3{font-size:1.16rem;font-weight:550;margin:0 0 8px;color:#f8f5ef;line-height:1.3}
-#royal-lineage-page .rl-lane-heading p{font-size:.83rem;line-height:1.5;margin:0;color:#cac0b1}
-#royal-lineage-page .rl-sequence{list-style:none;padding:24px 16px 24px 50px;margin:0}
-#royal-lineage-page .rl-sequence>li{position:relative;list-style:none;border:1px solid #575049;background:#191817;padding:17px 15px 16px;margin:0 0 28px;min-width:0}
+#royal-lineage-page .rl-lane{border:1px solid #414141;background:#121212;min-width:0}
+#royal-lineage-page .rl-lane-heading{padding:13px 16px 12px;background:#1a1917;border-bottom:1px solid #444}
+#royal-lineage-page .rl-lane-heading h3{font-size:1.05rem;line-height:1.3;font-weight:600;margin:4px 0 0;color:#fff}
+#royal-lineage-page .rl-lane-heading .rl-overline{display:block;line-height:1.3}
+#royal-lineage-page .rl-sequence{list-style:none;margin:0;padding:12px 10px 13px 27px}
+#royal-lineage-page .rl-sequence>li{position:relative;list-style:none;margin:0 0 10px;padding:8px 10px 9px;background:#1b1b1b;border:1px solid #3f3f3f;border-radius:2px;min-width:0}
 #royal-lineage-page .rl-sequence>li:last-child{margin-bottom:0}
-#royal-lineage-page .rl-sequence>li:before{content:"";position:absolute;left:-31px;top:23px;width:12px;height:12px;border-radius:50%;background:var(--rl-warm);box-shadow:0 0 0 4px #101010}
-#royal-lineage-page .rl-sequence>li:not(:last-child):after{content:"";position:absolute;left:-25px;top:36px;height:calc(100% + 16px);border-left:2px solid #baa584}
-#royal-lineage-page .rl-sequence>li:nth-last-child(-n+2):after{border-color:#888}
-#royal-lineage-page .rl-sequence .role{font-size:.75rem;color:var(--rl-warm);letter-spacing:.06em;text-transform:uppercase;display:block;line-height:1.5}
-#royal-lineage-page .rl-sequence h4{font-size:1.05rem;line-height:1.38;color:#fff;font-weight:650;margin:8px 0 9px;overflow-wrap:anywhere}
-#royal-lineage-page .rl-sequence p{font-size:.87rem;line-height:1.6;margin:8px 0 0;color:#cbc4bc}
-#royal-lineage-page .rl-sequence .rl-stamp{font-size:.75rem;color:#d7c2a2;display:block}
-#royal-lineage-page .rl-sequence>li.private{border-color:#474747;background:#161616}
-#royal-lineage-page .rl-sequence>li.private:before{background:#aaa;box-shadow:0 0 0 4px #101010}
+#royal-lineage-page .rl-sequence>li:before{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#d8bd8f;left:-17px;top:18px}
+#royal-lineage-page .rl-sequence>li:not(:last-child):after{content:"";position:absolute;left:-14px;top:25px;height:calc(100% - 6px);border-left:1px solid #8e7c62}
+#royal-lineage-page .rl-sequence>li.research{border-style:dashed;border-color:#797064;background:#191714}
+#royal-lineage-page .rl-sequence>li.research:before{background:#121212;border:1px solid #c3a97f}
+#royal-lineage-page .rl-sequence>li.research:not(:last-child):after{border-left:1px dashed #9c876a}
+#royal-lineage-page .rl-sequence>li.private{background:#151515;border-color:#333}
+#royal-lineage-page .rl-sequence>li.private:before{background:#777}
+#royal-lineage-page .rl-sequence .role{display:block;font-size:.67rem;line-height:1.35;text-transform:uppercase;letter-spacing:.07em;color:#c8b18c}
 #royal-lineage-page .rl-sequence>li.private .role{color:#aaa}
-#royal-lineage-page .rl-sequence>li.research{border-style:dashed}
-#royal-lineage-page .rl-sequence>li.research:before{background:#101010;border:2px solid var(--rl-warm)}
-#royal-lineage-page #gbese .rl-sequence>li.research:not(:last-child):after{border-left:2px dashed #b59f79}
-#royal-lineage-page #gbese .rl-sequence>li.rl-relative-placeholder{min-height:124px;border-style:dashed;background:#171512}
-#royal-lineage-page #gbese .rl-relative-placeholder h4{margin-bottom:4px}
-#royal-lineage-page #gbese .rl-relative-placeholder .rl-empty-name{display:block;border-bottom:1px dashed #7c7164;height:22px;margin:4px 0 12px;max-width:100%}
-#royal-lineage-page #gbese .rl-relative-placeholder p{color:#aea79b;font-size:.79rem}
-#royal-lineage-page #gbese .rl-historical-anchor h4+span{display:block;color:#c0ab8a;font-size:.82rem;margin:-4px 0 12px}
-#royal-lineage-page #gbese .rl-historical-anchor .rl-name-group{border-top:1px solid #433b32;padding-top:12px;margin-top:12px}
-#royal-lineage-page .rl-context{margin:0 16px 22px 50px;padding:15px;border:1px dashed #8f7454;background:#17130f;font-size:.85rem}
-#royal-lineage-page .rl-context h4{margin:0 0 8px;font-size:.97rem;color:#f1dfbf}
-#royal-lineage-page .rl-context p{margin:5px 0;color:#c6beb4;line-height:1.6}
-#royal-lineage-page .rl-context strong{color:#fff}
-#royal-lineage-page .rl-note{max-width:920px;padding:18px 20px;border-left:3px solid #9f8560;background:#191715;margin:18px 0;color:#d0c8bc;font-size:.94rem;line-height:1.75}
-#royal-lineage-page .rl-note p{margin:5px 0;color:#d0c8bc}
-#royal-lineage-page .rl-research-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:24px 0}
-#royal-lineage-page .rl-research-grid article{border:1px solid #494949;background:#161616;padding:20px}
-#royal-lineage-page .rl-research-grid h3{margin:0 0 9px;color:#fff}
-#royal-lineage-page .rl-research-grid p{margin:0;color:#c9c9c9}
-#royal-lineage-page .rl-sources{max-width:970px}
-#royal-lineage-page .rl-sources li{margin-bottom:11px;overflow-wrap:anywhere}
-#royal-lineage-page .rl-caption{font-size:.82rem;color:#beb4a3;margin:14px 0 0}
-#royal-lineage-page h2{color:#f6f0e7}
-#royal-lineage-page section{scroll-margin-top:130px}
-@media(max-width:970px){#royal-lineage-page .rl-paths{grid-template-columns:repeat(2,minmax(0,1fr))}#royal-lineage-page .rl-paths .rl-lane:last-child:nth-child(odd){grid-column:1 / -1}}
-@media(max-width:650px){#royal-lineage-page .rl-paths,#royal-lineage-page .rl-paths.two,#royal-lineage-page .rl-research-grid{grid-template-columns:minmax(0,1fr)}#royal-lineage-page .rl-paths .rl-lane:last-child:nth-child(odd){grid-column:auto}#royal-lineage-page .rl-lane-heading{min-height:auto}#royal-lineage-page .rl-sequence{padding-left:48px}}
+#royal-lineage-page .rl-sequence h4{font-size:.91rem;line-height:1.38;color:#f4f1eb;font-weight:600;margin:3px 0 0;overflow-wrap:anywhere}
+#royal-lineage-page .rl-sequence .person-detail{display:block;color:#b9b3aa;font-size:.73rem;line-height:1.3;margin-top:2px}
+#royal-lineage-page .rl-sequence .blank-name{display:block;height:9px;width:76%;max-width:180px;border-bottom:1px dotted #a69a86;margin-top:3px}
+#royal-lineage-page .rl-tiny-note{font-size:.74rem;color:#b9b2a8;margin:0 12px 14px 27px;line-height:1.55}
+#royal-lineage-page .rl-side-note{padding:10px 11px;border-top:1px solid #3f3b34;color:#bdb5ab;font-size:.75rem;line-height:1.55}
+#royal-lineage-page .rl-side-note b{color:#e4dccf}
+#royal-lineage-page .rl-side-note a{font-size:.75rem}
+#royal-lineage-page .rl-mini-row{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+#royal-lineage-page .rl-mini-row strong{color:#ded2c0}
+#royal-lineage-page .rl-archival{margin-top:16px;border:1px solid #48413a;background:#171513}
+#royal-lineage-page .rl-archival summary{padding:11px 15px;color:#e9e3dc;cursor:pointer;font-size:.9rem}
+#royal-lineage-page .rl-archival .rl-archive-inside{padding:4px 17px 17px}
+#royal-lineage-page .rl-archival .rl-archive-inside>p{font-size:.85rem}
+#royal-lineage-page .rl-evidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#royal-lineage-page .rl-evidence-grid article{border:1px solid #3c3c3c;padding:12px}
+#royal-lineage-page .rl-evidence-grid h4{margin:0 0 6px;font-size:.88rem;color:#fff}
+#royal-lineage-page .rl-evidence-grid p{margin:0;font-size:.8rem}
+#royal-lineage-page .rl-archive-inside li{margin-bottom:7px;font-size:.85rem}
+#royal-lineage-page .rl-archive-inside ol,#royal-lineage-page .rl-archive-inside ul{padding-left:18px}
+#royal-lineage-page .rl-archive-inside p{color:#bcb6af}
+#royal-lineage-page .rl-scrolltop{font-size:.8rem;display:inline-block;margin-top:9px}
+@media(max-width:1020px){#royal-lineage-page .rl-paths{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){#royal-lineage-page .rl-paths,#royal-lineage-page .rl-paths.two,#royal-lineage-page .rl-evidence-grid{grid-template-columns:minmax(0,1fr)}#royal-lineage-page main section{padding:22px 0}#royal-lineage-page .page-hero{padding-top:40px}#royal-lineage-page .rl-lane-heading{padding:12px 14px}#royal-lineage-page .rl-sequence{padding-top:10px}}
 </style>
 </head>
 <body id="royal-lineage-page">
@@ -80,101 +74,76 @@
 <div class="page-hero"><div class="wrap">
 <div class="eyebrow">HERITAGE / GENEALOGY / PEOPLE &amp; GENERATIONS</div>
 <h1>Royal Lineage</h1>
-<p class="page-intro intro">A person-by-person view of the family histories recorded through <strong>Gbese</strong> and <strong>Ngleshie-Alata</strong> in Accra, and the related <strong>Okine</strong>, <strong>Lamptey</strong> and <strong>English adoptive-family</strong> research. Living family members appear by relationship only.</p>
+<p class="page-intro">A compact generational map of five family branches: <strong>Gbese, Ngleshie-Alata, Symondson, Okine and Lamptey</strong>. Living relatives are labelled by relationship rather than name.</p>
 <nav class="rl-subnav" aria-label="Heritage pages">
-<a href="heritage.html">Heritage archive</a>
-<a href="royal-lineage.html" aria-current="page">Royal Lineage</a>
-<a href="heritage.html#public-sources">Source records</a>
-</nav>
-</div></div>
+<a href="heritage.html">Heritage archive</a><a href="royal-lineage.html" aria-current="page">Royal Lineage</a><a href="heritage.html#public-sources">Source records</a>
+</nav></div></div>
 <section id="pedigree-chains"><div class="wrap">
 <span class="rl-overline">Ancestral architecture</span>
-<h2>Five connected branches, mapped by generation</h2>
-<p>The cards proceed from earlier recorded generations toward the present. Solid timeline cards record relationships identified in the family biography. Dashed connectors and numbered blank spaces show where ancestors and supporting records will be entered as research continues. The number of blank spaces is adjustable; historical office succession is not being treated as proof of biological descent.</p>
-<div class="rl-legend" aria-label="Diagram key"><span><i class="rl-dot" aria-hidden="true"></i> Family-recorded relationship</span><span><i class="rl-dot context" aria-hidden="true"></i> Historical route under research</span><span><i class="rl-dot private" aria-hidden="true"></i> Living or not established deceased: relationship only</span></div>
+<h2>People and generations</h2>
+<p class="rl-key"><b>Solid</b> = recorded family relationship · <b>Dashed</b> = person or link to identify · <b>Dad / Mum / Grandma / Me</b> = identity withheld. Placeholder order and quantity are provisional, not confirmation of the missing genealogy.</p>
 <div class="rl-paths">
-<article class="rl-lane" id="gbese">
-<div class="rl-lane-heading"><span class="rl-overline">01 / Ghana / Gbese</span><h3>Nettey family line</h3><p>Family biography identifies this branch with the royal family of Gbese.</p></div>
-<ol class="rl-sequence">
-<li class="research rl-historical-anchor"><span class="role">Published Gbese historical family reference · officeholder records</span><h4>Asafoatse Nii Tetteh Nettey</h4><span>Died 1859 · earlier Gbese Asafoatse history</span><div class="rl-name-group"><h4>Christopher Brandford Nettey I</h4><span>Historical Gbese Asafoatse officeholder</span></div><p>Both names appear in the <a href="https://gna.org.gh/2024/11/we-will-protect-our-legacy-asafoatse-c-b-nettey-family/">published family office history</a>. They are grouped as historical reference points, not presented as a proven father–child pair.</p></li>
-<li class="research rl-relative-placeholder"><span class="role">Ancestral research space · provisional</span><h4>Relative 1</h4><span class="rl-empty-name" aria-hidden="true"></span><p>Name · dates · relationship · source</p></li>
-<li class="research rl-relative-placeholder"><span class="role">Ancestral research space · provisional</span><h4>Relative 2</h4><span class="rl-empty-name" aria-hidden="true"></span><p>Name · dates · relationship · source</p></li>
-<li class="research rl-relative-placeholder"><span class="role">Ancestral research space · provisional</span><h4>Relative 3</h4><span class="rl-empty-name" aria-hidden="true"></span><p>Name · dates · relationship · source</p></li>
-<li><span class="role">Great-grandfather · Gbese</span><h4>Herbert Mills Cudjoe Nettey</h4><p>Named in Christopher's funeral biography as his father and associated with the Gbese royal family.</p><span class="rl-stamp">Biography · archival identity reconciliation ongoing</span></li>
-<li><span class="role">Grandfather · 1934–2023</span><h4>Christopher Akai “C.A.” Nettey</h4><p>21 December 1934 – 15 May 2023. Funeral biography records his named parents and family history.</p><a href="heritage.html#grandparent-christopher">Biographical record</a></li>
-<li class="private"><span class="role">Father · living generation</span><h4>Dad</h4><p>Name withheld in this visual family register.</p></li>
-<li class="private"><span class="role">Present generation</span><h4>Me</h4><p>Living descendants are not individually named here.</p></li>
-</ol>
-<p class="rl-caption" style="margin:0 16px 22px 50px">The numbered spaces reserve places for names and documents as the pedigree is assembled. Three are shown for layout; additional slots can be inserted, or unused slots removed, when the records establish the number of generations.</p>
-</article>
-<article class="rl-lane" id="ngleshie">
-<div class="rl-lane-heading"><span class="rl-overline">02 / Ghana / Jamestown</span><h3>Sackey-Jacobson family line</h3><p>Family biography identifies this branch with the royal family of Ngleshie-Alata.</p></div>
-<ol class="rl-sequence">
-<li><span class="role">Great-grandmother · Ngleshie-Alata</span><h4>Grace Adjuah Sackey-Jacobson</h4><p>Named in Christopher's funeral biography as his mother. Family oral history also remembers her independence and property activity.</p><span class="rl-stamp">Biography · family testimony</span></li>
-<li><span class="role">Grandfather · 1934–2023</span><h4>Christopher Akai “C.A.” Nettey</h4><p>Shared junction of the Gbese and Ngleshie-Alata branches through his parents.</p><a href="heritage.html#funeral-biography-source">Funeral biography source</a></li>
-<li class="private"><span class="role">Father · living generation</span><h4>Dad</h4><p>Name withheld in this visual family register.</p></li>
-<li class="private"><span class="role">Present generation</span><h4>Me</h4><p>Living descendants are not individually named here.</p></li>
-</ol>
-<aside class="rl-context"><h4>Earlier Ngleshie-Alata generations</h4><p>Parents, grandparents and any traditional officeholders preceding Grace Adjuah are to be entered person by person as supporting family and civil records are located. No intermediary names are invented.</p></aside>
-</article>
-<article class="rl-lane" id="english">
-<div class="rl-lane-heading"><span class="rl-overline">03 / England / legal-adoptive branch</span><h3>Symondson &amp; historical British lines</h3><p>Legal adoptive-family history is mapped separately from biological descent.</p></div>
-<div class="rl-context" style="margin-top:23px"><h4>Historical pedigree route — not yet attached to Grandma's branch</h4><p><strong>Edward III (1312–1377)</strong> → his son <strong>John of Gaunt (1340–1399)</strong> → wider Beaufort-related routes referenced in a published family pedigree.</p><p>The published Symondson/Simmonds–Deakin network also includes <strong>Henry Symondson (1832–1911)</strong> and <strong>Alfred Stuart Symondson (1865–1930)</strong>. The connecting chain to the adoptive family requires verification; these named people are not shown as established personal ancestors.</p></div>
-<ol class="rl-sequence">
-<li class="research"><span class="role">Adoptive lineage · connection being checked</span><h4>Symondson adoptive-family parents</h4><p>Named birth, adoption and marriage documents are needed to define Grandma's exact position in this family.</p><a href="heritage.html#english-corridor">English family research</a></li>
-<li class="private"><span class="role">Grandmother · legal-adoptive family link</span><h4>Grandma</h4><p>Identity withheld here; biological parentage and legal-adoptive history are distinguished in the research.</p></li>
-<li class="private"><span class="role">Mother · living generation</span><h4>Mum</h4><p>Name withheld in this visual family register.</p></li>
-<li class="private"><span class="role">Present generation</span><h4>Me</h4><p>Living descendants are not individually named here.</p></li>
-</ol>
-</article>
-</div>
-</div></section>
+<article class="rl-lane" id="gbese"><div class="rl-lane-heading"><span class="rl-overline">01 / Ghana · Gbese</span><h3>Nettey family line</h3></div><ol class="rl-sequence"><li class="research"><span class="role">Earlier generation · ancestral parents</span><h4>Asafoatse Nettey’s parents</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li><span class="role">Traditional officeholder · died 1859</span><h4>Asafoatse Nii Tetteh Nettey</h4><span class="person-detail">Earlier Gbese Asafoatse</span></li>
+<li class="research"><span class="role">Next generation · child / relative</span><h4>Asafoatse Nettey’s children</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Link to this family branch · provisional</span><h4>Relative 1</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Intervening ancestor · provisional</span><h4>Relative 2</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Intervening ancestor · provisional</span><h4>Relative 3</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li><span class="role">Great-grandfather · Gbese</span><h4>Herbert Mills Cudjoe Nettey</h4><span class="person-detail">Father named in C.A. Nettey's funeral biography</span></li>
+<li><span class="role">Grandfather · 1934–2023</span><h4>Christopher Akai “C.A.” Nettey</h4></li>
+<li class="private"><span class="role">Father</span><h4>Dad</h4></li>
+<li class="private"><span class="role">Present generation</span><h4>Me</h4></li></ol><p class="rl-tiny-note">The dashed names mark a research pathway; their number and relationships can be revised as documents identify the generations.</p><div class="rl-side-note"><b>Other historic Gbese officeholder:</b> Christopher Brandford Nettey I (c. 1860–1944). Recorded in the wider <a href="https://gna.org.gh/2024/11/we-will-protect-our-legacy-asafoatse-c-b-nettey-family/">family office history</a>, not assigned an unverified parent–child position here.</div></article>
+<article class="rl-lane" id="ngleshie"><div class="rl-lane-heading"><span class="rl-overline">02 / Ghana · Ngleshie-Alata</span><h3>Sackey-Jacobson family line</h3></div><ol class="rl-sequence"><li class="research"><span class="role">Earlier traditional house</span><h4>Earlier royal-house ancestor</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Earlier relative · provisional</span><h4>Relative 1</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Earlier relative · provisional</span><h4>Relative 2</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Great-great-grandparent generation</span><h4>Grace Adjuah’s parents</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li><span class="role">Great-grandmother · Ngleshie-Alata</span><h4>Grace Adjuah Sackey-Jacobson</h4><span class="person-detail">Mother named in C.A. Nettey's funeral biography</span></li>
+<li><span class="role">Grandfather · 1934–2023</span><h4>Christopher Akai “C.A.” Nettey</h4></li>
+<li class="private"><span class="role">Father</span><h4>Dad</h4></li>
+<li class="private"><span class="role">Present generation</span><h4>Me</h4></li></ol><div class="rl-side-note"><a href="heritage.html#funeral-biography-source">Family biography</a> · parentage and earlier house members to be named.</div></article>
+<article class="rl-lane" id="english"><div class="rl-lane-heading"><span class="rl-overline">03 / England · adoptive</span><h3>Symondson family line</h3></div><ol class="rl-sequence"><li class="research"><span class="role">Earlier Symondson generation</span><h4>Relative 1</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Earlier family connection</span><h4>Relative 2</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Legal-adoptive family link</span><h4>Grandma’s adoptive parents</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="private"><span class="role">Maternal grandmother · adopted</span><h4>Grandma</h4></li>
+<li class="private"><span class="role">Mother</span><h4>Mum</h4></li>
+<li class="private"><span class="role">Present generation</span><h4>Me</h4></li></ol><p class="rl-tiny-note">A legal-adoptive connection is shown as such; it is not labelled biological descent.</p><div class="rl-side-note"><b>Separate historical reference:</b> Edward III (1312–1377) → John of Gaunt (1340–1399). The wider <a href="https://kimsimmonds.net/charts/pedigree_kim_10.html">Symondson / Simmonds–Deakin pedigree</a> includes Beaufort–Plantagenet material; the specific adoptive-family bridge is being traced.</div></article>
+</div></div></section>
 <section id="other-branches"><div class="wrap">
 <span class="rl-overline">Additional grandparent branches</span>
-<h2>Okine and Lamptey — equal genealogical standing</h2>
-<p>These are distinct family histories, rather than automatic extensions of the documented Gbese or Ngleshie-Alata royal-family relationships.</p>
+<h2>Okine and Lamptey</h2>
 <div class="rl-paths two">
-<article class="rl-lane" id="okine"><div class="rl-lane-heading"><span class="rl-overline">04 / Ghana</span><h3>Okine family line</h3><p>Family testimony records an ancestral royal-house connection; precise named generations are being traced.</p></div>
-<ol class="rl-sequence">
-<li class="research"><span class="role">Earlier ancestors · records to assemble</span><h4>Okine family-house ancestry</h4><p>Research includes the reported Ajorkor Okine We route. The specific parent–child sequence remains to be established.</p></li>
-<li class="private"><span class="role">Paternal grandmother</span><h4>Grandma</h4><p>Relationship shown without publishing a living-status-unknown relative's full name.</p></li>
-<li class="private"><span class="role">Father · living generation</span><h4>Dad</h4></li>
-<li class="private"><span class="role">Present generation</span><h4>Me</h4></li>
-</ol>
-<a style="display:inline-block;margin:0 16px 24px 50px" href="heritage.html#grandparent-fredericka">Okine family record</a>
-</article>
-<article class="rl-lane" id="lamptey"><div class="rl-lane-heading"><span class="rl-overline">05 / Ghana</span><h3>Lampty / Lamptey family line</h3><p>Maternal grandfather's family history and related cultural research.</p></div>
-<ol class="rl-sequence">
-<li class="research"><span class="role">Earlier generation · family account</span><h4>Great-grandparent generation</h4><p>Family testimony refers to a maternal ancestor, Kwadua, as the mother of Granddad; identifying civil records are to be assembled.</p></li>
-<li class="private"><span class="role">Maternal grandfather</span><h4>Granddad</h4><p>Name withheld here; family record supplies a reported birth year of 1932.</p></li>
-<li class="private"><span class="role">Mother · living generation</span><h4>Mum</h4></li>
-<li class="private"><span class="role">Present generation</span><h4>Me</h4></li>
-</ol>
-<aside class="rl-context"><h4>Collateral historical relative, not a direct ancestor</h4><p>Family testimony identifies <strong>Sergeant Adjetey (d. 1948)</strong> as a brother of Kwadua. His place in Ghanaian veterans' history is recorded separately from the direct pedigree and any proposed royal-house connection.</p><a href="heritage.html#lampty-source-note">Lamptey family sources</a></aside>
-</article>
+<article class="rl-lane" id="okine"><div class="rl-lane-heading"><span class="rl-overline">04 / Ghana · Okine</span><h3>Okine family line</h3></div><ol class="rl-sequence"><li class="research"><span class="role">Earlier family-house generation</span><h4>Okine house ancestors</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Earlier relative · provisional</span><h4>Relative 1</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Earlier relative · provisional</span><h4>Relative 2</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Parent generation of Grandma</span><h4>Grandma’s parents</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="private"><span class="role">Paternal grandmother</span><h4>Grandma</h4></li>
+<li class="private"><span class="role">Father</span><h4>Dad</h4></li>
+<li class="private"><span class="role">Present generation</span><h4>Me</h4></li></ol><div class="rl-side-note"><b>Family research:</b> reported Ajorkor Okine We connection. <a href="heritage.html#grandparent-fredericka">Grandmother’s biography</a>.</div></article>
+<article class="rl-lane" id="lamptey"><div class="rl-lane-heading"><span class="rl-overline">05 / Ghana · Lamptey</span><h3>Lampty / Lamptey family line</h3></div><ol class="rl-sequence"><li class="research"><span class="role">Earlier family generation</span><h4>Lamptey ancestors</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li class="research"><span class="role">Earlier relative · provisional</span><h4>Relative 1</h4><span class="blank-name" aria-label="Name pending"></span></li>
+<li><span class="role">Granddad’s mother · family account</span><h4>Kwadua</h4><span class="person-detail">Granddad’s father's name: to be entered</span></li>
+<li class="private"><span class="role">Maternal grandfather</span><h4>Granddad</h4><span class="person-detail">Born 1932, family account</span></li>
+<li class="private"><span class="role">Mother</span><h4>Mum</h4></li>
+<li class="private"><span class="role">Present generation</span><h4>Me</h4></li></ol><div class="rl-side-note"><b>Collateral relative:</b> Sergeant Adjetey (d. 1948), identified in family testimony as Kwadua’s brother, not a direct ancestor. <a href="heritage.html#lampty-source-note">Family history</a>.</div></article>
 </div>
-</div></section>
-<section id="lineage-research-status"><div class="wrap">
-<span class="rl-overline">Evidence register</span>
-<h2>What the sources establish, and the exact next links</h2>
-<div class="rl-research-grid">
-<article><h3>Family biography</h3><p>Names the paternal grandfather and his parents and associates the parents with the Gbese and Ngleshie-Alata royal families.</p></article>
-<article><h3>Independent historical reporting</h3><p>Documents the wider Gbese Asafoatse office and family succession accounts, not the missing parent–child bridges to every present-day descendant.</p></article>
-<article><h3>Archival identity reconciliation</h3><p>A 1961 will naming a Christopher Akai Nettey as Emmanuel Quarcoo Nettey's son requires an identity comparison with the grandfather named in the funeral biography before changing the pedigree.</p></article>
-<article><h3>UK adoption and historic pedigrees</h3><p>Legal-adoptive family ties, published Symondson branches and Beaufort–Plantagenet historical pedigrees require the specific family bridge to be established before joining them in one descendant line.</p></article>
+<details class="rl-archival"><summary>Evidence notes and documentary sources <span aria-hidden="true">＋</span></summary>
+<div class="rl-archive-inside">
+<div class="rl-evidence-grid">
+<article><h4>Family biography</h4><p>Names Christopher Akai Nettey’s parents and records their respective associations with the royal families of Gbese and Ngleshie-Alata.</p></article>
+<article><h4>Gbese traditional history</h4><p>Published officeholder history is distinguished from a fully identified biological parent–child chain.</p></article>
+<article><h4>Archival identity comparison</h4><p>A 1961 will also names a Christopher Akai Nettey as a son of Emmanuel Quarcoo Nettey. The identity match has not been resolved.</p></article>
+<article><h4>English adoption and pedigree</h4><p>Grandma's legal-adoptive connection is distinct from any biological descent and will be connected to the earlier published pedigree when the records establish the bridge.</p></article>
 </div>
-<div class="rl-note"><p><strong>How to read this diagram:</strong> A solid vertical line means the relationship is identified by the current family record. It is not a claim that every supporting certificate has already been collected or that an office has been conferred. A dashed research card means the exact genealogy still needs primary-source investigation. Historic chieftaincy office succession is deliberately not drawn as if each officeholder were the next person's parent.</p></div>
-<p class="rl-caption">This page is a research-led visual index. Living relatives' names are deliberately omitted from the diagram; the main heritage archive contains additional biographical and family-history details.</p>
-</div></section>
-<section id="lineage-sources"><div class="wrap rl-sources"><h2>Records and further reading</h2>
+<p>The visual placeholders are for organising research, not filling missing evidence with presumed parentage. Where an older officeholder and a later family member are shown in sequence, the intervening relationship is a subject for historical research.</p>
 <ul>
-<li><a href="heritage.html#funeral-biography-source">Christopher Akai Nettey's family funeral biography — extracted biographical relationships</a></li>
-<li><a href="heritage.html#praad-discoveries">PRAAD estate, will and court record comparisons</a></li>
-<li><a href="https://gna.org.gh/2024/11/we-will-protect-our-legacy-asafoatse-c-b-nettey-family/">Ghana News Agency — Asafoatse C.B. Nettey family account, 2024</a></li>
-<li><a href="https://ghanaiantimes.com.gh/gbese-mantse-unveils-plaque-to-honour-hearts-of-oak-founder/">Ghanaian Times — historical commemoration, 2025</a></li>
-<li><a href="https://kimsimmonds.net/charts/pedigree_kim_10.html">Published Symondson/Simmonds–Deakin family pedigree — wider British historical research route</a></li>
-<li><a href="heritage.html#four-grandparents">Four grandparent biographies and source links</a></li>
-</ul></div></section>
+<li><a href="heritage.html#funeral-biography-source">Grandfather’s funeral biography and recorded parents</a></li>
+<li><a href="heritage.html#praad-discoveries">Estate, will and court record comparisons</a></li>
+<li><a href="https://gna.org.gh/2024/11/we-will-protect-our-legacy-asafoatse-c-b-nettey-family/">Ghana News Agency — Gbese family history (2024)</a></li>
+<li><a href="https://ghanaiantimes.com.gh/gbese-mantse-unveils-plaque-to-honour-hearts-of-oak-founder/">Ghanaian Times — Gbese commemoration (2025)</a></li>
+<li><a href="https://kimsimmonds.net/charts/pedigree_kim_10.html">Symondson / Simmonds–Deakin published pedigree</a></li>
+<li><a href="heritage.html#four-grandparents">Four grandparent biographies</a></li>
+</ul></div></details>
+</div></section>
 </main>
 <footer><div class="wrap" data-site-footer></div></footer>
 </body>
