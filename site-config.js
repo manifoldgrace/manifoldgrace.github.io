@@ -20,8 +20,8 @@ window.MANIFOLD_SITE = Object.freeze({
     vimeo: "",
     facebook: "",
     youtube: "",
-    instagram: "",
-    tiktok: "",
+    instagram: "https://www.instagram.com/iz.gracerose/",
+    tiktok: "https://www.tiktok.com/@gracecorrective",
     snapchat: ""
   }
 });
