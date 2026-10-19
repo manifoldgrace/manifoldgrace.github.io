@@ -28,6 +28,7 @@
     ["Royal Lineage","royal-lineage.html"],
     ["Sociology","topics-in-12.html#domain-01"],
     ["Recognition","recognition.html"],
+    ["Independent Coverage","independent-coverage.html"],
     ["Resourcefulness","resourcefulness.html"],
     ["Venture","conglomerate.html"]
   ];
