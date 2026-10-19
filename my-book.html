@@ -136,6 +136,23 @@
 .mg-biography-gallery .mg-jacket-type{inset:0 0 auto;background:none;padding:16px 12px}
 
 </style>
+<style id="mg-books-vertical-layout">
+.mg-original-biography-stage{display:flex;align-items:center;justify-content:center;background:#111;border:1px solid #37322c;padding:18px}
+.mg-original-biography-cover{display:block;width:min(100%,400px);height:auto;object-fit:contain;opacity:1;filter:none}
+#mgBookShelf.book-shelf{display:grid;grid-template-columns:minmax(0,1fr);overflow:visible;scroll-snap-type:none;gap:0;padding:0;margin-top:22px}
+#mgBookShelf.book-shelf>.book-project{width:100%;max-width:none;flex:none;scroll-snap-align:none;display:grid;grid-template-columns:minmax(160px,220px) minmax(0,1fr);gap:28px;align-items:start;padding:28px 0;background:transparent;border:0;border-top:1px solid var(--line)}
+#mgBookShelf.book-shelf>.book-project:last-child{border-bottom:1px solid var(--line)}
+#mgBookShelf .book-project-cover{margin:0;width:100%;max-width:220px;align-self:start}
+#mgBookShelf .book-project-body{min-width:0}
+#mgBookShelf .book-project-body h3{margin-top:0}
+#mgBookShelf .mg-cesi-jacket{display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:2/3;padding:17px 16px;color:#ede1ce;text-align:center;border:1px solid #bca479;background:linear-gradient(155deg,#14232b,#213039 55%,#111d24);box-shadow:inset 0 0 0 5px #14232b,inset 0 0 0 6px #ad936a}
+#mgBookShelf .mg-cesi-jacket .mg-cesi-imprint{font:400 9px Georgia,serif;letter-spacing:.14em;color:#e4d4b5}
+#mgBookShelf .mg-cesi-jacket .mg-cesi-decor{padding:10px 0;margin-top:12px;border-top:1px solid #ad976c;border-bottom:1px solid #ad976c;font:400 10px Georgia,serif;letter-spacing:.14em;color:#d6c19b}
+#mgBookShelf .mg-cesi-jacket .mg-cesi-title{font:400 clamp(18px,1.9vw,24px)/1.24 Georgia,serif;letter-spacing:-.02em;color:#f0e6d4;overflow-wrap:normal}
+#mgBookShelf .mg-cesi-jacket .mg-cesi-subtitle{font:400 13px Georgia,serif;letter-spacing:.18em;color:#dec8a4}
+#mgBookShelf .mg-cesi-jacket .mg-cesi-author{padding-top:12px;border-top:1px solid #ad976c;font:400 8px Georgia,serif;letter-spacing:.1em;color:#e1d4ba}
+@media(max-width:760px){.mg-original-biography-stage{padding:12px}#mgBookShelf.book-shelf>.book-project{grid-template-columns:1fr;gap:16px;padding:22px 0}#mgBookShelf .book-project-cover{width:min(65vw,245px);max-width:245px;margin:0 auto 5px}#mgBookShelf .book-project-body h3{font-size:1.35rem}}
+</style>
 </head>
 <body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
@@ -149,24 +166,7 @@
 
   <section class="book-feature"><div class="wrap">
     <div class="book-feature-grid">
-      <div class="biography-book-stage">
-        <div class="biography-book" role="img" aria-label="Three-dimensional hardcover for Full Biography, featuring Grace's supplied black-suit portrait against its original dark background, fine serif lettering and a visible book spine">
-          <div class="biography-book-spine" aria-hidden="true">
-            <small>MANIFOLD GRACE</small>
-          </div>
-          <div class="biography-book-cover" aria-hidden="true">
-            <div class="biography-book-photo"></div>
-            <div class="biography-book-tint"></div>
-            <div class="biography-book-text">
-              <span class="biography-book-edition">A LIFE IN FULL · THE PERSONAL RECORD</span>
-
-              <h3 class="mg-biography-title">Full Biography</h3>
-              <div class="biography-book-author">Grace Rosemary Nettey</div>
-              <small>MANIFOLD GRACE</small>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="mg-original-biography-stage"><img class="mg-original-biography-cover" src="assets/books/full-biography.webp" alt="Original Full Biography cover with Grace Rosemary Nettey's portrait, cream and gold title" loading="eager" decoding="async"></div>
       <div>
 
         <h2>Full Biography</h2>
@@ -177,35 +177,13 @@
   </div></section>
 
 
-<section id="book-cover-gallery" class="mg-gallery-section" aria-labelledby="mgBookGalleryHeading"><div class="wrap">
-
-<h2 id="mgBookGalleryHeading">The book collection</h2>
-<div class="mg-gallery">
-<div class="mg-gallery-toolbar"><span id="mgGalleryStatus" role="status" aria-live="polite">1 of 14 covers</span><button class="mg-gallery-btn" id="mgGalleryPrev" type="button" aria-label="Previous cover">←</button><button class="mg-gallery-btn" id="mgGalleryNext" type="button" aria-label="Next cover">→</button><button class="mg-gallery-btn" id="mgGalleryPause" type="button" aria-label="Pause cover carousel" aria-pressed="false">Ⅱ</button></div>
-<div class="mg-gallery-track" id="mgCoverCarousel" tabindex="0" aria-label="Fourteen book cover designs">
-<button class="mg-gallery-tile" type="button" aria-pressed="true"><div class="mg-photo-jacket mg-biography-gallery"><img src="assets/books/grace-black-suit-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">Full Biography</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>Full Biography</span><small>Life and professional record</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/garden-produce-identity-v2.webp" alt="Garden and Produce cover featuring Grace and a garden harvest"><span>Garden &amp; Produce</span><small>Horticulture and growing</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/minimalist-aesthetic-identity-v2.webp" alt="Minimalist Aesthetic cover with Grace in a bright interior"><span>The Minimalist Aesthetic</span><small>Calm, intentional design</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/trojan-horse-identity-v2.webp" alt="Trojan Horse cover with Grace in a formal wood-panelled setting"><span>Trojan Horse</span><small>Institutions and public trust</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/breaking-barriers.avif" alt="Breaking Barriers cover with Grace by a London townhouse window and refined serif lettering"><span>Breaking Barriers</span><small>Resilience and opportunity</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/childhood-young-adult-memoir-v3.webp" alt="Childhood &amp; Young-Adult Memoir refined portrait book cover with Grace Rosemary Nettey"><span>Childhood &amp; Young-Adult Memoir</span><small>Life and formative experiences</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/family-history-genealogical-record.avif" alt="Family History &amp; Genealogical Record refined portrait book cover with Grace Rosemary Nettey"><span>Family History &amp; Genealogical Record</span><small>Family ancestry and heritage</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/faith-formation-public-life.avif" alt="Faith, Formation &amp; Public Life refined portrait book cover with Grace Rosemary Nettey"><span>Faith, Formation &amp; Public Life</span><small>Faith and public responsibility</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><img loading="lazy" src="assets/books/collected-essays.avif" alt="Collected Essays refined portrait book cover with Grace Rosemary Nettey"><span>Collected Essays</span><small>Technology, ethics, identity and culture</small></button>
-
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><div class="mg-photo-jacket "><img src="assets/books/grace-horse-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">50 by 30</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>50 by 30</span><small>Supplied portrait cover</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><div class="mg-photo-jacket "><img src="assets/books/grace-ivory-seated-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">Black History Through Family &amp; Public Records</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>Black History Through Family &amp; Public Records</span><small>Supplied portrait cover</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><div class="mg-photo-jacket "><img src="assets/books/grace-panelled-room-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">AI, Ethics, Governance &amp; Society</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>AI, Ethics, Governance &amp; Society</span><small>Supplied portrait cover</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><div class="mg-photo-jacket "><img src="assets/books/grace-panelled-room-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">Systems, Governance &amp; Institutional Justice</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>Systems, Governance &amp; Institutional Justice</span><small>Supplied portrait cover</small></button>
-<button class="mg-gallery-tile" type="button" aria-pressed="false"><div class="mg-photo-jacket mg-landscape-jacket"><img src="assets/books/grace-sofa-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">The Chronological Ethical Self-Inventory</span><span class="mg-jacket-subtitle">CESI</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div><span>The Chronological Ethical Self-Inventory</span><small>Supplied portrait cover</small></button>
-</div></div></div></section>
 <section><div class="wrap">
 
     <h2>Books &amp; essays</h2>
 
 
 
-    <div class="mg-shelf-toolbar" aria-label="Browse the book collection"><span id="mgShelfCount" role="status" aria-live="polite">Book 1 of 13</span><button id="mgShelfPrev" class="mg-shelf-btn" type="button" aria-label="Previous book">←</button><button id="mgShelfNext" class="mg-shelf-btn" type="button" aria-label="Next book">→</button></div><div class="book-shelf" id="mgBookShelf" tabindex="0" aria-label="Swipeable book collection">
+    <div class="book-shelf" id="mgBookShelf" tabindex="0" aria-label="Swipeable book collection">
 <article class="book-project" id="garden-produce">
 <div class="book-project-cover mg-cover mg-art-11" role="img" aria-label="Garden and Produce"><div class="mg-cover-portrait" aria-hidden="true"></div></div>
 <div class="book-project-body"><h3>Garden &amp; Produce</h3>
@@ -274,7 +252,7 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-photo-jacket "><img src="assets/books/grace-panelled-room-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">Systems, Governance &amp; Institutional Justice</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div>
+        <div class="book-project-cover mg-cover mg-photo-jacket "><img src="assets/books/grace-black-suit-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">Systems, Governance &amp; Institutional Justice</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div>
         <div class="book-project-body">
 
           <h3>Systems, Governance & Institutional Justice</h3>
@@ -306,7 +284,13 @@
       </article>
 
       <article class="book-project">
-        <div class="book-project-cover mg-cover mg-photo-jacket mg-landscape-jacket"><img src="assets/books/grace-sofa-portrait.webp" alt="" loading="lazy" decoding="async"><div class="mg-jacket-type"><span class="mg-jacket-title">The Chronological Ethical Self-Inventory</span><span class="mg-jacket-subtitle">CESI</span><span class="mg-jacket-author">Grace Rosemary Nettey</span></div></div>
+        <div class="book-project-cover mg-cesi-jacket" role="img" aria-label="Research-style cover for The Chronological Ethical Self-Inventory (CESI)">
+          <span class="mg-cesi-imprint">MANIFOLD GRACE</span>
+          <span class="mg-cesi-decor" aria-hidden="true">I · II · III · IV</span>
+          <strong class="mg-cesi-title">The Chronological<br>Ethical<br>Self-Inventory</strong>
+          <span class="mg-cesi-subtitle">CESI</span>
+          <span class="mg-cesi-author">GRACE ROSEMARY NETTEY</span>
+        </div>
         <div class="book-project-body">
 
           <h3>The Chronological Ethical Self-Inventory (CESI)</h3>
@@ -361,42 +345,5 @@
 
 <footer><div class="wrap" data-site-footer></div></footer>
 
-<script>
-(()=>{
-"use strict";
-const gallery=document.getElementById("mgCoverCarousel"),shelf=document.getElementById("mgBookShelf");
-if(!gallery||!shelf)return;
-const tiles=[...gallery.querySelectorAll(".mg-gallery-tile")],books=[...shelf.children];
-const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-let current=0,paused=reduced,interval=null;
-const behaviour=()=>reduced?"instant":"smooth";
-function show(i,animated=true){
- current=(i+tiles.length)%tiles.length;
- tiles[current].scrollIntoView({behavior:animated?behaviour():"instant",inline:"center",block:"nearest"});
- tiles.forEach((tile,j)=>tile.setAttribute("aria-pressed",String(j===current)));
- document.getElementById("mgGalleryStatus").textContent=(current+1)+" of "+tiles.length+" covers";
-}
-tiles.forEach((tile,i)=>tile.addEventListener("click",()=>{stop();show(i)}));
-function stop(){paused=true;document.getElementById("mgGalleryPause").textContent="▶";document.getElementById("mgGalleryPause").setAttribute("aria-label","Resume cover carousel");document.getElementById("mgGalleryPause").setAttribute("aria-pressed","true");}
-document.getElementById("mgGalleryPrev").addEventListener("click",()=>{stop();show(current-1)});
-document.getElementById("mgGalleryNext").addEventListener("click",()=>{stop();show(current+1)});
-document.getElementById("mgGalleryPause").addEventListener("click",()=>{
- paused=!paused;
- document.getElementById("mgGalleryPause").textContent=paused?"▶":"Ⅱ";
- document.getElementById("mgGalleryPause").setAttribute("aria-label",paused?"Resume cover carousel":"Pause cover carousel");
- document.getElementById("mgGalleryPause").setAttribute("aria-pressed",String(paused));
-});
-gallery.addEventListener("pointerdown",stop,{passive:true});
-gallery.addEventListener("focusin",stop);
-gallery.addEventListener("keydown",e=>{if(e.key!=="ArrowLeft"&&e.key!=="ArrowRight")return;e.preventDefault();stop();show(current+(e.key==="ArrowRight"?1:-1))});
-if(!reduced){interval=window.setInterval(()=>{if(!paused && !document.hidden)show(current+1)},5000)}
-else stop();
-let activeBook=0;
-function bookTo(index){activeBook=Math.min(books.length-1,Math.max(0,index));books[activeBook].scrollIntoView({inline:"start",block:"nearest",behavior:behaviour()});document.getElementById("mgShelfCount").textContent="Book "+(activeBook+1)+" of "+books.length;}
-document.getElementById("mgShelfPrev").addEventListener("click",()=>bookTo(activeBook-1));
-document.getElementById("mgShelfNext").addEventListener("click",()=>bookTo(activeBook+1));
-shelf.addEventListener("scroll",()=>{let best=0,min=Infinity;books.forEach((book,i)=>{const d=Math.abs(book.offsetLeft-shelf.offsetLeft-shelf.scrollLeft);if(d<min){min=d;best=i}});activeBook=best;document.getElementById("mgShelfCount").textContent="Book "+(best+1)+" of "+books.length;},{passive:true});
-shelf.addEventListener("keydown",e=>{if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();bookTo(activeBook+(e.key==="ArrowRight"?1:-1));}});
-})();
-</script></body>
+</body>
 </html>
