@@ -4,6 +4,7 @@
   const navItems = [
     ["Research Collaborations","research-collaborations.html"],
     ["Independent Work & Impact","independent-work-impact.html"],
+    ["Productivity Log","productivity-log.html"],
     ["About","about.html"],
     ["Life Timeline","life-timeline.html"],
     ["Professional","professional.html"],
