@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Evidence Verification &amp; Criminal Justice | Manifold Grace</title>
+<meta name="description" content="An interdisciplinary research application for evaluating evidential accuracy in criminal justice: claim-to-source mapping, historical records, provenance, contradictions, disclosure review, AI assurance and lawful human oversight.">
+<meta name="author" content="Grace Rosemary Nettey">
+<link rel="canonical" href="https://manifoldgrace.github.io/evidence-verification-criminal-justice.html">
+<link rel="stylesheet" href="style.css">
+<script src="site-config.js" defer></script><script src="site-shell.js" defer></script>
+<style>
+.evcj a,.evcj a:visited{color:#92c7ff;text-decoration:underline;text-underline-offset:3px}
+.evcj a:focus-visible{outline:2px solid #92c7ff;outline-offset:4px}
+.evcj .eyebrow{letter-spacing:.1em}
+.evcj .narrow{max-width:980px}
+.evcj .intro-status{color:#c3c3c3;font-size:.88rem}
+.evcj .jump{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0}
+.evcj .jump a{border:1px solid #5a5a5a;padding:9px 12px;background:#171717;font-size:.88rem}
+.evcj .scope-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:20px 0}
+.evcj .scope-grid article{border:1px solid #414141;background:#161616;padding:18px}
+.evcj .scope-grid h3{margin:0 0 8px}
+.evcj .scope-grid p{margin:0}
+.evcj .table-scroll{overflow-x:auto;border:1px solid #444;margin:18px 0}
+.evcj table{width:100%;min-width:750px;border-collapse:collapse;font-size:.91rem}
+.evcj th,.evcj td{border:1px solid #3b3b3b;padding:13px;text-align:left;vertical-align:top}
+.evcj th{background:#1c1c1c;color:#fff}
+.evcj .note{border-left:3px solid #91c7ff;padding:12px 16px;background:#171717;margin:18px 0}
+.evcj code{overflow-wrap:anywhere}
+.evcj li{margin:9px 0}
+.evcj .stage{color:#bdbdbd;font-size:.86rem}
+@media(max-width:650px){.evcj .scope-grid{grid-template-columns:1fr}.evcj th,.evcj td{padding:10px}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"Evidence Verification and Criminal Justice: an Interdisciplinary Research Application","author":{"@type":"Person","name":"Grace Rosemary Nettey"},"datePublished":"2026-11-03","url":"https://manifoldgrace.github.io/evidence-verification-criminal-justice.html","isPartOf":{"@type":"WebSite","name":"Manifold Grace"}}</script>
+</head><body><header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
+<main class="evcj">
+<div class="page-hero"><div class="wrap"><span class="eyebrow">INFORMATION SCIENCE · AI ASSURANCE · JUSTICE APPLICATION</span><h1>Evidence Verification &amp; Criminal Justice</h1>
+<p class="page-intro">How claim-level provenance, historical record reconstruction, contradiction analysis and accountable AI evaluation might improve the accuracy and reviewability of evidence in criminal casework.</p>
+<p class="intro-status">Independent conceptual research · 3 November 2026 · One application of a wider interdisciplinary framework · Not a deployed legal or forensic system</p>
+</div></div>
+<section><div class="wrap narrow">
+<h2>Purpose, scope and limits</h2>
+<p>This research application explores a practical question: <strong>can a legal reviewer understand precisely what supports a claim, what contradicts it, what was available at the relevant time, and what remains unknown?</strong> The goal is more accurate evaluation of evidence, not increased conviction or acquittal rates, advocacy for any particular legal practice, or automated determinations of credibility or guilt.</p>
+<p>Criminal justice is one potential field of use alongside employment, education, healthcare, scientific research and public administration. The same technical principles can apply to many institutional records. No inference is made that a particular firm has inadequate systems, has reviewed these proposals, or has adopted them.</p>
+<nav class="jump" aria-label="Page topics"><a href="#problem">Evidence problems</a><a href="#model">Data model</a><a href="#examples">Illustrative scenarios</a><a href="#workflow">Review workflow</a><a href="#feature-map">Feature proposals</a><a href="#evaluation">Quality evaluation</a><a href="#safeguards">Safeguards</a><a href="#sources">Sources &amp; status</a></nav>
+</div></section>
+<section id="problem"><div class="wrap narrow"><span class="status">01 · WHY THIS MATTERS</span><h2>Evidence problems the architecture is intended to address</h2>
+<div class="scope-grid">
+<article><h3>Fragmented provenance</h3><p>An assertion appears in several reports, but each may repeat the same original source. Apparent agreement is not necessarily independent corroboration.</p></article>
+<article><h3>Conflicting chronologies</h3><p>Different records may use event time, creation time, upload time or later amendment time. The distinctions must remain visible.</p></article>
+<article><h3>Institutional record gaps</h3><p>Employment, educational and public-body records may sit with different custodians or be unavailable; absence of a record does not by itself disprove an event.</p></article>
+<article><h3>Unreviewed contrary material</h3><p>Material that challenges an interpretation must not be discarded merely because it conflicts with the emerging narrative.</p></article>
+<article><h3>Historic rule changes</h3><p>A current policy may differ from the version applicable to the relevant event. A valid comparison requires the correct historical version.</p></article>
+<article><h3>AI-generated inaccuracies</h3><p>A plausible summary may conceal a hallucinated citation, changed qualification, conflated person or unsupported inference.</p></article>
+</div>
+<p class="note"><strong>Legal boundary:</strong> Relevance, disclosure duties and access to third-party information depend on the facts and applicable law. The CPS advises that reasonable lines of enquiry must be justified and proportionate, including when they point away from a suspect. The research here supports that disciplined reasoning; it does not replace it.</p>
+</div></section>
+<section id="model"><div class="wrap narrow"><span class="status">02 · GRANULAR DESIGN</span><h2>A claim-to-evidence register: what a reviewable record should contain</h2>
+<p>Each assertion receives a stable identifier. Each source remains separately identifiable, including where several documents repeat one underlying account. The relationship between a claim and a document is recorded rather than assumed.</p>
+<div class="table-scroll" role="region" aria-label="Proposed field model" tabindex="0"><table><thead><tr><th>Field</th><th>Meaning</th><th>Why it matters</th></tr></thead><tbody>
+<tr><td>Claim ID and exact wording</td><td>Stable identifier and scoped assertion, avoiding vague paraphrases.</td><td>Makes corrections and disputes traceable.</td></tr>
+<tr><td>Source ID and custodian</td><td>Original document reference, origin, holding institution and authorised retrieval route.</td><td>Allows independent source inspection.</td></tr>
+<tr><td>Source type and dependence</td><td>Primary record, testimony, derivative summary or copied assertion; links to shared originating sources.</td><td>Prevents duplicated reporting from masquerading as corroboration.</td></tr>
+<tr><td>Time dimensions</td><td>Event date, record creation date, receipt date, effective policy period, and amendment date where known; timezone and uncertainty where material.</td><td>Prevents chronology errors and anachronistic comparisons.</td></tr>
+<tr><td>Evidence relationship</td><td>Supports, challenges, contextualises, does not address, or remains unresolved.</td><td>Preserves contrary evidence and avoids binary AI judgments.</td></tr>
+<tr><td>Verification state</td><td>Origin authenticated; content independently corroborated; disputed; unverified; superseded — each assessed separately.</td><td>Separates authentic documents from true or accurate assertions.</td></tr>
+<tr><td>Access and integrity</td><td>Legal authority, permitted recipients, original-copy reference, integrity/hash where appropriate, handling log and retention rules.</td><td>Helps preserve confidentiality, integrity and auditability.</td></tr>
+<tr><td>Review decision</td><td>Named authorised reviewer, review date, rationale, outstanding enquiries and later corrections.</td><td>Keeps responsibility with accountable people.</td></tr>
+</tbody></table></div>
+<p>The model deliberately avoids claiming a mathematically certain “truth score”. Source authenticity, factual corroboration, interpretation, admissibility and legal weight are different questions.</p>
+</div></section>
+<section id="examples"><div class="wrap narrow"><span class="status">03 · SYNTHETIC EXAMPLES</span><h2>Where historical institutional records could matter</h2>
+<h3>Scenario A — employment chronology</h3>
+<p>A fictional case raises a disputed claim about whether a person was at a workplace on a given afternoon. An employer's rota, payroll record, access-control entry and later HR letter appear to concern the same period. A structured review would identify which records are contemporaneous, which are retrospective, what time windows they actually establish, and whether any are derivative of one another. It would not infer presence or absence from a payroll record alone.</p>
+<h3>Scenario B — education or training record</h3>
+<p>A fictional dispute concerns a date of attendance, a course status or a qualification relevant to an investigation. A registry export, learning-platform log, certificate and retrospective email may use different dates or status definitions. The system would retain each source's precise scope and flag uncertainty, not silently resolve it into a single narrative.</p>
+<h3>Scenario C — public-body decision history</h3>
+<p>A fictional case references a decision made under an institutional policy. The review would identify the policy version effective on the decision date, preserve the later-amended version separately, link correspondence to each stage and note any missing decision records. A newer public webpage would not be treated as proof of what the older rule said.</p>
+<h3>Scenario D — disclosed digital material</h3>
+<p>A legal team receives a bundle containing messages, images, transcripts and document summaries. A review register can show which source items were examined, how search terms were chosen, which apparent inconsistencies need human attention, and which material has yet to be reviewed. The work must respect lawful disclosure arrangements, confidentiality and a defensible audit trail.</p>
+<p class="stage">All examples above are invented to illustrate information architecture. None describes a real investigation, witness, suspect or outcome.</p>
+</div></section>
+<section id="workflow"><div class="wrap narrow"><span class="status">04 · PROPOSED WORKFLOW</span><h2>From authorised sources to a human-reviewed evidence pack</h2>
+<ol>
+<li><strong>Define a bounded question.</strong> Record the evidential issue, relevant dates, authorised users and why each category of information may be needed.</li>
+<li><strong>Check legal authority and proportionality.</strong> Determine whether the material can lawfully be requested, accessed, used or retained, and whether a less intrusive source suffices.</li>
+<li><strong>Register sources without overwriting originals.</strong> Maintain source identity, custodian, receipt path, integrity details, handling actions and known limitations.</li>
+<li><strong>Extract assertions with citations.</strong> Keep exact excerpts or accurate paraphrases linked to specific record locations; preserve documents and contextual qualifications.</li>
+<li><strong>Resolve temporal and entity ambiguity.</strong> Keep similarly named people distinct; separately track event, publication, effective and amendment dates.</li>
+<li><strong>Compare relationships, not just strings.</strong> Distinguish direct conflict from different scope, transcription error, independent corroboration and mere repetition.</li>
+<li><strong>Report missing records and contrary evidence.</strong> Propose justified, proportionate further enquiries rather than treating omissions as proof.</li>
+<li><strong>Require human sign-off.</strong> Reviewers decide whether a proposed inference is supported and whether it is pertinent to the actual legal question.</li>
+<li><strong>Produce an auditable export.</strong> Supply claim/source matrices, chronology, reviewer notes, correction log, unresolved issues and versioned report metadata.</li>
+<li><strong>Propagate corrections.</strong> Mark superseded findings and notify authorised downstream reviewers without erasing original history.</li>
+</ol>
+</div></section>
+<section id="feature-map"><div class="wrap narrow"><span class="status">05 · FROM FEATURE REQUEST TO USE CASE</span><h2>Connections to Manifold Grace's AI proposals</h2>
+<div class="table-scroll" role="region" aria-label="Research proposals mapped to legal applications" tabindex="0"><table><thead><tr><th>Proposed capability</th><th>Potential evidential use</th><th>Research record</th></tr></thead><tbody>
+<tr><td>Claim-to-Evidence Coverage &amp; Contradiction API</td><td>Identify which claims have source coverage, locate contrary material, distinguish disagreement from uncertainty and document unresolved gaps.</td><td><a href="ai-product-feedback.html#huggingface-evidence-20261102">Coverage and contradiction proposal</a></td></tr>
+<tr><td>Historical “As-of-Date” Retrieval</td><td>Retrieve an applicable historical policy or record version, displaying effective period, source and subsequent amendment flags.</td><td><a href="ai-product-feedback.html#historical-as-of-date-gemini-20261102">Historical evidence proposal</a> · <a href="ai-product-feedback.html#historical-as-of-date-aws-20261102">Related submission</a></td></tr>
+<tr><td>Authorised Source Verification</td><td>Use permission-aware retrieval and minimal attestations; distinguish origin checks from factual support.</td><td><a href="ai-product-feedback.html#evidence-registry-20261101">Evidence registry design</a></td></tr>
+<tr><td>Correction and Provenance Tracking</td><td>Log corrections and downstream reliance, preserve the identity of source records and the development of interpretations.</td><td><a href="ai-product-feedback.html#ibm-correction-20261102">Correction proposal</a></td></tr>
+<tr><td>Contributor Provenance</td><td>Preserve attribution and development history for the research methodology and technical proposals; this is distinct from witness or document authenticity.</td><td><a href="ai-product-feedback.html#contributor-provenance-openai-20261102">Contributor provenance request</a></td></tr>
+</tbody></table></div>
+<p>These links record <strong>independent conceptual proposals and correspondence</strong>; they are not evidence that a provider has implemented, endorsed or licensed the architecture. An existing case-management product may already implement some overlapping functions. Claims of novelty require feature-by-feature comparison and validation.</p>
+</div></section>
+<section id="evaluation"><div class="wrap narrow"><span class="status">06 · HOW TO TEST IT</span><h2>A reproducible AI quality-assurance plan</h2>
+<p>Evaluation should begin with fictional or appropriately synthetic records and a human-annotated reference set. Tests must measure both where a system succeeds and how it can fail.</p>
+<div class="scope-grid">
+<article><h3>Evidence citation precision</h3><p>For every material assertion, verify that the cited source exists, is accessible to the reviewer and supports the precise wording. Log unsupported and misattributed citations.</p></article>
+<article><h3>Coverage and omission</h3><p>Compare the system's extracted claims and relevant contrary material against an independently reviewed reference set. Record omissions and ambiguous edge cases.</p></article>
+<article><h3>Chronology robustness</h3><p>Test timezones, uncertain dates, document revisions, retrospective statements and two events with similar labels but different dates.</p></article>
+<article><h3>Entity resolution</h3><p>Test people with shared names, changed names, overlapping organisations and duplicated document versions; record false merges.</p></article>
+<article><h3>Contradiction classification</h3><p>Check whether a flagged difference is a genuine conflict, a change of scope, a later correction, a transcription error or simply insufficient information.</p></article>
+<article><h3>Privacy and human override</h3><p>Test access restrictions, minimal disclosure, adverse or exculpatory evidence handling, and whether reviewer corrections remain visible in later exports.</p></article>
+</div>
+<p><strong>Minimum pilot outputs:</strong> test-set description; annotation criteria; versioned prompts and models; metrics with denominators; false-positive and false-negative examples; reviewer agreement notes; documented failures and corrective actions. Do not publish identifiable case data or confidential prompts containing client information.</p>
+<p><a href="ai-research-lab.html#legal-evidence-qa-20261103">AI Research Lab: legal evidence QA note</a> · <a href="information-science.html#criminal-evidence-application-20261103">Source verification foundations</a>.</p>
+</div></section>
+<section id="safeguards"><div class="wrap narrow"><span class="status">07 · ACCOUNTABILITY &amp; LIMITS</span><h2>Necessary safeguards for criminal justice settings</h2>
+<ul>
+<li><strong>Evidence neutrality:</strong> Preserve material whether it supports, challenges or complicates a proposed account. Do not use an AI tool to manufacture confidence in either side's preferred outcome.</li>
+<li><strong>Necessity and proportionality:</strong> Make third-party and device-related enquiries only on a legitimate basis with appropriate legal authority, scope and privacy safeguards.</li>
+<li><strong>Originals and chain of handling:</strong> Do not modify original evidence. Keep inspection, transformation, hashing (where appropriate), redaction and export actions traceable.</li>
+<li><strong>Role-based confidentiality:</strong> Prevent uncontrolled upload of sensitive legal records to public AI services; require appropriate agreements, access controls and retention policies.</li>
+<li><strong>Professional responsibility:</strong> No automated credibility finding, disclosure decision, legal advice, forensic conclusion or judicial determination. Competent professionals must review and approve material outputs.</li>
+<li><strong>Limits of verification:</strong> An authentic source may contain a false assertion, a real contradiction may have an innocent explanation, and an absent record may reflect retention or access limitations.</li>
+<li><strong>Scientific transparency:</strong> Disclose version, test coverage, failure cases and whether any reported result comes from simulation, a laboratory pilot or operational use.</li>
+</ul>
+<p class="note"><strong>Status:</strong> This is a publicly shared research concept, not a validated forensic workflow, legal compliance certification, service offering or assertion of access to police, court or client records. Any real-world implementation needs independent technical, legal and professional assessment.</p>
+</div></section>
+<section id="sources"><div class="wrap narrow"><span class="status">08 · VERIFIABLE REFERENCES</span><h2>Sources, related pages and provenance</h2>
+<h3>Official guidance used to frame the application</h3>
+<ul>
+<li><a href="https://www.cps.gov.uk/prosecution-guidance/disclosure-manual-chapter-30-digital-material" target="_blank" rel="noopener noreferrer">CPS Disclosure Manual, Chapter 30: Digital Material</a> — examination, audit trails, search methods and proportionate handling.</li>
+<li><a href="https://www.cps.gov.uk/prosecution-guidance/disclosure-manual-chapter-5-reasonable-lines-enquiry-and-third-parties" target="_blank" rel="noopener noreferrer">CPS Disclosure Manual, Chapter 5: Reasonable Lines of Enquiry and Third Parties</a> — relevance, justification, access and privacy balancing.</li>
+<li><a href="https://www.sra.org.uk/news/news/releases/responsible-use-ai/" target="_blank" rel="noopener noreferrer">Solicitors Regulation Authority, 17 August 2026: safe and responsible AI</a> — accuracy, confidentiality, governance and human oversight.</li>
+</ul>
+<h3>Manifold Grace research connections</h3>
+<ul><li><a href="information-science.html#evidence-registry-20261101">Information Science: portable evidence and accountable retrieval</a></li>
+<li><a href="ai-research-lab.html#qa-realm">AI Research Lab: validation and QA</a></li>
+<li><a href="research.html">Research: interdisciplinary programme</a></li>
+<li><a href="independent-work-impact.html#legal-evidence-contribution-20261103">Independent Work &amp; Impact: dated justice-related application</a></li>
+<li><a href="ai-product-feedback.html">AI product proposals and correspondence register</a></li></ul>
+<p class="stage">First published 3 November 2026. Authorship and conceptual proposals: Grace Rosemary Nettey, Manifold Grace. Publication and outreach establish a dated contribution record, not proof of third-party review, influence, adoption or legal ownership.</p>
+<p><a href="research.html">← Return to wider interdisciplinary research</a></p>
+</div></section>
+</main><footer data-site-footer></footer></body></html>
