@@ -15,6 +15,15 @@
 .evidence-sectors th,.evidence-sectors td{border:1px solid #404040;padding:12px;text-align:left;vertical-align:top}
 .evidence-sectors th{background:#1b1b1b;color:#fff}.evidence-sectors .note{border-left:3px solid #92c7ff;padding:13px 17px;background:#171717;margin:20px 0}
 .evidence-sectors li{margin:9px 0}
+
+.evidence-sectors .society-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:18px 0 23px}
+.evidence-sectors .society-nav a{display:flex;justify-content:center;align-items:center;text-align:center;min-height:58px;padding:9px 7px;border:1px solid #5a5a5a;background:#1b1b1b;font-weight:600;font-size:.83rem;line-height:1.35;text-decoration:none;color:#a8d1ff}
+.evidence-sectors .society-nav a:hover,.evidence-sectors .society-nav a:focus-visible{background:#262626;border-color:#92c7ff}
+.evidence-sectors .society-group{border:1px solid #444;padding:17px 19px;margin:12px 0;scroll-margin-top:24px}
+.evidence-sectors .society-group h3{margin:0 0 8px}
+.evidence-sectors .society-group p{margin:7px 0}
+.evidence-sectors .society-tag{font-size:.8rem;color:#bcbcbc}
+@media(max-width:720px){.evidence-sectors .society-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.evidence-sectors .society-nav a:last-child{grid-column:1/-1}}
 </style></head><body><header><div class="wrap shell-head"><a class="brand" href="/">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main class="evidence-sectors">
 <div class="page-hero"><div class="wrap"><span class="eyebrow">INFORMATION SCIENCE · EVIDENCE QUALITY · INTERDISCIPLINARY APPLICATIONS</span><h1>Evidence Verification Across Sectors</h1>
@@ -44,6 +53,60 @@
 <tr><td><strong>Public administration</strong></td><td>What information and policy version supported a decision, and were the required procedures followed?</td><td>Decision letters, case notes, statutory guidance, historic policies, requests and review records.</td><td>Authorised public officials and the appropriate review or appeal bodies.</td></tr>
 </tbody></table></div>
 <p>These examples are not interchangeable procedures. Each application requires its own standards of relevance, admissibility or sufficiency, data rights, professional competence and independent evaluation.</p>
+</div></section>
+<section id="society-evidence-functions"><div class="wrap narrow">
+<span class="status">CROSS-SOCIETY REFERENCE · FIVE FUNCTIONAL GROUPINGS</span>
+<h2>Evidence solutions across work, government and society</h2>
+<p>The occupations below are grouped by <strong>social function, not prestige, personal worth or legal status</strong>. They offer a compact way to see how the same proposed information-science capabilities could support very different work. These are broad, overlapping categories: a public-sector IT specialist, for example, may sit across several groups. Criminal justice and law are distinct applications within the wider public-service and professional landscape, not an umbrella for every sector.</p>
+<nav class="society-nav" aria-label="Choose an occupational group to view evidence applications">
+<a href="#society-production">1 · Production</a>
+<a href="#society-public-service">2 · Public services</a>
+<a href="#society-technical">3 · Technical work</a>
+<a href="#society-strategic">4 · Strategic professions</a>
+<a href="#society-frontline">5 · Frontline services</a>
+</nav>
+<div id="society-production" class="society-group">
+<h3>1. Primary and secondary production</h3>
+<p class="society-tag">Agriculture · extraction · manufacturing · physical goods</p>
+<p><strong>Evidence purpose:</strong> demonstrate where inputs originated, whether a production or safety event occurred, how inspections were performed and which technical or environmental standard applied at the time.</p>
+<p><strong>Relevant records:</strong> material batches, equipment-maintenance logs, inspection reports, supply-chain transactions, quality-control measurements and permits.</p>
+<p><strong>Potential feature-request application:</strong> <a href="ai-product-feedback.html#evidence-registry-20261101">authorised provenance retrieval</a> and <a href="ai-product-feedback.html#historical-as-of-date-aws-20261102">historical as-of-date records</a> could link a disputed production claim to its source, version, custodian and later corrections.</p>
+<p><strong>Reviewer boundary:</strong> manufacturing engineers, quality leads, environmental or safety specialists interpret the evidence under applicable standards.</p>
+</div>
+<div id="society-public-service" class="society-group">
+<h3>2. Social and public services</h3>
+<p class="society-tag">Teachers · social workers · healthcare professionals · civil servants · justice services</p>
+<p><strong>Evidence purpose:</strong> support fair, contextual decisions about education, health, welfare, safeguarding and public administration, each under its <em>own</em> professional rules. Academic RPL is a distinct credit-assessment process; criminal-case evidential review is a separate legal process.</p>
+<p><strong>Relevant records:</strong> coursework and RPL portfolios; clinical observations; service histories, policy versions and decision letters; where authorised, legal case material.</p>
+<p><strong>Potential feature-request application:</strong> <a href="ai-product-feedback.html#huggingface-evidence-20261102">claim-to-evidence coverage and contradiction detection</a> can make missing or conflicting records visible, while <a href="ai-product-feedback.html#historical-as-of-date-gemini-20261102">historical retrieval</a> distinguishes the rules in force on a given date.</p>
+<p><strong>Reviewer boundary:</strong> teachers assess learning, clinicians make clinical decisions, public officials determine authorised administrative matters, and justice professionals make legal determinations according to their respective roles. See <a href="#rpl">RPL</a> and the <a href="evidence-verification-criminal-justice.html">separate criminal justice study</a>.</p>
+</div>
+<div id="society-technical" class="society-group">
+<h3>3. Routine technical and operational systems work</h3>
+<p class="society-tag">IT support · quality assurance · data operations · systems administration</p>
+<p><strong>Evidence purpose:</strong> confirm what a system did, when it changed, whether a fault was reproduced, and whether documentation and data outputs remain accurate.</p>
+<p><strong>Relevant records:</strong> event logs, access logs, configuration baselines, test cases, incident tickets, data lineage, change approvals and release histories.</p>
+<p><strong>Potential feature-request application:</strong> <a href="ai-product-feedback.html#ibm-correction-20261102">correction tracking</a>, <a href="ai-product-feedback.html#evidence-registry-20261101">permission-aware retrieval</a> and <a href="ai-product-feedback.html#huggingface-evidence-20261102">claim-to-source coverage</a> could support reproducible QA, transparent incident review and reliable audit exports.</p>
+<p><strong>Reviewer boundary:</strong> authorised technical owners, QA reviewers and data stewards establish whether system evidence supports an operational conclusion.</p>
+</div>
+<div id="society-strategic" class="society-group">
+<h3>4. Knowledge, professional and strategic functions</h3>
+<p class="society-tag">Researchers · system architects · policy specialists · accountants · auditors · directors</p>
+<p><strong>Evidence purpose:</strong> distinguish assumptions from documented results in research, financial reporting, regulatory assurance, strategic design and policy evaluation.</p>
+<p><strong>Relevant records:</strong> research datasets, model evaluations, control tests, signed approvals, financial ledgers, audit working papers and policy consultations.</p>
+<p><strong>Potential feature-request application:</strong> <a href="ai-product-feedback.html#contributor-provenance-openai-20261102">contributor provenance</a> supports attribution of research and design contributions; <a href="ai-product-feedback.html#huggingface-evidence-20261102">claim-to-evidence mapping</a> and <a href="ai-product-feedback.html#ibm-correction-20261102">correction histories</a> help reviewers locate unsupported claims and superseded reports.</p>
+<p><strong>Reviewer boundary:</strong> professional accounting, audit, policy, research and governance decisions retain their own standards, independence and accountability obligations.</p>
+</div>
+<div id="society-frontline" class="society-group">
+<h3>5. Frontline and routine services</h3>
+<p class="society-tag">Retail · hospitality · logistics · care support · platform and gig work</p>
+<p><strong>Evidence purpose:</strong> substantiate service delivery, work histories, shifts, transactions, incidents and payment or contractual disputes without assuming every worker has comprehensive records.</p>
+<p><strong>Relevant records:</strong> shift schedules, work orders, point-of-sale records, payslips, platform transaction statements, complaints and correspondence.</p>
+<p><strong>Potential feature-request application:</strong> <a href="ai-product-feedback.html#historical-as-of-date-gemini-20261102">as-of-date reconstruction</a> and <a href="ai-product-feedback.html#huggingface-evidence-20261102">evidence-gap detection</a> could help identify conflicting dates, missing source documents and a proportionate route to further verification.</p>
+<p><strong>Reviewer boundary:</strong> workers, authorised employers, advisors, auditors or dispute bodies assess records within applicable employment, commercial and privacy rules.</p>
+</div>
+<p class="note"><strong>Across all five:</strong> these are proposed applications of independently documented feature requests, not deployed products or proof of third-party adoption. A record's authenticity, a claim's factual accuracy, the professional meaning of evidence and the final decision must remain separate. Technical systems may support human evaluation but should not make unsupported legal, medical, academic or financial determinations.</p>
+<p><a href="#applications">View the separate sector-specific decision matrix</a> · <a href="#architecture">Read the modular architecture</a> · <a href="ai-product-feedback.html">See the original AI feature-request records</a></p>
 </div></section>
 <section id="rpl"><div class="wrap narrow"><span class="status">EDUCATION · SEPARATE APPLICATION</span><h2>Academic Recognition of Prior Learning (RPL/APL)</h2>
 <p>RPL asks whether previous study or demonstrated experience satisfies clearly identified academic learning outcomes and credit requirements. A traceable evidence portfolio can map each claimed competency to course descriptors, assessed work, qualifications or validated professional learning. It can also flag missing module information, credit-level mismatches, duplicate credit and unresolved questions for academic assessors.</p>
