@@ -68,8 +68,56 @@
 <p>Historical timelines, benchmark curves, ANI–AGI–ASI diagrams and forecast charts can be mapped into typed claim records: source, date, quote or spatial inference, definition, timescale, confidence and primary evidence. A system should distinguish disputed definitions, outdated projections, historical errors, compatible observations and genuine contradictions. Its output must keep unresolved claims visible rather than inventing consensus.</p>
 <h2 id="research-questions">Four linked studies</h2>
 <ol><li><strong>Cross-Representational Epistemic Verification:</strong> can systems reconcile claims in text, images and diagrams while preserving attribution?</li><li><strong>Multi-Agent Causal and Stochastic Reasoning:</strong> how do concurrently generated causal forecasts remain coherent?</li><li><strong>Domain-Specific Intelligence Architectures:</strong> which combinations of methods work reliably in which arena?</li><li><strong>Continuous Assurance for Advanced AI:</strong> does independent verification improve novel-task performance and reduce operational failures?</li></ol>
+<section id="research-methodology">
+<h2>Pre-publication methodological development</h2>
+<p>This study treats verification as a <em>testable capability-supporting mechanism</em>, not as an established sufficient condition for AGI or ASI. The independent variables are orchestration design, availability of specialised tools, verification protocol and test-time computation; dependent outcomes include accurate claims, error recovery, procedural correctness, novel-task generalisation, safety and expense. Propose and assess narrower hypotheses before inferring general intelligence.</p>
+<h3>Operational hypotheses</h3>
+<ol>
+<li><strong>H1 · Evidence:</strong> claim-level provenance and cross-modal checking lower unsupported assertions relative to retrieval-only baselines on matched unseen source sets.</li>
+<li><strong>H2 · Coordination:</strong> structured shared state and dependency-aware scheduling improve correct completion of tasks requiring several concurrent specialist analyses relative to uncoordinated agents.</li>
+<li><strong>H3 · Causality:</strong> explicitly represented causal assumptions and intervention checks reduce mistaken causal claims relative to purely correlational synthesis.</li>
+<li><strong>H4 · Assurance:</strong> a separately configured verifier and auditable correction loop improve reliability and reduce unsafe or unauthorised actions without prohibitive latency or computation.</li>
+<li><strong>H5 · Transfer:</strong> improvements persist on held-out domains, unfamiliar diagram types, changed rules and newly sampled exceptions, rather than being confined to repeated benchmark tasks.</li>
+</ol>
+<h3>Experiment design: fair comparisons, including resource budgets</h3>
+<p>Randomise or balance task allocation; pre-register primary outcomes; hold underlying models, tool permissions and relevant source availability constant where the comparison requires it. Run repeated trials with recorded seeds and versions. Compare agent configurations at <em>equal total compute budget</em> as well as <em>equal time budget</em>, because parallel branches may consume more resources for the same task. Separately report performance-versus-compute curves. Use held-out test sets and blinded human expert adjudication for non-automatable claims.</p>
+<p>Report per-domain results, not a single aggregate intelligence score. Include confidence intervals, disagreements between graders, reference-answer uncertainty, false positives and false negatives, and negative results. Stress-test shared-source errors, model-family correlated failures, unavailable evidence, conflicting policies, tool failures, distribution shift and adversarially misleading diagrams.</p>
+<h3>Typed claim and provenance record (illustrative schema)</h3>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid var(--line);padding:16px;background:var(--panel)"><code>{
+  "claim_id": "example-001",
+  "source_id": "archive-item-2026-001",
+  "source_type": "diagram",
+  "original_statement": "An explicitly extracted statement",
+  "interpretation_type": "explicit | implied",
+  "domain": "AI history",
+  "published_at": "YYYY-MM-DD or unknown",
+  "valid_from": "YYYY-MM-DD or unknown",
+  "definition_id": "taxonomy-v1",
+  "evidence_links": ["primary-source-id"],
+  "relation_to_other_claim": "supports | contradicts | differs | unknown",
+  "assessment": "supported | unsupported | disputed | uncertain",
+  "reviewer": "human-or-independent-system",
+  "revision_history": []
+}</code></pre>
+<p>This record is a conceptual example, not an API standard or validated ontology. It distinguishes when an infographic explicitly states something from what a reader infers through arrows, position and visual sequence. Every correction should retain the original claim and its assessment history.</p>
+<h3>Cross-agent interaction protocol</h3>
+<div class="avi-flow" role="group" aria-label="Dependency aware evidence workflow">
+<div class="avi-node">Request with authority and scope</div><span class="avi-arrow" aria-hidden="true">→</span>
+<div class="avi-node">Planner builds dependency graph</div><span class="avi-arrow" aria-hidden="true">→</span>
+<div class="avi-node">Specialists check sources and models</div><span class="avi-arrow" aria-hidden="true">→</span>
+<div class="avi-node">Independent reviewer tests outputs</div><span class="avi-arrow" aria-hidden="true">→</span>
+<div class="avi-node">Approve, escalate or revise</div>
+</div>
+<p>Parallel branches should exchange provenance-bearing observations rather than merely free-text summaries. Escalate contradictions that remain materially unresolved. Any real-world operation requires scoped permissions, an identified accountable owner, explicit human approval where necessary, logging and reversibility where feasible. Tasks with safety-critical consequences need domain-specific professional oversight; no benchmark result by itself authorises deployment.</p>
+<h3>Worked teaching case: three conflicting AI timeline diagrams</h3>
+<p><strong>Input:</strong> diagram A places an event in year X; diagram B places the same event in year Y; diagram C states that its dates are forecasts rather than observed events. <strong>Extraction:</strong> record each literal claim, diagram title, publisher, publication date and whether positioning implies rather than asserts a date. <strong>Reconciliation:</strong> check whether the labels refer to the same event; retrieve a dated primary announcement or historical source; classify A and B as compatible, incompatible or unresolved. <strong>Forecast:</strong> preserve C as a time-stamped projection and evaluate separately once an observable outcome exists. <strong>Output:</strong> a claim table with sources and uncertainty, not an averaged year or invented agreement.</p>
+<h3>Publication and attribution safeguards</h3>
+<p>Retain earlier feature-request records verbatim with original submission dates and available recipient responses. Date this synthesis as a new research-development record. Distinguish the author's documented proposal from existing related research and avoid claims of technical implementation, adoption, independent invention or causal industry influence without evidence. Do not reproduce third-party infographics in public pages without checking the licence, permission or applicable exception; a short original diagram or appropriately attributed link may be preferable.</p>
+<h3>Criteria to advance beyond the concept stage</h3>
+<p>Progress to an empirical report only after a task dataset, reference answer protocol, domain expert reviewers, preregistered measurements, error taxonomy, reproducible code or system configuration, and a resource-accounted evaluation exist. Release a model or service only after separate privacy, legal, domain safety and accessibility reviews. A stronger performance result is not automatically evidence of ASI: the claim would require much wider and more demanding cross-domain demonstrations.</p>
+</section>
 <h2 id="sources">Selected external foundations</h2>
-<ul><li><a href="https://www.aisi.gov.uk/frontier-ai-trends-report">UK AI Security Institute — Frontier AI Trends Report</a> (capability evaluations and expert baselines).</li><li><a href="https://www.aisi.gov.uk/blog/more-compute-more-capability-why-ai-agent-evals-need-to-account-for-test-time-compute">UK AI Security Institute — Test-time compute and agent evaluations</a> (budget-sensitive capability measurement).</li><li><a href="https://doi.org/10.1007/s10462-026-11571-0">From benchmarks to deployment (2026)</a> (process quality, cost and end-to-end evaluation gaps).</li><li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a> (risk management, not an ASI certificate).</li></ul>
+<ul><li><a href="https://www.aisi.gov.uk/research/aisi-frontier-ai-trends-report-2025">UK AI Security Institute — Frontier AI Trends Report (2025)</a> (domain-specific capability and risk evaluations).</li><li><a href="https://deepmind.google/research/publications/66938/">Google DeepMind — Levels of AGI</a> (performance, generality and autonomy are distinct dimensions).</li><li><a href="https://www.aisi.gov.uk/blog/more-compute-more-capability-why-ai-agent-evals-need-to-account-for-test-time-compute">UK AI Security Institute — Test-time compute and agent evaluations</a> (budget-sensitive capability measurement).</li><li><a href="https://doi.org/10.1007/s10462-026-11571-0">Kehkashan et al., From benchmarks to deployment (2026)</a> (trajectory quality, cost, safety and deployment-readiness gaps).</li><li><a href="https://aclanthology.org/2026.findings-acl.1330/">Yehudai et al., A Survey on Evaluation of LLM-based Agents (ACL 2026)</a> (agentic workflows and evaluation challenges).</li><li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a> (risk management, not an ASI certificate).</li></ul>
 <h2 id="site-links">Related Manifold Grace research</h2>
 <p><a href="research.html">Research</a> · <a href="ai-research-lab.html">AI Research Lab</a> · <a href="evidence-verification-across-sectors.html">Evidence Verification Across Sectors</a> · <a href="information-science.html">Information Science</a> · <a href="ai-product-feedback.html">AI Product Feedback</a> · <a href="feature-contributions.html">Feature Requests &amp; Contribution Register</a></p>
 <p class="avi-kicker">Research synthesis dated 4 November 2026. Additive development; earlier feature requests and dated records remain authoritative for their original wording.</p>
