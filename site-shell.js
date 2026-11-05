@@ -1,55 +1,236 @@
 (() => {
   "use strict";
   const site = window.MANIFOLD_SITE || {};
-  const navItems = [
-    ["Research Collaborations","research-collaborations.html"],
-    ["Independent Work & Impact","independent-work-impact.html"],
-    ["Productivity Log","productivity-log.html"],
-    ["Why Daily Logs Matter","why-daily-logs-matter.html"],
-    ["About","about.html"],
-    ["Life Timeline","life-timeline.html"],
-    ["Professional","professional.html"],
-    ["Photos","photos.html"],
-    ["My Books","my-book.html"],
-    ["Knowledge VS Thinking","knowledge.html"],
-    ["Learning Lab","learning-lab.html"],
-    ["Research","research.html"],
-    ["Emerging Research Horizon","emerging-horizon-research.html"],
-    ["Interdisciplinary Atlas","interdisciplinary-research-atlas.html"],
-    ["Information Science","information-science.html"],
-    ["Labour Market Analysis","labour-market-analysis.html"],
-    ["Trading","trading.html"],
-    ["Socials","socials.html"],
-    ["Travel","travel.html"],
-    ["Services","services.html"],
-    ["App Design Ideas","app-design-ideas.html"],
-    ["Creative","creative.html"],
-    ["Public","public.html"],
-    ["Faith","faith.html"],
-    ["Life Philosophy","life-philosophy.html"],
-    ["Society","society.html"],
-    ["Heritage","heritage.html"],
-    ["From Heritage to Life","heritage-benefits.html"],
-    ["Names & Notable People","heritage-further-study.html"],
-    ["Royal Lineage","royal-lineage.html"],
-    ["Sociology","topics-in-12.html#domain-01"],
-    ["Recognition","recognition.html"],
-    ["Independent Coverage","independent-coverage.html"],
-    ["Resourcefulness","resourcefulness.html"],
-    ["Venture","conglomerate.html"]
+  const navGroups = [
+    [
+      "Research & Knowledge",
+      [
+        [
+          "Research",
+          "research.html"
+        ],
+        [
+          "Emerging Research Horizon",
+          "emerging-horizon-research.html"
+        ],
+        [
+          "Research Novelty & Fields",
+          "research-novelty-field-formation.html"
+        ],
+        [
+          "Interdisciplinary Atlas",
+          "interdisciplinary-research-atlas.html"
+        ],
+        [
+          "AI Discovery & Inventory",
+          "ai-identifiability-discovery-inventory-atlas.html"
+        ],
+        [
+          "AI Governance",
+          "ai-identifiability-compliance-governance.html"
+        ],
+        [
+          "Information Science",
+          "information-science.html"
+        ],
+        [
+          "Knowledge VS Thinking",
+          "knowledge.html"
+        ],
+        [
+          "Learning Lab",
+          "learning-lab.html"
+        ],
+        [
+          "Research Collaborations",
+          "research-collaborations.html"
+        ],
+        [
+          "Research Questions & Solutions",
+          "research-questions-gaps-solutions.html"
+        ]
+      ]
+    ],
+    [
+      "Professional & Records",
+      [
+        [
+          "Professional",
+          "professional.html"
+        ],
+        [
+          "Recognition",
+          "recognition.html"
+        ],
+        [
+          "Independent Work & Impact",
+          "independent-work-impact.html"
+        ],
+        [
+          "Productivity Log",
+          "productivity-log.html"
+        ],
+        [
+          "Why Daily Logs Matter",
+          "why-daily-logs-matter.html"
+        ],
+        [
+          "Independent Coverage",
+          "independent-coverage.html"
+        ],
+        [
+          "About",
+          "about.html"
+        ],
+        [
+          "Life Timeline",
+          "life-timeline.html"
+        ],
+        [
+          "Services",
+          "services.html"
+        ]
+      ]
+    ],
+    [
+      "Society & Governance",
+      [
+        [
+          "Society",
+          "society.html"
+        ],
+        [
+          "Government & Society",
+          "government-arms.html"
+        ],
+        [
+          "Labour Market Analysis",
+          "labour-market-analysis.html"
+        ],
+        [
+          "Public",
+          "public.html"
+        ],
+        [
+          "Sociology",
+          "topics-in-12.html#domain-01"
+        ],
+        [
+          "Life Philosophy",
+          "life-philosophy.html"
+        ]
+      ]
+    ],
+    [
+      "Culture & Life",
+      [
+        [
+          "Heritage",
+          "heritage.html"
+        ],
+        [
+          "From Heritage to Life",
+          "heritage-benefits.html"
+        ],
+        [
+          "Names & Notable People",
+          "heritage-further-study.html"
+        ],
+        [
+          "Royal Lineage",
+          "royal-lineage.html"
+        ],
+        [
+          "Faith",
+          "faith.html"
+        ],
+        [
+          "Photos",
+          "photos.html"
+        ],
+        [
+          "Travel",
+          "travel.html"
+        ],
+        [
+          "Socials",
+          "socials.html"
+        ],
+        [
+          "Resourcefulness",
+          "resourcefulness.html"
+        ]
+      ]
+    ],
+    [
+      "Creative & Enterprise",
+      [
+        [
+          "Creative",
+          "creative.html"
+        ],
+        [
+          "My Books",
+          "my-book.html"
+        ],
+        [
+          "App Design Ideas",
+          "app-design-ideas.html"
+        ],
+        [
+          "Venture",
+          "conglomerate.html"
+        ],
+        [
+          "Trading",
+          "trading.html"
+        ]
+      ]
+    ]
   ];
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   document.querySelectorAll("[data-site-nav]").forEach((nav) => {
     const wrap = document.createElement("div");
-    wrap.className = "nav-links";
-    navItems.forEach(([label, href]) => {
-      const a = document.createElement("a");
-      a.href = href;
-      a.textContent = label;
-      if (path === href.toLowerCase()) a.setAttribute("aria-current","page");
-      wrap.appendChild(a);
+    wrap.className = "nav-links nav-groups";
+    const toggles = [];
+    navGroups.forEach(([title, items]) => {
+      const details = document.createElement("details");
+      details.className = "site-nav-group";
+      const summary = document.createElement("summary");
+      summary.textContent = title;
+      details.appendChild(summary);
+      const links = document.createElement("div");
+      links.className = "site-nav-panel";
+      items.forEach(([label, href]) => {
+        const a = document.createElement("a");
+        a.href = href;
+        a.textContent = label;
+        const target = href.toLowerCase().split("#")[0];
+        if (path === target) {
+          a.setAttribute("aria-current", "page");
+          summary.classList.add("has-current");
+        }
+        links.appendChild(a);
+      });
+      details.appendChild(links);
+      details.addEventListener("toggle", () => {
+        if (details.open) toggles.forEach(other => { if(other !== details) other.open = false; });
+      });
+      toggles.push(details);
+      wrap.appendChild(details);
     });
+    nav.setAttribute("aria-label", "Explore Manifold Grace by topic");
     nav.replaceChildren(wrap);
+    nav.addEventListener("keydown", (event) => {
+      if(event.key === "Escape") {
+        toggles.forEach(d => d.open = false);
+        const summary = event.target.closest("details")?.querySelector("summary");
+        if(summary) summary.focus();
+      }
+    });
+    document.addEventListener("click", (event) => {
+      if(!nav.contains(event.target)) toggles.forEach(d => d.open = false);
+    });
   });
 
   const secondary = [
