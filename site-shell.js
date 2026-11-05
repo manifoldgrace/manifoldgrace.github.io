@@ -18,6 +18,10 @@
           "research-novelty-field-formation.html"
         ],
         [
+          "Research Transfer & Scope",
+          "research-transfer-scope-completion.html"
+        ],
+        [
           "AI Competence & Recruitment",
           "interdisciplinary-ai-competence-recruitment.html"
         ],
