@@ -14,6 +14,7 @@
     ["Knowledge VS Thinking","knowledge.html"],
     ["Learning Lab","learning-lab.html"],
     ["Research","research.html"],
+    ["Emerging Research Horizon","emerging-horizon-research.html"],
     ["Information Science","information-science.html"],
     ["Labour Market Analysis","labour-market-analysis.html"],
     ["Trading","trading.html"],
