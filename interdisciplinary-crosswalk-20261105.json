@@ -1,0 +1,847 @@
+{
+  "schema": "manifoldgrace.interdisciplinary-crosswalk.v1",
+  "snapshot": "2026-11-05",
+  "classification_notice": "Curatorial thematic mapping of public pages to 2024–25 programme specifications; not enrolment, credit, module completion or accreditation.",
+  "programmes": [
+    {
+      "id": "AIES",
+      "name": "MA AI, Ethics and Society",
+      "level": "L7",
+      "file": "AiEth.prog-spec-24-25-ma(4).pdf",
+      "summary": "Ethics of Technology and AI; History and Foundations of AI; philosophy, algorithms and law, computing, data and business options",
+      "modules": [
+        "SC03017S7 · The Ethics of Technology and Artificial Intelligence",
+        "SC03018S7 · History and Foundations of AI",
+        "SC03019D7 · Dissertation",
+        "SC03020S7 · Philosophy of Artificial Intelligence",
+        "LALW059S7 · Algorithms and the Law",
+        "BUCI081H7 · Demystifying Computing with Python",
+        "BUCI080H7 · Analytic Tools for Data Science"
+      ],
+      "scope": "2024–25 programme specification; options vary by route and availability"
+    },
+    {
+      "id": "PPE",
+      "name": "MSc Politics, Philosophy and Economics",
+      "level": "L7",
+      "file": "programme-specification-2024-25-msc-politics-philosophy-and-economics.pdf",
+      "summary": "Economics: Theory, Policy and Institutions; options in politics and philosophy; interdisciplinary dissertation",
+      "modules": [
+        "BUEM087S7 · Economics: Theory, Policy and Institutions",
+        "SSPL231S7 · Contemporary Epistemology (indicative option)",
+        "SSPL243S7 · Philosophy of Mind and Cognitive Science (indicative option)",
+        "Dissertation in PPE, philosophy or politics"
+      ],
+      "scope": "2024–25 specification; optional modules indicative, not a claim of enrolment"
+    },
+    {
+      "id": "LEGAL",
+      "name": "Cert HE Legal Studies",
+      "level": "L4",
+      "file": "programme-specification-2024-25-cert-he-legal-studies(1).pdf",
+      "summary": "English Legal System; The Administration of Justice; Law, Society & Ethics; Law in Context",
+      "modules": [
+        "English Legal System",
+        "The Administration of Justice",
+        "Law, Society & Ethics",
+        "Law in Context"
+      ],
+      "scope": "2024–25 specification; introductory legal studies; no claim of professional law qualification"
+    },
+    {
+      "id": "SPORT",
+      "name": "MSc Sport Management",
+      "level": "L7",
+      "file": "programme-specification-2024-25-msc-sport-management.pdf",
+      "summary": "Sport economics, society, marketing, labour markets, strategic management, research methods and governance",
+      "modules": [
+        "BUMN001H7 · Sport Economics and the Design of Competitions",
+        "BUMN059H7 · Sport and Society",
+        "BUMN110H7 · Sport Labour Markets",
+        "BUMN002H7 · Sport Governance",
+        "MOMN082H7 · Strategic Management",
+        "MOMN011H7 · Research Methods in Management"
+      ],
+      "scope": "2024–25 specification; thematic match does not establish module completion"
+    },
+    {
+      "id": "HEALTH",
+      "name": "BA Health and Social Care",
+      "level": "L6",
+      "file": "ba-health-and-social-care-incl-with-foundation-year(2).pdf",
+      "summary": "Health inequalities, policy, social and organisational contexts; interdisciplinary humanities and social sciences; professional practice and environmental minor options",
+      "modules": [
+        "Health and social-care policy and organisational environment",
+        "Health inequalities and response",
+        "Humanities and social-science methods",
+        "Professional Practice pathway (where applicable)",
+        "Environmental Studies minor (where applicable)"
+      ],
+      "scope": "2024–25-labelled document last revised May 2025; thematic themes only, not a module equivalence judgment"
+    },
+    {
+      "id": "FACULTY",
+      "name": "Faculty-wide indicative modules",
+      "level": "L4–L7",
+      "file": "2024-25 FHSS Faculty-wide Module List(1).docx",
+      "summary": "Additional optional lenses spanning philosophy, public policy, media, digital culture, social research and methods",
+      "modules": [
+        "SSPO272S5 · Digital Politics",
+        "SSPO239H7 · Introduction to Quantitative Social Research",
+        "SSPO242H7 · Qualitative Social Research Methods",
+        "SSPO245H7 · Experiments in Social Science",
+        "LACN013S7 · Influencing Public Policy",
+        "SC03020S7 · Philosophy of Artificial Intelligence"
+      ],
+      "scope": "Indicative only; module availability, prerequisites, credit allowances and Programme Director approval apply"
+    }
+  ],
+  "domains": [
+    {
+      "id": "ai",
+      "name": "AI, digital systems & safety"
+    },
+    {
+      "id": "governance",
+      "name": "Governance, law & public institutions"
+    },
+    {
+      "id": "social",
+      "name": "Social science, inequality & care"
+    },
+    {
+      "id": "politics",
+      "name": "Politics, economics & policy"
+    },
+    {
+      "id": "management",
+      "name": "Management, organisations & enterprise"
+    },
+    {
+      "id": "knowledge",
+      "name": "Philosophy, evidence & epistemology"
+    },
+    {
+      "id": "culture",
+      "name": "Culture, heritage & society"
+    },
+    {
+      "id": "methods",
+      "name": "Research methods, evaluation & collaboration"
+    }
+  ],
+  "records": [
+    {
+      "href": "research.html",
+      "title": "Research overview",
+      "programmes": [
+        "AIES",
+        "PPE",
+        "FACULTY"
+      ],
+      "domains": [
+        "ai",
+        "methods",
+        "governance"
+      ],
+      "description": "Research panorama and projects",
+      "relation": "Curriculum themes + broader inquiry",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "emerging-horizon-research.html",
+      "title": "Emerging Research Horizon",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "ai",
+        "methods"
+      ],
+      "description": "AI safety and wider frontier inquiry",
+      "relation": "Beyond programme scope",
+      "relation_type": "broader-extension"
+    },
+    {
+      "href": "ai-research-discovery.html",
+      "title": "AI research discovery directory",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "ai",
+        "methods"
+      ],
+      "description": "Papers, engineering issues, reviews, benchmarks",
+      "relation": "Beyond programme scope",
+      "relation_type": "broader-extension"
+    },
+    {
+      "href": "ai-research-lab.html",
+      "title": "AI Research Laboratory",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "ai",
+        "methods"
+      ],
+      "description": "Applied technical experiments and testing",
+      "relation": "Methods and AI options",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "llm-evaluation-governance.html",
+      "title": "LLM Evaluation & Governance",
+      "programmes": [
+        "AIES",
+        "PPE"
+      ],
+      "domains": [
+        "ai",
+        "governance",
+        "methods"
+      ],
+      "description": "Evaluation, ethics and assurance",
+      "relation": "Core AI ethics + methodology",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "research-questions-gaps-solutions.html",
+      "title": "Questions, Gaps & Solutions",
+      "programmes": [
+        "AIES",
+        "PPE",
+        "FACULTY"
+      ],
+      "domains": [
+        "methods",
+        "knowledge",
+        "ai"
+      ],
+      "description": "Knowledge gaps, alternatives, reproducibility",
+      "relation": "Epistemology and research methods",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "research-active-triage-20261105.html",
+      "title": "Research Triage & Roadmap",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "methods",
+        "ai"
+      ],
+      "description": "Reproducibility, evaluation and planning",
+      "relation": "Research methodology",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "research-method-project-mapping.html",
+      "title": "Research Method & Project Mapping",
+      "programmes": [
+        "PPE",
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "methods",
+        "knowledge",
+        "governance"
+      ],
+      "description": "Mixed methods and disciplinary classification",
+      "relation": "Methods across fields",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "information-science.html",
+      "title": "Information Science",
+      "programmes": [
+        "AIES",
+        "PPE",
+        "FACULTY"
+      ],
+      "domains": [
+        "knowledge",
+        "ai",
+        "methods"
+      ],
+      "description": "Metadata, provenance and knowledge systems",
+      "relation": "Cognitive and information studies",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "knowledge.html",
+      "title": "Knowledge versus Thinking",
+      "programmes": [
+        "PPE",
+        "AIES"
+      ],
+      "domains": [
+        "knowledge",
+        "ai"
+      ],
+      "description": "Epistemology, reasoning and learning",
+      "relation": "Contemporary epistemology + AI philosophy",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "ai-mathematics-research-review-20261105.html",
+      "title": "AI and Mathematics Research",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "ai",
+        "methods"
+      ],
+      "description": "Mathematical reasoning and evaluation",
+      "relation": "Technical research extension",
+      "relation_type": "broader-extension"
+    },
+    {
+      "href": "verifiable-advanced-intelligence.html",
+      "title": "Verifiable Advanced Intelligence",
+      "programmes": [
+        "AIES",
+        "PPE"
+      ],
+      "domains": [
+        "ai",
+        "knowledge",
+        "methods"
+      ],
+      "description": "AI verification and claims",
+      "relation": "Research extension",
+      "relation_type": "broader-extension"
+    },
+    {
+      "href": "advanced-ai-evaluation-protocol.html",
+      "title": "Advanced AI Evaluation Protocol",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "ai",
+        "methods"
+      ],
+      "description": "Benchmark, reliability, safety",
+      "relation": "Technical extension",
+      "relation_type": "broader-extension"
+    },
+    {
+      "href": "agentic-architecture-patterns.html",
+      "title": "Agentic Architecture Patterns",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "ai",
+        "methods"
+      ],
+      "description": "Systems engineering and autonomy",
+      "relation": "Technical extension",
+      "relation_type": "broader-extension"
+    },
+    {
+      "href": "software-engineering.html",
+      "title": "Software Engineering",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "ai",
+        "methods"
+      ],
+      "description": "Development, testing and implementation",
+      "relation": "Computing option affinity",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "robotics-imaging.html",
+      "title": "Robotics & Imaging",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "ai",
+        "methods"
+      ],
+      "description": "Embedded systems and machine perception",
+      "relation": "Technical extension",
+      "relation_type": "broader-extension"
+    },
+    {
+      "href": "feature-contributions.html",
+      "title": "Feature Contributions",
+      "programmes": [
+        "AIES",
+        "PPE"
+      ],
+      "domains": [
+        "ai",
+        "governance",
+        "management"
+      ],
+      "description": "Innovation records and attribution",
+      "relation": "Governance and innovation overlap",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "developer-participation-barriers.html",
+      "title": "Developer Participation Barriers",
+      "programmes": [
+        "AIES",
+        "LEGAL",
+        "PPE"
+      ],
+      "domains": [
+        "governance",
+        "ai",
+        "social"
+      ],
+      "description": "Access to technical participation",
+      "relation": "Equality, procedures and digital systems",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "recognition.html",
+      "title": "Recognition & Acknowledgements",
+      "programmes": [
+        "LEGAL",
+        "PPE",
+        "AIES"
+      ],
+      "domains": [
+        "governance",
+        "social",
+        "knowledge"
+      ],
+      "description": "Prior learning, attribution and professional evidence",
+      "relation": "Legal and epistemic distinction",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "independent-work-impact.html",
+      "title": "Independent Work & Impact",
+      "programmes": [
+        "PPE",
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "methods",
+        "management",
+        "governance"
+      ],
+      "description": "Documented independent contributions",
+      "relation": "Research outputs and professional practice",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "evidence-verification-across-sectors.html",
+      "title": "Evidence Verification Across Sectors",
+      "programmes": [
+        "AIES",
+        "LEGAL",
+        "PPE",
+        "HEALTH"
+      ],
+      "domains": [
+        "governance",
+        "methods",
+        "social"
+      ],
+      "description": "Cross-domain evidence assessment",
+      "relation": "Multi-disciplinary evidence practices",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "evidence-verification-criminal-justice.html",
+      "title": "Evidence Verification in Criminal Justice",
+      "programmes": [
+        "LEGAL",
+        "AIES",
+        "PPE"
+      ],
+      "domains": [
+        "governance",
+        "social",
+        "ai"
+      ],
+      "description": "Justice and safeguards",
+      "relation": "Administration of Justice + ethics",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "government-arms.html",
+      "title": "Arms of Government",
+      "programmes": [
+        "PPE",
+        "LEGAL",
+        "FACULTY"
+      ],
+      "domains": [
+        "governance",
+        "politics"
+      ],
+      "description": "Institutions, power and public accountability",
+      "relation": "Politics, law and governance",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "ghana-government.html",
+      "title": "Ghana Government",
+      "programmes": [
+        "PPE",
+        "FACULTY"
+      ],
+      "domains": [
+        "governance",
+        "politics",
+        "culture"
+      ],
+      "description": "Comparative government and public institutions",
+      "relation": "Political science; global comparative extension",
+      "relation_type": "broader-extension"
+    },
+    {
+      "href": "society.html",
+      "title": "Society",
+      "programmes": [
+        "PPE",
+        "HEALTH",
+        "AIES"
+      ],
+      "domains": [
+        "social",
+        "governance",
+        "culture"
+      ],
+      "description": "Socio-technical and civic questions",
+      "relation": "Social and ethical perspectives",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "labour-market-analysis.html",
+      "title": "Labour Market Analysis",
+      "programmes": [
+        "PPE",
+        "SPORT",
+        "HEALTH"
+      ],
+      "domains": [
+        "politics",
+        "management",
+        "social"
+      ],
+      "description": "Employment, inequalities and economic change",
+      "relation": "Economics and labour markets",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "work-generational-context.html",
+      "title": "Work & Generational Context",
+      "programmes": [
+        "PPE",
+        "SPORT",
+        "HEALTH"
+      ],
+      "domains": [
+        "social",
+        "management",
+        "politics"
+      ],
+      "description": "Careers and structural change",
+      "relation": "Labour and social policy",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "human-capability-benchmarking.html",
+      "title": "Human Capability Benchmarking",
+      "programmes": [
+        "PPE",
+        "AIES",
+        "HEALTH"
+      ],
+      "domains": [
+        "methods",
+        "social",
+        "knowledge"
+      ],
+      "description": "Measurement, fairness, competence",
+      "relation": "Interdisciplinary evaluation",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "systems.html",
+      "title": "Systems",
+      "programmes": [
+        "AIES",
+        "PPE",
+        "HEALTH",
+        "SPORT"
+      ],
+      "domains": [
+        "ai",
+        "management",
+        "governance"
+      ],
+      "description": "Systems dependencies across sectors",
+      "relation": "Cross-sector systems perspective",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "case-studies.html",
+      "title": "Case Studies",
+      "programmes": [
+        "AIES",
+        "LEGAL",
+        "SPORT",
+        "HEALTH"
+      ],
+      "domains": [
+        "methods",
+        "governance",
+        "management"
+      ],
+      "description": "Bounded practice examples",
+      "relation": "Research methods and applied cases",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "research-collaborations.html",
+      "title": "Research Collaborations",
+      "programmes": [
+        "AIES",
+        "PPE",
+        "FACULTY"
+      ],
+      "domains": [
+        "methods",
+        "management"
+      ],
+      "description": "Disciplinary cooperation and roles",
+      "relation": "Research design and professional networks",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "academic-pathways.html",
+      "title": "Academic Pathways",
+      "programmes": [
+        "AIES",
+        "PPE",
+        "LEGAL",
+        "FACULTY"
+      ],
+      "domains": [
+        "knowledge",
+        "methods"
+      ],
+      "description": "Programmes, supervision and recognition",
+      "relation": "Educational pathway mapping",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "sport.html",
+      "title": "Sport",
+      "programmes": [
+        "SPORT",
+        "PPE",
+        "HEALTH"
+      ],
+      "domains": [
+        "management",
+        "social",
+        "politics"
+      ],
+      "description": "Sport, society, organisation and policy",
+      "relation": "Sport governance, economics and society",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "gym-stats.html",
+      "title": "Gym Statistics",
+      "programmes": [
+        "SPORT",
+        "HEALTH"
+      ],
+      "domains": [
+        "methods",
+        "social"
+      ],
+      "description": "Personal measurement and activity records",
+      "relation": "Statistical method affinity; not academic achievement",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "marathon-stats.html",
+      "title": "Marathon Statistics",
+      "programmes": [
+        "SPORT",
+        "HEALTH"
+      ],
+      "domains": [
+        "methods",
+        "social"
+      ],
+      "description": "Activity data and measurement",
+      "relation": "Sport and quantitative activity data",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "conglomerate.html",
+      "title": "Venture & Enterprise",
+      "programmes": [
+        "SPORT",
+        "PPE",
+        "AIES"
+      ],
+      "domains": [
+        "management",
+        "politics"
+      ],
+      "description": "Business systems, strategy and enterprise",
+      "relation": "Strategic management and political economy",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "venture-systems.html",
+      "title": "Venture Systems",
+      "programmes": [
+        "SPORT",
+        "PPE",
+        "AIES"
+      ],
+      "domains": [
+        "management",
+        "ai"
+      ],
+      "description": "Organisation and infrastructure architecture",
+      "relation": "Strategic and technical systems",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "media-production.html",
+      "title": "Media Production",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "culture",
+        "ai",
+        "management"
+      ],
+      "description": "Digital media and creative operations",
+      "relation": "Managing Digital Media; media methods",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "heritage.html",
+      "title": "Heritage",
+      "programmes": [
+        "PPE",
+        "FACULTY"
+      ],
+      "domains": [
+        "culture",
+        "knowledge",
+        "social"
+      ],
+      "description": "Historical and cultural evidence",
+      "relation": "Historical studies; beyond supplied curricula",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "ga-community-development.html",
+      "title": "Ga Community Development",
+      "programmes": [
+        "PPE",
+        "HEALTH",
+        "FACULTY"
+      ],
+      "domains": [
+        "culture",
+        "social",
+        "politics"
+      ],
+      "description": "Community and social organisation",
+      "relation": "Civic and social development",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "faith.html",
+      "title": "Faith",
+      "programmes": [
+        "FACULTY",
+        "PPE"
+      ],
+      "domains": [
+        "culture",
+        "knowledge",
+        "social"
+      ],
+      "description": "Religion, ethics and community",
+      "relation": "Humanities extension; no theology degree equivalence",
+      "relation_type": "broader-extension"
+    },
+    {
+      "href": "bible-studies.html",
+      "title": "Bible Studies",
+      "programmes": [
+        "FACULTY",
+        "PPE"
+      ],
+      "domains": [
+        "culture",
+        "knowledge"
+      ],
+      "description": "Textual interpretation and ethics",
+      "relation": "Humanities extension",
+      "relation_type": "broader-extension"
+    },
+    {
+      "href": "research-culture-creative-expression.html",
+      "title": "Research, Culture & Creative Expression",
+      "programmes": [
+        "AIES",
+        "FACULTY"
+      ],
+      "domains": [
+        "culture",
+        "methods"
+      ],
+      "description": "Arts, knowledge production and cultural analysis",
+      "relation": "Creative and media studies",
+      "relation_type": "thematic-affinity"
+    },
+    {
+      "href": "learning-lab.html",
+      "title": "Learning Lab",
+      "programmes": [
+        "AIES",
+        "HEALTH",
+        "FACULTY"
+      ],
+      "domains": [
+        "knowledge",
+        "methods",
+        "social"
+      ],
+      "description": "Learning, pedagogy and experimentation",
+      "relation": "Cross-cutting educational practice",
+      "relation_type": "thematic-affinity"
+    }
+  ]
+}
