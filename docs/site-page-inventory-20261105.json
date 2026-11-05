@@ -1,0 +1,1735 @@
+{
+  "generated_on": "2026-11-05",
+  "source_commit_before_navigation_changes": "dd6ab16c62fadf47f10054e793926e8e3f6733ea",
+  "scope": "Tracked-source HTML page inventory, including navigation additions in this change. File presence and links are checked; live deployment, factual claims, script-generated navigation and model capability are not inferred.",
+  "html_page_count": 130,
+  "pages": [
+    {
+      "path": "50-things.html",
+      "title": "50 by 30 | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [],
+      "static_link_count": 1
+    },
+    {
+      "path": "about.html",
+      "title": "Grace Rosemary Nettey | Work, Research, Creative Practice & Public Profiles",
+      "canonical_url": "https://manifoldgrace.github.io/about.html",
+      "static_inbound_pages": [
+        "biographical-record.html",
+        "grace-rosemary-nettey.html",
+        "heritage.html",
+        "independent-work-impact.html",
+        "index.html",
+        "life-timeline.html",
+        "professional.html",
+        "research.html"
+      ],
+      "static_link_count": 53
+    },
+    {
+      "path": "academic-pathways.html",
+      "title": "Academic Pathways & Supervisor Watch | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "events.html",
+        "interdisciplinary-research-atlas.html",
+        "learning-lab.html",
+        "phase-6-comparative-research-protocol.html",
+        "research-transfer-scope-completion.html"
+      ],
+      "static_link_count": 10
+    },
+    {
+      "path": "advanced-ai-evaluation-protocol.html",
+      "title": "Advanced AI Evaluation Protocol | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "agentic-architecture-patterns.html",
+        "ai-mathematics-research-review-20261105.html",
+        "ai-research-lab.html",
+        "research-active-triage-20261105.html",
+        "research-transfer-scope-completion.html",
+        "verifiable-advanced-intelligence.html",
+        "wiener-cybernetics-reading-connections-20261105.html"
+      ],
+      "static_link_count": 10
+    },
+    {
+      "path": "agentic-architecture-patterns.html",
+      "title": "Agentic Architectures and Evidence Assurance | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "advanced-ai-evaluation-protocol.html",
+        "research-active-triage-20261105.html",
+        "research-transfer-scope-completion.html",
+        "verifiable-advanced-intelligence.html",
+        "wiener-cybernetics-reading-connections-20261105.html"
+      ],
+      "static_link_count": 12
+    },
+    {
+      "path": "ai-agency/about.html",
+      "title": "About Agency.ai | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/about.html",
+        "ai-agency/faq.html",
+        "ai-agency/how-it-works.html",
+        "ai-agency/index.html",
+        "ai-agency/pricing.html"
+      ],
+      "static_link_count": 6
+    },
+    {
+      "path": "ai-agency/activity.html",
+      "title": "Activity | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/ai-features.html",
+      "title": "Ai Features | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/billing.html",
+      "title": "Billing | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/contact.html",
+      "title": "Contact | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/index.html",
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 3
+    },
+    {
+      "path": "ai-agency/dashboard.html",
+      "title": "Dashboard | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/documents.html",
+      "title": "Documents | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/faq.html",
+      "title": "Frequently asked questions | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/about.html",
+        "ai-agency/faq.html",
+        "ai-agency/how-it-works.html",
+        "ai-agency/index.html",
+        "ai-agency/pricing.html"
+      ],
+      "static_link_count": 6
+    },
+    {
+      "path": "ai-agency/help.html",
+      "title": "Help | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/how-it-works.html",
+      "title": "How it works | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/about.html",
+        "ai-agency/faq.html",
+        "ai-agency/how-it-works.html",
+        "ai-agency/pricing.html"
+      ],
+      "static_link_count": 6
+    },
+    {
+      "path": "ai-agency/index.html",
+      "title": "Agency.ai | Agent services",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/about.html",
+        "ai-agency/contact.html",
+        "ai-agency/faq.html",
+        "ai-agency/how-it-works.html",
+        "ai-agency/pricing.html",
+        "ai-agency/privacy.html",
+        "ai-agency/terms.html"
+      ],
+      "static_link_count": 16
+    },
+    {
+      "path": "ai-agency/integrations.html",
+      "title": "Integrations | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/login.html",
+      "title": "Login | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/about.html",
+        "ai-agency/contact.html",
+        "ai-agency/faq.html",
+        "ai-agency/how-it-works.html",
+        "ai-agency/index.html",
+        "ai-agency/pricing.html",
+        "ai-agency/privacy.html",
+        "ai-agency/terms.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/portal.html",
+      "title": "Client workspace | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/activity.html",
+        "ai-agency/ai-features.html",
+        "ai-agency/billing.html",
+        "ai-agency/dashboard.html",
+        "ai-agency/documents.html",
+        "ai-agency/help.html",
+        "ai-agency/integrations.html",
+        "ai-agency/login.html",
+        "ai-agency/projects.html",
+        "ai-agency/reports.html",
+        "ai-agency/requests.html",
+        "ai-agency/services.html",
+        "ai-agency/settings.html",
+        "ai-agency/tasks.html",
+        "ai-agency/ventures.html",
+        "conglomerate.html",
+        "venture-systems.html"
+      ],
+      "static_link_count": 23
+    },
+    {
+      "path": "ai-agency/pricing.html",
+      "title": "Pricing approach | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/about.html",
+        "ai-agency/faq.html",
+        "ai-agency/how-it-works.html",
+        "ai-agency/index.html",
+        "ai-agency/pricing.html"
+      ],
+      "static_link_count": 8
+    },
+    {
+      "path": "ai-agency/privacy.html",
+      "title": "Privacy information | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/index.html",
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 2
+    },
+    {
+      "path": "ai-agency/projects.html",
+      "title": "Projects | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/reports.html",
+      "title": "Reports | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/requests.html",
+      "title": "Requests | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html",
+        "ai-agency/pricing.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/services.html",
+      "title": "Services | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/settings.html",
+      "title": "Settings | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/tasks.html",
+      "title": "Tasks | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-agency/terms.html",
+      "title": "Service information | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/index.html",
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 2
+    },
+    {
+      "path": "ai-agency/ventures.html",
+      "title": "Ventures | Agency.ai",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "ai-ethics-reading-materials.html",
+      "title": "AI Ethics · Reading Materials | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "topics-in-12.html"
+      ],
+      "static_link_count": 24
+    },
+    {
+      "path": "ai-human-knowledge-frontier.html",
+      "title": "Why AI's Knowledge Access Is Not the Boundary of Human Knowledge | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-identifiability-compliance-governance.html",
+        "emerging-horizon-research.html",
+        "research-novelty-field-formation.html"
+      ],
+      "static_link_count": 24
+    },
+    {
+      "path": "ai-identifiability-compliance-governance.html",
+      "title": "AI Identifiability and Compliance | Global Governance Research | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-identifiability-discovery-inventory-atlas.html",
+        "emerging-horizon-research.html",
+        "government-arms.html",
+        "semantic-integrity-frontier-2026.html",
+        "semantic-integrity-public-communication-assurance.html"
+      ],
+      "static_link_count": 16
+    },
+    {
+      "path": "ai-identifiability-discovery-inventory-atlas.html",
+      "title": "AI Identification, Discovery, Inventory and Compliance Mapping | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-identifiability-compliance-governance.html",
+        "emerging-horizon-research.html",
+        "equitable-positive-sum-risk-zones.html",
+        "faith.html",
+        "government-arms.html",
+        "interdisciplinary-ai-competence-recruitment.html",
+        "interdisciplinary-research-atlas.html",
+        "research-novelty-field-formation.html",
+        "research-transfer-scope-completion.html",
+        "semantic-integrity-public-communication-assurance.html"
+      ],
+      "static_link_count": 25
+    },
+    {
+      "path": "ai-mathematics-research-review-20261105.html",
+      "title": "AI Mathematics Release — Research Review Log | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "advanced-ai-evaluation-protocol.html",
+        "research-active-triage-20261105.html",
+        "research.html",
+        "wiener-cybernetics-reading-connections-20261105.html"
+      ],
+      "static_link_count": 9
+    },
+    {
+      "path": "ai-product-feedback.html",
+      "title": "AI Product Feedback | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-research-lab.html",
+        "breaking-barriers.html",
+        "developer-participation-barriers.html",
+        "emerging-horizon-research.html",
+        "evidence-verification-across-sectors.html",
+        "evidence-verification-criminal-justice.html",
+        "feature-contributions.html",
+        "independent-innovation-contributor-equity.html",
+        "independent-work-impact.html",
+        "information-science.html",
+        "llm-evaluation-governance.html",
+        "productivity-log.html",
+        "recognition.html",
+        "research-active-triage-20261105.html",
+        "research-method-project-mapping.html",
+        "research.html",
+        "systems.html",
+        "verifiable-advanced-intelligence.html"
+      ],
+      "static_link_count": 24
+    },
+    {
+      "path": "ai-research-discovery.html",
+      "title": "AI Research Discovery Directory | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "emerging-horizon-research.html",
+        "research-novelty-field-formation.html",
+        "research-questions-gaps-solutions.html",
+        "research-transfer-scope-completion.html"
+      ],
+      "static_link_count": 35
+    },
+    {
+      "path": "ai-research-lab.html",
+      "title": "AI Research Lab | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "advanced-ai-evaluation-protocol.html",
+        "agentic-architecture-patterns.html",
+        "ai-mathematics-research-review-20261105.html",
+        "ai-research-discovery.html",
+        "emerging-horizon-research.html",
+        "evidence-verification-across-sectors.html",
+        "evidence-verification-criminal-justice.html",
+        "faith.html",
+        "independent-work-impact.html",
+        "index.html",
+        "information-science.html",
+        "knowledge.html",
+        "labour-market-analysis.html",
+        "phase-6-comparative-research-protocol.html",
+        "recognition.html",
+        "research-active-triage-20261105.html",
+        "research-collaborations.html",
+        "research-transfer-scope-completion.html",
+        "research.html",
+        "robotics-imaging.html",
+        "software-engineering.html",
+        "travel.html",
+        "verifiable-advanced-intelligence.html"
+      ],
+      "static_link_count": 49
+    },
+    {
+      "path": "app-design-ideas.html",
+      "title": "App Design Ideas | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [],
+      "static_link_count": 8
+    },
+    {
+      "path": "art.html",
+      "title": "Art | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "biographical-record.html",
+        "creative.html",
+        "resourcefulness.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "bible-studies.html",
+      "title": "Bible Studies | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "faith.html"
+      ],
+      "static_link_count": 2
+    },
+    {
+      "path": "biographical-record.html",
+      "title": "Grace Rosemary Nettey (Grace Rose) | Biographical Record | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/biographical-record.html",
+      "static_inbound_pages": [
+        "about.html",
+        "faith.html",
+        "grace-rosemary-nettey.html",
+        "independent-coverage.html",
+        "life-timeline.html",
+        "recognition.html",
+        "society.html"
+      ],
+      "static_link_count": 90
+    },
+    {
+      "path": "breaking-barriers.html",
+      "title": "Breaking Barriers | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/breaking-barriers.html",
+      "static_inbound_pages": [
+        "ai-product-feedback.html",
+        "biographical-record.html",
+        "developer-participation-barriers.html",
+        "productivity-log.html",
+        "recognition.html",
+        "systems.html"
+      ],
+      "static_link_count": 16
+    },
+    {
+      "path": "capability-summary.html",
+      "title": "A4 Battery Summary | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [],
+      "static_link_count": 2
+    },
+    {
+      "path": "case-studies.html",
+      "title": "Case Studies | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "biographical-record.html",
+        "cv.html",
+        "llm-evaluation-governance.html",
+        "productivity-log.html",
+        "professional.html",
+        "research-collaborations.html",
+        "research.html"
+      ],
+      "static_link_count": 7
+    },
+    {
+      "path": "conglomerate.html",
+      "title": "Venture | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "biographical-record.html",
+        "grace-in-eden.html",
+        "productivity-log.html",
+        "products.html",
+        "professional.html",
+        "purposed-endeavours.html",
+        "resourcefulness.html",
+        "venture-systems.html"
+      ],
+      "static_link_count": 21
+    },
+    {
+      "path": "creative.html",
+      "title": "Creative | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "about.html",
+        "biographical-record.html",
+        "grace-rosemary-nettey.html",
+        "independent-work-impact.html",
+        "index.html",
+        "life-timeline.html",
+        "recognition.html",
+        "research-culture-creative-expression.html",
+        "resourcefulness.html"
+      ],
+      "static_link_count": 14
+    },
+    {
+      "path": "cv-one-page.html",
+      "title": "Grace Rosemary Nettey | One-page CV",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "cv.html"
+      ],
+      "static_link_count": 3
+    },
+    {
+      "path": "cv.html",
+      "title": "Digital CV | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "about.html",
+        "academic-pathways.html",
+        "biographical-record.html",
+        "cv-one-page.html",
+        "grace-rosemary-nettey.html",
+        "job-application-log.html",
+        "life-timeline.html",
+        "professional.html",
+        "resourcefulness.html"
+      ],
+      "static_link_count": 17
+    },
+    {
+      "path": "developer-participation-barriers.html",
+      "title": "Developer Participation Barriers — Evidence Catalogue | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/developer-participation-barriers.html",
+      "static_inbound_pages": [
+        "ai-product-feedback.html",
+        "breaking-barriers.html",
+        "feature-contributions.html",
+        "productivity-log.html",
+        "recognition.html"
+      ],
+      "static_link_count": 7
+    },
+    {
+      "path": "emerging-horizon-research.html",
+      "title": "Emerging Horizon of Research and Its Advancement | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-human-knowledge-frontier.html",
+        "ai-identifiability-compliance-governance.html",
+        "ai-research-discovery.html",
+        "faith.html",
+        "research-novelty-field-formation.html",
+        "research-questions-gaps-solutions.html",
+        "research.html"
+      ],
+      "static_link_count": 12
+    },
+    {
+      "path": "equitable-positive-sum-risk-zones.html",
+      "title": "Equitable Positive-Sum Growth: Green, Amber and Red Research Zones | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "faith.html",
+        "interdisciplinary-ai-competence-recruitment.html",
+        "research-questions-gaps-solutions.html",
+        "semantic-integrity-public-communication-assurance.html"
+      ],
+      "static_link_count": 12
+    },
+    {
+      "path": "events.html",
+      "title": "Events & Conferences | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "professional.html",
+        "public.html"
+      ],
+      "static_link_count": 9
+    },
+    {
+      "path": "evidence-timeline.html",
+      "title": "Chronological Evidence Index | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "independent-work-impact.html",
+        "professional.html",
+        "recognition.html",
+        "research.html",
+        "work-generational-context.html"
+      ],
+      "static_link_count": 24
+    },
+    {
+      "path": "evidence-verification-across-sectors.html",
+      "title": "Evidence Verification Across Sectors | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/evidence-verification-across-sectors.html",
+      "static_inbound_pages": [
+        "agentic-architecture-patterns.html",
+        "ai-identifiability-discovery-inventory-atlas.html",
+        "ai-mathematics-research-review-20261105.html",
+        "ai-research-lab.html",
+        "evidence-verification-criminal-justice.html",
+        "independent-work-impact.html",
+        "index.html",
+        "information-science.html",
+        "research-active-triage-20261105.html",
+        "research-method-project-mapping.html",
+        "research.html",
+        "semantic-integrity-frontier-2026.html",
+        "semantic-integrity-public-communication-assurance.html",
+        "verifiable-advanced-intelligence.html"
+      ],
+      "static_link_count": 36
+    },
+    {
+      "path": "evidence-verification-criminal-justice.html",
+      "title": "Evidence Verification & Criminal Justice | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/evidence-verification-criminal-justice.html",
+      "static_inbound_pages": [
+        "ai-research-lab.html",
+        "evidence-verification-across-sectors.html",
+        "independent-work-impact.html",
+        "information-science.html",
+        "research.html"
+      ],
+      "static_link_count": 28
+    },
+    {
+      "path": "faith.html",
+      "title": "Faith | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "bible-studies.html",
+        "biographical-record.html",
+        "equitable-positive-sum-risk-zones.html",
+        "faith.html",
+        "grace-rosemary-nettey.html",
+        "life-philosophy.html",
+        "music.html",
+        "my-book.html",
+        "productivity-log.html",
+        "society.html"
+      ],
+      "static_link_count": 79
+    },
+    {
+      "path": "feature-contributions.html",
+      "title": "Feature Requests & Contribution Register | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "advanced-ai-evaluation-protocol.html",
+        "agentic-architecture-patterns.html",
+        "ai-mathematics-research-review-20261105.html",
+        "ai-product-feedback.html",
+        "ai-research-lab.html",
+        "developer-participation-barriers.html",
+        "faith.html",
+        "phase-6-comparative-research-protocol.html",
+        "productivity-log.html",
+        "recognition.html",
+        "research-active-triage-20261105.html",
+        "research-method-project-mapping.html",
+        "research-transfer-scope-completion.html",
+        "verifiable-advanced-intelligence.html"
+      ],
+      "static_link_count": 20
+    },
+    {
+      "path": "ga-community-development.html",
+      "title": "Ga community development | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/ga-community-development.html",
+      "static_inbound_pages": [
+        "heritage.html"
+      ],
+      "static_link_count": 42
+    },
+    {
+      "path": "ghana-government.html",
+      "title": "Ghana Government, Ministries & Regional Contacts | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/ghana-government.html",
+      "static_inbound_pages": [
+        "government-arms.html",
+        "independent-work-impact.html"
+      ],
+      "static_link_count": 686
+    },
+    {
+      "path": "googlec13ba7df40b09aba.html",
+      "title": "",
+      "canonical_url": null,
+      "static_inbound_pages": [],
+      "static_link_count": 0
+    },
+    {
+      "path": "government-arms.html",
+      "title": "Government Arms and Society Map | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-identifiability-compliance-governance.html",
+        "ai-identifiability-discovery-inventory-atlas.html",
+        "faith.html",
+        "ghana-government.html",
+        "society.html"
+      ],
+      "static_link_count": 1113
+    },
+    {
+      "path": "grace-in-eden.html",
+      "title": "Grace Eden | Botanical Beauts Collection | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/grace-in-eden.html",
+      "static_inbound_pages": [
+        "conglomerate.html",
+        "products.html",
+        "tea-capsule.html"
+      ],
+      "static_link_count": 37
+    },
+    {
+      "path": "grace-rosemary-nettey.html",
+      "title": "Grace Rosemary Nettey | Questions & Answers | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/grace-rosemary-nettey.html",
+      "static_inbound_pages": [
+        "about.html",
+        "index.html"
+      ],
+      "static_link_count": 40
+    },
+    {
+      "path": "gym-stats.html",
+      "title": "Gym Stats | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "marathon-stats.html",
+        "sport.html"
+      ],
+      "static_link_count": 3
+    },
+    {
+      "path": "heritage-benefits.html",
+      "title": "From Heritage to Life | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/heritage-benefits.html",
+      "static_inbound_pages": [
+        "heritage-further-study.html"
+      ],
+      "static_link_count": 9
+    },
+    {
+      "path": "heritage-further-study.html",
+      "title": "Names & Notable People — Further Study | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/heritage-further-study.html",
+      "static_inbound_pages": [],
+      "static_link_count": 240
+    },
+    {
+      "path": "heritage.html",
+      "title": "Grace Rosemary Nettey | Gbese & Ngleshie-Alata Royal Family HeritageGhanaian corridor: recorded relationships and identity checksEnglish corridor: published Symondson family branchGrace's maternal family, biological ancestry and legal adoption",
+      "canonical_url": "https://manifoldgrace.github.io/heritage.html",
+      "static_inbound_pages": [
+        "about.html",
+        "biographical-record.html",
+        "ga-community-development.html",
+        "grace-rosemary-nettey.html",
+        "heritage-benefits.html",
+        "heritage-further-study.html",
+        "independent-work-impact.html",
+        "index.html",
+        "life-timeline.html",
+        "my-book.html",
+        "royal-lineage.html",
+        "travel.html"
+      ],
+      "static_link_count": 169
+    },
+    {
+      "path": "human-capability-benchmarking.html",
+      "title": "Human Capability Benchmarking Experiment | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-ethics-reading-materials.html",
+        "ai-research-lab.html",
+        "capability-summary.html"
+      ],
+      "static_link_count": 26
+    },
+    {
+      "path": "independent-coverage.html",
+      "title": "Independent Coverage | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/independent-coverage.html",
+      "static_inbound_pages": [],
+      "static_link_count": 5
+    },
+    {
+      "path": "independent-innovation-contributor-equity.html",
+      "title": "Independent Innovation, Contributor Equity & AI Accountability | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "equitable-positive-sum-risk-zones.html",
+        "faith.html",
+        "independent-work-impact.html",
+        "interdisciplinary-ai-competence-recruitment.html"
+      ],
+      "static_link_count": 3
+    },
+    {
+      "path": "independent-work-impact.html",
+      "title": "Grace Rosemary Nettey | Independent Work & Impact | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/independent-work-impact.html",
+      "static_inbound_pages": [
+        "about.html",
+        "evidence-verification-across-sectors.html",
+        "evidence-verification-criminal-justice.html",
+        "faith.html",
+        "ghana-government.html",
+        "government-arms.html",
+        "grace-rosemary-nettey.html",
+        "independent-coverage.html",
+        "independent-innovation-contributor-equity.html",
+        "index.html",
+        "information-science.html",
+        "life-timeline.html",
+        "productivity-log.html",
+        "professional.html",
+        "recognition.html",
+        "research-transfer-scope-completion.html",
+        "research.html",
+        "systems.html",
+        "why-daily-logs-matter.html"
+      ],
+      "static_link_count": 205
+    },
+    {
+      "path": "index.html",
+      "title": "Grace Rosemary Nettey (Grace Rose) | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/",
+      "static_inbound_pages": [
+        "advanced-ai-evaluation-protocol.html",
+        "agentic-architecture-patterns.html",
+        "ai-identifiability-discovery-inventory-atlas.html",
+        "ai-mathematics-research-review-20261105.html",
+        "grace-rosemary-nettey.html",
+        "interdisciplinary-ai-competence-recruitment.html",
+        "interdisciplinary-research-atlas.html",
+        "phase-6-comparative-research-protocol.html",
+        "productivity-log.html",
+        "research-active-triage-20261105.html",
+        "research-method-project-mapping.html",
+        "research-novelty-field-formation.html",
+        "research-transfer-scope-completion.html",
+        "venture-systems.html",
+        "verifiable-advanced-intelligence.html",
+        "wiener-cybernetics-reading-connections-20261105.html"
+      ],
+      "static_link_count": 27
+    },
+    {
+      "path": "information-science.html",
+      "title": "Information Science & Network Visibility | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/information-science.html",
+      "static_inbound_pages": [
+        "agentic-architecture-patterns.html",
+        "ai-human-knowledge-frontier.html",
+        "ai-product-feedback.html",
+        "ai-research-lab.html",
+        "evidence-verification-across-sectors.html",
+        "evidence-verification-criminal-justice.html",
+        "faith.html",
+        "feature-contributions.html",
+        "independent-work-impact.html",
+        "productivity-log.html",
+        "recognition.html",
+        "research-active-triage-20261105.html",
+        "research-method-project-mapping.html",
+        "research-transfer-scope-completion.html",
+        "research.html",
+        "semantic-integrity-public-communication-assurance.html",
+        "verifiable-advanced-intelligence.html",
+        "wiener-cybernetics-reading-connections-20261105.html"
+      ],
+      "static_link_count": 21
+    },
+    {
+      "path": "inspirations.html",
+      "title": "Inspirations & Archetypes | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "about.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "interdisciplinary-ai-competence-recruitment.html",
+      "title": "Interdisciplinary AI Competence and Recruitment | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "interdisciplinary-research-atlas.html",
+        "labour-market-analysis.html",
+        "life-philosophy.html",
+        "recognition.html",
+        "semantic-integrity-public-communication-assurance.html"
+      ],
+      "static_link_count": 25
+    },
+    {
+      "path": "interdisciplinary-research-atlas.html",
+      "title": "Interdisciplinary Research Atlas | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-human-knowledge-frontier.html",
+        "ai-identifiability-compliance-governance.html",
+        "ai-identifiability-discovery-inventory-atlas.html",
+        "faith.html",
+        "interdisciplinary-ai-competence-recruitment.html",
+        "research-method-project-mapping.html",
+        "research-novelty-field-formation.html",
+        "research.html",
+        "semantic-integrity-public-communication-assurance.html"
+      ],
+      "static_link_count": 10
+    },
+    {
+      "path": "job-application-log.html",
+      "title": "Job Application Evidence Log | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "professional.html"
+      ],
+      "static_link_count": 3
+    },
+    {
+      "path": "knowledge.html",
+      "title": "Knowledge VS Thinking | Manifold GraceA thinking cycle: frame, explore, test and revise",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "biographical-record.html",
+        "research-collaborations.html"
+      ],
+      "static_link_count": 172
+    },
+    {
+      "path": "labour-market-analysis.html",
+      "title": "Labour Market Analysis | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-research-lab.html",
+        "equitable-positive-sum-risk-zones.html",
+        "faith.html",
+        "interdisciplinary-ai-competence-recruitment.html",
+        "trading.html"
+      ],
+      "static_link_count": 48
+    },
+    {
+      "path": "learning-lab.html",
+      "title": "Learning Lab | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "academic-pathways.html",
+        "faith.html",
+        "robotics-imaging.html",
+        "travel.html"
+      ],
+      "static_link_count": 58
+    },
+    {
+      "path": "life-philosophy.html",
+      "title": "Life Philosophy | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "faith.html",
+        "heritage-benefits.html",
+        "interdisciplinary-ai-competence-recruitment.html",
+        "semantic-integrity-public-communication-assurance.html"
+      ],
+      "static_link_count": 18
+    },
+    {
+      "path": "life-timeline.html",
+      "title": "Life Timeline | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "about.html",
+        "independent-work-impact.html",
+        "professional.html"
+      ],
+      "static_link_count": 11
+    },
+    {
+      "path": "life.html",
+      "title": "Life & Journey | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "creative.html",
+        "public.html",
+        "travel.html"
+      ],
+      "static_link_count": 2
+    },
+    {
+      "path": "live-sessions.html",
+      "title": "Live Sessions & Debates | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "independent-work-impact.html",
+        "life-philosophy.html",
+        "public-speaking.html",
+        "public.html"
+      ],
+      "static_link_count": 1
+    },
+    {
+      "path": "llm-evaluation-governance.html",
+      "title": "LLM Evaluation & AI Governance | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-identifiability-compliance-governance.html",
+        "ai-product-feedback.html",
+        "emerging-horizon-research.html",
+        "professional.html",
+        "recognition.html"
+      ],
+      "static_link_count": 7
+    },
+    {
+      "path": "marathon-stats.html",
+      "title": "Running & Marathon Stats | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "sport.html"
+      ],
+      "static_link_count": 3
+    },
+    {
+      "path": "media-production.html",
+      "title": "Media & AV Production | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "biographical-record.html",
+        "creative.html"
+      ],
+      "static_link_count": 3
+    },
+    {
+      "path": "model-bookings.html",
+      "title": "Agency & Booking Links | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "photos.html"
+      ],
+      "static_link_count": 5
+    },
+    {
+      "path": "music.html",
+      "title": "Music | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "about.html",
+        "biographical-record.html",
+        "creative.html",
+        "faith.html",
+        "grace-rosemary-nettey.html",
+        "life-philosophy.html",
+        "resourcefulness.html"
+      ],
+      "static_link_count": 8
+    },
+    {
+      "path": "my-book.html",
+      "title": "My Books | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "breaking-barriers.html",
+        "heritage.html",
+        "independent-work-impact.html",
+        "life-philosophy.html",
+        "resourcefulness.html"
+      ],
+      "static_link_count": 7
+    },
+    {
+      "path": "papers.html",
+      "title": "Research & Policy Papers | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "about.html",
+        "biographical-record.html",
+        "case-studies.html",
+        "emerging-horizon-research.html",
+        "grace-rosemary-nettey.html",
+        "independent-coverage.html",
+        "phase-6-comparative-research-protocol.html",
+        "productivity-log.html",
+        "professional.html",
+        "research-collaborations.html",
+        "research-transfer-scope-completion.html",
+        "research.html",
+        "why-daily-logs-matter.html"
+      ],
+      "static_link_count": 37
+    },
+    {
+      "path": "phase-6-comparative-research-protocol.html",
+      "title": "Phase 6 Research Protocol and Successor Decision Record | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "faith.html",
+        "research-transfer-scope-completion.html"
+      ],
+      "static_link_count": 20
+    },
+    {
+      "path": "photos.html",
+      "title": "Photos | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "about.html",
+        "biographical-record.html",
+        "creative.html",
+        "index.html",
+        "life-philosophy.html",
+        "model-bookings.html",
+        "resourcefulness.html",
+        "sport.html",
+        "visual-links.html"
+      ],
+      "static_link_count": 32
+    },
+    {
+      "path": "productivity-log.html",
+      "title": "Productivity Log | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/productivity-log.html",
+      "static_inbound_pages": [
+        "ai-product-feedback.html",
+        "case-studies.html",
+        "developer-participation-barriers.html",
+        "faith.html",
+        "independent-work-impact.html",
+        "information-science.html",
+        "professional.html",
+        "research-active-triage-20261105.html",
+        "research.html",
+        "systems.html",
+        "why-daily-logs-matter.html"
+      ],
+      "static_link_count": 85
+    },
+    {
+      "path": "products.html",
+      "title": "Merchandise & Products | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "conglomerate.html",
+        "grace-in-eden.html",
+        "resourcefulness.html"
+      ],
+      "static_link_count": 6
+    },
+    {
+      "path": "professional.html",
+      "title": "Professional | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "about.html",
+        "biographical-record.html",
+        "case-studies.html",
+        "events.html",
+        "faith.html",
+        "grace-rosemary-nettey.html",
+        "independent-work-impact.html",
+        "index.html",
+        "information-science.html",
+        "job-application-log.html",
+        "life-philosophy.html",
+        "life-timeline.html",
+        "llm-evaluation-governance.html",
+        "phase-6-comparative-research-protocol.html",
+        "productivity-log.html",
+        "research-active-triage-20261105.html",
+        "research-transfer-scope-completion.html",
+        "research.html",
+        "resourcefulness.html"
+      ],
+      "static_link_count": 40
+    },
+    {
+      "path": "public-speaking.html",
+      "title": "Public Speaking | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "biographical-record.html",
+        "events.html",
+        "independent-work-impact.html",
+        "professional.html",
+        "public.html",
+        "resourcefulness.html"
+      ],
+      "static_link_count": 2
+    },
+    {
+      "path": "public.html",
+      "title": "Public | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "biographical-record.html",
+        "events.html",
+        "index.html"
+      ],
+      "static_link_count": 7
+    },
+    {
+      "path": "purposed-endeavours.html",
+      "title": "Purposed Endeavours | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "conglomerate.html"
+      ],
+      "static_link_count": 2
+    },
+    {
+      "path": "recognition.html",
+      "title": "Grace Rosemary Nettey | Recognition & Acknowledgements | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/recognition.html",
+      "static_inbound_pages": [
+        "about.html",
+        "ai-human-knowledge-frontier.html",
+        "ai-product-feedback.html",
+        "biographical-record.html",
+        "creative.html",
+        "cv.html",
+        "faith.html",
+        "feature-contributions.html",
+        "grace-rosemary-nettey.html",
+        "independent-coverage.html",
+        "independent-work-impact.html",
+        "interdisciplinary-ai-competence-recruitment.html",
+        "interdisciplinary-research-atlas.html",
+        "life-philosophy.html",
+        "llm-evaluation-governance.html",
+        "phase-6-comparative-research-protocol.html",
+        "professional.html",
+        "research-transfer-scope-completion.html",
+        "systems.html",
+        "why-daily-logs-matter.html",
+        "work-generational-context.html"
+      ],
+      "static_link_count": 53
+    },
+    {
+      "path": "research-active-triage-20261105.html",
+      "title": "Active Research Triage and Delivery Roadmap | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-research-lab.html",
+        "evidence-verification-across-sectors.html",
+        "index.html",
+        "phase-6-comparative-research-protocol.html",
+        "productivity-log.html",
+        "research-questions-gaps-solutions.html",
+        "research-transfer-scope-completion.html",
+        "research.html"
+      ],
+      "static_link_count": 77
+    },
+    {
+      "path": "research-collaborations.html",
+      "title": "Research Collaborations | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "faith.html",
+        "information-science.html",
+        "knowledge.html",
+        "research-transfer-scope-completion.html",
+        "research.html",
+        "topics-in-12.html"
+      ],
+      "static_link_count": 26
+    },
+    {
+      "path": "research-culture-creative-expression.html",
+      "title": "Research, Culture & Creative Expression | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "creative.html",
+        "research.html"
+      ],
+      "static_link_count": 7
+    },
+    {
+      "path": "research-links.html",
+      "title": "Research Links | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "biographical-record.html",
+        "faith.html",
+        "knowledge.html",
+        "research-active-triage-20261105.html",
+        "research-collaborations.html",
+        "research.html",
+        "society.html"
+      ],
+      "static_link_count": 82
+    },
+    {
+      "path": "research-method-project-mapping.html",
+      "title": "Research Method and Project Mapping | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-human-knowledge-frontier.html",
+        "ai-identifiability-discovery-inventory-atlas.html",
+        "evidence-verification-across-sectors.html",
+        "faith.html",
+        "feature-contributions.html",
+        "interdisciplinary-research-atlas.html",
+        "research-active-triage-20261105.html",
+        "research-novelty-field-formation.html",
+        "research-transfer-scope-completion.html",
+        "research.html",
+        "verifiable-advanced-intelligence.html"
+      ],
+      "static_link_count": 10
+    },
+    {
+      "path": "research-novelty-field-formation.html",
+      "title": "Research Novelty and Field Formation | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "emerging-horizon-research.html",
+        "research-transfer-scope-completion.html"
+      ],
+      "static_link_count": 13
+    },
+    {
+      "path": "research-questions-gaps-solutions.html",
+      "title": "Research Questions, Confirmed Gaps & Solutions | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-human-knowledge-frontier.html",
+        "ai-identifiability-compliance-governance.html",
+        "ai-identifiability-discovery-inventory-atlas.html",
+        "ai-research-discovery.html",
+        "emerging-horizon-research.html",
+        "equitable-positive-sum-risk-zones.html",
+        "faith.html",
+        "interdisciplinary-research-atlas.html",
+        "recognition.html",
+        "research-novelty-field-formation.html",
+        "research-transfer-scope-completion.html",
+        "semantic-integrity-public-communication-assurance.html"
+      ],
+      "static_link_count": 26
+    },
+    {
+      "path": "research-transfer-scope-completion.html",
+      "title": "Research Transfer, Scope and Completion Framework | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-research-lab.html",
+        "equitable-positive-sum-risk-zones.html",
+        "faith.html",
+        "interdisciplinary-ai-competence-recruitment.html",
+        "interdisciplinary-research-atlas.html",
+        "phase-6-comparative-research-protocol.html",
+        "research-active-triage-20261105.html",
+        "semantic-integrity-frontier-2026.html"
+      ],
+      "static_link_count": 29
+    },
+    {
+      "path": "research.html",
+      "title": "Research | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "about.html",
+        "academic-pathways.html",
+        "ai-research-lab.html",
+        "biographical-record.html",
+        "case-studies.html",
+        "emerging-horizon-research.html",
+        "events.html",
+        "evidence-verification-across-sectors.html",
+        "evidence-verification-criminal-justice.html",
+        "faith.html",
+        "grace-rosemary-nettey.html",
+        "heritage-benefits.html",
+        "independent-work-impact.html",
+        "index.html",
+        "information-science.html",
+        "interdisciplinary-research-atlas.html",
+        "knowledge.html",
+        "labour-market-analysis.html",
+        "life-philosophy.html",
+        "life-timeline.html",
+        "llm-evaluation-governance.html",
+        "my-book.html",
+        "papers.html",
+        "productivity-log.html",
+        "professional.html",
+        "recognition.html",
+        "research-active-triage-20261105.html",
+        "research-collaborations.html",
+        "research-culture-creative-expression.html",
+        "research-method-project-mapping.html",
+        "resourcefulness.html",
+        "verifiable-advanced-intelligence.html",
+        "wiener-cybernetics-reading-connections-20261105.html"
+      ],
+      "static_link_count": 253
+    },
+    {
+      "path": "resourcefulness.html",
+      "title": "Resourcefulness | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "conglomerate.html",
+        "research-active-triage-20261105.html"
+      ],
+      "static_link_count": 35
+    },
+    {
+      "path": "robotics-imaging.html",
+      "title": "Robotics & Imaging Systems | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "learning-lab.html"
+      ],
+      "static_link_count": 55
+    },
+    {
+      "path": "royal-lineage.html",
+      "title": "Royal Lineage | Grace Rosemary Nettey — Family Pedigree",
+      "canonical_url": "https://manifoldgrace.github.io/royal-lineage.html",
+      "static_inbound_pages": [
+        "grace-rosemary-nettey.html",
+        "heritage-benefits.html",
+        "heritage.html",
+        "royal-lineage.html"
+      ],
+      "static_link_count": 21
+    },
+    {
+      "path": "semantic-integrity-frontier-2026.html",
+      "title": "Semantic Integrity: 2025–26 Frontier Research Evidence Register | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "semantic-integrity-public-communication-assurance.html"
+      ],
+      "static_link_count": 23
+    },
+    {
+      "path": "semantic-integrity-public-communication-assurance.html",
+      "title": "Semantic Integrity & Public Communication Assurance | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "index.html",
+        "interdisciplinary-ai-competence-recruitment.html",
+        "research-active-triage-20261105.html",
+        "research-questions-gaps-solutions.html",
+        "research.html",
+        "semantic-integrity-frontier-2026.html"
+      ],
+      "static_link_count": 25
+    },
+    {
+      "path": "services.html",
+      "title": "Services | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "app-design-ideas.html",
+        "independent-work-impact.html",
+        "research-active-triage-20261105.html",
+        "resourcefulness.html"
+      ],
+      "static_link_count": 3
+    },
+    {
+      "path": "socials.html",
+      "title": "Social Directory | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "about.html",
+        "grace-rosemary-nettey.html",
+        "gym-stats.html",
+        "independent-work-impact.html",
+        "index.html",
+        "life-philosophy.html",
+        "public.html",
+        "sport.html",
+        "visual-links.html"
+      ],
+      "static_link_count": 30
+    },
+    {
+      "path": "society.html",
+      "title": "Society & Institutional Structure | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "faith.html",
+        "feature-contributions.html",
+        "government-arms.html",
+        "systems.html",
+        "travel.html"
+      ],
+      "static_link_count": 513
+    },
+    {
+      "path": "software-engineering.html",
+      "title": "Software Engineering | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "creative.html",
+        "professional.html",
+        "research-active-triage-20261105.html"
+      ],
+      "static_link_count": 7
+    },
+    {
+      "path": "sport.html",
+      "title": "Sport & Performance | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "gym-stats.html",
+        "marathon-stats.html",
+        "socials.html"
+      ],
+      "static_link_count": 7
+    },
+    {
+      "path": "systems.html",
+      "title": "Systems | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-product-feedback.html",
+        "breaking-barriers.html",
+        "faith.html",
+        "feature-contributions.html",
+        "independent-work-impact.html",
+        "knowledge.html",
+        "llm-evaluation-governance.html",
+        "my-book.html",
+        "productivity-log.html",
+        "research.html",
+        "society.html"
+      ],
+      "static_link_count": 8
+    },
+    {
+      "path": "tea-capsule.html",
+      "title": "Grace Eden | Encapsulating Tea — Capsule Collection & Co-founding Concept | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/tea-capsule.html",
+      "static_inbound_pages": [
+        "app-design-ideas.html",
+        "conglomerate.html",
+        "grace-in-eden.html",
+        "products.html"
+      ],
+      "static_link_count": 51
+    },
+    {
+      "path": "topics-in-12.html",
+      "title": "Knowledge Domains | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-ethics-reading-materials.html",
+        "independent-work-impact.html",
+        "index.html",
+        "knowledge.html"
+      ],
+      "static_link_count": 55
+    },
+    {
+      "path": "trading.html",
+      "title": "Trading & Market Study | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "labour-market-analysis.html",
+        "resourcefulness.html"
+      ],
+      "static_link_count": 4
+    },
+    {
+      "path": "travel.html",
+      "title": "Place to Place with Grace | Travel & Learning | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "heritage-benefits.html",
+        "life-timeline.html",
+        "life.html"
+      ],
+      "static_link_count": 552
+    },
+    {
+      "path": "venture-systems.html",
+      "title": "Venture Systems & AI Engineering | Manifold GraceWebsite, secure backend, payment gateway and automation integration",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "ai-agency/portal.html",
+        "conglomerate.html",
+        "equitable-positive-sum-risk-zones.html",
+        "faith.html"
+      ],
+      "static_link_count": 123
+    },
+    {
+      "path": "verifiable-advanced-intelligence.html",
+      "title": "Verifiable Advanced Intelligence | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "advanced-ai-evaluation-protocol.html",
+        "agentic-architecture-patterns.html",
+        "ai-mathematics-research-review-20261105.html",
+        "ai-product-feedback.html",
+        "ai-research-lab.html",
+        "evidence-verification-across-sectors.html",
+        "information-science.html",
+        "research-active-triage-20261105.html",
+        "research-method-project-mapping.html",
+        "research.html",
+        "wiener-cybernetics-reading-connections-20261105.html"
+      ],
+      "static_link_count": 16
+    },
+    {
+      "path": "visual-links.html",
+      "title": "Visual & Portfolio Links | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "photos.html"
+      ],
+      "static_link_count": 6
+    },
+    {
+      "path": "why-daily-logs-matter.html",
+      "title": "Why Longitudinal Daily Logs Matter | Manifold Grace",
+      "canonical_url": "https://manifoldgrace.github.io/why-daily-logs-matter.html",
+      "static_inbound_pages": [],
+      "static_link_count": 9
+    },
+    {
+      "path": "wiener-cybernetics-reading-connections-20261105.html",
+      "title": "Reading Connections: Wiener, Cybernetics and Verifiable AI | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "advanced-ai-evaluation-protocol.html",
+        "ai-mathematics-research-review-20261105.html",
+        "information-science.html",
+        "research-active-triage-20261105.html",
+        "research.html"
+      ],
+      "static_link_count": 7
+    },
+    {
+      "path": "work-generational-context.html",
+      "title": "Work, Outsourcing & Generational Context | Manifold Grace",
+      "canonical_url": null,
+      "static_inbound_pages": [
+        "biographical-record.html",
+        "recognition.html"
+      ],
+      "static_link_count": 41
+    }
+  ]
+}
