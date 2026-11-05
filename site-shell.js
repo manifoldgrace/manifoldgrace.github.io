@@ -30,6 +30,10 @@
           "semantic-integrity-public-communication-assurance.html"
         ],
         [
+          "Semantic Integrity Frontier 2026",
+          "semantic-integrity-frontier-2026.html"
+        ],
+        [
           "Interdisciplinary Atlas",
           "interdisciplinary-research-atlas.html"
         ],
