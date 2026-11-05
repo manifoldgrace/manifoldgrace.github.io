@@ -26,6 +26,10 @@
           "interdisciplinary-ai-competence-recruitment.html"
         ],
         [
+          "Semantic Integrity & Public Communication",
+          "semantic-integrity-public-communication-assurance.html"
+        ],
+        [
           "Interdisciplinary Atlas",
           "interdisciplinary-research-atlas.html"
         ],
