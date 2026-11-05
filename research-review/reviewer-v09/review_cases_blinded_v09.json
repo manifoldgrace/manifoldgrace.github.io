@@ -1,0 +1,66 @@
+{
+  "dataset_id": "mg-v09-review-candidate-20261105",
+  "status": "fictional, assistant-authored, NOT independently adjudicated; no reference answers supplied",
+  "cases": [
+    {
+      "case_id": "R09-001",
+      "statement_a": "The reservoir was described as full in the April inspection.",
+      "statement_b": "The reservoir was described as empty in that same April inspection."
+    },
+    {
+      "case_id": "R09-002",
+      "statement_a": "A station reported seven working pumps in May.",
+      "statement_b": "In June the station reported six working pumps."
+    },
+    {
+      "case_id": "R09-003",
+      "statement_a": "Every bridge in the eastern district passed the inspection.",
+      "statement_b": "Bridge Eleven in the western district failed inspection."
+    },
+    {
+      "case_id": "R09-004",
+      "statement_a": "The trial ran for three days.",
+      "statement_b": "The trial lasted seventy-two hours."
+    },
+    {
+      "case_id": "R09-005",
+      "statement_a": "A service notice was published on 12 June.",
+      "statement_b": "The service outage occurred on 10 June."
+    },
+    {
+      "case_id": "R09-006",
+      "statement_a": "The fictional archive lists an unverified report of a leak.",
+      "statement_b": "The inquiry determined the leak was caused by the new sensor."
+    },
+    {
+      "case_id": "R09-007",
+      "statement_a": "No measurements were recovered from the weather sensor.",
+      "statement_b": "The weather sensor reached its highest temperature on Tuesday."
+    },
+    {
+      "case_id": "R09-008",
+      "statement_a": "The first gate opened at dawn; the second remained closed.",
+      "statement_b": "Both gates were closed at dawn."
+    },
+    {
+      "case_id": "R09-009",
+      "statement_a": "The sample did not exceed the threshold.",
+      "statement_b": "The sample remained below the threshold."
+    },
+    {
+      "case_id": "R09-010",
+      "statement_a": "The school reported approximately one hundred participants.",
+      "statement_b": "Exactly one hundred participants attended."
+    },
+    {
+      "case_id": "R09-011",
+      "statement_a": "The archive labels the document as a draft.",
+      "statement_b": "The published register labels the same document as final."
+    },
+    {
+      "case_id": "R09-012",
+      "statement_a": "An unverified source says the pipe was repaired.",
+      "statement_b": "The pipe was repaired according to two independently dated reports."
+    }
+  ]
+}
