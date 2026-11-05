@@ -18,6 +18,10 @@
           "research-novelty-field-formation.html"
         ],
         [
+          "AI Competence & Recruitment",
+          "interdisciplinary-ai-competence-recruitment.html"
+        ],
+        [
           "Interdisciplinary Atlas",
           "interdisciplinary-research-atlas.html"
         ],
