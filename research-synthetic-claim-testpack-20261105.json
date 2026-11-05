@@ -1,0 +1,291 @@
+{
+  "title": "Manifold Grace synthetic cross-representational claim relationship test pack",
+  "version": "0.1",
+  "created": "2026-11-05",
+  "license_notice": "Synthetic examples created for educational assessment; not real institutional facts, legal advice, or scientific findings.",
+  "usage": "Test claim relation classification, uncertainty recognition and justifications; verify case schemas separately before training or formal benchmarking.",
+  "labels": {
+    "contradiction": "Same scope and referent, incompatible claims.",
+    "compatible_temporal": "Claims potentially both true at different time points.",
+    "distinct_scope": "Different task domains or definitions.",
+    "not_entailment": "One claim does not justify the other.",
+    "evidence_gap": "A relevant source required for adjudication is unavailable.",
+    "equivalent": "Equivalent propositions.",
+    "distinct_metric": "Different measured dimensions.",
+    "dependency_review": "A change to a source claim requires downstream reassessment.",
+    "compatible_probabilistic": "Stated probability and single observed outcome are compatible.",
+    "insufficient_context": "Identity or scope ambiguity blocks confident comparison."
+  },
+  "scenarios": [
+    {
+      "case_id": "T01",
+      "topic": "Direct contradiction",
+      "source_a": {
+        "id": "T01-A",
+        "claim": "The committee approved the plan on 4 March 2026.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T01-B",
+        "claim": "The committee did not approve the plan on 4 March 2026.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "contradiction",
+      "reference_rationale": "Same decision, same date, opposing assertions.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T02",
+      "topic": "Changed over time",
+      "source_a": {
+        "id": "T02-A",
+        "claim": "The service operated in January 2025.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T02-B",
+        "claim": "The service was discontinued in July 2025.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "compatible_temporal",
+      "reference_rationale": "Both can be correct at different times.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T03",
+      "topic": "Different definition",
+      "source_a": {
+        "id": "T03-A",
+        "claim": "The system performs well on a coding benchmark.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T03-B",
+        "claim": "The system fails to generalise across legal tasks.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "distinct_scope",
+      "reference_rationale": "Benchmark performance is not all-domain intelligence.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T04",
+      "topic": "Forecast versus outcome",
+      "source_a": {
+        "id": "T04-A",
+        "claim": "In 2024, analysts forecast a launch in 2027.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T04-B",
+        "claim": "A 2026 report says the product has not launched yet.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "compatible_temporal",
+      "reference_rationale": "A forecast does not assert completed launch.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T05",
+      "topic": "Unsupported inference",
+      "source_a": {
+        "id": "T05-A",
+        "claim": "A draft is labelled formally checked.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T05-B",
+        "claim": "The entire paper is scientifically novel.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "not_entailment",
+      "reference_rationale": "Formal checking does not prove novelty.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T06",
+      "topic": "Missing evidence",
+      "source_a": {
+        "id": "T06-A",
+        "claim": "The record references an attached assessment.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T06-B",
+        "claim": "No assessment attachment is present in the supplied bundle.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "evidence_gap",
+      "reference_rationale": "Missing attachment limits verification of the assessment.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T07",
+      "topic": "Same claim different wording",
+      "source_a": {
+        "id": "T07-A",
+        "claim": "The appeal was submitted on 11 April.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T07-B",
+        "claim": "The submission date was 11 April.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "equivalent",
+      "reference_rationale": "Paraphrases describe the same event and date.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T08",
+      "topic": "Changed rule",
+      "source_a": {
+        "id": "T08-A",
+        "claim": "The policy required two signatures in 2023.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T08-B",
+        "claim": "The revised policy requires one signature from 2025.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "compatible_temporal",
+      "reference_rationale": "Different effective versions can differ.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T09",
+      "topic": "Different measurement",
+      "source_a": {
+        "id": "T09-A",
+        "claim": "The first system finished in 10 minutes.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T09-B",
+        "claim": "The second system used half the total compute.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "distinct_metric",
+      "reference_rationale": "Elapsed time and compute are different measures.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T10",
+      "topic": "Dependency issue",
+      "source_a": {
+        "id": "T10-A",
+        "claim": "Claim B relies on theorem A.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T10-B",
+        "claim": "The proof of theorem A was withdrawn.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "dependency_review",
+      "reference_rationale": "The dependent claim needs re-evaluation, not automatic falsification.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T11",
+      "topic": "Causality overclaim",
+      "source_a": {
+        "id": "T11-A",
+        "claim": "High participation correlated with improved outcomes.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T11-B",
+        "claim": "High participation caused the improvement.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "not_entailment",
+      "reference_rationale": "Correlation does not alone establish causation.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T12",
+      "topic": "Explicit versus implied",
+      "source_a": {
+        "id": "T12-A",
+        "claim": "The diagram places box X to the left of box Y.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T12-B",
+        "claim": "Box X necessarily caused box Y.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "not_entailment",
+      "reference_rationale": "Spatial sequence does not prove causation.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T13",
+      "topic": "Probabilistic calibration",
+      "source_a": {
+        "id": "T13-A",
+        "claim": "A model gives an event a 70% chance.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T13-B",
+        "claim": "The event did not occur in one observed case.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "compatible_probabilistic",
+      "reference_rationale": "One non-occurrence does not falsify a calibrated 70% forecast.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T14",
+      "topic": "Attribution distinction",
+      "source_a": {
+        "id": "T14-A",
+        "claim": "The provider acknowledged receipt of the proposal.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T14-B",
+        "claim": "The provider implemented the proposal.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "not_entailment",
+      "reference_rationale": "Receipt is not proof of adoption.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    },
+    {
+      "case_id": "T15",
+      "topic": "Ambiguous referent",
+      "source_a": {
+        "id": "T15-A",
+        "claim": "The assessment was completed on 8 May.",
+        "source_type": "fictional_test_record"
+      },
+      "source_b": {
+        "id": "T15-B",
+        "claim": "A separate assessment was completed on 9 May.",
+        "source_type": "fictional_test_record"
+      },
+      "reference_relation": "insufficient_context",
+      "reference_rationale": "Cannot infer a date contradiction without confirming same assessment.",
+      "requires_external_fact_check": false,
+      "review_status": "synthetic_reference_only"
+    }
+  ]
+}
