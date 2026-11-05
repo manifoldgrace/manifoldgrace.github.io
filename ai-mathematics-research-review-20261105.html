@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Mathematics Release — Research Review Log | Manifold Grace</title>
+<meta name="description" content="Dated exploratory research log on AI-generated mathematics, claim-to-proof correspondence, verification, provenance, corrections and possible future research contributions.">
+<meta name="author" content="Grace Rosemary Nettey">
+<link rel="stylesheet" href="style.css"><script src="site-config.js" defer></script><script src="site-shell.js" defer></script>
+<style>
+.math-review{max-width:1040px;margin:0 auto;padding:40px 20px 80px;line-height:1.66}.math-review h1{line-height:1.18}.math-review h2{margin-top:40px}.math-review a{color:#8fc4ff}.math-review .status{border-left:3px solid #80b7cb;background:#182731;padding:14px 18px}.math-review .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:18px 0}.math-review .item{border:1px solid var(--line);background:var(--panel);padding:15px}.math-review .item h3{margin:0 0 8px;font-size:1.06rem}.math-review .item p{margin:0}.math-review .table-wrap{overflow-x:auto}.math-review table{border-collapse:collapse;min-width:690px;width:100%;font-size:.91rem}.math-review th,.math-review td{text-align:left;vertical-align:top;padding:11px;border-bottom:1px solid var(--line)}.math-review :is(a,summary):focus-visible{outline:2px solid #8fc4ff;outline-offset:3px}@media(max-width:640px){.math-review{padding:25px 14px 55px}}
+</style></head><body><header data-site-header></header><main class="math-review">
+<p style="color:var(--muted);letter-spacing:.08em;font-size:.8rem">MANIFOLD GRACE · RESEARCH NOTE · 5 NOVEMBER 2026</p>
+<h1>AI-Generated Mathematics: Verification, Provenance and Research Integrity</h1>
+<p><strong>Topic logged for later review and investigation.</strong> A public account of OpenAI's October 2026 mathematical-paper release offers a case through which to examine how rapid AI-generated research is checked, corrected, attributed and incorporated into human knowledge. This note records questions and possible next steps; it does not claim an independent mathematical audit or completed contribution.</p>
+<p class="status"><strong>Status: exploratory / investigation pending.</strong> The directions below are suggestions, not implemented tools, established original discoveries, findings about all released manuscripts or allegations of deliberate misconduct. Specific paper-level conclusions require primary records and qualified mathematical review. No historical contribution register has been altered.</p>
+<h2 id="context">Starting evidence and limits</h2>
+<p>The referenced account describes an initial release of 722 mathematical manuscripts on 6 October 2026. A publicly maintained repository history documents three withdrawals on 7 October linked to a sign error and revisions to other manuscripts. The aggregate numbers and formalisation coverage are time-sensitive: manuscript states and counts can change, and formal proof verification alone does not establish that a formal statement faithfully expresses the broader informal claim or that the contribution is novel.</p>
+<p>Read the <a href="https://en.wikipedia.org/wiki/OpenAI_bulk_release_of_mathematical_papers">overview article</a> alongside the <a href="https://github.com/openai/math/blob/main/history.md">repository's version and withdrawal history</a>. Treat the overview as orientation and the repository record as primary evidence for the changes it reports; neither is a substitute for specialist checking of individual mathematical proofs.</p>
+<h2 id="research-questions">Questions reserved for future investigation</h2>
+<div class="grid">
+<article class="item"><h3>Claim-to-proof correspondence</h3><p>Does the machine-checked statement support the informal theorem and all of its claimed consequences?</p></article>
+<article class="item"><h3>Dependency propagation</h3><p>Which later results rely on an amended or withdrawn proof, and how should reviewers be notified?</p></article>
+<article class="item"><h3>Scientific irregularity taxonomy</h3><p>How should technical errors, omitted assumptions, misleading exposition, procedural defects and contested attribution be distinguished?</p></article>
+<article class="item"><h3>Research provenance</h3><p>How should prior literature, human input, generated arguments, formal checks and later human explanations be recorded?</p></article>
+<article class="item"><h3>Verification burden</h3><p>What expertise, computation, time and cost are required to validate a large volume of generated research?</p></article>
+<article class="item"><h3>Correction and challenge</h3><p>How can versioned claims, independent objections, adjudications and corrections remain auditable and discoverable?</p></article>
+<article class="item"><h3>Scientific significance</h3><p>How should mathematical validity be distinguished from novelty, intelligibility, usefulness and cross-domain transfer?</p></article>
+<article class="item"><h3>Assurance at scale</h3><p>Can separate model families or expert reviewers detect errors that a generating model or shared verifier overlooks?</p></article>
+</div>
+<h2 id="candidate-contributions">Possible research contributions to scope later</h2>
+<div class="table-wrap"><table><thead><tr><th>Candidate</th><th>Potential artefact</th><th>Required validation</th></tr></thead><tbody>
+<tr><th>Claim–Proof–Provenance–Correction Protocol</th><td>Typed claim records linking informal statements, formal goals, source versions, evidence and correction events</td><td>Expert comparison with existing mathematical and scholarly tooling</td></tr>
+<tr><th>Retraction dependency mapper</th><td>Versioned directed graph of theorem, lemma and manuscript dependencies</td><td>Accurate matching against actual proof dependencies</td></tr>
+<tr><th>Scientific irregularity assessment rubric</th><td>Categories separating factual, mathematical, evidential, procedural and attribution issues</td><td>Inter-rater reliability and domain appropriateness</td></tr>
+<tr><th>Verification burden assessment</th><td>Comparable records of review time, specialised labour, compute and remaining uncertainty</td><td>Reproducible measurement and matched samples</td></tr>
+<tr><th>Independent review workflow</th><td>Proposer–checker–expert escalation with conflict and correction logs</td><td>Held-out tests, robustness, resource accounting and governance review</td></tr>
+</tbody></table></div>
+<h2 id="suggested-pilot">Suggested bounded pilot, not yet started</h2>
+<ol>
+<li>Select a small, methodologically varied sample of publicly available mathematical records, including revised or withdrawn examples where justified.</li>
+<li>Freeze retrieval dates and preserve manuscript versions, primary references and formalisation availability.</li>
+<li>Extract explicit claims and trace which code or arguments purport to support them. Label inferred relationships separately.</li>
+<li>Request independent mathematical or formal-methods adjudication where correctness cannot be established by documentary review alone.</li>
+<li>Compare reviewers' findings, evidence gaps, verification costs, model resource use and correction propagation.</li>
+<li>Publish limitations and negative findings; distinguish any genuinely novel contribution from extensions or recombinations of established methods.</li>
+</ol>
+<h2 id="connections">Relationship to existing research, without overfitting</h2>
+<p>This note may inform <a href="advanced-ai-evaluation-protocol.html">Advanced AI Evaluation</a> (accuracy, robustness, cost, autonomy and compute), <a href="verifiable-advanced-intelligence.html">Verifiable Advanced Intelligence</a> (evidence-grounded scientific research), <a href="ai-research-lab.html">AI Research Laboratory</a> (a bounded future experiment), <a href="evidence-verification-across-sectors.html">Evidence Verification Across Sectors</a> (claim provenance and correction processes) and <a href="feature-contributions.html">the dated feature and contribution register</a> (possible later proposals, not historical submissions). This is not evidence that previous requests produced the external mathematical release or its policies. No CESI connection is presumed for formal mathematics; chronology and recognition may be discussed separately only where relevant.</p>
+<h2 id="review-suggestions">Review prompts for a later session</h2>
+<p>Prioritise the narrowest high-value question; check the latest repository corrections; assess relevant prior literature on formal verification, scholarly provenance and research integrity; identify which research output is feasible without specialist compute; and decide whether to develop a technical specification, evaluation pilot, teaching example or policy note. A feature request should be submitted only after specifying the problem, existing alternatives, proposed improvement and test criteria.</p>
+<p style="font-size:.85rem;color:var(--muted)">Entry dated 5 November 2026. Exploratory author research synthesis; source links retained. Amendments should be dated and append-only. Publication on this site does not imply adoption or independent experimental confirmation.</p>
+</main><footer data-site-footer></footer></body></html>
