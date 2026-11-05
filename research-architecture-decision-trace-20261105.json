@@ -1,0 +1,98 @@
+{
+  "schema": "manifold-grace.research-decision-trace.v1",
+  "published_date": "2026-11-05",
+  "scope": "Offline synthetic AI claim extraction and relation assessment, versions v0.3–v1.1",
+  "research_status": "Engineering evidence only; no independently adjudicated evaluation and no production deployment",
+  "authorship_note": "A synthesis of documented Manifold Grace experimental milestones. This index does not replace immutable source results or prove originality or external influence.",
+  "interpretation": "Each decision links an observed failure/constraint to an architectural response, an explicit falsifiable follow-up and an evidence gate. These are design recommendations, not validated improvements.",
+  "records": [
+    {
+      "id": "ADR-01",
+      "phase": "v0.3–v0.4",
+      "question": "Can a low-cost verifier match editorial claim labels without relying on unsupported guesses?",
+      "observation": "v0.3 abstained on all 15 synthetic pairs; v0.4 lexical rules matched 14 of 15 in-sample editorial labels.",
+      "limitation": "In-sample labels authored with development; abstention is not the same as understanding.",
+      "design_decision": "Retain refusal/abstention as a first-class outcome, score answer coverage and label agreement separately.",
+      "next_test": "Hold rules fixed and evaluate previously unseen claim wording with full confusion counts.",
+      "release_gate": "A new, independent sample and predefined metrics are needed before claims about generalisation.",
+      "evidence_level": "developer-authored-synthetic"
+    },
+    {
+      "id": "ADR-02",
+      "phase": "v0.5",
+      "question": "Do lexical rules transfer across wording changes?",
+      "observation": "Frozen v0.4 heuristic matched 5/30 new editorial labels; abstained on 28/30.",
+      "limitation": "Synthetic authored evaluation; a low score could include uncertainty in editorial labels.",
+      "design_decision": "Introduce explicit sentence-to-typed-proposition extraction; do not infer unsupported attributes from word overlap.",
+      "next_test": "Partition extraction, comparison and abstention failures on separately labelled examples.",
+      "release_gate": "Compare against a frozen lexical baseline on a new dataset, without editing labels after observing predictions.",
+      "evidence_level": "developer-authored-synthetic"
+    },
+    {
+      "id": "ADR-03",
+      "phase": "v0.6–v0.8",
+      "question": "Where does end-to-end failure occur: extraction or typed reasoning?",
+      "observation": "v0.8 challenge: 12/18 end-to-end adjudicated reference relations matched versus 18/18 typed-input reasoner matches; six missed relation labels resulted from paraphrase abstention.",
+      "limitation": "Editorial challenge labels were still developer-authored and typed-input scoring uses supplied reference structures.",
+      "design_decision": "Keep extraction and reasoning as separate modules with independent traces and error codes.",
+      "next_test": "Use blind independent field labels, then compare field accuracy, relation accuracy and combined coverage.",
+      "release_gate": "Independent label adjudication and an explicit abstention policy before any accuracy claim.",
+      "evidence_level": "developer-authored-synthetic"
+    },
+    {
+      "id": "ADR-04",
+      "phase": "v0.9",
+      "question": "What evidence is required to separate software contract checks from semantic validity?",
+      "observation": "Twelve fictional pairs, two blank reviewer forms and adjudication workflow prepared; independent reviews completed: zero.",
+      "limitation": "A reviewer template and outreach do not create independent reference labels; original cases were assistant-authored.",
+      "design_decision": "Freeze input cases and predictions, independently obtain two reviewers' annotations, adjudicate disagreement and protect raw reviews.",
+      "next_test": "Measure inter-reviewer agreement and unresolved fields before using adjudicated labels as a reference.",
+      "release_gate": "Two genuine independent completed reviewer forms and a signed-off annotation protocol.",
+      "evidence_level": "procedure-prepared-not-validated"
+    },
+    {
+      "id": "ADR-05",
+      "phase": "v1.0–v1.1",
+      "question": "Can the implementation be reproduced and are releases justified?",
+      "observation": "100/100 metamorphic invariants on 20 exposed fictional pairs; v1.1 audit preserved five frozen component hashes and 109 regression tests passed.",
+      "limitation": "Implementation consistency does not establish semantic accuracy, source truth, security or deployment readiness.",
+      "design_decision": "Maintain immutable baseline checksums, regression tests and separate approval gates for evaluation and security.",
+      "next_test": "Run independent semantic evaluation, then production-specific threat modelling and security testing only if deployment is proposed.",
+      "release_gate": "Do not declare general model reliability, independent verification or deployment readiness from synthetic software tests.",
+      "evidence_level": "local-implementation-regression"
+    }
+  ],
+  "failure_to_action": [
+    {
+      "failure": "Unsupported phrasing or missed paraphrase",
+      "investigation": "Inspect field extraction, not only end-to-end label",
+      "response": "Compare an alternate extractor against the frozen baseline; preserve abstention."
+    },
+    {
+      "failure": "Wrong relation with correct fields",
+      "investigation": "Inspect schema/value semantics and comparison logic",
+      "response": "Revise typed rules and test exclusive, numeric, scope and temporal cases separately."
+    },
+    {
+      "failure": "Unknown or disputed source evidence",
+      "investigation": "Inspect source provenance and whether time/scope support the claim",
+      "response": "Abstain, seek provenance or human review; never substitute repeated model output for source evidence."
+    },
+    {
+      "failure": "Reviewer disagreement",
+      "investigation": "Inspect ambiguous wording and annotation rubric",
+      "response": "Record both labels, reconcile transparently, flag unresolved cases."
+    },
+    {
+      "failure": "Hash mismatch or regression break",
+      "investigation": "Inspect version control, dependencies, fixture changes and execution logs",
+      "response": "Block reproducibility claims; restore/fix and rerun frozen checks."
+    }
+  ],
+  "provenance_links": {
+    "milestone_page": "ai-research-lab.html#verification-evaluation-milestones-20261105",
+    "evaluation_protocol": "advanced-ai-evaluation-protocol.html",
+    "roadmap": "research-active-triage-20261105.html#evaluative-implementation-lessons-20261105",
+    "reviewer_pack": "research-review/reviewer-v09/README.md"
+  }
+}

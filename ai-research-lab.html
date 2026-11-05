@@ -330,6 +330,29 @@
 <p><strong>Outcome-based adaptation:</strong> if disagreements cluster around temporal wording, change time representation and annotation rules; if they cluster around negation, test extraction logic; if scope or evidence is unspecified, prefer recorded abstention and review over confident resolution. Neither agreement between reviewers nor successful implementation establishes factual truth without external source verification.</p>
 <p><strong>Status:</strong> reviewer materials published; 0/12 independently reviewed so far. The set remains assistant-authored and requires external reviewer participation and independently sourced cases for stronger future inference.</p>
 </details>
+
+<div id="architecture-decision-trace-20261105" style="margin:1.4rem 0;padding:1rem;border:1px solid var(--border,#64748b);border-radius:12px">
+<h3>From a discovery to a justified design change</h3>
+<p>Use this <strong>five-step researcher handoff</strong> with the milestone table above. Each change needs a failure mechanism, a reproducible comparison and a stated evidence gate; a larger model or more agents is not automatically progress.</p>
+<div aria-label="Research decision sequence" style="display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0;align-items:center;font-size:.91rem">
+<span style="padding:.55rem;border:1px solid #64748b;border-radius:8px"><strong>1.</strong> Observation</span><span aria-hidden="true">→</span>
+<span style="padding:.55rem;border:1px solid #64748b;border-radius:8px"><strong>2.</strong> Failure/uncertainty</span><span aria-hidden="true">→</span>
+<span style="padding:.55rem;border:1px solid #64748b;border-radius:8px"><strong>3.</strong> Architecture choice</span><span aria-hidden="true">→</span>
+<span style="padding:.55rem;border:1px solid #64748b;border-radius:8px"><strong>4.</strong> Falsifiable test</span><span aria-hidden="true">→</span>
+<span style="padding:.55rem;border:1px solid #64748b;border-radius:8px"><strong>5.</strong> Evidence gate</span>
+</div>
+<p><a href="research-architecture-decision-trace-20261105.json">Download the structured decision trace (JSON, five decisions and five failure responses)</a>. It links v0.3–v1.1 observations to design rationale and next tests; it does not replace the original code, artefacts or labels.</p>
+<details><summary>Example: familiar-case success → paraphrase failure → modular extraction</summary>
+<p><strong>Observed:</strong> v0.4 matched 14/15 authored development labels, then the frozen rules matched 5/30 newly worded labels in v0.5, with 28 abstentions. <strong>Interpretation:</strong> lexical matching did not transfer reliably to changed phrasing under those authored synthetic conditions. <strong>Design response:</strong> keep claim extraction separate from relation comparison; log field-level errors. <strong>Next falsification:</strong> compare both extractors on newly and independently annotated material, including answer coverage and unsupported claims. <strong>Blocked inference:</strong> no general-world accuracy improvement is demonstrated.</p>
+</details>
+<details><summary>Example: typed reasoning works → end-to-end coverage still falls short</summary>
+<p><strong>Observed:</strong> v0.8 matched 18/18 editorial relation labels with supplied typed claims versus 12/18 end-to-end, with six misses associated with unsupported paraphrases. <strong>Interpretation:</strong> input representation, not only downstream logic, constrains the pipeline. <strong>Design response:</strong> diagnose extraction, comparison and evidence provenance independently; never treat gold structured inputs as an actual document extractor. <strong>Next falsification:</strong> independently label fields and relationships, then compare conditional and all-case performance at fixed abstention policy.</p>
+</details>
+<details><summary>Decision by desired outcome, including when to stop</summary>
+<p><strong>Evidence integrity:</strong> prioritise source/date/scope provenance, preserved records, human adjudication and abstention. <strong>Higher coverage:</strong> test an alternative extractor, count unsupported assertions and compare against the same frozen cases. <strong>Lower operating cost:</strong> benchmark runtime and resource use at equal measured error/coverage, not raw speed alone. <strong>Production use:</strong> require permissions, authentication, logging, privacy and security tests independent of synthetic NLP scores. If reference labels are missing, stop before an accuracy claim. If file hashes change, stop before a reproducibility claim. If deployment controls are untested, do not advertise production readiness.</p>
+</details>
+<p style="font-size:.84rem;color:var(--muted)">Status: this is an evidence-to-decision synthesis of already documented local work, not a new algorithm benchmark or an independently validated finding. No independent annotations are yet recorded.</p>
+</div>
 <p style="font-size:.85rem;color:var(--muted)">Research status: local synthetic implementations and recorded tests, not a deployed or independently certified service. Full code bundles and detailed v0.7/v0.8 reports were created in local development artefacts; this website summary does not imply those files have been uploaded to the public repository. Added 5 November 2026 as an additive milestone record.</p>
 </div>
 </section>
