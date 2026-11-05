@@ -1,0 +1,49 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading Connections: Wiener, Cybernetics and Verifiable AI | Manifold Grace</title>
+<meta name="description" content="Dated AI ethics programme reading notes connecting Norbert Wiener's Cybernetics to feedback, uncertainty, agent evaluation, systems organisation, research integrity and AI governance.">
+<meta name="author" content="Grace Rosemary Nettey">
+<link rel="stylesheet" href="style.css"><script src="site-config.js" defer></script><script src="site-shell.js" defer></script>
+<style>
+.wiener-note{max-width:1040px;margin:auto;padding:42px 20px 84px;line-height:1.67}.wiener-note h1{line-height:1.2}.wiener-note h2{margin-top:42px}.wiener-note a{color:#8fc4ff}.wiener-note .notice{border-left:3px solid #89baca;background:var(--panel);padding:14px 18px}.wiener-note .tbl{overflow:auto}.wiener-note table{width:100%;min-width:780px;border-collapse:collapse;font-size:.92rem}.wiener-note th,.wiener-note td{border-bottom:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}.wiener-note .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}.wiener-note .card{border:1px solid var(--line);background:var(--panel);padding:16px}.wiener-note .card h3{margin:0 0 8px}.wiener-note .card p{margin:0}.wiener-note :is(a,summary):focus-visible{outline:2px solid #8fc4ff;outline-offset:3px}@media(max-width:640px){.wiener-note{padding:25px 14px 60px}}
+</style></head><body><header data-site-header></header><main class="wiener-note">
+<p style="font-size:.8rem;letter-spacing:.1em;color:var(--muted)">AI ETHICS PROGRAMME · READING CONNECTIONS · 5 NOVEMBER 2026</p>
+<h1>Norbert Wiener’s <em>Cybernetics</em>: Historical Foundations and Contemporary AI Research Questions</h1>
+<p><strong>Reading:</strong> Norbert Wiener, <em>Cybernetics: or Control and Communication in the Animal and the Machine</em> (original edition 1948; assigned uploaded copy is a second-edition text with additional 1961 chapters). The page numbers below refer to printed book pages, not the PDF viewer’s page numbering.</p>
+<p class="notice"><strong>Research status:</strong> A selective, provisional reading-to-project cross-reference for later evaluation, not a complete exegesis of the 225-page course reading. It distinguishes Wiener’s historical concepts from contemporary applications suggested by the author. No claim is made that Wiener proposed modern LLMs, MCP, agentic workflows or today's research APIs. Full course PDF not republished; short paraphrases and chapter/page pointers only.</p>
+<h2 id="crosswalk">Key terms and cross-disciplinary relationships</h2>
+<div class="tbl"><table><thead><tr><th scope="col">Key wording and location</th><th scope="col">Reading-based observation</th><th scope="col">Modern research connection to investigate</th></tr></thead><tbody>
+<tr><th>Feedback and oscillation<br><small>Chapter IV, p.95 onwards; Introduction pp.6–8</small></th><td>Wiener relates sensory and corrective feedback to control and the possibility of unstable, overshooting responses.</td><td>AI-agent evaluator loops, stopping criteria, non-convergent retries and controls that prevent repeated harmful actions. An analogy, not technical equivalence.</td></tr>
+<tr><th>Prediction and control<br><small>Introduction pp.9–11, 23–25</small></th><td>The text connects prediction of changing systems with statistical processes, measurement limits and information.</td><td>Probabilistic calibration, forecast versioning, uncertainty bounds, causal-model assumptions and evaluation under changing data.</td></tr>
+<tr><th>Information and communication<br><small>Chapter III, p.60 onwards; Introduction pp.10–12</small></th><td>Communication systems must contend with signal, noise and what can be reliably transmitted or recovered.</td><td>Claim-to-evidence coverage, misinformation propagation, retrieval errors, information loss in multi-agent handoffs and traceable source provenance.</td></tr>
+<tr><th>Computing machines and the nervous system<br><small>Chapter V, pp.116–117 onwards</small></th><td>Wiener discusses computational representations and contrasts analogue and numerical machines.</td><td>Machine architecture, the distinction between representation and source reality, and why model output and external tool correctness need separate assessment.</td></tr>
+<tr><th>Information, language and society<br><small>Chapter VIII, p.155 onwards</small></th><td>Social organisations are treated as interconnected organisational and communicative arrangements.</td><td>Institutional information systems, distributed responsibility, accountability, procedural justice and multi-perspective governance; assess the historical analogy critically.</td></tr>
+<tr><th>Learning machines<br><small>Supplementary Chapter IX (1961), p.169 onwards; example on p.172</small></th><td>Wiener discusses adaptive machine behaviour, including a game-playing machine that can change evaluations based on earlier outcomes.</td><td>Continual learning versus static policies, agent memory, evaluation drift, independent checkers and controlled feedback updates.</td></tr>
+<tr><th>Human consequences of automation<br><small>Introduction pp.27–29</small></th><td>Wiener raises concerns about automation, labour, and the social consequences of concentrating technical power.</td><td>AI governance, human authority, labour effects, institutional power, access to correction and distribution of benefits and costs.</td></tr>
+</tbody></table></div>
+<h2 id="key-distinction">Historical interpretation versus contemporary proposal</h2>
+<div class="cards">
+<article class="card"><h3>Historical claim</h3><p>Wiener’s book explores communication, statistical prediction, control and feedback across machines, organisms and social systems. These ideas belong to the documented development of cybernetics.</p></article>
+<article class="card"><h3>Modern comparison</h3><p>Agentic AI uses feedback, tool invocation, memory, planning, evaluation and workflow orchestration, but technical architectures, aims and risks differ from the systems Wiener described.</p></article>
+<article class="card"><h3>Independent research question</h3><p>Can evidence-carrying feedback mechanisms make multi-agent systems more reliable, controllable and independently auditable under real operational and resource constraints?</p></article>
+</div>
+<h2 id="future-questions">Questions to return to for close reading</h2>
+<ol>
+<li>When does corrective feedback improve a system, and when can it induce oscillation, endless revision or overshooting?</li>
+<li>What changes when the system learns from prior outcomes rather than follows fixed evaluation rules? How should updated rules be versioned and verified?</li>
+<li>How do statistical noise, partial observations and lost context affect the validity of a claim that travels through several agents or institutions?</li>
+<li>Which aspects of control engineering transfer legitimately to governance, and which institutional or moral questions cannot be reduced to engineering feedback?</li>
+<li>How should autonomous decision systems retain human choice, independent oversight, traceability and access to challenge?</li>
+<li>How do reliability, cost, computation and information quality change as more parallel branches are introduced?</li>
+</ol>
+<h2 id="site-connections">Relevance to existing Manifold Grace work</h2>
+<p><a href="advanced-ai-evaluation-protocol.html">Advanced AI Evaluation Protocol</a>: feedback-loop robustness, calibration, failure recovery, cost and compute.</p>
+<p><a href="agentic-architecture-patterns.html">Agentic Architectures</a>: memory, sensing, communication, control planes and bounded agent actions.</p>
+<p><a href="verifiable-advanced-intelligence.html">Verifiable Advanced Intelligence</a>: knowledge verification and evidence-bearing coordination, without an ASI inference from feedback alone.</p>
+<p><a href="ai-mathematics-research-review-20261105.html">AI-Generated Mathematics Review Log</a>: error-correction dependencies, technical and evidential validation, research-process feedback.</p>
+<p><a href="information-science.html">Information Science</a>: historical foundations in information, uncertainty and communication.</p>
+<p><a href="research.html">Research</a>: historical reading within the broader interdisciplinary method. Connections to CESI or policy proposals should be made only if the specific question warrants them, not assumed.</p>
+<h2 id="reading-provenance">Reading provenance and next steps</h2>
+<p><strong>Course material supplied:</strong> “Week 2_ Wiener-1948 Cybernetics .pdf”, 225-page reading; cover and title page identify the book, and the table of contents distinguishes the 1948 original edition from the 1961 supplementary chapters (PDF p.15). The author’s interpretation of individual passages is provisional and should be checked against close reading and secondary scholarship before being represented as a formal research result.</p>
+<p><strong>Suggested follow-up:</strong> Annotate Chapter IV, Chapter VIII and supplementary Chapter IX first; compare original cybernetics and current agent evaluation literature; produce a bounded concept–mechanism–difference table, with questions, citations and testable hypotheses. Do not present a historic analogy as verified equivalence.</p>
+<p style="color:var(--muted);font-size:.84rem">Reading map added 5 November 2026; existing Manifold Grace articles and submission histories remain separately authoritative. Suggested interpretations are developmental, not confirmed findings.</p>
+</main><footer data-site-footer></footer></body></html>
