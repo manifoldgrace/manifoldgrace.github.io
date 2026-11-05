@@ -15,6 +15,7 @@
     ["Learning Lab","learning-lab.html"],
     ["Research","research.html"],
     ["Emerging Research Horizon","emerging-horizon-research.html"],
+    ["Interdisciplinary Atlas","interdisciplinary-research-atlas.html"],
     ["Information Science","information-science.html"],
     ["Labour Market Analysis","labour-market-analysis.html"],
     ["Trading","trading.html"],
