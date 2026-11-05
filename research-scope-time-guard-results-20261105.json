@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-05",
+  "status": "local synthetic demonstration; no independent validation",
+  "cases": 8,
+  "naive_matches": 2,
+  "guarded_matches": 8,
+  "scope": "typed inputs; author-defined expectations",
+  "limitations": [
+    "Not a general claim checker",
+    "No natural-language extraction",
+    "No human-adjudicated reference labels",
+    "Different-dated observations remain unverified"
+  ]
+}
