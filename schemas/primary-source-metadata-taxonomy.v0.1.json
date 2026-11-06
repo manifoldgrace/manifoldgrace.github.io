@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Manifold Grace Primary Source Metadata Taxonomy v0.1",
+  "description": "Proposed metadata structure for PUBLIC-source desk research. Schema validation cannot establish source truth, authenticity, lawful basis, or factual correctness.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "title",
+    "source_url",
+    "source_type",
+    "claim_scope",
+    "evidence_status",
+    "reviewed_on",
+    "privacy_classification"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "pattern": "^MG-SRC-[0-9]{3,}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "source_type": {
+      "enum": [
+        "STATUTE",
+        "STATUTORY_INSTRUMENT",
+        "GOVERNMENT_GUIDANCE",
+        "REGULATORY_FILING",
+        "GOVERNMENT_STATISTICS",
+        "CORPORATE_STATEMENT",
+        "INDEPENDENT_REPORTING",
+        "ACADEMIC_RESEARCH",
+        "OTHER"
+      ]
+    },
+    "issuer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "published_on": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "reviewed_on": {
+      "type": "string",
+      "format": "date"
+    },
+    "relevant_date_start": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "relevant_date_end": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "jurisdictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "claim_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_status": {
+      "enum": [
+        "SOURCE_STATEMENT_VERIFIED",
+        "STATUTE_VERIFIED",
+        "PENDING_REVIEW",
+        "CONTRADICTED_BY_STATUTE",
+        "SUPERSEDED",
+        "OTHER"
+      ]
+    },
+    "independent_validation": {
+      "enum": [
+        "NONE",
+        "PARTIAL",
+        "REPLICATED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "legal_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Capture commencement, repeal, territorial applicability and historical as-of conditions where relevant."
+    },
+    "linked_claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^MG-CLM-[0-9]{3,}$"
+      },
+      "uniqueItems": true
+    },
+    "source_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "Byte digest of a lawfully retained exact file; does not independently prove authenticity or date."
+    },
+    "privacy_classification": {
+      "enum": [
+        "PUBLIC_ONLY",
+        "RESTRICTED_DO_NOT_PUBLISH",
+        "REDACTED_FOR_REVIEW"
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "correction_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "date",
+          "note"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
