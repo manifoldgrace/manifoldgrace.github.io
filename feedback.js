@@ -25,7 +25,7 @@
   };
   fetch("data/approved-feedback.json", {cache:"no-store"}).then(res => {if(!res.ok)throw new Error("Unavailable");return res.json();}).then(data => {
     if(!Array.isArray(data) || !target) return;
-    const entries = data.filter(item => item && item.approved === true && item.publication_permission === true && typeof item.message === "string" && item.message.trim() && /^\\d{4}-\\d{2}-\\d{2}$/.test(item.published_on || ""));
+    const entries = data.filter(item => item && item.approved === true && item.publication_permission === true && typeof item.message === "string" && item.message.trim() && /^\d{4}-\d{2}-\d{2}$/.test(item.published_on || ""));
     if (!entries.length) return;
     target.replaceChildren();
     entries.sort((a,b) => b.published_on.localeCompare(a.published_on));
