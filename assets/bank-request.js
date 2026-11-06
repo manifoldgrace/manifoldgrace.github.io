@@ -90,34 +90,81 @@
       let reference = '';
       const prefix = {books: 'BK', services: 'SV', products: 'PR'}[page];
       const endpoint = form.action;
+      const productSelect = form.elements.namedItem('product_selection');
+      const itemInput = form.elements.namedItem('item');
+      const priceLabel = root.querySelector('.selected-price');
+      const priceMap = new Map();
+      if (page === 'products') {
+        root.querySelector('#heading').textContent = 'Enquire about a design';
+        root.querySelectorAll('.product-only').forEach(el => { el.hidden = false; });
+        root.querySelector('.standard-item').hidden = true;
+        root.querySelector('.standard-timing').hidden = true;
+        root.querySelector('.standard-invoice').hidden = true;
+        itemInput.required = false;
+        itemInput.disabled = true;
+        productSelect.required = true;
+        const designs = [...document.querySelectorAll('#winter-capsule .capsule-item')];
+        for (const card of designs) {
+          const title = card.querySelector('h3')?.textContent?.trim();
+          const priceText = card.querySelector('.capsule-price')?.textContent || '';
+          const match = priceText.match(/£\\s*(\\d+(?:\\.\\d{1,2})?)/);
+          if (!title || !match) continue;
+          const amount = Number(match[1]);
+          priceMap.set(title, amount);
+          const opt = document.createElement('option');
+          opt.value = title;
+          opt.textContent = title + ' — £' + amount.toFixed(2) + ' proposed';
+          productSelect.append(opt);
+        }
+        const updatePrice = () => {
+          const amount = priceMap.get(productSelect.value);
+          if (amount === undefined) {
+            priceLabel.textContent = 'Select a design';
+            return;
+          }
+          const quantity = Number(form.elements.namedItem('quantity').value) || 1;
+          priceLabel.textContent = '£' + amount.toFixed(2) + ' each · indicative total £' + (amount * quantity).toFixed(2);
+        };
+        productSelect.addEventListener('change', updatePrice);
+        form.elements.namedItem('quantity').addEventListener('input', updatePrice);
+        updatePrice();
+      } else {
+        root.querySelector('#heading').textContent = page === 'books' ? 'Enquire about a publication' : 'Request a service quote';
+        productSelect.disabled = true;
+      }
       const live = /^https:\/\/formspree\.io\/f\/[A-Za-z0-9]+$/.test(endpoint);
       const submit = form.querySelector('button[type="submit"]');
       submit.textContent = live ? 'Send enquiry securely' : 'Form unavailable';
-      root.querySelector('.delivery-description').textContent = live ? 'Send an enquiry for review using Formspree. No payment is taken here; a submission is not a confirmed order or booking.' : 'Enquiries are temporarily unavailable; please use the professional contact link.';
+      root.querySelector('.delivery-description').textContent = !live ? 'Enquiries are temporarily unavailable; please use the professional contact link.' : page === 'products' ? 'Explore proposed prices and ask about a specific design. These are not stocked items or confirmed retail offers, and no payment will be taken.' : 'Send your requirements securely. We will confirm scope, availability and an agreed price before any invoice or payment.';
       const makeReference = () => {
         const bytes = crypto.getRandomValues(new Uint8Array(8));
         return `MG-${prefix}-${Array.from(bytes, b => b.toString(16).padStart(2,'0')).join('').toUpperCase()}`;
       };
       form.addEventListener('submit', async event => {
         event.preventDefault();
-        for (const key of ['name', 'item']) {
+        for (const key of page === 'products' ? ['name'] : ['name', 'item']) {
           form.elements.namedItem(key).setCustomValidity(form.elements.namedItem(key).value.trim() ? '' : 'Please enter a value.');
         }
         if (!form.reportValidity()) return;
         const data = new FormData(form);
         const clean = key => String(data.get(key) || '').trim();
         reference ||= makeReference();
+        const selectedItem = page === 'products' ? clean('product_selection') : clean('item');
+        const proposedUnitPrice = page === 'products' ? priceMap.get(selectedItem) : undefined;
         body = [
           'Manifold Grace enquiry / quote request',
           `Reference: ${reference}`, `Page: ${page}`,
           `Name: ${clean('name')}`, `Reply email: ${clean('email')}`,
-          `Item / service: ${clean('item')}`, `Quantity: ${clean('quantity')}`,
-          `Budget / timeframe: ${clean('timing') || 'Not specified'}`,
-          `Invoice by email requested: ${data.get('invoice') ? 'Yes' : 'No'}`,
-          `Requirements: ${clean('message') || 'Not specified'}`,
+          `Item / service: ${selectedItem}`, `Quantity: ${clean('quantity')}`,
+          ...(page === 'products' ?
+            [`Proposed unit price: £${proposedUnitPrice.toFixed(2)} (not a confirmed retail price)`,
+             `Indicative total: £${(proposedUnitPrice * Number(clean('quantity'))).toFixed(2)} (subject to confirmation)`] :
+            [`Preferred timeframe: ${clean('timing') || 'Not specified'}`,
+             `Invoice by email requested: ${data.get('invoice') ? 'Yes' : 'No'}`]),
+          `Additional details: ${clean('message') || 'Not specified'}`,
           'Permission to respond: Yes',
-          '', 'Please confirm availability, price and payment instructions.',
-          'This is a request only. No payment has been made.'
+          '', 'Please confirm price, availability and delivery terms before any purchase.',
+          'This is an enquiry only. No order or payment has been made.'
         ].join('\n');
         root.querySelector('pre').textContent = body;
         const inbox = String(window.MG_BANK_REQUEST?.enquiryEmail || '').trim();
@@ -148,7 +195,13 @@
         outgoing.set('page', page);
         outgoing.set('subject', 'Manifold Grace enquiry ' + reference);
         outgoing.set('consent', 'Yes');
-        outgoing.set('invoice', data.get('invoice') ? 'Yes' : 'No');
+        outgoing.set('invoice', page === 'products' ? 'Not applicable — design enquiry' : (data.get('invoice') ? 'Yes' : 'No'));
+        if (page === 'products') {
+          outgoing.set('item', selectedItem);
+          outgoing.set('price_status', 'Proposed only — not a sale');
+          outgoing.set('proposed_unit_price_gbp', proposedUnitPrice.toFixed(2));
+          outgoing.set('indicative_total_gbp', (proposedUnitPrice * Number(clean('quantity'))).toFixed(2));
+        }
         try {
           const response = await fetch(endpoint, {
             method: 'POST',
@@ -210,12 +263,20 @@
       });
       root.querySelector('.edit').addEventListener('click', () => {
         summary.hidden = true;
-        form.elements.namedItem('item').focus();
+        (page === 'products' ? productSelect : itemInput).focus();
       });
       this.addEventListener('mg-select-item', event => {
         const title = String(event.detail?.title || '').slice(0,160);
-        form.elements.namedItem('item').value = title;
-        form.elements.namedItem('item').focus();
+        if (page === 'products') {
+          if (priceMap.has(title)) {
+            productSelect.value = title;
+            productSelect.dispatchEvent(new Event('change'));
+          }
+          productSelect.focus();
+        } else {
+          itemInput.value = title;
+          itemInput.focus();
+        }
         this.scrollIntoView({block:'start'});
       });
     }
