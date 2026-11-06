@@ -19,7 +19,7 @@
           label{display:block;font-size:1rem;line-height:1.5}input,textarea{font:inherit;font-size:1rem;width:100%;margin:.4rem 0 0;padding:.8rem;border:1px solid var(--mg-input-border,#777);border-radius:.45rem;color:inherit;background:var(--mg-input-bg,transparent)}
           input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--mg-accent);outline-offset:3px}
           textarea{resize:vertical;min-height:6rem} .full{grid-column:1/-1}
-          .check{display:flex;gap:.7rem;align-items:flex-start}.check input{width:1.1rem;height:1.1rem;flex:none;margin:.3rem 0 0;accent-color:var(--mg-accent)}
+          .hp{position:absolute;left:-99999px;width:1px;height:1px;overflow:hidden}.check{display:flex;gap:.7rem;align-items:flex-start}.check input{width:1.1rem;height:1.1rem;flex:none;margin:.3rem 0 0;accent-color:var(--mg-accent)}
           button,a.button{display:inline-block;padding:.85rem 1.1rem;border:1px solid var(--mg-accent);border-radius:.45rem;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;background:var(--mg-accent);color:var(--mg-button-text,#141414)}
           button.secondary{background:transparent;color:inherit} .actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}
           .summary{margin-top:1.5rem;padding-top:1.3rem;border-top:1px solid var(--mg-input-border,#777)}
@@ -31,8 +31,9 @@
         <section aria-labelledby="heading">
           <div class="eyebrow">Orders &amp; enquiries</div>
           <h2 id="heading">Request a quote or information</h2>
-          <p>Prepare a request for a book, product or service. <strong>This form does not submit automatically.</strong> You must send the prepared message yourself after reviewing it. Availability and pricing are not confirmed through this interface.</p>
+          <p class="delivery-description">This form prepares an enquiry. Online submission activates only after the receiving service is configured; until then, the draft can be copied. No payment is taken here.</p>
           <form>
+            <div class="hp" aria-hidden="true"><label>Leave this field blank<input name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label></div>
             <div class="grid">
               <label>Your name<input name="name" autocomplete="name" required maxlength="100"></label>
               <label>Your email<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
@@ -56,7 +57,7 @@
               <button type="button" class="secondary edit">Edit request</button>
             </div>
             <p class="status" role="status" aria-live="polite"></p>
-            <small>No order, booking, quote request or payment is recorded automatically by this site. Do not send bank details or sensitive documents. An enquiry or invoice request is not a payment confirmation.</small>
+            <small>An enquiry is not a confirmed order, booking or payment. Do not include financial credentials or sensitive documents. We will agree price and availability separately.</small>
           </div>
         </section>`;
       const form = root.querySelector('form');
@@ -66,11 +67,16 @@
       let body = '';
       let reference = '';
       const prefix = {books: 'BK', services: 'SV', products: 'PR'}[page];
+      const endpoint = String(window.MG_BANK_REQUEST?.formspreeEndpoint || '').trim();
+      const live = /^https:\/\/formspree\.io\/f\/[A-Za-z0-9]+$/.test(endpoint);
+      const submit = form.querySelector('button[type="submit"]');
+      submit.textContent = live ? 'Submit enquiry securely' : 'Prepare request (does not send)';
+      root.querySelector('.delivery-description').textContent = live ? 'Send an enquiry for review using our hosted submission service. No payment is taken here; submissions do not confirm a booking or order.' : 'Online sending is not configured yet. You can prepare a request and copy it; nothing will be sent automatically.';
       const makeReference = () => {
         const bytes = crypto.getRandomValues(new Uint8Array(8));
         return `MG-${prefix}-${Array.from(bytes, b => b.toString(16).padStart(2,'0')).join('').toUpperCase()}`;
       };
-      form.addEventListener('submit', event => {
+      form.addEventListener('submit', async event => {
         event.preventDefault();
         for (const key of ['name', 'item']) {
           form.elements.namedItem(key).setCustomValidity(form.elements.namedItem(key).value.trim() ? '' : 'Please enter a value.');
@@ -104,6 +110,44 @@
         }
         summary.hidden = false;
         summary.scrollIntoView({block:'nearest'});
+        if (!live) return;
+        // Hosted form service: endpoint must be enabled and verified by the site owner.
+        // Fetch success means the provider accepted the submission, not that Gmail delivery has been independently proven.
+        link.hidden = true;
+        link.removeAttribute('href');
+        submit.disabled = true;
+        submit.textContent = 'Sending…';
+        status.textContent = 'Sending your enquiry. Please do not close this page.';
+        const outgoing = new FormData(form);
+        outgoing.set('reference', reference);
+        outgoing.set('page', page);
+        outgoing.set('subject', 'Manifold Grace enquiry ' + reference);
+        outgoing.set('consent', 'Yes');
+        outgoing.set('invoice', data.get('invoice') ? 'Yes' : 'No');
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            body: outgoing,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (!response.ok) {
+            status.textContent = response.status === 429 ?
+              'The form provider is receiving too many requests. Please try again later; delivery is not confirmed.' :
+              'The provider did not accept this enquiry. Nothing is confirmed. Please retry or copy your request.';
+            return;
+          }
+          status.textContent = 'Your enquiry was accepted by the form service. Reference: ' + reference + '. This is not an order or payment confirmation.';
+          submit.textContent = 'Enquiry submitted';
+          return;
+        } catch (error) {
+          status.textContent = 'Could not verify submission. Do not assume it arrived. You can copy the request or try again.';
+          return;
+        } finally {
+          if (submit.textContent !== 'Enquiry submitted') {
+            submit.disabled = false;
+            submit.textContent = 'Retry enquiry';
+          }
+        }
       });
       for (const key of ['name', 'item']) {
         form.elements.namedItem(key).addEventListener('input', () => form.elements.namedItem(key).setCustomValidity(''));
