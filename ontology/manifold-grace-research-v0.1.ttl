@@ -1,0 +1,33 @@
+# Manifold Grace — public evidence ontology v0.1 (2026-11-06)
+# RDF 1.1-compatible Turtle. Does not require RDF 1.2-only syntax.
+@prefix mg: <https://manifoldgrace.github.io/ns/research#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mg:LegalEntity a rdfs:Class ; rdfs:label "Legal entity" .
+mg:EvidenceAssertion a rdfs:Class ; rdfs:label "Evidence assertion" .
+mg:PublicSource a rdfs:Class ; rdfs:label "Public source record" .
+
+mg:LegalEntityShape a sh:NodeShape ;
+  sh:targetClass mg:LegalEntity ;
+  sh:property [ sh:path mg:registryJurisdiction ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 2 ] ;
+  sh:property [ sh:path mg:registrationNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+  sh:property [ sh:path mg:auditStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                sh:in ( "NOT_AUDITED" "REVIEW_IN_PROGRESS" "SOURCE_REVIEWED" ) ] .
+
+mg:AssertionShape a sh:NodeShape ;
+  sh:targetClass mg:EvidenceAssertion ;
+  sh:property [ sh:path mg:claimText ; sh:minCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+  sh:property [ sh:path mg:claimStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+                sh:in ( "UNVERIFIED_SOURCE_TEXT" "SUPPORTED" "DISPUTED" "CONTRADICTED" "INSUFFICIENT_EVIDENCE" ) ] ;
+  sh:property [ sh:path mg:sourceRecord ; sh:nodeKind sh:IRI ] .
+
+mg:PublicSourceShape a sh:NodeShape ;
+  sh:targetClass mg:PublicSource ;
+  sh:property [ sh:path mg:sourceURL ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:anyURI ] ;
+  sh:property [ sh:path mg:retrievedOn ; sh:maxCount 1 ; sh:datatype xsd:date ] .
+
+# A SHACL-conforming record is not equivalent to a proven or authenticated fact.
+# Legal status and limitation periods must be determined case-by-case and as-of-date.
