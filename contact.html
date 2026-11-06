@@ -7,15 +7,25 @@
 <link rel="stylesheet" href="style.css?v=20261106-footer-2">
 <script src="site-config.js" defer></script><script src="site-shell.js?v=20261106-footer-2" defer></script>
 <style>
-.mg-contact-page{max-width:900px}.mg-contact-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:24px}
-.mg-contact-page .panel{padding:22px;border:1px solid var(--line,#555);border-radius:12px}
-.mg-contact-page label{display:block;margin:15px 0;font-weight:600}
-.mg-contact-page input,.mg-contact-page select,.mg-contact-page textarea{display:block;width:100%;padding:12px;margin-top:7px;background:var(--panel,#171717);border:1px solid #777;color:inherit;border-radius:6px;font:inherit}
-.mg-contact-page textarea{min-height:150px;resize:vertical}
-.mg-contact-page button,.mg-contact-page .button{display:inline-block;margin:8px 8px 8px 0;padding:12px 16px;border-radius:6px;cursor:pointer}
+.mg-contact-page{max-width:1060px}
+.mg-contact-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.15fr);gap:22px;align-items:start}
+.mg-contact-page .panel{padding:clamp(20px,3vw,34px);border:1px solid var(--line,#515151);border-radius:18px;background:var(--panel,#181818);box-shadow:0 12px 35px rgba(0,0,0,.1)}
+.mg-contact-page .panel h2{font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.3;letter-spacing:-.025em;margin:0 0 14px}
+.mg-contact-page .panel p{font-size:.95rem;line-height:1.65}
+.mg-contact-page label{display:block;margin:17px 0;font-size:.91rem;line-height:1.4;font-weight:600}
+.mg-contact-page input,.mg-contact-page select,.mg-contact-page textarea{box-sizing:border-box;display:block;width:100%;max-width:100%;min-height:48px;padding:13px 15px;margin-top:7px;background:var(--panel,#171717);border:1px solid #767676;color:inherit;border-radius:11px;font:inherit;font-size:1rem;font-weight:400}
+.mg-contact-page input:focus,.mg-contact-page select:focus,.mg-contact-page textarea:focus{outline:2px solid var(--accent,#c8a56c);outline-offset:1px}
+.mg-contact-page textarea{min-height:146px;resize:vertical;line-height:1.55}
+.mg-contact-page button,.mg-contact-page .button{display:inline-block;margin:8px 8px 8px 0;padding:14px 19px;border-radius:10px;cursor:pointer;text-align:center;font-weight:650}
+.mg-contact-page #mg-contact-submit{width:100%;min-height:50px}
+.mg-contact-page button:disabled{opacity:.65;cursor:default}
 .mg-contact-page .status{display:block;margin-top:12px}
-.mg-contact-page pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font:inherit}
-@media(max-width:760px){.mg-contact-layout{grid-template-columns:1fr}}
+.mg-contact-page pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font:inherit;font-size:.9rem;line-height:1.6}
+.mg-contact-page .contact-check{display:flex;gap:11px;align-items:flex-start;font-weight:400;margin:20px 0}
+.mg-contact-page .contact-check input{width:18px;min-height:18px;height:18px;flex:none;margin:3px 0 0}
+.mg-contact-page #mg-contact-confirmation{padding:22px;border:1px solid var(--line,#555);border-radius:12px;background:rgba(140,140,140,.08)}
+.mg-contact-page #mg-contact-confirmation h3{margin:0 0 8px}
+@media(max-width:760px){.mg-contact-layout{grid-template-columns:1fr}.mg-contact-page .panel{padding:20px}}
 </style>
 
 </head>
@@ -26,20 +36,21 @@
 <div class="mg-contact-layout">
 <div class="panel">
 <h2>Current contact route</h2>
-<p><strong>General enquiries can now be submitted through Formspree using the form on this page.</strong> The public form endpoint has been connected, but delivery into the private Gmail inbox still needs an end-to-end test. LinkedIn remains an alternative contact route; the future branded mailbox is not yet active.</p>
+<p><strong>General enquiries can now be submitted through Formspree using the form on this page.</strong> Test enquiries have successfully reached the private Gmail receiving inbox. LinkedIn remains an alternative contact route; the future branded mailbox is not yet active.</p>
 <p><a class="button" href="https://www.linkedin.com/in/gracerose-uk" target="_blank" rel="noopener noreferrer">Open professional LinkedIn profile</a></p>
 <p>LinkedIn messages may require a LinkedIn account or connection, depending on LinkedIn's settings. Do not include private records or sensitive personal information in an unsolicited message.</p>
-<p><strong>For books, products and services:</strong> the <a href="my-book.html#enquiry">book enquiry page</a>, <a href="products.html#enquiry">product enquiry page</a> and <a href="services.html#enquiry">service enquiry page</a> use the same hosted submission service. A submitted enquiry does not guarantee an order, booking, payment or email notification; delivery must be checked.</p>
+<p><strong>For books, products and services:</strong> the <a href="my-book.html#enquiry">book enquiry page</a>, <a href="products.html#enquiry">product enquiry page</a> and <a href="services.html#enquiry">service enquiry page</a> use the same hosted submission service. Submitting an enquiry does not place an order or create a payment obligation.</p>
 </div>
 <div class="panel">
-<h2>Prepare a short enquiry</h2>
+<h2>Send an enquiry</h2>
 <p><span id="mg-contact-instructions">Submit your enquiry through Formspree. The website does not take payments or confirm orders; email notification delivery is verified separately.</span></p>
 <form id="mg-contact-prep" action="https://formspree.io/f/xoeebzbg" method="POST">
 <div style="position:absolute;left:-99999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Leave blank<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
-<label>Your email <input name="email" type="email" maxlength="254" autocomplete="email" required></label>
-<label>Your name <input name="name" maxlength="90" required autocomplete="name"></label>
+<label>Full name <input name="name" maxlength="90" required autocomplete="name" placeholder="Your full name"></label>
+<label>Email address <input name="email" type="email" maxlength="254" autocomplete="email" required placeholder="you@example.com"></label>
 <label>Area of interest <select name="topic" required><option value="">Choose a topic</option><option>Research enquiry</option><option>Professional opportunity</option><option>Potential collaboration</option><option>Company / business development</option><option>Book or publication enquiry</option><option>Service or product enquiry</option><option>Other</option></select></label>
-<label>Message <textarea name="message" maxlength="1800" required placeholder="A brief description without confidential documents or sensitive details"></textarea></label>
+<label>How can we help? <textarea name="message" maxlength="1800" required placeholder="Tell us briefly what you need. Please do not include sensitive records."></textarea></label>
+<label class="contact-check"><input type="checkbox" name="consent" required value="Yes"><span>I agree that Manifold Grace may use my information to respond to this enquiry.</span></label>
 <button type="submit" class="button" id="mg-contact-submit">Send enquiry</button>
 </form>
 <div id="mg-contact-confirmation" hidden role="status" aria-live="polite"><h3>Enquiry submitted</h3><p>Thank you. Your enquiry was accepted by Formspree and routed for review.</p><button type="button" class="button" id="mg-contact-another">Send another enquiry</button></div>
@@ -51,7 +62,7 @@
 </div>
 </div>
 </div>
-<section><h2>Form submissions and Gmail verification</h2><p>The online enquiry form uses Formspree to receive submitted information. Check the Formspree dashboard and verify the destination inbox and notification settings before relying on email alerts. The professional branded mailbox is a separate project and is not required to receive Formspree submissions into an existing private inbox. Do not include confidential documents or payment credentials in the form.</p><p><a href="professional.html">Professional record</a> · <a href="company-intelligence-development-financing.html">Company development research</a> · <a href="conglomerate.html">Venture readiness</a></p></section>
+<section><h2>How enquiries are handled</h2><p>Formspree processes the website submissions and sends notifications to a private receiving inbox. Delivery has been demonstrated with test enquiries; messages may still occasionally be delayed or filtered. The professional branded mailbox is a separate project and is not required to receive Formspree submissions into an existing private inbox. Do not include confidential documents or payment credentials in the form.</p><p><a href="professional.html">Professional record</a> · <a href="company-intelligence-development-financing.html">Company development research</a> · <a href="conglomerate.html">Venture readiness</a></p></section>
 </div></section>
 </main><footer><div class="wrap" data-site-footer></div></footer>
 <script>
