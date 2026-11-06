@@ -17,7 +17,7 @@
 .mg-contact-page pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font:inherit}
 @media(max-width:760px){.mg-contact-layout{grid-template-columns:1fr}}
 </style>
-  <script src="assets/bank-request-config.js?v=20261106-contact-fix1" defer></script>
+
 </head>
 <body><header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main>
@@ -34,19 +34,19 @@
 <div class="panel">
 <h2>Prepare a short enquiry</h2>
 <p><span id="mg-contact-instructions">Online sending is not yet configured. You can prepare the message locally and copy it; nothing will be submitted automatically.</span></p>
-<form id="mg-contact-prep">
+<form id="mg-contact-prep" action="https://formspree.io/f/xoeebzbg" method="POST">
 <div style="position:absolute;left:-99999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Leave blank<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
 <label>Your email <input name="email" type="email" maxlength="254" autocomplete="email" required></label>
 <label>Your name <input name="name" maxlength="90" required autocomplete="name"></label>
 <label>Area of interest <select name="topic" required><option value="">Choose a topic</option><option>Research enquiry</option><option>Professional opportunity</option><option>Potential collaboration</option><option>Company / business development</option><option>Book or publication enquiry</option><option>Service or product enquiry</option><option>Other</option></select></label>
 <label>Message <textarea name="message" maxlength="1800" required placeholder="A brief description without confidential documents or sensitive details"></textarea></label>
-<button type="submit" class="button" id="mg-contact-submit">Prepare draft — do not send</button>
+<button type="submit" class="button" id="mg-contact-submit">Send enquiry</button>
 </form>
 <div id="mg-contact-result" hidden aria-live="polite">
-<h3>Prepared message</h3>
+<h3>Enquiry details</h3>
 <pre id="mg-contact-text"></pre>
 <button type="button" class="button" id="mg-copy-contact">Copy message</button>
-<p id="mg-contact-status" class="status" role="status">Nothing has been sent. Use the copy option and send through your chosen contact method.</p>
+<p id="mg-contact-status" class="status" role="status">Your submission status will appear here.</p>
 </div>
 </div>
 </div>
@@ -61,12 +61,12 @@ document.addEventListener('DOMContentLoaded', function(){
   const output = document.getElementById('mg-contact-text');
   const status = document.getElementById('mg-contact-status');
   const button = document.getElementById('mg-contact-submit');
-  const endpoint = String(window.MG_BANK_REQUEST?.formspreeEndpoint || '').trim();
+  const endpoint = form.action;
   const active = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint);
   document.getElementById('mg-contact-instructions').textContent = active ?
     'Send a general enquiry securely through our hosted form service. Do not send sensitive personal information, payment credentials or confidential records.' :
-    'Online sending is not yet configured. You can prepare the message locally and copy it; nothing will be submitted automatically.';
-  button.textContent = active ? 'Submit enquiry' : 'Prepare draft — do not send';
+    'The sending service is temporarily unavailable. Please use the alternative contact route.';
+  button.textContent = 'Send enquiry';
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     if (!form.reportValidity()) return;
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'Topic: '+String(data.get('topic')||'').trim(),'','Message:',String(data.get('message')||'').trim()].join('\n');
     result.hidden = false;
     if (!active) {
-      status.textContent = 'Draft prepared locally. Nothing has been sent. Copy the text and send through an available contact route.';
+      status.textContent = 'This form has no valid receiving endpoint. Nothing was sent.';
       return;
     }
     button.disabled = true;
