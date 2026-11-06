@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://manifoldgrace.github.io/schemas/evidence-record.schema.json",
+  "title": "Manifold Grace Evidence Record — Draft",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_id",
+    "claim_text",
+    "source_type",
+    "source_uri",
+    "retrieved_at",
+    "evidence_status",
+    "review_status",
+    "access_level",
+    "limitations",
+    "correction_history"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^MG-[A-Z0-9-]+$"
+    },
+    "claim_text": {
+      "type": "string",
+      "minLength": 10
+    },
+    "source_type": {
+      "enum": [
+        "legislation",
+        "official_dataset",
+        "corporate_declaration",
+        "independent_research",
+        "journalism",
+        "testimony",
+        "secondary_commentary",
+        "other"
+      ]
+    },
+    "source_uri": {
+      "type": "string",
+      "minLength": 1
+    },
+    "issuer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jurisdiction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "event_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "publication_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "evidence_status": {
+      "enum": [
+        "supported",
+        "contradicted",
+        "disputed",
+        "insufficient_evidence"
+      ]
+    },
+    "review_status": {
+      "enum": [
+        "pending",
+        "reviewed",
+        "approved"
+      ]
+    },
+    "reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "limitations": {
+      "type": "string"
+    },
+    "access_level": {
+      "enum": [
+        "public",
+        "restricted",
+        "confidential"
+      ]
+    },
+    "correction_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "date",
+          "description"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": "string"
+          },
+          "reference": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
