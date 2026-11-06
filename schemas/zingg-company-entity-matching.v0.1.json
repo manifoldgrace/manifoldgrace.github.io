@@ -1,0 +1,85 @@
+{
+  "project": "Manifold Grace — company entity matching field definitions",
+  "version": "0.1",
+  "status": "DESIGN_ONLY_NOT_EXECUTABLE_ZINGG_JOB",
+  "reference": "https://github.com/zinggAI/zingg/blob/main/docs/stepbystep/configuration/field-definitions.md",
+  "purpose": "Candidate matching of publicly sourced legal-entity rows. Human reviewer decides merge and relation semantics.",
+  "fieldDefinition": [
+    {
+      "fieldName": "candidate_id",
+      "fields": "candidate_id",
+      "dataType": "string",
+      "matchType": "DONT_USE"
+    },
+    {
+      "fieldName": "registry_name",
+      "fields": "registry_name",
+      "dataType": "string",
+      "matchType": "EXACT"
+    },
+    {
+      "fieldName": "registry_company_number",
+      "fields": "registry_company_number",
+      "dataType": "string",
+      "matchType": "EXACT"
+    },
+    {
+      "fieldName": "jurisdiction",
+      "fields": "jurisdiction",
+      "dataType": "string",
+      "matchType": "EXACT"
+    },
+    {
+      "fieldName": "company_name",
+      "fields": "company_name",
+      "dataType": "string",
+      "matchType": "FUZZY"
+    },
+    {
+      "fieldName": "historical_name",
+      "fields": "historical_name",
+      "dataType": "string",
+      "matchType": "FUZZY"
+    },
+    {
+      "fieldName": "registered_address_public",
+      "fields": "registered_address_public",
+      "dataType": "string",
+      "matchType": "FUZZY"
+    },
+    {
+      "fieldName": "entity_class",
+      "fields": "entity_class",
+      "dataType": "string",
+      "matchType": "EXACT"
+    },
+    {
+      "fieldName": "source_reference",
+      "fields": "source_reference",
+      "dataType": "string",
+      "matchType": "DONT_USE"
+    }
+  ],
+  "guardrails": {
+    "input": "PUBLIC_REGISTRY_DATA_ONLY",
+    "person_matching": "OUT_OF_SCOPE",
+    "merge_policy": "NEVER_AUTOMERGE",
+    "official_registry_identity": "Only considered confirmed after independent registry source review and jurisdiction scoping",
+    "do_not_infer": [
+      "founder identity from names",
+      "ultimate beneficial ownership from name similarity",
+      "parent-subsidiary links from clustering",
+      "historic continuity from a shared domain"
+    ],
+    "retain": [
+      "source identifiers",
+      "as-of dates",
+      "source evidence",
+      "candidate pair scores",
+      "reviewer decisions",
+      "negative matches",
+      "merge and split correction history"
+    ]
+  },
+  "deployment_note": "fieldDefinition mirrors documented Zingg matching semantics but this document is NOT a complete runnable Zingg configuration. Input/output pipes, model settings, labelling and runtime setup remain unconfigured."
+}
