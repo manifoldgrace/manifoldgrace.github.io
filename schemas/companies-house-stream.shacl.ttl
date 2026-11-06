@@ -1,0 +1,23 @@
+@prefix mg: <https://manifoldgrace.github.io/ns/research#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Structural validation only. Does not verify factual identity or legal status.
+mg:CompanyStreamEventShape a sh:NodeShape ;
+  sh:targetClass mg:CompanyStreamEvent ;
+  sh:property [ sh:path mg:resourceId ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+  sh:property [ sh:path mg:resourceKind ; sh:minCount 1 ; sh:maxCount 1 ; sh:hasValue "company-profile#company-profile" ] ;
+  sh:property [ sh:path mg:resourceUri ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^/company/" ] ;
+  sh:property [ sh:path mg:eventType ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "changed" "deleted" ) ] ;
+  sh:property [ sh:path mg:timepoint ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 0 ] ;
+  sh:property [ sh:path mg:publishedAt ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path mg:auditStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:hasValue "NOT_AUDITED" ] .
+
+mg:ChangedProfileShape a sh:NodeShape ;
+  sh:targetClass mg:ChangedProfile ;
+  sh:property [ sh:path mg:companyNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:pattern "^[A-Z0-9]{2,8}$" ] ;
+  sh:property [ sh:path mg:companyName ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+  sh:property [ sh:path mg:jurisdiction ; sh:maxCount 1 ; sh:datatype xsd:string ] .
+
+# Jurisdiction is optional because legitimate stream events may omit it.
+# A deletion event may also omit its profile data. Preserve all events for review.
