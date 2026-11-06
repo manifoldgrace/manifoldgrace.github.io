@@ -1,0 +1,17 @@
+@prefix mg: <https://manifoldgrace.github.io/ns/research#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/manifold-grace/synthetic/> .
+
+ex:fictionalCo a mg:LegalEntity ;
+  mg:registrationNumber "EXAMPLE-001" ;
+  mg:registryJurisdiction "SYNTHETIC" ;
+  mg:auditStatus "NOT_AUDITED" .
+
+ex:source a mg:PublicSource ;
+  mg:sourceURL "https://example.org/synthetic-only"^^xsd:anyURI ;
+  mg:retrievedOn "2026-11-06"^^xsd:date .
+
+ex:claim a mg:EvidenceAssertion ;
+  mg:claimText "Fictional entity is present in a synthetic test." ;
+  mg:claimStatus "UNVERIFIED_SOURCE_TEXT" ;
+  mg:sourceRecord ex:source .
