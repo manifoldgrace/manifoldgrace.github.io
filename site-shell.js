@@ -206,6 +206,14 @@
           "conglomerate.html"
         ],
         [
+          "Team",
+          "team.html"
+        ],
+        [
+          "Careers",
+          "careers.html"
+        ],
+        [
           "Trading",
           "trading.html"
         ]
@@ -272,13 +280,15 @@
     ["Public Speaking","public-speaking.html"],
     ["Live Sessions","live-sessions.html"],
     ["Socials","socials.html"],
-    ["Products","products.html"]
+    ["Products","products.html"],
+    ["Team","team.html"],
+    ["Careers","careers.html"]
   ];
   const footerGroups = [
     ["Research & Knowledge", [0, 4, 5, 6, 7, 8, 9]],
     ["Professional & Records", [2, 3, 10, 11]],
     ["Culture & Life", [1, 13]],
-    ["Creative & Enterprise", [12, 14]]
+    ["Creative & Enterprise", [12, 14, 15, 16]]
   ];
   document.querySelectorAll("[data-site-footer]").forEach((footer) => {
     const top = document.createElement("nav");
