@@ -194,6 +194,10 @@
           "app-design-ideas.html"
         ],
         [
+          "Company Intelligence & Financing",
+          "company-intelligence-development-financing.html"
+        ],
+        [
           "Venture",
           "conglomerate.html"
         ],
