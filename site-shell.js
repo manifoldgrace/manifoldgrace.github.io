@@ -266,14 +266,50 @@
     ["Socials","socials.html"],
     ["Products","products.html"]
   ];
+  const footerGroups = [
+    ["Research & Knowledge", [0, 4, 5, 6, 7, 8, 9]],
+    ["Professional & Records", [2, 3, 10, 11]],
+    ["Culture & Life", [1, 13]],
+    ["Creative & Enterprise", [12, 14]]
+  ];
   document.querySelectorAll("[data-site-footer]").forEach((footer) => {
-    const top = document.createElement("div");
-    top.className = "footer-links";
-    secondary.forEach(([label, href]) => {
-      const a = document.createElement("a");
-      a.href = href;
-      a.textContent = label;
-      top.appendChild(a);
+    const top = document.createElement("nav");
+    top.className = "footer-links footer-menu-groups";
+    top.setAttribute("aria-label", "Footer navigation by topic");
+    const toggles = [];
+    footerGroups.forEach(([title, indexes]) => {
+      const details = document.createElement("details");
+      details.className = "site-footer-group";
+      const summary = document.createElement("summary");
+      summary.textContent = title;
+      const panel = document.createElement("div");
+      panel.className = "site-footer-panel";
+      indexes.forEach(index => {
+        const [label, href] = secondary[index];
+        const a = document.createElement("a");
+        a.href = href;
+        a.textContent = label;
+        if (path === href.toLowerCase().split("#")[0]) {
+          a.setAttribute("aria-current", "page");
+          summary.classList.add("has-current");
+        }
+        panel.appendChild(a);
+      });
+      details.append(summary, panel);
+      details.addEventListener("toggle", () => {
+        if (details.open) toggles.forEach(other => { if (other !== details) other.open = false; });
+      });
+      toggles.push(details);
+      top.appendChild(details);
+    });
+    top.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        toggles.forEach(details => { details.open = false; });
+        event.target.closest("details")?.querySelector("summary")?.focus();
+      }
+    });
+    document.addEventListener("click", event => {
+      if (!top.contains(event.target)) toggles.forEach(details => { details.open = false; });
     });
     const note = document.createElement("p");
     note.className = "footer-note";
