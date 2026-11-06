@@ -107,7 +107,7 @@
         for (const card of designs) {
           const title = card.querySelector('h3')?.textContent?.trim();
           const priceText = card.querySelector('.capsule-price')?.textContent || '';
-          const match = priceText.match(/£\\s*(\\d+(?:\\.\\d{1,2})?)/);
+          const match = priceText.match(/£\s*(\d+(?:\.\d{1,2})?)/);
           if (!title || !match) continue;
           const amount = Number(match[1]);
           priceMap.set(title, amount);
@@ -252,6 +252,9 @@
       });
       root.querySelector('.new-enquiry').addEventListener('click', () => {
         form.reset();
+        if (page === 'products') {
+          priceLabel.textContent = 'Select a design';
+        }
         reference = '';
         body = '';
         form.hidden = false;
