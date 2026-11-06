@@ -47,6 +47,12 @@
             <p><small>Do not include card details, banking passwords or sensitive documents. Nothing is charged by this form.</small></p>
             <button type="submit">Prepare request (does not send)</button>
           </form>
+          <div class="sent-confirmation" hidden role="status" aria-live="polite">
+            <h3>Enquiry submitted</h3>
+            <p class="sent-reference"></p>
+            <p>Thank you. Your enquiry has been received by the form service. This is not an order, booking or payment confirmation.</p>
+            <button type="button" class="secondary new-enquiry">Send another enquiry</button>
+          </div>
           <div class="summary" hidden>
             <h3>Your request</h3>
             <pre></pre>
@@ -62,6 +68,7 @@
         </section>`;
       const form = root.querySelector('form');
       const summary = root.querySelector('.summary');
+      const confirmation = root.querySelector('.sent-confirmation');
       const status = root.querySelector('.status');
       const link = summary.querySelector('a');
       let body = '';
@@ -108,9 +115,12 @@
           link.removeAttribute('href');
           status.textContent = 'Automated email delivery is not configured, and nothing has been sent. You may copy the request for later or contact Manifold Grace through LinkedIn. Do not assume that saving this page registers an enquiry or order.';
         }
-        summary.hidden = false;
-        summary.scrollIntoView({block:'nearest'});
-        if (!live) return;
+        if (!live) {
+          summary.hidden = false;
+          summary.scrollIntoView({block:'nearest'});
+          return;
+        }
+        summary.hidden = true;
         // Hosted form service: endpoint must be enabled and verified by the site owner.
         // Fetch success means the provider accepted the submission, not that Gmail delivery has been independently proven.
         link.hidden = true;
@@ -131,15 +141,23 @@
             headers: { 'Accept': 'application/json' }
           });
           if (!response.ok) {
+            summary.hidden = false;
             status.textContent = response.status === 429 ?
               'The form provider is receiving too many requests. Please try again later; delivery is not confirmed.' :
               'The provider did not accept this enquiry. Nothing is confirmed. Please retry or copy your request.';
             return;
           }
-          status.textContent = 'Your enquiry was accepted by the form service. Reference: ' + reference + '. This is not an order or payment confirmation.';
+          // The owner has verified real Formspree notifications arriving in Gmail.
+          // Keep customer-facing confirmation compact; detailed copies remain in Formspree/Gmail.
+          form.hidden = true;
+          summary.hidden = true;
+          confirmation.querySelector('.sent-reference').textContent = 'Reference: ' + reference;
+          confirmation.hidden = false;
+          confirmation.scrollIntoView({block:'nearest'});
           submit.textContent = 'Enquiry submitted';
           return;
         } catch (error) {
+          summary.hidden = false;
           status.textContent = 'Could not verify submission. Do not assume it arrived. You can copy the request or try again.';
           return;
         } finally {
@@ -163,6 +181,17 @@
         } catch {
           status.textContent = 'Select the request text above and copy it manually. Nothing has been sent.';
         }
+      });
+      root.querySelector('.new-enquiry').addEventListener('click', () => {
+        form.reset();
+        reference = '';
+        body = '';
+        form.hidden = false;
+        summary.hidden = true;
+        confirmation.hidden = true;
+        submit.disabled = false;
+        submit.textContent = 'Send enquiry securely';
+        form.elements.namedItem('name').focus();
       });
       root.querySelector('.edit').addEventListener('click', () => {
         summary.hidden = true;
