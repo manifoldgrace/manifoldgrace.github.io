@@ -95,6 +95,10 @@
           "independent-coverage.html"
         ],
         [
+          "Contact",
+          "contact.html"
+        ],
+        [
           "About",
           "about.html"
         ],
