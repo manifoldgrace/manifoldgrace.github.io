@@ -5,13 +5,13 @@ export function seedDemo(project) {
   return {
     html: '<article><p class="label">Fictional pilot · visual fixture</p><h1 id="title"></h1><p id="pilot"></p><h2>What I will inspect</h2><p id="checks"></p><button id="toggle">Show investigation boundary</button><p id="boundary" hidden>No model is being called. This example displays a planned case; it does not establish a research finding.</p></article>',
     css: 'body { font: 17px/1.6 system-ui; background: #eef3f7; color: #173047; padding: 22px; } article { max-width: 750px; margin: auto; } .label { text-transform: uppercase; font-size: 12px; letter-spacing: .08em; } button { padding: 10px 14px; font: inherit; border: 1px solid #345; border-radius: 6px; background: white; } button:focus-visible { outline: 3px solid #258; }',
-    js: 'const fixture = ' + JSON.stringify({title: project.title, pilot: project.pilot.input, checks: project.pilot.checks}, null, 2) + ';\n// Your browser code: replace or extend this fixture as you investigate.\ndocument.getElementById("title").textContent = fixture.title;\ndocument.getElementById("pilot").textContent = fixture.pilot;\ndocument.getElementById("checks").textContent = fixture.checks;\ndocument.getElementById("toggle").addEventListener("click", () => { const p = document.getElementById("boundary"); p.hidden = !p.hidden; });'
+    js: 'const fixture = ' + JSON.stringify({title: project.title, pilot: project.pilot.input, checks: project.pilot.checks}, null, 2) + ';\n// Browser fixture for the planned investigation; no model API is connected.\ndocument.getElementById("title").textContent = fixture.title;\ndocument.getElementById("pilot").textContent = fixture.pilot;\ndocument.getElementById("checks").textContent = fixture.checks;\ndocument.getElementById("toggle").addEventListener("click", () => { const p = document.getElementById("boundary"); p.hidden = !p.hidden; });'
   };
 }
 export function initialDraft(project, stages) {
   return {version: 1, project_id: project.id, sections: {...project.initial_sections},
     stages: Object.fromEntries(stages.map(s => [s.id, 'not_started'])),
-    terminology: 'Reading to confirm: Infrastructure as Code (IaC), rather than “Internet as Code”.',
+    terminology: 'Infrastructure as Code (IaC): version-controlled configuration of computing infrastructure. Its relevance depends on the selected project.',
     roadmap_note: '', demo: seedDemo(project), auto_preview: true};
 }
 export function validateDraft(value, project, schema) {
@@ -28,6 +28,13 @@ export function validateDraft(value, project, schema) {
   result.auto_preview = value.auto_preview;
   return result;
 }
+export function refreshUneditedDefaults(draft, project) {
+  const previous = project.previous_initial_sections || {};
+  for (const [id, text] of Object.entries(previous)) {
+    if (draft.sections[id] === text) draft.sections[id] = project.initial_sections[id];
+  }
+  return draft;
+}
 export function buildPreview(demo) {
   const css = demo.css.replace(/<\/style/gi, '<\\/style');
   const js = demo.js.replace(/<\/script/gi, '<\\/script');
@@ -35,10 +42,10 @@ export function buildPreview(demo) {
 }
 export function exportMarkdown(project, schema, draft) {
   let md = '# Research dossier: ' + project.title + '\n\nWorking draft — exported ' + new Date().toISOString() + '\n\nResearch entry: ' + project.canonical_url + '\nWorkspace: ' + project.workspace_url + '\n\n';
-  for (const [i, s] of schema.sections.entries()) md += '## ' + (i+1) + '. ' + s.title + '\n\n' + s.prompt + '\n\n' + (draft.sections[s.id] || '_Analysis to add._') + '\n\n';
+  for (const [i, s] of schema.sections.entries()) md += '## ' + (i+1) + '. ' + s.title + '\n\n' + s.prompt + '\n\n' + (draft.sections[s.id] || '_Analysis not yet recorded._') + '\n\n';
   md += '## Milestone record\n\n';
   for (const s of schema.stages) md += '- ' + s.title + ': ' + draft.stages[s.id] + '\n';
-  return md + '\nDependencies and next action: ' + draft.roadmap_note + '\n\nTerminology corrections: ' + draft.terminology + '\n\nLocal drafts do not certify findings or update the public repository. Preserve your evidence and contribution records.\n';
+  return md + '\nDependencies and next action: ' + draft.roadmap_note + '\n\nTerminology corrections: ' + draft.terminology + '\n\nLocal drafts do not certify findings or update the public repository. Evidence and contribution records accompany the research account.\n';
 }
 
 async function initialise() {
@@ -57,7 +64,7 @@ async function initialise() {
   function save() {
     readFields();
     try { localStorage.setItem(storageKey(project.id), JSON.stringify(draft)); message('Saved in this browser only. Export a copy before changing device or clearing browser data.'); }
-    catch { message('Browser storage is unavailable or full. Your edits remain on this page; export a copy to keep them.'); }
+    catch { message('Browser storage is unavailable or full. Edits remain on this page and can be exported.'); }
   }
   function runDemo() { readFields(); $('demo-frame').srcdoc = buildPreview(draft.demo); $('demo-status').textContent = 'Browser preview rendered. HTML/CSS/JavaScript only; no model API is connected.'; }
   function clearPreview() { clearTimeout(renderTimer); $('demo-frame').srcdoc = '<!doctype html><html lang="en"><body></body></html>'; $('demo-status').textContent = 'Preview cleared. Choose Run browser preview when ready.'; }
@@ -68,7 +75,7 @@ async function initialise() {
     draft = initialDraft(project, schema.stages);
     let saved = null;
     if (imported) { draft = validateDraft(imported, project, schema); draft.auto_preview = false; }
-    else { try { saved = localStorage.getItem(storageKey(project.id)); if (saved) draft = validateDraft(JSON.parse(saved), project, schema); } catch { message('A stored draft could not be loaded. The public starter is displayed; export changes to keep them.'); } }
+    else { try { saved = localStorage.getItem(storageKey(project.id)); if (saved) draft = refreshUneditedDefaults(validateDraft(JSON.parse(saved), project, schema), project); } catch { message('A stored draft could not be loaded. The public starter is displayed; export changes to keep them.'); } }
     $('project-select').value = project.id; $('project-title').textContent = project.title;
     $('project-track').textContent = project.path.split('/')[0]; $('project-status').textContent = project.maturity;
     const links = $('project-links'); links.replaceChildren(link('Research entry', project.canonical_url), link('My project — GitHub', project.workspace_url), link('Source code', project.source_code_url), link('Written dossier', project.workspace_url.replace('/tree/', '/blob/') + '/RESEARCH.md'), link('Roadmap source', project.workspace_url.replace('/tree/', '/blob/') + '/ROADMAP.mmd'));
@@ -77,14 +84,14 @@ async function initialise() {
       const details = document.createElement('details'); details.open = i === 0;
       const summary = document.createElement('summary'); summary.textContent = (i+1) + '. ' + s.title;
       const p = document.createElement('p'); p.className = 'method-prompt'; p.textContent = s.prompt;
-      const label = document.createElement('label'); label.htmlFor = 'section-' + s.id; label.textContent = 'Your working text';
-      const input = document.createElement('textarea'); input.id = label.htmlFor; input.rows = 7; input.maxLength = MAX_TEXT; input.value = draft.sections[s.id]; input.placeholder = 'Write your analysis, sources and decisions here.'; input.addEventListener('input', save);
+      const label = document.createElement('label'); label.htmlFor = 'section-' + s.id; label.textContent = 'Research notes';
+      const input = document.createElement('textarea'); input.id = label.htmlFor; input.rows = 7; input.maxLength = MAX_TEXT; input.value = draft.sections[s.id]; input.placeholder = 'Analysis and supporting evidence will be recorded as the investigation develops.'; input.addEventListener('input', save);
       textareas.set(s.id, input); details.append(summary, p, label, input); container.append(details);
     });
     const roadmap = $('roadmap-stages'); roadmap.replaceChildren(); stageInputs.clear();
     schema.stages.forEach(s => {
       const li = document.createElement('li'), h = document.createElement('h3'), p = document.createElement('p'), label = document.createElement('label'), select = document.createElement('select');
-      h.textContent = s.title; p.textContent = s.evidence; label.textContent = 'Your milestone status'; label.htmlFor = 'stage-' + s.id; select.id = label.htmlFor;
+      h.textContent = s.title; p.textContent = s.evidence; label.textContent = 'Milestone status'; label.htmlFor = 'stage-' + s.id; select.id = label.htmlFor;
       for (const state of STAGE_STATES) { const option = document.createElement('option'); option.value = state; option.textContent = state.replaceAll('_', ' '); select.append(option); }
       select.value = draft.stages[s.id]; select.addEventListener('change', save); stageInputs.set(s.id, select); li.append(h, p, label, select); roadmap.append(li);
     });
@@ -93,7 +100,7 @@ async function initialise() {
     $('auto-preview').checked = draft.auto_preview; $('project-panel').hidden = false;
     const url = new URL(location.href); url.searchParams.set('project', project.id); history.replaceState(null, '', url);
     document.title = project.title + ' — Research Workbench | Manifold Grace';
-    message(imported ? 'Draft imported for this project. Preview is paused until you choose to run it.' : 'Project loaded. Initial prompts are editable plans, not findings.');
+    message(imported ? 'Draft imported. Preview paused pending an explicit run.' : 'Project record loaded. Research status and evidence are recorded separately.');
     if (draft.auto_preview && !imported) runDemo();
   }
   function download(content, type, suffix) { const blob = new Blob([content], {type}), url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = project.id + suffix; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
@@ -117,7 +124,7 @@ async function initialise() {
       try { if (file.size > 16000000) throw new Error('Draft exceeds the 16 MB import limit.'); const candidate = JSON.parse(await file.text()); validateDraft(candidate, project, schema); loadProject(project.id, candidate); save(); message('Draft imported and saved locally. Preview remains paused; inspect the code before running it.'); }
       catch (error) { message('Import not applied: ' + error.message); } event.target.value = '';
     });
-    $('reset-project').addEventListener('click', () => { if (!window.confirm('Reset this project’s browser draft? Export first if you want to keep your edits. GitHub files will not change.')) return; try { localStorage.removeItem(storageKey(project.id)); } catch {} loadProject(project.id); });
+    $('reset-project').addEventListener('click', () => { if (!window.confirm('Reset this project’s browser draft? Export first to retain a copy of the edits. GitHub files will not change.')) return; try { localStorage.removeItem(storageKey(project.id)); } catch {} loadProject(project.id); });
     loadProject(new URL(location.href).searchParams.get('project'));
   } catch (error) { message('Workbench unavailable: ' + error.message + ' Read the linked GitHub dossiers instead.'); }
 }

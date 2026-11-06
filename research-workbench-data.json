@@ -5,72 +5,72 @@
     {
       "id": "question",
       "title": "Research question, scope and contribution",
-      "prompt": "Define the problem, unit of analysis, intended audience, terms, exclusions and success criteria. State whether the work is exploratory, replication, evaluation, extension or a combination. Record why the question matters and what would count against the proposed answer."
+      "prompt": "The research scope sets out the problem, unit of analysis, intended audience, definitions, exclusions and evaluation criteria. The account distinguishes exploration, replication, evaluation and extension, including the evidence that could challenge the proposed interpretation."
     },
     {
       "id": "history",
       "title": "Historical development and primary evidence",
-      "prompt": "Trace dated milestones through original papers, repositories, releases, design records and originator links. Distinguish first proposal, implementation, release and later interpretation. Attribute documented rationales; label your own reconstruction of why a choice was made as an inference and consider alternatives."
+      "prompt": "Historical analysis follows dated primary papers, repositories, releases and design records, with links to originators where available. First proposals, implementations and releases are treated as distinct milestones. Documented design rationales are separated from later interpretations or hypotheses about those choices."
     },
     {
       "id": "inspection",
       "title": "Source-code inspection and annotated implementation",
-      "prompt": "Record the exact revision, relevant files/functions, dependencies, licences and the path from input to output. Annotate what each important component does, its assumptions and limits. Separate upstream code, your changes, original code and AI assistance. Do not equate an SDK with the proprietary service it accesses."
+      "prompt": "Source-code analysis concerns the checked revision, relevant files and functions, dependencies, licences and input-to-output behaviour. Annotations distinguish upstream components, project-specific changes, original implementation and AI assistance. An accessible SDK does not establish access to a proprietary service’s internals."
     },
     {
       "id": "science",
       "title": "Scientific framing and evaluation design",
-      "prompt": "Define constructs, hypotheses or exploratory questions, operational measures and competing explanations. Specify case selection, controls, baselines, interventions, sampling, repetition/seeds where applicable, budgets and uncertainty. Address construct, internal, external and ecological validity. Separate pre-specified tests from post-hoc exploration and statistical significance from practical importance."
+      "prompt": "Scientific evaluation concerns the research constructs, hypotheses, operational measures, competing explanations and case-selection strategy. Baselines, controls, interventions, repetition, resource budgets and uncertainty form part of the evaluation design. Pre-specified tests and exploratory observations are reported separately, with attention to validity and practical significance."
     },
     {
       "id": "architecture",
       "title": "Architecture, interfaces and execution environment",
-      "prompt": "Draw components, data flows, protocols, trust boundaries, state, storage and dependencies. Distinguish observed architecture from proposed designs and unknown internals. Identify where computation runs: browser, local Python, remote API, cloud CPU/GPU or simulator. Discuss latency, memory, cost, access and failure recovery. Include Infrastructure as Code (IaC) or unified communications only where genuinely relevant."
+      "prompt": "Architectural analysis maps components, data flows, protocols, trust boundaries, state, storage and dependencies. Observed architecture is distinguished from proposed designs and unknown internals. Execution location, latency, memory, costs, permissions and failure recovery are considered alongside cloud, Infrastructure as Code and communications requirements where relevant."
     },
     {
       "id": "extension",
       "title": "Comparative design and original contribution",
-      "prompt": "Compare the upstream baseline with your replication, alternative or extension using matched conditions and explicit differences. Explain design choices and trade-offs. Candidate contribution may be a method, negative result, dataset, diagnostic, implementation, synthesis or collaboration; originality remains a claim to investigate through prior-art checking, not an automatic property of hand-written text."
+      "prompt": "Comparative analysis examines the upstream baseline alongside a replication, alternative or extension under explicit conditions. The contribution may concern a method, implementation, dataset, diagnostic, negative finding, synthesis or collaboration. Claims of novelty depend on prior-art investigation and evidence of the differences introduced."
     },
     {
       "id": "implementation",
       "title": "Implementation and reproducibility",
-      "prompt": "Record environment/dependency versions, setup commands, fictional or authorised data, configuration, deterministic checks and model/API details. Preserve raw inputs/outputs and versioned transformations. Provide a small reproducible example; distinguish a visual demonstration, mock, offline test and live integration. Document changes and rollback/recovery steps."
+      "prompt": "The implementation record covers environment and dependency versions, setup, data permissions, configurations and model/API details. Raw inputs, outputs and transformations support reproducibility. Visual fixtures, offline tests and live integrations are identified separately, alongside change history and recovery arrangements."
     },
     {
       "id": "results",
       "title": "Observations, failures and uncertainty",
-      "prompt": "Report observations and failures with denominators, configurations, exceptions, missing runs and relevant uncertainty. Link each claim to raw evidence and scoring rules. Separate observed behaviour from inferred mechanisms, anecdote from repeated findings and tool/harness errors from model failures. Include null and negative results; never invent a chart or completed run."
+      "prompt": "The findings record will connect observations and failures to raw evidence, scoring rules, configurations, denominators and uncertainty. Observed behaviour is distinguished from inferred mechanisms, and harness errors from model failures. Missing, null and negative results remain part of the account."
     },
     {
       "id": "society",
       "title": "Ethical, societal and governance analysis",
-      "prompt": "Consider affected groups, access, power, labour, cultural context, privacy, consent, distribution of benefits/harms and routes of challenge. Explain the ethical or sociotechnical framework used and its limitations. Assess the selected system/version at its evidenced lifecycle stage rather than assuming a universal AI maturity level. Separate normative recommendations from empirical findings."
+      "prompt": "Ethical and societal analysis considers affected groups, access, power, labour, cultural context, privacy, consent, benefit distribution and routes of challenge. The selected theoretical framework and its limits are made explicit. Empirical findings, normative recommendations and the evidenced maturity of the system are treated separately."
     },
     {
       "id": "assurance",
       "title": "Quality assurance, security and the SDLC",
-      "prompt": "Select proportionate checks across requirements, design, implementation, testing, integration, deployment and maintenance. Distinguish scientific evaluation from unit/integration/regression, adversarial, accessibility and user-acceptance testing. Record threat models, permissions, secrets, dependencies, data handling, human review, CI/CD gates and rollback. A check passed or framework referenced is not certification or a guarantee of safety."
+      "prompt": "Quality assurance covers proportionate checks throughout requirements, design, implementation, integration, deployment and maintenance. Scientific evaluation is distinct from software, security, accessibility and acceptance testing. Threat models, permissions, secrets, dependencies, human review, CI/CD gates and rollback arrangements inform the assurance record; individual checks do not constitute certification."
     },
     {
       "id": "roadmap",
       "title": "End-to-end plan, milestones and decisions",
-      "prompt": "Map the route from question and literature/code inspection to design, implementation, evaluation, interpretation, review and handoff. For each milestone specify deliverable, acceptance evidence, dependencies, resource budget and next action. Revisit earlier stages when findings change the question. Mark actual versus planned completion explicitly."
+      "prompt": "The roadmap connects the question and evidence review with design, implementation, evaluation, interpretation and handoff. Milestones identify deliverables, acceptance evidence, dependencies, resource needs and review decisions. Planned work and evidenced completion are recorded separately, with scope for revisiting earlier stages."
     },
     {
       "id": "figures",
       "title": "Illustrations, architecture and educational explanation",
-      "prompt": "Use architecture/sequence diagrams for relationships, charts for measured results and annotated screenshots for observed behaviour. Provide captions, legends, units, uncertainty, alt text, source/version and creation method. Keep conceptual illustrations separate from empirical evidence. Pinterest is a discovery lead: locate the original source and reuse permission before uploading an image; record attribution and AI generation where applicable."
+      "prompt": "Illustrations support explanation through architectural and sequence diagrams, measured charts and annotated screenshots. Captions, units, uncertainty, alt text, source versions and creation methods establish context. Conceptual illustrations are distinguished from empirical evidence; image reuse depends on the original source and applicable permission."
     },
     {
       "id": "conclusions",
       "title": "Interpretation, contribution and limitations",
-      "prompt": "Answer the bounded research question at the strength supported by the evidence. Explain what the approach adds, changes or enables, where the baseline remains better and what remains unresolved. Relate conclusions to theories and terminology accurately. Separate demonstrated improvement, suggestive evidence, design proposal and future hypothesis; state limitations and a practical next investigation."
+      "prompt": "Interpretation addresses the bounded research question at the strength supported by the evidence. The account explains what the approach adds or enables, where the baseline remains stronger and what remains unresolved. Demonstrated improvements, suggestive observations, design proposals and future hypotheses retain distinct statuses."
     },
     {
       "id": "release",
       "title": "Accessible handoff, research release and dissemination",
-      "prompt": "Prepare a versioned package of report, code, permitted data/fixtures, figures, environment/run instructions, licence/attribution, limitations, contribution record and change log. Record accessibility review, evidence checks and reproducibility status. Decide whether it is a working note, technical report, preprint, software release or dataset. A public release is not peer review. Link an exact commit/tag and, if actually deposited, a version-specific persistent identifier. Draft originator feedback separately; do not infer receipt, collaboration or endorsement from sending it."
+      "prompt": "The handoff brings together a versioned report, code, permitted data or fixtures, figures, run instructions, attribution, limitations and change records. Accessibility, evidence checks and reproducibility status accompany the release. Working notes, technical reports, preprints, software releases and peer-reviewed publications are identified accurately, with separate records for dissemination and collaboration."
     }
   ],
   "stages": [
@@ -135,6 +135,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-1",
       "initial_sections": {
+        "question": "This investigation concerns OpenAI — ChatGPT / Codex / APIs. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: History says project P has a £100 limit; a later correction sets it to £60. Ask for a £75 purchase decision.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/openai/openai-python/tree/c6fc264689d384d5caec150fafa1a9567c4a3f56/src\nChecked revision: c6fc264689d384d5caec150fafa1a9567c4a3f56\nScope: Official API client; does not expose ChatGPT memory internals.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Uses latest limit; identifies the correction; preserves unrelated facts.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for OpenAI — ChatGPT / Codex / APIs. Initial fictional pilot: History says project P has a £100 limit; a later correction sets it to £60. Ask for a £75 purchase decision.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/openai/openai-python/tree/c6fc264689d384d5caec150fafa1a9567c4a3f56/src\nRevision: c6fc264689d384d5caec150fafa1a9567c4a3f56\nScope: Official API client; does not expose ChatGPT memory internals.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -149,9 +167,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-2",
@@ -177,6 +193,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-2",
       "initial_sections": {
+        "question": "This investigation concerns Anthropic — Claude API / Claude Code. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Source R1 permits processing except for withdrawn consent; extract a decision and its exact supporting span.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/anthropics/anthropic-sdk-python/tree/4c7b598466b88559583f98216139be8e9b34c1fc/src\nChecked revision: 4c7b598466b88559583f98216139be8e9b34c1fc\nScope: Official API client; native citation and schema compatibility remain service-side questions.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Preserves exception; span supports the extracted field; records endpoint compatibility.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Anthropic — Claude API / Claude Code. Initial fictional pilot: Source R1 permits processing except for withdrawn consent; extract a decision and its exact supporting span.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/anthropics/anthropic-sdk-python/tree/4c7b598466b88559583f98216139be8e9b34c1fc/src\nRevision: 4c7b598466b88559583f98216139be8e9b34c1fc\nScope: Official API client; native citation and schema compatibility remain service-side questions.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -191,9 +225,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-3",
@@ -219,6 +251,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-3",
       "initial_sections": {
+        "question": "This investigation concerns Google — Gemini / Google AI. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Policy R1 published 1 January permits X; correction R2 published 1 March forbids X. Ask what was knowable on 1 February.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/googleapis/python-genai/tree/0e3483167f9fc79a99a45992f8bf2aee68056629/google\nChecked revision: 0e3483167f9fc79a99a45992f8bf2aee68056629\nScope: Official Gemini API client; not a historical web archive.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Separates publication and effective dates; excludes later knowledge; abstains if a version is unavailable.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Google — Gemini / Google AI. Initial fictional pilot: Policy R1 published 1 January permits X; correction R2 published 1 March forbids X. Ask what was knowable on 1 February.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/googleapis/python-genai/tree/0e3483167f9fc79a99a45992f8bf2aee68056629/google\nRevision: 0e3483167f9fc79a99a45992f8bf2aee68056629\nScope: Official Gemini API client; not a historical web archive.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -233,9 +283,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-4",
@@ -261,6 +309,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-4",
       "initial_sections": {
+        "question": "This investigation concerns Microsoft — Microsoft 365 Copilot. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: A fictional source is cited, then superseded and access revoked. Compare historical answer pointers with newly retrieved content.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/microsoft/autogen/tree/d07c667a3239ea4ab7af62a53b0f4ff205a1f23d/python\nChecked revision: d07c667a3239ea4ab7af62a53b0f4ff205a1f23d\nScope: Agent framework for a local analogue; not Microsoft 365 Copilot implementation or tenant audit code.\nReuse terms: MIT for code; CC-BY-4.0 for documentation\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Distinguishes stale pointer from unauthorised access; records version and permissions; tests a local analogue only.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Microsoft — Microsoft 365 Copilot. Initial fictional pilot: A fictional source is cited, then superseded and access revoked. Compare historical answer pointers with newly retrieved content.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/microsoft/autogen/tree/d07c667a3239ea4ab7af62a53b0f4ff205a1f23d/python\nRevision: d07c667a3239ea4ab7af62a53b0f4ff205a1f23d\nScope: Agent framework for a local analogue; not Microsoft 365 Copilot implementation or tenant audit code.\nReuse terms: MIT for code; CC-BY-4.0 for documentation\n\nCode inspection and hand annotations remain to be completed.",
@@ -275,9 +341,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-5",
@@ -303,6 +367,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-5",
       "initial_sections": {
+        "question": "This investigation concerns Meta — Llama / Model API. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: R1 supports only the first half of a two-part claim. Request separate support judgements for each half.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/meta-llama/llama-models/tree/0e0b8c519242d5833d8c11bffc1232b77ad7f301/models\nChecked revision: 0e0b8c519242d5833d8c11bffc1232b77ad7f301\nScope: Llama reference utilities and model-specific materials; custom terms vary by model. Not a complete hosted API.\nReuse terms: Model-specific custom Llama terms; inspect the selected model licence\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Scores subclaims separately; records unsupported material; separates model output from evidence validity.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Meta — Llama / Model API. Initial fictional pilot: R1 supports only the first half of a two-part claim. Request separate support judgements for each half.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/meta-llama/llama-models/tree/0e0b8c519242d5833d8c11bffc1232b77ad7f301/models\nRevision: 0e0b8c519242d5833d8c11bffc1232b77ad7f301\nScope: Llama reference utilities and model-specific materials; custom terms vary by model. Not a complete hosted API.\nReuse terms: Model-specific custom Llama terms; inspect the selected model licence\n\nCode inspection and hand annotations remain to be completed.",
@@ -317,9 +399,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-6",
@@ -345,6 +425,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-6",
       "initial_sections": {
+        "question": "This investigation concerns Amazon — AWS / Bedrock. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Index two fictional policy versions with different publication/effective dates; request the version available at a past date.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/aws-samples/amazon-bedrock-samples/tree/d481795702a043af8fcedfdf843b94ec20224675/rag\nChecked revision: d481795702a043af8fcedfdf843b94ec20224675\nScope: Bedrock sample applications; the managed knowledge-base service remains external.\nReuse terms: MIT-0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records selected version; notices missing archive; avoids hindsight contamination.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Amazon — AWS / Bedrock. Initial fictional pilot: Index two fictional policy versions with different publication/effective dates; request the version available at a past date.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/aws-samples/amazon-bedrock-samples/tree/d481795702a043af8fcedfdf843b94ec20224675/rag\nRevision: d481795702a043af8fcedfdf843b94ec20224675\nScope: Bedrock sample applications; the managed knowledge-base service remains external.\nReuse terms: MIT-0\n\nCode inspection and hand annotations remain to be completed.",
@@ -359,9 +457,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-7",
@@ -387,6 +483,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-7",
       "initial_sections": {
+        "question": "This investigation concerns NVIDIA — NeMo Guardrails. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Ten copied reports repeat R1; one authoritative correction R2 supersedes it.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/NVIDIA-NeMo/Guardrails/tree/96a8a438099bd17c703de60273722f819edfef51/nemoguardrails\nChecked revision: 96a8a438099bd17c703de60273722f819edfef51\nScope: Guardrail toolkit; no guarantee of complete fact checking or source independence.\nReuse terms: Apache-2.0; inspect third-party notices\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Tracks shared ancestry; recognises supersession; records guardrail false alarms separately.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for NVIDIA — NeMo Guardrails. Initial fictional pilot: Ten copied reports repeat R1; one authoritative correction R2 supersedes it.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/NVIDIA-NeMo/Guardrails/tree/96a8a438099bd17c703de60273722f819edfef51/nemoguardrails\nRevision: 96a8a438099bd17c703de60273722f819edfef51\nScope: Guardrail toolkit; no guarantee of complete fact checking or source independence.\nReuse terms: Apache-2.0; inspect third-party notices\n\nCode inspection and hand annotations remain to be completed.",
@@ -401,9 +515,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-8",
@@ -429,6 +541,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-8",
       "initial_sections": {
+        "question": "This investigation concerns IBM — watsonx / API Connect. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: A fictional decision cites R1; an appeal accepts corrected R2. Identify which dependent decisions need review.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/IBM/watsonx-ai-samples/tree/7db9775e1ec57032d97c0bd2f3596aa57072e3d5/cloud\nChecked revision: 7db9775e1ec57032d97c0bd2f3596aa57072e3d5\nScope: watsonx sample notebooks/apps; not the internal API Connect appeals implementation.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Keeps appeal history; updates affected conclusions; preserves unrelated decisions.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for IBM — watsonx / API Connect. Initial fictional pilot: A fictional decision cites R1; an appeal accepts corrected R2. Identify which dependent decisions need review.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/IBM/watsonx-ai-samples/tree/7db9775e1ec57032d97c0bd2f3596aa57072e3d5/cloud\nRevision: 7db9775e1ec57032d97c0bd2f3596aa57072e3d5\nScope: watsonx sample notebooks/apps; not the internal API Connect appeals implementation.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -443,9 +573,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-9",
@@ -471,6 +599,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-9",
       "initial_sections": {
+        "question": "This investigation concerns Mistral — Studio / connectors / agents. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Connector A returns obsolete R1; connector B returns corrected R2 with the same subject ID.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/mistralai/client-python/tree/d3da3bd3c63d0502449e1e765bc2d3c16d0d2f1d/src\nChecked revision: d3da3bd3c63d0502449e1e765bc2d3c16d0d2f1d\nScope: Official API client; connector availability and traces depend on the selected service.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Retains connector/source IDs; exposes conflict; records correction impact without fabricating traces.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Mistral — Studio / connectors / agents. Initial fictional pilot: Connector A returns obsolete R1; connector B returns corrected R2 with the same subject ID.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/mistralai/client-python/tree/d3da3bd3c63d0502449e1e765bc2d3c16d0d2f1d/src\nRevision: d3da3bd3c63d0502449e1e765bc2d3c16d0d2f1d\nScope: Official API client; connector availability and traces depend on the selected service.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -485,9 +631,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-10",
@@ -513,6 +657,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-10",
       "initial_sections": {
+        "question": "This investigation concerns Cohere — Command / RAG. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: R1 says service A operates Mondays; output claims it operates Mondays and Tuesdays.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/cohere-ai/cohere-python/tree/a37a6cffd014c3d3835f9a9f4bc963dc83cd9569/src\nChecked revision: a37a6cffd014c3d3835f9a9f4bc963dc83cd9569\nScope: Official API client; citation attachment alone does not prove evidential support.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Separates the two claims; identifies unsupported Tuesday claim; checks quoted evidence.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Cohere — Command / RAG. Initial fictional pilot: R1 says service A operates Mondays; output claims it operates Mondays and Tuesdays.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/cohere-ai/cohere-python/tree/a37a6cffd014c3d3835f9a9f4bc963dc83cd9569/src\nRevision: a37a6cffd014c3d3835f9a9f4bc963dc83cd9569\nScope: Official API client; citation attachment alone does not prove evidential support.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -527,9 +689,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-11",
@@ -555,6 +715,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-11",
       "initial_sections": {
+        "question": "This investigation concerns Perplexity — Search / Sonar / Agent APIs. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Three cited pages all derive from bulletin R1; a later primary correction R2 disagrees.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/perplexityai/perplexity-py/tree/1a79c5d3a7b1ef8c2dce17c0f0aa7e23f9bbdced/src\nChecked revision: 1a79c5d3a7b1ef8c2dce17c0f0aa7e23f9bbdced\nScope: Official API client; not the proprietary search index or research engine.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Counts independent origins rather than pages; records version dates; flags unresolved support.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Perplexity — Search / Sonar / Agent APIs. Initial fictional pilot: Three cited pages all derive from bulletin R1; a later primary correction R2 disagrees.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/perplexityai/perplexity-py/tree/1a79c5d3a7b1ef8c2dce17c0f0aa7e23f9bbdced/src\nRevision: 1a79c5d3a7b1ef8c2dce17c0f0aa7e23f9bbdced\nScope: Official API client; not the proprietary search index or research engine.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -569,9 +747,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-12",
@@ -597,6 +773,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-12",
       "initial_sections": {
+        "question": "This investigation concerns xAI — Grok / tools. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Two outlets copy the same fictional press release while one independent observation conflicts.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/xai-org/xai-sdk-python/tree/884ba42c74408c37eddcc8092e0299dbd8dd38ac/src\nChecked revision: 884ba42c74408c37eddcc8092e0299dbd8dd38ac\nScope: Official API client; does not expose Grok training data or source ancestry automatically.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records common origin; retains contradiction; does not count agreement as independence.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for xAI — Grok / tools. Initial fictional pilot: Two outlets copy the same fictional press release while one independent observation conflicts.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/xai-org/xai-sdk-python/tree/884ba42c74408c37eddcc8092e0299dbd8dd38ac/src\nRevision: 884ba42c74408c37eddcc8092e0299dbd8dd38ac\nScope: Official API client; does not expose Grok training data or source ancestry automatically.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -611,9 +805,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-13",
@@ -639,6 +831,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-13",
       "initial_sections": {
+        "question": "This investigation concerns Hugging Face — Hub / libraries. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Create local metadata for claim C1 supported by R1, disputed by R2 and corrected by R3.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/huggingface/huggingface_hub/tree/fd5dccbb731e212df4f1dfa53b8f406b866070d3/src\nChecked revision: fd5dccbb731e212df4f1dfa53b8f406b866070d3\nScope: Hub client source; claim-level metadata is an extension to investigate.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Preserves all evidence relations; distinguishes unknown from false; retains contributor attribution.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Hugging Face — Hub / libraries. Initial fictional pilot: Create local metadata for claim C1 supported by R1, disputed by R2 and corrected by R3.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/huggingface/huggingface_hub/tree/fd5dccbb731e212df4f1dfa53b8f406b866070d3/src\nRevision: fd5dccbb731e212df4f1dfa53b8f406b866070d3\nScope: Hub client source; claim-level metadata is an extension to investigate.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -653,9 +863,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-14",
@@ -681,6 +889,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-14",
       "initial_sections": {
+        "question": "This investigation concerns DeepSeek — JSON Output. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Use saved responses: empty string, whitespace, truncated JSON and valid JSON with an unsupported claim.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/deepseek-ai/DeepSeek-V3/tree/9b4e9788e4a3a731f7567338ed15d3ec549ce03b/inference\nChecked revision: 9b4e9788e4a3a731f7567338ed15d3ec549ce03b\nScope: Reference inference code, not the hosted JSON-mode implementation; model weights have separate terms.\nReuse terms: MIT for code; model weights have separate terms\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Separates transport, format, schema and evidence failures; does not treat valid JSON as true.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for DeepSeek — JSON Output. Initial fictional pilot: Use saved responses: empty string, whitespace, truncated JSON and valid JSON with an unsupported claim.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/deepseek-ai/DeepSeek-V3/tree/9b4e9788e4a3a731f7567338ed15d3ec549ce03b/inference\nRevision: 9b4e9788e4a3a731f7567338ed15d3ec549ce03b\nScope: Reference inference code, not the hosted JSON-mode implementation; model weights have separate terms.\nReuse terms: MIT for code; model weights have separate terms\n\nCode inspection and hand annotations remain to be completed.",
@@ -695,9 +921,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-15",
@@ -723,6 +947,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-15",
       "initial_sections": {
+        "question": "This investigation concerns Alibaba — Qwen / Qwen Code. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Parent sees a conditional rule; child receives the same trigger. Record which context consumes and receives the reminder.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/QwenLM/qwen-code/tree/7bd78683e63a50334fbcb124568101868048264c/packages\nChecked revision: 7bd78683e63a50334fbcb124568101868048264c\nScope: Coding-agent source; parent/subagent rule ownership can be inspected here.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records per-context state; compares intended and observed ownership; reproduces before proposing a fix.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Alibaba — Qwen / Qwen Code. Initial fictional pilot: Parent sees a conditional rule; child receives the same trigger. Record which context consumes and receives the reminder.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/QwenLM/qwen-code/tree/7bd78683e63a50334fbcb124568101868048264c/packages\nRevision: 7bd78683e63a50334fbcb124568101868048264c\nScope: Coding-agent source; parent/subagent rule ownership can be inspected here.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -737,9 +979,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-16",
@@ -765,6 +1005,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-16",
       "initial_sections": {
+        "question": "This investigation concerns Moonshot — Kimi / Kimi Code. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: History contains a revoked permission and an emergency exception; compact, then inject a dated correction.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/MoonshotAI/kimi-code/tree/df90d90ec0714db23dcc830acd2db6232f5c7426/packages\nChecked revision: df90d90ec0714db23dcc830acd2db6232f5c7426\nScope: Coding-agent source, including session/context machinery; not all Kimi service internals.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Preserves qualifications and record IDs; updates dependent decision; logs lost conditions.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Moonshot — Kimi / Kimi Code. Initial fictional pilot: History contains a revoked permission and an emergency exception; compact, then inject a dated correction.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/MoonshotAI/kimi-code/tree/df90d90ec0714db23dcc830acd2db6232f5c7426/packages\nRevision: df90d90ec0714db23dcc830acd2db6232f5c7426\nScope: Coding-agent source, including session/context machinery; not all Kimi service internals.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -779,9 +1037,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-17",
@@ -807,6 +1063,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-17",
       "initial_sections": {
+        "question": "This investigation concerns Groq — Structured Outputs. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: List a small matrix of schema, streaming and tool flags for one selected model; initially leave every outcome untested.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/groq/groq-python/tree/55066d94acca028c3cb74e050f2711b80ade6298/src\nChecked revision: 55066d94acca028c3cb74e050f2711b80ade6298\nScope: Official API client; structured-output/tool/stream compatibility is server and model dependent.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records exact supported combination; distinguishes rejection from semantic error; never invents test results.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Groq — Structured Outputs. Initial fictional pilot: List a small matrix of schema, streaming and tool flags for one selected model; initially leave every outcome untested.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/groq/groq-python/tree/55066d94acca028c3cb74e050f2711b80ade6298/src\nRevision: 55066d94acca028c3cb74e050f2711b80ade6298\nScope: Official API client; structured-output/tool/stream compatibility is server and model dependent.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -821,9 +1095,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-18",
@@ -849,6 +1121,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-18",
       "initial_sections": {
+        "question": "This investigation concerns You.com — Research / Answer APIs. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: One source supports a compound claim only partly; another is a duplicate of the first.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/youdotcom-oss/youdotcom-python-sdk/tree/64263a0029efb956b82da4712d74765ec0f5ee53/src\nChecked revision: 64263a0029efb956b82da4712d74765ec0f5ee53\nScope: Official API client; cited research results require independent source checking.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Scores support per claim; traces duplicate ancestry; records inaccessible evidence.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for You.com — Research / Answer APIs. Initial fictional pilot: One source supports a compound claim only partly; another is a duplicate of the first.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/youdotcom-oss/youdotcom-python-sdk/tree/64263a0029efb956b82da4712d74765ec0f5ee53/src\nRevision: 64263a0029efb956b82da4712d74765ec0f5ee53\nScope: Official API client; cited research results require independent source checking.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -863,9 +1153,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-19",
@@ -891,6 +1179,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-19",
       "initial_sections": {
+        "question": "This investigation concerns Fireworks AI — structured generation / inference. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Feed a saved valid-JSON response and a schema-transformed wrapper response to a local validator.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/fw-ai-external/cookbook/tree/8f5500758ed4a9bb8f6cc34969cceb30ecb7ba07/eval\nChecked revision: 8f5500758ed4a9bb8f6cc34969cceb30ecb7ba07\nScope: Official cookbook evaluation examples; not the hosted inference implementation.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Separates direct versus wrapper changes; distinguishes schema validity from factual support; preserves raw outputs.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Fireworks AI — structured generation / inference. Initial fictional pilot: Feed a saved valid-JSON response and a schema-transformed wrapper response to a local validator.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/fw-ai-external/cookbook/tree/8f5500758ed4a9bb8f6cc34969cceb30ecb7ba07/eval\nRevision: 8f5500758ed4a9bb8f6cc34969cceb30ecb7ba07\nScope: Official cookbook evaluation examples; not the hosted inference implementation.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -905,9 +1211,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "company-gap-20",
@@ -933,6 +1237,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=company-gap-20",
       "initial_sections": {
+        "question": "This investigation concerns Glean — enterprise retrieval / citations / connectors. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Compare fictional OCR text through upload versus connector paths, then revoke access to the source.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/gleanwork/api-client-python/tree/50e64f3be7cc7adb2dc4966b4381296cf4739faa/src\nChecked revision: 50e64f3be7cc7adb2dc4966b4381296cf4739faa\nScope: Official API client; enterprise connectors and permissions require an authorised test tenant.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records extraction coverage, source age and permission status separately; avoids inferring access from a citation pointer.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Glean — enterprise retrieval / citations / connectors. Initial fictional pilot: Compare fictional OCR text through upload versus connector paths, then revoke access to the source.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/gleanwork/api-client-python/tree/50e64f3be7cc7adb2dc4966b4381296cf4739faa/src\nRevision: 50e64f3be7cc7adb2dc4966b4381296cf4739faa\nScope: Official API client; enterprise connectors and permissions require an authorised test tenant.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -947,9 +1269,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "avenue-reliability",
@@ -975,6 +1295,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=avenue-reliability",
       "initial_sections": {
+        "question": "This investigation concerns Real-world AI reliability and evaluation. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Give identical fictional evidence in familiar and reordered layouts, including one unanswerable question.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/UKGovernmentBEIS/inspect_ai/tree/7cf09c929b3ea9138762ca9e4d8d23f119554ee6/src\nChecked revision: 7cf09c929b3ea9138762ca9e4d8d23f119554ee6\nScope: Evaluation framework; use explicit case/scorer definitions rather than treating benchmark success as proof of internal reasoning.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Tracks accuracy, abstention and calibration separately; records model/settings and scorer limits.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Real-world AI reliability and evaluation. Initial fictional pilot: Give identical fictional evidence in familiar and reordered layouts, including one unanswerable question.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/UKGovernmentBEIS/inspect_ai/tree/7cf09c929b3ea9138762ca9e4d8d23f119554ee6/src\nRevision: 7cf09c929b3ea9138762ca9e4d8d23f119554ee6\nScope: Evaluation framework; use explicit case/scorer definitions rather than treating benchmark success as proof of internal reasoning.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -989,9 +1327,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "avenue-agents",
@@ -1017,6 +1353,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=avenue-agents",
       "initial_sections": {
+        "question": "This investigation concerns Autonomous agents, cybersecurity and human control. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: A mock read-only tool receives an instruction to delete a fictional record.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/modelcontextprotocol/python-sdk/tree/77001c96f9507be0f4d009b83210a384a5e08bda/src\nChecked revision: 77001c96f9507be0f4d009b83210a384a5e08bda\nScope: Tool-protocol SDK; a component for permission experiments, not a complete secure agent.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records attempted versus executed action; enforces mock permissions; logs recovery and human intervention.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Autonomous agents, cybersecurity and human control. Initial fictional pilot: A mock read-only tool receives an instruction to delete a fictional record.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/modelcontextprotocol/python-sdk/tree/77001c96f9507be0f4d009b83210a384a5e08bda/src\nRevision: 77001c96f9507be0f4d009b83210a384a5e08bda\nScope: Tool-protocol SDK; a component for permission experiments, not a complete secure agent.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -1031,9 +1385,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "avenue-evidence",
@@ -1059,6 +1411,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=avenue-evidence",
       "initial_sections": {
+        "question": "This investigation concerns Evidence integrity, provenance and dependent revision. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: R1 supports C1 which supports C2; correction R2 supersedes R1 while unrelated C3 stays fixed.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/trungdong/prov/tree/ff97842dfc03906f888d33d9760bc64e15f32d29/src\nChecked revision: ff97842dfc03906f888d33d9760bc64e15f32d29\nScope: W3C PROV implementation; lineage representation does not itself establish truth or propagate every model inference.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Tracks lineage and supersession; marks dependent conclusions for review; preserves unrelated control.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Evidence integrity, provenance and dependent revision. Initial fictional pilot: R1 supports C1 which supports C2; correction R2 supersedes R1 while unrelated C3 stays fixed.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/trungdong/prov/tree/ff97842dfc03906f888d33d9760bc64e15f32d29/src\nRevision: ff97842dfc03906f888d33d9760bc64e15f32d29\nScope: W3C PROV implementation; lineage representation does not itself establish truth or propagate every model inference.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -1073,9 +1443,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "avenue-institutions",
@@ -1101,6 +1469,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=avenue-institutions",
       "initial_sections": {
+        "question": "This investigation concerns Institutional accountability and effective oversight. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: A fictional eligibility classifier has different error rates across two groups; append a manual appeal and correction record.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/fairlearn/fairlearn/tree/82b4a089872cd3ab6e3b4923fbd04c0138794230/fairlearn\nChecked revision: 82b4a089872cd3ab6e3b4923fbd04c0138794230\nScope: Fairness assessment toolkit for one oversight component; appeals, authority and institutional remedies need a separate process design.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Keeps metric definitions explicit; identifies review owner; does not equate parity with complete institutional fairness.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Institutional accountability and effective oversight. Initial fictional pilot: A fictional eligibility classifier has different error rates across two groups; append a manual appeal and correction record.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/fairlearn/fairlearn/tree/82b4a089872cd3ab6e3b4923fbd04c0138794230/fairlearn\nRevision: 82b4a089872cd3ab6e3b4923fbd04c0138794230\nScope: Fairness assessment toolkit for one oversight component; appeals, authority and institutional remedies need a separate process design.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -1115,9 +1501,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "avenue-health",
@@ -1143,6 +1527,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=avenue-health",
       "initial_sections": {
+        "question": "This investigation concerns Healthcare AI, evidence quality and research ethics. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Plan a synthetic image perturbation study with an unchanged label and separately recorded uncertainty.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/Project-MONAI/MONAI/tree/c5bddb21ccaaf3654a87c65ede6d2c7bd82e4128/monai\nChecked revision: c5bddb21ccaaf3654a87c65ede6d2c7bd82e4128\nScope: Medical-imaging research framework; not a clinically validated service or substitute for domain review.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Separates model performance from clinical validity; documents synthetic-data limits; records subgroup and shift assumptions.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Healthcare AI, evidence quality and research ethics. Initial fictional pilot: Plan a synthetic image perturbation study with an unchanged label and separately recorded uncertainty.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/Project-MONAI/MONAI/tree/c5bddb21ccaaf3654a87c65ede6d2c7bd82e4128/monai\nRevision: c5bddb21ccaaf3654a87c65ede6d2c7bd82e4128\nScope: Medical-imaging research framework; not a clinically validated service or substitute for domain review.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -1157,9 +1559,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "avenue-employment",
@@ -1185,6 +1585,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=avenue-employment",
       "initial_sections": {
+        "question": "This investigation concerns Employment, income distribution and beneficial automation. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Model ten fictional workers, two employers and an automation intervention with a fixed training-access assumption.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/mesa/mesa/tree/013d2bbbba7f999962e041a0741c630ae61863ee/mesa\nChecked revision: 013d2bbbba7f999962e041a0741c630ae61863ee\nScope: Agent-based simulation framework; simulated labour outcomes are conditional hypotheses, not economic forecasts.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records assumptions and sensitivity; separates exposure from displacement; tracks distribution of gains.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Employment, income distribution and beneficial automation. Initial fictional pilot: Model ten fictional workers, two employers and an automation intervention with a fixed training-access assumption.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/mesa/mesa/tree/013d2bbbba7f999962e041a0741c630ae61863ee/mesa\nRevision: 013d2bbbba7f999962e041a0741c630ae61863ee\nScope: Agent-based simulation framework; simulated labour outcomes are conditional hypotheses, not economic forecasts.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -1199,9 +1617,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "avenue-infrastructure",
@@ -1227,6 +1643,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=avenue-infrastructure",
       "initial_sections": {
+        "question": "This investigation concerns Energy, computing efficiency and physical infrastructure. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Compare two bounded local tasks with the same output target; begin with a measurement plan and no invented energy readings.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/mlco2/codecarbon/tree/ab8627a1cc88d3e5bb8b4ee953891a677ecdd49c/codecarbon\nChecked revision: ab8627a1cc88d3e5bb8b4ee953891a677ecdd49c\nScope: Emissions/energy estimation toolkit; distinguish estimates from direct power measurement and grid constraints.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records hardware, duration and estimation method; compares cost per successful task; preserves uncertainty.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Energy, computing efficiency and physical infrastructure. Initial fictional pilot: Compare two bounded local tasks with the same output target; begin with a measurement plan and no invented energy readings.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/mlco2/codecarbon/tree/ab8627a1cc88d3e5bb8b4ee953891a677ecdd49c/codecarbon\nRevision: ab8627a1cc88d3e5bb8b4ee953891a677ecdd49c\nScope: Emissions/energy estimation toolkit; distinguish estimates from direct power measurement and grid constraints.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -1241,9 +1675,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "avenue-culture",
@@ -1269,6 +1701,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=avenue-culture",
       "initial_sections": {
+        "question": "This investigation concerns Language, culture and unequal model performance. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Create paired fictional prompts with equivalent intent in two language varieties and annotate meaning preservation.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/fairlearn/fairlearn/tree/82b4a089872cd3ab6e3b4923fbd04c0138794230/fairlearn\nChecked revision: 82b4a089872cd3ab6e3b4923fbd04c0138794230\nScope: Disaggregated metric toolkit; cultural meaning, representation and translation quality need context-sensitive human review.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Separates aggregate from subgroup errors; records annotator disagreement; avoids treating one score as cultural competence.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Language, culture and unequal model performance. Initial fictional pilot: Create paired fictional prompts with equivalent intent in two language varieties and annotate meaning preservation.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/fairlearn/fairlearn/tree/82b4a089872cd3ab6e3b4923fbd04c0138794230/fairlearn\nRevision: 82b4a089872cd3ab6e3b4923fbd04c0138794230\nScope: Disaggregated metric toolkit; cultural meaning, representation and translation quality need context-sensitive human review.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -1283,9 +1733,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "avenue-science",
@@ -1311,6 +1759,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=avenue-science",
       "initial_sections": {
+        "question": "This investigation concerns Scientific discovery and independent verification. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: An assistant proposes two fictional hypotheses, one contradicted by a held-out observation.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/stanford-crfm/helm/tree/63754d05db6f874e41a395880fb573890a13e791/src\nChecked revision: 63754d05db6f874e41a395880fb573890a13e791\nScope: Model evaluation framework; scientific discoveries still need domain-specific independent verification.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records falsifiable predictions; separates hypothesis generation from confirmation; preserves contrary evidence.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Scientific discovery and independent verification. Initial fictional pilot: An assistant proposes two fictional hypotheses, one contradicted by a held-out observation.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/stanford-crfm/helm/tree/63754d05db6f874e41a395880fb573890a13e791/src\nRevision: 63754d05db6f874e41a395880fb573890a13e791\nScope: Model evaluation framework; scientific discoveries still need domain-specific independent verification.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -1325,9 +1791,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "avenue-communication",
@@ -1353,6 +1817,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=avenue-communication",
       "initial_sections": {
+        "question": "This investigation concerns Public communication, ambiguity and consequential omissions. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Summarise: applicants may appeal within 30 days unless a documented extension applies.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/explosion/spaCy/tree/7ff14d4da84817f84c32b980882178ddacc066a1/spacy\nChecked revision: 7ff14d4da84817f84c32b980882178ddacc066a1\nScope: Linguistic analysis toolkit; token/dependency analysis is not an automatic truth, omission or intent detector.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Retains deadline and exception; compares reasonable interpretations; records reader-review findings separately.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Public communication, ambiguity and consequential omissions. Initial fictional pilot: Summarise: applicants may appeal within 30 days unless a documented extension applies.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/explosion/spaCy/tree/7ff14d4da84817f84c32b980882178ddacc066a1/spacy\nRevision: 7ff14d4da84817f84c32b980882178ddacc066a1\nScope: Linguistic analysis toolkit; token/dependency analysis is not an automatic truth, omission or intent detector.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -1367,9 +1849,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "bottleneck-continual-learning",
@@ -1395,6 +1875,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=bottleneck-continual-learning",
       "initial_sections": {
+        "question": "This investigation concerns Continual learning. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Learn fictional task A, then task B; retest A alongside a no-update control.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/ContinualAI/avalanche/tree/eb075be393e1f458b2c352514ff6c17b5a2c0f4e/avalanche\nChecked revision: eb075be393e1f458b2c352514ff6c17b5a2c0f4e\nScope: Continual-learning framework; small learning experiments do not establish continuous autonomous LLM updating.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Separates retention, transfer and forgetting; distinguishes weight updates from retrieval.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Continual learning. Initial fictional pilot: Learn fictional task A, then task B; retest A alongside a no-update control.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/ContinualAI/avalanche/tree/eb075be393e1f458b2c352514ff6c17b5a2c0f4e/avalanche\nRevision: eb075be393e1f458b2c352514ff6c17b5a2c0f4e\nScope: Continual-learning framework; small learning experiments do not establish continuous autonomous LLM updating.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -1409,9 +1907,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "bottleneck-unlearning",
@@ -1437,6 +1933,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=bottleneck-unlearning",
       "initial_sections": {
+        "question": "This investigation concerns Machine unlearning. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Remove a fictional target fact while retaining unrelated facts; test both recall and retained-task utility.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/jaechan-repo/muse_bench/tree/6d4fdcbdebe4ad46dccaf70f8526cd23ecff609e/metrics\nChecked revision: 6d4fdcbdebe4ad46dccaf70f8526cd23ecff609e\nScope: Original MUSE evaluation code; not the exact implementation of every later unlearning critique. Reuse permission is not established.\nReuse terms: No top-level licence file identified; reuse permission not established\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Distinguishes refusal from removal; records probe information leakage; measures collateral changes.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Machine unlearning. Initial fictional pilot: Remove a fictional target fact while retaining unrelated facts; test both recall and retained-task utility.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/jaechan-repo/muse_bench/tree/6d4fdcbdebe4ad46dccaf70f8526cd23ecff609e/metrics\nRevision: 6d4fdcbdebe4ad46dccaf70f8526cd23ecff609e\nScope: Original MUSE evaluation code; not the exact implementation of every later unlearning critique. Reuse permission is not established.\nReuse terms: No top-level licence file identified; reuse permission not established\n\nCode inspection and hand annotations remain to be completed.",
@@ -1451,9 +1965,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "bottleneck-multi-agent",
@@ -1479,6 +1991,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=bottleneck-multi-agent",
       "initial_sections": {
+        "question": "This investigation concerns Multi-agent collaboration. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Compare one agent with two role-separated agents on the same fictional evidence set under equal total budget.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/microsoft/autogen/tree/d07c667a3239ea4ab7af62a53b0f4ff205a1f23d/python\nChecked revision: d07c667a3239ea4ab7af62a53b0f4ff205a1f23d\nScope: Agent orchestration framework; use as a test system rather than claiming it implements the MAST paper.\nReuse terms: MIT for code; CC-BY-4.0 for documentation\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Tracks handoff loss, shared assumptions and completion; distinguishes agreement from independent checking.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Multi-agent collaboration. Initial fictional pilot: Compare one agent with two role-separated agents on the same fictional evidence set under equal total budget.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/microsoft/autogen/tree/d07c667a3239ea4ab7af62a53b0f4ff205a1f23d/python\nRevision: d07c667a3239ea4ab7af62a53b0f4ff205a1f23d\nScope: Agent orchestration framework; use as a test system rather than claiming it implements the MAST paper.\nReuse terms: MIT for code; CC-BY-4.0 for documentation\n\nCode inspection and hand annotations remain to be completed.",
@@ -1493,9 +2023,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "bottleneck-computer-use",
@@ -1521,6 +2049,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=bottleneck-computer-use",
       "initial_sections": {
+        "question": "This investigation concerns Long-horizon computer operation. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: In a sandbox, rename a fictional file, update its index and recover from a changed button label.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/xlang-ai/OSWorld/tree/8903ebeb0efdf74331bd7dc37ed91ccbbff22317/desktop_env\nChecked revision: 8903ebeb0efdf74331bd7dc37ed91ccbbff22317\nScope: Computer-use benchmark environment; inspect benchmark version before comparing against OSWorld 2.0 claims.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records step count, unintended actions and recovery; keeps all files fictional and isolated.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Long-horizon computer operation. Initial fictional pilot: In a sandbox, rename a fictional file, update its index and recover from a changed button label.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/xlang-ai/OSWorld/tree/8903ebeb0efdf74331bd7dc37ed91ccbbff22317/desktop_env\nRevision: 8903ebeb0efdf74331bd7dc37ed91ccbbff22317\nScope: Computer-use benchmark environment; inspect benchmark version before comparing against OSWorld 2.0 claims.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -1535,9 +2081,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "bottleneck-robotics",
@@ -1563,6 +2107,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=bottleneck-robotics",
       "initial_sections": {
+        "question": "This investigation concerns Robotics and embodied intelligence. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Plan a simulated navigation task with one occluded object and one changed target location.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/EmbodiedBench/EmbodiedBench/tree/9be4e980e9cd6bcb38373cd4aab7c32724bdd401/embodiedbench\nChecked revision: 9be4e980e9cd6bcb38373cd4aab7c32724bdd401\nScope: Embodied-agent benchmark source; simulator performance does not establish physical-world safety. Reuse permission is not established.\nReuse terms: No top-level licence file identified; reuse permission not established\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Separates perception, planning and execution failures; records simulator and scene settings.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Robotics and embodied intelligence. Initial fictional pilot: Plan a simulated navigation task with one occluded object and one changed target location.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/EmbodiedBench/EmbodiedBench/tree/9be4e980e9cd6bcb38373cd4aab7c32724bdd401/embodiedbench\nRevision: 9be4e980e9cd6bcb38373cd4aab7c32724bdd401\nScope: Embodied-agent benchmark source; simulator performance does not establish physical-world safety. Reuse permission is not established.\nReuse terms: No top-level licence file identified; reuse permission not established\n\nCode inspection and hand annotations remain to be completed.",
@@ -1577,9 +2139,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "bottleneck-world-models",
@@ -1605,6 +2165,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=bottleneck-world-models",
       "initial_sections": {
+        "question": "This investigation concerns Physically faithful world models. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Compare a predicted pendulum sequence with a controlled simulation using explicit position/time tolerances.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/WorldModelBench-Team/WorldModelBench/blob/00b7aa17a05f9fd1ab5c8f66bcf476d04c9c33bf/evaluation.py\nChecked revision: 00b7aa17a05f9fd1ab5c8f66bcf476d04c9c33bf\nScope: WorldModelBench evaluation script; a VLM judge is not an independent physical-law oracle. Reuse permission is not established.\nReuse terms: No top-level licence file identified; reuse permission not established\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Separates visual quality, extraction error and physical inconsistency; records measurement tolerances.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Physically faithful world models. Initial fictional pilot: Compare a predicted pendulum sequence with a controlled simulation using explicit position/time tolerances.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/WorldModelBench-Team/WorldModelBench/blob/00b7aa17a05f9fd1ab5c8f66bcf476d04c9c33bf/evaluation.py\nRevision: 00b7aa17a05f9fd1ab5c8f66bcf476d04c9c33bf\nScope: WorldModelBench evaluation script; a VLM judge is not an independent physical-law oracle. Reuse permission is not established.\nReuse terms: No top-level licence file identified; reuse permission not established\n\nCode inspection and hand annotations remain to be completed.",
@@ -1619,9 +2197,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "bottleneck-reasoning-complexity",
@@ -1647,6 +2223,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=bottleneck-reasoning-complexity",
       "initial_sections": {
+        "question": "This investigation concerns Reasoning under increasing complexity. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Generate rule chains of depths 1, 3 and 5 with known answers; vary model budget only after fixing the case set.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/sympy/sympy/tree/a1e6fd3993dae123441783a9f995527bb064932b/sympy\nChecked revision: a1e6fd3993dae123441783a9f995527bb064932b\nScope: Symbolic mathematics toolkit for an exact reference baseline; not source code for the cited Apple study.\nReuse terms: BSD-style three-clause terms; bundled components have notices\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Checks answers independently; records truncation and budget; does not infer internal mechanism from output.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Reasoning under increasing complexity. Initial fictional pilot: Generate rule chains of depths 1, 3 and 5 with known answers; vary model budget only after fixing the case set.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/sympy/sympy/tree/a1e6fd3993dae123441783a9f995527bb064932b/sympy\nRevision: a1e6fd3993dae123441783a9f995527bb064932b\nScope: Symbolic mathematics toolkit for an exact reference baseline; not source code for the cited Apple study.\nReuse terms: BSD-style three-clause terms; bundled components have notices\n\nCode inspection and hand annotations remain to be completed.",
@@ -1661,9 +2255,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "bottleneck-software-engineering",
@@ -1689,6 +2281,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=bottleneck-software-engineering",
       "initial_sections": {
+        "question": "This investigation concerns End-to-end software engineering. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Seed a bug in a tiny local repository and keep independent acceptance/regression tests separate from the patch prompt.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/openai/frontier-evals/tree/b78dab1da774a6456b1ed9c48c9ff194ee3ff36d/project\nChecked revision: b78dab1da774a6456b1ed9c48c9ff194ee3ff36d\nScope: Evaluation collection containing software-engineering research tasks; inspect the selected task and data terms before running.\nReuse terms: MIT\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records diagnosis, patch and regression outcomes separately; rejects passing tests as proof of complete requirements.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for End-to-end software engineering. Initial fictional pilot: Seed a bug in a tiny local repository and keep independent acceptance/regression tests separate from the patch prompt.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/openai/frontier-evals/tree/b78dab1da774a6456b1ed9c48c9ff194ee3ff36d/project\nRevision: b78dab1da774a6456b1ed9c48c9ff194ee3ff36d\nScope: Evaluation collection containing software-engineering research tasks; inspect the selected task and data terms before running.\nReuse terms: MIT\n\nCode inspection and hand annotations remain to be completed.",
@@ -1703,9 +2313,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     },
     {
       "id": "bottleneck-efficient-reasoning",
@@ -1731,6 +2339,24 @@
       "results": [],
       "dossier_url": "https://manifoldgrace.github.io/research-project.html?project=bottleneck-efficient-reasoning",
       "initial_sections": {
+        "question": "This investigation concerns Efficient reasoning on smaller hardware. It combines source-code exploration with a bounded comparison of system behaviour.\n\nPlanned fictional test case: Plan two supported precision settings on the same small model and fixed cases; leave measurements blank until run.\n\nThe scope and evaluation criteria remain under development; no experimental outcome is asserted.",
+        "history": "",
+        "inspection": "Implementation starting point: https://github.com/huggingface/optimum/tree/87ba58464371163e4f23d8fcc155141bab8c55de/optimum\nChecked revision: 87ba58464371163e4f23d8fcc155141bab8c55de\nScope: Inference optimisation toolkit; backend/hardware support varies, and it is not the implementation of the cited quantisation paper.\nReuse terms: Apache-2.0\n\nDetailed code annotations will form part of the investigation record.",
+        "science": "Planned observation criteria: Records quality, peak memory, time and tokens; compares resource use per successful task.\n\nThe evaluation will distinguish the baseline, intervention, competing explanations and unaffected controls. Case selection and uncertainty will be documented alongside any results.",
+        "architecture": "",
+        "extension": "",
+        "implementation": "",
+        "results": "No experimental results have been recorded in this project dossier. Observations, failures and supporting evidence will be reported as the investigation develops.",
+        "society": "",
+        "assurance": "",
+        "roadmap": "",
+        "figures": "",
+        "conclusions": "Conclusions and contribution claims remain open pending investigation. No demonstrated improvement or original discovery is asserted at this stage.",
+        "release": ""
+      },
+      "maturity": "Exploratory research · investigation and evaluation in development",
+      "framework_version": 1,
+      "previous_initial_sections": {
         "question": "Working plan: investigate the documented question for Efficient reasoning on smaller hardware. Initial fictional pilot: Plan two supported precision settings on the same small model and fixed cases; leave measurements blank until run.\n\nRefine the research question, scope and success criteria before evaluation.",
         "history": "",
         "inspection": "Source starting point: https://github.com/huggingface/optimum/tree/87ba58464371163e4f23d8fcc155141bab8c55de/optimum\nRevision: 87ba58464371163e4f23d8fcc155141bab8c55de\nScope: Inference optimisation toolkit; backend/hardware support varies, and it is not the implementation of the cited quantisation paper.\nReuse terms: Apache-2.0\n\nCode inspection and hand annotations remain to be completed.",
@@ -1745,9 +2371,7 @@
         "figures": "",
         "conclusions": "No scientific conclusion or demonstrated improvement is asserted at setup. Complete the evaluation before replacing this statement.",
         "release": ""
-      },
-      "maturity": "Editable research plan; scientific evaluation not performed",
-      "framework_version": 1
+      }
     }
   ]
 }
