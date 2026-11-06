@@ -2,8 +2,10 @@
 
 **Status:** Source inspected; proposed change not implemented or tested. No execution result is recorded in this note.
 
-**Artefact examined:** [`01-literature-map.py`](01-literature-map.py)  
+**Artefact examined:** [`01-literature-map.py`](../01-literature-map.py)  
 **Purpose:** Learn how a small Python retrieval baseline turns text into a ranked list, and identify what that ranking does—and does not—mean.
+
+**Interactive companion:** [Explore the TF–IDF ranking demonstration](01-literature-map-demo.html). It is a browser-side teaching aid that mirrors the small example; it is not the Python script running in the browser.
 
 ## Lesson: follow the data from text to ranking
 
@@ -27,7 +29,7 @@ This is a useful architecture lesson: a readable baseline makes intermediate rep
 
 ## Small, reproducible investigation
 
-Use only the script’s synthetic text. Before running it, write down an expected change to the ordering. Change **one thing at a time**—for example, the query or one synthetic paper text—then run the script using the command in the [experiments README](README.md).
+Use only the script’s synthetic text. Before running it, write down an expected change to the ordering. Change **one thing at a time**—for example, the query or one synthetic paper text—then run the script using the command in the [experiments README](../README.md).
 
 Record:
 
