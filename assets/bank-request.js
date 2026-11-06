@@ -31,7 +31,7 @@
         <section aria-labelledby="heading">
           <div class="eyebrow">Orders &amp; enquiries</div>
           <h2 id="heading">Request a quote or information</h2>
-          <p>Tell us what you need. We’ll confirm availability, the agreed price and bank-transfer instructions before you pay.</p>
+          <p>Prepare a request for a book, product or service. <strong>This form does not submit automatically.</strong> You must send the prepared message yourself after reviewing it. Availability and pricing are not confirmed through this interface.</p>
           <form>
             <div class="grid">
               <label>Your name<input name="name" autocomplete="name" required maxlength="100"></label>
@@ -44,18 +44,19 @@
               <label class="full check"><input name="consent" type="checkbox" required><span>You may use these details to respond to this request.</span></label>
             </div>
             <p><small>Do not include card details, banking passwords or sensitive documents. Nothing is charged by this form.</small></p>
-            <button type="submit">Review request</button>
+            <button type="submit">Prepare request (does not send)</button>
           </form>
           <div class="summary" hidden>
             <h3>Your request</h3>
             <pre></pre>
             <div class="actions">
               <a class="button" hidden>Open email to send</a>
+              <a class="button secondary" href="https://www.linkedin.com/in/gracerose-uk" target="_blank" rel="noopener noreferrer">Contact via LinkedIn</a>
               <button type="button" class="secondary copy">Copy request</button>
               <button type="button" class="secondary edit">Edit request</button>
             </div>
             <p class="status" role="status" aria-live="polite"></p>
-            <small>We confirm payment only after it appears in our bank account. An enquiry or invoice request is not a payment confirmation.</small>
+            <small>No order, booking, quote request or payment is recorded automatically by this site. Do not send bank details or sensitive documents. An enquiry or invoice request is not a payment confirmation.</small>
           </div>
         </section>`;
       const form = root.querySelector('form');
@@ -99,7 +100,7 @@
           status.textContent = 'Your request is ready. Open your email app and send it. If the email app does not open, copy the request and email it to ' + inbox + '.';
         } else {
           link.removeAttribute('href');
-          status.textContent = 'Email requests are not available yet. Nothing has been sent. You can copy this request for later.';
+          status.textContent = 'Automated email delivery is not configured, and nothing has been sent. You may copy the request for later or contact Manifold Grace through LinkedIn. Do not assume that saving this page registers an enquiry or order.';
         }
         summary.hidden = false;
         summary.scrollIntoView({block:'nearest'});
