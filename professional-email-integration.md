@@ -45,3 +45,11 @@ Gmail is the intended receiving and recovery inbox, not a public address. Forwar
 - Do not put Gmail passwords, account access tokens or email address into GitHub source. Free Formspree quota observed 2026-11-06: 50 submissions monthly; see https://formspree.io/plans.
 - A provider accepting a submission is not confirmation the message arrived in the intended Gmail mailbox. Keep verification evidence and label incoming form notifications.
 - Alternative providers for future intake: Tally (hosted forms) and Web3Forms (static-site form API), subject to service limits, privacy terms and further evaluation.
+
+## Formspree activation on 2026-11-06
+- User supplied Formspree integration dashboard: `https://formspree.io/forms/xoeebzbg/integration`. Public submission endpoint: `https://formspree.io/f/xoeebzbg` (the public endpoint is safe to embed).
+- Configured `assets/bank-request-config.js` with the public endpoint. The general Contact and book, services and product enquiry forms read this setting and submit using HTTPS POST when the configuration loads.
+- Site copy updated to state provider submission is now enabled but Gmail delivery, including spam handling, is **not yet independently verified**.
+- Same endpoint is shared across all four forms; submissions include their page/topic information for distinguishing enquiries. A single free monthly submission allowance is shared between them.
+- Remaining acceptance test: submit a harmless synthetic enquiry, confirm provider success in the browser, check it in Formspree's submissions dashboard and in Gmail, verify notification settings and sender reply-to. Record a dated pass/fail result; no verified test has yet been performed in this session.
+- Never put Gmail credentials, passwords, private contacts, or business secrets in GitHub. Domain registration and branded email remain independent pending workstreams.
