@@ -36,3 +36,12 @@ Status: **staged, not activated**. Updated 2026-11-06.
 
 ## Privacy and limits
 Gmail is the intended receiving and recovery inbox, not a public address. Forwarding is not an independent archival backup and does not restore messages already deleted or purged from Gmail. Keep public source files free of email credentials, tokens, account details, address-verification codes and private messages.
+
+## Free website form integration (prepared 2026-11-06, not live)
+- The site's `contact.html` and the book/service/product enquiry component now support HTTPS form submissions to a Formspree endpoint when configured in `assets/bank-request-config.js` as `formspreeEndpoint`.
+- This works on the existing free GitHub Pages address and **does not require purchasing a domain**.
+- Current configuration leaves the endpoint blank. The website therefore does not send enquiries automatically and shows a draft fallback.
+- Activate: create a free Formspree account using the private Gmail destination; create one form (e.g. `Manifold Grace Enquiries`); verify the recipient; supply the public `https://formspree.io/f/...` endpoint; add it to the public config only after provider approval; send a test from an unrelated address; confirm its arrival in Gmail and spam folder; check that the mail appears in the provider dashboard; finally update any text describing the form as draft-only.
+- Do not put Gmail passwords, account access tokens or email address into GitHub source. Free Formspree quota observed 2026-11-06: 50 submissions monthly; see https://formspree.io/plans.
+- A provider accepting a submission is not confirmation the message arrived in the intended Gmail mailbox. Keep verification evidence and label incoming form notifications.
+- Alternative providers for future intake: Tally (hosted forms) and Web3Forms (static-site form API), subject to service limits, privacy terms and further evaluation.
