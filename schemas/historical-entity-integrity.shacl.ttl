@@ -1,0 +1,98 @@
+# Manifold Grace — illustrative SHACL Core shapes, v0.1 (2026-11-06)
+# PURPOSE: validate the STRUCTURE of RDF historical research records.
+# NOT: a legal rules engine, a fact-verification oracle, a graph-pruning system,
+#      a trusted evidence registry, or a deployed endpoint.
+# See https://www.w3.org/TR/shacl/
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix mg: <https://manifoldgrace.github.io/ns/research#> .
+
+mg:CandidateShape
+    a sh:NodeShape ;
+    sh:targetClass mg:ResearchCandidate ;
+    sh:property [
+      sh:path mg:auditId ;
+      sh:minCount 1 ; sh:maxCount 1 ;
+      sh:datatype xsd:string ;
+      sh:pattern "^MG-AUD-[0-9]{3,}$" ;
+      sh:message "Every candidate requires a stable MG-AUD identifier." ;
+    ] ;
+    sh:property [
+      sh:path mg:auditStatus ;
+      sh:minCount 1 ; sh:maxCount 1 ;
+      sh:in ( "NOT_AUDITED" "IN_PROGRESS" "REVIEWED" ) ;
+      sh:message "Audit status must use one of the documented states; REVIEWED is not proof of factual truth." ;
+    ] ;
+    sh:property [
+      sh:path mg:entityType ;
+      sh:maxCount 1 ;
+      sh:in ( "UNRESOLVED" "LEGAL_ENTITY" "PUBLIC_BODY" "CORPORATE_GROUP" "PRODUCT" "BUSINESS_UNIT" ) ;
+      sh:message "Classify the candidate's type, or explicitly leave it unresolved." ;
+    ] .
+
+mg:HistoricalRelationshipShape
+    a sh:NodeShape ;
+    sh:targetClass mg:HistoricalRelationship ;
+    sh:property [
+      sh:path mg:sourceEntity ;
+      sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+      sh:message "A relationship must identify its source entity." ;
+    ] ;
+    sh:property [
+      sh:path mg:targetEntity ;
+      sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+      sh:message "A relationship must identify its target entity." ;
+    ] ;
+    sh:property [
+      sh:path mg:relationshipType ;
+      sh:minCount 1 ; sh:maxCount 1 ;
+      sh:in ( "same_legal_entity_as" "subsidiary_of" "product_of" "business_unit_of" "acquired_by" "successor_of" ) ;
+      sh:message "Supply a known relationship type; a type label is not a verified legal conclusion." ;
+    ] ;
+    sh:property [
+      sh:path mg:validFrom ;
+      sh:maxCount 1 ; sh:datatype xsd:date ;
+    ] ;
+    sh:property [
+      sh:path mg:validTo ;
+      sh:maxCount 1 ; sh:datatype xsd:date ;
+    ] ;
+    sh:property [
+      sh:path mg:reviewStatus ;
+      sh:minCount 1 ; sh:maxCount 1 ;
+      sh:in ( "UNVERIFIED" "PENDING_REVIEW" "SOURCE_REVIEWED" "DISPUTED" ) ;
+    ] ;
+    sh:property [
+      sh:path mg:evidenceReference ;
+      sh:nodeKind sh:IRI ;
+      sh:message "Evidence references must be IRIs. Specific citations and their relevance still need human review." ;
+    ] .
+
+mg:EvidenceAssertionShape
+    a sh:NodeShape ;
+    sh:targetClass mg:EvidenceAssertion ;
+    sh:property [
+      sh:path mg:claimText ;
+      sh:minCount 1 ; sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+      sh:path mg:claimStatus ;
+      sh:minCount 1 ; sh:maxCount 1 ;
+      sh:in ( "UNVERIFIED_SOURCE_TEXT" "SUPPORTED" "CONTRADICTED" "DISPUTED" "INSUFFICIENT_EVIDENCE" ) ;
+    ] ;
+    sh:property [
+      sh:path mg:publicationDate ;
+      sh:maxCount 1 ; sh:datatype xsd:date ;
+    ] .
+
+# Example: Dissolution after 2015 is NOT a reason to delete an entity or to
+# eliminate all research about events in 2026. Historical links, successor
+# entities, surviving obligations and later assertions may remain relevant.
+# If a claim appears inconsistent with a time interval, flag it for REVIEW:
+# do not silently drop evidence or apply the Limitation Act 1980 as a
+# universal six-year document retention rule.
+#
+# SHACL validates graph shape and emits a report. It does not validate
+# source authenticity, legal jurisdiction, human rights, or chronology
+# unless appropriate reviewable rules and reliable source data are added.
