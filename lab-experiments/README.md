@@ -18,16 +18,21 @@ python lab-experiments/05-simulation.py
 
 All scripts use only Python's standard library. Their tiny data sets are provided for **pedagogy**, not research findings.
 
+### Learning notes and interactive demos
+
+- [Project 1: literature mapping learning note](learning-notes/01-literature-map.md)
+- [Project 1: browser demo of the TF–IDF ranking baseline](01-literature-map-demo.html)
+
 ### Logic and architecture
 
 **Frontend:** website project selector, annotations, and browser JavaScript demonstrations.
 
 **Code workspace:** this repository and Python source files, made accessible via GitHub Codespaces subject to account access, policies and usage costs.
 
-**Real production backend (not deployed):** authenticated API, user/project authorisation, queued jobs, isolated compute runtime, private research storage, artifact registry, audit logs and cost limits.
+**Real production backend (not deployed):** authenticated API, user/project authorisation, queued jobs, isolated compute runtime, private research storage, artifact registry, audit logs and cost limits remain conceptual only.
 
-**Security:** No credentials, personal data or confidential research information should be committed to this public repository. GitHub Codespaces is an external service and may have separate billing and availability.
+**Security:** No credentials, personal data or confidential research information should be committed to this public repository. GitHub Codespaces is an external service and may have separate billing and privacy considerations.
 
 ## Extending
 
-Replace example input sources with approved research data **only within an authorised private workspace**. Log dataset hashes, methodology, code versions and restrictions. Preserve a separate test set for model evaluation, and do not mischaracterise synthetic model performance.
+Replace example input sources with approved research data **only within an authorised private workspace**. Log dataset hashes, methodology, code versions and restrictions. Preserve a separate testing set for validation and keep claims modest.
