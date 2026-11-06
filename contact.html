@@ -17,6 +17,7 @@
 .mg-contact-page pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font:inherit}
 @media(max-width:760px){.mg-contact-layout{grid-template-columns:1fr}}
 </style>
+  <script src="assets/bank-request-config.js" defer></script>
 </head>
 <body><header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main>
@@ -32,12 +33,14 @@
 </div>
 <div class="panel">
 <h2>Prepare a short enquiry</h2>
-<p>This is a <strong>local drafting aid, not a sending form</strong>. It does not store or transmit what you type. You can copy the draft and send it separately through an available contact channel.</p>
+<p><span id="mg-contact-instructions">Online sending is not yet configured. You can prepare the message locally and copy it; nothing will be submitted automatically.</span></p>
 <form id="mg-contact-prep">
+<div style="position:absolute;left:-99999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Leave blank<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+<label>Your email <input name="email" type="email" maxlength="254" autocomplete="email" required></label>
 <label>Your name <input name="name" maxlength="90" required autocomplete="name"></label>
 <label>Area of interest <select name="topic" required><option value="">Choose a topic</option><option>Research enquiry</option><option>Professional opportunity</option><option>Potential collaboration</option><option>Company / business development</option><option>Book or publication enquiry</option><option>Service or product enquiry</option><option>Other</option></select></label>
 <label>Message <textarea name="message" maxlength="1800" required placeholder="A brief description without confidential documents or sensitive details"></textarea></label>
-<button type="submit" class="button">Prepare draft — do not send</button>
+<button type="submit" class="button" id="mg-contact-submit">Prepare draft — do not send</button>
 </form>
 <div id="mg-contact-result" hidden aria-live="polite">
 <h3>Prepared message</h3>
@@ -53,21 +56,57 @@
 <script>
 (function(){
   'use strict';
-  const form=document.getElementById('mg-contact-prep');
-  const result=document.getElementById('mg-contact-result');
-  const output=document.getElementById('mg-contact-text');
-  const status=document.getElementById('mg-contact-status');
-  form.addEventListener('submit',function(e){
+  const form = document.getElementById('mg-contact-prep');
+  const result = document.getElementById('mg-contact-result');
+  const output = document.getElementById('mg-contact-text');
+  const status = document.getElementById('mg-contact-status');
+  const button = document.getElementById('mg-contact-submit');
+  const endpoint = String(window.MG_BANK_REQUEST?.formspreeEndpoint || '').trim();
+  const active = /^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint);
+  document.getElementById('mg-contact-instructions').textContent = active ?
+    'Send a general enquiry securely through our hosted form service. Do not send sensitive personal information, payment credentials or confidential records.' :
+    'Online sending is not yet configured. You can prepare the message locally and copy it; nothing will be submitted automatically.';
+  button.textContent = active ? 'Submit enquiry' : 'Prepare draft — do not send';
+  form.addEventListener('submit', async function(e){
     e.preventDefault();
-    if(!form.reportValidity())return;
-    const d=new FormData(form);
-    output.textContent=['Manifold Grace enquiry','Name: '+String(d.get('name')||'').trim(),'Topic: '+String(d.get('topic')||'').trim(),'','Message:',''+String(d.get('message')||'').trim()].join('\n');
-    result.hidden=false;
-    status.textContent='Draft prepared locally. Nothing has been sent. Copy the text and send it through an available contact route.';
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    output.textContent = ['Manifold Grace enquiry','Name: '+String(data.get('name')||'').trim(),
+      'Reply email: '+String(data.get('email')||'').trim(),
+      'Topic: '+String(data.get('topic')||'').trim(),'','Message:',String(data.get('message')||'').trim()].join('\\n');
+    result.hidden = false;
+    if (!active) {
+      status.textContent = 'Draft prepared locally. Nothing has been sent. Copy the text and send through an available contact route.';
+      return;
+    }
+    button.disabled = true;
+    button.textContent = 'Sending…';
+    status.textContent = 'Sending your enquiry to the hosted form service.';
+    data.set('subject', 'Manifold Grace — '+String(data.get('topic')||'General enquiry'));
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST', body: data, headers: { Accept: 'application/json' }
+      });
+      if (!response.ok) {
+        status.textContent = response.status === 429 ?
+          'Submission limit reached; please try later. Delivery was not confirmed.' :
+          'The form provider did not accept the message. Delivery was not confirmed.';
+      } else {
+        status.textContent = 'Enquiry accepted by the form service. This does not confirm email delivery or any booking.';
+        button.textContent = 'Enquiry submitted';
+      }
+    } catch (error) {
+      status.textContent = 'Unable to verify submission. Copy your message and try another contact route.';
+    } finally {
+      if (button.textContent !== 'Enquiry submitted') {
+        button.disabled = false;
+        button.textContent = 'Retry submission';
+      }
+    }
   });
   document.getElementById('mg-copy-contact').addEventListener('click',async function(){
-    try{await navigator.clipboard.writeText(output.textContent);status.textContent='Draft copied. Nothing has been sent.';}
-    catch(e){status.textContent='Copy is unavailable here; select the draft text manually. Nothing has been sent.';}
+    try{await navigator.clipboard.writeText(output.textContent);status.textContent='Copied to clipboard. Copying does not send the message.';}
+    catch(e){status.textContent='Select the message and copy it manually; nothing was sent by copying.';}
   });
 })();
 </script>
