@@ -1,0 +1,7 @@
+@prefix mg: <https://manifoldgrace.github.io/ns/research#> .
+@prefix ex: <https://example.org/manifold-grace/synthetic/> .
+
+# Invalid by design: missing registration number and invalid status.
+ex:badFictionalCo a mg:LegalEntity ;
+  mg:registryJurisdiction "SYNTHETIC" ;
+  mg:auditStatus "AUDITED" .
