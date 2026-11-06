@@ -95,6 +95,10 @@
           "independent-coverage.html"
         ],
         [
+          "Feedback",
+          "feedback.html"
+        ],
+        [
           "Contact",
           "contact.html"
         ],
@@ -282,11 +286,12 @@
     ["Socials","socials.html"],
     ["Products","products.html"],
     ["Team","team.html"],
-    ["Careers","careers.html"]
+    ["Careers","careers.html"],
+    ["Feedback","feedback.html"]
   ];
   const footerGroups = [
     ["Research & Knowledge", [0, 4, 5, 6, 7, 8, 9]],
-    ["Professional & Records", [2, 3, 10, 11]],
+    ["Professional & Records", [2, 3, 10, 11, 17]],
     ["Culture & Life", [1, 13]],
     ["Creative & Enterprise", [12, 14, 15, 16]]
   ];
