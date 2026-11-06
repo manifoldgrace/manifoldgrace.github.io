@@ -12,40 +12,55 @@
         <style>
           :host { display:block; font:inherit; color:inherit; --mg-accent:var(--accent,#c8a56c); }
           * {box-sizing:border-box} [hidden]{display:none!important}
-          section {background:var(--mg-surface,var(--surface,transparent));border:1px solid var(--mg-accent);border-radius:1rem;padding:clamp(1.1rem,4vw,2.3rem);margin:2rem 0}
-          h2{font:inherit;font-size:clamp(1.6rem,4vw,2rem);margin:.4rem 0 1rem;line-height:1.2}
-          .eyebrow{font-size:.875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mg-accent)}
-          p{line-height:1.6;margin:.75rem 0} .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
-          label{display:block;font-size:1rem;line-height:1.5}input,textarea{font:inherit;font-size:1rem;width:100%;margin:.4rem 0 0;padding:.8rem;border:1px solid var(--mg-input-border,#777);border-radius:.45rem;color:inherit;background:var(--mg-input-bg,transparent)}
-          input:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--mg-accent);outline-offset:3px}
-          textarea{resize:vertical;min-height:6rem} .full{grid-column:1/-1}
-          .hp{position:absolute;left:-99999px;width:1px;height:1px;overflow:hidden}.check{display:flex;gap:.7rem;align-items:flex-start}.check input{width:1.1rem;height:1.1rem;flex:none;margin:.3rem 0 0;accent-color:var(--mg-accent)}
-          button,a.button{display:inline-block;padding:.85rem 1.1rem;border:1px solid var(--mg-accent);border-radius:.45rem;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;background:var(--mg-accent);color:var(--mg-button-text,#141414)}
+          section {background:var(--mg-surface,var(--surface,#171717));border:1px solid var(--mg-input-border,#414141);border-radius:1.15rem;padding:clamp(1.25rem,4vw,2.25rem);margin:2rem 0;box-shadow:0 14px 42px rgba(0,0,0,.11)}
+          h2{font:inherit;font-size:clamp(1.45rem,3.5vw,1.85rem);font-weight:650;margin:.35rem 0 .7rem;line-height:1.25;letter-spacing:-.025em}
+          .eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mg-accent)}
+          p{line-height:1.55;margin:.6rem 0 1.25rem;max-width:65ch} .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 1.15rem}
+          label{display:block;font-size:.91rem;font-weight:600;line-height:1.45}input,textarea,select{font:inherit;font-size:1rem;font-weight:400;width:100%;min-width:0;margin:.42rem 0 0;padding:.84rem .95rem;min-height:3rem;border:1px solid var(--mg-input-border,#666);border-radius:.72rem;color:inherit;background:var(--mg-input-bg,#1c1c1c);transition:border-color .15s,box-shadow .15s}select option{background:#1b1b1b;color:#fff}input:hover,textarea:hover,select:hover{border-color:var(--mg-accent)}input:focus,textarea:focus,select:focus{outline:2px solid var(--mg-accent);outline-offset:1px}input[readonly]{opacity:.9;background:rgba(128,128,128,.10)}.hint{font-size:.78rem;font-weight:400;opacity:.8;display:block;margin:.32rem 0 0}.price-info{border:1px solid var(--mg-input-border,#666);border-radius:.8rem;padding:.9rem 1rem;margin:.65rem 0 .3rem;background:rgba(130,130,130,.09)}.price-info strong{font-size:1.2rem}.price-info p{font-size:.8rem;margin:.35rem 0 0}
+          button:focus-visible,a:focus-visible{outline:3px solid var(--mg-accent);outline-offset:3px}
+          textarea{resize:vertical;min-height:7rem} .full{grid-column:1/-1}
+          .hp{position:absolute;left:-99999px;width:1px;height:1px;overflow:hidden}.check{display:flex;gap:.75rem;align-items:flex-start;font-weight:400}.check input{width:1.1rem;height:1.1rem;min-height:0;flex:none;margin:.17rem 0 0;accent-color:var(--mg-accent)}.field-block{padding:1rem 0 0;border-top:1px solid var(--mg-input-border,#666);margin-top:1rem}.note{font-size:.84rem;opacity:.83}.form-actions{padding-top:1rem}.send-button{width:100%;min-height:3.15rem}
+          button,a.button{display:inline-block;padding:.85rem 1.2rem;border:1px solid var(--mg-accent);border-radius:.7rem;font:inherit;font-weight:650;cursor:pointer;text-decoration:none;background:var(--mg-accent);color:var(--mg-button-text,#141414)}button:disabled{opacity:.66;cursor:default}
           button.secondary{background:transparent;color:inherit} .actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}
-          .summary{margin-top:1.5rem;padding-top:1.3rem;border-top:1px solid var(--mg-input-border,#777)}
+          .summary{margin-top:1.4rem;padding-top:1.3rem;border-top:1px solid var(--mg-input-border,#777)}.sent-confirmation{border:1px solid var(--mg-input-border,#777);border-radius:.9rem;padding:1.4rem;margin-top:1rem;background:rgba(130,130,130,.08)}.sent-confirmation h3{margin:.2rem 0 .5rem}.sent-reference{font-variant-numeric:tabular-nums;overflow-wrap:anywhere;font-weight:650}
           pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.6}
           small{display:block;font-size:.875rem;line-height:1.5;margin-top:.6rem} .status{font-size:1rem;line-height:1.5}
-          @media(max-width:580px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.actions>*{width:100%;text-align:center}}
+          @media(max-width:580px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.actions>*{width:100%;text-align:center}section{padding:1.15rem}.form-actions button{width:100%}}
           @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
         </style>
         <section aria-labelledby="heading">
-          <div class="eyebrow">Orders &amp; enquiries</div>
-          <h2 id="heading">Request a quote or information</h2>
-          <p class="delivery-description">This form prepares an enquiry. Online submission activates only after the receiving service is configured; until then, the draft can be copied. No payment is taken here.</p>
+          <div class="eyebrow">MANIFOLD GRACE · ENQUIRIES</div>
+          <h2 id="heading"></h2>
+          <p class="delivery-description"></p>
           <form action="https://formspree.io/f/xoeebzbg" method="POST">
             <div class="hp" aria-hidden="true"><label>Leave this field blank<input name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label></div>
             <div class="grid">
-              <label>Your name<input name="name" autocomplete="name" required maxlength="100"></label>
-              <label>Your email<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
-              <label class="full">Item or service<input name="item" required maxlength="160" placeholder="Name of the book, product or service"></label>
+              <label class="full">Full name<input name="name" autocomplete="name" required maxlength="100" placeholder="Your full name"></label>
+              <label class="full">Email address<input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></label>
+              <label class="full product-only" hidden>Product or design concept
+                <select name="product_selection">
+                  <option value="">Select an item</option>
+                </select>
+                <span class="hint">Listed prices are proposed design-stage figures, not confirmed retail offers.</span>
+              </label>
+              <div class="full product-only price-info" hidden aria-live="polite">
+                <span class="note">Proposed unit price</span>
+                <div><strong class="selected-price">Select a design</strong></div>
+                <p>Final price, manufacturing, availability, delivery and returns terms require confirmation before ordering.</p>
+              </div>
+              <label class="full standard-item">Book or service required<input name="item" maxlength="160" required placeholder="Describe what you're enquiring about"></label>
               <label>Quantity<input name="quantity" type="number" min="1" max="100" value="1" required step="1"></label>
-              <label>Budget or timeframe (optional)<input name="timing" maxlength="120"></label>
-              <label class="full">Your requirements (optional)<textarea name="message" maxlength="1200"></textarea></label>
-              <label class="full check"><input name="invoice" type="checkbox"><span>Email me an invoice once the price is agreed.</span></label>
-              <label class="full check"><input name="consent" type="checkbox" required><span>You may use these details to respond to this request.</span></label>
+              <label class="standard-timing">Preferred timeframe (optional)<input name="timing" maxlength="120" placeholder="e.g. next month"></label>
+              <label class="full">Additional details (optional)<textarea name="message" maxlength="1200" placeholder="Any relevant specifications or questions"></textarea></label>
             </div>
-            <p><small>Do not include card details, banking passwords or sensitive documents. Nothing is charged by this form.</small></p>
-            <button type="submit">Prepare request (does not send)</button>
+            <div class="field-block">
+              <label class="check standard-invoice"><input name="invoice" type="checkbox"><span>I'd like an invoice if we agree a price.</span></label>
+              <label class="check"><input name="consent" type="checkbox" required><span>I agree that Manifold Grace may use these details to respond to my enquiry.</span></label>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="send-button">Send enquiry</button>
+              <p class="note">No payment is taken by this form. Please don't submit card details or sensitive documents.</p>
+            </div>
           </form>
           <div class="sent-confirmation" hidden role="status" aria-live="polite">
             <h3>Enquiry submitted</h3>
