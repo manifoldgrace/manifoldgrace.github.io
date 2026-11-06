@@ -286,8 +286,8 @@
   const footerGroups = [
     ["Research & Knowledge", [0, 4, 5, 6, 7, 8, 9]],
     ["Professional & Records", [2, 3, 10, 11]],
-    ["Culture & Life", [1, 13]],
-    ["Creative & Enterprise", [12, 14, 15, 16]]
+    ["Culture & Life", [1, 12]],
+    ["Creative & Enterprise", [13, 14, 15]]
   ];
   document.querySelectorAll("[data-site-footer]").forEach((footer) => {
     const top = document.createElement("nav");
