@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact | Manifold Grace</title>
+<meta name="description" content="Contact Manifold Grace about research, professional collaboration, business proposals or publications.">
+<link rel="stylesheet" href="style.css?v=20261106-footer-2">
+<script src="site-config.js" defer></script><script src="site-shell.js?v=20261106-footer-2" defer></script>
+<style>
+.mg-contact-page{max-width:900px}.mg-contact-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:24px}
+.mg-contact-page .panel{padding:22px;border:1px solid var(--line,#555);border-radius:12px}
+.mg-contact-page label{display:block;margin:15px 0;font-weight:600}
+.mg-contact-page input,.mg-contact-page select,.mg-contact-page textarea{display:block;width:100%;padding:12px;margin-top:7px;background:var(--panel,#171717);border:1px solid #777;color:inherit;border-radius:6px;font:inherit}
+.mg-contact-page textarea{min-height:150px;resize:vertical}
+.mg-contact-page button,.mg-contact-page .button{display:inline-block;margin:8px 8px 8px 0;padding:12px 16px;border-radius:6px;cursor:pointer}
+.mg-contact-page .status{display:block;margin-top:12px}
+.mg-contact-page pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font:inherit}
+@media(max-width:760px){.mg-contact-layout{grid-template-columns:1fr}}
+</style>
+</head>
+<body><header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
+<main>
+<div class="page-hero"><div class="wrap"><div class="eyebrow">CONTACT · RESEARCH · PROFESSIONAL ENQUIRIES</div><h1>Contact Manifold Grace</h1><p class="page-intro">A clear point of contact for research questions, professional opportunities, collaborations and proposed services or publications.</p></div></div>
+<section><div class="wrap mg-contact-page">
+<div class="mg-contact-layout">
+<div class="panel">
+<h2>Current contact route</h2>
+<p><strong>Messages can presently be sent through the LinkedIn contact route below.</strong> The future Manifold Grace-branded email address is not yet activated or tested. No enquiry entered into this website is currently submitted to Gmail automatically.</p>
+<p><a class="button" href="https://www.linkedin.com/in/gracerose-uk" target="_blank" rel="noopener noreferrer">Open professional LinkedIn profile</a></p>
+<p>LinkedIn messages may require a LinkedIn account or connection, depending on LinkedIn's settings. Do not include private records or sensitive personal information in an unsolicited message.</p>
+<p><strong>For books, products and services:</strong> the <a href="my-book.html#enquiry">book enquiry page</a> and <a href="services.html#enquiry">service enquiry page</a> currently prepare drafts. They do not register an order, process payment or guarantee email delivery.</p>
+</div>
+<div class="panel">
+<h2>Prepare a short enquiry</h2>
+<p>This is a <strong>local drafting aid, not a sending form</strong>. It does not store or transmit what you type. You can copy the draft and send it separately through an available contact channel.</p>
+<form id="mg-contact-prep">
+<label>Your name <input name="name" maxlength="90" required autocomplete="name"></label>
+<label>Area of interest <select name="topic" required><option value="">Choose a topic</option><option>Research enquiry</option><option>Professional opportunity</option><option>Potential collaboration</option><option>Company / business development</option><option>Book or publication enquiry</option><option>Service or product enquiry</option><option>Other</option></select></label>
+<label>Message <textarea name="message" maxlength="1800" required placeholder="A brief description without confidential documents or sensitive details"></textarea></label>
+<button type="submit" class="button">Prepare draft — do not send</button>
+</form>
+<div id="mg-contact-result" hidden aria-live="polite">
+<h3>Prepared message</h3>
+<pre id="mg-contact-text"></pre>
+<button type="button" class="button" id="mg-copy-contact">Copy message</button>
+<p id="mg-contact-status" class="status" role="status">Nothing has been sent. Use the copy option and send through your chosen contact method.</p>
+</div>
+</div>
+</div>
+<section><h2>Planned email activation and verification</h2><p>Once domain ownership and email routing are established, the professional mailbox can be connected to Gmail and tested with an independent sender. At that point, we can replace this interim contact arrangement with a real submission service or a verified mailto option, with appropriate spam protection, privacy notices and submission records. A branded domain by itself does not make a form operational.</p><p><a href="professional.html">Professional record</a> · <a href="company-intelligence-development-financing.html">Company development research</a> · <a href="conglomerate.html">Venture readiness</a></p></section>
+</div></section>
+</main><footer><div class="wrap" data-site-footer></div></footer>
+<script>
+(function(){
+  'use strict';
+  const form=document.getElementById('mg-contact-prep');
+  const result=document.getElementById('mg-contact-result');
+  const output=document.getElementById('mg-contact-text');
+  const status=document.getElementById('mg-contact-status');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.reportValidity())return;
+    const d=new FormData(form);
+    output.textContent=['Manifold Grace enquiry','Name: '+String(d.get('name')||'').trim(),'Topic: '+String(d.get('topic')||'').trim(),'','Message:',''+String(d.get('message')||'').trim()].join('\n');
+    result.hidden=false;
+    status.textContent='Draft prepared locally. Nothing has been sent. Copy the text and send it through an available contact route.';
+  });
+  document.getElementById('mg-copy-contact').addEventListener('click',async function(){
+    try{await navigator.clipboard.writeText(output.textContent);status.textContent='Draft copied. Nothing has been sent.';}
+    catch(e){status.textContent='Copy is unavailable here; select the draft text manually. Nothing has been sent.';}
+  });
+})();
+</script>
+</body></html>
