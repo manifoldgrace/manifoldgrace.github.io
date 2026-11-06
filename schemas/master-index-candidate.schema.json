@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://manifoldgrace.github.io/schemas/master-index-candidates-v0.1.schema.json",
+  "title": "Manifold Grace candidate index (pre-audit)",
+  "type": "object",
+  "required": [
+    "$schema",
+    "project_metadata",
+    "sectors"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "project_metadata": {
+      "type": "object",
+      "required": [
+        "title",
+        "version",
+        "as_of_date",
+        "candidate_entry_count",
+        "independently_audited_entry_count",
+        "sector_count",
+        "status"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "version": {
+          "const": "0.1.0"
+        },
+        "as_of_date": {
+          "format": "date"
+        },
+        "candidate_entry_count": {
+          "const": 300
+        },
+        "independently_audited_entry_count": {
+          "const": 0
+        },
+        "sector_count": {
+          "const": 20
+        },
+        "status": {
+          "const": "RESEARCH_CANDIDATES_NOT_VERIFIED"
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sectors": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "required": [
+          "sector_id",
+          "sector_name",
+          "entities"
+        ],
+        "properties": {
+          "sector_id": {
+            "type": "string",
+            "pattern": "^SEC-[0-9]{2}$"
+          },
+          "sector_name": {
+            "type": "string"
+          },
+          "entities": {
+            "type": "array",
+            "minItems": 15,
+            "maxItems": 15,
+            "items": {
+              "type": "object",
+              "required": [
+                "audit_id",
+                "display_name",
+                "audit_status",
+                "claim_status",
+                "retention_rule",
+                "evidence_sources"
+              ],
+              "properties": {
+                "audit_id": {
+                  "type": "string",
+                  "pattern": "^MG-AUD-[0-9]{3}$"
+                },
+                "display_name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "candidate_website": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "pattern": "^https://[^ ]+$"
+                },
+                "audit_status": {
+                  "const": "NOT_AUDITED"
+                },
+                "claim_status": {
+                  "const": "UNVERIFIED_SOURCE_TEXT"
+                },
+                "entity_type": {
+                  "enum": [
+                    "NOT_CLASSIFIED",
+                    "LEGAL_ENTITY",
+                    "PUBLIC_BODY",
+                    "PRODUCT",
+                    "DIVISION",
+                    "SUBSIDIARY",
+                    "OTHER"
+                  ]
+                },
+                "retention_rule": {
+                  "const": "NOT_ASSESSED"
+                },
+                "evidence_sources": {
+                  "type": "array",
+                  "maxItems": 0
+                },
+                "independent_audit_date": {
+                  "type": "null"
+                },
+                "parent_audit_id": {
+                  "type": "null"
+                },
+                "notes": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
