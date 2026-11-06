@@ -267,7 +267,6 @@
 
   const secondary = [
     ["Thinking","knowledge.html#thinking"],
-    ["Inspirations","inspirations.html"],
     ["Biography","biographical-record.html"],
     ["Life Timeline","life-timeline.html"],
     ["Research Collaborations","research-collaborations.html"],
