@@ -32,7 +32,7 @@
           <div class="eyebrow">Orders &amp; enquiries</div>
           <h2 id="heading">Request a quote or information</h2>
           <p class="delivery-description">This form prepares an enquiry. Online submission activates only after the receiving service is configured; until then, the draft can be copied. No payment is taken here.</p>
-          <form>
+          <form action="https://formspree.io/f/xoeebzbg" method="POST">
             <div class="hp" aria-hidden="true"><label>Leave this field blank<input name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label></div>
             <div class="grid">
               <label>Your name<input name="name" autocomplete="name" required maxlength="100"></label>
@@ -67,11 +67,11 @@
       let body = '';
       let reference = '';
       const prefix = {books: 'BK', services: 'SV', products: 'PR'}[page];
-      const endpoint = String(window.MG_BANK_REQUEST?.formspreeEndpoint || '').trim();
+      const endpoint = form.action;
       const live = /^https:\/\/formspree\.io\/f\/[A-Za-z0-9]+$/.test(endpoint);
       const submit = form.querySelector('button[type="submit"]');
-      submit.textContent = live ? 'Submit enquiry securely' : 'Prepare request (does not send)';
-      root.querySelector('.delivery-description').textContent = live ? 'Send an enquiry for review using our hosted submission service. No payment is taken here; submissions do not confirm a booking or order.' : 'Online sending is not configured yet. You can prepare a request and copy it; nothing will be sent automatically.';
+      submit.textContent = live ? 'Send enquiry securely' : 'Form unavailable';
+      root.querySelector('.delivery-description').textContent = live ? 'Send an enquiry for review using Formspree. No payment is taken here; a submission is not a confirmed order or booking.' : 'Enquiries are temporarily unavailable; please use the professional contact link.';
       const makeReference = () => {
         const bytes = crypto.getRandomValues(new Uint8Array(8));
         return `MG-${prefix}-${Array.from(bytes, b => b.toString(16).padStart(2,'0')).join('').toUpperCase()}`;
