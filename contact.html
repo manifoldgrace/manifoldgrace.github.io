@@ -17,7 +17,7 @@
 .mg-contact-page pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%;font:inherit}
 @media(max-width:760px){.mg-contact-layout{grid-template-columns:1fr}}
 </style>
-  <script src="assets/bank-request-config.js" defer></script>
+  <script src="assets/bank-request-config.js?v=20261106-contact-fix1" defer></script>
 </head>
 <body><header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main>
@@ -54,7 +54,7 @@
 </div></section>
 </main><footer><div class="wrap" data-site-footer></div></footer>
 <script>
-(function(){
+document.addEventListener('DOMContentLoaded', function(){
   'use strict';
   const form = document.getElementById('mg-contact-prep');
   const result = document.getElementById('mg-contact-result');
@@ -73,7 +73,7 @@
     const data = new FormData(form);
     output.textContent = ['Manifold Grace enquiry','Name: '+String(data.get('name')||'').trim(),
       'Reply email: '+String(data.get('email')||'').trim(),
-      'Topic: '+String(data.get('topic')||'').trim(),'','Message:',String(data.get('message')||'').trim()].join('\\n');
+      'Topic: '+String(data.get('topic')||'').trim(),'','Message:',String(data.get('message')||'').trim()].join('\n');
     result.hidden = false;
     if (!active) {
       status.textContent = 'Draft prepared locally. Nothing has been sent. Copy the text and send through an available contact route.';
@@ -108,6 +108,6 @@
     try{await navigator.clipboard.writeText(output.textContent);status.textContent='Copied to clipboard. Copying does not send the message.';}
     catch(e){status.textContent='Select the message and copy it manually; nothing was sent by copying.';}
   });
-})();
+});
 </script>
 </body></html>
