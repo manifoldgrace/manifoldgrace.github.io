@@ -1183,3 +1183,30 @@ header .shell-head{padding:16px 0;gap:20px}
   .site-nav-group[open]>summary{border-color:#6b7b87}
   .site-nav-panel a{padding:9px 10px}
 }
+
+
+/* Manifold Grace notation: consistent visual navigation mnemonics.
+   Symbols indicate sections only, never independently verified status. */
+.mg-notation-glyph{
+  display:inline-flex;align-items:center;justify-content:center;
+  flex:0 0 1.8rem;width:1.8rem;height:1.8rem;
+  border:1px solid color-mix(in srgb,var(--accent) 44%,var(--line));
+  border-radius:50%;color:var(--accent);font:500 1.2rem/1 "Segoe UI Symbol","Noto Sans Symbols 2",system-ui,sans-serif;
+  vertical-align:middle;
+}
+.mg-notation-code{
+  display:inline-block;font:500 .65rem/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;
+  color:var(--muted);letter-spacing:.025em;white-space:nowrap;
+}
+.mg-notation-name{min-width:0;flex:1 1 auto}
+.site-nav-group>summary,.site-footer-group>summary{
+  display:flex!important;align-items:center;gap:9px;
+}
+.site-nav-group>summary .mg-notation-name,
+.site-footer-group>summary .mg-notation-name{font-weight:inherit}
+.site-nav-group>summary .mg-notation-code,
+.site-footer-group>summary .mg-notation-code{margin-left:auto;margin-right:9px}
+@media(max-width:500px){
+  .site-nav-group>summary .mg-notation-code,
+  .site-footer-group>summary .mg-notation-code{font-size:.58rem}
+}
