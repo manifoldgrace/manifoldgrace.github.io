@@ -64,6 +64,20 @@ body.hero-mode #viewport{height:100dvh}
  body.hero-mode .maplibregl-ctrl-top-right{top:110px}
  body.hero-mode #panel{top:auto;bottom:22px;max-height:48%;left:12px;right:12px;width:calc(100% - 24px)}
 }
+
+/* Hero map uses its own dedicated zone underneath homepage text. */
+body.hero-mode,body.hero-mode #viewport,body.hero-mode #map{height:100%!important;min-height:0!important}
+body.hero-mode .toolbar{top:auto!important;bottom:max(12px,env(safe-area-inset-bottom))!important;left:14px!important;right:auto!important;max-width:48%!important}
+body.hero-mode #counter{top:auto!important;bottom:max(12px,env(safe-area-inset-bottom))!important;right:14px!important;left:auto!important;font-size:11px}
+body.hero-mode .maplibregl-ctrl-top-right{top:50%!important;right:12px!important;transform:translateY(-50%)}
+body.hero-mode #chapter,body.hero-mode #status{display:none!important}
+body.hero-mode #panel{top:8px!important;bottom:auto!important;left:12px!important;right:12px!important;width:calc(100% - 24px)!important;max-height:70%!important}
+body.hero-mode .maplibregl-ctrl-bottom-right{bottom:53px!important}
+@media(max-width:500px){
+ body.hero-mode .toolbar{left:10px!important;bottom:10px!important}
+ body.hero-mode #counter{right:10px!important;bottom:10px!important;font-size:10px}
+ body.hero-mode .maplibregl-ctrl-top-right{right:8px!important}
+}
 </style></head><body>
 <div id="viewport">
 <div id="map-fallback" role="status"><div class="planet"><div class="fallback-caption">Global research atlas<br><small>Interactive globe loading…</small><a class="fallback-link" href="site-directory.html" target="_top">Browse research directory</a></div></div></div><div id="map" role="region" aria-label="Interactive globe of selected public interest AI projects"></div>
@@ -95,7 +109,7 @@ const items=[
 const featureCollection={type:'FeatureCollection',features:items.map((p,i)=>({type:'Feature',geometry:{type:'Point',coordinates:[p.lng,p.lat]},properties:{id:i,name:p.n,own:!!p.own}}))};
 const style='https://tiles.openfreemap.org/styles/dark';
 let map;
-try{map=new maplibregl.Map({container:'map',style,center:[10,24],zoom:1.35,pitch:0,bearing:0,antialias:true,dragRotate:false,cooperativeGestures:true,attributionControl:false});}
+try{map=new maplibregl.Map({container:'map',style,center:[10,24],zoom:1.25,pitch:0,bearing:0,antialias:true,dragRotate:false,cooperativeGestures:true,attributionControl:false});}
 catch(err){fallback.querySelector('small').textContent='Map temporarily unavailable';throw err}
 map.on('style.load',()=>{map.setProjection({type:'globe'});});
 map.on('error', e=>{if(e && e.error)console.warn('Global atlas map issue',e.error)});
@@ -117,13 +131,13 @@ const cite=document.createElement('button');cite.type='button';cite.textContent=
 const citation=p.own?'Manifold Grace. (2026). Public Interest AI research initiative. https://manifoldgrace.github.io/public-interest-ai.html':p.n+'. Public Interest AI project directory. HIIG AI & Society Lab. https://publicinterest.ai/tool/map/directory (accessed 7 November 2026).';
 try{await navigator.clipboard.writeText(citation);cite.textContent='Citation copied'}catch{cite.textContent='Copy unavailable; use source link above'}
 });body.appendChild(cite);history.replaceState(null,'',location.pathname+'?project='+(p.own?'manifold-grace':encodeURIComponent(p.n.toLowerCase().replace(/[^a-z0-9]+/g,'-'))))}
-function flight(){if(!auto||!visible)return;const stop=stops[step%stops.length];chapter.replaceChildren();const heading=document.createElement('b'),sub=document.createElement('span');heading.textContent=stop.heading;sub.textContent='Research locations · not confirmed partnerships';chapter.append(heading,sub);announcer.textContent='Tour: '+stop.heading;step++;if(heroMode){panel.hidden=true}else if(step%stops.length===2){show(items[0])}else if(step%stops.length===0){show(items[items.length-1])}else{panel.hidden=true}currentlyFlying=true;map.flyTo({center:stop.point,zoom:stop.zoom,bearing:(step%2?12:-12),speed:.55,curve:1.4,essential:false});document.getElementById('status').textContent=stop.heading;timer=setTimeout(()=>{currentlyFlying=false;if(auto&&visible)flight()},9500)}
+function flight(){if(!auto||!visible)return;const stop=stops[step%stops.length];chapter.replaceChildren();const heading=document.createElement('b'),sub=document.createElement('span');heading.textContent=stop.heading;sub.textContent='Research locations · not confirmed partnerships';chapter.append(heading,sub);announcer.textContent='Tour: '+stop.heading;step++;if(heroMode){panel.hidden=true}else if(step%stops.length===2){show(items[0])}else if(step%stops.length===0){show(items[items.length-1])}else{panel.hidden=true}currentlyFlying=true;map.flyTo({center:stop.point,zoom:heroMode?1.4:stop.zoom,bearing:(step%2?12:-12),speed:.55,curve:1.4,essential:false});document.getElementById('status').textContent=stop.heading;timer=setTimeout(()=>{currentlyFlying=false;if(auto&&visible)flight()},9500)}
 function start(){if(reduce||!visible)return;auto=true;manuallyPaused=false;button.textContent='Ⅱ Pause tour';button.setAttribute('aria-pressed','true');clear();flight()}
 button.addEventListener('click',()=>auto?pause(true):start());
 document.getElementById('close').addEventListener('click',()=>{panel.hidden=true;history.replaceState(null,'',location.pathname)});
 document.getElementById('london').addEventListener('click',()=>{pause(true);map.flyTo({center:[-0.1278,51.5074],zoom:5,speed:.75,essential:true});show(items[0])});
 document.getElementById('reset').addEventListener('click',()=>{pause(true);panel.hidden=true;map.flyTo({center:[10,24],zoom:1.35,pitch:0,bearing:0,essential:true})});
-map.on('load',()=>{fallback.hidden=true;map.resize();updateCounter();
+map.on('load',()=>{fallback.hidden=true;map.resize();if(heroMode)map.setPadding({top:54,bottom:75,left:0,right:0});updateCounter();
   map.addSource('projects',{type:'geojson',data:featureCollection,cluster:true,clusterMaxZoom:10,clusterRadius:47});
   map.addLayer({id:'clusters',type:'circle',source:'projects',filter:['has','point_count'],paint:{'circle-color':'#f6f6f6','circle-radius':['step',['get','point_count'],20,10,25,30,30],'circle-stroke-color':'#898989','circle-stroke-width':1.5}});
   map.addLayer({id:'cluster-count',type:'symbol',source:'projects',filter:['has','point_count'],layout:{'text-field':['get','point_count_abbreviated'],'text-size':13},paint:{'text-color':'#111111'}});
