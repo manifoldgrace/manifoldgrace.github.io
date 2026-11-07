@@ -23,8 +23,16 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
 .mg-home-foot{border-top:1px solid var(--line);padding:24px 0 44px;color:var(--muted);font-size:.85rem}.mg-home-foot .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.mg-home-foot a{text-decoration:underline}
 @media(max-width:700px){.mg-entry{min-height:calc(100dvh - 76px)}.mg-entry:after{background:linear-gradient(to bottom,rgba(6,7,7,.58),transparent 65%),linear-gradient(to top,rgba(6,7,7,.84),transparent 43%)}.mg-heading{top:clamp(82px,14dvh,145px);max-width:calc(100% - 40px)}.mg-heading h1{font-size:clamp(2.35rem,11vw,4rem)}.mg-heading p{font-size:.95rem;max-width:31ch}.mg-entry-actions{bottom:55px;left:20px;right:20px}.mg-entry-actions a{font-size:.8rem;padding:9px 13px}.mg-continue{right:22px;bottom:15px;font-size:.74rem}.mg-route{grid-template-columns:1fr}.mg-route a{min-height:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.mg-menu-toggle{background:transparent;color:var(--text);border:1px solid #777;border-radius:24px;min-height:44px;padding:8px 18px;font:inherit;cursor:pointer}
+.mg-menu-toggle:hover,.mg-menu-toggle:focus-visible{border-color:var(--accent)}
+header .wrap{position:relative}
+header .mg-home-nav{position:absolute;top:100%;right:0;width:min(420px,92vw);max-height:calc(100dvh - 100px);overflow-y:auto;background:#111;border:1px solid #4b4b4b;border-radius:0 0 14px 14px;padding:18px;box-shadow:0 20px 40px #000b;z-index:200}
+header .mg-home-nav[hidden]{display:none!important}
+header .mg-home-nav .nav-links{display:flex!important;flex-direction:column;gap:6px}
+header .mg-home-nav .site-nav-group{width:100%;max-width:100%}
+header .mg-home-nav .site-nav-panel{position:static!important;max-height:none!important;overflow:visible!important;box-shadow:none!important}
 </style></head><body>
-<header><div class="wrap"><a class="brand" href="index.html">Manifold Grace</a><nav data-site-nav aria-label="Explore Manifold Grace by topic"></nav></div></header>
+<header><div class="wrap"><a class="brand" href="index.html">Manifold Grace</a><button type="button" class="mg-menu-toggle" id="home-menu-toggle" aria-controls="home-nav" aria-expanded="false">☰ Explore menu</button><nav class="mg-home-nav" id="home-nav" data-site-nav aria-label="Explore Manifold Grace by topic" hidden></nav></div></header>
 <main>
 <section class="mg-entry" aria-label="Global research map"><iframe title="Global public-interest AI globe: animated map with user controls" src="public-interest-map.html?hero=1" allow="fullscreen" loading="eager"></iframe>
 <div class="mg-heading"><span class="eyebrow">Independent research · London · Worldwide outlook</span><h1>Manifold Grace</h1><p>Evidence, public-interest AI and creative interdisciplinary research — connecting ideas, people and possibilities.</p></div>
@@ -38,4 +46,11 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}
 </div></div></section>
 </main>
 <div class="mg-home-foot"><div class="wrap"><span>Manifold Grace · Independent research and creative practice</span><span><a href="site-directory.html">Directory</a> · <a href="homepage-content.html">Full record</a> · <a href="contact.html">Contact</a></span></div></div>
-</body></html>
+<script>
+(()=>{const button=document.getElementById('home-menu-toggle'),nav=document.getElementById('home-nav');
+const close=()=>{nav.hidden=true;button.setAttribute('aria-expanded','false')};
+button.addEventListener('click',()=>{const opening=nav.hidden;nav.hidden=!opening;button.setAttribute('aria-expanded',String(opening))});
+document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!button.contains(e.target))close()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!nav.hidden){close();button.focus()}});
+})();
+</script></body></html>
