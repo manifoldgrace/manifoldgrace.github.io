@@ -37,6 +37,9 @@ body.hero-mode #map-fallback .planet{width:min(75vw,65dvh,560px)}
 <div id="status">● Manifold Grace (London) · ◯ External directory examples</div>
 </div>
 <div class="note">A curated selection, not a worldwide census or proof of partnerships. Locations are approximate city centres. Source: <a href="https://publicinterest.ai/tool/map/directory" target="_blank" rel="noopener noreferrer">Public Interest AI directory</a>. Other projects' current activity is unverified. Map tiles: © OpenStreetMap contributors, © CARTO.</div>
+<script>
+window.setTimeout(()=>{const box=document.getElementById('map-fallback');if(box&&!box.hidden){const caption=box.querySelector('small');if(caption)caption.textContent='Map unavailable here — browse projects via the site directory.';}},12000);
+</script>
 <script type="module">
 import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs';
 const heroMode=new URLSearchParams(location.search).get('hero')==='1';if(heroMode)document.body.classList.add('hero-mode');
