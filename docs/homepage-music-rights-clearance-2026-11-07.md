@@ -5,12 +5,12 @@ Status: **NOT CLEARED — do not upload, embed, autoplay, stream or use the reco
 Recorded: 7 November 2026.
 
 ## Requested recording
-- Work: Main Titles (From the HBO Miniseries *Band of Brothers* Soundtrack).
+- Work: **Main Theme** (sometimes labelled Main Titles), from *Band of Brothers* (2001). Verify the requested recording against the original soundtrack listing before executing any licence.
 - Composer: Michael Kamen.
 - Performance: London Metropolitan Orchestra and other credited contributors.
 - Release: Sony Classical, *Band of Brothers* soundtrack, 2001, catalogue SK 89719.
-- Approximate duration: 2:24.
-- Reference: https://www.prestomusic.com/classical/products/8003161--band-of-brothers
+- Approximate duration: 2:25 (original Sony 2001 soundtrack listing); verify the recording and exact version.
+- Sources: https://www.michaelkamen.com/band-of-brothers-soundtrack and https://musicbrainz.org/release/b51b2948-3ed1-4883-b588-57d4926f5744
 
 ## Proposed homepage use
 - Manifold Grace, https://manifoldgrace.github.io/
@@ -22,6 +22,7 @@ Recorded: 7 November 2026.
 ## Enquiries sent on 7 November 2026
 - PRS for Music online licensing: onlinelicensing@prsformusic.com — enquiry sent, awaiting response.
 - London Metropolitan Orchestra: info@lmo.co.uk — rights-holder referral requested, awaiting response.
+- Sony Music UK general reception: reception.enquiries@sonymusic.com — request forwarded for master-rights licensing referral, awaiting response. This was sent as an enquiry, not the required formal licence application.
 
 ## Still to establish
 - Who controls the recording/master rights (Sony Classical release; ask Sony Music licensing).
@@ -32,8 +33,11 @@ Recorded: 7 November 2026.
 - Exact contractual permission, dates, credit requirements, and allowed technical delivery.
 
 ## Potential formal contacts
-- Sony Music licence request: https://www.sonymusic.eu/music-licensing/ (separate form may require private applicant/billing details).
+- Sony Music Europe formal licence request: https://www.sonymusic.eu/music-licensing/ (mandatory applicant and billing fields; not submitted).
+- Sony Music UK licensing routing: https://www.sonymusic.co.uk/contact/
+- Sony Music Publishing synchronisation rights: https://www.sonymusicpub.com/en/sync (composer/publishing rights may be shared with K-Man Corp. and HBO-associated L-T Music Publishing; clarify ownership and splits).
+- Sony SyncShop: https://syncshop.sonymusic.com/requestform/ (states non-US productions should go to their own territory).
 - PRS for Music: https://www.prsformusic.com/
 - PPL: https://www.ppluk.com/
 
-No licence has been purchased or granted. No audio files or playback have been added.
+Check made on 7 November 2026: no incoming response located in the connected Gmail inbox from these contacts. Sony's official website requires a separate application with personal/billing details. No licence has been purchased or granted. No audio files or playback have been added.
