@@ -38,6 +38,32 @@ body.hero-mode .toolbar{z-index:5}
 .sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 @media(max-width:700px){body.hero-mode #chapter{bottom:82px;max-width:220px}body.hero-mode #counter{bottom:62px}}
 @media(max-width:700px){body.hero-mode .toolbar{bottom:18px;right:16px}body.hero-mode #panel{bottom:66px;right:8px;left:8px;width:calc(100% - 16px)}}
+
+/* Homepage-only restrained monochrome presentation; no overlapping floating cards. */
+:root{--ui-light:#fff}
+#viewport{background:#050505}
+#map{background:#050505}
+.tool,.tool.primary{background:rgba(10,10,10,.65);color:#fff;border:1px solid #ffffff65;border-radius:9999px;min-height:44px;padding:9px 15px;backdrop-filter:blur(9px)}
+.tool:hover,.tool:focus-visible,.tool[aria-pressed="true"]{border-color:#fff;color:#fff;background:#222}
+#panel{border-radius:22px;background:#111d}
+.maplibregl-ctrl-zoom-in,.maplibregl-ctrl-zoom-out{border-radius:50%!important;width:38px!important;height:38px!important;background:#111!important;color:white!important}
+.maplibregl-ctrl-group{background:transparent!important;box-shadow:none!important;display:grid;gap:8px}
+.maplibregl-ctrl-group button{border:1px solid #ffffff55!important}
+.maplibregl-cooperative-gesture-screen{display:none!important}
+body.hero-mode #chapter,body.hero-mode #status{display:none}
+body.hero-mode #counter{position:absolute;top:78px;bottom:auto;right:14px;border:1px solid #ffffff30;border-radius:9999px;padding:7px 11px;background:#0707079c;font-size:11px}
+body.hero-mode .toolbar{position:absolute;top:16px;bottom:auto;right:14px;left:auto;justify-content:flex-end;max-width:60%}
+body.hero-mode .toolbar #tour{min-height:44px}
+body.hero-mode .maplibregl-ctrl-top-right{top:126px}
+body.hero-mode #panel{top:155px;bottom:auto;max-height:48%;border-radius:20px}
+body.hero-mode #viewport,body.hero-mode #map{height:100%;min-height:100%}
+body.hero-mode #viewport{height:100dvh}
+@media(max-width:700px){
+ body.hero-mode .toolbar{top:12px;right:12px;bottom:auto}
+ body.hero-mode #counter{top:66px;right:12px;bottom:auto}
+ body.hero-mode .maplibregl-ctrl-top-right{top:110px}
+ body.hero-mode #panel{top:auto;bottom:22px;max-height:48%;left:12px;right:12px;width:calc(100% - 24px)}
+}
 </style></head><body>
 <div id="viewport">
 <div id="map-fallback" role="status"><div class="planet"><div class="fallback-caption">Global research atlas<br><small>Interactive globe loading…</small><a class="fallback-link" href="site-directory.html" target="_top">Browse research directory</a></div></div></div><div id="map" role="region" aria-label="Interactive globe of selected public interest AI projects"></div>
@@ -45,7 +71,7 @@ body.hero-mode .toolbar{z-index:5}
 <div id="panel" hidden role="region" aria-live="polite" aria-label="Project details"><button id="close" aria-label="Close project details" type="button">×</button><div id="panel-body"></div></div>
 <div id="chapter"><b>◎ Global research atlas</b><span>Selected public-interest AI initiatives</span></div><div id="counter" role="status" aria-live="off">11 listed locations</div><div class="sr-only" id="accessible-project" aria-live="polite"></div><div id="status">⊕ Manifold Grace (London) · ◯ External directory examples</div>
 </div>
-<div class="note">A curated selection, not a worldwide census or proof of partnerships. Locations are approximate city centres. Source: <a href="https://publicinterest.ai/tool/map/directory" target="_blank" rel="noopener noreferrer">Public Interest AI directory</a>. Other projects' current activity is unverified. Map tiles: © OpenStreetMap contributors, © CARTO.</div>
+<div class="note">A curated selection, not a worldwide census or proof of partnerships. Locations are approximate city centres. Source: <a href="https://publicinterest.ai/tool/map/directory" target="_blank" rel="noopener noreferrer">Public Interest AI directory</a>. Other projects' current activity is unverified. Map tiles: © OpenStreetMap contributors · OpenFreeMap.</div>
 <script>
 window.setTimeout(()=>{const box=document.getElementById('map-fallback');if(box&&!box.hidden){const caption=box.querySelector('small');if(caption)caption.textContent='Map unavailable here — browse projects via the site directory.';}},12000);
 </script>
@@ -67,7 +93,7 @@ const items=[
 {n:'Botometer',city:'Bloomington, Indiana, USA',lat:39.1653,lng:-86.5264}
 ];
 const featureCollection={type:'FeatureCollection',features:items.map((p,i)=>({type:'Feature',geometry:{type:'Point',coordinates:[p.lng,p.lat]},properties:{id:i,name:p.n,own:!!p.own}}))};
-const style={version:8,sources:{'base':{type:'raster',tiles:['https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png','https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'],tileSize:256,attribution:'© OpenStreetMap contributors © CARTO'}},layers:[{id:'base',type:'raster',source:'base'}]};
+const style='https://tiles.openfreemap.org/styles/dark';
 let map;
 try{map=new maplibregl.Map({container:'map',style,center:[10,24],zoom:1.35,pitch:0,bearing:0,antialias:true,dragRotate:false,cooperativeGestures:true,attributionControl:false});}
 catch(err){fallback.querySelector('small').textContent='Map temporarily unavailable';throw err}
