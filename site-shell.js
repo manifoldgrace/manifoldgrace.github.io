@@ -218,7 +218,7 @@
           "trading.html"
         ]
       ]
-    ]
+    ],
     [
       "Public Interest AI",
       [
