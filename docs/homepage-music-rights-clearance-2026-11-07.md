@@ -5,7 +5,7 @@ Status: **NOT CLEARED — do not upload, embed, autoplay, stream or use the reco
 Recorded: 7 November 2026.
 
 ## Requested recording
-- Work: **Main Theme** (sometimes labelled Main Titles), from *Band of Brothers* (2001). Verify the requested recording against the original soundtrack listing before executing any licence.
+- Work: **Main Titles (Instrumental)**, from *Band of Brothers* (2001), as listed on Apple Music Classical. Some earlier enquiries called it Main Theme; the soundtrack recording must be matched precisely before executing any licence.
 - Composer: Michael Kamen.
 - Performance: London Metropolitan Orchestra and other credited contributors.
 - Release: Sony Classical, *Band of Brothers* soundtrack, 2001, catalogue SK 89719.
@@ -41,4 +41,9 @@ Recorded: 7 November 2026.
 - PRS for Music: https://www.prsformusic.com/
 - PPL: https://www.ppluk.com/
 
-Check made on 7 November 2026: no incoming response located in the connected Gmail inbox from these contacts. Sony's official website requires a separate application with personal/billing details. No licence has been purchased or granted. No audio files or playback have been added.
+Check made on 7 November 2026: Sony Music UK replied with an automatic acknowledgement indicating licensing enquiries will be forwarded to the relevant team. The Musicians' Union replied with an automatic acknowledgement from Recording & Broadcasting. No substantive licence decision or grant of rights has been received from these contacts; no substantive reply identified from PRS or the orchestra. Sony's official website requires a separate application with personal/billing details. No licence has been purchased or granted. No audio files or playback have been added.
+
+## Accessible listening reference and current research use
+- [Apple Music Classical: Band of Brothers (2001)](https://classical.music.apple.com/gb/album/193536729) displays a **Preview** control for *Main Titles (Instrumental)*, 2:24. This is third-party playback under that service's terms, not a licence to capture, rehost, embed or republish its preview.
+- The Manifold Grace Music page links to the authorised listing. It does not host a music clip.
+- New Music page section covers waveform-interface transparency, multimodal audio QA, non-speech signal handling and the educational implications of music analysis.
