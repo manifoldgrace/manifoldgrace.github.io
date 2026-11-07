@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Public-interest AI project map | Manifold Grace</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrz1RCf9tD/miZyoLZ3v5lLG4gk=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;background:#101010;color:#f5f3ee}#map{height:480px;width:100%;background:#171717}.map-note{padding:10px 15px;font-size:12px;background:#141414;color:#c9c7c4}.map-note a{color:#ffae9f}.leaflet-container{background:#151515;font:inherit}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#222;color:#f5f3ee}.leaflet-popup-content{line-height:1.45;max-width:280px}.leaflet-popup-content strong{font-size:15px}.leaflet-popup-content a{color:#ffad9e}.map-key{position:absolute;z-index:500;left:12px;top:12px;background:rgba(18,18,18,.94);color:#f5f3ee;padding:10px 13px;border-radius:10px;box-shadow:0 4px 18px #0008;font-size:12px;pointer-events:none}.key-dot{display:inline-block;height:10px;width:10px;border-radius:50%;margin-right:5px;background:#ef6b56}.key-dot.others{background:#e4dbd0}.cluster{background:rgba(239,107,86,.22);border-radius:100%;display:grid;place-items:center}.cluster span{background:#ef6b56;color:#18100e;font-weight:700;width:34px;height:34px;line-height:34px;text-align:center;border-radius:50%}.dot-pin{background:transparent;border:0}.dot-pin span{display:block;width:15px;height:15px;background:#e4dbd0;border:2px solid #222;border-radius:50%;box-shadow:0 0 0 3px #e4dbd044}.dot-pin.own span{background:#ef6b56;box-shadow:0 0 0 5px #ef6b5644;width:19px;height:19px}@media(max-width:600px){#map{height:390px}.map-key{font-size:11px;top:8px;left:8px}.leaflet-control-zoom{margin-top:56px!important}}</style>
+</head><body>
+<div style="position:relative"><div id="map" role="region" aria-label="Interactive map showing selected public interest AI projects and Manifold Grace in London"></div><div class="map-key"><div><span class="key-dot"></span>Manifold Grace · London</div><div><span class="key-dot others"></span>Selected independently listed projects</div></div></div>
+<div class="map-note">Illustrative selection, not a census or a verified list of current activity. Pins indicate approximate city centres, not office addresses. Project names and cities are drawn from the <a target="_blank" rel="noopener noreferrer" href="https://publicinterest.ai/tool/map/directory">PIAI project directory</a>; Manifold Grace is separately identified as its own research initiative. External projects are not presented as partners.</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script>
+(function(){
+const el=document.getElementById('map');
+if(!window.L){el.textContent='Map could not load. See the project directory link below.';return}
+const map=L.map('map',{scrollWheelZoom:false,worldCopyJump:true,zoomControl:true}).setView([44,6],3);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'}).addTo(map);
+const items=[
+{n:'Manifold Grace',city:'London, UK',lat:51.5074,lng:-0.1278,own:true,desc:'Independent research into evidence verification, provenance, contradiction detection and institutional accountability.',url:'https://manifoldgrace.github.io/public-interest-ai.html'},
+{n:'KIVI — KI + vigilare',city:'Düsseldorf, Germany',lat:51.2277,lng:6.7735},
+{n:'ADIS',city:'Rotterdam, Netherlands',lat:51.9244,lng:4.4777},
+{n:'AI Safety Initiative Groningen',city:'Groningen, Netherlands',lat:53.2194,lng:6.5665},
+{n:'AI4Grids',city:'Konstanz, Germany',lat:47.6779,lng:9.1732},
+{n:'AIR — AI-basierter Recommender für nachhaltigen Tourismus',city:'Kiel, Germany',lat:54.3233,lng:10.1228},
+{n:'Artificial Intelligence Center Hamburg',city:'Hamburg, Germany',lat:53.5511,lng:9.9937},
+{n:'BaKIM',city:'Bamberg, Germany',lat:49.8988,lng:10.9028},
+{n:'BeeObserver',city:'Bremen, Germany',lat:53.0793,lng:8.8017},
+{n:'biaslyze — The NLP bias identification toolkit',city:'Berlin, Germany',lat:52.52,lng:13.405},
+{n:'Botometer',city:'Bloomington, Indiana, USA',lat:39.1653,lng:-86.5264}
+];
+const icon=(own)=>L.divIcon({className:'dot-pin'+(own?' own':''),html:'<span aria-hidden="true"></span>',iconSize:[20,20],iconAnchor:[10,10]});
+const cluster=L.markerClusterGroup({showCoverageOnHover:false,spiderfyOnMaxZoom:true,maxClusterRadius:48,iconCreateFunction:c=>L.divIcon({html:'<span>'+c.getChildCount()+'</span>',className:'cluster',iconSize:[46,46]})});
+for(const p of items){
+const strong=document.createElement('strong');strong.textContent=p.n;
+const box=document.createElement('div');box.append(strong,document.createElement('br'),document.createTextNode(p.city));
+const caption=document.createElement('p');caption.textContent=p.own?p.desc:'Listed in the PIAI project directory; present-day status and exact address have not been verified.';box.append(caption);
+const a=document.createElement('a');a.href=p.own?p.url:'https://publicinterest.ai/tool/map/directory';a.target='_blank';a.rel='noopener noreferrer';a.textContent=p.own?'Explore Manifold Grace':'View source directory';box.appendChild(a);
+const marker=L.marker([p.lat,p.lng],{icon:icon(p.own),title:p.n}).bindPopup(box,{maxWidth:300});
+if(p.own)marker.addTo(map);else cluster.addLayer(marker);
+}
+map.addLayer(cluster);
+})();
+</script></body></html>
