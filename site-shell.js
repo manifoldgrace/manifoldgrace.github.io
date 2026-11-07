@@ -219,6 +219,17 @@
         ]
       ]
     ]
+    [
+      "Public Interest AI",
+      [
+        ["Register a Project", "public-interest-ai.html?intent=project#register"],
+        ["Request Independent Assessment", "public-interest-ai.html?intent=assessment#register"],
+        ["Become a Reviewer", "public-interest-ai.html?intent=reviewer#register"],
+        ["Research Collaboration", "public-interest-ai.html?intent=collaboration#register"],
+        ["Assessment Approach", "public-interest-ai.html#assessment"],
+        ["Discover Projects", "public-interest-ai.html#discover"]
+      ]
+    ],
   ];
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   document.querySelectorAll("[data-site-nav]").forEach((nav) => {
@@ -281,13 +292,15 @@
     ["Socials","socials.html"],
     ["Products","products.html"],
     ["Team","team.html"],
-    ["Careers","careers.html"]
+    ["Careers","careers.html"],
+    ["Public Interest AI","public-interest-ai.html"]
   ];
   const footerGroups = [
     ["Research & Knowledge", [0, 4, 5, 6, 7, 8, 9]],
     ["Professional & Records", [2, 3, 10, 11]],
     ["Culture & Life", [1, 12]],
-    ["Creative & Enterprise", [13, 14, 15]]
+    ["Creative & Enterprise", [13, 14, 15]],
+    ["Public Interest AI", [16]]
   ];
   document.querySelectorAll("[data-site-footer]").forEach((footer) => {
     const top = document.createElement("nav");
