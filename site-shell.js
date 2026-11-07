@@ -231,6 +231,32 @@
       ]
     ],
   ];
+  // A visual mnemonic, not a statement of evidence status.
+  const notation = Object.freeze({
+    "Research & Knowledge": ["⊢", "01 // RK"],
+    "Professional & Records": ["◫", "02 // PR"],
+    "Society & Governance": ["△", "03 // SG"],
+    "Culture & Life": ["¶", "04 // CL"],
+    "Creative & Enterprise": ["⊕", "05 // CE"],
+    "Public Interest AI": ["◎", "06 // PI"]
+  });
+  function addNotation(summary, title) {
+    const mark = notation[title];
+    if (!mark) { summary.textContent = title; return; }
+    const symbol = document.createElement("span");
+    symbol.className = "mg-notation-glyph";
+    symbol.textContent = mark[0];
+    symbol.setAttribute("aria-hidden", "true");
+    const name = document.createElement("span");
+    name.className = "mg-notation-name";
+    name.textContent = title;
+    const code = document.createElement("span");
+    code.className = "mg-notation-code";
+    code.textContent = mark[1];
+    code.setAttribute("aria-hidden", "true");
+    summary.append(symbol, name, code);
+    summary.setAttribute("aria-label", title);
+  }
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
   document.querySelectorAll("[data-site-nav]").forEach((nav) => {
     const wrap = document.createElement("div");
@@ -240,7 +266,7 @@
       const details = document.createElement("details");
       details.className = "site-nav-group";
       const summary = document.createElement("summary");
-      summary.textContent = title;
+      addNotation(summary, title);
       details.appendChild(summary);
       const links = document.createElement("div");
       links.className = "site-nav-panel";
@@ -311,7 +337,7 @@
       const details = document.createElement("details");
       details.className = "site-footer-group";
       const summary = document.createElement("summary");
-      summary.textContent = title;
+      addNotation(summary, title);
       const panel = document.createElement("div");
       panel.className = "site-footer-panel";
       indexes.forEach(index => {
