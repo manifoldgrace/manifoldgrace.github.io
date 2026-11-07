@@ -22,7 +22,8 @@ Recorded: 7 November 2026.
 ## Enquiries sent on 7 November 2026
 - PRS for Music online licensing: onlinelicensing@prsformusic.com — enquiry sent, awaiting response.
 - London Metropolitan Orchestra: info@lmo.co.uk — rights-holder referral requested, awaiting response.
-- Sony Music UK general reception: reception.enquiries@sonymusic.com — request forwarded for master-rights licensing referral, awaiting response. This was sent as an enquiry, not the required formal licence application.
+- Sony Music UK general reception: reception.enquiries@sonymusic.com — master-rights licensing referral requested, awaiting response. This was sent as an enquiry, not the required formal licence application.
+- Musicians' Union Licensing Team: licensing@themu.org — separate session-performer/new-use rights clarification requested, awaiting response.
 
 ## Still to establish
 - Who controls the recording/master rights (Sony Classical release; ask Sony Music licensing).
