@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Public Interest AI — Register &amp; Independent Assessment | Manifold Grace</title>
+<meta name="description" content="Register a public-interest AI project, express interest in independent evidence assessment, or contribute to the Manifold Grace research network.">
+<link rel="canonical" href="https://manifoldgrace.github.io/public-interest-ai.html">
+<link rel="stylesheet" href="style.css?v=20261106-footer-2">
+<script src="site-config.js" defer></script><script src="site-shell.js?v=20261107-public-interest" defer></script>
+<style>
+.piai-content{max-width:1080px}.piai-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.piai-card{display:block;border:1px solid var(--line);background:var(--panel);padding:22px;border-radius:14px}.piai-card strong{display:block}.piai-card small{display:block;color:var(--muted);line-height:1.6;margin-top:8px}.piai-form-wrap{max-width:750px;border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:clamp(18px,4vw,34px)}.piai-form-wrap label{display:block;font-weight:600;font-size:.92rem;margin:15px 0}.piai-form-wrap input:not([type="checkbox"]),.piai-form-wrap select,.piai-form-wrap textarea{display:block;width:100%;min-height:46px;border:1px solid #777;border-radius:9px;margin-top:7px;padding:12px;background:var(--bg);color:var(--text);font:inherit;font-weight:400}.piai-form-wrap textarea{min-height:112px;resize:vertical}.piai-form-wrap .check{display:flex;align-items:flex-start;gap:11px;font-weight:400}.piai-form-wrap .check input{margin-top:5px}.piai-form-wrap button{background:var(--accent);color:#0a0a0a;border:0;border-radius:9px;padding:13px 22px;min-height:48px;cursor:pointer;font:inherit;font-weight:700}.piai-form-wrap button:disabled{opacity:.6;cursor:wait}.piai-form-wrap .hint{font-size:.88rem;color:var(--muted)}#piai-status{margin-top:14px}#piai-status[hidden],#piai-confirmation[hidden]{display:none}.piai-anchor{scroll-margin-top:115px}@media(max-width:760px){.piai-cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="index.html">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
+<main>
+<div class="page-hero"><div class="wrap piai-content"><span class="eyebrow">Research · Public interest · Accountability</span><h1>Public Interest AI</h1><p class="page-intro">A welcoming route for independent researchers, organisations and practitioners to share public-interest AI projects, request evidence-based assessment or contribute specialist expertise.</p></div></div>
+<section class="wrap piai-content" aria-labelledby="piai-options"><h2 id="piai-options">Get involved</h2><div class="piai-cards">
+<a class="piai-card" href="#register"><strong>Register a project</strong><small>Short voluntary registration form. No account needed.</small></a>
+<a class="piai-card" href="#assessment"><strong>Independent assessment</strong><small>Learn about proposed evidence, provenance and contradiction reviews.</small></a>
+<a class="piai-card" href="#discover"><strong>Discover &amp; collaborate</strong><small>Explore public-interest resources and research participation.</small></a>
+</div></section>
+<section class="wrap piai-content piai-anchor" id="register"><h2>Register your interest</h2><p>Complete this short form to submit a project, request an assessment, volunteer as a reviewer or explore a collaboration. Registration is voluntary and does not imply endorsement, certification, approval or publication.</p>
+<div class="piai-form-wrap">
+<form id="piai-form" action="https://formspree.io/f/xoeebzbg" method="POST">
+<div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label>Leave blank<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+<input type="hidden" name="source" value="Manifold Grace — Public Interest AI registration">
+<label for="piai-type">I would like to <select id="piai-type" name="registration_type" required><option value="">Select one</option><option>Register a public-interest AI project</option><option>Request an independent assessment</option><option>Volunteer as an independent reviewer</option><option>Explore a research collaboration</option><option>Receive information about opportunities</option></select></label>
+<label for="piai-name">Name <input id="piai-name" type="text" name="name" maxlength="90" autocomplete="name" required></label>
+<label for="piai-email">Email <input id="piai-email" type="email" name="email" maxlength="254" autocomplete="email" required></label>
+<label for="piai-project">Project or organisation (optional) <input id="piai-project" type="text" name="project" maxlength="160"></label>
+<label for="piai-link">Public website or project link (optional) <input id="piai-link" type="url" name="project_url" placeholder="https://" maxlength="500" inputmode="url"></label>
+<label for="piai-summary">Brief description (optional) <textarea id="piai-summary" name="summary" maxlength="900" placeholder="What is your project or area of interest?"></textarea></label>
+<label class="check" for="piai-consent"><input id="piai-consent" type="checkbox" name="consent" value="yes" required><span>I agree that Manifold Grace may use the information I submit to consider this request and contact me about it.</span></label>
+<p class="hint">Please do not include patient records, personal case files, confidential evidence, passwords or other sensitive information. Submissions are handled through Formspree and sent to a private receiving inbox. No public profile is created automatically. You can request removal of your submitted details via the <a href="contact.html"><u>contact page</u></a>.</p>
+<button id="piai-submit" type="submit">Register interest</button><p class="hint" id="piai-status" role="status" aria-live="polite" hidden></p>
+</form>
+<div id="piai-confirmation" hidden role="status" aria-live="polite"><h3>Registration received</h3><p>Your form was accepted by the submission service and has been forwarded for review. This does not confirm approval, publication or an assessment appointment.</p><button id="piai-again" type="button">Register another interest</button></div>
+</div></section>
+<section class="wrap piai-content piai-anchor" id="assessment"><h2>Independent assessment</h2><p>Manifold Grace is developing research approaches for examining claim-to-evidence coverage, provenance, historical records, data integrity and contradictions. The registration form above is an expression-of-interest route, not an accredited certification service or guarantee of review.</p><p>Any future assessment should define its evidence requirements, reviewer independence, privacy safeguards, limitations and a route to correct or challenge findings. AI may assist analysis; conclusions require appropriate human oversight.</p><p><a href="evidence-verification-across-sectors.html">Evidence verification across sectors</a> · <a href="llm-evaluation-governance.html">LLM evaluation and governance</a></p></section>
+<section class="wrap piai-content piai-anchor" id="discover"><h2>Discover &amp; collaborate</h2><p>Public-interest AI crosses universities, non-profits, companies, public bodies and independent research communities. You can explore external initiatives and return to this page to register a project or offer collaboration.</p><p><a href="https://publicinterest.ai/tool/map/directory" target="_blank" rel="noopener noreferrer">Public Interest AI project directory (external)</a> · <a href="https://publicinterest.ai/tool/network/about" target="_blank" rel="noopener noreferrer">PIAI research network (external)</a> · <a href="research-collaborations.html">Manifold Grace research collaborations</a></p></section>
+</main>
+<footer><div class="wrap" data-site-footer></div></footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('piai-form');
+  const status = document.getElementById('piai-status');
+  const button = document.getElementById('piai-submit');
+  const confirmation = document.getElementById('piai-confirmation');
+  const params = new URLSearchParams(location.search);
+  const kind = params.get('intent');
+  const map = {project:'Register a public-interest AI project',assessment:'Request an independent assessment',reviewer:'Volunteer as an independent reviewer',collaboration:'Explore a research collaboration',updates:'Receive information about opportunities'};
+  if (Object.prototype.hasOwnProperty.call(map,kind)) form.elements.registration_type.value = map[kind];
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); if (!form.reportValidity()) return;
+    button.disabled = true; button.textContent = 'Submitting…'; status.hidden = false; status.textContent = 'Submitting your registration…';
+    const data = new FormData(form);
+    data.set('subject','Manifold Grace — Public Interest AI — '+data.get('registration_type'));
+    try {
+      const response = await fetch(form.action,{method:'POST',body:data,headers:{Accept:'application/json'}});
+      if (!response.ok) throw new Error('Provider did not accept the submission');
+      form.hidden = true; confirmation.hidden = false; confirmation.scrollIntoView({block:'nearest'});
+    } catch (error) {
+      status.textContent = 'Delivery could not be confirmed. Please try again, or use the contact page.';
+    } finally { button.disabled = false; button.textContent = 'Register interest'; }
+  });
+  document.getElementById('piai-again').addEventListener('click', () => {
+    form.reset(); form.hidden=false; confirmation.hidden=true; status.hidden=true; document.getElementById('piai-type').focus();
+  });
+});
+</script>
+</body></html>
