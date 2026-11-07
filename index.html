@@ -77,6 +77,52 @@ header .brand{font-size:clamp(.94rem,3.7vw,1.1rem);white-space:nowrap}
 .mg-entry .mg-heading .mg-origin-label,.mg-heading .eyebrow{color:#f3f3f3}
 .mg-entry:after{background:linear-gradient(180deg,#05050591,transparent 34%,transparent 70%,#050505ad)}
 @media(max-width:700px){.mg-continue{bottom:max(10px,env(safe-area-inset-bottom))}.mg-heading{top:clamp(22px,5dvh,50px)}.mg-heading h1{font-size:clamp(2.2rem,10vw,3.2rem)}}
+
+/* Separate vertical zones so globe, introduction and controls cannot overlap. */
+.mg-entry{
+  display:flex;
+  flex-direction:column;
+  min-height:calc(100dvh - 72px);
+  height:auto;
+}
+.mg-entry .mg-heading{
+  position:relative;
+  z-index:2;
+  top:auto;
+  left:auto;
+  width:min(760px,92vw);
+  max-width:92vw;
+  margin:0 auto;
+  padding:clamp(24px,4vh,52px) 0 12px;
+  flex:0 0 auto;
+}
+.mg-entry iframe{
+  position:relative;
+  inset:auto;
+  width:100%;
+  height:clamp(300px,47dvh,630px);
+  min-height:300px;
+  flex:1 1 clamp(300px,47dvh,630px);
+  z-index:0;
+}
+.mg-entry .mg-continue{
+  position:relative;
+  bottom:auto;left:auto;right:auto;transform:none;
+  z-index:3;
+  margin:4px auto max(12px,env(safe-area-inset-bottom));
+  flex:0 0 auto;
+}
+.mg-entry:after{
+  background:linear-gradient(to bottom,#050505a6,transparent 30%,transparent 74%,#050505b5);
+}
+@media(max-width:700px){
+ .mg-entry{min-height:calc(100dvh - 72px)}
+ .mg-entry .mg-heading{width:calc(100% - 40px);max-width:none;margin:0 20px;padding:18px 0 7px}
+ .mg-entry .mg-heading h1{font-size:clamp(2.1rem,10vw,3.1rem);margin:10px 0}
+ .mg-entry .mg-heading p{font-size:.87rem;line-height:1.44;margin-bottom:8px}
+ .mg-entry iframe{height:clamp(280px,43dvh,540px);min-height:280px;flex:1 1 clamp(280px,43dvh,540px)}
+ .mg-entry .mg-continue{margin:5px auto max(12px,env(safe-area-inset-bottom))}
+}
 </style></head><body>
 <header><div class="wrap"><a class="brand" href="index.html">Manifold Grace</a><button type="button" class="mg-menu-toggle" id="home-menu-toggle" aria-controls="home-nav" aria-expanded="false">☰ Explore menu</button><div class="mg-home-nav" id="home-nav" hidden><label for="mg-menu-search">Find a page</label><input type="search" id="mg-menu-search" class="mg-menu-search" placeholder="Search research, records and more"><p class="mg-menu-hint">Use the dropdown categories or jump directly to a page.</p><div class="mg-menu-results" id="mg-menu-results" hidden></div><nav data-site-nav aria-label="Explore Manifold Grace by topic"></nav><p><a href="site-directory.html">View complete site directory</a></p></div></div></header>
 <main>
