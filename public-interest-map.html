@@ -1,24 +1,29 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Public-interest AI project map | Manifold Grace</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrz1RCf9tD/miZyoLZ3v5lLG4gk=" crossorigin="">
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+<title>Global public-interest AI atlas | Manifold Grace</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.css">
 <style>
-:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;background:#101010;color:#f5f3ee}#map{height:480px;width:100%;background:#171717}.map-note{padding:10px 15px;font-size:12px;background:#141414;color:#c9c7c4}.map-note a{color:#ffae9f}.leaflet-container{background:#151515;font:inherit}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#222;color:#f5f3ee}.leaflet-popup-content{line-height:1.45;max-width:280px}.leaflet-popup-content strong{font-size:15px}.leaflet-popup-content a{color:#ffad9e}.map-key{position:absolute;z-index:500;left:12px;top:12px;background:rgba(18,18,18,.94);color:#f5f3ee;padding:10px 13px;border-radius:10px;box-shadow:0 4px 18px #0008;font-size:12px;pointer-events:none}.key-dot{display:inline-block;height:10px;width:10px;border-radius:50%;margin-right:5px;background:#ef6b56}.key-dot.others{background:#e4dbd0}.cluster{background:rgba(239,107,86,.22);border-radius:100%;display:grid;place-items:center}.cluster span{background:#ef6b56;color:#18100e;font-weight:700;width:34px;height:34px;line-height:34px;text-align:center;border-radius:50%}.dot-pin{background:transparent;border:0}.dot-pin span{display:block;width:15px;height:15px;background:#e4dbd0;border:2px solid #222;border-radius:50%;box-shadow:0 0 0 3px #e4dbd044}.dot-pin.own span{background:#ef6b56;box-shadow:0 0 0 5px #ef6b5644;width:19px;height:19px}@media(max-width:600px){#map{height:390px}.map-key{font-size:11px;top:8px;left:8px}.leaflet-control-zoom{margin-top:56px!important}}.map-action{position:absolute;z-index:600;right:12px;bottom:14px;background:#f0503a;color:#120d0b;text-decoration:none;padding:10px 14px;border-radius:9px;font-size:12px;font-weight:700;box-shadow:0 5px 15px #0009}.map-action:focus-visible{outline:3px solid white;outline-offset:3px}.map-panel{position:absolute;z-index:650;right:12px;top:68px;width:min(315px,calc(100% - 24px));max-height:calc(100% - 140px);overflow:auto;background:#202020;color:#f5f3ee;border:1px solid #494949;border-radius:13px;padding:16px;box-shadow:0 12px 30px #0009}.map-panel[hidden]{display:none}.map-panel button{float:right;background:none;color:#f5f3ee;border:0;font-size:24px;cursor:pointer}.map-panel a{color:#ffae9f}.map-panel h3{margin:2px 22px 8px 0;font-size:17px}.map-panel p{font-size:13px}.map-panel small{color:#b5b0ab}.dot-pin:hover span,.dot-pin:focus span{transform:scale(1.22);transition:transform .15s}.dot-pin.own span{animation:london-glow 2.5s ease-in-out infinite}@keyframes london-glow{50%{box-shadow:0 0 0 10px #ef6b5620}}@media(prefers-reduced-motion:reduce){.dot-pin.own span{animation:none}}@media(max-width:600px){.map-panel{top:auto;bottom:0;left:0;right:0;width:100%;max-height:64%;border-radius:18px 18px 0 0}.map-action{bottom:10px;right:10px}}
-</style>
-</head><body>
-<div style="position:relative"><div id="map" role="region" aria-label="Interactive map showing selected public interest AI projects and Manifold Grace in London"></div><div class="map-key"><div><span class="key-dot"></span>Manifold Grace · London</div><div><span class="key-dot others"></span>Selected independently listed projects</div></div><a class="map-action" href="public-interest-ai.html?intent=collaboration#register" target="_top">Add / collaborate</a><div class="map-panel" id="map-panel" hidden role="region" aria-live="polite" aria-label="Selected project details"><button type="button" id="map-close" aria-label="Close project details">×</button><div id="map-panel-body"></div></div></div>
-<div class="map-note">Illustrative selection, not a census or a verified list of current activity. Pins indicate approximate city centres, not office addresses. Project names and cities are drawn from the <a target="_blank" rel="noopener noreferrer" href="https://publicinterest.ai/tool/map/directory">PIAI project directory</a>; Manifold Grace is separately identified as its own research initiative. External projects are not presented as partners.</div>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-<script>
-(function(){
-const el=document.getElementById('map');
-if(!window.L){el.textContent='Map could not load. See the project directory link below.';return}
-const panel=document.getElementById('map-panel'),panelBody=document.getElementById('map-panel-body');
-document.getElementById('map-close').addEventListener('click',()=>{panel.hidden=true;history.replaceState(null,'',location.pathname)});
-const map=L.map('map',{scrollWheelZoom:false,worldCopyJump:true,zoomControl:true}).setView([44,6],3);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'}).addTo(map);
+:root{color-scheme:dark}*{box-sizing:border-box}html,body{padding:0;margin:0;background:#0a0a0a;color:#f5f3ee;font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:#ffab9e}
+#viewport{position:relative;min-height:480px;background:radial-gradient(ellipse at center,#25302f 0%,#0b1114 55%,#050809 100%);overflow:hidden}
+#map{height:480px;width:100%}.maplibregl-canvas{cursor:grab}.maplibregl-canvas:active{cursor:grabbing}
+.toolbar{position:absolute;z-index:4;top:12px;left:12px;display:flex;align-items:center;gap:7px;flex-wrap:wrap;max-width:calc(100% - 85px)}
+.tool{appearance:none;background:rgba(19,21,22,.93);color:#f5f3ee;border:1px solid #595959;border-radius:25px;padding:8px 12px;font:600 12px system-ui;cursor:pointer;text-decoration:none;white-space:nowrap}.tool:hover,.tool:focus-visible{border-color:#f0503a;color:#fff;outline-offset:3px}.tool.primary{background:#f0503a;color:#190e0c;border-color:#f0503a}.tool[aria-pressed="true"]{border-color:#f0503a}
+#panel{position:absolute;z-index:6;top:66px;right:12px;max-height:calc(100% - 85px);overflow:auto;width:min(340px,calc(100% - 24px));background:#181a1b;border:1px solid #4b4b4b;border-radius:15px;padding:18px;box-shadow:0 15px 45px #000a}#panel[hidden]{display:none}
+#panel h3{margin:6px 22px 10px 0;font-size:18px;line-height:1.25}#panel p{margin:10px 0;color:#c2c0bd}#panel small{color:#b8b6b2}#close{float:right;background:transparent;border:0;font-size:24px;color:white;cursor:pointer}
+#status{position:absolute;bottom:12px;left:12px;z-index:3;background:rgba(11,13,14,.85);border-radius:9px;padding:6px 10px;font-size:11px;color:#ddd}
+.note{padding:11px 15px;color:#c7c1bc;background:#111;font-size:12px}
+@media(max-width:700px){#viewport,#map{height:400px;min-height:400px}.toolbar{gap:5px;max-width:calc(100% - 12px)}.tool{font-size:11px;padding:7px 10px}#panel{top:auto;bottom:0;left:0;right:0;width:100%;max-height:64%;border-radius:17px 17px 0 0}#status{font-size:10px;bottom:8px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<div id="viewport">
+<div id="map" role="region" aria-label="Interactive globe of selected public interest AI projects"></div>
+<div class="toolbar"><button class="tool" id="tour" type="button" aria-pressed="false">▶ Play tour</button><button class="tool" id="london" type="button">◎ London</button><button class="tool" id="reset" type="button">◌ Global view</button><a class="tool primary" target="_top" href="public-interest-ai.html?intent=collaboration#register">Add / collaborate</a></div>
+<div id="panel" hidden role="region" aria-live="polite" aria-label="Project details"><button id="close" aria-label="Close project details" type="button">×</button><div id="panel-body"></div></div>
+<div id="status">● Manifold Grace (London) · ◯ External directory examples</div>
+</div>
+<div class="note">A curated selection, not a worldwide census or proof of partnerships. Locations are approximate city centres. Source: <a href="https://publicinterest.ai/tool/map/directory" target="_blank" rel="noopener noreferrer">Public Interest AI directory</a>. Other projects' current activity is unverified. Map tiles: © OpenStreetMap contributors, © CARTO.</div>
+<script type="module">
+import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs';
 const items=[
 {n:'Manifold Grace',city:'London, UK',lat:51.5074,lng:-0.1278,own:true,desc:'Independent research into evidence verification, provenance, contradiction detection and institutional accountability.',url:'https://manifoldgrace.github.io/public-interest-ai.html'},
 {n:'KIVI — KI + vigilare',city:'Düsseldorf, Germany',lat:51.2277,lng:6.7735},
@@ -32,17 +37,38 @@ const items=[
 {n:'biaslyze — The NLP bias identification toolkit',city:'Berlin, Germany',lat:52.52,lng:13.405},
 {n:'Botometer',city:'Bloomington, Indiana, USA',lat:39.1653,lng:-86.5264}
 ];
-const icon=(own)=>L.divIcon({className:'dot-pin'+(own?' own':''),html:'<span aria-hidden="true"></span>',iconSize:[20,20],iconAnchor:[10,10]});
-const cluster=L.markerClusterGroup({showCoverageOnHover:false,spiderfyOnMaxZoom:true,maxClusterRadius:48,iconCreateFunction:c=>L.divIcon({html:'<span>'+c.getChildCount()+'</span>',className:'cluster',iconSize:[46,46]})});
-for(const p of items){
-const strong=document.createElement('strong');strong.textContent=p.n;
-const box=document.createElement('div');box.append(strong,document.createElement('br'),document.createTextNode(p.city));
-const caption=document.createElement('p');caption.textContent=p.own?p.desc:'Listed in the PIAI project directory; present-day status and exact address have not been verified.';box.append(caption);
-const a=document.createElement('a');a.href=p.own?p.url:'https://publicinterest.ai/tool/map/directory';a.target='_blank';a.rel='noopener noreferrer';a.textContent=p.own?'Explore Manifold Grace':'View source directory';box.appendChild(a);
-const marker=L.marker([p.lat,p.lng],{icon:icon(p.own),title:p.n});
-marker.on('click',()=>{panelBody.replaceChildren(box.cloneNode(true));panel.hidden=false;const slug=p.own?'manifold-grace':p.n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');history.replaceState(null,'',location.pathname+'?project='+encodeURIComponent(slug));});
-if(p.own)marker.addTo(map);else cluster.addLayer(marker);
-}
-map.addLayer(cluster);\nconst direct=new URLSearchParams(location.search).get("project");if(direct==="manifold-grace"){map.setView([51.5074,-0.1278],6);panelBody.replaceChildren(document.createTextNode("Manifold Grace · London, UK — independent research in public-interest AI and evidence verification."));panel.hidden=false;}
-})();
+const featureCollection={type:'FeatureCollection',features:items.map((p,i)=>({type:'Feature',geometry:{type:'Point',coordinates:[p.lng,p.lat]},properties:{id:i,name:p.n,own:!!p.own}}))};
+const style={version:8,projection:{type:'globe'},sky:{'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,5,1,7,0]},sources:{'base':{type:'raster',tiles:['https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png','https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'],tileSize:256,attribution:'© OpenStreetMap contributors © CARTO'}},layers:[{id:'base',type:'raster',source:'base'}]};
+const map=new maplibregl.Map({container:'map',style,center:[10,24],zoom:1.35,pitch:0,bearing:0,antialias:true,dragRotate:false,cooperativeGestures:true,attributionControl:false});
+map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
+map.addControl(new maplibregl.AttributionControl({compact:true}),'bottom-right');
+const button=document.getElementById('tour'),panel=document.getElementById('panel'),body=document.getElementById('panel-body');
+const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let auto=false,manuallyPaused=false,visible=false,timer=null,step=0,currentlyFlying=false;
+const stops=[{point:[10,25],zoom:1.3,heading:'Global overview'},{point:[-0.1278,51.5074],zoom:3.1,heading:'Manifold Grace · London'},{point:[8.8,51.4],zoom:3.15,heading:'European initiatives'},{point:[-86.5264,39.1653],zoom:3,heading:'North American initiative'}];
+function clear(){if(timer){clearTimeout(timer);timer=null}}
+function pause(touched=false){auto=false;clear();currentlyFlying=false;map.stop();button.textContent='▶ Play tour';button.setAttribute('aria-pressed','false');if(touched)manuallyPaused=true}
+function show(p){panel.hidden=false;body.replaceChildren();const tag=document.createElement('small');tag.textContent=p.own?'MANIFOLD GRACE · CORE INITIATIVE':'EXTERNAL PROJECT · PIAI DIRECTORY';const h=document.createElement('h3');h.textContent=p.n;const city=document.createElement('p');city.textContent=p.city;const desc=document.createElement('p');desc.textContent=p.own?p.desc:'Independent directory listing. This marker does not indicate an existing collaboration.';const link=document.createElement('a');link.href=p.own?p.url:'https://publicinterest.ai/tool/map/directory';link.target='_blank';link.rel='noopener noreferrer';link.textContent=p.own?'Explore Manifold Grace':'View source directory';body.append(tag,h,city,desc,link);history.replaceState(null,'',location.pathname+'?project='+(p.own?'manifold-grace':encodeURIComponent(p.n.toLowerCase().replace(/[^a-z0-9]+/g,'-'))))}
+function flight(){if(!auto||!visible)return;const stop=stops[step%stops.length];step++;currentlyFlying=true;map.flyTo({center:stop.point,zoom:stop.zoom,bearing:(step%2?12:-12),speed:.55,curve:1.4,essential:false});document.getElementById('status').textContent=stop.heading;timer=setTimeout(()=>{currentlyFlying=false;if(auto&&visible)flight()},9500)}
+function start(){if(reduce||!visible)return;auto=true;manuallyPaused=false;button.textContent='Ⅱ Pause tour';button.setAttribute('aria-pressed','true');clear();flight()}
+button.addEventListener('click',()=>auto?pause(true):start());
+document.getElementById('close').addEventListener('click',()=>{panel.hidden=true;history.replaceState(null,'',location.pathname)});
+document.getElementById('london').addEventListener('click',()=>{pause(true);map.flyTo({center:[-0.1278,51.5074],zoom:5,speed:.75,essential:true});show(items[0])});
+document.getElementById('reset').addEventListener('click',()=>{pause(true);panel.hidden=true;map.flyTo({center:[10,24],zoom:1.35,pitch:0,bearing:0,essential:true})});
+map.on('load',()=>{
+  map.addSource('projects',{type:'geojson',data:featureCollection,cluster:true,clusterMaxZoom:10,clusterRadius:47});
+  map.addLayer({id:'clusters',type:'circle',source:'projects',filter:['has','point_count'],paint:{'circle-color':'#e5a34f','circle-radius':['step',['get','point_count'],20,10,25,30,30],'circle-stroke-color':'#f6ddac','circle-stroke-width':1.5}});
+  map.addLayer({id:'cluster-count',type:'symbol',source:'projects',filter:['has','point_count'],layout:{'text-field':['get','point_count_abbreviated'],'text-size':13},paint:{'text-color':'#19120b'}});
+  map.addLayer({id:'projects-halo',type:'circle',source:'projects',filter:['all',['!', ['has','point_count']],['==',['get','own'],true]],paint:{'circle-color':'#f0503a','circle-radius':17,'circle-opacity':.16,'circle-stroke-color':'#f0503a','circle-stroke-width':2,'circle-stroke-opacity':.6}});
+  map.addLayer({id:'projects',type:'circle',source:'projects',filter:['!', ['has','point_count']],paint:{'circle-color':['case',['get','own'],'#f0503a','#f5f1e8'],'circle-radius':['case',['get','own'],9,6],'circle-stroke-color':'#151515','circle-stroke-width':2}});
+  for(const layer of ['projects','clusters']){map.on('mouseenter',layer,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',layer,()=>map.getCanvas().style.cursor='grab')}
+  map.on('click','projects',(e)=>{const f=e.features&&e.features[0];if(!f)return;pause(true);show(items[Number(f.properties.id)]);});
+  map.on('click','clusters',(e)=>{const f=e.features&&e.features[0];if(!f)return;pause(true);const coords=f.geometry.coordinates;const source=map.getSource('projects');source.getClusterExpansionZoom(f.properties.cluster_id).then(z=>map.easeTo({center:coords,zoom:z,duration:750})).catch(()=>{});});
+  const direct=new URLSearchParams(location.search).get('project');
+  if(direct==='manifold-grace'){manuallyPaused=true;show(items[0]);map.jumpTo({center:[-0.1278,51.5074],zoom:4})}
+  new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(!visible){if(auto){auto=false;clear();map.stop();button.textContent='▶ Play tour';button.setAttribute('aria-pressed','false')}}else if(!reduce&&!manuallyPaused&&!auto){start()}},{threshold:.3}).observe(document.getElementById('map'));
+});
+for(const name of ['dragstart','zoomstart','rotatestart','pitchstart'])map.on(name,e=>{if(e.originalEvent)pause(true)});
+for(const eventName of ['touchstart','mousedown','wheel'])map.getCanvas().addEventListener(eventName,()=>{if(auto)pause(true)},{passive:true});
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&auto)pause(false)});
 </script></body></html>
