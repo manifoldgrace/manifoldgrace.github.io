@@ -14,9 +14,24 @@
 .note{padding:11px 15px;color:#c7c1bc;background:#111;font-size:12px}
 @media(max-width:700px){#viewport,#map{height:400px;min-height:400px}.toolbar{gap:5px;max-width:calc(100% - 12px)}.tool{font-size:11px;padding:7px 10px}#panel{top:auto;bottom:0;left:0;right:0;width:100%;max-height:64%;border-radius:17px 17px 0 0}#status{font-size:10px;bottom:8px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+html,body{height:100%}
+body.hero-mode #viewport,body.hero-mode #map{height:100dvh;min-height:100dvh}
+body.hero-mode .note{display:none}
+body.hero-mode .toolbar{top:auto;bottom:clamp(14px,4vh,44px);left:auto;right:18px;max-width:calc(100% - 36px);justify-content:flex-end}
+body.hero-mode .toolbar .primary,body.hero-mode #london,body.hero-mode #reset{display:none}
+body.hero-mode #status{display:none}
+body.hero-mode #panel{top:auto;bottom:68px;left:auto;right:18px;max-height:60%;width:min(340px,calc(100% - 36px))}
+body.hero-mode .maplibregl-control-container{opacity:.6}
+#map-fallback{position:absolute;inset:0;z-index:0;display:grid;place-items:center;background:radial-gradient(circle at center,#1f3331 0,#101a1b 42%,#05090b 82%);color:#d6e0de}
+#map-fallback[hidden]{display:none}
+#map-fallback .planet{width:min(65vw,360px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 34% 35%,#57746e 0%,#25463f 21%,#112d2d 46%,#061315 74%,#02090a 100%);box-shadow:0 0 65px #8cc6b62b,inset -36px -18px 54px #01090b;display:grid;place-items:center}
+#map-fallback .fallback-caption{background:#131b1bc9;padding:8px 11px;border-radius:9px;color:#f5f3ee;font-size:12px;text-align:center}
+body.hero-mode #map-fallback .planet{width:min(75vw,65dvh,560px)}
+@media(max-width:700px){body.hero-mode .toolbar{bottom:18px;right:16px}body.hero-mode #panel{bottom:66px;right:8px;left:8px;width:calc(100% - 16px)}}
 </style></head><body>
 <div id="viewport">
-<div id="map" role="region" aria-label="Interactive globe of selected public interest AI projects"></div>
+<div id="map-fallback" role="status"><div class="planet"><div class="fallback-caption">Global research atlas<br><small>Interactive globe loading…</small></div></div></div><div id="map" role="region" aria-label="Interactive globe of selected public interest AI projects"></div>
 <div class="toolbar"><button class="tool" id="tour" type="button" aria-pressed="false">▶ Play tour</button><button class="tool" id="london" type="button">◎ London</button><button class="tool" id="reset" type="button">◌ Global view</button><a class="tool primary" target="_top" href="public-interest-ai.html?intent=collaboration#register">Add / collaborate</a></div>
 <div id="panel" hidden role="region" aria-live="polite" aria-label="Project details"><button id="close" aria-label="Close project details" type="button">×</button><div id="panel-body"></div></div>
 <div id="status">● Manifold Grace (London) · ◯ External directory examples</div>
@@ -24,6 +39,8 @@
 <div class="note">A curated selection, not a worldwide census or proof of partnerships. Locations are approximate city centres. Source: <a href="https://publicinterest.ai/tool/map/directory" target="_blank" rel="noopener noreferrer">Public Interest AI directory</a>. Other projects' current activity is unverified. Map tiles: © OpenStreetMap contributors, © CARTO.</div>
 <script type="module">
 import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs';
+const heroMode=new URLSearchParams(location.search).get('hero')==='1';if(heroMode)document.body.classList.add('hero-mode');
+const fallback=document.getElementById('map-fallback');
 const items=[
 {n:'Manifold Grace',city:'London, UK',lat:51.5074,lng:-0.1278,own:true,desc:'Independent research into evidence verification, provenance, contradiction detection and institutional accountability.',url:'https://manifoldgrace.github.io/public-interest-ai.html'},
 {n:'KIVI — KI + vigilare',city:'Düsseldorf, Germany',lat:51.2277,lng:6.7735},
@@ -38,8 +55,14 @@ const items=[
 {n:'Botometer',city:'Bloomington, Indiana, USA',lat:39.1653,lng:-86.5264}
 ];
 const featureCollection={type:'FeatureCollection',features:items.map((p,i)=>({type:'Feature',geometry:{type:'Point',coordinates:[p.lng,p.lat]},properties:{id:i,name:p.n,own:!!p.own}}))};
-const style={version:8,projection:{type:'globe'},sky:{'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,5,1,7,0]},sources:{'base':{type:'raster',tiles:['https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png','https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'],tileSize:256,attribution:'© OpenStreetMap contributors © CARTO'}},layers:[{id:'base',type:'raster',source:'base'}]};
-const map=new maplibregl.Map({container:'map',style,center:[10,24],zoom:1.35,pitch:0,bearing:0,antialias:true,dragRotate:false,cooperativeGestures:true,attributionControl:false});
+const style={version:8,sources:{'base':{type:'raster',tiles:['https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png','https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'],tileSize:256,attribution:'© OpenStreetMap contributors © CARTO'}},layers:[{id:'base',type:'raster',source:'base'}]};
+let map;
+try{map=new maplibregl.Map({container:'map',style,center:[10,24],zoom:1.35,pitch:0,bearing:0,antialias:true,dragRotate:false,cooperativeGestures:true,attributionControl:false});}
+catch(err){fallback.querySelector('small').textContent='Map temporarily unavailable';throw err}
+map.on('style.load',()=>{map.setProjection({type:'globe'});});
+map.on('error', e=>{if(e && e.error)console.warn('Global atlas map issue',e.error)});
+new ResizeObserver(()=>map.resize()).observe(document.getElementById('viewport'));
+window.addEventListener('pageshow',()=>map.resize());
 map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
 map.addControl(new maplibregl.AttributionControl({compact:true}),'bottom-right');
 const button=document.getElementById('tour'),panel=document.getElementById('panel'),body=document.getElementById('panel-body');
@@ -55,7 +78,7 @@ button.addEventListener('click',()=>auto?pause(true):start());
 document.getElementById('close').addEventListener('click',()=>{panel.hidden=true;history.replaceState(null,'',location.pathname)});
 document.getElementById('london').addEventListener('click',()=>{pause(true);map.flyTo({center:[-0.1278,51.5074],zoom:5,speed:.75,essential:true});show(items[0])});
 document.getElementById('reset').addEventListener('click',()=>{pause(true);panel.hidden=true;map.flyTo({center:[10,24],zoom:1.35,pitch:0,bearing:0,essential:true})});
-map.on('load',()=>{
+map.on('load',()=>{fallback.hidden=true;map.resize();
   map.addSource('projects',{type:'geojson',data:featureCollection,cluster:true,clusterMaxZoom:10,clusterRadius:47});
   map.addLayer({id:'clusters',type:'circle',source:'projects',filter:['has','point_count'],paint:{'circle-color':'#e5a34f','circle-radius':['step',['get','point_count'],20,10,25,30,30],'circle-stroke-color':'#f6ddac','circle-stroke-width':1.5}});
   map.addLayer({id:'cluster-count',type:'symbol',source:'projects',filter:['has','point_count'],layout:{'text-field':['get','point_count_abbreviated'],'text-size':13},paint:{'text-color':'#19120b'}});
