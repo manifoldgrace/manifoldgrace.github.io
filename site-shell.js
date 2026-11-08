@@ -23,6 +23,10 @@
           "historical-corridors-ai-recordkeeping.html"
         ],
         [
+          "Designing Fairer Systems",
+          "designing-fairer-systems.html"
+        ],
+        [
           "MILES Research Architecture",
           "miles-research.html"
         ],
