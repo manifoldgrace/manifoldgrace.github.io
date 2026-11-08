@@ -19,6 +19,10 @@
           "research.html"
         ],
         [
+          "Historical Corridors & AI Recordkeeping",
+          "historical-corridors-ai-recordkeeping.html"
+        ],
+        [
           "MILES Research Architecture",
           "miles-research.html"
         ],
