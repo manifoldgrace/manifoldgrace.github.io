@@ -100,17 +100,17 @@ function label(isOn,message){
 function initialise(){
  if(ctx)return;
  ctx=new AudioCtx();
- main=ctx.createGain();main.gain.value=.57;
+ main=ctx.createGain();main.gain.value=.46;
  const limiter=ctx.createDynamicsCompressor();
- limiter.threshold.value=-16;limiter.knee.value=17;limiter.ratio.value=2.8;
+ limiter.threshold.value=-13;limiter.knee.value=24;limiter.ratio.value=1.8;
  limiter.attack.value=.015;limiter.release.value=.35;
  const hp=ctx.createBiquadFilter();hp.type='highpass';hp.frequency.value=70;
  main.connect(hp);hp.connect(limiter);limiter.connect(ctx.destination);
  // A modest, short diffuse room gives cohesion without huge, empty reverb tails.
- dry=ctx.createGain();dry.gain.value=.93;dry.connect(main);
- room=ctx.createDelay(1.0);room.delayTime.value=.18;
- const feedback=ctx.createGain();feedback.gain.value=.22;
- const wet=ctx.createGain();wet.gain.value=.17;
+ dry=ctx.createGain();dry.gain.value=.84;dry.connect(main);
+ room=ctx.createDelay(1.0);room.delayTime.value=.22;
+ const feedback=ctx.createGain();feedback.gain.value=.16;
+ const wet=ctx.createGain();wet.gain.value=.13;
  room.connect(wet);wet.connect(main);
  room.connect(feedback);feedback.connect(room);
 }
@@ -127,9 +127,9 @@ function instrument(note,start,length,amount,type,pan=0){
  const filter=ctx.createBiquadFilter();
  const panner=ctx.createStereoPanner?ctx.createStereoPanner():null;
  const freq=hz(note);
- filter.type='lowpass';filter.frequency.value=type==='harp'?4300:type==='wind'?2300:type==='brass'?1400:1900;
- const attack=type==='strings'?0.45:type==='choir'?0.8:type==='brass'?0.95:type==='wind'?0.18:type==='bass'?.18:.012;
- const release=type==='harp'?.8:type==='wind'?.48:type==='bass'?.55:.65;
+ filter.type='lowpass';filter.frequency.value=type==='harp'?2700:type==='wind'?1550:type==='brass'?1150:type==='bass'?1150:1450;filter.Q.value=.56;
+ const attack=type==='strings'?.62:type==='choir'?.9:type==='brass'?.9:type==='wind'?.25:type==='bass'?.24:.024;
+ const release=type==='harp'?1:type==='wind'?.66:type==='bass'?.72:.9;
  const peak=start+Math.min(attack,length*.4);
  const sustain=Math.max(peak+.05,end-release);
  gain.gain.setValueAtTime(.0001,start);
@@ -145,12 +145,12 @@ function instrument(note,start,length,amount,type,pan=0){
  gain.connect(playBus);
  const oscillators=[];
  const layers=type==='strings'?
-  [[0,'sawtooth',.32],[-.045,'triangle',.56],[.045,'sine',.42]]:
- type==='choir'?[[0,'sine',.8],[.03,'triangle',.22]]:
- type==='wind'?[[0,'triangle',.75],[.014,'sine',.34]]:
- type==='brass'?[[0,'triangle',.74],[.01,'sawtooth',.12]]:
- type==='bass'?[[0,'triangle',.75],[-.01,'sine',.38]]:
- [[0,'triangle',.7],[.006,'sine',.26]];
+  [[0,'sine',.74],[-.045,'triangle',.18],[.045,'sine',.30]]:
+ type==='choir'?[[0,'sine',.9],[.03,'sine',.28]]:
+ type==='wind'?[[0,'sine',.78],[.014,'triangle',.24]]:
+ type==='brass'?[[0,'sine',.78],[.01,'triangle',.28]]:
+ type==='bass'?[[0,'sine',.88],[-.01,'triangle',.22]]:
+ [[0,'sine',.75],[.006,'triangle',.19]];
  layers.forEach(([cents,shape,level])=>{
   const o=ctx.createOscillator();
   o.type=shape;
