@@ -19,6 +19,10 @@
           "research.html"
         ],
         [
+          "MILES Research Architecture",
+          "miles-research.html"
+        ],
+        [
           "Emerging Research Horizon",
           "emerging-horizon-research.html"
         ],
