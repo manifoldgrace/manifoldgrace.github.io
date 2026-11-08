@@ -14,11 +14,17 @@ body{margin:0;overflow-x:hidden;background:#000;color:#f5f3ee}
 header{position:sticky!important;top:0;z-index:1000;background:#000;border-bottom:1px solid #292929;isolation:isolate}
 header .wrap{width:min(1200px,92vw);margin:auto;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:space-between!important;gap:16px;padding:18px 0!important;min-height:94px}
 header .brand{font-size:clamp(1.5rem,4.5vw,2.25rem)!important;font-weight:650;letter-spacing:-.035em;line-height:1.05;white-space:nowrap}
-.mg-menu-dropdown{margin-left:auto;flex:none}
-.mg-menu-toggle{list-style:none;display:grid;place-items:center;cursor:pointer;color:#fff;background:#090909;border:1px solid #777;border-radius:999px;min-width:48px;min-height:48px;padding:8px;font:inherit}
+.mg-header-controls{margin-left:auto;flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.mg-menu-dropdown{margin:0!important;flex:none}
+.mg-menu-toggle{list-style:none;display:grid;place-items:center;cursor:pointer;color:#fff;background:transparent!important;border:0!important;border-radius:0!important;min-width:32px;min-height:27px;padding:3px;font:inherit;box-shadow:none!important}
 .mg-menu-toggle::-webkit-details-marker{display:none}
-.mg-menu-toggle:hover,.mg-menu-toggle:focus-visible,.mg-menu-dropdown[open] .mg-menu-toggle{border-color:#fff;outline-offset:3px}
-.mg-menu-toggle svg{width:24px;height:24px;stroke:currentColor}
+.mg-menu-toggle:hover,.mg-menu-toggle:focus-visible,.mg-menu-dropdown[open] .mg-menu-toggle{border:0!important;outline-offset:2px}
+.mg-menu-toggle svg{width:17px;height:17px;stroke:currentColor}
+.mg-music-play{display:grid;place-items:center;appearance:none;background:transparent;border:0;border-radius:0;box-shadow:none;color:#fff;min-width:32px;min-height:32px;padding:4px;cursor:pointer}
+.mg-music-play svg{display:block;width:19px;height:19px;fill:currentColor}
+.mg-music-play:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.mg-music-note{position:fixed;right:12px;top:var(--mg-menu-top,78px);max-width:220px;background:#171717;color:#fff;border:1px solid #666;border-radius:8px;padding:9px;font-size:.7rem;z-index:2147483647}
+.mg-music-note[hidden]{display:none!important}
 body>.mg-home-nav{position:fixed!important;display:none!important;top:var(--mg-menu-top,78px)!important;right:max(4vw,12px)!important;left:auto!important;bottom:auto!important;width:min(175px,calc(100vw - 24px))!important;max-height:calc(100dvh - var(--mg-menu-top,78px) - 14px)!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;box-sizing:border-box;padding:8px!important;border:1px solid #606060;border-radius:16px;background:#101010!important;color:#f5f3ee;box-shadow:0 24px 60px #000e;z-index:2147483647!important}
 body.mg-menu-open>.mg-home-nav{display:block!important}
 body>.mg-home-nav label{font-weight:650;font-size:.78rem;display:block;margin:0 0 6px}
@@ -56,7 +62,7 @@ body>.mg-home-nav .site-nav-panel a:hover,body>.mg-home-nav .site-nav-panel a:fo
 @media(max-width:700px){header .wrap{min-height:82px;padding:12px 0!important}header .brand{font-size:clamp(1.45rem,6vw,1.85rem)!important}.mg-entry iframe{height:calc(100svh - 82px)!important}.mg-entry .mg-heading{width:calc(100% - 40px)!important;padding:30px 0 42px!important}.mg-entry .mg-heading p{font-size:.95rem}.mg-home-foot .wrap{gap:15px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style><script src="loading-scenes.js?v=20261108-unique-patterns-1"></script></head><body>
-<header><div class="wrap"><a class="brand" href="index.html">Manifold Grace</a><details class="mg-menu-dropdown" id="home-menu-dropdown"><summary class="mg-menu-toggle" id="home-menu-toggle" aria-label="Open navigation menu" aria-controls="home-nav"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="sr-only">Open navigation menu</span></summary><div class="mg-home-nav" id="home-nav"><div class="mg-menu-search-wrap"><label for="mg-menu-search" class="sr-only">Search Manifold Grace pages</label><input type="search" id="mg-menu-search" class="mg-menu-search" placeholder="Search..." aria-label="Search Manifold Grace pages"><svg class="mg-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.7" cy="10.7" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></div><div class="mg-menu-results" id="mg-menu-results" hidden></div><nav data-site-nav aria-label="Explore Manifold Grace by topic"></nav><p class="mg-menu-direct-links"><a href="site-directory.html">Complete site directory</a> · <a href="public-interest-ai.html">Public Interest AI</a> · <a href="homepage-content.html">Full public record</a></p></div></details></div></header>
+<header><div class="wrap"><a class="brand" href="index.html">Manifold Grace</a><div class="mg-header-controls"><button class="mg-music-play" id="mg-music-play" type="button" aria-label="Play background music" title="Play background music"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></button><details class="mg-menu-dropdown" id="home-menu-dropdown"><summary class="mg-menu-toggle" id="home-menu-toggle" aria-label="Open navigation menu" aria-controls="home-nav"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span class="sr-only">Open navigation menu</span></summary><div class="mg-home-nav" id="home-nav"><div class="mg-menu-search-wrap"><label for="mg-menu-search" class="sr-only">Search Manifold Grace pages</label><input type="search" id="mg-menu-search" class="mg-menu-search" placeholder="Search..." aria-label="Search Manifold Grace pages"><svg class="mg-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.7" cy="10.7" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></div><div class="mg-menu-results" id="mg-menu-results" hidden></div><nav data-site-nav aria-label="Explore Manifold Grace by topic"></nav><p class="mg-menu-direct-links"><a href="site-directory.html">Complete site directory</a> · <a href="public-interest-ai.html">Public Interest AI</a> · <a href="homepage-content.html">Full public record</a></p></div></details></div></div></header>
 <main>
 <section class="mg-entry" id="public-interest-global-map" aria-label="Global research map"><iframe title="Global public-interest AI globe: animated map with user controls" src="public-interest-map.html?hero=1" allow="fullscreen" loading="eager"></iframe>
 <div class="mg-heading" id="intro"><span class="eyebrow">Independent research · London · Worldwide outlook</span><div class="mg-origin-label"><span aria-hidden="true">⊕</span> MG·LON·01 · London research origin</div><p>Evidence, public-interest AI and creative interdisciplinary research — connecting ideas, people and possibilities.</p></div>
@@ -68,6 +74,18 @@ body>.mg-home-nav .site-nav-panel a:hover,body>.mg-home-nav .site-nav-panel a:fo
 <div class="mg-home-foot"><div class="wrap"><span>Manifold Grace · Independent research and creative practice</span><nav class="mg-footer-links" aria-label="Footer navigation"><a href="site-directory.html">Directory</a><a href="research.html">Research</a><a href="professional.html">Professional</a><a href="heritage.html">Culture &amp; Life</a><a href="creative.html">Creative</a><a href="public-interest-ai.html">Public Interest AI</a><a href="team.html">Team</a><a href="careers.html">Careers</a><a href="homepage-content.html">Full record</a><a href="contact.html">Contact</a></nav></div></div>
 <script>
 (()=>{
+ const playButton=document.getElementById('mg-music-play');
+ playButton.addEventListener('click',()=>{
+   const audio=document.getElementById('mg-background-audio');
+   if(audio&&audio.querySelector('source[src]')){
+     if(audio.paused){audio.play().then(()=>{playButton.setAttribute('aria-label','Pause background music')}).catch(()=>{playButton.setAttribute('aria-label','Play background music')})}
+     else{audio.pause();playButton.setAttribute('aria-label','Play background music')}
+   }else{
+     let note=document.getElementById('mg-music-note');
+     if(!note){note=document.createElement('div');note.id='mg-music-note';note.className='mg-music-note';note.setAttribute('role','status');note.textContent='Music is awaiting an authorised audio file.';document.body.appendChild(note)}
+     note.hidden=false;
+   }
+ });
  const dropdown=document.getElementById('home-menu-dropdown');
  const nav=document.getElementById('home-nav');
  // Portal the menu out of Safari's header stacking context and above the globe iframe.
