@@ -23,7 +23,7 @@ if(!intro||!headings.length)return;
 const slug=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,65);
 let assigned=0;
 const entries=headings.map(h=>{
- let id=h.id||h.closest('section[id],article[id]')?.id;
+ let id=h.id;
  if(!id){id='mg-reading-'+slug(h.textContent.trim())+'-'+(++assigned);h.id=id;}
  return {id,title:h.textContent.replace(/\s+/g,' ').trim(),h};
 }).filter(e=>e.title.length>2);
