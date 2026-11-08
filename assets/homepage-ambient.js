@@ -199,9 +199,9 @@ async function play(){
     if(!recording){recording=new Audio(approvedRecordingUrl);recording.loop=true;recording.volume=.38}
     await recording.play();
    }else{
-    if(!AudioCtx){label(false,'Audio unavailable in this browser');return false}
+    if(!AudioCtx){label(false,'Audio unavailable in this browser');loaderPrompt(false);return false}
     initialise();
-    await ctx.resume();
+    await Promise.race([ctx.resume(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Audio start requires a tap')),900))]);
     if(ctx.state!=='running')throw Error('Audio start blocked');
     beginBus();
     nextBar=ctx.currentTime+.12;barIndex=0;
