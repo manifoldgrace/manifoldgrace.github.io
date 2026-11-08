@@ -21,6 +21,17 @@ const style=document.createElement("style");style.textContent=css;document.head.
 const panel=document.createElement("div");panel.className="mg-loader-screen";panel.dataset.scene=scene;panel.setAttribute("role","presentation");panel.setAttribute("aria-hidden","true");
 panel.innerHTML='<div class="mg-loader-art"><i class="core"></i><i class="core"></i><i class="core"></i><i class="core"></i></div><span class="mg-loader-text">Manifold Grace · Loading</span>';
 function reveal(){if(panel.classList.contains("is-done"))return;panel.classList.add("is-done");setTimeout(()=>panel.remove(),250)}
-document.addEventListener("DOMContentLoaded",()=>document.body.appendChild(panel),{once:true});
-if(page!=="loading-preview.html"){window.addEventListener("load",reveal,{once:true});setTimeout(reveal,1800);}
+let mounted=false,minimumElapsed=false,fullyLoaded=document.readyState==="complete";
+function perhapsReveal(){if(minimumElapsed&&fullyLoaded)reveal()}
+function mount(){
+ if(mounted)return;
+ mounted=true;
+ document.body.appendChild(panel);
+ if(page==="loading-preview.html")return;
+ setTimeout(()=>{minimumElapsed=true;perhapsReveal()},5000);
+ // Avoid trapping visitors if a third-party resource never fires its load event.
+ setTimeout(reveal,12000);
+}
+if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount,{once:true});else mount();
+if(page!=="loading-preview.html")window.addEventListener("load",()=>{fullyLoaded=true;perhapsReveal()},{once:true});
 })();
