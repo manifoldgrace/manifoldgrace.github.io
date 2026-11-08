@@ -117,7 +117,7 @@ const items=[
 const featureCollection={type:'FeatureCollection',features:items.map((p,i)=>({type:'Feature',geometry:{type:'Point',coordinates:[p.lng,p.lat]},properties:{id:i,name:p.n,own:!!p.own}}))};
 const style='https://tiles.openfreemap.org/styles/dark';
 let map;
-try{map=new maplibregl.Map({container:'map',style,center:[10,24],zoom:1.25,pitch:0,bearing:0,antialias:true,dragRotate:false,cooperativeGestures:true,attributionControl:false});}
+try{map=new maplibregl.Map({container:'map',style,center:[10,24],zoom:heroMode?1.9:1.25,pitch:0,bearing:0,antialias:true,dragRotate:false,cooperativeGestures:true,attributionControl:false});}
 catch(err){fallback.querySelector('small').textContent='Map temporarily unavailable';throw err}
 map.on('style.load',()=>{map.setProjection({type:'globe'});});
 map.on('error', e=>{if(e && e.error)console.warn('Global atlas map issue',e.error)});
@@ -157,7 +157,7 @@ function flight(){
  }
  const p=stops[step];step+=1;
  // Globe camera glides with eased, curved flight paths and a slight cinematic tilt.
- const duration=step===1?6200:step===2?7200:5600;
+ const duration=reduce?0:step===1?6200:step===2?7200:5600;
  const longitude=p.lng,latitude=p.lat;
  const bearing=(step%2===0?7:-7);
  highlightStop(p);
@@ -166,12 +166,13 @@ function flight(){
  let finished=false;
  const after=()=>{
   if(finished)return;finished=true;currentlyFlying=false;
-  if(auto&&visible){timer=setTimeout(flight,1550);}
+  if(auto&&visible){timer=setTimeout(flight,reduce?2300:1550);}
  };
  map.once('moveend',after);
+ if(reduce){map.jumpTo({center:[longitude,latitude],zoom:heroMode?1.95:3.5,bearing:0,pitch:0});after();return;}
  map.flyTo({
   center:[longitude,latitude],
-  zoom:heroMode?2.65:3.5,
+  zoom:heroMode?1.95:3.5,
   bearing,pitch:0,
   curve:1.45,speed:0.65,
   maxDuration:duration,
@@ -182,7 +183,7 @@ function flight(){
  clear();timer=setTimeout(after,duration+350);
 }
 function start(){
- if(!visible||reduce)return;
+ if(!visible)return;
  clear();auto=true;manuallyPaused=false;step=0;
  button.textContent='Ⅱ Pause tour';button.setAttribute('aria-pressed','true');
  flight();
