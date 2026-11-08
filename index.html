@@ -160,6 +160,39 @@ header .mg-menu-dropdown .site-nav-panel a{display:block;min-height:40px;padding
 @media(max-width:700px){.mg-entry iframe{height:clamp(600px,93dvh,1000px)!important}}
 .mg-menu-direct-links{display:flex;flex-wrap:wrap;gap:10px;font-size:.86rem}
 .mg-menu-direct-links a{text-decoration:underline;text-underline-offset:3px}
+
+/* iPad/Safari dropdown: fixed below header, right aligned and scrollable. */
+header .mg-menu-dropdown[open] .mg-home-nav{
+ position:fixed!important;
+ top:var(--mg-menu-top,90px)!important;
+ right:max(3.5vw,14px)!important;
+ left:auto!important;
+ bottom:auto!important;
+ width:min(352px,calc(100vw - 28px))!important;
+ max-height:calc(100dvh - var(--mg-menu-top,90px) - 12px)!important;
+ overflow-y:auto!important;
+ overscroll-behavior:contain;
+ -webkit-overflow-scrolling:touch;
+ box-sizing:border-box;
+ z-index:99999!important;
+ background:#101010!important;
+ border:1px solid #888!important;
+ border-radius:17px!important;
+ box-shadow:0 24px 55px #000f!important;
+ padding:16px!important;
+}
+header .mg-menu-dropdown .nav-groups{
+ display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:5px!important;
+}
+header .mg-menu-dropdown .site-nav-group{display:block!important;width:100%!important}
+header .mg-menu-dropdown .site-nav-group>summary{display:flex!important;align-items:center!important;white-space:normal!important}
+header .mg-menu-dropdown .site-nav-group:not([open])>.site-nav-panel{display:none!important}
+header .mg-menu-dropdown .site-nav-group[open]>.site-nav-panel{
+ display:grid!important;position:static!important;width:100%!important;min-width:0!important;
+ max-width:100%!important;max-height:none!important;overflow:visible!important;
+ box-shadow:none!important;grid-template-columns:1fr!important;
+}
+header .mg-menu-dropdown .site-nav-panel a{white-space:normal!important;overflow-wrap:anywhere}
 </style></head><body>
 <header><div class="wrap"><a class="brand" href="index.html">Manifold Grace</a><details class="mg-menu-dropdown" id="home-menu-dropdown"><summary class="mg-menu-toggle" id="home-menu-toggle" aria-controls="home-nav">☰ Explore menu</summary><div class="mg-home-nav" id="home-nav"><label for="mg-menu-search">Find a page</label><input type="search" id="mg-menu-search" class="mg-menu-search" placeholder="Search research, records and more"><p class="mg-menu-hint">Use the dropdown categories or jump directly to a page.</p><div class="mg-menu-results" id="mg-menu-results" hidden></div><nav data-site-nav aria-label="Explore Manifold Grace by topic"></nav><p class="mg-menu-direct-links"><a href="site-directory.html">Complete site directory</a> · <a href="public-interest-ai.html">Public Interest AI</a> · <a href="homepage-content.html">Full public record</a></p></div></details></div></header>
 <main>
@@ -180,7 +213,9 @@ header .mg-menu-dropdown .site-nav-panel a{display:block;min-height:40px;padding
  const categories=nav.querySelector('nav[data-site-nav]');
  const directory=()=>Array.from(categories.querySelectorAll('a'));
  const close=()=>{dropdown.open=false};
+ const positionMenu=()=>{const header=document.querySelector('header');const y=Math.max(0,header.getBoundingClientRect().bottom);dropdown.style.setProperty('--mg-menu-top',Math.round(y+8)+'px')};
  dropdown.addEventListener('toggle',()=>{
+  positionMenu();
   if(dropdown.open && !categories.querySelector('a')) {
    const fallback=document.createElement('a');
    fallback.href='site-directory.html';fallback.textContent='Browse every section in the complete directory';
@@ -195,6 +230,7 @@ header .mg-menu-dropdown .site-nav-panel a{display:block;min-height:40px;padding
   for(const link of matched){const a=document.createElement('a');a.href=link.getAttribute('href');a.textContent=link.textContent;results.appendChild(a)}
   if(!matched.length){const p=document.createElement('p');p.textContent='No matching pages. Open the full directory for more options.';results.appendChild(p)}
  });
+ window.addEventListener('resize',()=>{if(dropdown.open)positionMenu()});
  document.addEventListener('click',e=>{if(!dropdown.contains(e.target))close()});
  document.addEventListener('keydown',e=>{
   if(e.key==='Escape'&&dropdown.open){close();dropdown.querySelector('summary').focus()}
