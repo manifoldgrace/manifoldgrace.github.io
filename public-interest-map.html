@@ -125,17 +125,20 @@ body.hero-mode .maplibregl-ctrl-top-right .maplibregl-ctrl-group button{
  background:#050505d9!important;border:1px solid #ffffff75!important;
 }
 body.hero-mode #counter{bottom:52px!important}
-body.hero-mode .toolbar{bottom:52px!important}
+body.hero-mode .toolbar{bottom:52px!important;max-width:75%!important;flex-wrap:wrap}
 body.hero-mode #sky-credit{left:50%;bottom:17px}
 @media(max-width:640px){
+ body.hero-mode .toolbar{max-width:80%!important;gap:5px}
+ body.hero-mode .toolbar .tool{font-size:11px;padding:8px 10px}
  body.hero-mode .maplibregl-ctrl-top-right{right:10px!important;top:12px!important}
  body.hero-mode .maplibregl-ctrl-attrib{font-size:9px!important;max-width:75vw}
  body.hero-mode #sky-credit{display:none!important}
 }
+@media(prefers-reduced-motion:reduce){#tilt-control{display:none!important}}
 </style></head><body>
 <div id="viewport">
 <div id="map-fallback" role="status"><div class="planet"><div class="fallback-caption">Global research atlas<br><small>Interactive globe loading…</small><a class="fallback-link" href="site-directory.html" target="_top">Browse research directory</a></div></div></div><div id="map" role="region" aria-label="Interactive globe of selected public interest AI projects"></div>
-<div class="toolbar"><button class="tool" id="tour" type="button" aria-pressed="false">▶ Play tour</button><button class="tool" id="london" type="button">◎ London</button><button class="tool" id="reset" type="button">◌ Global view</button><a class="tool primary" target="_top" href="public-interest-ai.html?intent=collaboration#register">Add / collaborate</a></div>
+<div class="toolbar"><button class="tool" id="tour" type="button" aria-pressed="false">▶ Play tour</button><button class="tool" id="tilt-control" type="button" aria-pressed="false" aria-describedby="tilt-help" hidden>◉ Tilt to explore</button><span id="tilt-help" class="sr-only" role="status" aria-live="polite">Move the handset to explore the globe after granting motion access. Use the same button to turn motion off. The map remains draggable by touch.</span><button class="tool" id="london" type="button">◎ London</button><button class="tool" id="reset" type="button">◌ Global view</button><a class="tool primary" target="_top" href="public-interest-ai.html?intent=collaboration#register">Add / collaborate</a></div>
 <div id="panel" hidden role="region" aria-live="polite" aria-label="Project details"><button id="close" aria-label="Close project details" type="button">×</button><div id="panel-body"></div></div>
 <div id="sky-credit"><a href="https://esawebb.org/images/potm2507b/" target="_blank" rel="noopener noreferrer">Starfield: NASA/ESA Hubble</a></div><div id="tour-caption" role="status" hidden aria-live="polite"></div><div id="chapter"><b>◎ Global research atlas</b><span>Selected public-interest AI initiatives</span></div><div id="counter" role="status" aria-live="off">11 listed locations</div><div class="sr-only" id="accessible-project" aria-live="polite"></div><div id="status">⊕ Manifold Grace (London) · ◯ External directory examples</div>
 </div>
@@ -238,6 +241,72 @@ function flight(){
   });
  });
 }
+
+/* Opt-in, local-only device-orientation navigation for the homepage globe.
+   This does not request geolocation or transmit motion readings. */
+const tiltButton=document.getElementById('tilt-control');
+const tiltHelp=document.getElementById('tilt-help');
+const touchDevice=('ontouchstart' in window || navigator.maxTouchPoints>0);
+const canTilt=heroMode && touchDevice && 'DeviceOrientationEvent' in window && !reduce && window.isSecureContext;
+let tiltActive=false,tiltBase=null,tiltFrame=0,tiltTarget=null,tiltCurrent=null,tiltLastTime=0,tiltWatchdog=0;
+const clamp=(v,min,max)=>Math.min(max,Math.max(min,v));
+const deltaAngle=(n,base)=>((n-base+540)%360)-180;
+if(canTilt)tiltButton.hidden=false;
+function renderTilt(time){
+ if(!tiltActive || !tiltTarget)return;
+ if(!tiltCurrent)tiltCurrent={...tiltTarget};
+ const blend=0.13;
+ tiltCurrent.lng+=deltaAngle(tiltTarget.lng,tiltCurrent.lng)*blend;
+ tiltCurrent.lat+=(tiltTarget.lat-tiltCurrent.lat)*blend;
+ if(time-tiltLastTime>33){map.jumpTo({center:[tiltCurrent.lng,tiltCurrent.lat],bearing:tiltCurrent.bearing??0,pitch:0});tiltLastTime=time;}
+ tiltFrame=requestAnimationFrame(renderTilt);
+}
+function readTilt(e){
+ if(!tiltActive || !Number.isFinite(e.beta) || !Number.isFinite(e.gamma))return;
+ if(!tiltBase){
+  const center=map.getCenter();
+  tiltBase={beta:e.beta,gamma:e.gamma,lng:center.lng,lat:center.lat};
+  tiltCurrent={lng:center.lng,lat:center.lat};
+  clearTimeout(tiltWatchdog);
+  tiltHelp.textContent='Motion control is active. Tilt the handset gently to look around the globe.';
+ }
+ // Calibrated relative to the initial handset position; never use geographic location.
+ const dx=clamp(e.gamma-tiltBase.gamma,-38,38);
+ const dy=clamp(deltaAngle(e.beta,tiltBase.beta),-36,36);
+ tiltTarget={lng:tiltBase.lng+dx*0.9,lat:clamp(tiltBase.lat-dy*0.48,-75,75)};
+ if(!tiltFrame)tiltFrame=requestAnimationFrame(renderTilt);
+}
+function stopTilt(){
+ tiltActive=false;tiltBase=null;tiltTarget=null;tiltCurrent=null;
+ clearTimeout(tiltWatchdog);cancelAnimationFrame(tiltFrame);tiltFrame=0;
+ window.removeEventListener('deviceorientation',readTilt);
+ tiltButton.textContent='◉ Tilt to explore';
+ tiltButton.setAttribute('aria-pressed','false');
+ tiltHelp.textContent='Motion is off. Drag the globe with your finger, or enable tilt to explore again.';
+}
+tiltButton.addEventListener('click',async()=>{
+ if(tiltActive){stopTilt();return;}
+ if(!canTilt)return;
+ // WebKit requires this request directly following a user's tap.
+ try{
+  if(typeof DeviceOrientationEvent.requestPermission==='function'){
+   const permission=await DeviceOrientationEvent.requestPermission();
+   if(permission!=='granted'){tiltHelp.textContent='Motion permission was not granted. Drag the globe with your finger instead.';return;}
+  }
+ }catch(err){tiltHelp.textContent='Motion access is unavailable. The globe remains draggable by touch.';return;}
+ pause(true); // Stops the automated tour so it does not fight device motion.
+ tiltActive=true;tiltBase=null;tiltLastTime=0;
+ tiltButton.textContent='◉ Tilt on · Stop';
+ tiltButton.setAttribute('aria-pressed','true');
+ tiltHelp.textContent='Hold the handset as you wish to begin, then tilt gently.';
+ window.addEventListener('deviceorientation',readTilt,{passive:true});
+ tiltWatchdog=setTimeout(()=>{
+  if(tiltActive&&!tiltBase){stopTilt();tiltHelp.textContent='No motion data was received. Use touch to move the globe or check browser sensor access.';}
+ },3500);
+});
+button.addEventListener('click',()=>{if(tiltActive)stopTilt()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden && tiltActive)stopTilt()});
+
 function start(){
  if(!visible||!stops.length)return;
  tourEpoch++;clear();auto=true;manuallyPaused=false;
