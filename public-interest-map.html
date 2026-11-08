@@ -149,6 +149,22 @@ window.setTimeout(()=>{const box=document.getElementById('map-fallback');if(box&
 <script type="module">
 import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs';
 const heroMode=new URLSearchParams(location.search).get('hero')==='1';if(heroMode)document.body.classList.add('hero-mode');
+/* Embedded globe interactions can unlock parent-page music in the same user gesture. */
+if(heroMode){
+ let audioGestureSent=false;
+ const forwardAudioGesture=()=>{
+  if(audioGestureSent)return;
+  try{
+   if(window.parent!==window && typeof window.parent.mgStartAudioFromGesture==='function'){
+    window.parent.mgStartAudioFromGesture();
+    audioGestureSent=true;
+   }
+  }catch(e){/* Embedding or browser policy may prevent access. */}
+ };
+ document.addEventListener('pointerdown',forwardAudioGesture,{capture:true,passive:true});
+ document.addEventListener('touchstart',forwardAudioGesture,{capture:true,passive:true});
+ document.addEventListener('keydown',forwardAudioGesture,{capture:true});
+}
 const fallback=document.getElementById('map-fallback');
 const items=[
 {n:'Manifold Grace',city:'London, UK',lat:51.5074,lng:-0.1278,own:true,desc:'Independent research into evidence verification, provenance, contradiction detection and institutional accountability.',url:'https://manifoldgrace.github.io/public-interest-ai.html'},
