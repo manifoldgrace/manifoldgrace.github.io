@@ -26,7 +26,9 @@
   button.setAttribute('aria-pressed',String(on));
   button.setAttribute('aria-label',label);
   button.title=label;
-  // Existing play icon remains visually minimal; label supplies screen reader meaning.
+  const symbol=button.querySelector('svg path');
+  if(symbol)symbol.setAttribute('d',on?'M6 4h4v16H6z M14 4h4v16h-4z':'M7 4.5v15l12-7.5z');
+  // Existing control is the only playback UI; label supplies screen reader meaning.
  }
  function voice(note,t,duration,volume,kind){
   const osc=ctx.createOscillator(),envelope=ctx.createGain(),filter=ctx.createBiquadFilter();
@@ -83,6 +85,7 @@
     if(!AudioCtx){setButton(false,'Audio unavailable in this browser');return false}
     initialise();
     await ctx.resume();
+    if(playing)return true; // Avoid double scheduling if browser unblocks a pending load-time attempt on tap.
     if(ctx.state!=='running')throw Error('Audio is not running');
     nextStart=ctx.currentTime+.12;
     playing=true;queue();interval=window.setInterval(queue,280);
