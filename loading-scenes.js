@@ -1,9 +1,10 @@
 (()=>{"use strict";
 const page=(location.pathname.split("/").pop()||"index.html").toLowerCase();
-const scene=page==="loading-preview.html"?(new URLSearchParams(location.search).get("scene")||"home"):page==="index.html"?"home":(["research.html","research-collaborations.html","information-science.html"].includes(page)?"research":(["public-interest-ai.html","ai-research-lab.html","llm-evaluation-governance.html"].includes(page)?"ai":null));
+const scene=page==="loading-preview.html"?(new URLSearchParams(location.search).get("scene")||"home"):page==="index.html"?"home":(/research|knowledge|learning|information|paper|study|academic|history/.test(page)?"research":(/ai|evaluation|technology|data|software|algorithm|coding/.test(page)?"ai":"home"));
+if(window.__mgLoaderInitialized)return;window.__mgLoaderInitialized=true;
 if(!scene||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
 const css=`
-.mg-loader-screen{position:fixed;inset:0;z-index:2147483646;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;pointer-events:none;opacity:1;transition:opacity .22s ease}
+.mg-loader-screen{position:fixed;inset:0;z-index:2147483646;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;pointer-events:auto;opacity:1;transition:opacity .22s ease}
 .mg-loader-screen[hidden]{display:none!important}.mg-loader-screen.is-done{opacity:0}
 .mg-loader-art{width:min(52vw,240px);aspect-ratio:1;position:relative;overflow:hidden;perspective:700px;mask-image:radial-gradient(circle,#000 63%,transparent 89%)}
 .mg-loader-art .core{position:absolute;inset:10%;border:1px solid #eee;box-shadow:0 0 14px #fff7,inset 0 0 14px #fff4;animation:mg-loader-tunnel 1.25s linear infinite}
