@@ -74,18 +74,6 @@ body>.mg-home-nav .site-nav-panel a:hover,body>.mg-home-nav .site-nav-panel a:fo
 <div class="mg-home-foot"><div class="wrap"><span>Manifold Grace · Independent research and creative practice</span><nav class="mg-footer-links" aria-label="Footer navigation"><a href="site-directory.html">Directory</a><a href="research.html">Research</a><a href="professional.html">Professional</a><a href="heritage.html">Culture &amp; Life</a><a href="creative.html">Creative</a><a href="public-interest-ai.html">Public Interest AI</a><a href="team.html">Team</a><a href="careers.html">Careers</a><a href="homepage-content.html">Full record</a><a href="contact.html">Contact</a></nav></div></div>
 <script>
 (()=>{
- const playButton=document.getElementById('mg-music-play');
- playButton.addEventListener('click',()=>{
-   const audio=document.getElementById('mg-background-audio');
-   if(audio&&audio.querySelector('source[src]')){
-     if(audio.paused){audio.play().then(()=>{playButton.setAttribute('aria-label','Pause background music')}).catch(()=>{playButton.setAttribute('aria-label','Play background music')})}
-     else{audio.pause();playButton.setAttribute('aria-label','Play background music')}
-   }else{
-     let note=document.getElementById('mg-music-note');
-     if(!note){note=document.createElement('div');note.id='mg-music-note';note.className='mg-music-note';note.setAttribute('role','status');note.textContent='Music is awaiting an authorised audio file.';document.body.appendChild(note)}
-     note.hidden=false;
-   }
- });
  const dropdown=document.getElementById('home-menu-dropdown');
  const nav=document.getElementById('home-nav');
  // Portal the menu out of Safari's header stacking context and above the globe iframe.
@@ -127,4 +115,4 @@ body>.mg-home-nav .site-nav-panel a:hover,body>.mg-home-nav .site-nav-panel a:fo
   }
  });
 })();
-</script></body></html>
+</script><script src="assets/homepage-ambient.js?v=20261108-1" defer></script></body></html>
