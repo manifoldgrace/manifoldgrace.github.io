@@ -78,12 +78,20 @@ body.hero-mode .maplibregl-ctrl-bottom-right{bottom:53px!important}
  body.hero-mode #counter{right:10px!important;bottom:10px!important;font-size:10px}
  body.hero-mode .maplibregl-ctrl-top-right{right:8px!important}
 }
+
+/* Cinematic project sequence: full-height globe with an unobtrusive project caption. */
+body.hero-mode #tour-caption{display:block;position:absolute;z-index:5;top:14px;left:16px;max-width:calc(100% - 100px);padding:9px 14px;border:1px solid #ffffff44;background:#080808bc;border-radius:9999px;color:#fff;font:500 12px/1.4 system-ui;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none}
+body.hero-mode #tour-caption[hidden]{display:none!important}
+body.hero-mode .toolbar{bottom:16px!important}
+body.hero-mode #counter{bottom:16px!important}
+body.hero-mode .maplibregl-ctrl-top-right{top:50%!important}
+@media(max-width:650px){body.hero-mode #tour-caption{top:14px;max-width:calc(100% - 32px);font-size:11px}}
 </style></head><body>
 <div id="viewport">
 <div id="map-fallback" role="status"><div class="planet"><div class="fallback-caption">Global research atlas<br><small>Interactive globe loading…</small><a class="fallback-link" href="site-directory.html" target="_top">Browse research directory</a></div></div></div><div id="map" role="region" aria-label="Interactive globe of selected public interest AI projects"></div>
 <div class="toolbar"><button class="tool" id="tour" type="button" aria-pressed="false">▶ Play tour</button><button class="tool" id="london" type="button">◎ London</button><button class="tool" id="reset" type="button">◌ Global view</button><a class="tool primary" target="_top" href="public-interest-ai.html?intent=collaboration#register">Add / collaborate</a></div>
 <div id="panel" hidden role="region" aria-live="polite" aria-label="Project details"><button id="close" aria-label="Close project details" type="button">×</button><div id="panel-body"></div></div>
-<div id="chapter"><b>◎ Global research atlas</b><span>Selected public-interest AI initiatives</span></div><div id="counter" role="status" aria-live="off">11 listed locations</div><div class="sr-only" id="accessible-project" aria-live="polite"></div><div id="status">⊕ Manifold Grace (London) · ◯ External directory examples</div>
+<div id="tour-caption" role="status" hidden aria-live="polite"></div><div id="chapter"><b>◎ Global research atlas</b><span>Selected public-interest AI initiatives</span></div><div id="counter" role="status" aria-live="off">11 listed locations</div><div class="sr-only" id="accessible-project" aria-live="polite"></div><div id="status">⊕ Manifold Grace (London) · ◯ External directory examples</div>
 </div>
 <div class="note">A curated selection, not a worldwide census or proof of partnerships. Locations are approximate city centres. Source: <a href="https://publicinterest.ai/tool/map/directory" target="_blank" rel="noopener noreferrer">Public Interest AI directory</a>. Other projects' current activity is unverified. Map tiles: © OpenStreetMap contributors · OpenFreeMap.</div>
 <script>
@@ -123,32 +131,79 @@ const chapter=document.getElementById('chapter'), counter=document.getElementByI
 function updateCounter(){if(!map.loaded())return;const b=map.getBounds();const visiblePoints=items.filter(p=>b.contains([p.lng,p.lat])).length;counter.textContent='Showing '+visiblePoints+' of '+items.length+' selected locations'}
 map.on('moveend',updateCounter);
 let auto=false,manuallyPaused=false,visible=false,timer=null,step=0,currentlyFlying=false;
-const stops=[{point:[10,25],zoom:1.3,heading:'Global overview'},{point:[-0.1278,51.5074],zoom:3.1,heading:'Manifold Grace · London'},{point:[8.8,51.4],zoom:3.15,heading:'European initiatives'},{point:[-86.5264,39.1653],zoom:3,heading:'North American initiative'}];
+// Tour each source record, not merely four geographical regions.
+const tourOrder=[10,0,2,3,1,8,6,5,7,4,9];
+const stops=tourOrder.map(i=>items[i]);
+const tourCaption=document.getElementById('tour-caption');
+let tourMarker=null;
+function highlightStop(p){
+ if(map.getLayer('tour-highlight'))map.setFilter('tour-highlight',['==',['get','id'],items.indexOf(p)]);
+ if(tourCaption){tourCaption.hidden=false;tourCaption.textContent=String(step).padStart(2,'0')+' / '+items.length+' · '+p.n+' · '+p.city;}
+ announcer.textContent='Tour stop '+step+' of '+items.length+': '+p.n+', '+p.city;
+}
 function clear(){if(timer){clearTimeout(timer);timer=null}}
-function pause(touched=false){auto=false;clear();currentlyFlying=false;map.stop();button.textContent='▶ Play tour';button.setAttribute('aria-pressed','false');if(touched)manuallyPaused=true}
+function pause(touched=false){auto=false;clear();currentlyFlying=false;map.stop();button.textContent='▶ Play tour';button.setAttribute('aria-pressed','false');if(touched)manuallyPaused=true;if(map.getLayer('tour-highlight'))map.setFilter('tour-highlight',['==',['get','id'],-1]);if(tourCaption)tourCaption.hidden=true}
 function show(p){announcer.textContent='Selected '+p.n+', '+p.city;panel.hidden=false;body.replaceChildren();const tag=document.createElement('small');tag.textContent=p.own?'⊕ MG·LON·01 · MANIFOLD GRACE':'EXTERNAL PROJECT · PIAI DIRECTORY';const h=document.createElement('h3');h.textContent=p.n;const city=document.createElement('p');city.textContent=p.city;const desc=document.createElement('p');desc.textContent=p.own?p.desc:'Independent directory listing. This marker does not indicate an existing collaboration.';const link=document.createElement('a');link.href=p.own?p.url:'https://publicinterest.ai/tool/map/directory';link.target='_blank';link.rel='noopener noreferrer';link.textContent=p.own?'Explore Manifold Grace':'View source directory';body.append(tag,h,city,desc,link);
 const cite=document.createElement('button');cite.type='button';cite.textContent='Copy citation';cite.className='tool';cite.style.marginTop='12px';cite.style.display='block';cite.addEventListener('click',async()=>{
 const citation=p.own?'Manifold Grace. (2026). Public Interest AI research initiative. https://manifoldgrace.github.io/public-interest-ai.html':p.n+'. Public Interest AI project directory. HIIG AI & Society Lab. https://publicinterest.ai/tool/map/directory (accessed 7 November 2026).';
 try{await navigator.clipboard.writeText(citation);cite.textContent='Citation copied'}catch{cite.textContent='Copy unavailable; use source link above'}
 });body.appendChild(cite);history.replaceState(null,'',location.pathname+'?project='+(p.own?'manifold-grace':encodeURIComponent(p.n.toLowerCase().replace(/[^a-z0-9]+/g,'-'))))}
-function flight(){if(!auto||!visible)return;const stop=stops[step%stops.length];chapter.replaceChildren();const heading=document.createElement('b'),sub=document.createElement('span');heading.textContent=stop.heading;sub.textContent='Research locations · not confirmed partnerships';chapter.append(heading,sub);announcer.textContent='Tour: '+stop.heading;step++;if(heroMode){panel.hidden=true}else if(step%stops.length===2){show(items[0])}else if(step%stops.length===0){show(items[items.length-1])}else{panel.hidden=true}currentlyFlying=true;map.flyTo({center:stop.point,zoom:heroMode?1.4:stop.zoom,bearing:(step%2?12:-12),speed:.55,curve:1.4,essential:false});document.getElementById('status').textContent=stop.heading;timer=setTimeout(()=>{currentlyFlying=false;if(auto&&visible)flight()},9500)}
-function start(){if(reduce||!visible)return;auto=true;manuallyPaused=false;button.textContent='Ⅱ Pause tour';button.setAttribute('aria-pressed','true');clear();flight()}
+function flight(){
+ if(!auto||!visible)return;
+ if(step>=stops.length){
+  clear();auto=false;button.textContent='▶ Replay tour';button.setAttribute('aria-pressed','false');
+  if(tourCaption)tourCaption.textContent='11 / 11 · Tour complete';
+  return;
+ }
+ const p=stops[step];step+=1;
+ // Globe camera glides with eased, curved flight paths and a slight cinematic tilt.
+ const duration=step===1?6200:step===2?7200:5600;
+ const longitude=p.lng,latitude=p.lat;
+ const bearing=(step%2===0?7:-7);
+ highlightStop(p);
+ panel.hidden=true;
+ currentlyFlying=true;
+ let finished=false;
+ const after=()=>{
+  if(finished)return;finished=true;currentlyFlying=false;
+  if(auto&&visible){timer=setTimeout(flight,1550);}
+ };
+ map.once('moveend',after);
+ map.flyTo({
+  center:[longitude,latitude],
+  zoom:heroMode?2.65:3.5,
+  bearing,pitch:0,
+  curve:1.45,speed:0.65,
+  maxDuration:duration,
+  easing:t=>t*t*(3-2*t),
+  essential:!reduce
+ });
+ // Watchdog for environments where a moveend event is lost.
+ clear();timer=setTimeout(after,duration+350);
+}
+function start(){
+ if(!visible||reduce)return;
+ clear();auto=true;manuallyPaused=false;step=0;
+ button.textContent='Ⅱ Pause tour';button.setAttribute('aria-pressed','true');
+ flight();
+}
 button.addEventListener('click',()=>auto?pause(true):start());
 document.getElementById('close').addEventListener('click',()=>{panel.hidden=true;history.replaceState(null,'',location.pathname)});
 document.getElementById('london').addEventListener('click',()=>{pause(true);map.flyTo({center:[-0.1278,51.5074],zoom:5,speed:.75,essential:true});show(items[0])});
 document.getElementById('reset').addEventListener('click',()=>{pause(true);panel.hidden=true;map.flyTo({center:[10,24],zoom:1.35,pitch:0,bearing:0,essential:true})});
 map.on('load',()=>{fallback.hidden=true;map.resize();if(heroMode)map.setPadding({top:54,bottom:75,left:0,right:0});updateCounter();
-  map.addSource('projects',{type:'geojson',data:featureCollection,cluster:true,clusterMaxZoom:10,clusterRadius:47});
+  map.addSource('projects',{type:'geojson',data:featureCollection,cluster:!heroMode,clusterMaxZoom:10,clusterRadius:47});
   map.addLayer({id:'clusters',type:'circle',source:'projects',filter:['has','point_count'],paint:{'circle-color':'#f6f6f6','circle-radius':['step',['get','point_count'],20,10,25,30,30],'circle-stroke-color':'#898989','circle-stroke-width':1.5}});
   map.addLayer({id:'cluster-count',type:'symbol',source:'projects',filter:['has','point_count'],layout:{'text-field':['get','point_count_abbreviated'],'text-size':13},paint:{'text-color':'#111111'}});
   map.addLayer({id:'projects-halo',type:'circle',source:'projects',filter:['all',['!', ['has','point_count']],['==',['get','own'],true]],paint:{'circle-color':'#ffffff','circle-radius':17,'circle-opacity':.16,'circle-stroke-color':'#ffffff','circle-stroke-width':2,'circle-stroke-opacity':.6}});
   map.addLayer({id:'projects',type:'circle',source:'projects',filter:['!', ['has','point_count']],paint:{'circle-color':['case',['get','own'],'#ffffff','#c9c9c9'],'circle-radius':['case',['get','own'],9,6],'circle-stroke-color':'#151515','circle-stroke-width':2}});
+  map.addLayer({id:'tour-highlight',type:'circle',source:'projects',filter:['==',['get','id'],-1],paint:{'circle-color':'#ffffff','circle-opacity':.15,'circle-radius':25,'circle-stroke-color':'#ffffff','circle-stroke-width':3,'circle-stroke-opacity':.85}});
   for(const layer of ['projects','clusters']){map.on('mouseenter',layer,()=>map.getCanvas().style.cursor='pointer');map.on('mouseleave',layer,()=>map.getCanvas().style.cursor='grab')}
   map.on('click','projects',(e)=>{const f=e.features&&e.features[0];if(!f)return;pause(true);show(items[Number(f.properties.id)]);});
   map.on('click','clusters',(e)=>{const f=e.features&&e.features[0];if(!f)return;pause(true);const coords=f.geometry.coordinates;const source=map.getSource('projects');source.getClusterExpansionZoom(f.properties.cluster_id).then(z=>map.easeTo({center:coords,zoom:z,duration:750})).catch(()=>{});});
   const direct=new URLSearchParams(location.search).get('project');
   if(direct==='manifold-grace'){manuallyPaused=true;show(items[0]);map.jumpTo({center:[-0.1278,51.5074],zoom:4})}
-  new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(!visible){if(auto){auto=false;clear();map.stop();button.textContent='▶ Play tour';button.setAttribute('aria-pressed','false')}}else if(!reduce&&!manuallyPaused&&!auto){start()}},{threshold:.3}).observe(document.getElementById('map'));
+  new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(!visible){if(auto){auto=false;clear();map.stop();button.textContent='▶ Play tour';button.setAttribute('aria-pressed','false')}}},{threshold:.3}).observe(document.getElementById('map'));
 });
 for(const name of ['dragstart','zoomstart','rotatestart','pitchstart'])map.on(name,e=>{if(e.originalEvent)pause(true)});
 for(const eventName of ['touchstart','mousedown','wheel'])map.getCanvas().addEventListener(eventName,()=>{if(auto)pause(true)},{passive:true});
@@ -157,7 +212,7 @@ document.addEventListener('keydown',event=>{
  if(/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName))return;
  if(event.code==='Space'&&document.activeElement===document.body){event.preventDefault();auto?pause(true):start()}
  if(event.key==='ArrowRight'||event.key==='ArrowLeft'){
-  if(document.activeElement===document.body){event.preventDefault();pause(true);step=Math.max(0,step+(event.key==='ArrowRight'?1:-1));const stop=stops[step%stops.length];map.flyTo({center:stop.point,zoom:stop.zoom,speed:.9,essential:true});announcer.textContent='Tour stop: '+stop.heading;chapter.querySelector('b').textContent=stop.heading}
+  if(document.activeElement===document.body){event.preventDefault();pause(true);step=(step+(event.key==='ArrowRight'?1:-1)+stops.length)%stops.length;const stop=stops[step];map.flyTo({center:[stop.lng,stop.lat],zoom:2.65,speed:.9,essential:true});if(tourCaption){tourCaption.hidden=false;tourCaption.textContent=(step+1)+' / '+stops.length+' · '+stop.n;}}
  }
 });
 </script></body></html>
