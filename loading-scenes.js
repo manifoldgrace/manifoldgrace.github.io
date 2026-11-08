@@ -34,7 +34,7 @@ function beginNavigation(event){
  let target;try{target=new URL(link.href,location.href)}catch{return}
  if(target.origin!==location.origin||!/^https?:$/.test(target.protocol))return;
  if(target.pathname===location.pathname&&target.search===location.search&&target.hash)return;
- if(!/\\/$|\\.html?$/i.test(target.pathname))return;
+ if(!(target.pathname.endsWith("/")||target.pathname.toLowerCase().endsWith(".html")||target.pathname.toLowerCase().endsWith(".htm")))return;
  event.preventDefault();navigating=true;
  panel.dataset.scene=sceneFor(target.pathname);panel.classList.remove("is-done");
  if(!panel.isConnected)document.body.appendChild(panel);
