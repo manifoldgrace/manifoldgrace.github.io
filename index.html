@@ -4,8 +4,8 @@
 <title>Manifold Grace | Research, public interest &amp; creative practice</title>
 <meta name="description" content="Manifold Grace: independent research, evidence verification, public-interest AI and interdisciplinary work. Discover the global research atlas and browse the full record.">
 <link rel="canonical" href="https://manifoldgrace.github.io/">
-<link rel="stylesheet" href="style.css?v=20261108-menu-slim-5">
-<script src="site-config.js" defer></script><script src="site-shell.js?v=20261108-menu-slim-5" defer></script>
+<link rel="stylesheet" href="style.css?v=20261108-menu-arrows-6">
+<script src="site-config.js" defer></script><script src="site-shell.js?v=20261108-menu-arrows-6" defer></script>
 <style>
 /* Homepage layout: a single canonical rule set, November 2026. */
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
@@ -28,7 +28,11 @@ body>.mg-home-nav .nav-links,body>.mg-home-nav .nav-groups{display:flex!importan
 body>.mg-home-nav .site-nav-group{display:block!important;width:100%!important;max-width:100%!important;min-width:0!important}
 body>.mg-home-nav .site-nav-group>summary{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;width:100%!important;min-height:36px;padding:4px 5px!important;gap:4px!important;font-size:.64rem!important;color:#eee!important;background:#151515!important;border:1px solid #444!important;border-radius:10px;cursor:pointer;white-space:normal!important;box-sizing:border-box}
 body>.mg-home-nav .mg-notation-glyph{flex:0 0 20px;width:20px;height:20px;font-size:.86rem}
-body>.mg-home-nav .mg-notation-name{min-width:0;flex:1;overflow-wrap:anywhere}
+body>.mg-home-nav .mg-notation-name{display:block;min-width:0;flex:1 1 auto;max-width:100%;white-space:normal!important;overflow-wrap:break-word;word-break:normal;line-height:1.35}
+body>.mg-home-nav .site-nav-group>summary::after{content:"⌄"!important;display:grid!important;place-items:center!important;flex:0 0 23px!important;width:23px!important;height:28px!important;margin-left:auto!important;color:#fff!important;font:700 1.4rem/1 system-ui!important;opacity:1!important}
+body>.mg-home-nav .site-nav-group[open]>summary::after{content:"⌃"!important}
+body>.mg-home-nav .site-nav-group>summary{min-height:45px!important;padding:7px 5px!important;align-items:center!important}
+body>.mg-home-nav .site-nav-group>summary .mg-notation-name{margin-right:2px}
 body>.mg-home-nav .mg-notation-code{display:none!important}
 body>.mg-home-nav .site-nav-group:not([open])>.site-nav-panel{display:none!important}
 body>.mg-home-nav .site-nav-group[open]>.site-nav-panel{display:grid!important;position:static!important;grid-template-columns:1fr!important;gap:2px!important;width:100%!important;min-width:0!important;max-width:100%!important;max-height:none!important;overflow:visible!important;margin:4px 0 0!important;padding:4px 0!important;background:#131313!important;box-shadow:none!important;border:0!important}
