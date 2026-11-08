@@ -5,7 +5,7 @@
   // Pages that already include the loader directly must not load it a second time.
   if (!document.querySelector('script[src*="loading-scenes.js"]')) {
     const transitionScript = document.createElement("script");
-    transitionScript.src = "loading-scenes.js?v=20261108-global-5sec";
+    transitionScript.src = "loading-scenes.js?v=20261108-global-5sec-v2";
     transitionScript.defer = true;
     document.head.appendChild(transitionScript);
   }
