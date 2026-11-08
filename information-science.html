@@ -114,4 +114,4 @@
 </main><footer data-site-footer></footer>
 <script>(()=>{"use strict";const ids=["seed","shares","prob","gens"],els=Object.fromEntries(ids.map(k=>[k,document.getElementById(k)]));function render(){const s=+els.seed.value,b=+els.shares.value,p=+els.prob.value/100,g=+els.gens.value,R=b*p;let sum=s,level=s;for(let i=0;i<g;i++){level*=R;sum+=level}document.getElementById("seed-o").textContent=s.toLocaleString();document.getElementById("shares-o").textContent=b.toFixed(1);document.getElementById("prob-o").textContent=Math.round(p*100)+"%";document.getElementById("gens-o").textContent=g;document.getElementById("reproduction").textContent=R.toFixed(2);document.getElementById("extra").textContent=Math.round(sum-s).toLocaleString();document.getElementById("total").textContent=Math.round(sum).toLocaleString()}ids.forEach(k=>els[k].addEventListener("input",render));render()})();</script>
 <script src="assets/information-science-dashboard.js" defer></script>
-</body></html>
+<script src="assets/page-experiences.js?v=20261108-reading-experiences-2" defer></script></body></html>
