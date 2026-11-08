@@ -79,15 +79,21 @@ function removeFirstInteractionFallback(){
  document.removeEventListener('touchstart',firstInteraction,firstInteractionOptions);
  document.removeEventListener('keydown',firstInteraction,true);
 }
+function unlockFromGesture(){
+ if(playing)return;
+ // Resume synchronously in the trusted gesture, even if an autoplay attempt is pending.
+ if(ctx&&ctx.state!=='running')ctx.resume().then(()=>{if(!playing)play()}).catch(()=>{});
+ play();
+}
 function firstInteraction(event){
  if(playing){removeFirstInteractionFallback();return;}
  if(event.type==='keydown' && (event.repeat||event.key==='Tab'||event.key==='Shift'||event.key==='Control'||event.key==='Alt'||event.key==='Meta'))return;
  if(event.target && (button.contains(event.target)||event.target.closest?.('.mg-loader-enable-sound')))return;
- // AudioContext.resume must be invoked directly inside the trusted interaction.
- // In particular, do not await a prior pending autoplay promise before resuming.
- if(ctx&&ctx.state!=='running')ctx.resume().catch(()=>{});
- play();
+ unlockFromGesture();
 }
+// Same-origin embedded globe forwards its real interaction synchronously. Without
+// this, a tap inside an iframe never reaches the homepage's document listeners.
+window.mgStartAudioFromGesture=unlockFromGesture;
 function installFirstInteractionFallback(){
  if(firstInteractionListening||playing)return;
  firstInteractionListening=true;
@@ -279,7 +285,7 @@ async function play(){
    }else{
     if(!AudioCtx){label(false,'Audio unavailable in this browser');loaderPrompt(false);return false}
     initialise();
-    await Promise.race([ctx.resume(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Audio start requires a tap')),900))]);
+    await Promise.race([ctx.resume(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Audio start requires a tap')),1400))]);
     if(ctx.state!=='running')throw Error('Audio start blocked');
     beginBus();
     nextBar=ctx.currentTime+.12;barIndex=0;
