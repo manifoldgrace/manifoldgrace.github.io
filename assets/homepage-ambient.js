@@ -48,6 +48,23 @@ const melody=[
 let ctx=null,main=null,dry=null,room=null,recording=null;
 let interval=null,playing=false,playBus=null,nextBar=0,barIndex=0,activeVoices=new Set();
 let playingPromise=null;
+let startupAttempted=false;
+let loaderSoundButton=null;
+function loaderPrompt(show){
+ const loader=document.querySelector('.mg-loader-screen');
+ if(!loader){if(loaderSoundButton)loaderSoundButton.hidden=true;return}
+ if(!loaderSoundButton){
+  loaderSoundButton=document.createElement('button');
+  loaderSoundButton.type='button';
+  loaderSoundButton.className='mg-loader-enable-sound';
+  loaderSoundButton.textContent='Enable sound';
+  loaderSoundButton.setAttribute('aria-label','Enable Manifold Grace homepage music');
+  loaderSoundButton.style.cssText='appearance:none;border:1px solid #ffffff99;border-radius:9999px;background:#111;color:#fff;padding:12px 20px;min-height:44px;font:500 13px system-ui;letter-spacing:.02em;cursor:pointer;z-index:2';
+  loaderSoundButton.addEventListener('click',()=>{play()});
+  loader.appendChild(loaderSoundButton);
+ }
+ loaderSoundButton.hidden=!show;
+}
 function label(isOn,message){
  button.setAttribute('aria-pressed',String(isOn));
  button.setAttribute('aria-label',message);
@@ -190,9 +207,9 @@ async function play(){
     nextBar=ctx.currentTime+.12;barIndex=0;
     playing=true;queue();interval=setInterval(queue,210);
    }
-   playing=true;label(true,'Pause background music');return true;
+   playing=true;label(true,'Pause background music');loaderPrompt(false);return true;
   }catch{
-   playing=false;label(false,'Enable background sound');return false;
+   playing=false;label(false,'Enable background sound');loaderPrompt(true);return false;
   }finally{playingPromise=null}
  })();
  return playingPromise;
@@ -200,6 +217,18 @@ async function play(){
 button.addEventListener('click',()=>{playing?stop():play()});
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&playing)stop()});
 label(false,'Enable background sound');
-// Attempt autoplay, but respect Safari and other browsers requiring a click.
-window.addEventListener('load',()=>{play()},{once:true});
+// Start when the DOM is ready, while the loading screen is still on top.
+function attemptEarlyPlayback(){
+ if(startupAttempted)return;startupAttempted=true;
+ play().then(ok=>{if(!ok)loaderPrompt(true)});
+}
+if(document.readyState==='loading'){
+ document.addEventListener('DOMContentLoaded',attemptEarlyPlayback,{once:true});
+}else{
+ attemptEarlyPlayback();
+}
+// If the loader renders later than the first attempt, offer the same user-gesture fallback.
+window.addEventListener('load',()=>{
+ if(!playing && loaderSoundButton===null)loaderPrompt(true);
+},{once:true});
 })();
