@@ -2,7 +2,8 @@
 const page=(location.pathname.split("/").pop()||"index.html").toLowerCase();
 const scene=page==="loading-preview.html"?(new URLSearchParams(location.search).get("scene")||"home"):page==="index.html"?"home":(/research|knowledge|learning|information|paper|study|academic|history/.test(page)?"research":(/ai|evaluation|technology|data|software|algorithm|coding/.test(page)?"ai":"home"));
 if(window.__mgLoaderInitialized)return;window.__mgLoaderInitialized=true;
-if(!scene||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(!scene||reduceMotion)return;
 const css=`
 .mg-loader-screen{position:fixed;inset:0;z-index:2147483646;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;pointer-events:auto;opacity:1;transition:opacity .22s ease}
 .mg-loader-screen[hidden]{display:none!important}.mg-loader-screen.is-done{opacity:0}
@@ -21,7 +22,28 @@ const css=`
 const style=document.createElement("style");style.textContent=css;document.head.appendChild(style);
 const panel=document.createElement("div");panel.className="mg-loader-screen";panel.dataset.scene=scene;panel.setAttribute("role","presentation");panel.setAttribute("aria-hidden","true");
 panel.innerHTML='<div class="mg-loader-art"><i class="core"></i><i class="core"></i><i class="core"></i><i class="core"></i></div><span class="mg-loader-text">Manifold Grace · Loading</span>';
-function reveal(){if(panel.classList.contains("is-done"))return;panel.classList.add("is-done");setTimeout(()=>panel.remove(),250)}
+function reveal(){if(panel.classList.contains("is-done"))return;panel.classList.add("is-done");setTimeout(()=>{if(!navigating)panel.remove()},250)}
+const sceneFor=(pathname)=>{const p=(pathname.split("/").pop()||"index.html").toLowerCase();return p==="index.html"?"home":(/research|knowledge|learning|information|paper|study|academic|history/.test(p)?"research":(/ai|evaluation|technology|data|software|algorithm|coding/.test(p)?"ai":"home"))};
+let navigating=false;
+let handoff=false;
+try{const t=Number(sessionStorage.getItem("mg-loader-handoff")||0);handoff=Date.now()-t<15000&&Date.now()-t>=0;sessionStorage.removeItem("mg-loader-handoff")}catch{}
+function beginNavigation(event){
+ if(navigating||event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+ const link=event.target.closest?.("a[href]");
+ if(!link||link.hasAttribute("download")||(link.target&&link.target!=="_self"))return;
+ let target;try{target=new URL(link.href,location.href)}catch{return}
+ if(target.origin!==location.origin||!/^https?:$/.test(target.protocol))return;
+ if(target.pathname===location.pathname&&target.search===location.search&&target.hash)return;
+ if(!/\\/$|\\.html?$/i.test(target.pathname))return;
+ event.preventDefault();navigating=true;
+ panel.dataset.scene=sceneFor(target.pathname);panel.classList.remove("is-done");
+ if(!panel.isConnected)document.body.appendChild(panel);
+ panel.setAttribute("aria-hidden","true");
+ window.setTimeout(()=>{try{sessionStorage.setItem("mg-loader-handoff",String(Date.now()))}catch{}location.assign(target.href)},5000);
+}
+document.addEventListener("click",beginNavigation,true);
+window.addEventListener("pageshow",(e)=>{if(e.persisted){navigating=false;panel.remove()}});
+
 let mounted=false,minimumElapsed=false,fullyLoaded=document.readyState==="complete";
 function perhapsReveal(){if(minimumElapsed&&fullyLoaded)reveal()}
 function mount(){
@@ -29,7 +51,7 @@ function mount(){
  mounted=true;
  document.body.appendChild(panel);
  if(page==="loading-preview.html")return;
- setTimeout(()=>{minimumElapsed=true;perhapsReveal()},5000);
+ setTimeout(()=>{minimumElapsed=true;perhapsReveal()},handoff?0:5000);
  // Avoid trapping visitors if a third-party resource never fires its load event.
  setTimeout(reveal,12000);
 }
