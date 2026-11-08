@@ -123,8 +123,37 @@ header .brand{font-size:clamp(.94rem,3.7vw,1.1rem);white-space:nowrap}
  .mg-entry iframe{height:clamp(280px,43dvh,540px);min-height:280px;flex:1 1 clamp(280px,43dvh,540px)}
  .mg-entry .mg-continue{margin:5px auto max(12px,env(safe-area-inset-bottom))}
 }
+
+/* Homepage composition: large full-viewport globe, then introduction, then Explore. */
+.mg-entry{display:block!important;min-height:0!important;height:auto!important;overflow:visible!important;background:#050505}
+.mg-entry iframe{display:block!important;position:relative!important;inset:auto!important;width:100%!important;height:clamp(690px,94dvh,1260px)!important;min-height:0!important;flex:none!important;border:0!important}
+.mg-entry:after{display:none!important}
+.mg-entry .mg-heading{position:relative!important;left:auto!important;top:auto!important;max-width:min(960px,92vw)!important;width:min(960px,92vw)!important;margin:0 auto!important;padding:clamp(42px,6vw,90px) 0 28px!important;pointer-events:auto}
+.mg-entry .mg-heading h1{font-size:clamp(3rem,7vw,6rem)!important}
+.mg-entry .mg-heading p{max-width:42ch!important}
+.mg-entry .mg-continue{display:table!important;margin:12px auto 40px!important;position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;transform:none!important}
+.mg-welcome{scroll-margin-top:100px}
+header{z-index:1000}
+header .wrap{overflow:visible!important}
+.mg-menu-dropdown{position:relative;margin-left:auto;z-index:1001;flex:0 0 auto}
+.mg-menu-dropdown>summary{list-style:none;display:flex;align-items:center;cursor:pointer;user-select:none;white-space:nowrap}
+.mg-menu-dropdown>summary::-webkit-details-marker{display:none}
+.mg-menu-dropdown[open]>summary{border-color:#fff}
+header .mg-menu-dropdown .mg-home-nav{position:absolute;top:calc(100% + 9px);right:0;left:auto;display:block!important;width:min(430px,92vw);max-height:min(74dvh,700px);overflow-y:auto;overscroll-behavior:contain;background:#111;border:1px solid #777;border-radius:16px;padding:18px;box-shadow:0 22px 55px #000e;z-index:1200}
+.mg-menu-dropdown:not([open])>.mg-home-nav{display:none!important}
+header .mg-menu-dropdown .site-nav-group>summary{white-space:normal;flex-wrap:wrap}
+header .mg-menu-dropdown .site-nav-panel{display:grid;grid-template-columns:1fr;gap:2px;min-width:0;max-width:none;width:100%}
+header .mg-menu-dropdown .site-nav-panel a{display:block;min-height:40px;padding:8px 10px}
+@media(max-width:700px){
+ .mg-entry iframe{height:clamp(600px,91dvh,980px)!important}
+ .mg-entry .mg-heading{width:calc(100% - 40px)!important;max-width:none!important;margin:0 20px!important;padding:40px 0 15px!important}
+ .mg-entry .mg-heading h1{font-size:clamp(2.3rem,10vw,4rem)!important}
+ .mg-entry .mg-heading p{font-size:.95rem!important}
+ header .mg-menu-dropdown .mg-home-nav{right:-4vw;width:min(420px,92vw);max-height:76dvh}
+ .mg-entry .mg-continue{margin:12px auto 34px!important}
+}
 </style></head><body>
-<header><div class="wrap"><a class="brand" href="index.html">Manifold Grace</a><button type="button" class="mg-menu-toggle" id="home-menu-toggle" aria-controls="home-nav" aria-expanded="false">☰ Explore menu</button><div class="mg-home-nav" id="home-nav" hidden><label for="mg-menu-search">Find a page</label><input type="search" id="mg-menu-search" class="mg-menu-search" placeholder="Search research, records and more"><p class="mg-menu-hint">Use the dropdown categories or jump directly to a page.</p><div class="mg-menu-results" id="mg-menu-results" hidden></div><nav data-site-nav aria-label="Explore Manifold Grace by topic"></nav><p><a href="site-directory.html">View complete site directory</a></p></div></div></header>
+<header><div class="wrap"><a class="brand" href="index.html">Manifold Grace</a><details class="mg-menu-dropdown" id="home-menu-dropdown"><summary class="mg-menu-toggle" id="home-menu-toggle" aria-controls="home-nav">☰ Explore menu</summary><div class="mg-home-nav" id="home-nav"><label for="mg-menu-search">Find a page</label><input type="search" id="mg-menu-search" class="mg-menu-search" placeholder="Search research, records and more"><p class="mg-menu-hint">Use the dropdown categories or jump directly to a page.</p><div class="mg-menu-results" id="mg-menu-results" hidden></div><nav data-site-nav aria-label="Explore Manifold Grace by topic"></nav><p><a href="site-directory.html">View complete site directory</a></p></div></details></div></header>
 <main>
 <section class="mg-entry" id="public-interest-global-map" aria-label="Global research map"><iframe title="Global public-interest AI globe: animated map with user controls" src="public-interest-map.html?hero=1" allow="fullscreen" loading="eager"></iframe>
 <div class="mg-heading"><span class="eyebrow">Independent research · London · Worldwide outlook</span><div class="mg-origin-label"><span aria-hidden="true">⊕</span> MG·LON·01 · London research origin</div><h1>Manifold Grace</h1><p>Evidence, public-interest AI and creative interdisciplinary research — connecting ideas, people and possibilities.</p></div>
@@ -139,20 +168,35 @@ header .brand{font-size:clamp(.94rem,3.7vw,1.1rem);white-space:nowrap}
 </main>
 <div class="mg-home-foot"><div class="wrap"><span>Manifold Grace · Independent research and creative practice</span><span><a href="site-directory.html">Directory</a> · <a href="homepage-content.html">Full record</a> · <a href="contact.html">Contact</a></span></div></div>
 <script>
-(()=>{const button=document.getElementById('home-menu-toggle'),nav=document.getElementById('home-nav');
-const search=document.getElementById('mg-menu-search'),results=document.getElementById('mg-menu-results');
-const directory=()=>Array.from(nav.querySelectorAll('nav[data-site-nav] a'));
-const close=()=>{nav.hidden=true;button.setAttribute('aria-expanded','false')};
-search.addEventListener('input',()=>{
-const q=search.value.toLocaleLowerCase().trim();results.replaceChildren();results.hidden=!q;
-const categories=nav.querySelector('nav[data-site-nav]');categories.hidden=!!q;
-if(!q)return;
-const matched=directory().filter(a=>a.textContent.toLocaleLowerCase().includes(q)||a.closest('details')?.querySelector('summary')?.textContent.toLocaleLowerCase().includes(q)).slice(0,25);
-for(const link of matched){const a=document.createElement('a');a.href=link.getAttribute('href');a.textContent=link.textContent;results.appendChild(a)}
-if(!matched.length){const p=document.createElement('p');p.textContent='No matching pages. Open the full directory for more options.';results.appendChild(p)}
-});
-button.addEventListener('click',()=>{const opening=nav.hidden;nav.hidden=!opening;button.setAttribute('aria-expanded',String(opening))});
-document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!button.contains(e.target))close()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!nav.hidden){close();button.focus()}if((e.key==='/'||(e.key.toLowerCase()==='k'&&(e.metaKey||e.ctrlKey)))&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();nav.hidden=false;button.setAttribute('aria-expanded','true');search.focus()} });
+(()=>{
+ const dropdown=document.getElementById('home-menu-dropdown');
+ const nav=document.getElementById('home-nav');
+ const search=document.getElementById('mg-menu-search');
+ const results=document.getElementById('mg-menu-results');
+ const categories=nav.querySelector('nav[data-site-nav]');
+ const directory=()=>Array.from(categories.querySelectorAll('a'));
+ const close=()=>{dropdown.open=false};
+ dropdown.addEventListener('toggle',()=>{
+  if(dropdown.open && !categories.querySelector('a')) {
+   const fallback=document.createElement('a');
+   fallback.href='site-directory.html';fallback.textContent='Browse every section in the complete directory';
+   categories.appendChild(fallback);
+  }
+ });
+ search.addEventListener('input',()=>{
+  const q=search.value.toLocaleLowerCase().trim();
+  results.replaceChildren();results.hidden=!q;categories.hidden=!!q;
+  if(!q)return;
+  const matched=directory().filter(a=>a.textContent.toLocaleLowerCase().includes(q)||a.closest('details')?.querySelector('summary')?.textContent.toLocaleLowerCase().includes(q)).slice(0,25);
+  for(const link of matched){const a=document.createElement('a');a.href=link.getAttribute('href');a.textContent=link.textContent;results.appendChild(a)}
+  if(!matched.length){const p=document.createElement('p');p.textContent='No matching pages. Open the full directory for more options.';results.appendChild(p)}
+ });
+ document.addEventListener('click',e=>{if(!dropdown.contains(e.target))close()});
+ document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&dropdown.open){close();dropdown.querySelector('summary').focus()}
+  if((e.key==='/'||(e.key.toLowerCase()==='k'&&(e.metaKey||e.ctrlKey)))&&!/input|textarea|select/i.test(document.activeElement.tagName)){
+   e.preventDefault();dropdown.open=true;search.focus()
+  }
+ });
 })();
 </script></body></html>
