@@ -1,6 +1,6 @@
 (()=>{"use strict";
 const page=(location.pathname.split("/").pop()||"index.html").toLowerCase();
-const scene=page==="index.html"?"home":(["research.html","research-collaborations.html","information-science.html"].includes(page)?"research":(["public-interest-ai.html","ai-research-lab.html","llm-evaluation-governance.html"].includes(page)?"ai":null));
+const scene=page==="loading-preview.html"?(new URLSearchParams(location.search).get("scene")||"home"):page==="index.html"?"home":(["research.html","research-collaborations.html","information-science.html"].includes(page)?"research":(["public-interest-ai.html","ai-research-lab.html","llm-evaluation-governance.html"].includes(page)?"ai":null));
 if(!scene||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
 const css=`
 .mg-loader-screen{position:fixed;inset:0;z-index:2147483646;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;pointer-events:none;opacity:1;transition:opacity .22s ease}
@@ -22,6 +22,5 @@ const panel=document.createElement("div");panel.className="mg-loader-screen";pan
 panel.innerHTML='<div class="mg-loader-art"><i class="core"></i><i class="core"></i><i class="core"></i><i class="core"></i></div><span class="mg-loader-text">Manifold Grace · Loading</span>';
 function reveal(){if(panel.classList.contains("is-done"))return;panel.classList.add("is-done");setTimeout(()=>panel.remove(),250)}
 document.addEventListener("DOMContentLoaded",()=>document.body.appendChild(panel),{once:true});
-window.addEventListener("load",reveal,{once:true});
-setTimeout(reveal,1800);
+if(page!=="loading-preview.html"){window.addEventListener("load",reveal,{once:true});setTimeout(reveal,1800);}
 })();
