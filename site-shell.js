@@ -1,6 +1,15 @@
 (() => {
   "use strict";
   const site = window.MANIFOLD_SITE || {};
+  // Share the five-second page transition across pages using the common shell.
+  // Pages that already include the loader directly must not load it a second time.
+  if (!document.querySelector('script[src*="loading-scenes.js"]')) {
+    const transitionScript = document.createElement("script");
+    transitionScript.src = "loading-scenes.js?v=20261108-global-5sec";
+    transitionScript.defer = true;
+    document.head.appendChild(transitionScript);
+  }
+
   const navGroups = [
     [
       "Research & Knowledge",
