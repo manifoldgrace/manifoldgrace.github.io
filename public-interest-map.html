@@ -105,6 +105,33 @@ html,body,#viewport,#map{background-color:#000!important}
 #sky-credit a{color:inherit;text-decoration:underline}
 body.hero-mode #sky-credit{display:block}
 @media(max-width:650px){#sky-credit{bottom:65px;font-size:9px;}}
+
+/* Visible mapping credits instead of the collapsed information-circle symbol. */
+body.hero-mode .maplibregl-ctrl-attrib{
+  background:#050505ca!important;color:#e9e9e9!important;
+  border:1px solid #ffffff45!important;border-radius:9999px!important;
+  padding:7px 12px!important;font:11px/1.4 system-ui,sans-serif!important;
+  max-width:min(510px,80vw);white-space:normal!important;
+}
+body.hero-mode .maplibregl-ctrl-attrib a{color:#f1f1f1!important}
+body.hero-mode .maplibregl-ctrl-attrib-button{display:none!important}
+body.hero-mode .maplibregl-ctrl-bottom-right{bottom:9px!important;right:12px!important}
+body.hero-mode .maplibregl-ctrl-top-right{
+ top:24px!important;right:16px!important;transform:none!important;z-index:6;
+}
+body.hero-mode .maplibregl-ctrl-top-right .maplibregl-ctrl-group{display:flex!important;flex-direction:column!important;gap:9px!important}
+body.hero-mode .maplibregl-ctrl-top-right .maplibregl-ctrl-group button{
+ display:block!important;width:42px!important;height:42px!important;border-radius:50%!important;
+ background:#050505d9!important;border:1px solid #ffffff75!important;
+}
+body.hero-mode #counter{bottom:52px!important}
+body.hero-mode .toolbar{bottom:52px!important}
+body.hero-mode #sky-credit{left:50%;bottom:17px}
+@media(max-width:640px){
+ body.hero-mode .maplibregl-ctrl-top-right{right:10px!important;top:12px!important}
+ body.hero-mode .maplibregl-ctrl-attrib{font-size:9px!important;max-width:75vw}
+ body.hero-mode #sky-credit{display:none!important}
+}
 </style></head><body>
 <div id="viewport">
 <div id="map-fallback" role="status"><div class="planet"><div class="fallback-caption">Global research atlas<br><small>Interactive globe loading…</small><a class="fallback-link" href="site-directory.html" target="_top">Browse research directory</a></div></div></div><div id="map" role="region" aria-label="Interactive globe of selected public interest AI projects"></div>
@@ -143,7 +170,7 @@ map.on('error', e=>{if(e && e.error)console.warn('Global atlas map issue',e.erro
 new ResizeObserver(()=>map.resize()).observe(document.getElementById('viewport'));
 window.addEventListener('pageshow',()=>map.resize());
 map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
-map.addControl(new maplibregl.AttributionControl({compact:true}),'bottom-right');
+map.addControl(new maplibregl.AttributionControl({compact:false,customAttribution:'Open map data'}),'bottom-right');
 const button=document.getElementById('tour'),panel=document.getElementById('panel'),body=document.getElementById('panel-body');
 const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const chapter=document.getElementById('chapter'), counter=document.getElementById('counter'), announcer=document.getElementById('accessible-project');
