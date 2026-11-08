@@ -48,6 +48,31 @@ const melody=[
 let ctx=null,main=null,dry=null,room=null,recording=null;
 let interval=null,playing=false,playBus=null,nextBar=0,barIndex=0,activeVoices=new Set();
 let playingPromise=null;
+let firstInteractionListening=false;
+const firstInteractionOptions={capture:true,passive:true};
+function removeFirstInteractionFallback(){
+ if(!firstInteractionListening)return;
+ firstInteractionListening=false;
+ document.removeEventListener('pointerdown',firstInteraction,firstInteractionOptions);
+ document.removeEventListener('touchstart',firstInteraction,firstInteractionOptions);
+ document.removeEventListener('keydown',firstInteraction,true);
+}
+function firstInteraction(event){
+ if(playing){removeFirstInteractionFallback();return;}
+ if(event.type==='keydown' && (event.repeat||event.key==='Tab'||event.key==='Shift'||event.key==='Control'||event.key==='Alt'||event.key==='Meta'))return;
+ if(event.target && (button.contains(event.target)||event.target.closest?.('.mg-loader-enable-sound')))return;
+ // AudioContext.resume must be invoked directly inside the trusted interaction.
+ // In particular, do not await a prior pending autoplay promise before resuming.
+ if(ctx&&ctx.state!=='running')ctx.resume().catch(()=>{});
+ play();
+}
+function installFirstInteractionFallback(){
+ if(firstInteractionListening||playing)return;
+ firstInteractionListening=true;
+ document.addEventListener('pointerdown',firstInteraction,firstInteractionOptions);
+ document.addEventListener('touchstart',firstInteraction,firstInteractionOptions);
+ document.addEventListener('keydown',firstInteraction,true);
+}
 let startupAttempted=false;
 let loaderSoundButton=null;
 function loaderPrompt(show){
@@ -207,9 +232,9 @@ async function play(){
     nextBar=ctx.currentTime+.12;barIndex=0;
     playing=true;queue();interval=setInterval(queue,210);
    }
-   playing=true;label(true,'Pause background music');loaderPrompt(false);return true;
+   playing=true;removeFirstInteractionFallback();label(true,'Pause background music');loaderPrompt(false);return true;
   }catch{
-   playing=false;label(false,'Enable background sound');loaderPrompt(true);return false;
+   playing=false;installFirstInteractionFallback();label(false,'Enable background sound');loaderPrompt(true);return false;
   }finally{playingPromise=null}
  })();
  return playingPromise;
@@ -220,7 +245,8 @@ label(false,'Enable background sound');
 // Start when the DOM is ready, while the loading screen is still on top.
 function attemptEarlyPlayback(){
  if(startupAttempted)return;startupAttempted=true;
- play().then(ok=>{if(!ok)loaderPrompt(true)});
+ installFirstInteractionFallback();
+ play().then(ok=>{if(!ok){installFirstInteractionFallback();loaderPrompt(true)}});
 }
 if(document.readyState==='loading'){
  document.addEventListener('DOMContentLoaded',attemptEarlyPlayback,{once:true});
