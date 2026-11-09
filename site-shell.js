@@ -178,7 +178,7 @@
           "heritage-further-study.html"
         ],
         [
-          "Royal Lineage",
+          "Family History & Genealogy",
           "royal-lineage.html"
         ],
         [
