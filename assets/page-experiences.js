@@ -27,6 +27,15 @@ const entries=headings.map(h=>{
  if(!id){id='mg-reading-'+slug(h.textContent.trim())+'-'+(++assigned);h.id=id;}
  return {id,title:h.textContent.replace(/\s+/g,' ').trim(),h};
 }).filter(e=>e.title.length>2);
+/* Research has a nested government programme: index its thirty named themes
+ * separately without altering the parent directory or its source citations. */
+if(key==='research.html'){
+ const themes=[...main.querySelectorAll('#uk-government-public-systems li[id^="uk-government-theme-"]')];
+ themes.forEach(node=>{
+  const title=node.querySelector('strong')?.textContent?.replace(/\\s+/g,' ').trim();
+  if(title)entries.push({id:node.id,title,h:node});
+ });
+}
 const root=document.createElement('section');root.id='mg-experience';root.className='mg-exp';root.setAttribute('aria-label',config.name);
 const inside=document.createElement('div');inside.className='mg-exp-inner';
 const details=document.createElement('details');details.className='mg-exp-details';
@@ -60,7 +69,7 @@ body.mg-exp-reading main p,body.mg-exp-reading main li{line-height:1.85}
 `;
 document.head.appendChild(style);
 function el(tag,cls,txt){const node=document.createElement(tag);if(cls)node.className=cls;if(txt!==undefined)node.textContent=txt;return node;}
-function link(e){const a=el('a','mg-exp-link',e.title);a.href='#'+encodeURIComponent(e.id);return a;}
+function link(e){const a=el('a','mg-exp-link',e.title);a.href='#'+encodeURIComponent(e.id);a.addEventListener('click',()=>{let parent=e.h?.closest?.('details');while(parent){parent.open=true;parent=parent.parentElement?.closest('details');}});return a;}
 function list(items,max=20){const grid=el('div','mg-exp-grid');items.slice(0,max).forEach(e=>grid.appendChild(link(e)));return grid;}
 function choose(items,label){const field=el('label','mg-exp-field');field.appendChild(el('span','mg-exp-label',label));const sel=el('select');items.forEach(e=>{const o=el('option',null,e.title);o.value=e.id;sel.appendChild(o)});field.appendChild(sel);return {field,sel};}
 function go(id){const target=document.getElementById(id);if(!target)return;target.scrollIntoView({block:'start',behavior:'instant'});history.replaceState(null,'','#'+encodeURIComponent(id));}
@@ -71,7 +80,7 @@ case 'finder':{
  const input=el('input');input.type='search';input.placeholder='Type to locate an existing section';field.appendChild(input);panel.appendChild(field);
  const status=el('p','mg-exp-status');status.setAttribute('role','status');panel.appendChild(status);
  const grid=el('div','mg-exp-grid');panel.appendChild(grid);
- function render(){const q=input.value.trim().toLocaleLowerCase();grid.replaceChildren();const matched=entries.filter(e=>e.title.toLocaleLowerCase().includes(q));matched.slice(0,18).forEach(e=>grid.appendChild(link(e)));status.textContent=matched.length+' section'+(matched.length===1?'':'s')+' available; all original content remains below.';}
+ function render(){const q=input.value.trim().toLocaleLowerCase();grid.replaceChildren();const matched=entries.filter(e=>e.title.toLocaleLowerCase().includes(q));matched.slice(0,18).forEach(e=>grid.appendChild(link(e)));status.textContent=matched.length+' section'+(matched.length===1?'':'s')+' available'+(matched.length>18?'; showing first 18—refine the search':'')+'; all original content remains below.';}
  input.addEventListener('input',render);render();break;}
 case 'corridor':{
  const found=preferred('corridor|lineage|grandparent|archives|timeline|record|heritage');panel.appendChild(list(found,16));break;}
