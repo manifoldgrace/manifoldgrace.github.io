@@ -1,0 +1,33 @@
+name: Research infrastructure checks
+on:
+  push:
+    paths:
+      - 'research-infrastructure/**'
+      - '.github/workflows/research-infrastructure-checks.yml'
+  pull_request:
+    paths:
+      - 'research-infrastructure/**'
+      - '.github/workflows/research-infrastructure-checks.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate static JSON source files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for path in Path("research-infrastructure/schema").glob("*.json"):
+              json.loads(path.read_text(encoding="utf-8"))
+              print("Validated", path)
+          PY
+      - name: Run offline intake tests
+        run: |
+          cd research-infrastructure
+          python -m unittest -v test_agent_intake
