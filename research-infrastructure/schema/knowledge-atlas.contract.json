@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "node_contract": {
+    "id": "KN-<stable-id>",
+    "parent_id": "KN-<stable-id>|null",
+    "label": "string",
+    "short_definition": "string",
+    "depth_reference_urls": [
+      "https://..."
+    ],
+    "crosslinks": [
+      "KN-..."
+    ],
+    "evidence_status": "verified|partial|unverified",
+    "reviewed_on": "YYYY-MM-DD"
+  },
+  "classification_levels": [
+    "foundations",
+    "techniques",
+    "architectures",
+    "applications"
+  ],
+  "guidance": "Levels are facets and should not imply a rigid one-way hierarchy; topics may have multiple parents through crosslinks."
+}
