@@ -26,6 +26,10 @@
           "research.html"
         ],
         [
+          "Societal Resilience & AI Adviser",
+          "societal-resilience-ai-adviser.html"
+        ],
+        [
           "Historical Corridors & AI Recordkeeping",
           "historical-corridors-ai-recordkeeping.html"
         ],
