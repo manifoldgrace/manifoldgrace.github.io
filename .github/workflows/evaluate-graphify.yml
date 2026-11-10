@@ -30,6 +30,19 @@ jobs:
           GRAPHIFY_API_KEY: ''
       - name: Evaluate graph structure and scope
         run: python scripts/evaluate_graphify.py graphify-out/graph.json
+      - name: Query graph for existing AI research code
+        run: |
+          graphify query "research-workbench" --graph graphify-out/graph.json > graphify-query-workbench.txt
+          graphify query "sync_public_research" --graph graphify-out/graph.json > graphify-query-sync.txt
+          echo "Query excerpts:"
+          head -c 1200 graphify-query-workbench.txt
+          echo
+          head -c 1200 graphify-query-sync.txt
+      - name: Capture simple filename-search baseline
+        run: |
+          grep -Rnl --include='*.mjs' --include='*.py' 'research-workbench' . --exclude-dir=.git --exclude-dir=graphify-out > baseline-workbench-files.txt || true
+          grep -Rnl --include='*.mjs' --include='*.py' 'sync_public_research' . --exclude-dir=.git --exclude-dir=graphify-out > baseline-sync-files.txt || true
+          wc -c graphify-query-*.txt baseline-*.txt
       - name: Upload limited evaluation artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -39,5 +52,7 @@ jobs:
             graphify-out/graph.json
             graphify-out/GRAPH_REPORT.md
             graphify-evaluation.json
+            graphify-query-*.txt
+            baseline-*.txt
           if-no-files-found: warn
           retention-days: 7
