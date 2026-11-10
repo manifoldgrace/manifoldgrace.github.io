@@ -1,6 +1,13 @@
 (() => {
   "use strict";
   const site = window.MANIFOLD_SITE || {};
+  // Shared disclosure enhancement; if loading fails, original page content remains visible.
+  if (!document.querySelector('script[src*="site-disclosure.js"]')) {
+    const disclosureScript = document.createElement("script");
+    disclosureScript.src = "assets/site-disclosure.js?v=20261110-1";
+    disclosureScript.defer = true;
+    document.head.appendChild(disclosureScript);
+  }
   // Share the five-second page transition across pages using the common shell.
   // Pages that already include the loader directly must not load it a second time.
   if (!document.querySelector('script[src*="loading-scenes.js"]')) {
