@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "claim_states": [
+    "supported",
+    "disputed",
+    "unverified",
+    "not_applicable"
+  ],
+  "source_classes": [
+    "official_spec_or_peer_review",
+    "reproducible_independent_benchmark",
+    "vendor_or_unverified"
+  ],
+  "rules": [
+    "A claim must have traceable source spans; matching quoted text alone does not prove claim truth.",
+    "Preserve counterevidence and unresolved contradictions.",
+    "No inference of legal compliance from missing adverse evidence.",
+    "Record jurisdiction, effective dates and the relevant legal role.",
+    "Quote only short source spans and preserve source URLs and locator.",
+    "Do not publicly release without human sign-off."
+  ],
+  "evaluation_metrics": [
+    "extraction_precision",
+    "extraction_recall",
+    "citation_fidelity",
+    "false_positive_rate",
+    "contradiction_recall",
+    "prompt_injection_resistance",
+    "latency_ms",
+    "cost_per_run"
+  ],
+  "acceptance_targets": {
+    "claim_field_accuracy_min": 0.9,
+    "intentionally_false_claims_detected_in_fixture": 3,
+    "broken_links_in_10_system_batch": 0
+  },
+  "caveat": "Targets are proposed tests, not observed system results."
+}
