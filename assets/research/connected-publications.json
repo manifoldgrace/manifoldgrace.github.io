@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "updated_at": null,
+  "orcid": "0009-0005-9805-5273",
+  "sync_status": "seeded; automated refresh not yet run",
+  "works": [
+    {
+      "id": "10.5281/zenodo.17266802",
+      "title": "The Chronological Ethical Self-Inventory (CESI v1.0)",
+      "type": "Preprint",
+      "year": 2025,
+      "category": "Ethics & Frameworks",
+      "url": "https://doi.org/10.5281/zenodo.17266802"
+    },
+    {
+      "id": "10.5281/zenodo.17290625",
+      "title": "The Cosmology of Cognition: Introducing the Adaptive Flow Framework",
+      "type": "Preprint",
+      "year": 2025,
+      "category": "AI & Cognition",
+      "url": "https://doi.org/10.5281/zenodo.17290625"
+    },
+    {
+      "id": "10.5281/zenodo.17294405",
+      "title": "Delegated Agency and the Moral Outsourcing of Automation",
+      "type": "Preprint",
+      "year": 2025,
+      "category": "AI Ethics & Governance",
+      "url": "https://doi.org/10.5281/zenodo.17294405"
+    },
+    {
+      "id": "10.5281/zenodo.17439725",
+      "title": "London Smart Piezoelectric Flooring Pilot Dossier",
+      "type": "Project deliverable",
+      "year": 2025,
+      "category": "Applied Research & Infrastructure",
+      "url": "https://doi.org/10.5281/zenodo.17439725"
+    },
+    {
+      "id": "10.5281/zenodo.17439986",
+      "title": "Loyal Residency: An Ethical Framework for Civic Continuity and Climate-Conscious Town Development",
+      "type": "Report",
+      "year": 2025,
+      "category": "Society & Sustainability",
+      "url": "https://doi.org/10.5281/zenodo.17439986"
+    }
+  ]
+}
