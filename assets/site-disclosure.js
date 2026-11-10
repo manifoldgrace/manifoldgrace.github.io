@@ -47,7 +47,7 @@
     if(!heading)return null;
     if(!section.id) {
      const slug=(heading.textContent||"topic").toLowerCase().normalize("NFKD")
-      .replace(/[^a-z0-9 ]/g,"").trim().replace(/\\s+/g,"-").slice(0,65);
+      .replace(/[^a-z0-9 ]/g,"").trim().replace(/\s+/g,"-").slice(0,65);
      let id="topic-"+(slug||"section"),n=2;
      while(document.getElementById(id))id="topic-"+slug+"-"+n++;
      section.id=id;
