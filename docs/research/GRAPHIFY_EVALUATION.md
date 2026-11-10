@@ -1,6 +1,6 @@
 # Graphify evaluation — Manifold Grace
 Date: 10 November 2026
-Status: **trial configured, not evidence of successful Graphify execution or token savings**.
+Status: **read-only Graphify extraction and CLI query smoke tests passed on 10 November 2026; comparative answer accuracy and token savings remain unproven**.
 
 ## Existing mission (do not replace)
 The published AI systems roadmap specifies modular specialist agents sharing source-grounded private retrieval, a permission broker, model gateway, human approval ledger and cost/error/privacy evaluations. The first implementation priority is the grounded research assistant; later agents cover business intake, education, content publishing, communications and personal information.
@@ -10,8 +10,14 @@ H1: For specific repository architecture tasks, a Graphify query returns verifia
 H0: Graphify produces no such improvement, or omits critical relationships.
 
 ## First-stage execution
-The [Actions workflow](../../.github/workflows/evaluate-graphify.yml) installs the *pinned* open-source `graphifyy==0.9.105` release and invokes `graphify extract . --code-only --no-cluster --out graphify-out` against the public website. The workflow has read-only GitHub permissions. No LLM API credentials or Graphify cloud accounts are supplied. Graph output is uploaded as a seven-day workflow artifact, **not committed to the public website**.
+The [Actions workflow](../../.github/workflows/evaluate-graphify.yml) installs the *pinned* open-source `graphifyy[sql]==0.9.105` release and invokes `graphify extract . --code-only --no-cluster` against the public website. The workflow has read-only GitHub permissions. No LLM API credentials or Graphify cloud accounts are supplied. Graph output is uploaded as a seven-day workflow artifact, **not committed to the public website**.
 Read `graphify-evaluation.json` and the Actions logs. A failing smoke test means this integration is not operational.
+
+## Observed execution results (10 November 2026)
+- [Successful graph build and evaluation](https://github.com/manifoldgrace/manifoldgrace.github.io/actions/runs/42839042291): 81 code files scanned, 477 nodes, 783 edges, nodes referring to 61 source files.
+- [Successful graph-query versus filename-search smoke run](https://github.com/manifoldgrace/manifoldgrace.github.io/actions/runs/42839305322): both graph queries and both simple baseline searches executed. Two broad queries expanded to approximately 3,274 and 4,397 tokens respectively, despite the CLI's ~2,000-token target; this **does not demonstrate token reduction**, and narrower symbol/path queries should be tested next.
+- Graphify produced inspectable file and symbol references for research-workbench code and the public metadata-sync script. These references have **not** been scored blind against a gold-standard graph.
+- The first exploratory run built a graph but failed because the report script looked in the wrong output folder; corrected in the second run. No private sources or cloud API keys were involved.
 
 ## Comparative tasks — evaluate with fixed question wording
 | Task | Ground truth to inspect | Baseline | Graphify |
