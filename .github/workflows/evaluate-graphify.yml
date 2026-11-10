@@ -20,10 +20,10 @@ jobs:
           python-version: '3.12'
       - name: Install pinned Graphify CLI
         run: |
-          python -m pip install --disable-pip-version-check 'graphifyy==0.9.105'
+          python -m pip install --disable-pip-version-check 'graphifyy[sql]==0.9.105'
           graphify --version
       - name: Build code-only graph (local parsing, no credentials)
-        run: graphify extract . --code-only --no-cluster --out graphify-out
+        run: graphify extract . --code-only --no-cluster
         env:
           ANTHROPIC_API_KEY: ''
           OPENAI_API_KEY: ''
