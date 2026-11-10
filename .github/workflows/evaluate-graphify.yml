@@ -1,0 +1,43 @@
+name: Graphify knowledge-graph evaluation (read-only)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/evaluate-graphify.yml'
+      - 'scripts/evaluate_graphify.py'
+permissions:
+  contents: read
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned Graphify CLI
+        run: |
+          python -m pip install --disable-pip-version-check 'graphifyy==0.9.105'
+          graphify --version
+      - name: Build code-only graph (local parsing, no credentials)
+        run: graphify extract . --code-only --no-cluster --out graphify-out
+        env:
+          ANTHROPIC_API_KEY: ''
+          OPENAI_API_KEY: ''
+          GRAPHIFY_API_KEY: ''
+      - name: Evaluate graph structure and scope
+        run: python scripts/evaluate_graphify.py graphify-out/graph.json
+      - name: Upload limited evaluation artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: graphify-evaluation
+          path: |
+            graphify-out/graph.json
+            graphify-out/GRAPH_REPORT.md
+            graphify-evaluation.json
+          if-no-files-found: warn
+          retention-days: 7
