@@ -1,0 +1,27 @@
+name: Refresh approved public research metadata
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 7 * * 1'
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Refresh public metadata only
+        run: python scripts/sync_public_research.py
+      - name: Commit changed approved metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/research/connected-publications.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh approved public research metadata"
+            git push
+          fi
