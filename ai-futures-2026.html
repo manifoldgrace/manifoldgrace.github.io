@@ -3,6 +3,50 @@
 <meta name="description" content="Verified 2026 AI futures and adoption reports: Cambridge, Oxford collaboration, Imperial, cross-national sources and national PDF factsheets.">
 <link rel="stylesheet" href="style.css?v=20261111-futures"><script src="site-config.js" defer></script><script src="site-shell.js?v=20261106-footer-2" defer></script>
 <style>.fut{max-width:1040px;margin:auto;padding:40px 18px 110px}.fut h1{font-size:clamp(1.85rem,4.5vw,3rem)}.fut h2{font-size:1.3rem;margin:33px 0 15px}.fut .intro{font-size:.96rem;line-height:1.6;max-width:75ch}.fut details{border:1px solid #41484d;border-radius:8px;margin:12px 0;padding:13px 16px}.fut summary{cursor:pointer;font-size:.99rem;font-weight:600}.fut .grid-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:10px;margin:13px 0}.fut .report{border:1px solid #3d4b55;padding:13px;border-radius:8px;background:#111518}.fut .report strong{display:block;font-size:.92rem}.fut .report small{display:block;font-size:.75rem;color:#adb5bb;line-height:1.5;margin:4px 0 9px}.fut .report a{color:#badaff;text-decoration:underline;text-underline-offset:3px;font-size:.83rem}.fut input{width:min(100%,400px);font:inherit;color:#fff;background:#161616;border:1px solid #777;border-radius:6px;padding:10px}.fut .country{display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid #30363a;padding:11px 0}.fut .country strong{font-size:.83rem}.fut .country .meta{font-size:.72rem;color:#adb5bb}.fut .country a{color:#a9d4ff;font-size:.78rem}.fut .muted{font-size:.76rem;color:#adb5bb}.fut .note{border-left:2px solid #9cb9d0;padding:12px 16px;margin:18px 0;font-size:.88rem;background:#11161a}@media(max-width:700px){.fut{padding:25px 15px 70px}.fut h2{font-size:1.13rem}.fut summary{font-size:.9rem}.fut .intro{font-size:.86rem}} .fut .mg-news-provider-row{display:flex;gap:9px;overflow-x:auto;padding:12px 0 16px;scrollbar-width:thin}.fut .mg-news-pill{flex:0 0 auto;display:flex;align-items:center;gap:7px;border:1px solid #444f59;border-radius:999px;background:#101418;color:#e9eef2;padding:7px 12px;cursor:pointer;font-size:.78rem}.fut .mg-news-pill[aria-selected="true"]{border-color:#bedfff;background:#25313b}.fut .mg-news-mark{font-size:.67rem;font-weight:800;letter-spacing:-.03em}.fut .mg-news-feed{border:1px solid #323b42;border-radius:10px;padding:15px 18px;background:#101417;min-height:170px}.fut #mg-news-headlines{padding-left:20px;margin:10px 0}.fut #mg-news-headlines li{padding:6px 0;color:#c4cdd3;font-size:.84rem}.fut #mg-news-headlines small{display:block;font-size:.7rem;color:#97a6b0}.fut #mg-news-source{font-size:.85rem;color:#bcdfff}@media(max-width:700px){.fut .mg-news-pill{font-size:.7rem;padding:7px 10px}.fut #mg-news-headlines li{font-size:.78rem}}
+
+/* Responsive news pattern: two horizontal filters, a five-item preview, optional drawer. */
+.fut #global-news-dashboard{margin:42px 0 10px;padding:25px 0 0;border-top:1px solid #3d464c}
+.fut .mg-news-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.fut .mg-news-heading h2{font:400 clamp(1.22rem,2.8vw,1.55rem)/1.2 Georgia,serif;margin:0}
+.fut .mg-news-eyebrow{color:#a2b9c8;font-size:.62rem;letter-spacing:.15em;margin:0 0 7px}
+.fut .mg-news-description{color:#aab5be;font-size:.78rem;line-height:1.55;max-width:70ch;margin:12px 0 18px}
+.fut .mg-news-nav{display:grid;gap:9px}
+.fut .mg-news-provider-row,.fut .mg-news-region-row{display:flex;align-items:center;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scroll-snap-type:x proximity;padding:5px 1px 11px}
+.fut .mg-news-pill,.fut .mg-news-region,.fut .mg-news-views button{flex:0 0 auto;scroll-snap-align:start;border:1px solid #46535e;border-radius:999px;background:#11171b;color:#dfebf2;padding:7px 11px;display:inline-flex;gap:7px;align-items:center;font-size:.73rem;cursor:pointer}
+.fut .mg-news-region{font-size:.7rem;color:#b6c5ce}
+.fut .mg-news-mark{font-weight:750;font-size:.64rem;letter-spacing:.03em;color:#b4d9f0}
+.fut .mg-news-pill[aria-pressed="true"],.fut .mg-news-region[aria-pressed="true"],.fut .mg-news-views button[aria-pressed="true"]{background:#24323c;border-color:#a0c8e5;color:#fff}
+.fut .mg-news-views{display:flex;align-items:center;gap:4px}
+.fut .mg-news-views button{font-size:.68rem;padding:7px 11px}
+.fut .mg-news-feed{border:1px solid #313e47;border-radius:11px;background:#0e1317;padding:15px 16px;min-height:135px}
+.fut .mg-news-status{font-size:.69rem;color:#a2b8c5;margin:0 0 10px}
+.fut .mg-news-empty{padding:12px 3px;font-size:.82rem;color:#aebac1;line-height:1.6}
+.fut .mg-news-direct{margin:14px 0 0}.fut .mg-news-direct a{color:#c5e4ff;text-decoration:underline;text-underline-offset:3px;font-size:.79rem}
+.fut .mg-news-story-list{display:grid;gap:7px}
+.fut .mg-news-story-cards{display:flex;gap:11px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}
+.fut .mg-news-story{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #394750;border-radius:10px;background:#131a1f;color:#f2f4f6;text-align:left;padding:12px 13px;cursor:pointer;font:inherit}
+.fut .mg-news-story-cards .mg-news-story{flex:0 0 min(78vw,230px);scroll-snap-align:start;display:flex;flex-direction:column;align-items:stretch;min-height:220px;padding:0;overflow:hidden}
+.fut .mg-news-story-copy{min-width:0;display:grid;gap:6px}
+.fut .mg-news-story-cards .mg-news-story-copy{padding:12px}
+.fut .mg-news-story-meta{font-size:.63rem;line-height:1.4;color:#9fb9cb}
+.fut .mg-news-story-title{font-size:.85rem;font-weight:620;line-height:1.45}
+.fut .mg-news-story-desc{font-size:.73rem;color:#aab4be;line-height:1.45}
+.fut .mg-news-story-open{color:#c4d7e2}
+.fut .mg-news-thumb{height:130px;width:100%;object-fit:cover;background:#1d2b33}
+.fut .mg-news-thumb-empty{display:grid;place-items:center;font-size:2rem;font-weight:700;color:#7a9db5}
+.fut .mg-news-drawer{position:fixed;inset:0;background:#000b;display:flex;align-items:flex-end;z-index:4000}
+.fut .mg-news-drawer[hidden]{display:none}
+.fut .mg-news-sheet{box-sizing:border-box;background:#11181e;border:1px solid #526575;border-radius:18px 18px 0 0;padding:17px max(18px,4vw) 26px;width:min(100%,650px);max-height:80dvh;overflow-y:auto;margin:0 auto;box-shadow:0 -10px 60px #0009}
+.fut .mg-news-sheet-top{display:flex;justify-content:space-between;align-items:center}
+.fut .mg-news-sheet-handle{width:37px;height:4px;border-radius:3px;background:#546878;margin-left:calc(50% - 36px)}
+.fut .mg-news-sheet-top button{font:inherit;font-size:.74rem;cursor:pointer;background:transparent;color:#fff;border:1px solid #647481;border-radius:999px;padding:7px 12px}
+.fut .mg-news-sheet-meta{color:#abc9db;font-size:.69rem;margin:10px 0}
+.fut .mg-news-sheet h3{font-size:clamp(1.07rem,3vw,1.38rem);line-height:1.3;margin:9px 0}
+.fut .mg-news-sheet p:not(.mg-news-sheet-meta){font-size:.86rem;line-height:1.5}
+.fut #mg-news-drawer-link{display:inline-block;margin-top:14px;border:1px solid #9bcbe8;padding:9px 13px;border-radius:8px;color:#d8edfd;font-size:.81rem}
+.fut #global-news-dashboard :is(button,a):focus-visible{outline:2px solid #a9d9ff;outline-offset:2px}
+@media(max-width:700px){.fut .mg-news-description{font-size:.73rem}.fut .mg-news-heading h2{font-size:1.22rem}.fut .mg-news-feed{padding:12px}.fut .mg-news-story-title{font-size:.79rem}}
+@media(prefers-reduced-motion:reduce){.fut .mg-news-provider-row,.fut .mg-news-region-row,.fut .mg-news-story-cards{scroll-behavior:auto}}
 </style>
 </head><body><header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main class="fut"><p class="eyebrow">RESEARCH REPORTS · 2026 · VERIFIED SOURCES</p><h1>AI Futures 2026</h1>
@@ -34,9 +78,13 @@
 <p id="country-count" class="muted" aria-live="polite"></p>
 <div id="countries"></div>
 </details>
-<section id="global-news-dashboard" aria-label="Global news provider selector"><h2>Global News</h2><p class="muted">Browse international news providers alphabetically, without implied rankings. Select a newsroom for direct coverage. The dashboard is prepared for five current headlines per provider, subject to an authorised and reliably updated feed.</p>
-<div id="mg-news-providers" class="mg-news-provider-row" role="tablist" aria-label="Choose news provider"></div>
-<div class="mg-news-feed"><p id="mg-news-status" class="muted" aria-live="polite">Publisher directory</p><ol id="mg-news-headlines" aria-label="Most recent available headlines"></ol><p><a id="mg-news-source" href="https://www.reuters.com/world/" target="_blank" rel="noopener noreferrer">Open news provider</a></p></div></section>
+<section id="global-news-dashboard" aria-label="Global news browser">
+<div class="mg-news-heading"><div><p class="mg-news-eyebrow">INTERNATIONAL COVERAGE</p><h2>Global News</h2></div><div class="mg-news-views" id="mg-news-views" role="group" aria-label="News display"><button type="button" data-view="list" aria-pressed="true">Headlines</button><button type="button" data-view="cards" aria-pressed="false">Cards</button></div></div>
+<p class="mg-news-description">Select a newsroom and region. Sources are alphabetical, not ranked. Headlines and images appear only when a permitted, verified source feed is connected.</p>
+<div class="mg-news-nav"><div class="mg-news-provider-row" id="mg-news-providers" aria-label="News publishers"></div><div class="mg-news-region-row" id="mg-news-regions" aria-label="Regions"></div></div>
+<div class="mg-news-feed"><p id="mg-news-status" class="mg-news-status" aria-live="polite">Publisher directory · live headlines not connected</p><div id="mg-news-headlines" class="mg-news-story-area" aria-label="News previews"></div><p class="mg-news-direct"><a id="mg-news-source" href="https://www.reuters.com/world/" target="_blank" rel="noopener noreferrer">Visit publisher</a></p></div>
+<div class="mg-news-drawer" id="mg-news-drawer" hidden><div class="mg-news-sheet" role="dialog" aria-modal="true" aria-labelledby="mg-news-drawer-title"><div class="mg-news-sheet-top"><span class="mg-news-sheet-handle" aria-hidden="true"></span><button type="button" id="mg-news-drawer-close" aria-label="Close article preview">Close ×</button></div><p class="mg-news-sheet-meta" id="mg-news-drawer-meta"></p><h3 id="mg-news-drawer-title"></h3><p id="mg-news-drawer-summary"></p><a id="mg-news-drawer-link" href="#" target="_blank" rel="noopener noreferrer">Read on original publisher ↗</a></div></div>
+</section>
 <p class="muted">All links direct to original publishers, avoiding unlicensed redistribution of university reports. Research reference record created 11 November 2026. <a href="index.html#ai-futures-2026">Return to the homepage</a>.</p>
 </main><footer><div class="wrap" data-site-footer></div></footer>
-<script src="assets/ai-futures-2026.js?v=1" defer></script><script src="assets/global-news-dashboard.js?v=1" defer></script></body></html>
+<script src="assets/ai-futures-2026.js?v=1" defer></script><script src="assets/global-news-dashboard.js?v=2" defer></script></body></html>
