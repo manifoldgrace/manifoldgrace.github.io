@@ -77,7 +77,7 @@ const seen=new Set();
 return items.filter(x=>{if(!x||seen.has(x.url))return false;seen.add(x.url);return true});
 }
 function visibleStories(){
-let rows=state.stories.filter(x=>state.region==="All regions"||state.region==="World"||x.region===state.region);
+let rows=state.stories.filter(x=>state.region==="All regions"||x.region===state.region);
 rows.sort((a,b)=>String(b.published).localeCompare(String(a.published)));
 if(state.selected!=="all")return rows.slice(0,5);
 const counts={};
@@ -100,7 +100,7 @@ E.feed.className="mg-news-story-area "+(state.view==="cards"?"mg-news-story-card
 const stories=visibleStories();
 if(state.busy && !stories.length){E.feed.innerHTML='<p class="mg-news-empty">Loading recently indexed news from the selected source…</p>';return;}
 if(!stories.length){E.feed.innerHTML='<p class="mg-news-empty">No recent indexed stories for this selection. Choose another newsroom or region, or visit the publisher directly.</p>';return;}
-E.feed.innerHTML=stories.map((a,i)=>'<article class="mg-news-story">'+(state.view==="cards"?'<div class="mg-news-thumb mg-news-thumb-empty" aria-hidden="true">'+esc((PROVIDERS.find(p=>p[0]===a.provider)||["","NEWS"])[1])+'</div>':'')+'<div class="mg-news-story-copy"><span class="mg-news-story-meta">'+esc(a.provider)+' · '+esc(a.region)+(a.classification==='search-keyword'?' (topic match)':'')+' · '+esc(labelDate(a.published))+'</span><span class="mg-news-story-title">'+esc(a.title)+'</span></div><a class="mg-news-story-open" href="'+esc(a.url)+'" target="_blank" rel="noopener noreferrer" aria-label="Read '+esc(a.title)+' on '+esc(a.provider)+'">Read story ↗</a></article>').join("");
+E.feed.innerHTML=stories.map((a,i)=>'<article class="mg-news-story">'+(state.view==="cards"?'<div class="mg-news-thumb mg-news-thumb-empty" aria-hidden="true">'+esc((PROVIDERS.find(p=>p[0]===a.provider)||["","NEWS"])[1])+'</div>':'')+'<div class="mg-news-story-copy"><span class="mg-news-story-meta">'+esc(a.provider)+' · '+esc(a.region)+(a.classification==='search-keyword'?' (topic match)':'')+' · ' indexed '+esc(labelDate(a.published))+'</span><span class="mg-news-story-title">'+esc(a.title)+'</span></div><a class="mg-news-story-open" href="'+esc(a.url)+'" target="_blank" rel="noopener noreferrer" aria-label="Read '+esc(a.title)+' on '+esc(a.provider)+'">Read story ↗</a></article>').join("");
 }
 function render(){
 renderControls();
