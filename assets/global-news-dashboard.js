@@ -49,7 +49,9 @@ if(!p)return null;
 const d=String(article.seendate||"");
 let when="";
 if(/^\d{14}$/.test(d))when=d.slice(0,4)+"-"+d.slice(4,6)+"-"+d.slice(6,8)+"T"+d.slice(8,10)+":"+d.slice(10,12)+":"+d.slice(12,14)+"Z";
-return {provider:p[0],url:article.url,title:String(article.title).slice(0,220),published:when,region:normaliseRegion(article.url),source:"GDELT indexed article"};
+const pathRegion=normaliseRegion(article.url);
+const region=(pathRegion==="World" && state.region!=="All regions" && state.region!=="World")?state.region:pathRegion;
+return {provider:p[0],url:article.url,title:String(article.title).slice(0,220),published:when,region,classification:pathRegion==="World"&&region!=="World"?"search-keyword":"publisher-url-path",source:"GDELT indexed article"};
 }
 function uniq(items){
 const seen=new Set();
@@ -79,7 +81,7 @@ E.feed.className="mg-news-story-area "+(state.view==="cards"?"mg-news-story-card
 const stories=visibleStories();
 if(state.busy && !stories.length){E.feed.innerHTML='<p class="mg-news-empty">Loading recently indexed news from the selected source…</p>';return;}
 if(!stories.length){E.feed.innerHTML='<p class="mg-news-empty">No recent indexed stories for this selection. Choose another newsroom or region, or visit the publisher directly.</p>';return;}
-E.feed.innerHTML=stories.map((a,i)=>'<article class="mg-news-story">'+(state.view==="cards"?'<div class="mg-news-thumb mg-news-thumb-empty" aria-hidden="true">'+esc((PROVIDERS.find(p=>p[0]===a.provider)||["","NEWS"])[1])+'</div>':'')+'<div class="mg-news-story-copy"><span class="mg-news-story-meta">'+esc(a.provider)+' · '+esc(a.region)+' · '+esc(labelDate(a.published))+'</span><span class="mg-news-story-title">'+esc(a.title)+'</span></div><a class="mg-news-story-open" href="'+esc(a.url)+'" target="_blank" rel="noopener noreferrer" aria-label="Read '+esc(a.title)+' on '+esc(a.provider)+'">Read story ↗</a></article>').join("");
+E.feed.innerHTML=stories.map((a,i)=>'<article class="mg-news-story">'+(state.view==="cards"?'<div class="mg-news-thumb mg-news-thumb-empty" aria-hidden="true">'+esc((PROVIDERS.find(p=>p[0]===a.provider)||["","NEWS"])[1])+'</div>':'')+'<div class="mg-news-story-copy"><span class="mg-news-story-meta">'+esc(a.provider)+' · '+esc(a.region)+(a.classification==='search-keyword'?' (topic match)':'')+' · '+esc(labelDate(a.published))+'</span><span class="mg-news-story-title">'+esc(a.title)+'</span></div><a class="mg-news-story-open" href="'+esc(a.url)+'" target="_blank" rel="noopener noreferrer" aria-label="Read '+esc(a.title)+' on '+esc(a.provider)+'">Read story ↗</a></article>').join("");
 }
 function render(){
 renderControls();
