@@ -42,7 +42,7 @@ if(!root)return;
 const params=new URLSearchParams(location.search);
 if(params.get("type")==="foundation")return;
 const topic=params.get("topic")||"";
-const pubs=(ownMatch[topic]||[]).map(i=>own[i]);
+const pubs=(ownMatch[topic]||[]).map(i=>[own[i][0],own[i][2],own[i][1]]);
 const isLang=topic==="linguistics";
 const ext=isLang?linguistics.papers:[];
 const cases=isLang?linguistics.cases:[];
