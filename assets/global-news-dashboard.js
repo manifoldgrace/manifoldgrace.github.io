@@ -35,8 +35,11 @@ return raw.filter(x=>x && typeof x.title==="string" && isSafeUrl(x.url))
 .slice(0,5);
 }
 function renderControls(){
+const providerScroll=els.providers.scrollLeft,regionScroll=els.regions.scrollLeft;
 els.providers.innerHTML=providers.map((p,i)=>'<button class="mg-news-pill" type="button" data-p="'+i+'" aria-pressed="'+(state.provider===i)+'"><span class="mg-news-mark" aria-hidden="true">'+safe(p[1])+'</span><span>'+safe(p[0])+'</span></button>').join("");
 els.regions.innerHTML=regions.map(x=>'<button class="mg-news-region" type="button" data-r="'+safe(x)+'" aria-pressed="'+(state.region===x)+'">'+safe(x)+'</button>').join("");
+els.providers.scrollLeft=providerScroll;
+els.regions.scrollLeft=regionScroll;
 els.views.querySelectorAll("[data-view]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.view===state.view)));
 }
 function renderFeed(){
