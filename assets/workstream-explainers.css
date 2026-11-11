@@ -1,0 +1,27 @@
+/* Workstream technical explainers. Grey code is documentary only; no evaluation or runnable controls. */
+.mg-ops-page{max-width:1040px;margin:auto;padding:40px 5vw 100px}
+.mg-ops-page a{color:#c2dff2;text-decoration:underline;text-underline-offset:3px}
+.mg-ops-kicker{font-size:.66rem;letter-spacing:.16em;color:#aebdc8;text-transform:uppercase;margin:0 0 12px}
+.mg-ops-page h1{font-family:Georgia,serif;font-size:clamp(1.65rem,3.3vw,2.85rem);line-height:1.15;font-weight:400;letter-spacing:-.025em;margin:0 0 14px}
+.mg-ops-page .mg-ops-intro{font-size:.95rem;line-height:1.6;max-width:72ch;color:#d4d8dc}
+.mg-ops-state{border-left:2px solid #a7b2ba;padding:12px 15px;margin:21px 0;background:#121416;color:#bbc2c8;font-size:.82rem;line-height:1.6}
+.mg-ops-route{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0 31px}
+.mg-ops-route a{border:1px solid #606b74;border-radius:7px;text-decoration:none;padding:9px 12px;font-size:.78rem;line-height:1.45;color:#e1e9ef}
+.mg-ops-step{margin:22px 0;padding:19px 19px 16px;border:1px solid #34383d;border-radius:12px;background:#0d0f11}
+.mg-ops-step h2{font-size:clamp(.96rem,2vw,1.13rem);font-weight:550;margin:0 0 8px}
+.mg-ops-step p{font-size:.84rem;line-height:1.6;color:#b8bec4;margin:7px 0 12px}
+.mg-ops-code{white-space:pre-wrap;overflow-wrap:anywhere;background:#171a1c;color:#b5bbc0;border:1px solid #46494d;border-radius:9px;padding:13px 15px;font:400 .81rem/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;tab-size:2;user-select:text;margin:11px 0 13px}
+.mg-ops-code[data-nonrunnable]::before{content:"ILLUSTRATIVE PSEUDOCODE · NOT RUNNABLE";display:block;font:600 .62rem/1.5 system-ui,sans-serif;color:#8e9ba4;letter-spacing:.12em;margin-bottom:8px}
+.mg-ops-annotations{width:100%;border-collapse:collapse;font-size:.77rem;margin-top:12px}
+.mg-ops-annotations th,.mg-ops-annotations td{border-top:1px solid #343c42;padding:8px;vertical-align:top;text-align:left}
+.mg-ops-annotations th{color:#d5dbe0;font-weight:600;width:29%}
+.mg-ops-annotations td{color:#b4bfc6}
+.mg-ops-takeaway{margin:28px 0;padding:17px 20px;border:1px solid #434c52;background:#14181a;border-radius:10px}
+.mg-ops-takeaway h2{margin:0 0 9px;font-size:1rem}
+.mg-ops-takeaway p{font-size:.83rem;line-height:1.6;margin:5px 0;color:#bfc6cb}
+.mg-ops-index{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px;margin:22px 0}
+.mg-ops-index a{display:block;border:1px solid #39434b;background:#111518;padding:16px;border-radius:10px;text-decoration:none}
+.mg-ops-index strong{display:block;font-size:.95rem;color:#eee}
+.mg-ops-index span{display:block;font-size:.78rem;color:#b5c0c7;margin-top:6px}
+.mg-ops-page .mg-ops-small{font-size:.73rem;color:#9ea8b0}
+@media(max-width:680px){.mg-ops-page{padding:27px 5vw 78px}.mg-ops-page h1{font-size:1.65rem}.mg-ops-code{font-size:.68rem;padding:11px}.mg-ops-step{padding:13px}.mg-ops-annotations{font-size:.68rem}.mg-ops-annotations th{width:36%}.mg-ops-route a{font-size:.71rem}.mg-ops-page .mg-ops-intro{font-size:.86rem}}
