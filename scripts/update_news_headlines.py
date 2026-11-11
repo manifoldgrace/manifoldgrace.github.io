@@ -57,8 +57,9 @@ def region_from_path(url):
 
 def format_date(raw):
     try:
-        if len(raw) == 14 and raw.isdigit():
-            return dt.datetime.strptime(raw, "%Y%m%d%H%M%S").replace(tzinfo=dt.timezone.utc).isoformat().replace("+00:00", "Z")
+        cleaned = raw.replace("T", "").replace("Z", "")
+        if len(cleaned) == 14 and cleaned.isdigit():
+            return dt.datetime.strptime(cleaned, "%Y%m%d%H%M%S").replace(tzinfo=dt.timezone.utc).isoformat().replace("+00:00", "Z")
     except ValueError:
         pass
     return ""
@@ -70,6 +71,7 @@ def download(provider, domain):
         "maxrecords": 65,
         "timespan": "2d",
         "format": "json",
+        "sort": "datedesc",
     })
     req = urllib.request.Request(
         "https://api.gdeltproject.org/api/v2/doc/doc?" + query,
