@@ -1226,3 +1226,12 @@ main .grid.mg-book-shelf,main .cards.mg-book-shelf,main .card-grid.mg-book-shelf
 .mg-book-shelf>*{flex:0 0 clamp(230px,32vw,345px);scroll-snap-align:start;min-width:0}
 @media(max-width:650px){.mg-book-shelf>*{flex-basis:min(84vw,330px)}.mg-topic-overview-links{flex-wrap:nowrap;overflow-x:auto;padding-bottom:8px}}
 @media(prefers-reduced-motion:reduce){.mg-book-shelf{scroll-behavior:auto}}
+
+/* Mobile typography calibration — 11 November 2026 */
+@media(max-width:700px){
+  .page-hero h1{font-size:clamp(1.78rem,7.2vw,2.52rem);line-height:1.1}
+  .page-hero .page-intro{font-size:.95rem;line-height:1.6}
+  .page-hero .eyebrow{font-size:.66rem}
+  main .wrap>h2,main .atlas-section>h2{font-size:clamp(1.18rem,5.1vw,1.55rem)}
+  .nav-links{font-size:.83rem}
+}
