@@ -182,7 +182,7 @@ const items=[
 const featureCollection={type:'FeatureCollection',features:items.map((p,i)=>({type:'Feature',geometry:{type:'Point',coordinates:[p.lng,p.lat]},properties:{id:i,name:p.n,own:!!p.own}}))};
 const style='https://tiles.openfreemap.org/styles/dark';
 let map;
-try{map=new maplibregl.Map({container:'map',style,center:[10,24],zoom:heroMode?1.9:1.25,pitch:0,bearing:0,antialias:true,dragRotate:false,cooperativeGestures:true,attributionControl:false});}
+try{map=new maplibregl.Map({container:'map',style,center:[10,24],zoom:heroMode?0.8:1.25,pitch:0,bearing:0,antialias:true,dragRotate:false,cooperativeGestures:true,attributionControl:false});}
 catch(err){fallback.querySelector('small').textContent='Map temporarily unavailable';throw err}
 map.on('style.load',()=>{map.setProjection({type:'globe'});});
 map.on('error', e=>{if(e && e.error)console.warn('Global atlas map issue',e.error)});
@@ -239,6 +239,21 @@ function animateCamera(camera,duration,then){
  clear();timer=setTimeout(finish,duration+250);
 }
 function flight(){
+ if(heroMode){
+  if(!auto||!visible||!stops.length)return;
+  if(step>=stops.length)step=0;
+  const p=stops[step],sequence=tourEpoch;
+  panel.hidden=true;
+  // Cinematic wide-space presentation: traverse the globe without automatically zooming in.
+  animateCamera({center:[p.lng,p.lat],zoom:0.8,bearing:0,pitch:0},reduce?0:8500,()=>{
+   if(sequence!==tourEpoch)return;
+   highlightStop(p);
+   step+=1;
+   timer=setTimeout(flight,reduce?4500:7200);
+  });
+  return;
+ }
+
  if(!auto||!visible||!stops.length)return;
  if(step>=stops.length)step=0; // repeat the full dataset indefinitely
  const p=stops[step];
@@ -337,7 +352,7 @@ function start(){
 button.addEventListener('click',()=>auto?pause(true):start());
 document.getElementById('close').addEventListener('click',()=>{panel.hidden=true;history.replaceState(null,'',location.pathname)});
 document.getElementById('london').addEventListener('click',()=>{pause(true);map.flyTo({center:[-0.1278,51.5074],zoom:5,speed:.75,essential:true});show(items[0])});
-document.getElementById('reset').addEventListener('click',()=>{pause(true);panel.hidden=true;map.flyTo({center:[10,24],zoom:1.35,pitch:0,bearing:0,essential:true})});
+document.getElementById('reset').addEventListener('click',()=>{pause(true);panel.hidden=true;map.flyTo({center:[10,24],zoom:heroMode?0.8:1.35,pitch:0,bearing:0,essential:true})});
 map.on('load',()=>{fallback.hidden=true;map.resize();if(heroMode)map.setPadding({top:25,bottom:55,left:0,right:0});updateCounter();
   map.addSource('projects',{type:'geojson',data:featureCollection,cluster:!heroMode,clusterMaxZoom:10,clusterRadius:47});
   map.addLayer({id:'clusters',type:'circle',source:'projects',filter:['has','point_count'],paint:{'circle-color':'#f6f6f6','circle-radius':['step',['get','point_count'],20,10,25,30,30],'circle-stroke-color':'#898989','circle-stroke-width':1.5}});
