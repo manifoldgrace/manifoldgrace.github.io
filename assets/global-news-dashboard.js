@@ -28,6 +28,25 @@ const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 const isHttp=u=>{try{return /^https?:$/.test(new URL(u).protocol)}catch{return false}};
 const state={selected:"all",region:"All regions",view:"cards",stories:[],busy:false,source:"",updated:""};
 const cache=new Map();let requestVersion=0,previousFocus=null;
+let snapshotRows=[],snapshotUpdated="";
+function snapshotForSelection(){
+ return snapshotRows.filter(item=>state.selected==="all"||item.provider===PROVIDERS[Number(state.selected)][0]);
+}
+async function loadSnapshot(){
+ try{
+  const res=await fetch("assets/news-headlines.json",{cache:"no-store"});
+  if(!res.ok)return;
+  const data=await res.json();
+  if(data.source!=="GDELT DOC API"||!Array.isArray(data.articles))return;
+  snapshotRows=data.articles.filter(a=>a&&isHttp(a.url)&&a.title&&publisherFor(a.url));
+  snapshotUpdated=data.updated||"";
+  if(!state.stories.length){
+   state.stories=snapshotForSelection();
+   state.updated=snapshotUpdated?"snapshot "+snapshotUpdated:"snapshot";
+   render();
+  }
+ }catch(_error){}
+}
 function normaliseRegion(url){
 let path="";try{path=decodeURIComponent(new URL(url).pathname.toLowerCase())}catch{return "World"}
 if(/\/(africa|afrique)(\/|-|$)/.test(path))return "Africa";
@@ -101,7 +120,7 @@ return (state.selected==="all"?"("+terms+")":terms)+suffix;
 async function load(){
 const query=queryFor(),v=++requestVersion;
 if(cache.has(query)){state.stories=cache.get(query);state.updated="cached this visit";state.busy=false;render();return;}
-state.stories=[];state.busy=true;state.updated="";render();
+state.stories=snapshotForSelection();state.busy=true;state.updated=state.stories.length?(snapshotUpdated?"snapshot "+snapshotUpdated:"last indexed snapshot"):"";render();
 const params=new URLSearchParams({query,mode:"artlist",maxrecords:state.selected==="all"?"250":"35",format:"json",timespan:"2d"});
 const url="https://api.gdeltproject.org/api/v2/doc/doc?"+params.toString();
 const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),16000);
@@ -114,9 +133,8 @@ const rows=uniq((Array.isArray(json.articles)?json.articles:[]).map(fromGDELT));
 cache.set(query,rows);state.stories=rows;state.updated=new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:"Europe/London"});
 }catch(error){
 if(v!==requestVersion)return;
-const saved=window.__mgNewsFallback;
-if(Array.isArray(saved))state.stories=saved;
-state.updated=state.stories.length?"Last available snapshot":"Live source temporarily unavailable";
+if(!state.stories.length)state.stories=snapshotForSelection();
+state.updated=state.stories.length?(snapshotUpdated?"last indexed snapshot "+snapshotUpdated:"last indexed snapshot"):"Live source temporarily unavailable";
 }finally{
 clearTimeout(timer);
 if(v===requestVersion){state.busy=false;render();}
@@ -125,5 +143,5 @@ if(v===requestVersion){state.busy=false;render();}
 E.providers.addEventListener("click",e=>{const b=e.target.closest("[data-p]");if(!b)return;state.selected=b.dataset.p;load();});
 E.regions.addEventListener("click",e=>{const b=e.target.closest("[data-r]");if(!b)return;state.region=b.dataset.r;load();});
 E.views.addEventListener("click",e=>{const b=e.target.closest("[data-view]");if(!b)return;state.view=b.dataset.view;render();});
-render();load();
+render();loadSnapshot();load();
 })();
