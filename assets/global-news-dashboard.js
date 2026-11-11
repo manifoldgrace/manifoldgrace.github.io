@@ -65,7 +65,7 @@ function fromGDELT(article){
 if(!article || !isHttp(article.url) || !article.title)return null;
 const p=publisherFor(article.url);
 if(!p)return null;
-const d=String(article.seendate||"");
+const d=String(article.seendate||"").replace(/[TZ]/g,"");
 let when="";
 if(/^\d{14}$/.test(d))when=d.slice(0,4)+"-"+d.slice(4,6)+"-"+d.slice(6,8)+"T"+d.slice(8,10)+":"+d.slice(10,12)+":"+d.slice(12,14)+"Z";
 const pathRegion=normaliseRegion(article.url);
@@ -121,7 +121,7 @@ async function load(){
 const query=queryFor(),v=++requestVersion;
 if(cache.has(query)){state.stories=cache.get(query);state.updated="cached this visit";state.busy=false;render();return;}
 state.stories=snapshotForSelection();state.busy=true;state.updated=state.stories.length?(snapshotUpdated?"snapshot "+snapshotUpdated:"last indexed snapshot"):"";render();
-const params=new URLSearchParams({query,mode:"artlist",maxrecords:state.selected==="all"?"250":"35",format:"json",timespan:"2d"});
+const params=new URLSearchParams({query,mode:"artlist",maxrecords:state.selected==="all"?"250":"35",format:"json",timespan:"2d",sort:"datedesc"});
 const url="https://api.gdeltproject.org/api/v2/doc/doc?"+params.toString();
 const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),16000);
 try{
