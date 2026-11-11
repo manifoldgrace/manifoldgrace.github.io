@@ -1,6 +1,6 @@
 /* Evidence-linked research page enhancements. 
- * Titles and links are directly verified where labelled as records.
- * Other disciplines present an explicitly incomplete evidence-audit template, never invented publications.
+ * Three authored paper slots are explicitly proposed, not written or published.
+ * Do not attribute published Zenodo work without a verified record and authorisation.
  */
 (() => {
 "use strict";
@@ -10,15 +10,6 @@ const templates=[
 ["AI model evaluation benchmark",gh+"02-ai-model-evaluation-template.md","Reusable GitHub template · not a completed benchmark"],
 ["Comparative AI case study",gh+"03-comparative-case-study-template.md","Reusable GitHub template · not a completed case study"]
 ];
-const own=[
-["The Cosmology of Cognition: Introducing the Adaptive Flow Framework","https://zenodo.org/records/17290625","2025 · Published Zenodo record · cognition / neuroscience / psychology"],
-["A Draft on the Delegated Agency and the Moral Outsourcing of Automation","https://zenodo.org/records/17294405","2025 · Preprint · ethics / automation / social systems"],
-["London Smart Piezoelectric Flooring Pilot Dossier","https://zenodo.org/records/17439725","2025 · Project dossier · engineering / energy / urban systems"],
-["Loyal Residency: An Ethical Framework for Civic Continuity","https://zenodo.org/records/17439986","2025 · Report · public policy / ecological stewardship"]
-];
-const ownMatch={
-"artificial-intelligence":[0,1,2],"mathematics":[],"physics":[2],"chemistry":[],"biology":[0],"astronomy":[],"earth-sciences":[2,3],"electronics":[2],"computer-science":[1,2],"mechanical-engineering":[2],"nanotechnology":[],"robotics":[1,2],"civil-aerospace":[2],"biomedical":[0],"neuroscience":[0],"medicine":[0],"public-health":[3],"agriculture":[3],"veterinary":[],"ecology":[3],"food-science":[],"psychology":[0,1],"sociology":[1,3],"economics":[1,3],"political-science":[1,3],"education":[0,1],"philosophy":[0,1,3],"logic":[1],"history":[3],"linguistics":[],"arts":[0,1],"social-computing":[0,1]
-};
 const linguistics={
 papers:[
 ["mGPT: Few-Shot Learners Go Multilingual","Oleh Shliazhko et al. · 2024","https://aclanthology.org/2024.tacl-1.4/"],
@@ -42,12 +33,17 @@ if(!root)return;
 const params=new URLSearchParams(location.search);
 if(params.get("type")==="foundation")return;
 const topic=params.get("topic")||"";
-const pubs=(ownMatch[topic]||[]).map(i=>[own[i][0],own[i][2],own[i][1]]);
 const isLang=topic==="linguistics";
 const ext=isLang?linguistics.papers:[];
 const cases=isLang?linguistics.cases:[];
 const main=section("Three GitHub research project templates",templates.map(x=>[x[0],x[2],x[1]]),"");
-const pub=section("My published Zenodo research",pubs,"No discipline-specific paper verified for this field. Three publication slots will not be filled with unrelated or unpublished work.");
+const disciplineName=(root.querySelector("h1")?.textContent||"this discipline").trim();
+const paperTopics=[
+["Research problem and evidence-gap assessment — "+disciplineName,"Proposed paper initiative · no manuscript, DOI or Zenodo publication"],
+["Comparative evaluation of AI methods in "+disciplineName,"Proposed paper initiative · subject to literature and feasibility audit"],
+["Interdisciplinary synthesis, limits and implications — "+disciplineName,"Proposed paper initiative · originality unverified"]
+];
+const pub='<section class="mg-evidence-group"><h2>Three proposed author-led paper initiatives</h2><p class="mg-evidence-empty">Research directions for future writing, not completed manuscripts or Zenodo records. No publication links are assigned before an actual deposit.</p><ol>'+paperTopics.map(x=>'<li><strong>'+esc(x[0])+'</strong><span>'+esc(x[1])+'</span></li>').join("")+'</ol></section>';
 const papers=section("Five external research papers — alternative authors",ext,"Five discipline-specific external papers require citation and author verification. No sources have been invented.");
 const caseStudies=section("Five documented AI case studies",cases,"Five discipline-specific AI case studies require primary-source verification. No deployments or results have been invented.");
 root.insertAdjacentHTML("beforeend",'<div class="mg-evidence-library" id="research-evidence-library"><p class="mg-evidence-label">RESEARCH & EVIDENCE DIRECTORY</p>'+main+pub+papers+caseStudies+'</div>');
