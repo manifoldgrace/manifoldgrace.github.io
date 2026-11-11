@@ -1,0 +1,46 @@
+/* Homepage-only interdisciplinary reel; does not modify the globe or its iframe. */
+#interdisciplinary-reels{background:#000;color:#f0f0f0;position:relative;padding:48px max(4vw,16px) 100px;overflow:hidden;isolation:isolate}
+#interdisciplinary-reels .mg-atlas-container{max-width:1320px;margin:0 auto}
+#interdisciplinary-reels .mg-atlas-intro{font-family:Georgia,serif;font-weight:400;font-size:clamp(1.1rem,2vw,1.7rem);line-height:1.35;letter-spacing:.01em;margin:0 0 52px}
+#interdisciplinary-reels .mg-atlas-block{margin:0 0 58px}
+#interdisciplinary-reels .mg-atlas-head{display:flex;align-items:center;gap:18px;margin:0 0 17px}
+#interdisciplinary-reels .mg-atlas-head h2{font-family:Georgia,serif;flex:none;font-size:clamp(.96rem,1.5vw,1.26rem);font-weight:400;line-height:1.2;margin:0}
+#interdisciplinary-reels .mg-atlas-line{flex:1;height:1px;background:linear-gradient(to right,#697780,transparent)}
+#interdisciplinary-reels .mg-atlas-hint{flex:none;margin:0;color:#aeb9c1;font-size:clamp(.52rem,.72vw,.66rem);font-weight:500;letter-spacing:.15em;text-transform:uppercase}
+#interdisciplinary-reels .mg-atlas-window{position:relative;width:100%;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent);touch-action:pan-x}
+#interdisciplinary-reels .mg-atlas-motion{display:flex;width:max-content;gap:11px;animation:mg-atlas-scroll 105s linear infinite;will-change:transform}
+#interdisciplinary-reels [data-atlas-reel="foundation"] .mg-atlas-motion{animation-duration:78s;animation-direction:reverse}
+#interdisciplinary-reels .mg-atlas-group{display:flex;gap:11px;flex:none}
+#interdisciplinary-reels .mg-atlas-tile{box-sizing:border-box;display:flex;flex:0 0 auto;width:111px;height:119px;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:12px 8px;background:#050709;color:#fff;text-decoration:none;border:1px solid #69757d;border-radius:12px;transition:border-color .15s,background .15s}
+#interdisciplinary-reels .mg-atlas-tile:hover,#interdisciplinary-reels .mg-atlas-tile:focus-visible{border-color:#d3e6f8;background:#111b23;outline:2px solid #8bbee0;outline-offset:-2px}
+#interdisciplinary-reels .mg-atlas-icon{font-family:Georgia,'Times New Roman',serif;font-size:2rem;line-height:1;color:#f5f7f9;min-height:34px}
+#interdisciplinary-reels .mg-atlas-label{font-size:.71rem;line-height:1.3;letter-spacing:0;font-weight:450;max-width:105px}
+#interdisciplinary-reels .mg-atlas-window:hover .mg-atlas-motion,#interdisciplinary-reels .mg-atlas-window:focus-within .mg-atlas-motion,#interdisciplinary-reels .mg-atlas-paused .mg-atlas-motion{animation-play-state:paused}
+#interdisciplinary-reels .mg-atlas-bottomline{margin-top:17px;height:1px;background:linear-gradient(to right,transparent,#45657b 23%,#45657b 76%,transparent);box-shadow:0 1px 11px #356b9c77}
+#interdisciplinary-reels .mg-atlas-note{font-size:.68rem;color:#9da9b3;margin:14px 0 0}
+@keyframes mg-atlas-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 5.5px))}}
+@media(max-width:700px){
+ #interdisciplinary-reels{padding:38px 0 105px}
+ #interdisciplinary-reels .mg-atlas-container{max-width:100%}
+ #interdisciplinary-reels .mg-atlas-intro{font-size:1.06rem;line-height:1.36;padding:0 5vw;margin-bottom:43px;max-width:28ch}
+ #interdisciplinary-reels .mg-atlas-head{gap:10px;margin:0 4.5vw 14px}
+ #interdisciplinary-reels .mg-atlas-head h2{font-size:.96rem}
+ #interdisciplinary-reels .mg-atlas-hint{max-width:42%;font-size:.48rem;line-height:1.5;letter-spacing:.08em;text-align:right}
+ #interdisciplinary-reels .mg-atlas-motion,#interdisciplinary-reels .mg-atlas-group{gap:8px}
+ #interdisciplinary-reels .mg-atlas-tile{width:87px;height:104px;padding:10px 5px;border-radius:9px;gap:9px}
+ #interdisciplinary-reels .mg-atlas-icon{font-size:1.55rem;min-height:27px}
+ #interdisciplinary-reels .mg-atlas-label{font-size:.58rem;line-height:1.28}
+ #interdisciplinary-reels .mg-atlas-block{margin-bottom:46px}
+ #interdisciplinary-reels .mg-atlas-bottomline{margin:12px 4vw 0}
+ #interdisciplinary-reels .mg-atlas-note{padding:0 5vw;font-size:.63rem}
+ /* Subtle homepage-only mobile sizing, without altering global site typography. */
+ header .mg-brand-stack .brand{font-size:clamp(1.16rem,5vw,1.45rem)!important}
+ .mg-entry .mg-heading .eyebrow{font-size:.63rem}
+ .mg-entry .mg-heading p{font-size:.85rem!important;font-weight:500}
+ .mg-entry .mg-origin-label{font-size:.64rem}
+}
+@media(prefers-reduced-motion:reduce){
+ #interdisciplinary-reels .mg-atlas-motion{animation:none!important}
+ #interdisciplinary-reels .mg-atlas-window{overflow-x:auto;scrollbar-width:thin;mask-image:none;-webkit-mask-image:none}
+ #interdisciplinary-reels .mg-atlas-group[aria-hidden="true"]{display:none}
+}
