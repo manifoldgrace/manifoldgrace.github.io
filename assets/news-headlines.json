@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "source": "GDELT DOC API",
+  "source_url": "https://www.gdeltproject.org/",
+  "updated": "2026-11-12T07:05:19.674741Z",
+  "providers": {
+    "Al Jazeera": {
+      "items": [
+        {
+          "provider": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks?update=5141292",
+          "title": "Iran war live : US House blocks Hegseth impeachment with 11 Democrats absent | News",
+          "published": "2026-11-11T05:30:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks?update=5141343",
+          "title": "Iran war live : US House blocks Hegseth impeachment with 11 Democrats absent | News",
+          "published": "2026-11-11T05:30:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks?update=5141315",
+          "title": "Iran war live : US House blocks Hegseth impeachment with 11 Democrats absent | News",
+          "published": "2026-11-11T05:30:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/11/11/kennedy-family-joins-us-lawsuits-to-block-trumps-unlawful-arch-plan",
+          "title": "Kennedy family joins US lawsuits to block Trump  unlawful  arch plan | Donald Trump News",
+          "published": "2026-11-11T05:30:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "Al Jazeera",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks?update=5141367",
+          "title": "Iran war live : US House blocks Hegseth impeachment with 11 Democrats absent | News",
+          "published": "2026-11-11T05:30:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        }
+      ],
+      "status": "indexed"
+    },
+    "Associated Press": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "BBC News": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "CBC News": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "CNA": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "Deutsche Welle": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "Euronews": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "France 24": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "The Guardian": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "NHK World Japan": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "NPR": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "The New York Times": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "Reuters": {
+      "items": [],
+      "status": "unavailable"
+    },
+    "Sky News": {
+      "items": [],
+      "status": "unavailable"
+    }
+  },
+  "articles": [
+    {
+      "provider": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks?update=5141292",
+      "title": "Iran war live : US House blocks Hegseth impeachment with 11 Democrats absent | News",
+      "published": "2026-11-11T05:30:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks?update=5141343",
+      "title": "Iran war live : US House blocks Hegseth impeachment with 11 Democrats absent | News",
+      "published": "2026-11-11T05:30:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks?update=5141315",
+      "title": "Iran war live : US House blocks Hegseth impeachment with 11 Democrats absent | News",
+      "published": "2026-11-11T05:30:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/2026/11/11/kennedy-family-joins-us-lawsuits-to-block-trumps-unlawful-arch-plan",
+      "title": "Kennedy family joins US lawsuits to block Trump  unlawful  arch plan | Donald Trump News",
+      "published": "2026-11-11T05:30:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Al Jazeera",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks?update=5141367",
+      "title": "Iran war live : US House blocks Hegseth impeachment with 11 Democrats absent | News",
+      "published": "2026-11-11T05:30:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    }
+  ],
+  "status": "partial",
+  "failures": [
+    "Associated Press: HTTP Error 429: Too Many Requests",
+    "BBC News: HTTP Error 429: Too Many Requests",
+    "CBC News: HTTP Error 429: Too Many Requests",
+    "CNA: HTTP Error 429: Too Many Requests",
+    "Deutsche Welle: HTTP Error 429: Too Many Requests",
+    "Euronews: HTTP Error 429: Too Many Requests",
+    "France 24: HTTP Error 429: Too Many Requests",
+    "The Guardian: HTTP Error 429: Too Many Requests",
+    "NHK World Japan: No indexed articles",
+    "NPR: HTTP Error 429: Too Many Requests",
+    "The New York Times: HTTP Error 429: Too Many Requests",
+    "Reuters: HTTP Error 429: Too Many Requests",
+    "Sky News: HTTP Error 429: Too Many Requests"
+  ]
+}
