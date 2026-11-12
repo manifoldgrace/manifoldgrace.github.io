@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "GDELT DOC API",
   "source_url": "https://www.gdeltproject.org/",
-  "updated": "2026-11-12T07:05:19.674741Z",
+  "updated": "2026-11-12T19:52:19.369956Z",
   "providers": {
     "Al Jazeera": {
       "items": [
@@ -47,7 +47,7 @@
           "classification": "publisher-url-path"
         }
       ],
-      "status": "indexed"
+      "status": "stale"
     },
     "Associated Press": {
       "items": [],
@@ -86,8 +86,17 @@
       "status": "unavailable"
     },
     "NPR": {
-      "items": [],
-      "status": "unavailable"
+      "items": [
+        {
+          "provider": "NPR",
+          "url": "https://www.npr.org/transcripts/nx-s1-6032767",
+          "title": "Ten Live profiles Americans from across the economic spectrum : NPR",
+          "published": "2026-11-10T22:00:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        }
+      ],
+      "status": "indexed"
     },
     "The New York Times": {
       "items": [],
@@ -142,10 +151,19 @@
       "published": "2026-11-11T05:30:00Z",
       "region": "World",
       "classification": "publisher-url-path"
+    },
+    {
+      "provider": "NPR",
+      "url": "https://www.npr.org/transcripts/nx-s1-6032767",
+      "title": "Ten Live profiles Americans from across the economic spectrum : NPR",
+      "published": "2026-11-10T22:00:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
     }
   ],
   "status": "partial",
   "failures": [
+    "Al Jazeera: HTTP Error 429: Too Many Requests",
     "Associated Press: HTTP Error 429: Too Many Requests",
     "BBC News: HTTP Error 429: Too Many Requests",
     "CBC News: HTTP Error 429: Too Many Requests",
@@ -154,8 +172,7 @@
     "Euronews: HTTP Error 429: Too Many Requests",
     "France 24: HTTP Error 429: Too Many Requests",
     "The Guardian: HTTP Error 429: Too Many Requests",
-    "NHK World Japan: No indexed articles",
-    "NPR: HTTP Error 429: Too Many Requests",
+    "NHK World Japan: HTTP Error 429: Too Many Requests",
     "The New York Times: HTTP Error 429: Too Many Requests",
     "Reuters: HTTP Error 429: Too Many Requests",
     "Sky News: HTTP Error 429: Too Many Requests"
