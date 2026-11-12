@@ -1,6 +1,18 @@
 (() => {
   "use strict";
   const site = window.MANIFOLD_SITE || {};
+  // Interior-only visual system. Reversible by removing this small linked stylesheet.
+  // Do not modify the homepage, Earth iframe or loading-preview visualisation.
+  const currentDocument = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  if (!["index.html", "public-interest-map.html", "loading-preview.html"].includes(currentDocument)
+      && !document.querySelector('link[data-mg-interior-refinement]')) {
+    const interiorTheme = document.createElement("link");
+    interiorTheme.rel = "stylesheet";
+    interiorTheme.href = "assets/interior-visual-refinement.css?v=20261112-1";
+    interiorTheme.dataset.mgInteriorRefinement = "true";
+    document.head.appendChild(interiorTheme);
+  }
+
   // Shared disclosure enhancement; if loading fails, original page content remains visible.
   if (!document.querySelector('script[src*="site-disclosure.js"]')) {
     const disclosureScript = document.createElement("script");
