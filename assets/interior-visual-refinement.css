@@ -46,7 +46,7 @@ body>main :is(.log-entry,.mg-ops-page,.hs,.fv,.pr,.fut){scroll-margin-top:72px}
   body>main :is(.eyebrow,.kicker,.mg-ops-kicker,.hs-tag){font-size:.60rem!important}
   body>main :is(p,li,dt,dd){line-height:1.55}
   body>main :is(.card,.link-card,.hs-card,.mg-ops-step,.report){border-radius:8px}
-  body>main :is(table,th,td){font-size:min(.77rem,inherit)}
+  body>main :is(table,th,td){line-height:1.45}
   body>header .brand{font-size:1.18rem!important}
   body>header :is(.nav-links,.site-nav-group>summary){font-size:.74rem}
   body>footer :is(a,summary,.footer-note){font-size:.69rem}
