@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "GDELT DOC API",
   "source_url": "https://www.gdeltproject.org/",
-  "updated": "2026-11-13T06:35:35.360693Z",
+  "updated": "2026-11-13T19:37:17.661591Z",
   "providers": {
     "Al Jazeera": {
       "items": [
@@ -62,8 +62,41 @@
       "status": "unavailable"
     },
     "CNA": {
-      "items": [],
-      "status": "unavailable"
+      "items": [
+        {
+          "provider": "CNA",
+          "url": "https://www.channelnewsasia.com/asia/why-india-and-pakistans-stock-markets-are-rallying-after-us-midterms-6544681",
+          "title": "Why India and Pakistan stock markets are rallying after the US midterms",
+          "published": "2026-11-12T04:00:00Z",
+          "region": "Asia Pacific",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "CNA",
+          "url": "https://www.channelnewsasia.com/watch/asean-unity-faces-challenges-amid-competing-national-interests-6544701",
+          "title": "ASEAN unity faces challenges amid competing national interests",
+          "published": "2026-11-12T03:45:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "CNA",
+          "url": "https://www.channelnewsasia.com/world/nvidia-ceo-jensen-huang-oust-board-affair-6544031",
+          "title": "Nvidia board meets to decide CEO Huang future as leadership crisis deepens",
+          "published": "2026-11-12T03:00:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "CNA",
+          "url": "https://www.channelnewsasia.com/listen/deep-dive/more-singaporeans-under-35-want-live-their-own-renting-worth-it-6544091",
+          "title": "Deep Dive - More Singaporeans under 35 want to live on their own . Is renting worth it ?",
+          "published": "2026-11-12T00:30:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        }
+      ],
+      "status": "indexed"
     },
     "Deutsche Welle": {
       "items": [],
@@ -120,7 +153,7 @@
           "classification": "publisher-url-path"
         }
       ],
-      "status": "indexed"
+      "status": "stale"
     },
     "NHK World Japan": {
       "items": [],
@@ -194,6 +227,38 @@
       "classification": "publisher-url-path"
     },
     {
+      "provider": "CNA",
+      "url": "https://www.channelnewsasia.com/asia/why-india-and-pakistans-stock-markets-are-rallying-after-us-midterms-6544681",
+      "title": "Why India and Pakistan stock markets are rallying after the US midterms",
+      "published": "2026-11-12T04:00:00Z",
+      "region": "Asia Pacific",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "CNA",
+      "url": "https://www.channelnewsasia.com/watch/asean-unity-faces-challenges-amid-competing-national-interests-6544701",
+      "title": "ASEAN unity faces challenges amid competing national interests",
+      "published": "2026-11-12T03:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "CNA",
+      "url": "https://www.channelnewsasia.com/world/nvidia-ceo-jensen-huang-oust-board-affair-6544031",
+      "title": "Nvidia board meets to decide CEO Huang future as leadership crisis deepens",
+      "published": "2026-11-12T03:00:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "CNA",
+      "url": "https://www.channelnewsasia.com/listen/deep-dive/more-singaporeans-under-35-want-live-their-own-renting-worth-it-6544091",
+      "title": "Deep Dive - More Singaporeans under 35 want to live on their own . Is renting worth it ?",
+      "published": "2026-11-12T00:30:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
       "provider": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks?update=5141292",
       "title": "Iran war live : US House blocks Hegseth impeachment with 11 Democrats absent | News",
@@ -245,17 +310,17 @@
   "status": "partial",
   "failures": [
     "Al Jazeera: HTTP Error 429: Too Many Requests",
-    "Associated Press: HTTP Error 429: Too Many Requests",
+    "Associated Press: No indexed articles",
     "BBC News: HTTP Error 429: Too Many Requests",
     "CBC News: HTTP Error 429: Too Many Requests",
-    "CNA: HTTP Error 429: Too Many Requests",
     "Deutsche Welle: HTTP Error 429: Too Many Requests",
     "Euronews: HTTP Error 429: Too Many Requests",
     "France 24: HTTP Error 429: Too Many Requests",
+    "The Guardian: HTTP Error 429: Too Many Requests",
     "NHK World Japan: HTTP Error 429: Too Many Requests",
     "NPR: HTTP Error 429: Too Many Requests",
     "The New York Times: HTTP Error 429: Too Many Requests",
     "Reuters: HTTP Error 429: Too Many Requests",
-    "Sky News: HTTP Error 429: Too Many Requests"
+    "Sky News: No indexed articles"
   ]
 }
