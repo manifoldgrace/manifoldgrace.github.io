@@ -1,9 +1,20 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-11-13T14:37:34Z",
+  "generated_utc": "2026-11-13T14:39:26Z",
   "scope": "Public dated Manifold Grace productivity-log entries only",
-  "count": 203,
+  "count": 204,
   "records": [
+    {
+      "record_id": "publication-archive-verification-20261113",
+      "recorded_date": "2026-11-13",
+      "original_publication_date": null,
+      "date_basis": "dated public productivity-log record, not original publication date of cited external content",
+      "title": "Verified initial source-dated archive generation and corrected historical entry extraction",
+      "source_url": "https://manifoldgrace.github.io/productivity-log.html#publication-archive-verification-20261113",
+      "evidence_url": "https://manifoldgrace.github.io/archive/metadata/periods.json",
+      "source_type": "Manifold Grace public activity log",
+      "rights_scope": "original catalogue metadata and links; externally linked content excluded"
+    },
     {
       "record_id": "publication-archive-implementation-20261113",
       "recorded_date": "2026-11-13",
