@@ -1,9 +1,20 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-11-13T14:32:41Z",
+  "generated_utc": "2026-11-13T14:34:43Z",
   "scope": "Public dated Manifold Grace productivity-log entries only",
-  "count": 148,
+  "count": 149,
   "records": [
+    {
+      "record_id": "publication-archive-implementation-20261113",
+      "recorded_date": "2026-11-13",
+      "original_publication_date": null,
+      "date_basis": "dated public productivity-log record, not original publication date of cited external content",
+      "title": "Built period-based downloadable public evidence archive and three linked working manuscripts",
+      "source_url": "https://manifoldgrace.github.io/productivity-log.html#publication-archive-implementation-20261113",
+      "evidence_url": "https://manifoldgrace.github.io/publication-evidence-archive.html",
+      "source_type": "Manifold Grace public activity log",
+      "rights_scope": "original catalogue metadata and links; externally linked content excluded"
+    },
     {
       "record_id": "project-assurance-pathways-20261113",
       "recorded_date": "2026-11-13",
