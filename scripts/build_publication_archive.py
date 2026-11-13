@@ -27,7 +27,11 @@ def valid_url(href):
     s=urlsplit(url)
     return url if s.scheme in ("https","http") and s.hostname else ""
 def extract_records(path):
-    soup=BeautifulSoup(path.read_text(encoding="utf-8"),"html.parser")
+    raw=path.read_text(encoding="utf-8")
+    # Repair a legacy typo in otherwise public log tables: <tbody<tr ...
+    # Normalisation is local to the parser; the original source file is unchanged.
+    raw=re.sub(r"<tbody(?=<tr\\b)", "<tbody>", raw, flags=re.I)
+    soup=BeautifulSoup(raw,"html.parser")
     records=[]
     for block in soup.find_all(["article","section"]):
         tables=block.select("table.progression-table")
