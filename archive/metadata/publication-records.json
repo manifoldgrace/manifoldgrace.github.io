@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-11-13T15:33:33Z",
+  "generated_utc": "2026-11-13T15:46:21Z",
   "scope": "Public dated Manifold Grace productivity-log entries only",
-  "count": 207,
+  "count": 208,
   "records": [
     {
       "record_id": "publication-archive-verification-20261113",
@@ -188,6 +188,17 @@
       "title": "Built a dated AI news research index with scheduled source-metadata collection",
       "source_url": "https://manifoldgrace.github.io/productivity-log.html#bloomberg-ai-index-20261113",
       "evidence_url": "https://manifoldgrace.github.io/bloomberg-ai-research-index.html",
+      "source_type": "Manifold Grace public activity log",
+      "rights_scope": "original catalogue metadata and links; externally linked content excluded"
+    },
+    {
+      "record_id": "archive-historical-month-download-discovery-20261113",
+      "recorded_date": "2026-11-13",
+      "original_publication_date": null,
+      "date_basis": "dated public productivity-log record, not original publication date of cited external content",
+      "title": "Improved archive download discoverability and clarified historical coverage",
+      "source_url": "https://manifoldgrace.github.io/productivity-log.html#archive-historical-month-download-discovery-20261113",
+      "evidence_url": "https://manifoldgrace.github.io/publication-evidence-archive.html#historical-direct-downloads-20261113",
       "source_type": "Manifold Grace public activity log",
       "rights_scope": "original catalogue metadata and links; externally linked content excluded"
     },
