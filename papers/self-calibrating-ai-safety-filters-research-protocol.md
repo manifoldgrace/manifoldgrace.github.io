@@ -40,3 +40,15 @@ Training requires affirmative applicable consent. A human review stage is retain
 
 ## Intended manuscript sections
 Introduction; problem formalisation; related work and strongest overlap; threat model; calibration architecture; datasets and adjudication protocol; experiments; results (unwritten); robustness and ablations; limitations and ethics; discussion; reproducibility appendices.
+
+## Interim extension: Context-Augmented Safety Calibration (CASC), 13 November 2026
+
+**Hypothesis:** Selective, provenance-preserving retrieval plus structured multi-pass cross-analysis and evaluator self-audit improves evidence recovery and safe decision calibration relative to equivalent-budget unstructured long-context and standard retrieval-augmented baselines.
+
+**Method:** Use authorised historical records and synthetic cases; preserve time, source, confidence and contradictions in a claim graph. Compare fixed-context, maximal-context, retrieval-only and CASC conditions. Vary evidence position, length, missing records, adversarial distractors, inconsistent claims, and longitudinal conduct records. Test whether a system distinguishes isolated anomalies from patterns without allowing benign history to excuse grave current risks.
+
+**Metrics:** Evidence recall/precision, temporal accuracy, contradiction recall, calibration error, false exclusion, unsafe acceptance, manipulation success, privacy leakage, processing cost and latency. Include independent reviewer adjudication and repeated tests over altered evidence.
+
+**Falsification:** No demonstrated gain over matched baselines, or a worsening of preregistered safety/privacy limits, counts against the hypothesis.
+
+**Prior work:** [Lost in the Middle (2024)](https://aclanthology.org/2024.tacl-1.9/); [Long-context Language Models Fail in Basic Retrieval Tasks (2025)](https://aclanthology.org/2025.findings-emnlp.301/); [Positional Failures in Long-Context LLMs (2026)](https://arxiv.org/abs/2605.23170); [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026). Future ASI timelines are highly uncertain and are not prerequisites for this study.
