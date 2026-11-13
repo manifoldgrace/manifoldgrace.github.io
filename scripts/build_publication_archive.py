@@ -30,7 +30,7 @@ def extract_records(path):
     raw=path.read_text(encoding="utf-8")
     # Repair a legacy typo in otherwise public log tables: <tbody<tr ...
     # Normalisation is local to the parser; the original source file is unchanged.
-    raw=re.sub(r"<tbody(?=<tr\\b)", "<tbody>", raw, flags=re.I)
+    raw=re.sub(r"<tbody(?=<tr\b)", "<tbody>", raw, flags=re.I)
     soup=BeautifulSoup(raw,"html.parser")
     records=[]
     for block in soup.find_all(["article","section"]):
