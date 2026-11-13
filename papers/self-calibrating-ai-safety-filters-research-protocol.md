@@ -52,3 +52,13 @@ Introduction; problem formalisation; related work and strongest overlap; threat 
 **Falsification:** No demonstrated gain over matched baselines, or a worsening of preregistered safety/privacy limits, counts against the hypothesis.
 
 **Prior work:** [Lost in the Middle (2024)](https://aclanthology.org/2024.tacl-1.9/); [Long-context Language Models Fail in Basic Retrieval Tasks (2025)](https://aclanthology.org/2025.findings-emnlp.301/); [Positional Failures in Long-Context LLMs (2026)](https://arxiv.org/abs/2605.23170); [International AI Safety Report 2026](https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026). Future ASI timelines are highly uncertain and are not prerequisites for this study.
+
+## External multi-model deliberation experimental arm — 13 November 2026
+
+**Question:** Can independently generated answers from three or four heterogeneous models, followed by provenance-aware critique and selective synthesis, outperform a single verified response without increasing unsafe acceptance, false exclusion or correlated errors?
+
+**Design:** Blind first-pass answers (same question and evidence), independent verification/contradiction/novelty reviews, bounded exchange, separate adjudication permitting unresolved disagreement. Compare with self-consistency, single-model self-checks, retrieval-only and compute-matched multi-model baselines. Evaluate ground-truth accuracy, reliability diagrams, adjudicator failure, evidence provenance, minority-correct recovery, safety and privacy risks, API cost, latency and adversarial persuasion resistance. Require consent before cross-provider sharing of private context.
+
+**Falsification:** No robust, reproducible advantage over equal-budget baselines, or safety/privacy degradation, rejects the proposed superiority. Consensus is not automatically ground truth. This is not itself ASI.
+
+**Relevant prior work:** [Du et al., ICML 2024](https://composable-models.github.io/llm_debate/); [Smit et al., ICML 2024](https://proceedings.mlr.press/v235/smit24a.html); [Zhang et al., 2025](https://arxiv.org/abs/2502.08788); [Wynn et al., 2025](https://arxiv.org/abs/2509.05396); [Chen et al., 2025](https://arxiv.org/abs/2510.20963); [Pitre et al., ICML 2026](https://proceedings.mlr.press/v306/pitre26a.html); [Morante and Romero García-Rubio, 2026](https://link.springer.com/article/10.1007/s44564-026-00040-z).
