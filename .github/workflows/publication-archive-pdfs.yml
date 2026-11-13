@@ -1,0 +1,53 @@
+name: Publication evidence archive and PDFs
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'productivity-log.html'
+      - 'scripts/build_publication_archive.py'
+      - '.github/workflows/publication-archive-pdfs.yml'
+  schedule:
+    - cron: '41 2 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: publication-archive-pdfs
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF and HTML parsing dependencies
+        run: python -m pip install --disable-pip-version-check beautifulsoup4==4.12.3 reportlab==4.2.5
+      - name: Build PDFs and open indexes
+        run: python scripts/build_publication_archive.py
+      - name: Validate output links and PDF signatures
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          x=json.loads(Path("archive/metadata/periods.json").read_text())
+          assert x["record_count"] > 0, "No verified own-public-log records found"
+          assert len(x["periods"]) > 0, "No period downloads"
+          for entry in x["periods"]:
+              p=Path(entry["file"])
+              assert p.exists() and p.read_bytes().startswith(b"%PDF-"),p
+          p=Path(x["all_pdf"]);assert p.exists() and p.read_bytes().startswith(b"%PDF-")
+          print("Validated",len(x["periods"]),"period PDFs; indexed",x["record_count"],"records")
+          PY
+      - name: Version generated downloadable archive
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add archive/metadata/ archive/downloads/
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh source-linked period PDF bundles and publication metadata"
+            git push
+          fi
