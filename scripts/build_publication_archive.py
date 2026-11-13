@@ -31,13 +31,14 @@ def extract_records(path):
     records=[]
     for block in soup.find_all(["article","section"]):
         tables=block.select("table.progression-table")
-        if not tables: continue
+        narrative=block.select(".log-entry")
+        if not tables and not narrative: continue
         # Only top-level dated blocks; exclude undated ancestor sections.
         if not ("log-day" in (block.get("class") or []) or DATE.match(block.get("id") or "")):continue
         date_el=block.select_one("time[datetime]")
-        published=(date_el.get("datetime","")[:10] if date_el else "")
+        published=(block.get("id","") if DATE.match(block.get("id","")) else "")
         if not DATE.match(published):
-            published=(block.get("id","") if DATE.match(block.get("id","")) else "")
+            published=(date_el.get("datetime","")[:10] if date_el else "")
         if not published:continue
         try: dt.date.fromisoformat(published)
         except ValueError:continue
@@ -64,6 +65,28 @@ def extract_records(path):
                     "source_type":"Manifold Grace public activity log",
                     "rights_scope":"original catalogue metadata and links; externally linked content excluded"
                 })
+        for entry in narrative:
+            # Narrative entries are also publicly documented work. Keep the
+            # block date and a stable item anchor without inventing article dates.
+            heading=entry.find(["h3","h4"])
+            if not heading: continue
+            title=" ".join(heading.stripped_strings).strip()
+            if not title: continue
+            rid=entry.get("id") or ""
+            identity=f"{published}|{rid}|{title}"
+            record_id=rid or hashlib.sha256(identity.encode()).hexdigest()[:16]
+            link=entry.find("a",href=True)
+            evidence=valid_url(link["href"]) if link else ""
+            source_url=BASE+"productivity-log.html"+("#"+rid if rid else "#"+(block.get("id") or ""))
+            records.append({
+                "record_id":record_id,"recorded_date":published,
+                "original_publication_date":None,
+                "date_basis":"dated public productivity-log record, not original publication date of cited external content",
+                "title":title[:350],"source_url":source_url,
+                "evidence_url":evidence,
+                "source_type":"Manifold Grace public narrative log entry",
+                "rights_scope":"original catalogue metadata and links; externally linked content excluded"
+            })
     unique={}
     for rec in records:unique[(rec["recorded_date"],rec["record_id"])]=rec
     return sorted(unique.values(),key=lambda r:(r["recorded_date"],r["record_id"]),reverse=True)
