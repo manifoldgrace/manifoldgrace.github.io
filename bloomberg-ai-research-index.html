@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bloomberg AI — Dated Research News Index | Manifold Grace</title>
+<meta name="description" content="A source-linked, continuously collected index of Bloomberg AI and technology stories with original publication dates, authors and research categories.">
+<link rel="canonical" href="https://manifoldgrace.github.io/bloomberg-ai-research-index.html">
+<link rel="stylesheet" href="style.css?v=20261113-menu-standard">
+<script src="site-config.js" defer></script><script src="site-shell.js?v=20261113-journey-nav" defer></script>
+<style>
+.bai{width:min(1100px,92vw);margin:30px auto 70px}.bai h1{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.2;margin-bottom:14px}.bai p{max-width:88ch}
+.bai small,.bai .dim{color:#aaa}.bai .controls{display:grid;grid-template-columns:minmax(180px,2fr) repeat(2,minmax(125px,1fr));gap:12px;margin:22px 0}
+.bai input,.bai select{width:100%;background:#101010;color:white;border:0;border-bottom:1px solid #777;border-radius:0;padding:12px;font:inherit}
+.bai :is(input,select,a):focus-visible{outline:2px solid white;outline-offset:2px}
+.bai .meta{display:flex;flex-wrap:wrap;gap:18px;padding:14px 0;margin-bottom:18px;border-bottom:1px solid #333}
+.bai .results{display:grid;gap:0}.bai article{padding:18px 0;border-bottom:1px solid #333;background:#000}
+.bai article h2{font-size:1.02rem;margin:3px 0 7px;line-height:1.45}
+.bai article a{text-decoration:underline;text-decoration-color:#aaa;text-underline-offset:4px;color:#fff}
+.bai .tags{color:#bfbfbf;font-size:.76rem}.bai .source-link{font-size:.8rem}
+.bai .state{padding:20px 0;color:#ddd}.bai .method{border-top:1px solid #444;margin-top:35px;padding-top:17px}
+.bai .method a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.bai .more{background:#000;color:#fff;border:0;padding:12px 0;cursor:pointer;text-decoration:underline;font:inherit}
+@media(max-width:650px){.bai .controls{grid-template-columns:1fr}.bai{margin-top:22px}}
+</style>
+</head><body>
+<header><div class="wrap"><a class="brand" href="index.html">Manifold Grace</a><nav data-site-nav aria-label="Site navigation"></nav></div></header>
+<main class="bai" id="bloomberg-ai-research-index">
+<p class="dim">RESEARCH &amp; KNOWLEDGE / MEDIA EVIDENCE INDEX</p>
+<h1>Bloomberg AI — Dated Research News Index</h1>
+<p><strong>Research index established 13 November 2026.</strong> An evolving, source-linked record of Bloomberg articles relevant to AI research, governance, employment, economic systems, technology and public-interest oversight. Headlines, bylines, dates and original article URLs are preserved as publisher-supplied metadata; original stories remain on Bloomberg.</p>
+<p>Original publication dates are displayed for each item. Index collection times indicate when a record was retrieved, <em>not</em> when the article was first published. This independent index is not affiliated with Bloomberg, does not reproduce articles, and does not imply endorsement of the claims made in linked reporting.</p>
+<div class="meta" aria-live="polite"><span id="bai-count">0 verified indexed stories</span><span id="bai-updated">No successful feed collection recorded yet</span></div>
+<div class="controls">
+<label>Search headline, author or subject<input id="bai-search" type="search" placeholder="e.g. neural networks, competition"></label>
+<label>Research category<select id="bai-topic"><option value="">All categories</option></select></label>
+<label>Sort<select id="bai-sort"><option value="newest">Original date: newest</option><option value="oldest">Original date: oldest</option><option value="title">Headline A–Z</option></select></label>
+</div>
+<p id="bai-status" class="state" role="status">Loading the verified research archive…</p>
+<div id="bai-results" class="results" aria-live="polite"></div>
+<button class="more" id="bai-more" type="button" hidden>Show more indexed stories</button>
+<section class="method"><h2>Method, evidence and limitations</h2>
+<p>Collection reads published RSS metadata from Bloomberg Technology, Business, Industries and Markets feeds on a scheduled GitHub Actions workflow. Exact canonical article URLs are deduplicated. Articles are retained across successful collection runs; keyword-based inclusion and rule-based topic classification are provisional research labels, not assessments of editorial accuracy. Some stories may be missed between polling cycles, and a feed may be unavailable or rate-limited. The index therefore does not claim comprehensive Bloomberg AI coverage.</p>
+<p><strong>Chronology:</strong> retain the publisher's original RSS date, the archive's collection timestamp, and any later corrections as separate evidence. A feed-supplied date is a publication claim; independent archives and first-seen records can be used to assess disputes. Do not infer causation, misconduct or corporate coordination from similarities between articles.</p>
+<p><strong>Research connections:</strong> <a href="research.html">Research</a> · <a href="information-science.html">Information Science</a> · <a href="research-questions-observatory.html">Research Questions Observatory</a> · <a href="productivity-log.html#bloomberg-ai-index-20261113">Publication log</a>.</p>
+<p><strong>Original publisher:</strong> <a href="https://www.bloomberg.com/ai">Bloomberg AI</a> · <a href="https://www.bloomberg.com/feeds/technology/news.rss">Technology RSS</a> · <a href="https://github.com/manifoldgrace/manifoldgrace.github.io/actions/workflows/bloomberg-ai-index.yml">Collection workflow and run history</a>.</p>
+</section></main><footer><div class="wrap" data-site-footer></div></footer>
+<script src="assets/bloomberg-ai-research-index.js?v=20261113-1" defer></script>
+</body></html>
