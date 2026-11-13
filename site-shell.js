@@ -284,9 +284,11 @@
     ["Labs & Interactive", ["Learning Lab","Interdisciplinary Atlas","AI Discovery & Inventory","AI Governance","Knowledge VS Thinking","Information Science","AI Competence & Recruitment","App Design Ideas"]],
     ["Public Involvement", ["Register a Project","Request Independent Assessment","Become a Reviewer","Research Collaboration","Assessment Approach","Discover Projects","Contact","Team"]],
     ["Society, Culture & Enterprise", ["Society","Government & Society","Labour Market Analysis","Public","Sociology","Creative","Venture","Trading","Resourcefulness","Travel"]],
-    ["Further Learning & Directories", ["Bloomberg AI Research Index","Productivity Log","Why Daily Logs Matter","Independent Coverage","Company Intelligence & Financing","Careers"]]
+    ["Further Learning & Directories", ["Public Evidence Archive","Archive Research Papers","Bloomberg AI Research Index","Productivity Log","Why Daily Logs Matter","Independent Coverage","Company Intelligence & Financing","Careers"]]
   ];
   originalLinks.push(["Bloomberg AI Research Index","bloomberg-ai-research-index.html"]);
+  originalLinks.push(["Public Evidence Archive","publication-evidence-archive.html"]);
+  originalLinks.push(["Archive Research Papers","publication-archive-research.html"]);
   const usedLinks = new Set();
   const orderedGroups = destinationGroups.map(([heading, names]) => [heading,
     names.flatMap(name => {
