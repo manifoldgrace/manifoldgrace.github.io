@@ -1,6 +1,19 @@
 (() => {
   "use strict";
   const site = window.MANIFOLD_SITE || {};
+  // Site-wide content-derived visual navigation. Home globe and special interactive pages are unchanged.
+  if (!document.querySelector('script[data-mg-visual-atlas]')) {
+    const atlasStyle = document.createElement("link");
+    atlasStyle.rel = "stylesheet";
+    atlasStyle.href = "assets/site-visualizations.css?v=20261113-1";
+    atlasStyle.dataset.mgVisualAtlasStyle = "true";
+    document.head.appendChild(atlasStyle);
+    const atlasScript = document.createElement("script");
+    atlasScript.src = "assets/site-visualizations.js?v=20261113-1";
+    atlasScript.defer = true;
+    atlasScript.dataset.mgVisualAtlas = "true";
+    document.head.appendChild(atlasScript);
+  }
   // Interior-only visual system. Reversible by removing this small linked stylesheet.
   // Do not modify the homepage, Earth iframe or loading-preview visualisation.
   const currentDocument = (location.pathname.split("/").pop() || "index.html").toLowerCase();
