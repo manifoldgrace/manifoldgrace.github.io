@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-11-13T15:46:21Z",
+  "generated_utc": "2026-11-13T16:03:18Z",
   "scope": "Public dated Manifold Grace productivity-log entries only",
-  "count": 208,
+  "count": 209,
   "records": [
     {
       "record_id": "publication-archive-verification-20261113",
@@ -100,6 +100,17 @@
       "title": "Recorded eight research questions on publication histories, temporal evidence and long-term AI reliability",
       "source_url": "https://manifoldgrace.github.io/productivity-log.html#historical-publications-asi-questions-20261113",
       "evidence_url": "https://manifoldgrace.github.io/research-questions-observatory.html#historical-publication-asi-context-20261113",
+      "source_type": "Manifold Grace public activity log",
+      "rights_scope": "original catalogue metadata and links; externally linked content excluded"
+    },
+    {
+      "record_id": "guided-visitor-pathways-20261113",
+      "recorded_date": "2026-11-13",
+      "original_publication_date": null,
+      "date_basis": "dated public productivity-log record, not original publication date of cited external content",
+      "title": "Created a privacy-preserving guided visitor pathway to existing research, funding and project resources",
+      "source_url": "https://manifoldgrace.github.io/productivity-log.html#guided-visitor-pathways-20261113",
+      "evidence_url": "https://manifoldgrace.github.io/find-your-path.html",
       "source_type": "Manifold Grace public activity log",
       "rights_scope": "original catalogue metadata and links; externally linked content excluded"
     },
