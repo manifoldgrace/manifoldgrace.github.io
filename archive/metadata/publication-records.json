@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-11-13T17:01:03Z",
+  "generated_utc": "2026-11-13T23:24:43Z",
   "scope": "Public dated Manifold Grace productivity-log entries only",
-  "count": 214,
+  "count": 215,
   "records": [
     {
       "record_id": "tourism-distribution-ai-context-20261113",
@@ -144,6 +144,17 @@
       "title": "Published financing-agreement safeguards across funding, research and venture systems",
       "source_url": "https://manifoldgrace.github.io/productivity-log.html#funding-contract-risk-research-20261113",
       "evidence_url": "https://manifoldgrace.github.io/funding-procurement-partnerships.html#agreement-due-diligence-20261113",
+      "source_type": "Manifold Grace public activity log",
+      "rights_scope": "original catalogue metadata and links; externally linked content excluded"
+    },
+    {
+      "record_id": "formation-media-peace-contribution-20261113",
+      "recorded_date": "2026-11-13",
+      "original_publication_date": null,
+      "date_basis": "dated public productivity-log record, not original publication date of cited external content",
+      "title": "Cross-sector formation, information environments and peace-prevention research extension",
+      "source_url": "https://manifoldgrace.github.io/productivity-log.html#formation-media-peace-contribution-20261113",
+      "evidence_url": "https://manifoldgrace.github.io/societal-resilience-ai-adviser.html#formation-peace-prevention-20261113",
       "source_type": "Manifold Grace public activity log",
       "rights_scope": "original catalogue metadata and links; externally linked content excluded"
     },
