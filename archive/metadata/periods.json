@@ -1,0 +1,72 @@
+{
+  "generated_utc": "2026-11-13T14:26:45Z",
+  "scope": "Manifold Grace public log",
+  "record_count": 94,
+  "periods": [
+    {
+      "period": "daily",
+      "key": "2026-11-13",
+      "count": 13,
+      "file": "archive/downloads/daily/2026-11-13.pdf",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-13"
+    },
+    {
+      "period": "daily",
+      "key": "2026-11-12",
+      "count": 22,
+      "file": "archive/downloads/daily/2026-11-12.pdf",
+      "start_date": "2026-11-12",
+      "end_date": "2026-11-12"
+    },
+    {
+      "period": "daily",
+      "key": "2026-11-11",
+      "count": 41,
+      "file": "archive/downloads/daily/2026-11-11.pdf",
+      "start_date": "2026-11-11",
+      "end_date": "2026-11-11"
+    },
+    {
+      "period": "daily",
+      "key": "2026-11-08",
+      "count": 18,
+      "file": "archive/downloads/daily/2026-11-08.pdf",
+      "start_date": "2026-11-08",
+      "end_date": "2026-11-08"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-11-09",
+      "count": 76,
+      "file": "archive/downloads/weekly/2026-11-09.pdf",
+      "start_date": "2026-11-11",
+      "end_date": "2026-11-13"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-11-02",
+      "count": 18,
+      "file": "archive/downloads/weekly/2026-11-02.pdf",
+      "start_date": "2026-11-08",
+      "end_date": "2026-11-08"
+    },
+    {
+      "period": "monthly",
+      "key": "2026-11",
+      "count": 94,
+      "file": "archive/downloads/monthly/2026-11.pdf",
+      "start_date": "2026-11-08",
+      "end_date": "2026-11-13"
+    },
+    {
+      "period": "yearly",
+      "key": "2026",
+      "count": 94,
+      "file": "archive/downloads/yearly/2026.pdf",
+      "start_date": "2026-11-08",
+      "end_date": "2026-11-13"
+    }
+  ],
+  "all_pdf": "archive/downloads/all-records.pdf"
+}
