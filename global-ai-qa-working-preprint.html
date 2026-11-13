@@ -56,7 +56,24 @@
 <p>All rows have persistent REG-DOC identifiers, provisional review and sign-off role suggestions, candidate evidence types, reassessment triggers and regulatory-review metadata. Foreign keys to the previously drafted AI-QA-001–150 considerations remain empty until each link has been individually checked. ISO/IEC 5338 phase relationships are conceptual and must not be represented as verified clause-level conformity without reviewing the full standard.</p>
 <h3>Regulatory source corrections</h3><p>US Federal Reserve <a href="https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm">SR 26-2 (17 April 2026)</a> replaces SR 11-7 and SR 21-8. Its footnote 3 excludes generative and agentic AI models from the guidance while recognising the need for internal governance controls. The guidance is expected to be most relevant to supervised institutions with more than $30 billion in assets, with risk-sensitive exceptions.</p>
 <p>EU AI Act <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-11">Article 11</a>, Annex IV and <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-72">Article 72</a> are mapped conditionally to applicable high-risk AI provider obligations; applicability and commencement dates must be rechecked for each deployment. A retirement record must assess applicable retention law, not assume GDPR Article 17 requires unconditional erasure.</p>
-<p><strong>Uncompleted work:</strong> detailed legal applicability mapping, external audit, field-level data validation, quantitative test thresholds and independent validation. The 150 original QA considerations are preserved as a separate foundational inventory.</p></section><h2>Versioning and research continuity</h2>
+<p><strong>Uncompleted work:</strong> detailed legal applicability mapping, external audit, field-level data validation, quantitative test thresholds and independent validation. The 150 original QA considerations are preserved as a separate foundational inventory.</p></section><section id="qa-traceability-crosswalk-20261113" style="margin-top:3rem">
+<h2>Traceability crosswalk — preliminary mapping v0.1</h2>
+<p><strong>Research status: proposed links, not validated conformance or executed tests.</strong> All 35 documentation artefacts have preliminary associations to one or more of the 24 proposed lifecycle QA phases and to the original 150 ethical and societal QA considerations. These are topical, text-based matches requiring independent assessment and confirmation.</p>
+<table><thead><tr><th>Crosswalk measure</th><th>Initial outcome</th></tr></thead><tbody>
+<tr><td>Artefacts reviewed for preliminary mapping</td><td>35 / 35</td></tr>
+<tr><td>Proposed artefact-to-ethical-requirement links</td><td>165</td></tr>
+<tr><td>Distinct ethical requirements with at least one proposed link</td><td>90 / 150</td></tr>
+<tr><td>Ethical requirements with no current documentation link</td><td>60 / 150</td></tr>
+<tr><td>Proposed QA lifecycle phases represented</td><td>24 / 24</td></tr>
+<tr><td>Executed tests or externally verified clause-level mappings</td><td>0</td></tr></tbody></table>
+<p>Download the <a href="research/ai-qa/working-traceability-crosswalk-v0.1.json">JSON crosswalk with machine-readable gap list</a> or <a href="research/ai-qa/working-traceability-crosswalk-v0.1.csv">CSV mapping</a>. The original <a href="research/ai-qa/working-documentation-register-v0.1.json">documentation register</a> is preserved as v0.1; this is an additional mapping layer, not a silent replacement.</p>
+<h3>Required second-stage validation</h3><ol>
+<li>Review each proposed link against the full 150-item source text and the actual evidence obligation. Reject relationships based solely on superficial topic similarity.</li>
+<li>Classify the 60 unlinked considerations: genuine missing artefact, indirect control, intentionally uncovered research question, or duplicate/overlap.</li>
+<li>Confirm phase owners, stage-entry and exit criteria, ongoing monitoring and criteria for re-sign-off.</li>
+<li>Map external standards at the clause level only where full authoritative texts and appropriate legal review are available.</li>
+<li>Run independent pilot test cases, record failures and counterexamples, and update links with empirical evidence.</li></ol>
+<p><strong>Quality caution:</strong> coverage count is not an assurance score; 90 linked topics do not indicate 60% system safety or regulatory compliance.</p></section><h2>Versioning and research continuity</h2>
 <p>This is an early public record of a developing research programme. The companion working dossier, 150-item register, and 15-pilot workbook were prepared as draft files; public hosting of those binaries is a separate step and is not claimed by this page. Future revisions will distinguish proposed, tested, falsified, revised and independently replicated results.</p>
 <h2>Research question</h2>
 <p><strong>How can AI quality-assurance systems detect and reduce epistemic, institutional and objective failures while preserving human rights, freedom of conscience, autonomy and independently contestable oversight?</strong></p>
