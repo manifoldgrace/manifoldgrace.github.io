@@ -1235,3 +1235,31 @@ main .grid.mg-book-shelf,main .cards.mg-book-shelf,main .card-grid.mg-book-shelf
   main .wrap>h2,main .atlas-section>h2{font-size:clamp(1.18rem,5.1vw,1.55rem)}
   .nav-links{font-size:.83rem}
 }
+
+
+/* Site-wide monochrome button and logo standard — 13 November 2026.
+   Retain focus visibility; remove decorative frames, coloured button fills and red logo treatments. */
+:root{--mg-button-bg:#000;--mg-button-fg:#fff}
+:is(button,[type="button"],[type="submit"],[type="reset"],[role="button"],.button,.button-link,.btn,.cta,.cta-button,.nav-button,.action-button,.log-tools a,.log-tools button){
+  background:#000!important;
+  background-image:none!important;
+  color:#fff!important;
+  border:0!important;
+  box-shadow:none!important;
+  text-shadow:none!important;
+}
+:is(button,[type="button"],[type="submit"],[type="reset"],[role="button"],.button,.button-link,.btn,.cta,.cta-button,.nav-button,.action-button,.log-tools a,.log-tools button):is(:hover,:active){
+  background:#000!important;color:#fff!important;border:0!important;box-shadow:none!important;
+}
+:is(button,[type="button"],[type="submit"],[type="reset"],[role="button"],.button,.button-link,.btn,.cta,.cta-button,.nav-button,.action-button,.log-tools a,.log-tools button) :is(svg,i,.icon){
+  color:#fff!important;fill:currentColor;
+}
+:is(.site-logo,.brand-logo,.logo-icon,.logo svg,.brand svg,[class*="social-logo"],[class*="platform-logo"]){
+  color:#fff!important;fill:currentColor;
+}
+:is(.site-logo img,.brand-logo img,img.logo-icon,img[class*="social-logo"],img[class*="platform-logo"]){
+  filter:grayscale(1) brightness(0) invert(1);
+}
+:is(button,[type="button"],[type="submit"],[type="reset"],[role="button"],.button,.button-link,.btn,.cta,.cta-button,.nav-button,.action-button):focus-visible{
+  outline:2px solid #fff!important;outline-offset:3px;
+}
