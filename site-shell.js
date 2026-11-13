@@ -275,6 +275,29 @@
       ]
     ],
   ];
+  // Consistent visitor-oriented navigation: keep every existing destination, reorganised by purpose.
+  const originalLinks = navGroups.flatMap(([, items]) => items);
+  const destinationGroups = [
+    ["Introduction & About", ["About","Life Timeline","Life Philosophy","Professional","Recognition","Services"]],
+    ["My Story & Context", ["Heritage","From Heritage to Life","Family History & Genealogy","Faith","Socials","Photos"]],
+    ["Projects & Research Papers", ["Research","Emerging Research Horizon","Research Novelty & Fields","Research Transfer & Scope","MILES Research Architecture","Historical Corridors & AI Recordkeeping","Designing Fairer Systems","Societal Resilience & AI Adviser","Semantic Integrity & Public Communication","Semantic Integrity Frontier 2026","Research Questions & Solutions","Research Collaborations","Independent Work & Impact","My Books"]],
+    ["Labs & Interactive", ["Learning Lab","Interdisciplinary Atlas","AI Discovery & Inventory","AI Governance","Knowledge VS Thinking","Information Science","AI Competence & Recruitment","App Design Ideas"]],
+    ["Public Involvement", ["Register a Project","Request Independent Assessment","Become a Reviewer","Research Collaboration","Assessment Approach","Discover Projects","Contact","Team"]],
+    ["Society, Culture & Enterprise", ["Society","Government & Society","Labour Market Analysis","Public","Sociology","Creative","Venture","Trading","Resourcefulness","Travel"]],
+    ["Further Learning & Directories", ["Productivity Log","Why Daily Logs Matter","Independent Coverage","Company Intelligence & Financing","Careers"]]
+  ];
+  const usedLinks = new Set();
+  const orderedGroups = destinationGroups.map(([heading, names]) => [heading,
+    names.flatMap(name => {
+      const match = originalLinks.find(link => link[0] === name && !usedLinks.has(link[1]));
+      if (!match) return [];
+      usedLinks.add(match[1]);
+      return [match];
+    })
+  ]);
+  const remaining = originalLinks.filter(link => !usedLinks.has(link[1]));
+  if (remaining.length) orderedGroups[orderedGroups.length - 1][1].push(...remaining);
+  navGroups.splice(0, navGroups.length, ...orderedGroups);
   // A visual mnemonic, not a statement of evidence status.
   const notation = Object.freeze({
     "Research & Knowledge": ["⊢", "01 // RK"],
