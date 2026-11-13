@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-11-13T16:32:09Z",
+  "generated_utc": "2026-11-13T16:34:31Z",
   "scope": "Public dated Manifold Grace productivity-log entries only",
-  "count": 212,
+  "count": 213,
   "records": [
     {
       "record_id": "tourism-distribution-ai-context-20261113",
@@ -144,6 +144,17 @@
       "title": "Published financing-agreement safeguards across funding, research and venture systems",
       "source_url": "https://manifoldgrace.github.io/productivity-log.html#funding-contract-risk-research-20261113",
       "evidence_url": "https://manifoldgrace.github.io/funding-procurement-partnerships.html#agreement-due-diligence-20261113",
+      "source_type": "Manifold Grace public activity log",
+      "rights_scope": "original catalogue metadata and links; externally linked content excluded"
+    },
+    {
+      "record_id": "educational-access-ai-link-20261113",
+      "recorded_date": "2026-11-13",
+      "original_publication_date": null,
+      "date_basis": "dated public productivity-log record, not original publication date of cited external content",
+      "title": "Linked children's educational access and cultural participation to AI data and model evaluation",
+      "source_url": "https://manifoldgrace.github.io/productivity-log.html#educational-access-ai-link-20261113",
+      "evidence_url": "https://manifoldgrace.github.io/equitable-living-initiatives.html#educational-access-ai-knowledge-chain-20261113",
       "source_type": "Manifold Grace public activity log",
       "rights_scope": "original catalogue metadata and links; externally linked content excluded"
     },
