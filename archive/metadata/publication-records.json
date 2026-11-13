@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-11-13T15:21:26Z",
+  "generated_utc": "2026-11-13T15:33:33Z",
   "scope": "Public dated Manifold Grace productivity-log entries only",
-  "count": 206,
+  "count": 207,
   "records": [
     {
       "record_id": "publication-archive-verification-20261113",
@@ -166,6 +166,17 @@
       "title": "Established conceptual collaborative AI research consortium initiative, project, paper and contextual research question",
       "source_url": "https://manifoldgrace.github.io/productivity-log.html#consortium-concept-202611",
       "evidence_url": "https://manifoldgrace.github.io/collaborative-intelligence-consortium.html",
+      "source_type": "Manifold Grace public activity log",
+      "rights_scope": "original catalogue metadata and links; externally linked content excluded"
+    },
+    {
+      "record_id": "bloomberg-newsletter-unsubscribe-ux-20261113",
+      "recorded_date": "2026-11-13",
+      "original_publication_date": null,
+      "date_basis": "dated public productivity-log record, not original publication date of cited external content",
+      "title": "Recorded newsletter unsubscribe accessibility and interface concern",
+      "source_url": "https://manifoldgrace.github.io/productivity-log.html#bloomberg-newsletter-unsubscribe-ux-20261113",
+      "evidence_url": "https://www.bloomberg.com/account/newsletters",
       "source_type": "Manifold Grace public activity log",
       "rights_scope": "original catalogue metadata and links; externally linked content excluded"
     },
