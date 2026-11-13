@@ -1,0 +1,117 @@
+{
+  "scope": "Publisher-distributed RSS source registry, not a verified complete publisher archive",
+  "created": "2026-11-13",
+  "rights_note": "Metadata and links only. Each publisher's terms govern retrieval and reuse; this index confers no content-reproduction or AI-training rights.",
+  "sources": [
+    {
+      "id": "bbc-world",
+      "name": "BBC News",
+      "region": "United Kingdom / international",
+      "topic": "World",
+      "feed": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "homepage": "https://www.bbc.com/news",
+      "type": "publisher-rss",
+      "ingestion": "pilot"
+    },
+    {
+      "id": "bbc-technology",
+      "name": "BBC News",
+      "region": "United Kingdom / international",
+      "topic": "Technology",
+      "feed": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "homepage": "https://www.bbc.com/news",
+      "type": "publisher-rss",
+      "ingestion": "pilot"
+    },
+    {
+      "id": "guardian-world",
+      "name": "The Guardian",
+      "region": "United Kingdom / international",
+      "topic": "World",
+      "feed": "https://www.theguardian.com/world/rss",
+      "homepage": "https://www.theguardian.com/world",
+      "type": "publisher-rss",
+      "ingestion": "pilot"
+    },
+    {
+      "id": "aljazeera-all",
+      "name": "Al Jazeera English",
+      "region": "Qatar / international",
+      "topic": "World",
+      "feed": "https://www.aljazeera.com/xml/rss/all.xml",
+      "homepage": "https://www.aljazeera.com/",
+      "type": "publisher-rss",
+      "ingestion": "pilot"
+    },
+    {
+      "id": "sky-home",
+      "name": "Sky News",
+      "region": "United Kingdom / international",
+      "topic": "General",
+      "feed": "https://feeds.skynews.com/feeds/rss/home.xml",
+      "homepage": "https://news.sky.com/",
+      "type": "publisher-rss",
+      "ingestion": "pilot"
+    },
+    {
+      "id": "dw",
+      "name": "Deutsche Welle",
+      "region": "Germany / international",
+      "topic": "World",
+      "feed": null,
+      "homepage": "https://www.dw.com/en/top-stories/s-9097",
+      "type": "site",
+      "ingestion": "source-review"
+    },
+    {
+      "id": "france24",
+      "name": "France 24",
+      "region": "France / international",
+      "topic": "World",
+      "feed": null,
+      "homepage": "https://www.france24.com/en/",
+      "type": "site",
+      "ingestion": "source-review"
+    },
+    {
+      "id": "reuters",
+      "name": "Reuters",
+      "region": "International",
+      "topic": "Business, world",
+      "feed": null,
+      "homepage": "https://www.reuters.com/",
+      "type": "site",
+      "ingestion": "licence-review"
+    },
+    {
+      "id": "ap",
+      "name": "Associated Press",
+      "region": "United States / international",
+      "topic": "World",
+      "feed": null,
+      "homepage": "https://apnews.com/",
+      "type": "site",
+      "ingestion": "licence-review"
+    },
+    {
+      "id": "ft",
+      "name": "Financial Times",
+      "region": "United Kingdom / international",
+      "topic": "Finance",
+      "feed": null,
+      "homepage": "https://www.ft.com/",
+      "type": "site",
+      "ingestion": "licence-review"
+    },
+    {
+      "id": "bloomberg",
+      "name": "Bloomberg",
+      "region": "United States / international",
+      "topic": "Markets, technology",
+      "feed": null,
+      "homepage": "https://www.bloomberg.com/",
+      "type": "separate-existing-index",
+      "ingestion": "existing-separate-index"
+    }
+  ]
+}
