@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Institutional Oversight Case Explorer | Manifold Grace</title>
+<meta name="description" content="Search a 116-case research screening register on institutional scrutiny, accountability and oversight. Entries are not automatically evidence of corruption.">
+<link rel="stylesheet" href="style.css?v=20261113-menu-standard">
+<script src="site-config.js" defer></script><script src="site-shell.js?v=20261113-journey-nav" defer></script>
+<style>
+:root{color-scheme:dark}body{background:#050505;color:#ececec;font:14px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;margin:0}main{width:min(1150px,93vw);margin:54px auto 90px}
+a{color:#f6f6f6;text-underline-offset:3px}a:hover{color:#c5c5c5}
+.eyebrow{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#aaa}
+h1{font-size:clamp(1.55rem,3vw,2.35rem);font-weight:540;letter-spacing:-.04em;line-height:1.18;margin:.55rem 0}
+.intro{color:#bcbcbc;max-width:72ch;margin:0 0 26px;font-size:.88rem}
+.metrics{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 20px}.metrics strong{font-size:1.35rem;font-variant-numeric:tabular-nums;font-weight:550}.metrics span{color:#a8a8a8;font-size:.75rem}
+.controls{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:9px;margin:20px 0 12px;align-items:stretch}
+input,select,button{font:inherit;font-size:.79rem;min-height:40px;box-sizing:border-box}
+input,select{background:#171717;color:#f8f8f8;border:1px solid #383838;padding:9px 12px;border-radius:4px;width:100%}
+button,.download{border:0!important;border-radius:0!important;background:#141414;color:#fff;padding:10px 15px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;justify-content:center}
+button:hover,.download:hover{background:#303030}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid white;outline-offset:3px}
+.meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center;padding:8px 0 13px;color:#aaa;font-size:.72rem}
+.actions{display:flex;gap:6px;flex-wrap:wrap}
+.table-wrap{overflow-x:auto;border-top:1px solid #444;border-bottom:1px solid #333}
+table{width:100%;border-collapse:collapse;text-align:left;min-width:720px}
+th{font-weight:500;color:#aaa;letter-spacing:.03em;font-size:.7rem;padding:11px 12px;border-bottom:1px solid #333}
+td{padding:12px;border-bottom:1px solid #222;vertical-align:top;font-size:.76rem}
+tr:hover td{background:#111}
+.case-name{font-weight:570;color:#f2f2f2}
+.subtle{color:#999;font-size:.7rem}.small{font-size:.72rem}
+.tag{display:inline-block;color:#bbb;background:#202020;padding:2px 7px;font-size:.68rem}
+.case-link{padding:0;text-align:left;background:none;color:#f4f4f4;text-decoration:underline;text-decoration-color:#555;text-underline-offset:3px;min-height:0}
+.case-link:hover{background:none;text-decoration-color:white}
+.details{display:none;background:#101010;border-bottom:1px solid #444;padding:20px 24px;color:#ccc}
+.details.open{display:block}.details h2{color:#f5f5f5;font-size:1rem;font-weight:560;margin:0 0 8px}.details dl{display:grid;grid-template-columns:150px 1fr;gap:8px;margin:8px 0}.details dt{color:#999}.details dd{margin:0;overflow-wrap:anywhere}
+.pager{display:flex;justify-content:center;gap:15px;align-items:center;margin:15px 0;color:#aaa;font-size:.73rem}
+.note{border-top:1px solid #242424;padding-top:20px;margin-top:25px;max-width:85ch;color:#b4b4b4;font-size:.76rem}
+.note h2{font-weight:550;color:white;font-size:1rem}
+.empty{padding:35px 12px;color:#aaa;text-align:center}
+@media(max-width:710px){main{margin-top:24px}.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}.controls button{grid-column:1/-1}table{min-width:0}thead{display:none}tbody tr.case{display:grid;grid-template-columns:1fr 1fr;gap:5px 10px;padding:12px 2px;border-bottom:1px solid #333}tbody tr.case td{padding:0;border:0;background:transparent!important}tbody tr.case td:first-child{grid-column:1/-1;font-size:.9rem}tbody tr.case td:nth-child(4){grid-column:1/-1}.details dl{grid-template-columns:1fr;gap:2px}.details dt{margin-top:7px}.metrics{margin:12px 0}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main id="main-content">
+<div class="eyebrow">Society &amp; Governance / Institutional Accountability</div>
+<h1>Oversight Case Explorer</h1>
+<p class="intro">A compact, searchable register of distinct inquiries and investigations for comparative research into institutional accountability. <strong>Inclusion is not a finding of corruption or oversight capture.</strong> The individual findings require case-specific verification.</p>
+<div class="metrics"><strong id="total">116</strong><span>screening candidates</span><span>·</span><strong id="visible">116</strong><span>matching current filters</span></div>
+<div class="controls" role="search" aria-label="Search case register">
+<input id="q" type="search" placeholder="Search cases, countries or investigation type" aria-label="Search cases">
+<select id="region" aria-label="Filter jurisdiction"><option value="">All jurisdictions</option></select>
+<select id="type" aria-label="Filter category"><option value="">All categories</option></select>
+<button id="clear" type="button">Reset filters</button>
+</div>
+<div class="meta"><span id="status" role="status">Loading research register…</span><div class="actions"><a class="download" href="data/oversight-case-register-116.csv" download>Download CSV ↓</a><button type="button" id="copylink">Copy view link</button></div></div>
+<div class="table-wrap"><table aria-label="Oversight case research screening register"><thead><tr><th scope="col">ID / Case</th><th scope="col">Jurisdiction</th><th scope="col">Year / period</th><th scope="col">Source classification</th></tr></thead><tbody id="results"></tbody></table></div>
+<div class="pager"><button id="prev" type="button">Previous</button><span id="pageInfo"></span><button id="next" type="button">Next</button></div>
+<section class="note" aria-labelledby="method"><h2 id="method">How to interpret these records</h2><p>This is a <strong>discovery and screening dataset</strong>, not an independently audited register of 116 instances of corruption. Many entries document the existence of an inquiry or investigation only. A named inquiry does not demonstrate deliberate interference by its oversight body. Before drawing conclusions, consult the primary report, record its actual findings, identify any judicial rulings, and separately assess conflict of interest, investigative independence, obstruction, remedies and unresolved questions.</p><p>The dataset preserves source-directory links and research limitations. Records are not legal findings or accusations against named individuals. The CSV is machine-readable and may be analysed offline.</p></section>
+</main>
+<script>
+(()=>{
+'use strict';
+const dataUrl='data/oversight-case-register-116.csv',pageSize=20;
+let all=[],filtered=[],page=0,opened=null;
+const $=id=>document.getElementById(id);
+function csvParse(text){const rows=[];let row=[],part='',quote=false;for(let i=0;i<text.length;i++){const c=text[i];if(quote){if(c==='"'&&text[i+1]==='"'){part+='"';i++;}else if(c==='"')quote=false;else part+=c;}else if(c==='"')quote=true;else if(c===','){row.push(part);part='';}else if(c==='\n'||c==='\r'){if(c==='\r'&&text[i+1]==='\n')i++;row.push(part);if(row.some(v=>v!==''))rows.push(row);row=[];part='';}else part+=c;}if(part||row.length){row.push(part);rows.push(row)}return rows;}
+function record(r,h){const obj={};h.forEach((k,i)=>obj[k]=r[i]||'');return obj}
+function node(tag,text,cl){const e=document.createElement(tag);if(text!=null)e.textContent=text;if(cl)e.className=cl;return e}
+function field(d,k){return d[k]||''}
+function detailRow(k,v,link=false){const dt=node('dt',k),dd=node('dd');if(link&&/^https:\/\//.test(v)){const a=node('a','Open source directory ↗');a.href=v;a.target='_blank';a.rel='noopener noreferrer';dd.append(a)}else dd.textContent=v||'Not recorded';return[dt,dd]}
+function detail(d){const tr=node('tr'),td=node('td');td.colSpan=4;td.style.padding='0';const box=node('div',null,'details open');box.append(node('h2',field(d,'Distinct case / investigation')));const dl=node('dl');[
+['Case identifier',field(d,'ID')],['Jurisdiction',field(d,'Jurisdiction')],['Report year or status',field(d,'Report year / status')],['Source category',field(d,'Source category')],['Evidence classification',field(d,'Evidence classification')],['Research action',field(d,'Research action')],['Verification limitation',field(d,'Verification limitation')],['Source directory',field(d,'Evidence source directory'),true]
+].forEach(([a,b,c])=>dl.append(...detailRow(a,b,c)));box.append(dl);td.append(box);tr.append(td);return tr}
+function render(){const t=$('results');t.replaceChildren();const start=page*pageSize;const view=filtered.slice(start,start+pageSize);$('visible').textContent=filtered.length.toLocaleString();$('pageInfo').textContent=filtered.length?('Page '+(page+1)+' of '+Math.ceil(filtered.length/pageSize)):'No results';$('prev').disabled=page===0;$('next').disabled=start+pageSize>=filtered.length;
+for(const d of view){const tr=node('tr',null,'case');const b=node('button',field(d,'Distinct case / investigation'),'case-link');b.type='button';b.setAttribute('aria-expanded',opened===field(d,'ID')?'true':'false');b.onclick=()=>{opened=opened===field(d,'ID')?null:field(d,'ID');render()};const a=node('td');a.append(node('span',String(field(d,'ID')).padStart(3,'0')+' · ','subtle'),b);tr.append(a,node('td',field(d,'Jurisdiction')),node('td',field(d,'Report year / status')),node('td',field(d,'Source category')));t.append(tr);if(opened===field(d,'ID'))t.append(detail(d))}
+if(!view.length){const tr=node('tr'),td=node('td','No records match these filters.','empty');td.colSpan=4;tr.append(td);t.append(tr)}
+$('status').textContent=filtered.length+' of '+all.length+' records shown. Select a case to inspect its source and verification limitations.'}
+function update(){const q=$('q').value.trim().toLocaleLowerCase(),r=$('region').value,c=$('type').value;filtered=all.filter(d=>(!r||field(d,'Jurisdiction')===r)&&(!c||field(d,'Source category')===c)&&(!q||Object.values(d).join(' ').toLocaleLowerCase().includes(q)));page=0;opened=null;render();const u=new URL(location.href);u.searchParams.set('q',$('q').value);u.searchParams.set('region',r);u.searchParams.set('category',c);for(const k of ['q','region','category'])if(!u.searchParams.get(k))u.searchParams.delete(k);history.replaceState(null,'',u)}
+for(const id of ['q','region','type'])$(id).addEventListener(id==='q'?'input':'change',update);
+$('clear').onclick=()=>{$('q').value='';$('region').value='';$('type').value='';update()};
+$('prev').onclick=()=>{if(page>0){page--;opened=null;render()}};$('next').onclick=()=>{if((page+1)*pageSize<filtered.length){page++;opened=null;render()}};
+$('copylink').onclick=async()=>{try{await navigator.clipboard.writeText(location.href);$('copylink').textContent='Copied';setTimeout(()=>$('copylink').textContent='Copy view link',1800)}catch(_){$('copylink').textContent='Use browser address'}};
+fetch(dataUrl,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Dataset unavailable');return r.text()}).then(txt=>{const rows=csvParse(txt);const h=rows.shift();all=rows.map(r=>record(r,h)).filter(r=>r['ID']&&r['Distinct case / investigation']);for(const [id,key] of [['region','Jurisdiction'],['type','Source category']]){[...new Set(all.map(d=>d[key]))].sort().forEach(v=>{const o=node('option',v);o.value=v;$(id).append(o)})}const p=new URLSearchParams(location.search);$('q').value=p.get('q')||'';$('region').value=p.get('region')||'';$('type').value=p.get('category')||'';$('total').textContent=all.length;update()}).catch(e=>{$('status').textContent='The online dataset could not be loaded. The CSV download is still available.';$('results').replaceChildren();$('pageInfo').textContent='Unavailable'});
+})();
+</script>
+</body></html>
