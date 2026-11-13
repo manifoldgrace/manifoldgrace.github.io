@@ -1,0 +1,80 @@
+{
+  "id": "MG-AIQA-PRINCIPLE-2026-11-13-001",
+  "status": "proposed_normative_requirement_not_empirically_validated",
+  "date_recorded": "2026-11-13",
+  "title": "Durable, citable and independently auditable preservation of foreseeable-harm warnings and QA findings",
+  "origin": "User-proposed research principle raised in conversation; summarized and structured for public working research without private case material",
+  "thesis": "When credible foreseeable-harm concerns, safety warnings, or material QA findings are identified, accountable organisations should preserve retrievable, tamper-evident records so that decisions and corrective actions can be independently examined. Knowing of a risk without appropriate documentation may undermine accountability; it does not automatically establish intent to cause harm.",
+  "design_requirements": [
+    {
+      "id": "PRES-01",
+      "requirement": "Register material warnings with a stable identifier, creation timestamp, subject, evidence source and classification."
+    },
+    {
+      "id": "PRES-02",
+      "requirement": "Separate factual evidence, interpretation, hypothesis, allegation, review decision and verified outcome."
+    },
+    {
+      "id": "PRES-03",
+      "requirement": "Record provenance, authority, exact record versions, integrity hashes and correction history."
+    },
+    {
+      "id": "PRES-04",
+      "requirement": "Maintain redundant backups using independent failure domains; periodically perform and record restore tests."
+    },
+    {
+      "id": "PRES-05",
+      "requirement": "Preserve append-only or otherwise tamper-evident audit history, while enabling legally required corrections, access controls and retention/deletion."
+    },
+    {
+      "id": "PRES-06",
+      "requirement": "Provide stable citations and role-appropriate discoverability, including mechanisms for independent scrutiny and appeal."
+    },
+    {
+      "id": "PRES-07",
+      "requirement": "Track warning acknowledgment, risk ownership, decision reasoning, mitigating action, residual risk and reassessment triggers."
+    },
+    {
+      "id": "PRES-08",
+      "requirement": "Document access and correction governance to protect personal data, confidentiality, legal privileges and public-interest disclosures."
+    }
+  ],
+  "falsification_and_evaluation": [
+    {
+      "test_id": "PRES-T01",
+      "method": "Sample registered warnings and verify that a third-party reviewer can retrieve the exact historical version using its public or authorised stable citation.",
+      "metric": "retrieval_success_rate",
+      "target": "define risk-sensitive target before pilot; investigate any missing critical record"
+    },
+    {
+      "test_id": "PRES-T02",
+      "method": "Simulate deletion/corruption of the primary store and attempt restoration from an independent backup.",
+      "metric": "verified_recovery_rate_and_recovery_time",
+      "target": "preregister restoration objectives and execute drill"
+    },
+    {
+      "test_id": "PRES-T03",
+      "method": "Attempt to alter an earlier decision or warning without adding an explicit correction event.",
+      "metric": "undetected_alteration_rate",
+      "target": "zero undetected changes in controlled trials"
+    },
+    {
+      "test_id": "PRES-T04",
+      "method": "Audit warning-to-action links across an agreed time period.",
+      "metric": "traceable_disposition_rate",
+      "target": "set threshold with independent governance review"
+    },
+    {
+      "test_id": "PRES-T05",
+      "method": "Inspect sample records for unauthorised personal-data exposure or retention beyond lawful limits.",
+      "metric": "privacy_and_retention_control_failures",
+      "target": "zero critical violations in controlled audit"
+    }
+  ],
+  "limitations": [
+    "No storage can truthfully be guaranteed indestructible; design for resilience, independent custody, restoration and integrity verification.",
+    "Durable accountability records must remain compatible with justified redaction, correction, privacy law and proportionate retention.",
+    "A warning, allegation or hypothesis is not proof that its subject committed wrongdoing.",
+    "The proposal has not undergone independent legal, standards or empirical validation."
+  ]
+}
