@@ -49,5 +49,10 @@ Submissions are suggestions for research, not consent to model training. Avoid s
 ## Manuscript outline
 Introduction; domain taxonomy; related work and overlap audit; hypotheses and threat model; dataset construction; baseline architecture; evaluation measures; quantitative findings (not yet available); interpretation and limitations; ethics and public contribution; reproducibility appendices.
 
+## Synthetic pilot infrastructure — November 2026
+A bounded author-created set of [twelve fictional practice cases](../research/cross-domain-evaluation/pilot-cases.jsonl), [instructions and scoring rubric](../research/cross-domain-evaluation/README.md) and [submission/evaluation template](../research/cross-domain-evaluation/contribution-and-evaluation-template.md) has been committed. These are development fixtures, not empirical findings or held-out evaluation data. No models have been measured against them in this protocol.
+
+**Additional overlap requiring control:** [METER (2026)](https://aclanthology.org/2026.acl-long.1668/) already evaluates multiple causal levels in common context; [TFRBench (2026)](https://proceedings.mlr.press/v306/ahamed26a.html) evaluates grounded reasoning in forecasting with iterative multi-agent verification. Therefore neither multi-level causal evaluation nor multi-agent reasoning verification can be claimed novel here. The candidate distinction is integrative measurement of evaluator self-errors, evidence provenance, disagreement, safe knowledge retention and public contribution across life domains, if replicated improvements are shown.
+
 ## Next planned milestone
-Create a small, audited synthetic test set, a baseline table and an evidence-to-claim scoring template; evaluate before expanding to participant-contributed materials.
+Pre-register a comparator matrix, specify permitted-model configuration, and develop separately held-out, independently adjudicated cases. Run and report results only after a protocol review; preserve errors and negative findings.
