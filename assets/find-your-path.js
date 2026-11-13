@@ -1,0 +1,30 @@
+(()=>{"use strict";
+const resources={
+ evidence:[["Research & Knowledge","research.html","Interdisciplinary research, context, methods and evidence status."],["Research questions register","research-questions-observatory.html","Numbered, searchable research questions with expandable context."],["Research papers and archives","publication-archive-research.html","Working manuscripts, transparent provenance and sources."]],
+ assurance:[["Architecture and assurance pathways","project-architecture-assurance-pathways.html","Compliance, accessibility, cybersecurity and AI review learning paths."],["AI systems assurance","research.html#continuous-agent-assisted-architecture-assurance","Research on governance and verification; check the page for status."],["Venture systems and controls","venture-systems.html","Operational controls, sample architecture and review gates."]],
+ software:[["Projects & Architecture","projects.html","Candidate projects, technical approaches and linked learning resources."],["AI systems demonstrations","ai-systems-demonstrations.html","System demos and design examples; distinguish concepts from completed builds."],["Reusable archive code","https://github.com/manifoldgrace/manifoldgrace.github.io/blob/main/scripts/build_publication_archive.py","Original open educational archive generator and source code."]],
+ funding:[["Funding, procurement and partnerships","funding-procurement-partnerships.html","Official gateways, funding agreement risks and collaboration readiness."],["Research funding directory","research-funding.html","Research-focused support, eligibility and funding conditions."],["Venture systems","venture-systems.html#venture-finance-risk-20261113","Financial risk gate, downside scenarios and control requirements."]],
+ learning:[["Interdisciplinary learning pathways","project-architecture-assurance-pathways.html","Beginner, intermediate and advanced educational pathways."],["Learning lab","learning-lab.html","Learning and exploration resources."],["Research and education","research.html","Research methods, education and knowledge questions."]],
+ archive:[["Downloadable public evidence archive","publication-evidence-archive.html","Daily, weekly, monthly and annual PDFs of dated public records."],["Archive research papers","publication-archive-research.html","Archival infrastructure, policy and higher-education working papers."],["Bloomberg AI reference index","bloomberg-ai-research-index.html","A separate provider-specific index; partial coverage, not a complete archive."]],
+ culture:[["Society and governance","society.html","Societal systems, responsible institutions and public questions."],["Historical and family research","family-history-genealogy.html","Research into historical connections with source-uncertainty safeguards."],["Research observatory","research-questions-observatory.html","Interdisciplinary cultural and societal research."]],
+ engage:[["Research collaborations","research.html","Research initiatives, questions and potential partnership areas."],["Project register","projects.html","Explore possible areas for technical or research contributions."],["Site directory","site-directory.html","Explore all material before deciding how to engage."]]
+};
+const roleMap={researcher:["evidence","learning","engage"],funder:["funding","evidence","assurance"],business:["software","assurance","funding"],public:["assurance","evidence","funding"],developer:["software","assurance","learning"],learner:["learning","evidence","software"],community:["culture","evidence","engage"],journalist:["archive","evidence","assurance"],general:["evidence","archive","software"]};
+const $=id=>document.getElementById(id);
+const radio=[...document.querySelectorAll('input[name="role"]')], checks=[...document.querySelectorAll('input[name="interest"]')];
+function selectedRole(){return radio.find(x=>x.checked)?.value||"general"}
+function chosen(){return checks.filter(x=>x.checked).map(x=>x.value)}
+function safeUrl(url){if(url.startsWith("https://github.com/manifoldgrace/"))return url;if(/^[a-z0-9-]+\.html(?:#[a-z0-9-]+)?$/.test(url))return url;return "site-directory.html";}
+function card(item){const el=document.createElement("article");el.className="resource";const a=document.createElement("a");a.href=safeUrl(item[1]);a.textContent=item[0];const p=document.createElement("p");p.textContent=item[2];el.append(a,p);return el}
+function build(){const role=selectedRole(),pref=chosen();const keys=[...new Set([...pref,...roleMap[role]])];
+const items=[],seen=new Set();for(const k of keys){for(const r of resources[k]||[]){if(!seen.has(r[1])){items.push(r);seen.add(r[1]);}}}
+const box=$("pathway-links");box.replaceChildren();for(const x of items.slice(0,8))box.append(card(x));
+const rest=$("pathway-alternatives");rest.replaceChildren();const alternate=[["Browse all site content","site-directory.html","An open index of available pages."],["View the research questions","research-questions-observatory.html","Explore questions across disciplines."],["See funding agreement guidance","funding-procurement-partnerships.html#agreement-due-diligence-20261113","Review conditions before seeking or accepting finance."]];
+for(const x of alternate.filter(x=>!seen.has(x[1])).slice(0,3))rest.append(card(x));
+$("pathway-explanation").textContent="Suggested from your selected interests and perspective. These links do not change the underlying research or evaluate your eligibility.";
+$("pathway-results").hidden=false;$("pathway-results").scrollIntoView({block:"start",behavior:"smooth"});}
+radio.forEach(x=>x.addEventListener("change",()=>{$("step-interests").hidden=false;$("pathway-results").hidden=true}));
+checks.forEach(x=>x.addEventListener("change",()=>{$("pathway-results").hidden=true}));
+$("show-path").addEventListener("click",build);
+$("start-over").addEventListener("click",()=>{radio.forEach(x=>x.checked=false);checks.forEach(x=>x.checked=false);$("step-interests").hidden=true;$("pathway-results").hidden=true;$("step-identity").scrollIntoView({block:"start",behavior:"smooth"})});
+})();
