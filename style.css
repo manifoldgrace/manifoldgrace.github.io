@@ -1263,3 +1263,14 @@ main .grid.mg-book-shelf,main .cards.mg-book-shelf,main .card-grid.mg-book-shelf
 :is(button,[type="button"],[type="submit"],[type="reset"],[role="button"],.button,.button-link,.btn,.cta,.cta-button,.nav-button,.action-button):focus-visible{
   outline:2px solid #fff!important;outline-offset:3px;
 }
+
+
+/* Navigation standard 2026-11-13: visually unboxed monochrome navigation, all pages */
+:is(.site-nav-group>summary, .mg-menu-toggle, .site-nav-panel a, .nav-links a, .mg-news-pill, .mg-news-region, .mg-news-views button){
+ border:0!important;border-radius:0!important;box-shadow:none!important;background:#000!important;color:#fff!important;
+}
+:is(.site-nav-group>summary, .mg-menu-toggle, .site-nav-panel a):hover{background:#151515!important}
+:is(.site-nav-group>summary, .mg-menu-toggle, .site-nav-panel a):focus-visible{outline:2px solid #fff!important;outline-offset:2px}
+:is(.mg-notation-glyph,.mg-notation-code){color:#fff!important;border:0!important;box-shadow:none!important}
+.site-nav-panel{border:0!important;box-shadow:none!important;background:#000!important}
+:is(.mg-news-pill,.mg-news-region,.mg-news-views button)[aria-pressed="true"]{background:#222!important;color:#fff!important;text-decoration:underline;text-underline-offset:3px}
