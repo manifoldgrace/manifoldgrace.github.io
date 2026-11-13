@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-11-13T14:39:26Z",
+  "generated_utc": "2026-11-13T14:47:32Z",
   "scope": "Public dated Manifold Grace productivity-log entries only",
-  "count": 204,
+  "count": 205,
   "records": [
     {
       "record_id": "publication-archive-verification-20261113",
@@ -23,6 +23,17 @@
       "title": "Built period-based downloadable public evidence archive and three linked working manuscripts",
       "source_url": "https://manifoldgrace.github.io/productivity-log.html#publication-archive-implementation-20261113",
       "evidence_url": "https://manifoldgrace.github.io/publication-evidence-archive.html",
+      "source_type": "Manifold Grace public activity log",
+      "rights_scope": "original catalogue metadata and links; externally linked content excluded"
+    },
+    {
+      "record_id": "publication-archive-dated-source-register-20261113",
+      "recorded_date": "2026-11-13",
+      "original_publication_date": null,
+      "date_basis": "dated public productivity-log record, not original publication date of cited external content",
+      "title": "Added dated source and standards register to archive project and three working manuscripts",
+      "source_url": "https://manifoldgrace.github.io/productivity-log.html#publication-archive-dated-source-register-20261113",
+      "evidence_url": "https://manifoldgrace.github.io/publication-archive-research.html#verified-source-register-20261113",
       "source_type": "Manifold Grace public activity log",
       "rights_scope": "original catalogue metadata and links; externally linked content excluded"
     },
