@@ -1,0 +1,1177 @@
+{
+  "schema_version": "0.1",
+  "document_title": "Global AI QA Documentation and Sign-Off Taxonomy",
+  "classification": "working_research_register_not_certification",
+  "publication_date": "2026-11-13",
+  "provenance": "User-supplied specification expanded into illustrative artefact inventory. Not an exhaustive global legal checklist.",
+  "assurance_principles": [
+    "continuous_assurance",
+    "conditional_applicability",
+    "empirical_provisionality",
+    "versioned_regulatory_review"
+  ],
+  "notes": [
+    "The 150 ethical QA considerations remain a separate baseline; links will be populated only after row-level mapping.",
+    "ISO/IEC 5338 clause mapping is provisional and not a claim of access to the full licensed standard.",
+    "SR 26-2 replaces SR 11-7 and SR 21-8 and excludes generative/agentic AI from its scope; applicability remains risk-based.",
+    "EU AI Act Article 11/Annex IV and Article 72 should be evaluated for high-risk system roles and current commencement.",
+    "GDPR Article 17 does not demand universal deletion on retirement; lawful retention exceptions may apply.",
+    "Examples of responsible job roles are proposed, not mandatory titles."
+  ],
+  "records": [
+    {
+      "artefact_id": "REG-DOC-001",
+      "title": "AI feasibility and impact charter",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Inception",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5338",
+        "ISO/IEC 42001"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Baseline comparison; impact screening",
+      "required_evidence": [
+        "Business case",
+        "non-AI baseline",
+        "impact register"
+      ],
+      "review_authority": "Ethics and risk reviewers",
+      "sign_off_role": "Executive sponsor",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Purpose, autonomy, or scope change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-002",
+      "title": "System and model requirements specification",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Inception",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5338",
+        "ISO/IEC 25059"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Acceptance-criteria review",
+      "required_evidence": [
+        "Requirements",
+        "traceability",
+        "acceptance limits"
+      ],
+      "review_authority": "Quality engineering lead",
+      "sign_off_role": "System owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Requirements revision",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-003",
+      "title": "Ethics and human-rights impact assessment",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Inception",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 42001",
+        "NIST AI RMF"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Rights-impact review; challenge session",
+      "required_evidence": [
+        "Risk register",
+        "consultation evidence"
+      ],
+      "review_authority": "Independent ethics reviewer",
+      "sign_off_role": "Accountable risk owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "New affected population or harm",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-004",
+      "title": "Jurisdiction and legal applicability register",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Inception",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "EU AI Act",
+        "sector law"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Role and applicability assessment",
+      "required_evidence": [
+        "Jurisdiction map",
+        "counsel notes",
+        "effective dates"
+      ],
+      "review_authority": "Legal or compliance team",
+      "sign_off_role": "Accountable compliance officer",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Regulatory supersession; new market",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-005",
+      "title": "RACI and accountable decision-owner matrix",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Inception",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 42001"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Separation-of-duties review",
+      "required_evidence": [
+        "Approvals matrix",
+        "authority records"
+      ],
+      "review_authority": "Independent governance review",
+      "sign_off_role": "Executive system owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Organisational restructure",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-006",
+      "title": "Third-party model and vendor risk assessment",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Procurement",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Third_Party_API",
+        "Open_Weight"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 42001",
+        "NIST AI RMF"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Vendor diligence; change-risk review",
+      "required_evidence": [
+        "Vendor model information",
+        "contracts",
+        "dependency inventory"
+      ],
+      "review_authority": "Procurement and security",
+      "sign_off_role": "Vendor risk owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Vendor or model revision",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-007",
+      "title": "Model licence and data rights assessment",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Procurement",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Third_Party_API",
+        "Open_Weight",
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "Applicable IP and privacy law"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Licence and contract review",
+      "required_evidence": [
+        "Permissions register",
+        "licence text",
+        "restrictions"
+      ],
+      "review_authority": "Legal and data governance",
+      "sign_off_role": "Rights owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Licence or usage change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-008",
+      "title": "Data provenance and lineage procedure",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Data",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5259",
+        "EU AI Act Art.10 where applicable"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Lineage reconstruction; source checks",
+      "required_evidence": [
+        "Source inventory",
+        "lineage graph",
+        "hashes"
+      ],
+      "review_authority": "Data QA reviewers",
+      "sign_off_role": "Data governance lead",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "New source; ingestion change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-009",
+      "title": "Dataset quality and subgroup audit",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Data",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Predictive_ML",
+        "CV_Edge",
+        "NLP",
+        "Time_Series"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5259",
+        "ISO/IEC 25059"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Missingness and subgroup analysis",
+      "required_evidence": [
+        "Distribution, labels, coverage and drift reports"
+      ],
+      "review_authority": "Independent data reviewer",
+      "sign_off_role": "Data governance lead",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Population, label or schema change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-010",
+      "title": "Privacy and security data handling assessment",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Data",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "GDPR where applicable",
+        "ISO/IEC 42001"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Data-flow and access testing",
+      "required_evidence": [
+        "Data inventory",
+        "access logs",
+        "retention decisions"
+      ],
+      "review_authority": "Privacy and security reviewers",
+      "sign_off_role": "Privacy/security owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Processing-purpose change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-011",
+      "title": "Synthetic-data validation record",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Data",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "GenAI_RAG",
+        "Predictive_ML",
+        "Multimodal"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5259",
+        "NIST AI RMF"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Synthetic-origin stratification; contamination checks",
+      "required_evidence": [
+        "Generation lineage",
+        "quality evaluation"
+      ],
+      "review_authority": "Data and evaluation teams",
+      "sign_off_role": "Model owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Synthetic generation change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-012",
+      "title": "System architecture and trust-boundary map",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Architecture",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5338",
+        "NIST AI RMF"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Design review; threat modelling",
+      "required_evidence": [
+        "Data flows",
+        "tool permissions",
+        "component versions"
+      ],
+      "review_authority": "Architecture and security review",
+      "sign_off_role": "System architect",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "New component or privilege",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-013",
+      "title": "Fallback and resilience design",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Architecture",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5338",
+        "operational controls"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Fault injection; failover simulation",
+      "required_evidence": [
+        "Fallback decision matrix",
+        "recovery evidence"
+      ],
+      "review_authority": "SRE and safety reviewers",
+      "sign_off_role": "Operations owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Critical dependency change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-014",
+      "title": "Model card and conceptual soundness report",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Development",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Predictive_ML",
+        "GenAI_RAG",
+        "CV_Edge",
+        "Time_Series"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "NIST AI RMF",
+        "SR 26-2 conditional"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Holdout testing; calibration; independent challenge",
+      "required_evidence": [
+        "Model card",
+        "limits",
+        "provenance",
+        "validation logs"
+      ],
+      "review_authority": "Independent validation",
+      "sign_off_role": "Model risk owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Retraining; architecture change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-015",
+      "title": "Training and optimisation audit record",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Development",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Trained_Model"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 42001",
+        "NIST AI RMF"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Reproducibility; reward and objective assessment",
+      "required_evidence": [
+        "Runs",
+        "hyperparameters",
+        "reward definitions"
+      ],
+      "review_authority": "ML validation team",
+      "sign_off_role": "Training lead",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Hyperparameter or reward change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-016",
+      "title": "Explainability appropriateness report",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Development",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Predictive_ML",
+        "CV_Edge",
+        "GNN"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 25059",
+        "NIST AI RMF"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Faithfulness and stability tests",
+      "required_evidence": [
+        "Explanation tests",
+        "known limitations"
+      ],
+      "review_authority": "Independent evaluator",
+      "sign_off_role": "Model owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Feature or model change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-017",
+      "title": "Offline benchmark and holdout evaluation",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Validation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 25059",
+        "ISO/IEC TS 25058"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Holdout; stress; bootstrap intervals",
+      "required_evidence": [
+        "Metric definitions",
+        "splits",
+        "results",
+        "uncertainty"
+      ],
+      "review_authority": "Independent QA",
+      "sign_off_role": "Validation owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Model or evaluation-set change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-018",
+      "title": "Fairness and distributional impact audit",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Validation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Consequential_Decision"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 42001",
+        "applicable equalities law"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Subgroup error; counterfactual testing",
+      "required_evidence": [
+        "Subgroup and sampling reports"
+      ],
+      "review_authority": "Fairness and legal reviewers",
+      "sign_off_role": "Risk owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Shift in affected groups",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-019",
+      "title": "Adversarial and security testing log",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Validation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "GenAI_RAG",
+        "Agentic",
+        "Multimodal",
+        "CV_Edge"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "NIST AI 600-1",
+        "OWASP LLM Top 10"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Prompt-injection; misuse; privilege tests",
+      "required_evidence": [
+        "Test traces",
+        "mitigations",
+        "reproducible findings"
+      ],
+      "review_authority": "Independent security testers",
+      "sign_off_role": "Security owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Tool, model, or prompt change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-020",
+      "title": "RAG retrieval and citation verification",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Validation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "GenAI_RAG"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "NIST AI 600-1"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Entailment and retrieval benchmark",
+      "required_evidence": [
+        "Retrieval set",
+        "citation labels",
+        "groundedness stats"
+      ],
+      "review_authority": "Independent evaluation",
+      "sign_off_role": "Product owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Corpus, index or retriever change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-021",
+      "title": "Agent tool permission and approval gate",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Validation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Agentic"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "NIST AI RMF",
+        "security baseline"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Sandbox; unauthorised-action tests",
+      "required_evidence": [
+        "Permission matrix",
+        "tool traces",
+        "escalation logs"
+      ],
+      "review_authority": "Security and operations",
+      "sign_off_role": "Agent risk owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "New tool or autonomy increase",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-022",
+      "title": "Human oversight and operator competency record",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Validation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Consequential_Decision",
+        "Agentic",
+        "Medical"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "EU AI Act where applicable",
+        "ISO/IEC 42001"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Override drills; operator assessment",
+      "required_evidence": [
+        "Competency logs",
+        "escalation and override results"
+      ],
+      "review_authority": "Training and domain reviewers",
+      "sign_off_role": "Operations owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Changed task or operator role",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-023",
+      "title": "Sensor and physical environment validation",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Validation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "CV_Edge",
+        "Robotics"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "Applicable sector safety standards"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Environmental and latency tests",
+      "required_evidence": [
+        "Calibration",
+        "failure cases",
+        "timing logs"
+      ],
+      "review_authority": "Independent safety engineering",
+      "sign_off_role": "Safety authority",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Hardware or environment change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-024",
+      "title": "Reward alignment and simulation transfer assessment",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Validation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "RL",
+        "Robotics"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "NIST AI RMF",
+        "sector-specific safety"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Reward-hacking; sim-to-real checks",
+      "required_evidence": [
+        "Simulation protocols",
+        "failure rates"
+      ],
+      "review_authority": "Independent safety reviewers",
+      "sign_off_role": "RL system owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Reward or deployment change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-025",
+      "title": "Federated privacy and aggregation audit",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Validation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Federated"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "Data protection law",
+        "NIST AI RMF"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Privacy accounting; poisoning resistance",
+      "required_evidence": [
+        "Privacy budgets",
+        "aggregation tests"
+      ],
+      "review_authority": "Privacy and security review",
+      "sign_off_role": "Data security owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Client cohort or aggregation change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-026",
+      "title": "User acceptance and domain evaluation",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Release",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5338"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "UAT; domain expertise review",
+      "required_evidence": [
+        "UAT results",
+        "user feedback",
+        "limitations"
+      ],
+      "review_authority": "Domain QA",
+      "sign_off_role": "System owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "New use case",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-027",
+      "title": "Operational readiness and go-no-go record",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Release",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5338",
+        "ISO/IEC 42001"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Rollback drill; load testing; evidence audit",
+      "required_evidence": [
+        "Gate report",
+        "unresolved risks",
+        "fallback tests"
+      ],
+      "review_authority": "SRE and QA leads",
+      "sign_off_role": "Authorised release owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Major release or critical incident",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-028",
+      "title": "User transparency and release notes",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Release",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "User_Facing"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "Applicable transparency duties",
+        "ISO/IEC 42001"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Disclosure and accessibility review",
+      "required_evidence": [
+        "Release log",
+        "limitations",
+        "disclosures"
+      ],
+      "review_authority": "Product and legal review",
+      "sign_off_role": "Release owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Material behaviour change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-029",
+      "title": "Production deployment validation",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Deployment",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5338"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Production smoke tests; telemetry review",
+      "required_evidence": [
+        "Deployment checksum",
+        "configuration and access logs"
+      ],
+      "review_authority": "SRE and release QA",
+      "sign_off_role": "Operations owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Environment migration",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-030",
+      "title": "Live monitoring and model drift procedure",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Operation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "NIST AI RMF",
+        "EU AI Act Art.72 conditional"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Monitoring; sampling; change detection",
+      "required_evidence": [
+        "Thresholds",
+        "trend charts",
+        "lag estimates"
+      ],
+      "review_authority": "MLOps and risk reviewers",
+      "sign_off_role": "Operations risk owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Threshold breach; population change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-031",
+      "title": "Incident response and rollback plan",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Operation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 42001",
+        "NIST AI RMF"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Incident drills; rollback checks",
+      "required_evidence": [
+        "Incident register",
+        "rollback trace"
+      ],
+      "review_authority": "Security and SRE",
+      "sign_off_role": "Incident commander",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Critical incident; new hazard",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-032",
+      "title": "Periodic revalidation and change approval",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Operation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 42001",
+        "ISO/IEC 5338"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Regression; reapproval",
+      "required_evidence": [
+        "Model diffs",
+        "benchmark comparisons",
+        "approval log"
+      ],
+      "review_authority": "Independent QA",
+      "sign_off_role": "Risk and release owners",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Scheduled review; material change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-033",
+      "title": "Financial and environmental impact report",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Operation",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Compute_Intensive"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "Internal ESG/FinOps policy",
+        "applicable law"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Cost cap; energy accounting",
+      "required_evidence": [
+        "Compute and emissions methods",
+        "cost logs"
+      ],
+      "review_authority": "FinOps and sustainability",
+      "sign_off_role": "Operations owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Compute profile or policy change",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-034",
+      "title": "Retirement and successor migration plan",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Retirement",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "All"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "ISO/IEC 5338",
+        "applicable retention law"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Dependency and migration testing",
+      "required_evidence": [
+        "EOL plan",
+        "migration evidence",
+        "continuity"
+      ],
+      "review_authority": "Compliance and infrastructure",
+      "sign_off_role": "System owner",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "End of service",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    },
+    {
+      "artefact_id": "REG-DOC-035",
+      "title": "Retention and deletion disposition record",
+      "version": "0.1",
+      "status": "proposed_not_validated",
+      "ethical_ref_ids": [],
+      "ethical_mapping_status": "pending_row_level_mapping_to_AI_QA_001_150",
+      "lifecycle_phase": "Retirement",
+      "iso_5338_mapping": "conceptual_phase_mapping_clause_review_pending",
+      "applicable_architectures": [
+        "Personal_Data"
+      ],
+      "conditional_triggers": "Applicability depends on architecture, jurisdiction, role, sector, impact, data handling and system risk; assess before activation.",
+      "primary_reference_frameworks": [
+        "GDPR where applicable",
+        "records law"
+      ],
+      "reference_applicability_status": "to_be_confirmed_per_deployment",
+      "test_method": "Retention schedule and deletion verification",
+      "required_evidence": [
+        "Disposition, lawful holds and authorised deletion evidence"
+      ],
+      "review_authority": "Privacy and records team",
+      "sign_off_role": "Accountable data controller",
+      "monitoring": "risk_proportionate_operational_monitoring_if_applicable",
+      "reassessment_conditions": "Retention change; lawful request",
+      "regulatory_review_cycle": "at least annually and on material legal change",
+      "last_reviewed": "2026-11-13",
+      "evidence_links": [],
+      "sign_off_status": "not_assessed"
+    }
+  ]
+}
