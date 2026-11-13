@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-11-13T14:26:45Z",
+  "generated_utc": "2026-11-13T14:32:41Z",
   "scope": "Manifold Grace public log",
-  "record_count": 94,
+  "record_count": 148,
   "periods": [
     {
       "period": "daily",
@@ -36,6 +36,150 @@
       "end_date": "2026-11-08"
     },
     {
+      "period": "daily",
+      "key": "2026-11-06",
+      "count": 7,
+      "file": "archive/downloads/daily/2026-11-06.pdf",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-06"
+    },
+    {
+      "period": "daily",
+      "key": "2026-11-05",
+      "count": 5,
+      "file": "archive/downloads/daily/2026-11-05.pdf",
+      "start_date": "2026-11-05",
+      "end_date": "2026-11-05"
+    },
+    {
+      "period": "daily",
+      "key": "2026-11-04",
+      "count": 3,
+      "file": "archive/downloads/daily/2026-11-04.pdf",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-04"
+    },
+    {
+      "period": "daily",
+      "key": "2026-11-03",
+      "count": 2,
+      "file": "archive/downloads/daily/2026-11-03.pdf",
+      "start_date": "2026-11-03",
+      "end_date": "2026-11-03"
+    },
+    {
+      "period": "daily",
+      "key": "2026-11-02",
+      "count": 5,
+      "file": "archive/downloads/daily/2026-11-02.pdf",
+      "start_date": "2026-11-02",
+      "end_date": "2026-11-02"
+    },
+    {
+      "period": "daily",
+      "key": "2026-11-01",
+      "count": 10,
+      "file": "archive/downloads/daily/2026-11-01.pdf",
+      "start_date": "2026-11-01",
+      "end_date": "2026-11-01"
+    },
+    {
+      "period": "daily",
+      "key": "2026-10-31",
+      "count": 2,
+      "file": "archive/downloads/daily/2026-10-31.pdf",
+      "start_date": "2026-10-31",
+      "end_date": "2026-10-31"
+    },
+    {
+      "period": "daily",
+      "key": "2026-10-30",
+      "count": 2,
+      "file": "archive/downloads/daily/2026-10-30.pdf",
+      "start_date": "2026-10-30",
+      "end_date": "2026-10-30"
+    },
+    {
+      "period": "daily",
+      "key": "2026-10-29",
+      "count": 3,
+      "file": "archive/downloads/daily/2026-10-29.pdf",
+      "start_date": "2026-10-29",
+      "end_date": "2026-10-29"
+    },
+    {
+      "period": "daily",
+      "key": "2026-10-28",
+      "count": 5,
+      "file": "archive/downloads/daily/2026-10-28.pdf",
+      "start_date": "2026-10-28",
+      "end_date": "2026-10-28"
+    },
+    {
+      "period": "daily",
+      "key": "2026-10-13",
+      "count": 1,
+      "file": "archive/downloads/daily/2026-10-13.pdf",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-13"
+    },
+    {
+      "period": "daily",
+      "key": "2026-10-01",
+      "count": 1,
+      "file": "archive/downloads/daily/2026-10-01.pdf",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-01"
+    },
+    {
+      "period": "daily",
+      "key": "2026-09-26",
+      "count": 1,
+      "file": "archive/downloads/daily/2026-09-26.pdf",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26"
+    },
+    {
+      "period": "daily",
+      "key": "2026-09-13",
+      "count": 1,
+      "file": "archive/downloads/daily/2026-09-13.pdf",
+      "start_date": "2026-09-13",
+      "end_date": "2026-09-13"
+    },
+    {
+      "period": "daily",
+      "key": "2026-08-25",
+      "count": 1,
+      "file": "archive/downloads/daily/2026-08-25.pdf",
+      "start_date": "2026-08-25",
+      "end_date": "2026-08-25"
+    },
+    {
+      "period": "daily",
+      "key": "2026-08-18",
+      "count": 1,
+      "file": "archive/downloads/daily/2026-08-18.pdf",
+      "start_date": "2026-08-18",
+      "end_date": "2026-08-18"
+    },
+    {
+      "period": "daily",
+      "key": "2026-05-13",
+      "count": 3,
+      "file": "archive/downloads/daily/2026-05-13.pdf",
+      "start_date": "2026-05-13",
+      "end_date": "2026-05-13"
+    },
+    {
+      "period": "daily",
+      "key": "2026-03-20",
+      "count": 1,
+      "file": "archive/downloads/daily/2026-03-20.pdf",
+      "start_date": "2026-03-20",
+      "end_date": "2026-03-20"
+    },
+    {
       "period": "weekly",
       "key": "2026-11-09",
       "count": 76,
@@ -46,25 +190,137 @@
     {
       "period": "weekly",
       "key": "2026-11-02",
-      "count": 18,
+      "count": 40,
       "file": "archive/downloads/weekly/2026-11-02.pdf",
-      "start_date": "2026-11-08",
+      "start_date": "2026-11-02",
       "end_date": "2026-11-08"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-10-26",
+      "count": 22,
+      "file": "archive/downloads/weekly/2026-10-26.pdf",
+      "start_date": "2026-10-28",
+      "end_date": "2026-11-01"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-10-12",
+      "count": 1,
+      "file": "archive/downloads/weekly/2026-10-12.pdf",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-13"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-09-28",
+      "count": 1,
+      "file": "archive/downloads/weekly/2026-09-28.pdf",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-01"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-09-21",
+      "count": 1,
+      "file": "archive/downloads/weekly/2026-09-21.pdf",
+      "start_date": "2026-09-26",
+      "end_date": "2026-09-26"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-09-07",
+      "count": 1,
+      "file": "archive/downloads/weekly/2026-09-07.pdf",
+      "start_date": "2026-09-13",
+      "end_date": "2026-09-13"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-08-24",
+      "count": 1,
+      "file": "archive/downloads/weekly/2026-08-24.pdf",
+      "start_date": "2026-08-25",
+      "end_date": "2026-08-25"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-08-17",
+      "count": 1,
+      "file": "archive/downloads/weekly/2026-08-17.pdf",
+      "start_date": "2026-08-18",
+      "end_date": "2026-08-18"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-05-11",
+      "count": 3,
+      "file": "archive/downloads/weekly/2026-05-11.pdf",
+      "start_date": "2026-05-13",
+      "end_date": "2026-05-13"
+    },
+    {
+      "period": "weekly",
+      "key": "2026-03-16",
+      "count": 1,
+      "file": "archive/downloads/weekly/2026-03-16.pdf",
+      "start_date": "2026-03-20",
+      "end_date": "2026-03-20"
     },
     {
       "period": "monthly",
       "key": "2026-11",
-      "count": 94,
+      "count": 126,
       "file": "archive/downloads/monthly/2026-11.pdf",
-      "start_date": "2026-11-08",
+      "start_date": "2026-11-01",
       "end_date": "2026-11-13"
+    },
+    {
+      "period": "monthly",
+      "key": "2026-10",
+      "count": 14,
+      "file": "archive/downloads/monthly/2026-10.pdf",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31"
+    },
+    {
+      "period": "monthly",
+      "key": "2026-09",
+      "count": 2,
+      "file": "archive/downloads/monthly/2026-09.pdf",
+      "start_date": "2026-09-13",
+      "end_date": "2026-09-26"
+    },
+    {
+      "period": "monthly",
+      "key": "2026-08",
+      "count": 2,
+      "file": "archive/downloads/monthly/2026-08.pdf",
+      "start_date": "2026-08-18",
+      "end_date": "2026-08-25"
+    },
+    {
+      "period": "monthly",
+      "key": "2026-05",
+      "count": 3,
+      "file": "archive/downloads/monthly/2026-05.pdf",
+      "start_date": "2026-05-13",
+      "end_date": "2026-05-13"
+    },
+    {
+      "period": "monthly",
+      "key": "2026-03",
+      "count": 1,
+      "file": "archive/downloads/monthly/2026-03.pdf",
+      "start_date": "2026-03-20",
+      "end_date": "2026-03-20"
     },
     {
       "period": "yearly",
       "key": "2026",
-      "count": 94,
+      "count": 148,
       "file": "archive/downloads/yearly/2026.pdf",
-      "start_date": "2026-11-08",
+      "start_date": "2026-03-20",
       "end_date": "2026-11-13"
     }
   ],

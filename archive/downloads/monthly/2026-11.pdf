@@ -215,7 +215,7 @@ endobj
 <<
 /Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
   14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 
-  24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R ] /Contents 200 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 199 0 R /Resources <<
+  24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R ] /Contents 260 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 259 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -508,7 +508,7 @@ endobj
 /Annots [ 33 0 R 34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 
   43 0 R 44 0 R 45 0 R 46 0 R 47 0 R 48 0 R 49 0 R 50 0 R 51 0 R 52 0 R 
   53 0 R 54 0 R 55 0 R 56 0 R 57 0 R 58 0 R 59 0 R 60 0 R 61 0 R 62 0 R 
-  63 0 R 64 0 R 65 0 R 66 0 R 67 0 R 68 0 R 69 0 R 70 0 R 71 0 R 72 0 R ] /Contents 201 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 199 0 R /Resources <<
+  63 0 R 64 0 R 65 0 R 66 0 R 67 0 R 68 0 R 69 0 R 70 0 R 71 0 R 72 0 R ] /Contents 261 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 259 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -816,7 +816,7 @@ endobj
   84 0 R 85 0 R 86 0 R 87 0 R 88 0 R 89 0 R 90 0 R 91 0 R 92 0 R 93 0 R 
   94 0 R 95 0 R 96 0 R 97 0 R 98 0 R 99 0 R 100 0 R 101 0 R 102 0 R 103 0 R 
   104 0 R 105 0 R 106 0 R 107 0 R 108 0 R 109 0 R 110 0 R 111 0 R 112 0 R 113 0 R 
-  114 0 R 115 0 R ] /Contents 202 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 199 0 R /Resources <<
+  114 0 R 115 0 R ] /Contents 262 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 259 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1124,7 +1124,7 @@ endobj
   127 0 R 128 0 R 129 0 R 130 0 R 131 0 R 132 0 R 133 0 R 134 0 R 135 0 R 136 0 R 
   137 0 R 138 0 R 139 0 R 140 0 R 141 0 R 142 0 R 143 0 R 144 0 R 145 0 R 146 0 R 
   147 0 R 148 0 R 149 0 R 150 0 R 151 0 R 152 0 R 153 0 R 154 0 R 155 0 R 156 0 R 
-  157 0 R 158 0 R ] /Contents 203 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 199 0 R /Resources <<
+  157 0 R 158 0 R ] /Contents 263 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 259 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1386,10 +1386,38 @@ endobj
 endobj
 196 0 obj
 <<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#research-public-copy-20261106)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 117.7969 161.9489 129.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+197 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/research-project.html?project=avenue-evidence)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 117.7969 257.3479 129.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+198 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#research-dossiers-20261106)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 84.79685 161.9489 96.19685 ] /Subtype /Link /Type /Annot
+>>
+endobj
+199 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/research-project.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 84.79685 257.3479 96.19685 ] /Subtype /Link /Type /Annot
+>>
+endobj
+200 0 obj
+<<
 /Annots [ 160 0 R 161 0 R 162 0 R 163 0 R 164 0 R 165 0 R 166 0 R 167 0 R 168 0 R 169 0 R 
   170 0 R 171 0 R 172 0 R 173 0 R 174 0 R 175 0 R 176 0 R 177 0 R 178 0 R 179 0 R 
   180 0 R 181 0 R 182 0 R 183 0 R 184 0 R 185 0 R 186 0 R 187 0 R 188 0 R 189 0 R 
-  190 0 R 191 0 R 192 0 R 193 0 R 194 0 R 195 0 R ] /Contents 204 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 199 0 R /Resources <<
+  190 0 R 191 0 R 192 0 R 193 0 R 194 0 R 195 0 R 196 0 R 197 0 R 198 0 R 199 0 R ] /Contents 264 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 259 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1397,59 +1425,475 @@ endobj
 >> /Type /Page
 >>
 endobj
-197 0 obj
+201 0 obj
 <<
-/PageMode /UseNone /Pages 199 0 R /Type /Catalog
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#iod-learning-qa-recruitment-20261106)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 754.7969 161.9489 766.1969 ] /Subtype /Link /Type /Annot
 >>
 endobj
-198 0 obj
+202 0 obj
 <<
-/Author (Manifold Grace) /CreationDate (D:20261113142645+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261113142645+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/professional.html#iod-learning-quality-20261106)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 754.7969 257.3479 766.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+203 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#footer-dropdowns-20261106)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 721.7969 161.9489 733.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+204 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#footer-asset-refresh-20261106)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 688.7969 161.9489 700.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+205 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#company-register-correspondence-20261106)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 655.7969 161.9489 667.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+206 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/independent-work-impact.html#register-integrity-correspondence-20261106)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 655.7969 257.3479 667.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+207 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#ai-assistance-quality-protocol-20261106)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 622.7969 161.9489 634.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+208 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/llm-evaluation-governance.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 622.7969 257.3479 634.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+209 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#programme-navigation-20261105)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 565.7969 161.9489 577.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+210 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/index.html#selected-projects)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 565.7969 257.3479 577.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+211 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#ma-research-avenues-20261105)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 532.7969 161.9489 544.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+212 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/emerging-horizon-research.html#ma-research-avenues)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 532.7969 257.3479 544.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+213 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#learning-workspaces-20261105)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 499.7969 161.9489 511.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+214 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/manifoldgrace/ManifoldGrace/tree/main/learning-projects)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 499.7969 257.3479 511.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+215 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#company-gap-scan-log-20261105)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 466.7969 161.9489 478.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+216 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/feature-contributions.html#company-gap-scan-20261105)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 466.7969 257.3479 478.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+217 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#bottleneck-avenues-20261105)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 433.7969 161.9489 445.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+218 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/emerging-horizon-research.html#bottleneck-research-avenues)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 433.7969 257.3479 445.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+219 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#moderation-catalogue-20261104)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 376.7969 161.9489 388.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+220 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/developer-participation-barriers.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 376.7969 257.3479 388.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+221 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#maternal-career-policy-20261104)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 343.7969 161.9489 355.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+222 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/independent-work-impact.html#maternal-career-continuity-20261104)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 343.7969 257.3479 355.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+223 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#codex-feature-20261104)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 310.7969 161.9489 322.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+224 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://github.com/openai/codex/issues/59267)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 310.7969 257.3479 322.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+225 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#hayes-line-transparency-20261103)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 253.7969 161.9489 265.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+226 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/independent-work-impact.html#hayes-line-20261103)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 253.7969 257.3479 265.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+227 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#contribution-audit-20261103)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 220.7969 161.9489 232.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+228 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/feature-contributions.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 220.7969 257.3479 232.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+229 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#mistral-agent-followup-20261102)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 163.7969 161.9489 175.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+230 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/feature-contributions.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 163.7969 257.3479 175.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+231 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#llama-feedback-20261102)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 130.7969 161.9489 142.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+232 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/feature-contributions.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 130.7969 257.3479 142.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+233 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#kimi-referral-20261102)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 97.79685 161.9489 109.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+234 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/feature-contributions.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 97.79685 257.3479 109.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+235 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#church-urban-fund-human-20261102)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 64.79685 161.9489 76.19685 ] /Subtype /Link /Type /Annot
+>>
+endobj
+236 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/faith.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 64.79685 257.3479 76.19685 ] /Subtype /Link /Type /Annot
+>>
+endobj
+237 0 obj
+<<
+/Annots [ 201 0 R 202 0 R 203 0 R 204 0 R 205 0 R 206 0 R 207 0 R 208 0 R 209 0 R 210 0 R 
+  211 0 R 212 0 R 213 0 R 214 0 R 215 0 R 216 0 R 217 0 R 218 0 R 219 0 R 220 0 R 
+  221 0 R 222 0 R 223 0 R 224 0 R 225 0 R 226 0 R 227 0 R 228 0 R 229 0 R 230 0 R 
+  231 0 R 232 0 R 233 0 R 234 0 R 235 0 R 236 0 R ] /Contents 265 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 259 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+238 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#ai-platform-feedback-20261102)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 754.7969 161.9489 766.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+239 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/feature-contributions.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 754.7969 257.3479 766.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+240 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#perplexity-api-reply-20261101)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 697.7969 161.9489 709.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+241 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/feature-contributions.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 697.7969 257.3479 709.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+242 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#named-groq-reply-20261101)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 664.7969 161.9489 676.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+243 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/feature-contributions.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 664.7969 257.3479 676.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+244 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#church-care-outreach-20261101)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 631.7969 161.9489 643.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+245 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/faith.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 631.7969 257.3479 643.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+246 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#church-care-followups-20261101)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 598.7969 161.9489 610.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+247 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#ai-outreach-gmail-20261101)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 565.7969 161.9489 577.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+248 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/feature-contributions.html)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 565.7969 257.3479 577.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+249 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#ai-evidence-outreach-20261101)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 532.7969 161.9489 544.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+250 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/ai-product-feedback.html#evidence-registry-20261101)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 532.7969 257.3479 544.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+251 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#2026-11-01)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 499.7969 161.9489 511.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+252 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/faith.html#lifelong-church-care)
+>> /Border [ 0 0 0 ] /Rect [ 169.7009 499.7969 257.3479 511.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+253 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#2026-11-01)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 466.7969 161.9489 478.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+254 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#2026-11-01)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 433.7969 161.9489 445.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+255 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://manifoldgrace.github.io/productivity-log.html#2026-11-01)
+>> /Border [ 0 0 0 ] /Rect [ 62.69291 400.7969 161.9489 412.1969 ] /Subtype /Link /Type /Annot
+>>
+endobj
+256 0 obj
+<<
+/Annots [ 238 0 R 239 0 R 240 0 R 241 0 R 242 0 R 243 0 R 244 0 R 245 0 R 246 0 R 247 0 R 
+  248 0 R 249 0 R 250 0 R 251 0 R 252 0 R 253 0 R 254 0 R 255 0 R ] /Contents 266 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 259 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
+>>
+endobj
+257 0 obj
+<<
+/PageMode /UseNone /Pages 259 0 R /Type /Catalog
+>>
+endobj
+258 0 obj
+<<
+/Author (Manifold Grace) /CreationDate (D:20261113143241+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261113143241+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
   /Subject (Index and links only; third-party article bodies are excluded) /Title (Manifold Grace Public Publication Directory - Monthly | 2026-11) /Trapped /False
 >>
 endobj
-199 0 obj
+259 0 obj
 <<
-/Count 5 /Kids [ 32 0 R 73 0 R 116 0 R 159 0 R 196 0 R ] /Type /Pages
+/Count 7 /Kids [ 32 0 R 73 0 R 116 0 R 159 0 R 200 0 R 237 0 R 256 0 R ] /Type /Pages
 >>
 endobj
-200 0 obj
+260 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1856
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1857
 >>
 stream
-Gb!<ObAu>q'Sc@-MR,u<VG'mPA9m@V8_T1<VmXrAG7Y(C83h\+5Ui/D_tOBalB9k\-H\g/N'rjPER'>\q8%_nI$3uif0h9(FSRtk,c01GP&-6-m#GDsSo)b[q:!g/G]S$^%"Ip:Y:9DZal_9OnR+IRV[3g=6(El\,F[0Tr%1iVTk-N.%*LYZV>'@^MOY%9GX7)Ig(Y=#mtCOJM5c)AmMN)^dRpZlU"Mr)rOT7N4&n$UUr.Ft37W@VE_?&nq#%5.@@V4ORuF4sA3-<6!\P"HFHfManE80!Qnn^2bL\0h@uhpq4d@DnHF4Fj=#b7Oi1/8.hh=;bH-E5GAC%3,a\tF7?`(H\K\2b*LQ<lmKiY@>CJ:A?kr;9rn&*S.Oj>JNBh$?2F/d?Sq[o^%4'msY8?VZ;*Yg+Y%6LGV85#+roF4mW";=#D?=*@I7EKM7ACp)@3ZJ#"7iuhgEdljAe/2Ju\J%Wpf"nbtFDjPr'U*(F:h%G$>]N6!iM<i5pYB,f(jqskGT-U4K1Yd(LUZc5KQ=^^0__#@`P\EPRWGH0_8,Jg]a,E5:3s[bE^k"p&NgW)i!m_nE`da-*Q'j@!M/YLmqu]3BXN2a7$dA;GPX?"ijeN2HUItI;>;NB`"IgY0Gj1&g/Z?/PEID(&_M@'_(:m%L:cT</';#T>&tZj*;qG&2gN]N]r%77"2uM&;+]o5diT+pmk.s2r#H+Q,Kmc]iQ?)F[s(gD\OnF!FknaZp@p5;pU@=,"lGXgDCF+OThWcoN/CbaG<aiV$uS;?/B;]HNqYO*.K4#7UqtqWJ,lcsM/pNcn`ZrMPDfa?N[DZXg._I%rGiQd>R7YI,7`))aqs-,8`@5<GWk60o"=W=*dAX\nNI4MM,R$FOrEJ_'jKF0jk@rDrBNfCAuL.\s-$^8+Ico:,a`V%)!BWfl,rD=ACQ6Nk'nH&<KpdZq]tu$ajD@sJ`I&X%fq]J/Oe>)5saYqK')#.\S0@s<D1oFV<?o28tVE,YA>J!hs>161toIG6T:O,JF99_!,c#PE\/R>1dD26\s6#Y[4\sWgbGisN$28NdPoCZ(V9F5/6d']-i_V6,CoUf&B<`D&AHk6(]]1VN`MO=C9;Sa)-s"r\'?-F6e(?udo+g6rgHmYF(:J0L*s4:j\,7.`oegiSUhk&dNPD;NYdH#I&5(86>)s+h.ZEi(Kr'#$j#OaBl#(61;\K$]-<T<:FjoYGL?@(<2NGl;-%Sd#<oV1NBo9A_Y0J97Tao#j*6R3k%XQ*GG1tX#`2o@m^Dd,NnuQ.')gtJp^X4T.;=_ZW'&tT)Ruhd>N/CFj&cRXUc$/=#qDc"K;B@"MB[=hkd%6&6?A%p4+WHS0aE<-;i0)6-:kguME.+tJ;h]APZBBcTQ#L,>?@kH_;np1g'1D,c87GCT-G)ER[m9WDCl>+*]Y8*f&aWf/CAk^II_;2H]m2c<A/;kppS)6(G.k`qO(Z\+qh@N]$';kO=5T?<\*./5T"eq@VtA;N+[%8[1S&WCFd\kg@.[RF%g?;M&VPu3OY[^d>9!WAV`Vf.U'2:$6t]oN4A(%!tH/I@Yi/9kk6^N&"D;+_2_;g7k\$K,W'%uYFt0)-Te\a6i<bg;O_/^TH9$9CRJl5T$OSK5bB43A.no)(!bnbnu[0)6PQ#UDj1/#CEKDs/@tmN]K-LfB*U07:4;Yp*\g=cjAI!E(E+&=EN.?lPcqA5q7nPeCC@gjrI.Z@$KL"h4^+S.+kg#4gG0su.BMm%ZnVV+GUk9=BA@WaqI(AP%TfDI99'6ig*"C30*5Ee2R%_8p@_b<Z'np/3%*WNL3/\-]ZVP7;Ne.@&3%$fF3'0n$d_5E;J@[PNh,RmM#84$kh3`NKC49~>endstream
+Gb!<ObAu>q'Sc@-MR,u<VG'mPA9m@V8_T1<VmXrAG7Y(C83h\+5Ui/D_tOBalB9k\-H\g/N'rjPER'>\q8%_nI$3uif0h9(FSRtk,c01GP&-6-m#GDsSo)b[q:!g/G]S$^%"Ip:Y:9DZal_9OnR+IRV[3g=6(El\,F[0Tr%1iVTk-N.%*LYZV>'@^MOY%9GX7)Ig(Y=#mtCOJM5c)AmMN)^dRpZlU"Mr)rOT7N4&n$UUr.Ft37W@VE_?&nq#%5.@@V4ORuF4sA3-<6!\P"HFHfManE80!Qnn^2bL\0h@uhpq4d@DnHF4Fj=#b7Oi1/8.hh=;bH-E5GAC%3,a\tF7?`(H\K\2b*LQ<lmKiY@>CJ:A?kr;9rn&*S.Oj>Jnh.(3nThA\bi/b)oh#VkM5]X8.oVbTCC"P`-KNaNAVJj!(-CFR:p@>e=.8#?$,eG+pf3.YT4FPSYan^)J;e'psk"[I]>6icod_-6h:e[#]6\u[.Eleo"L6L$qhKO26@dndIj(\Dn%OTk=*o=aq'$Bam^t`^G'b?43C!NP]"TuC:ocdYr39gD$ar/%_7IWR@Ji=ZVb$k+VFU[;H"a%>"^:TXjU"/S!&o#@DhWa5$MrVefmL]ol7cBuP&ka'V_d'hbBid#Z9M2=<7:bH;#I@O4)"*i6XsdqBCX$jHEV-U4hW-]+p6o_#%ht'57k'j!:4GC]^Unmhn9:fbN%F]eL+C$`hVM,W-S)Gaf6,!\g>fZ4hVZ$O'RX8:\=m0.Kf1g[0Ig]!h>M/J1:[;DZ5gbj38W]BkP1fdP6QLQ!<Tpj--?h+`1s5F9emcC6CJ>[E\mA9p?PF$EZrXnN&X)?.US9M-ACW7j7So]bOa;?Gi3F`a86u),u,n_8ns`o<buW^V/%lfpB)^eR\BWgr(h?%K5?^1P$lH2@@V77UoUsdP>Mk-RK%P3=&F-\mZZ`/,Y+'j"HjkR4p3hp[M3:C"9k3_$^uiXjJ#'n<%V7^QCa9f.=GAL^9Wm"ICHP"dqIde%c))M!kOkq!4Zn1b-dHBci=Ysl;fqXe[jZOEQ>-j0nrs+8`)5Z?KgNqZ>@>hSbu-uN<&,46Ptk[5ko)t@/p]K3Efj;WjU9#ATWnehE$Fb$rNoq9hSo!phO'Tc](p_)4nY/Q7pXT)kX1DFU!;68;E;43*mG&o9D5+#b?OHFed>C>\K*&1Ba5#VQlD"a9_\-m##&64tTL,haR9@:mjLM79R0,+8FWc2$V$M#hs8))e%]*NoMuhS#>(HgkDIP,:%^I]%beO3-rnU8G&Bmj#`cCVkc%^T^mI@CZ)A0D2C=`NFO+SOk(B<-)d'&%$k'".uNE@U!'T6#gFq^li]L=`Z,8Q:*j)uRNV:s.HY:n!AZDL;-LA(K>IrOm9Qj>"d=:aBcBIN37HMRIZ@B\C3DqO]!XLKGiWtB>F546ZUFOnoZ=kelq)A)<P?1JiS+it?F9Xsl=YEcMFcM,kq8_I6DFDF=KR7W!b(;dLpa)217l&(ej^(NYH9cKC;VF<bqZ32-Z20rkLb[k7jioPQ6?H8W+aT0.#^^Z0]Jh1$ohWkM'4?-T\I@(5AY(I#<P+<*PH+uOO0(p^4NBBSa=`"%Ioc;88X@jJU/k*Y@XHqMa"m2!.BUgP"GTC<&g5&aLC0>%oI.H^.nG+XF6IjYj;E*n`hr5SfPa#48$Q_HGhB)P=p%_>\I6<`2,rL;SL:sj9)a0XtB:Gp%q>F.u\tAoOs*TKkOilDTdjsV6I70d`)QKi2rs9T5iI#lA'B33a@Yn/3+cABnI6i]a/_2ft[['g=p[7a(fX[iLGE+):DNRn1Ke"8kHJJ5ht!5bon<T00fo]8u8d43HhiP,P#d.U1aK-gMH;T~>endstream
 endobj
-201 0 obj
+261 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 1632
 >>
 stream
 Gb!<PbAu>q'Sc@-MR-8C(+W;4D<YZ\9P2^2:"3H,&."G48:U_+.@fY?pBO5]9&d4Lb)=[d>82;ocA-K:%ij%"Y;lIA2:53HqXNa9ie7"c`G(RbrXHQr59%VOIWu[2LXBcQId$*A;tq<kiRt8S[,*+@R$MHnLf^&\m;&0h_N`8eQ-h,"\=gV#D0r3,Vi3WuOV(ifb[U@,<$*\HPu0+Q_c]H4<S_`Ms%3)0L:Nki.UGTdEj>H2X5:-K:i^^!Ve>$!lXZC;B!mTWh0K;53.:Hjr2ugaS9X;Cp)%t%+:f8>?nD,o7WG_,_(G4rnWonkPHJAEG4qDfKiG.JVDkd."UX9aDoDH#1KYScro$`CF_a68*+^H2%P#i91@04t*\o?N4P%%')rkO=@;Ld#H/DaPC09s8'+h(G.dt<LPuT/26*:p>-!7oeQnZG5YZdR(l)/eqn,El7^"qHDmH%t.<!HrXA7g."B-'%\2'j\3:$I7s&^4"1d42h\dCTtNJWYQQ36C?ka<\Bm9Q8B=Gnb=c*JJL]HN3R(elt1ZVR6n)X^HmMoViSV8Zeip0Ss]LQqIU3;E80]2KTQ:/"Ig727bKC.D$Xi:Oq#=<M7Em[[(_9O39fBb!HPD3]25amIi!a:OI%0D4&eLUW-t"ZIZ6pm\psk\q)$a(WO9=#?^]ZI[NU;o):R.J?.30!:M^>0>Bh/5;4%VpXaCV\`U"YV:CtZHkG"7A,MHg\BqY_@dl?2N!_AOE*aj49b*T!go&%R1k!m!/'UCt[9P,u[B/o7d\3G!<Vb/6Uta^(PgiU_,/e"=XY]OpHGuh9o2R[3&D_$Pem27rj?Q!e5D<JQUpsIJVl(b;fc<9,%=mE14!;Cf!0/Mrrq2Oo.pC/AEnlgJX7uo?XC8r]NmbEQ'd/hI.O.3kjSTV:8\1(0V-=WFKfcZA@;Fc#]R'G[l"6*9A@_N=lqM['MXUd#es5Tk\,n+;_#VSccT$nG.\Tk4cY[Vp/'O-$:'"Ru>;,X2#[b]c9,[OZK8%)*UT!.WUC"8;OfUc0T,cb\(<QIUr@b&'Nck)"\pQ"uCiE;.3iZ;_Gj1E%_jUlIen'5e:;1X&koDN<6B&_i`IV%uoqUWO28[fM1UEE+,G\/54CjDU6\R>sJ!HCDO&unm-3Q*Wg`i04))@;\3d2rBPsF[t=GJFeFr`mbV'D:74aNsf"><bG&<gp\POoUkII9@,Wku@eq<rK:3JQP"Xe#'@=Y"PI$@/pcVNT/i)MXX*+JgUEplCV+(Z1sP0,c4%8:`YYco-kkr3@=X(ddlqQh'*pK.suqCRfYJ?#;P:kkQE+X;8o)V>]XUiQRNe>qLJWQFB%qkN?<ka,2[-YZKLP`I&srTYTa==boX+/CN@6(&VgIAi+2[k;$P;lP?XM^gb+(#?<Xl-!9"J1]+WV)rqO\D]eJWj/!f.P\%BBo#$eG1WTpaM&u$EJ1b`mT^I@p.##J*rq.:g)Ws/R,uKaBNCp%e/;k4D[,7K=2j4p1a&rYl^0U]XWbrE1UYMQsHOsr8]EAcVo,?u30^-TO:?A#WobnR8.;@0Ll(%U>Jua?"qG`<QJ.]jABA#KH/#Umboip<#CjM&06:#,sXKh84hmajl@(CZ]_hT4JSW1A#6-oN7ijE$2~>endstream
 endobj
-202 0 obj
+262 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 1330
 >>
 stream
 Gb!<Od?9tW'Sc)N.F(r6mDQpE)k5#fB@H*=1>TD,"3;U;2BYjgGiMO@5/.59Ze8$@)0-=*YOMs]cM9F\qMuJqn7LW@Dhrl!e*ArO=A8T:Z$!FNrEHkfh[Jm6hjd."cl+4h7@tVql#0rshjZGpZT)HZXJ6NbCcA_>B^q*5H.6t&^D`[OqN('V6S3@/\.]#`O_[lt1r#=@]d9fgC4tV,b=Sc2r$1SNB`HOhgLVe!6ufNd4s0']Q\(CJ*WOnWh2oX/D;.btYq4-b!N/Fni\-9X5:l>BHOQ<\3/.fAE0bm\&W<tQ\4-D4Fqh'flOEGu(V^nl9#YR\HP^I'P#0Hr:0`*J^t[6,Ks(F'SH1<^P(ca-;1m08Ys7aWS9+4DjP847cb3#bMm)$V`*!'+]sEWA'rO^EnG3)]dOb?#K^fG'Mqd6bZi8?R\e2&o@X$V;MO[-i1gDO,=5ut?\oZp^UV!i&5C)F6_]>s"m;UQ)=?:b%httkoe#s7pcYs9@``<)WMaBIM&l_D;L$<$!R<+N=:9=Otdl5kU0KVnKC'(5=Zr/+Bi>(hF"N*;G-jL^Uo8WE?eo\<`5aTY0(3+Cbgf_Hf?3Q)(:)1VWY@X[OF>,Y&Rqt0?+7_$XmJtVB,+$)Q?!njVkl\)jOi:tT-!a<h>(oHjSQJ'bfYNKB<)+Q^*$'\F8*TC,W$H0\Q+IPYVG(+3q\cbW[80[a<k,1jf(7[1CT5+9'ZRj2n7ncIE:b-I)l=buQ:EoqFhcADlk$>+h384IEs(mIn</sQdLSI73k3b=FGkP(bn!^`q%du4,KB3QB=#1F-"mGBp=UT\ibsCd<FV2bTr4G>rR@!)C\.q"2#8>1R)RAO2)e3#Q;,ZZr&U*LTUHm^FGfqo]C"pe_>6g]7_C9nXXpgk=8A6k@<3[JX0NF,Q@c]dWe[=NeUtkh,0F,C)pbS<!DTH4nisDGWsd:Ga<O;\:ZSJ!eJM)E4(mWJRq(uOXJX)002[%[W;a^?SpM1UA0M.$5=-goYd=>_$7^.PF#?^jB^olW2c?-AOm_R7HQ?(15e/Fkqn.`qr=/d:L:WK3KLIIK4*J_f^$aLlH_V[Ekq2j!\%i(LT80/fL_<!"bj;j@VC;-gQaZ&YL!C(R^ltG@+*mg6DF@Sf7=\`ue@XJ%)_-R8)Su;oWG=-+28#J#WFUknmpej0;6*8JdHEpHb>oJ@m"Tj3L+F@djnpC6$QC]h7QtnD[4Hs4d-;c-PoYgU*Q$>@eUC6Wj%t*QDqp'+k%,]!hTr76q<d>Kq7bTW"d\JOobmkB<$RV-->^DDZB6ML9Dj=?#DtkA@Ff?MF![=EJ(L'*4p$_`dIR~>endstream
 endobj
-203 0 obj
+263 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 1492
 >>
 stream
 Gb!<O?#SIU'Sc)R/'_]b`2Y+VrogMjXk<c_BUef.ck7pMO[tb5lkJZEhg6d):5<Z$+C@eS@MuI8a@GFRI2UKR>9#iuL?ReP]t'%M:2%8;3/phi^8H20=2XPc+5TE/iFoS(J+WKK/bt!C\9GB?QCDCudise6EOO#'gX,6s6E@f!$i8,*>gbS-eEq"9;^&e)aNE;j_Vt!2V&p]a>u2cZ^or?KY.ss$gHTELj"Rq5UZ+_,/EX#%+8&3iP1!uEI!KkG@$qF5>@i^@hCLUYJ=iIi'*$-'ga?Ft[,9Xb+HS=6H.Zqi-h,boKn8.I6FILKg=([r;V8XVc^f/a)=?YJc:N?ohUm8]%!B'!O"H6Q9a^Y-n)?2nkpjs;n;*-+PtHt'g7D5[9#<rMqcnjWADtVEh!,F!=Wj%9Kjit6%E-TVI)bjmTk$?=cj+Ul*MpHV=tg?.7*D@#em]Ws`Fs22=->&^aHg0N^\$;p/TVC."0=9^Z;68dDj<G@H>3kTldZ8q%s"j18;O^^!U#jb&&KjsQ&_-0-1_^@.pW@NjtuCp!)#C6Am'GFbj;\t8F&NTk0<7+lm'@ZC$E5Q*-YEuV0&W>o-3p.-rcoiB'V4/Y7PD$jK%8s'`caj%&bmB7,2U^XRi>p7LaRlc3RWJNEWbs?R=:sSM$"Q2]uT#cH:mr!QUHg[=hR_O(<?tC)rT'Gt0U"(sB4$"KclD/VmY>"[:i6C0O@^"Q(L9_c`l./r[<-M5!;4F5HWRmB(%IkP!t=-HQOZ[fqEF@Xi#M`2)%Z%K%hp6bbl@@5a[H)Nf-T\OnI]%]\)>9SET0)4uf^"D&H;86U^g7%TkX`?/Y#X^Z=t+L\HS9g5tmYsG;9m6,m^"OdX\8k9Kb"<LKT!`h=V-c[YR,PN:34-;fU'PcilieW=*#ShA5X[R5-)X"M?W(lI/+7u&DX/SBhCrSGb95pFf=K_Y2.,RoTX]PCng>A!2:-'3&!*$Z^:9fT8`,XKKmqW5:nE;4>0H9$Pc92i'<Heq)(.^h:)`H!ajU*#,Zi6:K*L3g1oWj.V?-=#+jjqp@URW=3A;gcW];'mD!hcd1OB8/G!3t75R_@NC:eV<iZMI(jRV_sj1-.Bc'I\.ZgA%8".=1U16>Bks@qZ+ApAr3edr?JKV$EuP<DpD<"a?qb\i@sm210aX!9(#\'U-_m,TWY#0;*M%o75o"ZGZ8omW\o1!ud7gNs303O<iOMl`1uW;(2iZSaEA'o'!qMX]?)M-V6F,ir[_9k@"rB-1bXbke,hOc[Oh#B'0SKaKVg,7-Ma7ZrS'&(+psNQgngL55l9\Mu2g]-8ftZC@mf[k:74iktRh/@[W#8@k!C<h07nmHKsCD#n&7pj[5]8a%R"UH6(gH_+,W>E_PTgIO7*VLPW8-B_hmqajGsKZT-57'i$;.Ai=-)*@O&n$Z;[TG_;I,TafQ5RdrKFjE3?re9T.O]iP#5&#ml4c;`mc*N`juSIP'`*qt.YN*cGd^0N:*~>endstream
 endobj
-204 0 obj
+264 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 1280
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1390
 >>
 stream
-Gb!;d_/e9g&A@rkp?6*^KHMR=l7KI),h&Q4)YMYh6nBe*,esJS<-A'-=ceka\"-9,GR:JiMZS[LiplEj\)7hHL\Lh,#2je0YO=I?"?%Rq"^Ae),J;i;N8prm]OohVb0p8"rr-c8n,OQn?=k`m-Yj4VK#N,*04E>FjX6a%BkdtCX=+YZJqn5JWrf*d.)BA$XE6;s;<^RU6;)"=$b@k(kkb&VCqddKeJR%d.A!gjNUrK04bsGRq<Wsq02<$gaV\6R/K%o.CI3Sia8PClgP@!^Zb=(GJF`f5!5i@\-X"B5'X++1n<lK?[L1"H[*"<KH,f\oGoC9(X/s3($)^n`Ou'W$.4p!AP3bIs.d)Kif*;!W@p67V.mkPYZSWr'7+m>0hV:(n#`nLd]q@=._A?P[>NC\gmoR$.WhKZ3BSVpORgMu=42Ce/$,)[Sj?KO<1.6\?,uN,[:%.V%!#5#2!%f&Cs)R_i(0kL[BQ2l=Xc.f3k>4PoQ(K!N=gjbc*J3FN(='b">'Wq=>@U%j%u^fCM4u[E%;]%Hr"2&&jWiL4Tp.1-TTlZXL*DCrY<l\)MeE>>.IGM`W5h:6gU*i`kZe+MZ8-n:f?tBTAd;\59S"j,n=G/Nkb0^oZaAAcC*8q`OqLWTHGe#bfS5WlC9tmiJ[EYP'0o/]UU2j@TruA,VBbJG=qN0j-Y]m*:@2b:`$u0[Ad;)"9`ShFi/X+_W;'RCNMQbVNNgG8([P"oUt_X[+f<\NarcRjS/k:C3WZ+J_,#<+)cI]XBG^DS)71lD1N;Zu,,HUb0j?7^np$$1;5W0D;jCCpJifYW>53,[*ZOi`.!MKA=3hWZ$60hP%Fsp>"`\_<V>1hl-kSD:+c(7$=tC@"%(=_,>QD*3/5;5:@=N/R5Gu&JVc`I8K/Xkr;P@r%-#HU/#:2rBg%iokBfl1p2`GEuI#86nK[$Etp.?f9W0W_X!a\tCT$SVkAW?&6h@c@#'2663Xm(5Z\Coi+:9s$3f)9E`j>da)g8d7Q<'+bi.2l2.UNq&9Bfs@uY8LT/-50+FS"gU5+$hRf=IbkJ;IN:*n(7f8l5o3hGVQg09_'WeSD'BT,.\N#C60nc(+7#(;i[%2GXYB?F1=$6*',(eq44cH/9aZH`KP?u<:<UG8^f]R6!K9-Q<N5G,\iC9@+6t;j#O_<Qc)fBH$8V3qsG7lUbj+s[[cn=)GckS<lD'7*?+EpMAbS3OU!=L!dUa!e`]/ZZ]q?N_@[0t;+pb-5"2\XpV!/VLfV>n%IGlM5:qTf^,$9P^&`BudeE~>endstream
+Gb!;d_/e9g&A@6Wp?6ZnL*.d?l7KI1,h&Q4'D9oa6nTq,+J8e/>]oo5h'FN'DEFC_Gq#j5MZum`naQ8>>7*pb,Pp;/$ZNM)f=(fL$C_sP,$r(I"+7k/23+kbGTGu-BUn`[nCMU1n,m-iH^VqM3aE-7(3(Oa`=b'\>^Vc*eQ,c@f#\Q`&%M):>*Vq+J/($pXfFPnIo,:DK/==M(aRq&@#[@!".LsJq0%_a]TgLs1eW^m9ARbq@JT8H?XK?FaO;lP,%&?!SZ`>'\t/K&?Z%*>N+[KcRt;1R4:K+rR\Y3S7$OdEXmd!Prb3+)lY2V#PD_QkUD4Zmb,_UhTS?ArE$8]#hC0\!8^mTD4t%MK!P`:B8o+1bA5JR]D!,J&<Y\Y`8:5I<A/no,de/2e39Dm!Jp:-DQD.aFcDcO6d'+T%6e_gl"?4-p'FC='5OpI+I3,,uK<!;FKr/qh$@iaD!MDjiGFu%qhgk0cOY%'UTp:`XE"5<[PmVS"-I5alW'ep:C[""[CfCDbmPVEes1fI@8X?4?BOImJ$:bAdPn3(jLJkRNJl3MJ1),"U#K;NG*MOL/UeF&*TG\E&\*7_hd!GtZZEe]^f?k<sc47Q6SH<.>_`IqB@t</(bVJa^RXnuZCJ)O&e/NS>`BC,0U[8i[#1>86:B2ggNA?dd$$@PD[iK1,]9c3j"%e\,GNqG_,?>uf0fs?[Hic:.(iF'@Ll/rGQ$&=!Wg3!3ids=.P]R-eP%1L4WViN6&$pm;aX4f&`:*jm_R7qF.,)XG?*dQd3!6Wb/5i@^he('.7?L8@,KdA4oVsXg1iOt16O06E5%*]kj)RZ$IJI-a0>V/O3Ndg\08QsP/h<f,7u=`A""_l_hd`XA@'FeId5.0'@MsdA&,Yt1q)Q\g1<#,(@sIT/+r/gH.VYY=H)O<?l7R1=9&&#Hppi\S'iRf9+Da5b3iG[H;XJ0i(@]bG%"o+9-tfT`ln-&A4DYA]Ci'u7`m#!sCm$ZR[dHXY--lfEeNrG5:i4dV>..$FUNq&9=Yds[Y@G'd9dZ;k2b,a:4p!VL=Iu"L>+qgrGO,B,FcUWo]U2tSVSs6::@680);Rj4Zq-GlbEHAe.8S'1]Hel]H/)P.%3:Jq_To_1QFeuCilM?AWctA4V!U;3@'A[39.b,_-L-,W@+7!=nXNmY99Ufb4?n&.IJ8XF;?e3J[[cn=)W*M7Cku0aHYFU[.:ug16lr/"@Id7(CG5l:B3Eonj&[cW7si[^o32?Q]'o<>7'pE1271D'rCeNnlnV?fMQ&7(o<27b9HirIi*)H5?8^tUa+ks6B>'))6cdhk2FAoVJe(gqk>s<;4d/sjs+]"#'*QNX1pe!,/ONPN:5TA%#$5QaG\R$+^9o.fr'E:9s,@c+q@ftGKrP~>endstream
+endobj
+265 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 1342
+>>
+stream
+Gb!<Ohf%7-&BE]"=57:E^oFA@[e?#(buQCKd`mi"Tr#*?L*BXsE,)%qr9e5[8[kB$VP&G``!.V_]_gKNG=N"-dj<FTgB2i<K%F'*6k67,Lb^JhFU`7i(T6dL%l[X>)U403#Clbs>CJi-hHeZ7h;jQGU<Mbo>#_`kiRNoEC1DAk5<7C@I"L+_euFF!#40-6CL-+;pfa(I&(5RH@ute6Ji3Do%BSF(lJ%M>%o\</bDZ2Uo;QWh(863J`.s9B"*K'uD,D%9B^1=#d-W3aV#NJKmh#`8rV@uk!Yp?TVorr9e[m6;$3u[L7jecAUC7RVDU<`ANRXUu3hsn7rljs;]B>mqkeP3r:q"!sTc=8'+9OciXC^Ij\_-IHj@r4>anSL[+Y+@?-'A;D3OMjLcZ#\Ym2"%OGNAC0-im$e?[1*C2EGjYpSpUS6rO)WY^8ml^[]M1,P\tJ30=/\XV!JB1)D20CA[QI^?@qt>`A12l=bF'-;o4M%fMEP$M[Ko^k!RuL&NS`;jF,JM=*Y21M$W*>nT,rPZB-qQU<PRM=8h;_>Cb1<Dr_;3r'Mt>N]ISG0cC05%VXT5M4P%;RD)"[kl/9U]gP=]leNt6W>qn'1D!i5A*tM-q5K#Z$J+0=8=t^B0si)eMCg:a(Y/OCCIHq_N/KXg%R>aiEh3YV-8c&E8V[DLW\""ootcsh;k;-N"PC`c%G1%C&LNncr9<TEksLL\@H-l>:9:hVZs&8Q6Y<%9q!E:+=BPfV4/:(+/iC(p*2bh2f!8#fe5m?<1Kdq3OoQ#f$t%<WH7YmQ4I[WT+dBZlM1H=-pr)9gWJIeVf1\X\sp"H8+?=S)2&K>5kiTYa-hbsetB./_7INEB7V)?'T6ZcYK'\$o"Sfd(1RLEUMV7KBj<,KgnV:l)&@'2%6$9LYN8doWVqLXFAAO!>TeoEN+R!A)s5fN<]VM^[an9(Mru/NfFb!_>.[_Ej'T'3#OA4X*3"5T,2&$G4RN5M5A4SQ*VI=[p?:#g['Mi,77m_*-io"#dE7fpfEGSDA!UkgH@M4c9!-^8G=f<o$\h1n*k7GQ1ktHYiM,R9MSjF0@sle(Lj@^EPLpD0Mi8LJj52SbE\XuK46iK@,KX\VArnJc$;R^5W_0L8[Kl/qdLTAR%@:`t$TW^V/G5qu9OVn'pQ/S5H\tH9peZMd7BC*:l$9m^p=g`Z#kufk_">>qO>'58f!:W]H2Eou.s>^]hXN$'dWRb?C8a%5Uhg;bql.tW;Fe-rrZ@\<<3O+/$KgdS>bc!h'6OOq5&bT;dWO2:%80uc_EuKTgdHQ\D%9DBkP:KG+%S5@<hpVD:?MdBZ>;HmmEHnO$fL"tNuC$G~>endstream
+endobj
+266 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 869
+>>
+stream
+Gb!<Mhf$st&BE]&=5;h$CDQ*r!`&o8B[VDT,2QVgP+"CSY`k)=r:-<+G%?-C6cPqQC87A1ht_>;hh49dK8mX?"aEt_kp6EI6!4:_Jcs53\1!D]p+pV>Jo#'/ipd,c?Z"g>Yhe/M(1]j50Sko8A8.W%fu!9+Y%;HL"n*uY#X;]WXHXDqnK'3b.#b8JRBNI$EPQ]#/bY]H3>emd?9n<$b*T`mmTm(WLuL+<k\A3YKRC)bgX1I9(@>SSdl:`(<Y,G'Snq!U//\+iYs7sHAOHZ!%jE!KD;b0s>$4M7HYG=,0<a.;i'pbG"YL_M5p`'U)mjhL6#'nb(51)KQ)ha)EFWsZn8<"`BY^>dThGUg_Tj8png%eA^Q2DR;KE#t(7Huf+DnU,ngc?P2d.9UlE_?Zn_]*0MKhonIA66j>Z!]$[<MD->O8&/>`<O#al>IC_C/VB[KtR$]jsPi,:Q9mS\jj$^[ilT2ftUq4`GD9c)nj_nTAH"^MXMjJ!S?Yf(45((-@G76Dqu^T`;&<;<\P^CP:!%c8_s:N_US>T_!>$51^1YX`r">YjH2_\6K:q&?M-r^8bqk>J)iek0O+)76Uh#V(\*[YZ)e^YiSbCn29j,KT3'hR\\Xt&maZN#o.@!A8FVjmm`ZSUo(-jM+d1)1M=gg1LKAfW>j4TQ($Xf9Q^:L["IZ*K"Art>ACHD/"JaiGu%p."4kHjd5T$cY9ma,h2[06YCQ8s+rBQ4,ErmT1C.:0)O8\ZGa1:_D@dLE[?]L]+1)QH3N.lR>.P$@K-QYX1IuqU)Q+e>'ug,#.*ne98K9lnik8[`C7Ar&"2]o@GE00]ju`aIBd_G&8`A%n(\poM`L?)sG;&Ldkt#dc'5B(!56~>endstream
 endobj
 xref
-0 205
+0 267
 0000000000 65535 f 
 0000000073 00000 n 
 0000000114 00000 n 
@@ -1647,24 +2091,86 @@ xref
 0000046143 00000 n 
 0000046361 00000 n 
 0000046560 00000 n 
-0000047078 00000 n 
-0000047150 00000 n 
-0000047532 00000 n 
-0000047625 00000 n 
-0000049574 00000 n 
-0000051299 00000 n 
-0000052722 00000 n 
-0000054307 00000 n 
+0000046797 00000 n 
+0000047028 00000 n 
+0000047262 00000 n 
+0000047469 00000 n 
+0000048019 00000 n 
+0000048263 00000 n 
+0000048496 00000 n 
+0000048729 00000 n 
+0000048966 00000 n 
+0000049214 00000 n 
+0000049471 00000 n 
+0000049718 00000 n 
+0000049934 00000 n 
+0000050171 00000 n 
+0000050385 00000 n 
+0000050621 00000 n 
+0000050857 00000 n 
+0000051093 00000 n 
+0000051321 00000 n 
+0000051558 00000 n 
+0000051796 00000 n 
+0000052031 00000 n 
+0000052275 00000 n 
+0000052512 00000 n 
+0000052735 00000 n 
+0000052974 00000 n 
+0000053224 00000 n 
+0000053454 00000 n 
+0000053652 00000 n 
+0000053892 00000 n 
+0000054126 00000 n 
+0000054361 00000 n 
+0000054573 00000 n 
+0000054812 00000 n 
+0000055024 00000 n 
+0000055255 00000 n 
+0000055467 00000 n 
+0000055697 00000 n 
+0000055909 00000 n 
+0000056149 00000 n 
+0000056345 00000 n 
+0000056863 00000 n 
+0000057100 00000 n 
+0000057312 00000 n 
+0000057549 00000 n 
+0000057761 00000 n 
+0000057994 00000 n 
+0000058206 00000 n 
+0000058443 00000 n 
+0000058639 00000 n 
+0000058877 00000 n 
+0000059111 00000 n 
+0000059323 00000 n 
+0000059560 00000 n 
+0000059797 00000 n 
+0000060015 00000 n 
+0000060232 00000 n 
+0000060450 00000 n 
+0000060668 00000 n 
+0000060886 00000 n 
+0000061254 00000 n 
+0000061326 00000 n 
+0000061708 00000 n 
+0000061817 00000 n 
+0000063767 00000 n 
+0000065492 00000 n 
+0000066915 00000 n 
+0000068500 00000 n 
+0000069983 00000 n 
+0000071418 00000 n 
 trailer
 <<
 /ID 
-[<9336bc98dea9d36504a048b6f714b96f><9336bc98dea9d36504a048b6f714b96f>]
+[<58025b29719597096a0bf51f345eff6e><58025b29719597096a0bf51f345eff6e>]
 % ReportLab generated PDF document -- digest (http://www.reportlab.com)
 
-/Info 198 0 R
-/Root 197 0 R
-/Size 205
+/Info 258 0 R
+/Root 257 0 R
+/Size 267
 >>
 startxref
-55680
+72379
 %%EOF
