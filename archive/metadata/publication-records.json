@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_utc": "2026-11-13T16:34:31Z",
+  "generated_utc": "2026-11-13T17:01:03Z",
   "scope": "Public dated Manifold Grace productivity-log entries only",
-  "count": 213,
+  "count": 214,
   "records": [
     {
       "record_id": "tourism-distribution-ai-context-20261113",
@@ -166,6 +166,17 @@
       "title": "Extended collaborative AI safety research to distributed intelligence scaling",
       "source_url": "https://manifoldgrace.github.io/productivity-log.html#distributed-intelligence-scaling-20261113",
       "evidence_url": "https://manifoldgrace.github.io/ai-safety-filter-calibration.html#distributed-intelligence-scaling-20261113",
+      "source_type": "Manifold Grace public activity log",
+      "rights_scope": "original catalogue metadata and links; externally linked content excluded"
+    },
+    {
+      "record_id": "cross-tradition-repair-context-20261113",
+      "recorded_date": "2026-11-13",
+      "original_publication_date": null,
+      "date_basis": "dated public productivity-log record, not original publication date of cited external content",
+      "title": "Added contextual biblical passages and comparative ethical approaches to acknowledgement and repair",
+      "source_url": "https://manifoldgrace.github.io/productivity-log.html#cross-tradition-repair-context-20261113",
+      "evidence_url": "https://manifoldgrace.github.io/faith.html#repentance-restitution-context-20261113",
       "source_type": "Manifold Grace public activity log",
       "rights_scope": "original catalogue metadata and links; externally linked content excluded"
     },
