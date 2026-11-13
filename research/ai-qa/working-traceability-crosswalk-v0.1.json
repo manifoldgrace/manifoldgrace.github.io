@@ -1,0 +1,830 @@
+{
+  "version": "0.1",
+  "date": "2026-11-13",
+  "classification": "research_crosswalk_candidate_links_no_evaluation",
+  "notes": [
+    "Textual cross-links are proposed, not verified standard clause mappings, model test results or evidence of operational compliance.",
+    "Every artefact has one or more candidate relationships to the 150 requirements and one or more lifecycle phases.",
+    "No claim that all 150 considerations are covered by this 35-artefact documentation register.",
+    "Phase assignments reflect the dossier's proposed 24-phase lifecycle, not official ISO/IEC 5338 phase titles."
+  ],
+  "summary": {
+    "artefacts": 35,
+    "proposed_links": 165,
+    "unique_ethical_requirements_covered": 90,
+    "unmapped_requirements": 60,
+    "phase_ids_used": 24
+  },
+  "unmapped_requirements": [
+    "AI-QA-002",
+    "AI-QA-006",
+    "AI-QA-008",
+    "AI-QA-012",
+    "AI-QA-015",
+    "AI-QA-017",
+    "AI-QA-020",
+    "AI-QA-021",
+    "AI-QA-027",
+    "AI-QA-028",
+    "AI-QA-031",
+    "AI-QA-032",
+    "AI-QA-034",
+    "AI-QA-035",
+    "AI-QA-039",
+    "AI-QA-046",
+    "AI-QA-047",
+    "AI-QA-048",
+    "AI-QA-051",
+    "AI-QA-052",
+    "AI-QA-054",
+    "AI-QA-062",
+    "AI-QA-065",
+    "AI-QA-066",
+    "AI-QA-070",
+    "AI-QA-073",
+    "AI-QA-074",
+    "AI-QA-081",
+    "AI-QA-085",
+    "AI-QA-089",
+    "AI-QA-093",
+    "AI-QA-099",
+    "AI-QA-101",
+    "AI-QA-102",
+    "AI-QA-103",
+    "AI-QA-105",
+    "AI-QA-106",
+    "AI-QA-107",
+    "AI-QA-108",
+    "AI-QA-109",
+    "AI-QA-110",
+    "AI-QA-111",
+    "AI-QA-113",
+    "AI-QA-114",
+    "AI-QA-115",
+    "AI-QA-116",
+    "AI-QA-118",
+    "AI-QA-121",
+    "AI-QA-123",
+    "AI-QA-126",
+    "AI-QA-127",
+    "AI-QA-128",
+    "AI-QA-129",
+    "AI-QA-130",
+    "AI-QA-131",
+    "AI-QA-132",
+    "AI-QA-133",
+    "AI-QA-135",
+    "AI-QA-142",
+    "AI-QA-146"
+  ],
+  "links": [
+    {
+      "artefact_id": "REG-DOC-001",
+      "title": "AI feasibility and impact charter",
+      "ethical_ref_ids": [
+        "AI-QA-016",
+        "AI-QA-022",
+        "AI-QA-057",
+        "AI-QA-141"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-01",
+        "QA-PH-02",
+        "QA-PH-03"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-002",
+      "title": "System and model requirements specification",
+      "ethical_ref_ids": [
+        "AI-QA-040",
+        "AI-QA-058",
+        "AI-QA-095",
+        "AI-QA-149",
+        "AI-QA-150"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-02",
+        "QA-PH-03"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-003",
+      "title": "Ethics and human-rights impact assessment",
+      "ethical_ref_ids": [
+        "AI-QA-001",
+        "AI-QA-005",
+        "AI-QA-018",
+        "AI-QA-050",
+        "AI-QA-059",
+        "AI-QA-097"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-02",
+        "QA-PH-04",
+        "QA-PH-05"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-004",
+      "title": "Jurisdiction and legal applicability register",
+      "ethical_ref_ids": [
+        "AI-QA-013",
+        "AI-QA-045",
+        "AI-QA-077",
+        "AI-QA-112",
+        "AI-QA-125"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-03",
+        "QA-PH-04",
+        "QA-PH-05"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-005",
+      "title": "RACI and accountable decision-owner matrix",
+      "ethical_ref_ids": [
+        "AI-QA-019",
+        "AI-QA-030",
+        "AI-QA-083",
+        "AI-QA-091",
+        "AI-QA-100"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-02",
+        "QA-PH-03",
+        "QA-PH-05"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-006",
+      "title": "Third-party model and vendor risk assessment",
+      "ethical_ref_ids": [
+        "AI-QA-045",
+        "AI-QA-077",
+        "AI-QA-090",
+        "AI-QA-112"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-04",
+        "QA-PH-05",
+        "QA-PH-06",
+        "QA-PH-07"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-007",
+      "title": "Model licence and data rights assessment",
+      "ethical_ref_ids": [
+        "AI-QA-013",
+        "AI-QA-082",
+        "AI-QA-125"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-04",
+        "QA-PH-07"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-008",
+      "title": "Data provenance and lineage procedure",
+      "ethical_ref_ids": [
+        "AI-QA-003",
+        "AI-QA-026",
+        "AI-QA-068",
+        "AI-QA-090",
+        "AI-QA-145"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-07",
+        "QA-PH-08"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-009",
+      "title": "Dataset quality and subgroup audit",
+      "ethical_ref_ids": [
+        "AI-QA-024",
+        "AI-QA-060",
+        "AI-QA-086",
+        "AI-QA-119",
+        "AI-QA-124",
+        "AI-QA-139"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-07",
+        "QA-PH-08",
+        "QA-PH-16"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-010",
+      "title": "Privacy and security data handling assessment",
+      "ethical_ref_ids": [
+        "AI-QA-044",
+        "AI-QA-063",
+        "AI-QA-078",
+        "AI-QA-098"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-07",
+        "QA-PH-08",
+        "QA-PH-15"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-011",
+      "title": "Synthetic-data validation record",
+      "ethical_ref_ids": [
+        "AI-QA-029",
+        "AI-QA-042",
+        "AI-QA-137",
+        "AI-QA-148"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-08",
+        "QA-PH-11",
+        "QA-PH-12"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-012",
+      "title": "System architecture and trust-boundary map",
+      "ethical_ref_ids": [
+        "AI-QA-005",
+        "AI-QA-019",
+        "AI-QA-067",
+        "AI-QA-077",
+        "AI-QA-084"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-06",
+        "QA-PH-13"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-013",
+      "title": "Fallback and resilience design",
+      "ethical_ref_ids": [
+        "AI-QA-063",
+        "AI-QA-067",
+        "AI-QA-096"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-06",
+        "QA-PH-19",
+        "QA-PH-20"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-014",
+      "title": "Model card and conceptual soundness report",
+      "ethical_ref_ids": [
+        "AI-QA-010",
+        "AI-QA-023",
+        "AI-QA-042",
+        "AI-QA-056",
+        "AI-QA-137"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-09",
+        "QA-PH-10",
+        "QA-PH-11",
+        "QA-PH-12",
+        "QA-PH-14"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-015",
+      "title": "Training and optimisation audit record",
+      "ethical_ref_ids": [
+        "AI-QA-011",
+        "AI-QA-023",
+        "AI-QA-139",
+        "AI-QA-147",
+        "AI-QA-148",
+        "AI-QA-150"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-10",
+        "QA-PH-11",
+        "QA-PH-12"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-016",
+      "title": "Explainability appropriateness report",
+      "ethical_ref_ids": [
+        "AI-QA-004",
+        "AI-QA-025",
+        "AI-QA-056",
+        "AI-QA-144"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-06",
+        "QA-PH-09",
+        "QA-PH-14"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-017",
+      "title": "Offline benchmark and holdout evaluation",
+      "ethical_ref_ids": [
+        "AI-QA-010",
+        "AI-QA-040",
+        "AI-QA-056",
+        "AI-QA-092",
+        "AI-QA-138",
+        "AI-QA-140"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-14",
+        "QA-PH-16",
+        "QA-PH-17"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-018",
+      "title": "Fairness and distributional impact audit",
+      "ethical_ref_ids": [
+        "AI-QA-018",
+        "AI-QA-050",
+        "AI-QA-060",
+        "AI-QA-086",
+        "AI-QA-117",
+        "AI-QA-120",
+        "AI-QA-134"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-04",
+        "QA-PH-16",
+        "QA-PH-17"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-019",
+      "title": "Adversarial and security testing log",
+      "ethical_ref_ids": [
+        "AI-QA-005",
+        "AI-QA-019",
+        "AI-QA-041",
+        "AI-QA-042",
+        "AI-QA-087",
+        "AI-QA-090"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-15",
+        "QA-PH-17"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-020",
+      "title": "RAG retrieval and citation verification",
+      "ethical_ref_ids": [
+        "AI-QA-003",
+        "AI-QA-026",
+        "AI-QA-068",
+        "AI-QA-075",
+        "AI-QA-136"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-14",
+        "QA-PH-16",
+        "QA-PH-17"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-021",
+      "title": "Agent tool permission and approval gate",
+      "ethical_ref_ids": [
+        "AI-QA-041",
+        "AI-QA-063",
+        "AI-QA-067",
+        "AI-QA-080",
+        "AI-QA-087"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-15",
+        "QA-PH-16",
+        "QA-PH-17"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-022",
+      "title": "Human oversight and operator competency record",
+      "ethical_ref_ids": [
+        "AI-QA-009",
+        "AI-QA-036",
+        "AI-QA-055",
+        "AI-QA-064",
+        "AI-QA-076",
+        "AI-QA-122"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-02",
+        "QA-PH-16",
+        "QA-PH-17",
+        "QA-PH-19"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-023",
+      "title": "Sensor and physical environment validation",
+      "ethical_ref_ids": [
+        "AI-QA-063",
+        "AI-QA-087"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-13",
+        "QA-PH-15",
+        "QA-PH-17"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-024",
+      "title": "Reward alignment and simulation transfer assessment",
+      "ethical_ref_ids": [
+        "AI-QA-011",
+        "AI-QA-023",
+        "AI-QA-069",
+        "AI-QA-095",
+        "AI-QA-148"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-12",
+        "QA-PH-15",
+        "QA-PH-17"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-025",
+      "title": "Federated privacy and aggregation audit",
+      "ethical_ref_ids": [
+        "AI-QA-044",
+        "AI-QA-071",
+        "AI-QA-090"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-07",
+        "QA-PH-15",
+        "QA-PH-17"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-026",
+      "title": "User acceptance and domain evaluation",
+      "ethical_ref_ids": [
+        "AI-QA-056",
+        "AI-QA-086",
+        "AI-QA-092"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-16",
+        "QA-PH-17",
+        "QA-PH-19"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-027",
+      "title": "Operational readiness and go-no-go record",
+      "ethical_ref_ids": [
+        "AI-QA-033",
+        "AI-QA-042",
+        "AI-QA-049",
+        "AI-QA-067",
+        "AI-QA-072"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-18",
+        "QA-PH-19"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-028",
+      "title": "User transparency and release notes",
+      "ethical_ref_ids": [
+        "AI-QA-014",
+        "AI-QA-025",
+        "AI-QA-061",
+        "AI-QA-075",
+        "AI-QA-144"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-18",
+        "QA-PH-19"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-029",
+      "title": "Production deployment validation",
+      "ethical_ref_ids": [
+        "AI-QA-005",
+        "AI-QA-042",
+        "AI-QA-067",
+        "AI-QA-080"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-19",
+        "QA-PH-20"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-030",
+      "title": "Live monitoring and model drift procedure",
+      "ethical_ref_ids": [
+        "AI-QA-007",
+        "AI-QA-033",
+        "AI-QA-040",
+        "AI-QA-042",
+        "AI-QA-080",
+        "AI-QA-092"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-21",
+        "QA-PH-23"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-031",
+      "title": "Incident response and rollback plan",
+      "ethical_ref_ids": [
+        "AI-QA-037",
+        "AI-QA-045",
+        "AI-QA-053",
+        "AI-QA-072",
+        "AI-QA-088",
+        "AI-QA-091"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-21",
+        "QA-PH-23"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-032",
+      "title": "Periodic revalidation and change approval",
+      "ethical_ref_ids": [
+        "AI-QA-007",
+        "AI-QA-010",
+        "AI-QA-072",
+        "AI-QA-094",
+        "AI-QA-143"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-22",
+        "QA-PH-23"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-033",
+      "title": "Financial and environmental impact report",
+      "ethical_ref_ids": [
+        "AI-QA-038",
+        "AI-QA-043",
+        "AI-QA-079",
+        "AI-QA-104"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-21",
+        "QA-PH-23"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-034",
+      "title": "Retirement and successor migration plan",
+      "ethical_ref_ids": [
+        "AI-QA-037",
+        "AI-QA-078",
+        "AI-QA-088",
+        "AI-QA-098"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-24"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    },
+    {
+      "artefact_id": "REG-DOC-035",
+      "title": "Retention and deletion disposition record",
+      "ethical_ref_ids": [
+        "AI-QA-037",
+        "AI-QA-078",
+        "AI-QA-088",
+        "AI-QA-098"
+      ],
+      "qa_phase_ids": [
+        "QA-PH-24"
+      ],
+      "link_status": "proposed_textual_mapping_unvalidated",
+      "link_rationale": "Topic-based association using the named candidate requirement and artefact scope; independent review of the primary test methodology remains outstanding.",
+      "source_version": "working-documentation-register-v0.1.json",
+      "qa_source": "Global_AI_QA_Requirements_v0_1.csv",
+      "evidence_status": "no_executed_tests",
+      "review_required": true
+    }
+  ]
+}
