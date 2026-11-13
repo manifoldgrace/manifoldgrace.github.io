@@ -20,7 +20,7 @@ Comparative review of UK and international records law, accessibility standards,
 
 ## Sources and dates
 - UK Intellectual Property Office, *Exceptions to copyright*: **12 June 2014**, updated **4 January 2021**. https://www.gov.uk/guidance/exceptions-to-copyright
-- W3C, *WCAG 2.2*: **12 December 2024**. https://www.w3.org/TR/wcag/
+- W3C, *WCAG 2.2*: **5 October 2023** (updated **12 December 2024**). https://www.w3.org/TR/wcag/
 - NISO, *JATS 1.4*: **31 October 2024**. https://www.niso.org/publications/z3996-2024-jats
 - UK university copyright interpretation: https://www.ucl.ac.uk/library/learning-teaching-support/ucl-copyright-advice/copyright-depth/text-and-data-mining-tdm-exception
 
@@ -29,3 +29,22 @@ Evaluate whether existing open sitemaps and licensed archives already achieve eq
 
 ## Continuity
 The Manifold Grace implementation demonstrates a voluntary publisher-owned archive. General legal conclusions and legislative wording require qualified legal review and evidence of necessity.
+## Dated source register and evidentiary roles — added 13 November 2026
+
+The following references provide authoritative foundations; they are not presented as experimental proof of this initiative:
+
+| Original publication or status | Source URL | Relevance |
+|---|---|---|
+| 12 June 2014 | https://www.gov.uk/guidance/exceptions-to-copyright | UK lawful-access and non-commercial text/data-mining scope; article redistribution not automatically authorised |
+| 5 October 2023; revised 12 December 2024 | https://www.w3.org/standards/history/WCAG22/ | Web accessibility and accurate standard-version history |
+| 31 October 2024 | https://www.niso.org/publications/z3996-2024-jats | JATS XML scholarly-archive interchange standard |
+| 3 February 2022 | https://csrc.nist.gov/pubs/sp/800/218/final | Secure software development and auditable CI/CD practice |
+| 26 January 2023 | https://www.nist.gov/itl/ai-risk-management-framework | AI risk evaluation and governance |
+| 24 July 2024 | https://doi.org/10.1038/s41586-024-07566-y | Peer-reviewed recursive-training model collapse; not ASI failure prediction |
+| 2025 collection API transition | https://www.loc.gov/apis/additional-apis/chronicling-america-api/ | Multi-decade digitised newspaper archive implementation |
+| Living documentation | https://www.crossref.org/documentation/retrieve-metadata/rest-api/ | Scholarly metadata and subsequent updates |
+| Living documentation | https://docs.github.com/en/actions | CI pipeline implementation, not proof of success without logs |
+| Living documentation | https://docs.reportlab.com/developerfaqs/ | PDF-generation dependency |
+| Living documentation | https://www.crummy.com/software/BeautifulSoup/ | HTML parsing dependency |
+
+**Chronology correction:** WCAG 2.2 first became a Recommendation on **5 October 2023**; **12 December 2024** is a subsequent Recommendation update, not the first release. Any earlier wording stating otherwise should be read with this correction. Maintain the original publication date and any amendments separately.
