@@ -1,8 +1,457 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": null,
-  "feed_status": {},
-  "article_count": 0,
-  "articles": []
+  "archive_updated_utc": "2026-11-13T20:53:35Z",
+  "feed_status": {
+    "Technology": {
+      "status": "ok",
+      "matches": 17
+    },
+    "Business": {
+      "status": "ok",
+      "matches": 10
+    },
+    "Industries": {
+      "status": "ok",
+      "matches": 1
+    },
+    "Markets": {
+      "status": "ok",
+      "matches": 7
+    }
+  },
+  "article_count": 35,
+  "articles": [
+    {
+      "title": "Retail Investors Get Ready For Anthropic IPO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/retail-investors-get-ready-for-anthropic-ipo-video",
+      "published": "2026-11-13T20:40:20Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia Says Speculation on New CEO Candidates Is ‘Premature’",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/nvidia-says-speculation-on-new-ceo-candidates-is-premature",
+      "published": "2026-11-13T20:37:36Z",
+      "authors": "Ian King",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Huang’s Exit Leaves Silicon Valley Unsure About AI Boom’s Future",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-13/huang-s-exit-leaves-silicon-valley-unsure-about-ai-boom-s-future",
+      "published": "2026-11-13T20:18:02Z",
+      "authors": "Natasha Mascarenhas, Shirin Ghaffary and Rachel Metz",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "People Have 'No Idea' How Much Nvidia Impacts Daily Life, Says Aaron Brown",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/people-have-no-idea-how-much-nvidia-impacts-life-brown-video",
+      "published": "2026-11-13T20:13:13Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Report: Nvidia Approached Haas, Banned Chips Tracked to China",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/report-nvidia-approached-haas-banned-chips-tracked-to-china",
+      "published": "2026-11-13T20:12:50Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Week Ahead: Nvidia, Walt Disney, and Walmart (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/week-ahead-nvidia-walt-disney-and-walmart-podcast",
+      "published": "2026-11-13T20:08:47Z",
+      "authors": "MARK SINISCALCHI",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Everybody’s Business: China Is Writing Its Own AI Playbook",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/everybody-s-business-china-is-writing-its-own-ai-story-video",
+      "published": "2026-11-13T20:02:27Z",
+      "authors": "",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Balance of Power: Lutnick Under Fire in Nvidia Crisis (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/balance-of-power-lutnick-under-fire-in-nvidia-crisis-podcast",
+      "published": "2026-11-13T20:01:57Z",
+      "authors": "JAMES MAHONEY",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Bloomberg Daybreak Weekend: Nvidia Earnings Preview (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/bloomberg-daybreak-weekend-nvidia-earnings-preview-podcast",
+      "published": "2026-11-13T19:59:30Z",
+      "authors": "MARK SINISCALCHI",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "JPMorgan Sees AI Spree Driving Record 2027 US High-Grade Supply",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/jpmorgan-sees-ai-spree-driving-record-2027-us-high-grade-supply",
+      "published": "2026-11-13T19:58:07Z",
+      "authors": "Zahra Tayeb",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "How SpaceX, Tesla and Anthropic Are Converging to Break One Record After Another",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-13/how-spacex-tesla-and-anthropic-are-converging-to-break-one-record-after-another",
+      "published": "2026-11-13T19:51:21Z",
+      "authors": "Ryan Gould",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Lutnick Under Fire as Bessent Blames Commerce for Nvidia Crisis",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/bessent-blames-commerce-for-nvidia-crisis-video",
+      "published": "2026-11-13T19:51:02Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Ackman on Huang's Exit, Anthropic IPO Roadshow",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/ackman-on-huang-s-exit-anthropic-ipo-roadshow-video",
+      "published": "2026-11-13T19:42:57Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "The Other Way the AI Buildout Pushes Up US Rates",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-13/the-other-way-the-ai-buildout-pushes-up-us-rates",
+      "published": "2026-11-13T19:17:56Z",
+      "authors": "Joe Weisenthal and Tracy Alloway",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia Reportedly Eyes Haas for CEO, Chips Tracked to China",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/nvidia-reportedly-eyes-haas-for-ceo-chips-tracked-to-china",
+      "published": "2026-11-13T19:04:58Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic’s Amodei Doesn’t Want AI Agents to ‘Run Wild’",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/anthropic-s-amodei-doesn-t-want-ai-agents-to-run-wild-video",
+      "published": "2026-11-13T18:55:54Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic CEO Calls Computing Power Deepest Business Dilemma",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/anthropic-ceo-calls-computing-power-deepest-business-dilemma",
+      "published": "2026-11-13T18:46:29Z",
+      "authors": "Shirin Ghaffary and Emily Forgash",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Customers Buying NVIDIA Dip: Guild",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/customers-buying-nvidia-dip-guild-video",
+      "published": "2026-11-13T18:32:08Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia Eyes Worst Week Since Trump Tariff Selloff as Huang Exits",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/nvidia-eyes-worst-week-since-trump-tariff-selloff-as-huang-exits",
+      "published": "2026-11-13T18:24:41Z",
+      "authors": "Carmen Reinicke",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia Fallout, Microsoft Outage and Anthropic’s IPO Push",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/bloomberg-tech-11-13-2026-video",
+      "published": "2026-11-13T18:19:27Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "From CFO to Interim CEO: Kress Takes Charge at Nvidia",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/from-cfo-to-interim-ceo-kress-takes-charge-at-nvidia-video",
+      "published": "2026-11-13T18:18:03Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Cerebras CEO: AI Infrastructure Opportunity Is Expanding",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/cerebras-ceo-ai-infrastructure-opportunity-is-expanding-video",
+      "published": "2026-11-13T18:16:38Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bloomberg Intelligence: Anthropic Bolsters IPO Demand (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/bloomberg-intelligence-anthropic-bolsters-ipo-demand-podcast",
+      "published": "2026-11-13T17:54:52Z",
+      "authors": "MARK SINISCALCHI",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Bloomberg Tech: Nvidia Reels From Huang Exit (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/bloomberg-tech-nvidia-reels-from-huang-exit-podcast",
+      "published": "2026-11-13T17:43:13Z",
+      "authors": "SEBASTIAN ESCOBAR",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Huang and the Myth of the ‘Irreplaceable CEO’",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/huang-and-the-myth-of-the-irreplaceable-ceo-video",
+      "published": "2026-11-13T17:42:23Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Best Thing to Happen for China is Jensen Out of the Picture, Says Ives",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/best-thing-to-happen-for-china-is-jensen-out-says-ives-video",
+      "published": "2026-11-13T17:38:14Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Scandal Raises New Concerns About Scale of Chinese Spying",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/nvidia-scandal-raises-new-concerns-about-scale-of-chinese-spying",
+      "published": "2026-11-13T17:34:27Z",
+      "authors": "Peter Martin and Philip J. Heijmans",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "My Husband and His Chatbot",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/my-husband-and-his-chatbot-video",
+      "published": "2026-11-13T17:28:48Z",
+      "authors": "",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Report: Nvidia Considers Haas, Banned Chips Tracked to China",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/report-nvidia-considers-haas-banned-chips-tracked-to-china",
+      "published": "2026-11-13T17:27:06Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Lutnick Under Pressure as Nvidia Crisis Unfolds",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/lutnick-under-pressure-as-nvidia-crisis-unfolds-video",
+      "published": "2026-11-13T17:13:37Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "OpenAI Debuts New ChatGPT Payment Method With Card Networks",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/openai-debuts-new-chatgpt-payment-method-with-card-networks",
+      "published": "2026-11-13T17:06:11Z",
+      "authors": "Natalie Lung",
+      "categories": [
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Lutnick Faces Scrutiny, Anthropic IPO Said to Block China, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/lutnick-faces-scrutiny-anthropic-ipo-said-to-block-china-more",
+      "published": "2026-11-13T16:29:05Z",
+      "authors": "NATHAN HAGER",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "US Stocks Slide as Dip Buyers Grow Tired of AI Trade Surprises",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/us-futures-gain-with-microsoft-outage-producer-prices-in-focus",
+      "published": "2026-11-13T13:19:12Z",
+      "authors": "Judy Lagrou",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "SpaceX Aims for Novel Double Landing With Starship Test Flight",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/spacex-aims-for-novel-double-landing-with-starship-test-flight",
+      "published": "2026-11-13T11:00:00Z",
+      "authors": "Loren Grush",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Industries"
+      ]
+    },
+    {
+      "title": "ETF Anthropic Exposure, Political Funds, BOJ Unwinds ETFs",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-02/etf-iq-10-2-2026-video",
+      "published": "2026-11-02T20:56:03Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    }
+  ]
 }
