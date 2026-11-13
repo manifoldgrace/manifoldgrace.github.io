@@ -12,7 +12,7 @@
 - What remains unresolved, including contrary evidence:
 - Proposed original or combinatorial contribution:
 - Alternative explanations:
-- What evidence would falsify the hypothesis:
+- **Falsification criteria:** What evidence would disprove the hypothesis:
 - Permission to share this record publicly: Yes / No / undecided
 - Contains confidential, identifying or third-party data? If yes, do not submit publicly.
 
