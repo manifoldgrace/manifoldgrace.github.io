@@ -156,3 +156,60 @@ body:has(.studio) .studio{max-width:1000px;padding-inline:clamp(20px,5vw,66px)}
  .studio .studio-auth-dialog{width:calc(100vw - 26px);max-height:88dvh;border-radius:24px;padding:24px 20px}
  .studio .studio-login-trigger{font-size:.79rem;padding:8px 15px}
 }
+
+/* Isolated onyx device canvas. Site text and research is outside the primary screen. */
+body:has(main.studio)>header{display:none!important}
+body:has(main.studio){background:#050506!important}
+body:has(main.studio) main.studio{padding:0!important;width:100%;max-width:none!important;margin:0 auto;background:radial-gradient(ellipse at 50% 52%,#101012 0%,#070708 54%,#050506 85%);min-height:100dvh}
+.studio .studio-landing{min-height:100dvh;display:flex;justify-content:center;align-items:center;padding:clamp(38px,5vw,72px) 20px;position:relative;overflow:hidden;isolation:isolate}
+.studio .studio-ambient{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 36% 40% at 50% 49%,#171719 0%,transparent 95%);opacity:.45}
+.studio .studio-device{position:relative;z-index:1;width:min(100%,392px);margin:0 auto}
+.studio .studio-device-edge{pointer-events:none;position:absolute;inset:-4px;border:1px solid #55555b;border-radius:52px;opacity:.65}
+.studio .studio-device{border:2px solid #47474d;border-radius:50px;background:#090909;box-shadow:0 0 0 2px #111,0 18px 90px #000a,0 0 38px #ffffff05;padding:6px}
+.studio .studio-device-screen{height:min(755px,85dvh);min-height:560px;background:#050505;border-radius:42px;overflow:hidden;position:relative;display:flex;flex-direction:column}
+.studio .studio-device-screen::before{content:"";width:92px;height:16px;position:absolute;top:0;left:50%;transform:translateX(-50%);background:#000;border-radius:0 0 16px 16px;z-index:2;pointer-events:none}
+.studio .studio-device-header{display:flex;align-items:center;justify-content:space-between;gap:9px;min-height:72px;padding:25px 15px 8px;flex:none}
+.studio .studio-device-header button{cursor:pointer}
+.studio .studio-device-menu{display:grid;place-items:center;flex:0 0 37px;height:37px;background:#161616!important;color:#d9d9d9!important;border-radius:50%!important;border:0!important;font-size:1rem;padding:0}
+.studio .studio-device-brand{font-size:.82rem!important;letter-spacing:-.018em;font-weight:600;color:#f0f0f0!important;text-decoration:none}
+.studio .studio-login-trigger{font-size:.72rem!important;padding:8px 12px!important;min-height:35px;border-radius:30px!important;border:1px solid #252525!important;background:#161616!important}
+.studio .studio-device-tabs{display:flex;align-items:center;justify-content:center;gap:4px;font-size:.73rem;margin:5px auto 0;background:#111;border:1px solid #1e1e1e;border-radius:999px;padding:3px;flex:none}
+.studio .studio-device-tabs span,.studio .studio-device-tabs button{color:#ededed!important;background:#262626!important;border-radius:999px!important;padding:7px 17px!important;border:0!important;min-height:30px;font-size:.73rem}
+.studio .studio-device-tabs button{color:#a7a7a7!important;background:transparent!important;cursor:pointer}
+.studio .studio-conversation{flex:1 1 auto;min-height:0!important;margin:0!important;padding:16px 15px 16px!important;width:100%;max-width:none;display:flex;flex-direction:column;justify-content:flex-end;border:0}
+.studio .studio-chat-heading{margin:auto auto 0;text-align:center;max-width:22ch}
+.studio .studio-chat-heading h2{font-size:clamp(1.1rem,3vw,1.35rem)!important;font-weight:470!important;line-height:1.35;letter-spacing:-.025em;color:#dedede}
+.studio #chat-status{margin:10px auto 6px;max-width:34ch;color:#898989;font-size:.67rem;text-align:center;line-height:1.45}
+.studio .chat-log{flex:1 1 auto;min-height:0!important;max-height:none!important;overflow:auto;margin:6px 0 10px;padding:0 2px;scrollbar-width:thin}
+.studio .chat-log:empty{min-height:0!important;flex:1 1 auto}
+.studio .chat-log:not(:empty)~#chat-form{margin-top:auto}
+.studio .chat-line{font-size:.78rem!important;max-width:94%;margin:9px 0;padding:10px 12px}
+.studio #chat-form{flex:none;border-radius:22px;background:#161616;border:1px solid #303030;box-shadow:none;max-width:none;padding:9px 11px 8px}
+.studio #chat-input{resize:none;min-height:44px!important;max-height:110px;font-size:16px!important;line-height:1.45;padding:5px 3px 2px}
+.studio #chat-form .mode{margin-top:1px;gap:8px;flex-direction:row-reverse}
+.studio #chat-send{min-height:31px!important;padding:6px 12px!important;font-size:.73rem!important}
+.studio #chat-clear{font-size:.69rem!important;padding:5px!important}
+.studio #chat-model{font-size:.63rem!important;line-height:1.35;text-align:center;margin:10px 0 0!important}
+.studio .studio-device-caption{text-align:center;color:#666;font-size:.72rem!important;letter-spacing:.035em;line-height:1.5;margin:20px 0 0}
+.studio .studio-extras{max-width:810px;margin:0 auto!important;padding:0 24px 80px;border:0}
+.studio .studio-extras>summary{display:none}
+.studio .studio-extras:not([open]){display:none}
+.studio .studio-extras[open]{border-top:1px solid #1d1d1d}
+.studio .studio-extras[open]>summary{display:list-item;cursor:pointer;color:#bbb;font-size:.82rem;margin:18px 0}
+.studio .studio-extras .quick{flex-wrap:wrap;overflow:visible}
+.studio .studio-auth-dialog{z-index:1050}
+@media(max-width:600px){
+ .studio .studio-landing{min-height:100dvh;padding:14px 10px 25px}
+ .studio .studio-device{width:min(100%,390px);border-radius:40px;padding:4px}
+ .studio .studio-device-edge{border-radius:42px}
+ .studio .studio-device-screen{height:min(790px,calc(100dvh - 50px));min-height:min(510px,calc(100dvh - 50px));border-radius:35px}
+ .studio .studio-device-header{padding-top:23px;min-height:67px}
+ .studio .studio-conversation{padding:13px 12px 14px!important}
+ .studio .studio-device-caption{margin:12px 0 0}
+}
+@media(max-height:650px){
+ .studio .studio-device-screen{height:calc(100dvh - 35px);min-height:410px}
+ .studio .studio-landing{padding-block:13px}
+ .studio .studio-chat-heading h2{font-size:1.1rem!important}
+}
+@media(prefers-reduced-motion:reduce){.studio .studio-device{transition:none}}
