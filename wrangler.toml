@@ -1,0 +1,5 @@
+# Cloudflare Pages deployment configuration (migration branch only).
+# Does NOT set authentication. Configure Cloudflare Access separately
+# for production and preview hostnames before publicising any deployment.
+name = "manifold-grace-private"
+pages_build_output_dir = "."
