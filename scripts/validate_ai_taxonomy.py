@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Manifold Grace canonical AI taxonomy v1.5 and source baseline."""
+"""Validate Manifold Grace canonical AI taxonomy v1.6 and source baseline."""
 import csv
 import json
 import re
@@ -7,8 +7,8 @@ import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "research/relational-awareness/ai-four-level-register-v1.5.json"
-EXPORT = ROOT / "research/relational-awareness/ai-four-level-register-v1.5.csv"
+DATA = ROOT / "research/relational-awareness/ai-four-level-register-v1.6.json"
+EXPORT = ROOT / "research/relational-awareness/ai-four-level-register-v1.6.csv"
 BASE = ROOT / "research/relational-awareness/source-baseline-v0.1.json"
 LEVELS = {1: "CAT", 2: "PAR", 3: "ALG", 4: "ARC"}
 BASELINE_IDS_URLS={
@@ -34,7 +34,7 @@ def check():
     baseline=json.loads(BASE.read_text(encoding="utf-8"))
     entries=data["entries"]
     sources=data["sources"]
-    assert data["schema_version"] == "1.5", "Wrong canonical schema version"
+    assert data["schema_version"] == "1.6", "Wrong canonical schema version"
     assert len(baseline["source_register"]) == 10, "Baseline source count changed"
     assert {s["id"]:s["url"] for s in baseline["source_register"]} == BASELINE_IDS_URLS, "Archived baseline modified"
     ids=[e["id"] for e in entries]
