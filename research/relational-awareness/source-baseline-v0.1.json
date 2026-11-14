@@ -1,0 +1,118 @@
+{
+  "version": "v0.1-baseline",
+  "snapshot_date": "2026-11-14",
+  "status": "archived immutable evidence index; linked sources only, not a claim of independent consultation",
+  "source_register": [
+    {
+      "id": "SRC-001",
+      "title": "IBM Computer Vision",
+      "url": "https://www.ibm.com/think/topics/computer-vision",
+      "source_class": "Secondary explainer",
+      "publication_year": null,
+      "linked_entry_ids": [
+        "CAT-001"
+      ],
+      "evidence_status": "Linked (Unverified)"
+    },
+    {
+      "id": "SRC-002",
+      "title": "IBM Natural Language Processing",
+      "url": "https://www.ibm.com/think/topics/natural-language-processing",
+      "source_class": "Secondary explainer",
+      "publication_year": null,
+      "linked_entry_ids": [
+        "CAT-002"
+      ],
+      "evidence_status": "Linked (Unverified)"
+    },
+    {
+      "id": "SRC-003",
+      "title": "Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "source_class": "Primary research paper",
+      "publication_year": 2017,
+      "linked_entry_ids": [
+        "ARC-006",
+        "ARC-007",
+        "ARC-009"
+      ],
+      "evidence_status": "Linked (Unverified)"
+    },
+    {
+      "id": "SRC-004",
+      "title": "An Image Is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+      "url": "https://arxiv.org/abs/2010.11929",
+      "source_class": "Primary research paper",
+      "publication_year": 2020,
+      "linked_entry_ids": [
+        "ARC-002"
+      ],
+      "evidence_status": "Linked (Unverified)"
+    },
+    {
+      "id": "SRC-005",
+      "title": "scikit-learn Supervised Learning",
+      "url": "https://scikit-learn.org/stable/supervised_learning.html",
+      "source_class": "Official technical documentation",
+      "publication_year": null,
+      "linked_entry_ids": [
+        "PAR-001"
+      ],
+      "evidence_status": "Linked (Unverified)"
+    },
+    {
+      "id": "SRC-006",
+      "title": "scikit-learn Unsupervised Learning",
+      "url": "https://scikit-learn.org/stable/unsupervised_learning.html",
+      "source_class": "Official technical documentation",
+      "publication_year": null,
+      "linked_entry_ids": [
+        "PAR-002"
+      ],
+      "evidence_status": "Linked (Unverified)"
+    },
+    {
+      "id": "SRC-007",
+      "title": "Reinforcement Learning: An Introduction (second edition)",
+      "url": "https://mitpress.ublish.com/book/reinforcement-learning-an-introduction-2",
+      "source_class": "Academic textbook",
+      "publication_year": 2018,
+      "linked_entry_ids": [
+        "PAR-003"
+      ],
+      "evidence_status": "Linked (Unverified)"
+    },
+    {
+      "id": "SRC-008",
+      "title": "Survival Analysis, Kaplan–Meier Curves, and Cox Regression",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10357905/",
+      "source_class": "Academic journal article",
+      "publication_year": 2023,
+      "linked_entry_ids": [
+        "ALG-009"
+      ],
+      "evidence_status": "Linked (Unverified)"
+    },
+    {
+      "id": "SRC-009",
+      "title": "Random Survival Forests",
+      "url": "https://doi.org/10.1214/08-AOAS169",
+      "source_class": "Primary research paper",
+      "publication_year": 2008,
+      "linked_entry_ids": [
+        "ALG-009"
+      ],
+      "evidence_status": "Linked (Unverified)"
+    },
+    {
+      "id": "SRC-010",
+      "title": "W3C PROV-O",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "source_class": "Official technical standard",
+      "publication_year": 2013,
+      "linked_entry_ids": [],
+      "evidence_status": "Linked (Unverified)"
+    }
+  ],
+  "baseline_rule": "Do not alter this file; later amendments require a new version with source IDs and provenance."
+}
