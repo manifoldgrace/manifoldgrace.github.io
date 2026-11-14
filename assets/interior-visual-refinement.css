@@ -79,3 +79,23 @@ body>main :is(details>summary){color:#d4d4d4}
 body>main :is(a,button,input,textarea,select,summary):focus-visible{outline-color:#b9b9b9}
 body>main :is(input:not([type=checkbox]):not([type=radio]),textarea,select){border-radius:12px}
 @media(max-width:700px){body>main :is(.card,.link-card,.hs-card,.mg-ops-step,.report,.article-card,.panel){border-radius:14px}}
+
+/* Editorial continuity — concise, calm and consistent on interior pages.
+   This presentation layer never rewrites or conceals original research. */
+body:not(:has(main.studio))>main{color:#e7e7e7;font-size:var(--mg-type-base,.92rem);letter-spacing:.003em}
+body:not(:has(main.studio))>main h1:not(.mg-news-title){font-size:var(--mg-type-h1)!important;font-weight:470!important;line-height:1.16!important;letter-spacing:-.039em!important}
+body:not(:has(main.studio))>main h2{font-size:var(--mg-type-h2)!important;font-weight:520!important;line-height:1.3!important}
+body:not(:has(main.studio))>main h3{font-size:var(--mg-type-h3)!important;font-weight:560!important;line-height:1.38!important}
+body:not(:has(main.studio))>main :is(.page-intro,.intro,.lead){font-size:var(--mg-type-lead)!important;line-height:1.56!important;max-width:70ch}
+body:not(:has(main.studio))>main :is(.eyebrow,.kicker,.mg-ops-kicker,.hs-tag,.mg-news-eyebrow){font-size:var(--mg-type-xs)!important;letter-spacing:.115em!important;color:#929292}
+body:not(:has(main.studio))>main :is(.panel,.link-card,.card,.hs-card,.mg-ops-step,.report,.article-card){background:#101010;border-color:#242424!important;border-radius:15px;box-shadow:none!important}
+body:not(:has(main.studio))>main :is(.panel,.link-card,.card,.hs-card,.mg-ops-step,.report,.article-card):hover{border-color:#363636!important}
+body:not(:has(main.studio))>main :is(.section-note,.caption,.subtitle){color:#999;line-height:1.55}
+body:not(:has(main.studio))>main :is(details>summary){letter-spacing:-.01em}
+@media(max-width:700px){
+ body:not(:has(main.studio))>main :is(h1,h2,h3){overflow-wrap:break-word}
+ body:not(:has(main.studio))>main h1:not(.mg-news-title){font-size:var(--mg-type-h1)!important}
+ body:not(:has(main.studio))>main h2{font-size:var(--mg-type-h2)!important}
+ body:not(:has(main.studio))>main h3{font-size:var(--mg-type-h3)!important}
+ body:not(:has(main.studio))>main :is(.page-intro,.intro,.lead){font-size:.9rem!important}
+}
