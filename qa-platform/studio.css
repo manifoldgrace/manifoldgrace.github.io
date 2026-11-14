@@ -106,3 +106,53 @@ body:has(main.studio) header{background:#050505;border-color:#171717}
  .studio .studio-chat-heading p{font-size:.81rem}
 }
 @media(prefers-reduced-motion:reduce){.studio .quick a{transition:none}}
+
+/* Spacious black-first AI landing / modal auth, 14 November 2026 */
+body:has(.studio) .studio{max-width:1000px;padding-inline:clamp(20px,5vw,66px)}
+.studio .studio-topline{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.studio .studio-topline .eyebrow{margin:0}
+.studio .studio-login-trigger{background:#1c1c1c!important;color:#ededed!important;border:1px solid #303030!important;border-radius:999px!important;padding:9px 19px;font-size:.83rem;white-space:nowrap;cursor:pointer}
+.studio .studio-login-trigger:hover{background:#292929!important}
+.studio>.lead,.studio>h1{max-width:64ch}
+.studio .quick{margin-top:22px;margin-bottom:12px}
+.studio .quick .studio-nav-auth{display:inline-flex;align-items:center;background:#161616!important;color:#c4c4c4!important;border:1px solid #242424!important;border-radius:100px!important;padding:10px 15px;font-size:.78rem;line-height:1.1;min-height:auto;font-weight:400}
+.studio .studio-conversation{min-height:clamp(500px,72vh,860px);display:flex;flex-direction:column;align-items:stretch;justify-content:center;max-width:800px;margin:0 auto!important;padding-top:clamp(42px,8vh,110px)}
+.studio .studio-chat-heading{text-align:center;margin:0 auto 15px}
+.studio .studio-chat-heading h2{font-size:clamp(1.4rem,2.5vw,2.05rem)!important;font-weight:490;line-height:1.2}
+.studio .studio-chat-heading p{color:#919191;font-size:.83rem;margin-top:11px}
+.studio #chat-status{text-align:center;margin:8px 0;font-size:.73rem}
+.studio .chat-log{flex:0 1 auto;width:100%;min-height:clamp(150px,22vh,245px);max-height:48vh;scrollbar-color:#333 transparent}
+.studio .chat-log:empty{min-height:clamp(155px,23vh,270px)}
+.studio .studio-technical,.studio #chat-model{max-width:800px}
+.studio .studio-technical{font-size:.78rem}
+.studio .studio-service-note{margin:0 auto 26px;max-width:800px}
+.studio .studio-service-note>summary{font-size:.72rem;color:#818181;cursor:pointer}
+.studio .studio-service-note .status{font-size:.72rem;color:#959595;margin-top:8px}
+.studio .studio-conversation .studio-technical{margin-top:14px}
+.studio .studio-auth-dialog{position:fixed;inset:0;margin:auto;box-sizing:border-box;width:min(92vw,480px);max-width:480px;max-height:min(90dvh,760px);overflow:auto;background:#101010;color:#efefef;border:1px solid #2c2c2c;border-radius:26px;padding:clamp(22px,3vw,33px);box-shadow:0 28px 95px #000b}
+.studio .studio-auth-dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(6px)}
+.studio .studio-auth-header{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.studio .studio-auth-header h2{font-size:clamp(1.3rem,3vw,1.75rem)!important;font-weight:550;line-height:1.3;margin:0}
+.studio .studio-auth-close{display:grid;place-items:center;min-width:36px;min-height:36px;padding:0!important;background:#242424!important;color:#ddd!important;border:0!important;border-radius:50%!important;font-size:1.35rem;cursor:pointer}
+.studio .studio-auth-intro{font-size:.84rem;color:#aaa;margin:7px 0 21px}
+.studio .studio-oauth{display:grid;gap:10px}
+.studio .studio-oauth button{width:100%;min-height:49px;padding:12px 18px;background:#1d1d1d!important;color:#f1f1f1!important;border:1px solid #343434!important;border-radius:999px!important;text-align:center;font-weight:520;font-size:.87rem;cursor:pointer}
+.studio .studio-oauth button:hover:not(:disabled){background:#292929!important}
+.studio .studio-oauth button:disabled{cursor:not-allowed;opacity:.46}
+.studio .studio-oauth-note{font-size:.73rem;color:#a6a6a6;margin:12px 0 16px}
+.studio .studio-auth-separator{display:flex;align-items:center;gap:12px;margin:17px 0;color:#898989;font-size:.72rem;text-align:center}
+.studio .studio-auth-separator::before,.studio .studio-auth-separator::after{content:"";height:1px;flex:1;background:#303030}
+.studio .studio-auth-dialog #account{border:0!important;margin:0!important;padding:0!important}
+.studio .studio-auth-dialog #account h3{font-size:.89rem!important;font-weight:540;margin:0 0 14px}
+.studio .studio-auth-dialog #account p{font-size:.77rem}
+.studio .studio-auth-dialog #auth-form{max-width:none;width:100%}
+.studio .studio-auth-dialog #auth-submit{width:100%;min-height:45px;justify-content:center;margin-top:4px;background:#dedede!important;color:#0e0e0e!important;font-weight:600}
+.studio .studio-auth-dialog #signout{margin-top:8px}
+@media(max-width:650px){
+ .studio .studio-conversation{min-height:clamp(490px,69dvh,740px);padding-top:32px}
+ .studio .studio-chat-heading h2{font-size:1.45rem!important}
+ .studio .chat-log{min-height:clamp(150px,23dvh,230px)}
+ .studio .chat-log:empty{min-height:clamp(160px,25dvh,250px)}
+ .studio .studio-auth-dialog{width:calc(100vw - 26px);max-height:88dvh;border-radius:24px;padding:24px 20px}
+ .studio .studio-login-trigger{font-size:.79rem;padding:8px 15px}
+}
