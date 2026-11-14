@@ -46,6 +46,8 @@ jobs:
           [vars]
           ALLOWED_ORIGIN = "https://manifoldgrace.github.io"
           DAILY_USER_LIMIT = "12"
+          SUPABASE_URL = "https://zhtjyplymdahvyseqqjc.supabase.co"
+          SUPABASE_ANON_KEY = "sb_publishable_9g5wg3FrQcnG6fNKShfBpA_HWG7mS53"
 
           [[kv_namespaces]]
           binding = "RATE_KV"
