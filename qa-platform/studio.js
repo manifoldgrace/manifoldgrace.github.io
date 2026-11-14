@@ -26,3 +26,20 @@ document.querySelectorAll('[data-oauth]').forEach(button=>{
  });
 });
 if(configuredOAuth.length)$('oauth-status').textContent='Choose an available sign-in provider, or continue with email.';
+
+/* Keep the device screen free of site-wide research panels; reveal on deliberate request. */
+const extras=$('studio-extras'),extrasToggle=$('studio-explore-open'),researchToggle=$('studio-research-open');
+function setExtras(open,focusTarget){
+ if(!extras)return;
+ extras.open=Boolean(open);
+ extrasToggle?.setAttribute('aria-expanded',String(Boolean(open)));
+ if(open){
+  const target=focusTarget?$(focusTarget):extras;
+  requestAnimationFrame(()=>target?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'}));
+ }else document.querySelector('.studio-device')?.scrollIntoView({block:'center',behavior:'smooth'});
+}
+extrasToggle?.addEventListener('click',()=>setExtras(!extras?.open));
+researchToggle?.addEventListener('click',()=>setExtras(true,'research'));
+extras?.addEventListener('toggle',()=>extrasToggle?.setAttribute('aria-expanded',String(extras.open)));
+document.querySelectorAll('#studio-extras a[href^="#"]').forEach(a=>a.addEventListener('click',()=>setExtras(true,a.getAttribute('href').slice(1))));
+if(location.hash&&['workspace','features','catalogue','research'].includes(location.hash.slice(1)))setExtras(true,location.hash.slice(1));
