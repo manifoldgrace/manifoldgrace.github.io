@@ -562,7 +562,7 @@
       ],
       "evidence_status": "Linked (Unverified)",
       "origin": {
-        "domain_id": "CAT-011",
+        "domain_id": null,
         "year": null,
         "primary_source_id": null,
         "verification": "Needs Audit"
@@ -946,7 +946,6 @@
         "verification": "Needs Audit"
       },
       "applied_cross_references": [
-        "CAT-001",
         "CAT-008"
       ]
     },
@@ -984,7 +983,6 @@
         "verification": "Needs Audit"
       },
       "applied_cross_references": [
-        "CAT-001",
         "CAT-006"
       ]
     },
@@ -1109,7 +1107,6 @@
         "verification": "Needs Audit"
       },
       "applied_cross_references": [
-        "CAT-002",
         "CAT-001"
       ]
     },
@@ -1147,7 +1144,6 @@
         "verification": "Needs Audit"
       },
       "applied_cross_references": [
-        "CAT-002",
         "CAT-006"
       ]
     },
@@ -1181,7 +1177,6 @@
         "verification": "Needs Audit"
       },
       "applied_cross_references": [
-        "CAT-002",
         "CAT-010"
       ]
     },
