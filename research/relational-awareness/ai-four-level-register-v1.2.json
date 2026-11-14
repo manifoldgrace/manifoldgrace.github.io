@@ -681,9 +681,9 @@
       "primary_reference_title": null,
       "source_type": "Secondary / Website-Linked Reference",
       "verification_status": "Needs Audit",
-      "project_url": null,
-      "paper_initiative_url": null,
-      "project_status": "Needs audit; project and paper initiative to be scoped",
+      "project_url": "https://manifoldgrace.github.io/ai-model-project-initiatives.html#project-PAR-004",
+      "paper_initiative_url": "https://manifoldgrace.github.io/ai-model-project-initiatives.html#paper-PAR-004",
+      "project_status": "Proposed project and paper initiative; not implemented or published",
       "notes": "Imported from existing Manifold Grace taxonomy v0.3; independent source verification outstanding.",
       "evidence_status": "Linked (Unverified)",
       "origin": {
