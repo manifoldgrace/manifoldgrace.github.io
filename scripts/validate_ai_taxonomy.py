@@ -92,6 +92,7 @@ def check():
         assert row["ID"]==e["id"] and row["AI type"]==e["name"], e["id"]+": CSV identity mismatch"
         assert row["Record state"]==e["record_state"], e["id"]+": CSV state mismatch"
         assert row["Replaced by"]==(e.get("replaced_by_id") or ""), e["id"]+": CSV redirect mismatch"
+        assert row["Publication year"]==str(e.get("primary_publication_year") or ""), e["id"]+": publication year mismatch"
     print("PASS:",len(active),"active,",len(historical),"historical,",len(sources),"sources,",len(names),"name and alias keys, and matching CSV")
 
 if __name__=="__main__":
