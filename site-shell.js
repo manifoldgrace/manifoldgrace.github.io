@@ -21,7 +21,7 @@
       && !document.querySelector('link[data-mg-interior-refinement]')) {
     const interiorTheme = document.createElement("link");
     interiorTheme.rel = "stylesheet";
-    interiorTheme.href = "assets/interior-visual-refinement.css?v=20261112-1";
+    interiorTheme.href = "assets/interior-visual-refinement.css?v=20261114-compact";
     interiorTheme.dataset.mgInteriorRefinement = "true";
     document.head.appendChild(interiorTheme);
   }
