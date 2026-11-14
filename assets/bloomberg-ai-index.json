@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-14T17:58:42Z",
+  "archive_updated_utc": "2026-11-14T22:21:14Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 14
+      "matches": 13
     },
     "Business": {
       "status": "ok",
@@ -17,11 +17,24 @@
     },
     "Markets": {
       "status": "ok",
-      "matches": 7
+      "matches": 8
     }
   },
-  "article_count": 65,
+  "article_count": 66,
   "articles": [
+    {
+      "title": "Juicy 6% Yields Gain Appeal After Nvidia Drama: Credit Weekly",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-14/juicy-6-yields-gain-appeal-after-nvidia-drama-credit-weekly",
+      "published": "2026-11-14T20:00:00Z",
+      "authors": "Davide Barbuscia",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
     {
       "title": "Nationwide Ground Stop Lifted, Nvidia Spy Scandal, Starship’s Longest Test Flight",
       "url": "https://www.bloomberg.com/news/videos/2026-11-14/bloomberg-this-weekend-11-14-2026-video",
