@@ -2,21 +2,7 @@ name: Validate AI taxonomy
 
 on:
   push:
-    paths:
-      - 'research/relational-awareness/ai-four-level-register-v1.1.json'
-      - 'research/relational-awareness/source-baseline-v0.1.json'
-      - 'research/relational-awareness/ai-four-level-register-v1.1.csv'
-      - 'scripts/validate_ai_taxonomy.py'
-      - '.github/workflows/validate-taxonomy.yml'
-      - '.github/CODEOWNERS'
   pull_request:
-    paths:
-      - 'research/relational-awareness/ai-four-level-register-v1.1.json'
-      - 'research/relational-awareness/source-baseline-v0.1.json'
-      - 'research/relational-awareness/ai-four-level-register-v1.1.csv'
-      - 'scripts/validate_ai_taxonomy.py'
-      - '.github/workflows/validate-taxonomy.yml'
-      - '.github/CODEOWNERS'
   workflow_dispatch:
 
 permissions:
