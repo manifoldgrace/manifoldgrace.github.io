@@ -1,8 +1,16 @@
 {
-  "generated_utc": "2026-11-14T09:24:17Z",
+  "generated_utc": "2026-11-14T20:05:28Z",
   "scope": "Manifold Grace public log",
-  "record_count": 215,
+  "record_count": 216,
   "periods": [
+    {
+      "period": "daily",
+      "key": "2026-11-14",
+      "count": 1,
+      "file": "archive/downloads/daily/2026-11-14.pdf",
+      "start_date": "2026-11-14",
+      "end_date": "2026-11-14"
+    },
     {
       "period": "daily",
       "key": "2026-11-13",
@@ -198,10 +206,10 @@
     {
       "period": "weekly",
       "key": "2026-11-09",
-      "count": 143,
+      "count": 144,
       "file": "archive/downloads/weekly/2026-11-09.pdf",
       "start_date": "2026-11-09",
-      "end_date": "2026-11-13"
+      "end_date": "2026-11-14"
     },
     {
       "period": "weekly",
@@ -286,10 +294,10 @@
     {
       "period": "monthly",
       "key": "2026-11",
-      "count": 193,
+      "count": 194,
       "file": "archive/downloads/monthly/2026-11.pdf",
       "start_date": "2026-11-01",
-      "end_date": "2026-11-13"
+      "end_date": "2026-11-14"
     },
     {
       "period": "monthly",
@@ -334,10 +342,10 @@
     {
       "period": "yearly",
       "key": "2026",
-      "count": 215,
+      "count": 216,
       "file": "archive/downloads/yearly/2026.pdf",
       "start_date": "2026-03-20",
-      "end_date": "2026-11-13"
+      "end_date": "2026-11-14"
     }
   ],
   "all_pdf": "archive/downloads/all-records.pdf"
