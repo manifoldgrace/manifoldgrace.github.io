@@ -87,17 +87,18 @@ body.hero-mode #counter{bottom:16px!important}
 body.hero-mode .maplibregl-ctrl-top-right{top:50%!important}
 @media(max-width:650px){body.hero-mode #tour-caption{top:14px;max-width:calc(100% - 32px);font-size:11px}}
 
-/* Hubble deep-field photograph as the black-space environment around the globe.
-   Source: ESA/Hubble, NASA, G. Illingworth et al. (HUDF); non-endorsement. */
+/* Observational Hubble Legacy Field photography; NASA/ESA Hubble Legacy Field team.
+   Source https://esahubble.org/images/heic1909a/ · Creative Commons Attribution 4.0.
+   This layer changes only the space backdrop, not the animated map. */
 html,body,#viewport,#map{background-color:#000!important}
 #viewport{isolation:isolate}
 #viewport::after{
   content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
-  background-image:linear-gradient(#0005,#0005),url("https://cdn.esawebb.org/archives/images/screen/potm2507b.jpg");
+  background-image:linear-gradient(#0001,#0001),url("https://cdn.esahubble.org/archives/images/screen/heic1909a.jpg");
   background-color:#000;
   background-position:center;background-size:cover;
-  opacity:.47;filter:brightness(.78) saturate(.65);
-  -webkit-mask-image:radial-gradient(ellipse 47% 55% at 50% 50%,transparent 60%,#000 91%);
+  opacity:.77;filter:brightness(.86) saturate(.87);
+  -webkit-mask-image:radial-gradient(ellipse 49% 60% at 50% 50%,transparent 49%,#000 86%);
   mask-image:radial-gradient(ellipse 47% 55% at 50% 50%,transparent 60%,#000 91%);
 }
 #map{position:relative;z-index:1}
@@ -140,9 +141,9 @@ body.hero-mode #sky-credit{left:50%;bottom:17px}
 <div id="map-fallback" role="status"><div class="planet"><div class="fallback-caption">Global research atlas<br><small>Interactive globe loading…</small><a class="fallback-link" href="site-directory.html" target="_top">Browse research directory</a></div></div></div><div id="map" role="region" aria-label="Interactive globe of selected public interest AI projects"></div>
 <div class="toolbar"><button class="tool" id="tour" type="button" aria-pressed="false">▶ Play tour</button><button class="tool" id="tilt-control" type="button" aria-describedby="tilt-help" hidden>Enable motion</button><span id="tilt-help" class="sr-only" role="status" aria-live="polite">Move the handset to explore the globe after granting motion access. Use the same button to turn motion off. The map remains draggable by touch.</span><button class="tool" id="london" type="button">◎ London</button><button class="tool" id="reset" type="button">◌ Global view</button><a class="tool primary" target="_top" href="public-interest-ai.html?intent=collaboration#register">Add / collaborate</a></div>
 <div id="panel" hidden role="region" aria-live="polite" aria-label="Project details"><button id="close" aria-label="Close project details" type="button">×</button><div id="panel-body"></div></div>
-<div id="sky-credit"><a href="https://esawebb.org/images/potm2507b/" target="_blank" rel="noopener noreferrer">Starfield: NASA/ESA Hubble</a></div><div id="tour-caption" role="status" hidden aria-live="polite"></div><div id="chapter"><b>◎ Global research atlas</b><span>Selected public-interest AI initiatives</span></div><div id="counter" role="status" aria-live="off">11 listed locations</div><div class="sr-only" id="accessible-project" aria-live="polite"></div><div id="status">⊕ Manifold Grace (London) · ◯ External directory examples</div>
+<div id="sky-credit"><a href="https://esahubble.org/images/heic1909a/" target="_blank" rel="noopener noreferrer">Space image: NASA/ESA Hubble Legacy Field</a></div><div id="tour-caption" role="status" hidden aria-live="polite"></div><div id="chapter"><b>◎ Global research atlas</b><span>Selected public-interest AI initiatives</span></div><div id="counter" role="status" aria-live="off">11 listed locations</div><div class="sr-only" id="accessible-project" aria-live="polite"></div><div id="status">⊕ Manifold Grace (London) · ◯ External directory examples</div>
 </div>
-<div class="note">A curated selection, not a worldwide census or proof of partnerships. Locations are approximate city centres. Source: <a href="https://publicinterest.ai/tool/map/directory" target="_blank" rel="noopener noreferrer">Public Interest AI directory</a>. Other projects' current activity is unverified. Map tiles: © OpenStreetMap contributors · OpenFreeMap. Background: NASA/ESA Hubble Deep Field (via ESA/Webb).</div>
+<div class="note">A curated selection, not a worldwide census or proof of partnerships. Locations are approximate city centres. Source: <a href="https://publicinterest.ai/tool/map/directory" target="_blank" rel="noopener noreferrer">Public Interest AI directory</a>. Other projects' current activity is unverified. Map tiles: © OpenStreetMap contributors · OpenFreeMap. Background: NASA/ESA Hubble Legacy Field (CC BY 4.0), G. Illingworth, D. Magee, K. Whitaker, R. Bouwens, P. Oesch and collaborators.</div>
 <script>
 window.setTimeout(()=>{const box=document.getElementById('map-fallback');if(box&&!box.hidden){const caption=box.querySelector('small');if(caption)caption.textContent='Map unavailable here — browse projects via the site directory.';}},12000);
 </script>
