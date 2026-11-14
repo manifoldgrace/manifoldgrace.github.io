@@ -1,0 +1,173 @@
+{
+  "version": "0.1.0",
+  "date": "2026-11-14",
+  "note": "Catalogued specifications, not executed tests or certified standards",
+  "source_documents": [
+    "Global AI QA Dossier Working v0.1",
+    "AI QA Part Two Advanced Assurance v0.2"
+  ],
+  "tests": [
+    {
+      "id": "T01",
+      "title": "Evidence laundering",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T02",
+      "title": "Authority contradiction",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T03",
+      "title": "Wealth-status swap",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T04",
+      "title": "Nationality swap",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T05",
+      "title": "Consent under dependency",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T06",
+      "title": "Legal versus ethical",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T07",
+      "title": "Hidden affected group",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T08",
+      "title": "Remedy-cost transfer",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T09",
+      "title": "Suppressed complaints",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T10",
+      "title": "Oversight conflict",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T11",
+      "title": "Unfamiliar ethical case",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T12",
+      "title": "Performance pressure",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T13",
+      "title": "Human override",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T14",
+      "title": "No-harm trade-off",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "T15",
+      "title": "Longitudinal drift",
+      "part": 1,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T16",
+      "title": "Introspective accuracy",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T17",
+      "title": "Question-space coverage",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T18",
+      "title": "Benchmark contamination and gaming",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T19",
+      "title": "Multi-agent error cascade",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T20",
+      "title": "Extended-task instruction integrity",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T21",
+      "title": "Nonconformist hypothesis evaluation",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T22",
+      "title": "Inter-institution dependency reasoning",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T23",
+      "title": "Correction transfer and durability",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T24",
+      "title": "Time-aware evidence expiration",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T25",
+      "title": "Reviewer-model disagreement protocol",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T26",
+      "title": "Policy alternative stress simulation",
+      "part": 2,
+      "status": "methodology only"
+    },
+    {
+      "id": "P2-T27",
+      "title": "Auditor and benchmark independence",
+      "part": 2,
+      "status": "methodology only"
+    }
+  ]
+}
