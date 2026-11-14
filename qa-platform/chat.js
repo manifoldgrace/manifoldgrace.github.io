@@ -3,8 +3,15 @@ const c=id=>document.getElementById(id);
 const cfg=globalThis.MG_QA_AUTH_CONFIG||{};
 const chatCfg=globalThis.MG_QA_CHAT_CONFIG||{};
 const endpoint=typeof chatCfg.endpoint==="string"&&/^https:\/\//.test(chatCfg.endpoint)?chatCfg.endpoint.replace(/\/$/,""):"";
-let supabase=null, history=[];
+let supabase=null, history=[], sending=false;
 function state(message){c("chat-status").textContent=message}
+function updateSession(session){
+ const available=Boolean(session?.user&&session?.access_token);
+ if(!sending){c("chat-send").disabled=!available;c("chat-input").disabled=!available}
+ if(available){state("Ready to chat. Model responses are not independently verified.")}
+ else state("Sign in to start a conversation.");
+}
+window.addEventListener("mg-auth-session",event=>updateSession(event.detail?.session));
 function bubble(role,content){const el=document.createElement("p");el.className="chat-line "+role;const b=document.createElement("strong");b.textContent=role==="user"?"You: ":"Model: ";el.append(b,document.createTextNode(content));c("chat-log").append(el);el.scrollIntoView({block:"nearest"});}
 async function initialise(){
  if(!endpoint){state("Model backend not configured. Chat is not active.");return}
@@ -13,8 +20,8 @@ async function initialise(){
   const {createClient}=await import("https://esm.sh/@supabase/supabase-js@2");
   supabase=createClient(cfg.url,cfg.anonKey,{auth:{persistSession:true,autoRefreshToken:true}});
   const {data}=await supabase.auth.getSession();
-  if(!data.session){state("Please sign in through Create account / Sign in above.");return}
-  c("chat-send").disabled=false;c("chat-input").disabled=false;state("Ready to send to a free hosted model. Responses may be inaccurate; do not enter confidential information.");
+  updateSession(data?.session);
+  supabase.auth.onAuthStateChange((_event,session)=>updateSession(session));
  }catch{state("Could not initialise chat sign-in.")}
 }
 c("chat-form").addEventListener("submit",async e=>{
@@ -35,7 +42,7 @@ c("chat-form").addEventListener("submit",async e=>{
   c("chat-model").textContent="Model: "+body.model+" · Response unverified";
   state("Response received.");
  }catch(error){state(error.message||"Chat request failed. No message was added to history.")}
- finally{c("chat-send").disabled=false;input.disabled=false;input.focus()}
+ finally{sending=false;const latest=await supabase.auth.getSession();updateSession(latest.data?.session);if(!input.disabled)input.focus()}
 });
 c("chat-clear").addEventListener("click",()=>{history=[];c("chat-log").replaceChildren();c("chat-model").textContent="No messages in this browser session.";state("Conversation cleared from this page.");});
 initialise();
