@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Manifold Grace canonical AI taxonomy v1.6 and source baseline."""
+"""Validate Manifold Grace canonical AI taxonomy v1.7 and source baseline."""
 import csv
 import json
 import re
@@ -7,8 +7,8 @@ import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "research/relational-awareness/ai-four-level-register-v1.6.json"
-EXPORT = ROOT / "research/relational-awareness/ai-four-level-register-v1.6.csv"
+DATA = ROOT / "research/relational-awareness/ai-four-level-register-v1.7.json"
+EXPORT = ROOT / "research/relational-awareness/ai-four-level-register-v1.7.csv"
 BASE = ROOT / "research/relational-awareness/source-baseline-v0.1.json"
 LEVELS = {1: "CAT", 2: "PAR", 3: "ALG", 4: "ARC"}
 BASELINE_IDS_URLS={
@@ -86,7 +86,7 @@ def check():
     assert "ALG-019" in rsf_source.get("maps_to_entry_ids",[]), "SRC-009 mapping is stale"
     assert all(ref in by_id for src in sources for ref in src.get("maps_to_entry_ids",[])), "Source-to-entry reference missing"
     for e in entries:
-        if e["record_state"]=="Active" and e["id"] in data.get("change_log_v15",{}).get("added_ids",[]):
+        if e["record_state"]=="Active" and e["id"] in data.get("change_log_v15",{}).get("added_ids",[]) + data.get("change_log_v17",{}).get("added_ids",[]):
             assert e.get("primary_research_url") and e.get("primary_publication_year"), e["id"]+": new entry lacks bibliography"
     for s in baseline["source_register"]:
         assert s["id"] in source_by_id and source_by_id[s["id"]]["url"]==s["url"], "Source baseline drift: "+s["id"]
@@ -103,6 +103,16 @@ def check():
         assert row["Publication year"]==str(e.get("primary_publication_year") or ""), e["id"]+": publication year mismatch"
         assert row["Scope"]==e["scope"], e["id"]+": scope mismatch"
         assert row["Related IDs"]=="; ".join(e.get("related_ids",[])), e["id"]+": related cross-reference mismatch"
+    display=(ROOT / "ai-four-level-register.html").read_text(encoding="utf-8")
+    initiative=(ROOT / "ai-model-project-initiatives.html").read_text(encoding="utf-8")
+    assert len(re.findall(r'<tr data-row data-search=', display))==len(active), "Displayed active row count differs from JSON"
+    for entry in active:
+        assert 'id="'+entry["id"]+'"' in display, entry["id"]+": missing display anchor"
+        project_anchor=entry["project_url"].split("#")[-1]
+        paper_anchor=entry["paper_initiative_url"].split("#")[-1]
+        assert 'id="'+project_anchor+'"' in initiative, entry["id"]+": missing project anchor"
+        assert 'id="'+paper_anchor+'"' in initiative, entry["id"]+": missing paper initiative anchor"
+    assert "v1.7.csv" in display and "v1.7.json" in display, "Display export links are not current"
     print("PASS:",len(active),"active,",len(historical),"historical,",len(sources),"sources,",len(names),"name and alias keys, and matching CSV")
 
 if __name__=="__main__":
