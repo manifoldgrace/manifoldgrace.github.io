@@ -1,0 +1,11 @@
+name = "manifold-grace-ai-chat"
+main = "worker.js"
+compatibility_date = "2026-11-14"
+
+[vars]
+ALLOWED_ORIGIN = "https://manifoldgrace.github.io"
+DAILY_USER_LIMIT = "12"
+
+[[kv_namespaces]]
+binding = "RATE_KV"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
