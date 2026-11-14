@@ -767,24 +767,28 @@
     },
     {
       "id": "ALG-003",
-      "name": "Survival and hazard model",
+      "name": "Cox proportional hazards model",
       "aliases": [
-        "Time-to-event model"
+        "Cox PH model",
+        "Cox regression",
+        "Proportional hazards regression"
       ],
       "level": 3,
-      "classification": "statistical model family",
-      "scope": "Predictive and tabular",
-      "related_ids": [],
-      "wikipedia_url": "https://en.wikipedia.org/wiki/Survival_analysis",
-      "primary_research_url": null,
-      "primary_publication_year": null,
-      "primary_reference_title": null,
-      "source_type": "Secondary / Website-Linked Reference",
+      "classification": "Semiparametric survival regression model",
+      "scope": "Hazard ratios and censored time-to-event outcomes, under proportional-hazards assumptions",
+      "related_ids": [
+        "ALG-009"
+      ],
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Proportional_hazards_model",
+      "primary_research_url": "https://doi.org/10.1111/j.2517-6161.1972.tb00899.x",
+      "primary_publication_year": 1972,
+      "primary_reference_title": "Regression Models and Life-Tables",
+      "source_type": "Primary article abstract and bibliographic metadata examined",
       "verification_status": "Needs Audit",
       "project_url": "https://manifoldgrace.github.io/ai-model-project-initiatives.html#project-AIT-0015",
       "paper_initiative_url": "https://manifoldgrace.github.io/ai-model-project-initiatives.html#paper-AIT-0015",
       "project_status": "Proposed project and paper; no independent validation claimed",
-      "notes": "Imported from existing Manifold Grace taxonomy v0.3; independent source verification outstanding.",
+      "notes": "Original label 'Survival and hazard model' was overly broad; corrected to the specific Cox model. Foundational Cox (1972) DOI consulted at publisher. Reference is distinct from the overall field of survival analysis.",
       "evidence_status": "Linked (Unverified)",
       "origin": {
         "domain_id": null,
@@ -795,9 +799,9 @@
       "applied_cross_references": [],
       "record_state": "Active",
       "replaced_by_id": null,
-      "classification_review": "Reviewed at taxonomy level; primary research verification remains separate",
+      "classification_review": "Specific Cox proportional-hazards regression model, within the broader survival-analysis methods field (ALG-009); source abstract and bibliographic details checked, full technical replication not completed.",
       "principal_kind": "statistical_model_family",
-      "taxonomy_evidence_url": null
+      "taxonomy_evidence_url": "https://doi.org/10.1111/j.2517-6161.1972.tb00899.x"
     },
     {
       "id": "ALG-004",
@@ -970,9 +974,11 @@
       "name": "Survival analysis",
       "aliases": [],
       "level": 3,
-      "classification": "Statistical time-to-event method",
-      "scope": "Time-to-event and censored observations",
-      "related_ids": [],
+      "classification": "Umbrella statistical methodology for censored time-to-event data",
+      "scope": "Survival functions, hazards, censoring, and time-to-event analysis across numerous models",
+      "related_ids": [
+        "ALG-003"
+      ],
       "wikipedia_url": "https://en.wikipedia.org/wiki/Survival_analysis",
       "primary_research_url": null,
       "primary_publication_year": null,
@@ -997,7 +1003,7 @@
       "applied_cross_references": [],
       "record_state": "Active",
       "replaced_by_id": null,
-      "classification_review": "Reviewed at taxonomy level; primary research verification remains separate",
+      "classification_review": "Broad survival-analysis methodology, not a specific model architecture; Cox PH is one constituent model (ALG-003).",
       "principal_kind": "statistical_method",
       "taxonomy_evidence_url": null
     },
@@ -2692,6 +2698,13 @@
         "redirect": "PAR-005"
       }
     ],
-    "notes": "Original historical v1.1 unmodified; replacement identifiers preserve provenance. Reviewed at taxonomy boundary; not independent experimental verification."
+    "notes": "Original historical v1.1 unmodified; replacement identifiers preserve provenance. Reviewed at taxonomy boundary; not independent experimental verification.",
+    "survival_reconciliation": {
+      "date": "2026-11-14",
+      "method_id": "ALG-009",
+      "specific_model_id": "ALG-003",
+      "primary_doi": "10.1111/j.2517-6161.1972.tb00899.x",
+      "status": "classification reconciled; source metadata and abstract checked; no benchmark or full-paper claim"
+    }
   }
 }
