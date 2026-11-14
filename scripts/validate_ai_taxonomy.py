@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-"""Validate Manifold Grace four-level canonical AI taxonomy, schema v1.1.
-Usage: python scripts/validate_ai_taxonomy.py
-No third-party packages or network required.
-"""
-import json, re, unicodedata
+"""Validate Manifold Grace canonical AI taxonomy v1.2 and source baseline."""
+import csv
+import json
+import re
+import unicodedata
 from pathlib import Path
 
-ROOT=Path(__file__).resolve().parents[1]
-DATA=ROOT/"research/relational-awareness/ai-four-level-register-v1.1.json"
-BASE=ROOT/"research/relational-awareness/source-baseline-v0.1.json"
-LEVELS={1:"CAT",2:"PAR",3:"ALG",4:"ARC"}
-# Original source URLs are pinned here independently of the JSON baseline.
+ROOT = Path(__file__).resolve().parents[1]
+DATA = ROOT / "research/relational-awareness/ai-four-level-register-v1.2.json"
+EXPORT = ROOT / "research/relational-awareness/ai-four-level-register-v1.2.csv"
+BASE = ROOT / "research/relational-awareness/source-baseline-v0.1.json"
+LEVELS = {1: "CAT", 2: "PAR", 3: "ALG", 4: "ARC"}
 BASELINE_IDS_URLS={
   "SRC-001": "https://www.ibm.com/think/topics/computer-vision",
   "SRC-002": "https://www.ibm.com/think/topics/natural-language-processing",
@@ -23,59 +23,76 @@ BASELINE_IDS_URLS={
   "SRC-009": "https://doi.org/10.1214/08-AOAS169",
   "SRC-010": "https://www.w3.org/TR/prov-o/"
 }
+EVIDENCE = {"Linked (Unverified)", "Independently Verified"}
+STATUSES = {"Needs Audit", "Provisional (Secondary Link)", "Verified (Primary Consulted)", "Deprecated/Merged"}
 
-EVIDENCE={"Linked (Unverified)","Independently Verified"}
-STATUSES={"Needs Audit","Provisional (Secondary Link)","Verified (Primary Consulted)","Deprecated/Merged"}
-def key(s):
-    s=unicodedata.normalize("NFKD",s).casefold()
-    return re.sub(r"[^a-z0-9]","",s)
+def normal(text):
+    return re.sub(r"[^a-z0-9]", "", unicodedata.normalize("NFKD", text).casefold())
+
 def check():
-    d=json.loads(DATA.read_text(encoding="utf-8"))
-    b=json.loads(BASE.read_text(encoding="utf-8"))
-    records=d["entries"]; sources=d["sources"]
-    assert d["schema_version"]=="1.1", "Expected v1.1"
-    assert len(b["source_register"])==10, "Unexpected baseline count"
-    assert {x["id"]:x["url"] for x in b["source_register"]} == BASELINE_IDS_URLS, "Archived baseline drift"
-    ids={e["id"] for e in records}
-    assert len(ids)==len(records), "Duplicate canonical IDs"
-    source_ids={s["id"] for s in sources}
-    assert len(source_ids)==len(sources), "Duplicate source IDs"
-    keys={}
-    for e in records:
-        assert e["level"] in LEVELS and e["id"].startswith(LEVELS[e["level"]]+"-"), e["id"]+": incorrect classification prefix"
-        assert e["verification_status"] in STATUSES
-        assert e["evidence_status"] in EVIDENCE
-        assert e["verification_status"]!="Verified (Primary Consulted)" or (e["evidence_status"]=="Independently Verified" and e.get("primary_research_url")), e["id"]+": ungrounded verification"
-        for x in [e["name"]]+e.get("aliases",[]):
-            k=key(x)
-            if k in keys and keys[k]!=e["id"]:
-                raise ValueError("Duplicate canonical/alias collision: "+x+" overlaps "+keys[k])
-            keys[k]=e["id"]
-        assert all(x in ids for x in e.get("related_ids",[])), e["id"]+": dangling relation"
-        assert len(e.get("related_ids",[]))==len(set(e.get("related_ids",[]))), e["id"]+": duplicate related IDs"
-        assert e["id"] not in e.get("related_ids",[]), e["id"]+": self reference"
-        assert all(x in ids for x in e.get("applied_cross_references",[])), e["id"]+": dangling application reference"
-        assert all(x in source_ids for x in e.get("source_ids",[])), e["id"]+": unknown source"
-        origin=e.get("origin",{})
-        origin_id=origin.get("domain_id")
-        if origin_id:
-            assert origin_id in ids, e["id"]+": unknown origin"
-            assert origin_id != e["id"], e["id"]+": self origin"
-            assert next(x for x in records if x["id"]==origin_id)["level"]==1, e["id"]+": origin not CAT"
-            assert origin_id not in e.get("applied_cross_references",[]), e["id"]+": origin duplicated in applications"
-        applications=e.get("applied_cross_references",[])
-        assert len(applications)==len(set(applications)), e["id"]+": duplicate applications"
-        assert e["id"] not in applications, e["id"]+": self application"
-        assert all(next(x for x in records if x["id"]==a)["level"]==1 for a in applications), e["id"]+": applied reference not CAT"
+    data=json.loads(DATA.read_text(encoding="utf-8"))
+    baseline=json.loads(BASE.read_text(encoding="utf-8"))
+    entries=data["entries"]
+    sources=data["sources"]
+    assert data["schema_version"] == "1.2", "Wrong canonical schema version"
+    assert len(baseline["source_register"]) == 10, "Baseline source count changed"
+    assert {s["id"]:s["url"] for s in baseline["source_register"]} == BASELINE_IDS_URLS, "Archived baseline modified"
+    ids=[e["id"] for e in entries]
+    assert len(ids)==len(set(ids)), "Duplicate IDs"
+    by_id={e["id"]:e for e in entries}
+    active=[e for e in entries if e.get("record_state")=="Active"]
+    historical=[e for e in entries if e.get("record_state")=="Deprecated/Merged"]
+    assert len(active)+len(historical)==len(entries), "Unknown record state"
+    assert len(active)==data["counts"]["active"] and len(historical)==data["counts"]["deprecated"], "State counts wrong"
+    source_by_id={s["id"]:s for s in sources}
+    assert len(source_by_id)==len(sources), "Duplicate source IDs"
+    names={}
+    for e in entries:
+        eid=e["id"]
+        assert e["level"] in LEVELS and re.fullmatch(LEVELS[e["level"]]+r"-[0-9]{3,4}",eid), eid+": ID prefix"
+        assert e["evidence_status"] in EVIDENCE and e["verification_status"] in STATUSES, eid+": status"
+        assert e["verification_status"]!="Verified (Primary Consulted)" or (e["evidence_status"]=="Independently Verified" and e.get("primary_research_url")), eid+": unsupported promotion"
+        assert all(k in by_id for k in e.get("related_ids",[])), eid+": unknown related ID"
+        assert len(e.get("related_ids",[]))==len(set(e.get("related_ids",[]))), eid+": duplicate related IDs"
+        assert eid not in e.get("related_ids",[]), eid+": self-related"
+        assert all(k in source_by_id for k in e.get("source_ids",[])), eid+": unknown source ID"
+        origin=e.get("origin") or {}
+        oid=origin.get("domain_id")
+        applied=e.get("applied_cross_references",[])
+        assert len(applied)==len(set(applied)), eid+": repeated application link"
+        assert eid not in applied, eid+": self application"
+        assert all(k in by_id and by_id[k]["level"]==1 for k in applied), eid+": application not CAT"
+        if oid:
+            assert oid in by_id and by_id[oid]["level"]==1 and oid!=eid, eid+": invalid origin"
+            assert oid not in applied, eid+": origin repeated as application"
+        replacement=e.get("replaced_by_id")
+        if replacement:
+            assert e["record_state"]=="Deprecated/Merged", eid+": active redirect"
+            assert replacement in by_id and replacement!=eid, eid+": invalid replacement"
+            assert by_id[replacement]["record_state"]=="Active", eid+": replacement not active"
+        if e["record_state"]=="Active":
+            assert e.get("project_url") and e.get("paper_initiative_url"), eid+": project/paper links missing"
+            for name in [e["name"],*e.get("aliases",[])]:
+                key=normal(name)
+                assert key, eid+": empty name"
+                assert key not in names or names[key]==eid, eid+": duplicate canonical or alias "+name
+                names[key]=eid
     for s in sources:
-        assert s["evidence_status"] in EVIDENCE, s["id"]+": evidence status invalid"
-        assert s["evidence_status"]!="Independently Verified" or s.get("consulted_primary") is True, s["id"]+": unverified source promoted"
-    for s in b["source_register"]:
-        assert s["id"] in source_ids, "Baseline source omitted: "+s["id"]
-        assert next(x for x in sources if x["id"]==s["id"])["url"]==s["url"], "Baseline URL changed: "+s["id"]
-    for group,code in [(1,"categories"),(2,"paradigms"),(3,"methods"),(4,"architectures")]:
-        assert sum(e["level"]==group for e in records)==d["counts"][code], "Incorrect count: "+code
-    assert len(records)==d["counts"]["total"]
-    print("PASS:",len(records),"entries;",len(source_ids),"sources;",len(keys),"canonical/alias keys; four-level classification and provenance gates checked")
+        assert s.get("evidence_status") in EVIDENCE, s["id"]+": invalid source status"
+        assert s["evidence_status"]!="Independently Verified" or s.get("consulted_primary") is True, s["id"]+": source promotion without consultation"
+    for s in baseline["source_register"]:
+        assert s["id"] in source_by_id and source_by_id[s["id"]]["url"]==s["url"], "Source baseline drift: "+s["id"]
+    for level,key in [(1,"categories"),(2,"paradigms"),(3,"methods"),(4,"architectures")]:
+        assert sum(e["level"]==level for e in active)==data["counts"][key], "Incorrect active count: "+key
+    assert len(entries)==data["counts"]["total"], "Incorrect total count"
+    with EXPORT.open(encoding="utf-8",newline="") as stream:
+        rows=list(csv.DictReader(stream))
+    assert len(rows)==len(entries), "CSV row count differs from JSON"
+    for row,e in zip(rows,entries):
+        assert row["ID"]==e["id"] and row["AI type"]==e["name"], e["id"]+": CSV identity mismatch"
+        assert row["Record state"]==e["record_state"], e["id"]+": CSV state mismatch"
+        assert row["Replaced by"]==(e.get("replaced_by_id") or ""), e["id"]+": CSV redirect mismatch"
+    print("PASS:",len(active),"active,",len(historical),"historical,",len(sources),"sources,",len(names),"name and alias keys, and matching CSV")
+
 if __name__=="__main__":
     check()
