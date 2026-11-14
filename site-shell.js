@@ -295,10 +295,11 @@
     ["My Story & Context", ["Heritage","From Heritage to Life","Family History & Genealogy","Faith","Socials","Photos"]],
     ["Projects & Research Papers", ["Research","Emerging Research Horizon","Research Novelty & Fields","Research Transfer & Scope","MILES Research Architecture","Historical Corridors & AI Recordkeeping","Designing Fairer Systems","Societal Resilience & AI Adviser","Semantic Integrity & Public Communication","Semantic Integrity Frontier 2026","Research Questions & Solutions","Research Collaborations","Independent Work & Impact","My Books"]],
     ["Labs & Interactive", ["Learning Lab","Interdisciplinary Atlas","AI Discovery & Inventory","AI Governance","Knowledge VS Thinking","Information Science","AI Competence & Recruitment","App Design Ideas"]],
-    ["Public Involvement", ["Public Knowledge & Dialogue","Knowledge Contributors","Register a Project","Request Independent Assessment","Become a Reviewer","Research Collaboration","Assessment Approach","Discover Projects","Contact","Team"]],
+    ["Public Involvement", ["Contribute & Collaborate","Public Knowledge & Dialogue","Knowledge Contributors","Register a Project","Request Independent Assessment","Become a Reviewer","Research Collaboration","Assessment Approach","Discover Projects","Contact","Team"]],
     ["Society, Culture & Enterprise", ["Society","Government & Society","Labour Market Analysis","Public","Sociology","Creative","Venture","Trading","Resourcefulness","Travel"]],
     ["Further Learning & Directories", ["Find Your Path","Public Evidence Archive","Archive Research Papers","Bloomberg AI Research Index","Productivity Log","Why Daily Logs Matter","Independent Coverage","Company Intelligence & Financing","Careers"]]
   ];
+  originalLinks.push(["Contribute & Collaborate","contribute-collaborate.html"]);
   originalLinks.push(["Public Knowledge & Dialogue","public-knowledge-dialogue.html"]);
   originalLinks.push(["Knowledge Contributors","knowledge-contributors.html"]);
   originalLinks.push(["Bloomberg AI Research Index","bloomberg-ai-research-index.html"]);
