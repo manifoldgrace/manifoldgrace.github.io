@@ -10,6 +10,20 @@ ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/"research/relational-awareness/ai-four-level-register-v1.1.json"
 BASE=ROOT/"research/relational-awareness/source-baseline-v0.1.json"
 LEVELS={1:"CAT",2:"PAR",3:"ALG",4:"ARC"}
+# Original source URLs are pinned here independently of the JSON baseline.
+BASELINE_IDS_URLS={
+  "SRC-001": "https://www.ibm.com/think/topics/computer-vision",
+  "SRC-002": "https://www.ibm.com/think/topics/natural-language-processing",
+  "SRC-003": "https://arxiv.org/abs/1706.03762",
+  "SRC-004": "https://arxiv.org/abs/2010.11929",
+  "SRC-005": "https://scikit-learn.org/stable/supervised_learning.html",
+  "SRC-006": "https://scikit-learn.org/stable/unsupervised_learning.html",
+  "SRC-007": "https://mitpress.ublish.com/book/reinforcement-learning-an-introduction-2",
+  "SRC-008": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10357905/",
+  "SRC-009": "https://doi.org/10.1214/08-AOAS169",
+  "SRC-010": "https://www.w3.org/TR/prov-o/"
+}
+
 EVIDENCE={"Linked (Unverified)","Independently Verified"}
 STATUSES={"Needs Audit","Provisional (Secondary Link)","Verified (Primary Consulted)","Deprecated/Merged"}
 def key(s):
@@ -21,6 +35,7 @@ def check():
     records=d["entries"]; sources=d["sources"]
     assert d["schema_version"]=="1.1", "Expected v1.1"
     assert len(b["source_register"])==10, "Unexpected baseline count"
+    assert {x["id"]:x["url"] for x in b["source_register"]} == BASELINE_IDS_URLS, "Archived baseline drift"
     ids={e["id"] for e in records}
     assert len(ids)==len(records), "Duplicate canonical IDs"
     source_ids={s["id"] for s in sources}
@@ -37,10 +52,21 @@ def check():
                 raise ValueError("Duplicate canonical/alias collision: "+x+" overlaps "+keys[k])
             keys[k]=e["id"]
         assert all(x in ids for x in e.get("related_ids",[])), e["id"]+": dangling relation"
+        assert len(e.get("related_ids",[]))==len(set(e.get("related_ids",[]))), e["id"]+": duplicate related IDs"
+        assert e["id"] not in e.get("related_ids",[]), e["id"]+": self reference"
         assert all(x in ids for x in e.get("applied_cross_references",[])), e["id"]+": dangling application reference"
         assert all(x in source_ids for x in e.get("source_ids",[])), e["id"]+": unknown source"
         origin=e.get("origin",{})
-        assert not origin.get("domain_id") or origin["domain_id"] in ids, e["id"]+": unknown origin"
+        origin_id=origin.get("domain_id")
+        if origin_id:
+            assert origin_id in ids, e["id"]+": unknown origin"
+            assert origin_id != e["id"], e["id"]+": self origin"
+            assert next(x for x in records if x["id"]==origin_id)["level"]==1, e["id"]+": origin not CAT"
+            assert origin_id not in e.get("applied_cross_references",[]), e["id"]+": origin duplicated in applications"
+        applications=e.get("applied_cross_references",[])
+        assert len(applications)==len(set(applications)), e["id"]+": duplicate applications"
+        assert e["id"] not in applications, e["id"]+": self application"
+        assert all(next(x for x in records if x["id"]==a)["level"]==1 for a in applications), e["id"]+": applied reference not CAT"
     for s in sources:
         assert s["evidence_status"] in EVIDENCE, s["id"]+": evidence status invalid"
         assert s["evidence_status"]!="Independently Verified" or s.get("consulted_primary") is True, s["id"]+": unverified source promoted"
