@@ -192,6 +192,15 @@
       "observed": "research page",
       "implementation": "not independently verified",
       "integration": "not verified"
+    },
+    {
+      "id": "MG-020",
+      "title": "AI Assurance Studio product",
+      "family": "assurance",
+      "page": "qa-platform/",
+      "observed": "product scaffold: public page, catalogue and disabled registration interface",
+      "implementation": "public static front end and SQL schema committed; secure backend not deployed",
+      "integration": "not verified"
     }
   ],
   "proposed_connections": [
@@ -298,6 +307,20 @@
       "to": "MG-002",
       "relation": "proposed technical integration",
       "purpose": "permissioned retrieval",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-003",
+      "to": "MG-020",
+      "relation": "research-to-product specification",
+      "purpose": "translate continuous assurance research into tested product methods",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-020",
+      "to": "MG-004",
+      "relation": "proposed technical integration",
+      "purpose": "show selected QA results in public demonstration interfaces",
       "status": "proposed — not implemented"
     }
   ],
