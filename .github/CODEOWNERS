@@ -1,0 +1,8 @@
+# Maintainer review ownership for Manifold Grace taxonomy integrity.
+# CODEOWNERS is advisory until branch rules require code-owner review.
+# A solo maintainer should establish another authorised reviewer where feasible.
+/research/relational-awareness/source-baseline-v0.1.json @manifoldgrace
+/research/relational-awareness/ai-four-level-register-v1.1.json @manifoldgrace
+/scripts/validate_ai_taxonomy.py @manifoldgrace
+/.github/workflows/validate-taxonomy.yml @manifoldgrace
+/.github/CODEOWNERS @manifoldgrace
