@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-14T02:26:02Z",
+  "archive_updated_utc": "2026-11-14T11:26:38Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
@@ -9,7 +9,7 @@
     },
     "Business": {
       "status": "ok",
-      "matches": 6
+      "matches": 4
     },
     "Industries": {
       "status": "ok",
@@ -17,11 +17,48 @@
     },
     "Markets": {
       "status": "ok",
-      "matches": 3
+      "matches": 5
     }
   },
-  "article_count": 50,
+  "article_count": 53,
   "articles": [
+    {
+      "title": "Goldman Sachs Sees 19% Return on Asia ex-Japan Stocks in 2027",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-14/goldman-sachs-sees-19-return-on-asia-ex-japan-stocks-in-2027",
+      "published": "2026-11-14T10:16:50Z",
+      "authors": "Echo Wong",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "How Wall Street Is Bracing For the Post-Jensen Huang Nvidia Era",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-14/how-wall-street-is-bracing-for-the-post-jensen-huang-nvidia-era",
+      "published": "2026-11-14T09:00:19Z",
+      "authors": "Joe Weisenthal and Tracy Alloway",
+      "categories": [
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Odd Lots: Wall Street and the Post-Huang Nvidia Era (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-14/odd-lots-wall-street-and-the-post-huang-nvidia-era-podcast",
+      "published": "2026-11-14T09:00:00Z",
+      "authors": "Joe Weisenthal and Tracy Alloway",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
     {
       "title": "Nvidia’s Jensen Huang Drama Spotlights Singapore’s Megaspeed, Ex-MD Alice Huang",
       "url": "https://www.bloomberg.com/news/newsletters/2026-11-14/nvidia-s-jensen-huang-drama-spotlights-singapore-s-megaspeed-ex-md-alice-huang",
