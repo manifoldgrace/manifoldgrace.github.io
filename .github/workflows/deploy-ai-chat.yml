@@ -1,0 +1,59 @@
+name: Deploy AI chat Worker
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: manifold-grace-ai-chat-production
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check Cloudflare credential
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::Add the CLOUDFLARE_API_TOKEN GitHub Actions secret before deploying"
+            exit 1
+          fi
+      - name: Find existing chat quota KV namespace
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT_ID: "75526264ed85fbbb59db7a1a7f4d5d07"
+        run: |
+          set -euo pipefail
+          curl -fsS --retry 2 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CF_ACCOUNT_ID/storage/kv/namespaces?per_page=100" > /tmp/kv-list.json
+          ID=$(jq -r '.result[] | select(.title == "manifold-grace-chat-kv") | .id' /tmp/kv-list.json | head -n1)
+          if [ -z "$ID" ]; then echo "::error::KV namespace manifold-grace-chat-kv not found"; exit 1; fi
+          echo "CHAT_KV_ID=$ID" >> "$GITHUB_ENV"
+      - name: Generate Worker deployment configuration
+        env:
+          CHAT_KV_ID: ${{ env.CHAT_KV_ID }}
+        run: |
+          cat > qa-platform/chat-backend/wrangler.generated.toml <<EOF
+          name = "manifold-grace-ai-chat"
+          main = "worker.js"
+          compatibility_date = "2026-11-14"
+          account_id = "75526264ed85fbbb59db7a1a7f4d5d07"
+
+          [vars]
+          ALLOWED_ORIGIN = "https://manifoldgrace.github.io"
+          DAILY_USER_LIMIT = "12"
+
+          [[kv_namespaces]]
+          binding = "RATE_KV"
+          id = "$CHAT_KV_ID"
+          EOF
+      - name: Run mocked Worker tests
+        run: cd qa-platform/chat-backend && npm test
+      - name: Deploy backend as executable Cloudflare Worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx --yes wrangler@4 deploy --config qa-platform/chat-backend/wrangler.generated.toml
