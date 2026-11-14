@@ -1274,3 +1274,45 @@ main .grid.mg-book-shelf,main .cards.mg-book-shelf,main .card-grid.mg-book-shelf
 :is(.mg-notation-glyph,.mg-notation-code){color:#fff!important;border:0!important;box-shadow:none!important}
 .site-nav-panel{border:0!important;box-shadow:none!important;background:#000!important}
 :is(.mg-news-pill,.mg-news-region,.mg-news-views button)[aria-pressed="true"]{background:#222!important;color:#fff!important;text-decoration:underline;text-underline-offset:3px}
+
+/* Manifold Grace contemporary editorial system — 14 November 2026.
+   Consistent scale, rhythm and restrained microcopy presentation across site pages.
+   Preserve original text, research evidence, bespoke homepage and AI device scenes. */
+:root{
+ --mg-type-xs:clamp(.69rem,.13vw + .66rem,.75rem);
+ --mg-type-sm:clamp(.78rem,.18vw + .75rem,.86rem);
+ --mg-type-base:clamp(.87rem,.2vw + .83rem,.97rem);
+ --mg-type-lead:clamp(.95rem,.55vw + .86rem,1.08rem);
+ --mg-type-h1:clamp(1.85rem,3.1vw,2.8rem);
+ --mg-type-h2:clamp(1.16rem,1.5vw,1.49rem);
+ --mg-type-h3:clamp(.99rem,.7vw + .86rem,1.12rem);
+ --mg-ink:#e9e9e9;
+ --mg-subtle:#aaa;
+ --mg-dim:#848484;
+ --mg-fine:#242424;
+}
+body{background:#050505;color:var(--mg-ink);font-size:var(--mg-type-base);line-height:1.59;letter-spacing:.003em;-webkit-font-smoothing:antialiased}
+body :is(input,textarea,select,button){font-family:inherit}
+body:not(:has(main.studio)) main :is(h1,h2,h3,h4){font-family:inherit;text-wrap:balance;overflow-wrap:break-word}
+body:not(:has(main.studio)) main h1{font-size:var(--mg-type-h1);line-height:1.15;letter-spacing:-.039em;font-weight:470}
+body:not(:has(main.studio)) main h2{font-size:var(--mg-type-h2);line-height:1.3;letter-spacing:-.028em;font-weight:520}
+body:not(:has(main.studio)) main h3{font-size:var(--mg-type-h3);line-height:1.38;letter-spacing:-.014em;font-weight:560}
+body:not(:has(main.studio)) main h4{font-size:var(--mg-type-sm);line-height:1.4;font-weight:600}
+body:not(:has(main.studio)) main :is(p,li,dt,dd){line-height:1.64}
+body:not(:has(main.studio)) main :is(.page-intro,.intro,.lead){font-size:var(--mg-type-lead);line-height:1.56;color:var(--mg-subtle);max-width:70ch}
+body:not(:has(main.studio)) main :is(.eyebrow,.kicker,.section-label,.overline){font-size:var(--mg-type-xs);font-weight:500;letter-spacing:.115em;line-height:1.5;color:var(--mg-dim)}
+body:not(:has(main.studio)) main :is(.small-note,.note,figcaption,caption){font-size:var(--mg-type-sm);line-height:1.55;color:var(--mg-subtle)}
+body:not(:has(main.studio)) main :is(.wrap,.content,.article-body){min-width:0}
+body:not(:has(main.studio)) main :is(pre,table,iframe,video,img,svg){max-width:100%}
+body:not(:has(main.studio)) main :is(.table-wrap,.table-scroll,.scroll,.responsive-table){overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
+body:not(:has(main.studio)) main :is(summary){cursor:pointer;scroll-margin-top:90px}
+body:not(:has(main.studio)) main :is(.page-hero){padding-block:clamp(38px,5vw,70px) clamp(28px,3.7vw,50px)}
+body:not(:has(main.studio)) main :is(.page-hero,.page-intro,.lead){text-wrap:pretty}
+body:not(:has(main.studio)) main :is(.panel,.link-card,.card){box-shadow:none}
+body:not(:has(main.studio)) main :is(a,button,input,textarea,select,summary):focus-visible{outline:2px solid #dedede;outline-offset:3px}
+@media(max-width:700px){
+ :root{--mg-type-base:.87rem;--mg-type-h1:clamp(1.55rem,6vw,2.08rem);--mg-type-h2:clamp(1.08rem,4.3vw,1.3rem);--mg-type-h3:clamp(.95rem,3.7vw,1.05rem)}
+ body:not(:has(main.studio)) main :is(.page-hero){padding-block:30px}
+ body:not(:has(main.studio)) main :is(.page-intro,.intro,.lead){font-size:.91rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
