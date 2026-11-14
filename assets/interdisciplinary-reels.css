@@ -49,3 +49,28 @@
 #interdisciplinary-reels .mg-atlas-reference{margin:4px auto 0;max-width:1320px;font-size:.7rem;line-height:1.6;color:#8997a1;letter-spacing:.01em}
 #interdisciplinary-reels .mg-atlas-reference a{color:#b4c9db;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:700px){#interdisciplinary-reels .mg-atlas-reference{padding:0 5vw;font-size:.63rem}}
+
+/* 14 November 2026 — borderless and compact reels, matching the small inline descriptor. */
+#interdisciplinary-reels{padding:24px max(4vw,16px) 16px!important;border:0!important}
+#interdisciplinary-reels .mg-atlas-block{margin:0 0 14px!important}
+#interdisciplinary-reels .mg-atlas-head{gap:12px;margin:0 0 5px}
+#interdisciplinary-reels .mg-atlas-head h2{font:500 clamp(.62rem,.72vw,.7rem)/1.4 system-ui,-apple-system,sans-serif!important;letter-spacing:.08em;text-transform:uppercase;color:#b6b6b6}
+#interdisciplinary-reels .mg-atlas-hint{font:400 clamp(.62rem,.72vw,.7rem)/1.4 system-ui,-apple-system,sans-serif!important;letter-spacing:.005em;text-transform:none;color:#a5a5a5}
+#interdisciplinary-reels .mg-atlas-line,#interdisciplinary-reels .mg-atlas-bottomline{display:none!important}
+#interdisciplinary-reels .mg-atlas-tile{width:80px;height:74px;gap:5px;padding:7px 3px;border:0!important;border-radius:0!important;box-shadow:none!important;background:#000!important}
+#interdisciplinary-reels .mg-atlas-tile:is(:hover,:focus-visible){background:#101010!important;outline-offset:2px}
+#interdisciplinary-reels .mg-atlas-icon{font:400 1.32rem/1 Georgia,serif;min-height:22px}
+#interdisciplinary-reels .mg-atlas-label{font-size:.6rem!important;line-height:1.24;max-width:80px;color:#d2d2d2}
+#interdisciplinary-reels .mg-atlas-motion,#interdisciplinary-reels .mg-atlas-group{gap:7px}
+#interdisciplinary-reels .mg-atlas-reference{margin:1px auto 0;font-size:.58rem!important;color:#777;line-height:1.35}
+#interdisciplinary-reels .mg-atlas-reference a{color:#9a9a9a}
+@media(max-width:700px){
+ #interdisciplinary-reels{padding:18px 0 11px!important}
+ #interdisciplinary-reels .mg-atlas-head{margin:0 4.5vw 4px;gap:8px}
+ #interdisciplinary-reels .mg-atlas-head h2,#interdisciplinary-reels .mg-atlas-hint{font-size:.58rem!important}
+ #interdisciplinary-reels .mg-atlas-tile{width:70px;height:69px;padding:5px 2px;gap:4px}
+ #interdisciplinary-reels .mg-atlas-icon{font-size:1.16rem;min-height:19px}
+ #interdisciplinary-reels .mg-atlas-label{font-size:.54rem!important;max-width:68px}
+ #interdisciplinary-reels .mg-atlas-block{margin-bottom:10px!important}
+ #interdisciplinary-reels .mg-atlas-reference{font-size:.54rem!important;padding:0 4.5vw}
+}
