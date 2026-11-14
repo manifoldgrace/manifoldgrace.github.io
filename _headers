@@ -1,0 +1,6 @@
+# Cloudflare Pages static response headers. NOT authentication.
+# Production and preview URLs require Cloudflare Access applications and policies.
+/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
