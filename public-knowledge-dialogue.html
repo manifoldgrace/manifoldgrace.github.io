@@ -6,6 +6,24 @@
 <meta name="description" content="Proposed Zoom-first public research conversations, source-led seminars, accessible learning, and future contributor collaborations.">
 <link rel="stylesheet" href="style.css?v=20261106-footer-2">
 <script src="site-config.js" defer></script><script src="site-shell.js?v=20261106-footer-2" defer></script>
+
+<style>
+/* Manifold Grace event discovery: compatible with the shared dark interior style. */
+.mg-event-tools{display:grid;grid-template-columns:minmax(0,2fr) minmax(170px,1fr);gap:12px;margin:22px 0 16px}
+.mg-event-tools label{display:block;color:#e9e9e9;font-size:.86rem;margin-bottom:7px}
+.mg-event-tools input,.mg-event-tools select{box-sizing:border-box;width:100%;background:#111;border:1px solid #5d5d5d;border-radius:6px;color:#fff;padding:13px;font:inherit}
+.mg-event-tools input:focus-visible,.mg-event-tools select:focus-visible{outline:2px solid #a5d7ff;outline-offset:2px}
+.mg-event-meta{color:#ccc;margin:14px 0 20px;font-size:.9rem}
+.mg-event-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:20px}
+.mg-event-item{display:flex;flex-direction:column;min-width:0;border-bottom:1px solid #434343;padding-bottom:18px}
+.mg-event-visual{aspect-ratio:16/8;display:flex;align-items:flex-end;padding:18px;background:linear-gradient(135deg,#1d2731,#232525 55%,#171719);border-radius:5px;color:#b9dafa;font-size:.79rem;letter-spacing:.1em;text-transform:uppercase}
+.mg-event-item h3{font-size:1.18rem;margin:15px 0 7px}
+.mg-event-item p{margin:7px 0}
+.mg-event-detail{color:#bbb;font-size:.88rem}
+.mg-event-item a{margin-top:auto;padding-top:8px;text-decoration:underline;text-underline-offset:3px;color:#b5d8ff}
+.mg-event-empty{padding:22px 0;color:#d3d3d3}
+@media(max-width:580px){.mg-event-tools{grid-template-columns:1fr}.mg-event-list{grid-template-columns:1fr}.mg-event-visual{aspect-ratio:16/6}}
+</style>
 </head>
 <body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
@@ -13,6 +31,27 @@
 <div class="page-hero"><div class="wrap"><div class="eyebrow">RESEARCH &amp; KNOWLEDGE · PUBLIC INVOLVEMENT</div><h1>Public Knowledge, Dialogue &amp; Learning</h1>
 <p class="page-intro">An emerging programme for sharing evidence, examining important questions and learning across disciplines. The proposed format is online-first, with public reference material available independently of any future event.</p>
 <p><strong>Programme status: proposed.</strong> No events, guest speakers, fees, registrations or institutional partnerships are confirmed.</p></div></div>
+
+<section id="event-directory"><div class="wrap">
+<span class="status">EVENT DIRECTORY · TOPICS UNDER CONSIDERATION</span>
+<h2>Explore possible online sessions</h2>
+<p>This searchable directory illustrates the proposed programme, following a familiar events-listing pattern. These are <strong>topic concepts, not scheduled events</strong>. There are no tickets, booking buttons, confirmed speakers, prices or Zoom links.</p>
+<div class="mg-event-tools" role="search" aria-label="Explore proposed session topics">
+<div><label for="mgEventSearch">Search topics</label><input id="mgEventSearch" type="search" placeholder="Try history, AI, research methods..." autocomplete="off"></div>
+<div><label for="mgEventCategory">Category</label><select id="mgEventCategory"><option value="all">All subjects</option><option value="history">History &amp; culture</option><option value="methods">Research methods</option><option value="society">Society &amp; governance</option><option value="technology">AI &amp; technology</option></select></div>
+</div>
+<p id="mgEventCount" class="mg-event-meta" role="status" aria-live="polite">6 proposed topics</p>
+<div class="mg-event-list" id="mgEventList">
+<article class="mg-event-item" data-category="history" data-title="History identity and public narratives"><div class="mg-event-visual" aria-hidden="true">History &amp; culture</div><h3>History, identity &amp; public narratives</h3><p>How can archival evidence, family histories and contrasting interpretations illuminate public narratives?</p><p class="mg-event-detail">Concept · Zoom discussion · No date set</p><a href="research-culture-creative-expression.html">Explore related research</a></article>
+<article class="mg-event-item" data-category="methods" data-title="Evaluating sources and historical claims"><div class="mg-event-visual" aria-hidden="true">Research methods</div><h3>Evaluating sources &amp; historical claims</h3><p>Practical questions for weighing primary sources, testimony, uncertainty and contradictory evidence.</p><p class="mg-event-detail">Concept · Online workshop · No date set</p><a href="research-collaborations.html">Explore research collaboration</a></article>
+<article class="mg-event-item" data-category="society" data-title="Institutions accountability and public trust"><div class="mg-event-visual" aria-hidden="true">Society &amp; governance</div><h3>Institutions, accountability &amp; public trust</h3><p>How can organisations investigate disputes, correct records and strengthen institutional safeguards?</p><p class="mg-event-detail">Concept · Moderated conversation · No date set</p><a href="designing-fairer-systems.html">Explore institutional research</a></article>
+<article class="mg-event-item" data-category="technology" data-title="AI knowledge evaluation and public reasoning"><div class="mg-event-visual" aria-hidden="true">AI &amp; technology</div><h3>AI, knowledge evaluation &amp; public reasoning</h3><p>How do AI systems influence what people understand, believe and question?</p><p class="mg-event-detail">Concept · Zoom discussion · No date set</p><a href="semantic-integrity-public-communication-assurance.html">Explore communication assurance</a></article>
+<article class="mg-event-item" data-category="methods" data-title="Returning to research and higher education"><div class="mg-event-visual" aria-hidden="true">Learning &amp; inquiry</div><h3>Returning to research &amp; higher education</h3><p>Approaches to framing questions, reading scholarship and developing independently testable projects.</p><p class="mg-event-detail">Concept · Online learning clinic · No date set</p><a href="learning-lab.html">Explore the Learning Lab</a></article>
+<article class="mg-event-item" data-category="society" data-title="Evidence disagreement and constructive dialogue"><div class="mg-event-visual" aria-hidden="true">Public dialogue</div><h3>Evidence, disagreement &amp; constructive dialogue</h3><p>How can difficult public conversations remain accurate, respectful and open to correction?</p><p class="mg-event-detail">Concept · Panel format · No date set</p><a href="public-speaking.html">Explore public speaking</a></article>
+</div>
+<p id="mgEventEmpty" class="mg-event-empty" hidden>No proposed topics match this search. Try another subject or clear the category filter.</p>
+<p>See <a href="events.html">Events &amp; Conferences</a> for other event resources and <a href="knowledge-contributors.html">Knowledge Contributors</a> for the proposed guest-participation standards.</p>
+</div></section>
 <section id="purpose"><div class="wrap"><h2>What this programme is for</h2>
 <p>Research gains value when different people can scrutinise it, interpret it responsibly and ask questions. The programme connects historical inquiry, public health, social research, ethics, technology and cultural knowledge without requiring every contributor to cover the same subjects or agree with Manifold Grace.</p>
 <p>Material is distinguished as independent external reference, prospective contribution, confirmed event or completed and documented collaboration. Being referenced here does not imply endorsement, affiliation or an invitation.</p>
@@ -49,4 +88,31 @@
 <a class="link-card" href="research-collaborations.html"><strong>Research Collaborations</strong><small>Research questions and paper-development paths</small></a>
 <a class="link-card" href="public.html"><strong>Public Involvement</strong><small>Public-facing knowledge and participation</small></a>
 <a class="link-card" href="learning-lab.html"><strong>Learning Lab</strong><small>Research and educational development</small></a>
-</div></div></section></main><footer><div class="wrap" data-site-footer></div></footer></body></html>
+</div></div></section></main><footer><div class="wrap" data-site-footer></div></footer><script>
+(() => {
+  "use strict";
+  const input = document.getElementById("mgEventSearch");
+  const category = document.getElementById("mgEventCategory");
+  const items = Array.from(document.querySelectorAll("#mgEventList .mg-event-item"));
+  const count = document.getElementById("mgEventCount");
+  const empty = document.getElementById("mgEventEmpty");
+  if (!input || !category || !count || !empty) return;
+  function update() {
+    const query = input.value.trim().toLocaleLowerCase();
+    const selected = category.value;
+    let shown = 0;
+    for (const item of items) {
+      const text = item.textContent.toLocaleLowerCase();
+      const visible = (selected === "all" || item.dataset.category === selected) && (!query || text.includes(query));
+      item.hidden = !visible;
+      if (visible) shown += 1;
+    }
+    count.textContent = shown + " of " + items.length + " proposed topics";
+    empty.hidden = shown !== 0;
+  }
+  input.addEventListener("input", update);
+  category.addEventListener("change", update);
+  update();
+})();
+</script>
+</body></html>
