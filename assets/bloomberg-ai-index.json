@@ -1,27 +1,216 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-13T20:53:35Z",
+  "archive_updated_utc": "2026-11-14T02:26:02Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 17
+      "matches": 15
     },
     "Business": {
       "status": "ok",
-      "matches": 10
+      "matches": 6
     },
     "Industries": {
       "status": "ok",
-      "matches": 1
+      "matches": 0
     },
     "Markets": {
       "status": "ok",
-      "matches": 7
+      "matches": 3
     }
   },
-  "article_count": 35,
+  "article_count": 50,
   "articles": [
+    {
+      "title": "Nvidia’s Jensen Huang Drama Spotlights Singapore’s Megaspeed, Ex-MD Alice Huang",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-14/nvidia-s-jensen-huang-drama-spotlights-singapore-s-megaspeed-ex-md-alice-huang",
+      "published": "2026-11-14T01:00:02Z",
+      "authors": "Gao Yuan, Danny Lee and Kanupriya Kapoor",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "White House Urges Easing Liability to Encourage AI Disclosure",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-14/white-house-urges-easing-liability-to-encourage-ai-disclosure",
+      "published": "2026-11-14T00:34:34Z",
+      "authors": "Maggie Eastland",
+      "categories": [
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia’s Board CEO Hunt, Stocks Finish Week Higher, Retail in Focus",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/the-close-11-13-2026-video",
+      "published": "2026-11-13T23:48:58Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Colette Kress Will Face Scrutiny at Nvidia",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/colette-kress-will-face-scrutiny-at-nvidia-video",
+      "published": "2026-11-13T23:23:54Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia’s Board Failed Jensen Huang: Randall Peterson",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/nvidia-s-board-failed-jensen-huang-randall-peterson-video",
+      "published": "2026-11-13T23:20:08Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Bloomberg Businessweek Daily: Jensen’s Nvidia Leave (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/bloomberg-businessweek-daily-jensen-s-nvidia-leave-podcast",
+      "published": "2026-11-13T23:18:30Z",
+      "authors": "VITORIA ROGERIO",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Bessent Hits Lutnick on Nvidia Affair: Evening Briefing Americas",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-13/bessent-hits-lutnick-on-nvidia-affair-evening-briefing-americas",
+      "published": "2026-11-13T23:07:37Z",
+      "authors": "David Rovella",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Morgan Stanley’s Shalett ‘Incredibly’ Bullish Despite AI Turmoil",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/morgan-stanley-s-shalett-incredibly-bullish-despite-ai-turmoil",
+      "published": "2026-11-13T22:22:59Z",
+      "authors": "Natalia Kniazhevich",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stock Movers: Nvidia, Microsoft, CoreWeave (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/stock-movers-nvidia-microsoft-coreweave-podcast",
+      "published": "2026-11-13T22:21:41Z",
+      "authors": "VITORIA ROGERIO",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Match Group Keeping AI Out of Dating",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/match-group-keeping-ai-out-of-dating-video",
+      "published": "2026-11-13T22:20:58Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips",
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stock Movers: Cerebras, Nvidia, Chip Stocks (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-13/stock-movers-cerebras-nvidia-chip-stocks-podcast",
+      "published": "2026-11-13T21:49:44Z",
+      "authors": "STEVEN GONZALEZ",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Crisis Spurs Scrutiny of Agency That Oversees Chip Curbs",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/nvidia-crisis-spurs-scrutiny-of-agency-that-oversees-chip-curbs",
+      "published": "2026-11-13T21:45:38Z",
+      "authors": "Maggie Eastland and Alicia Diaz",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Blackstone’s QTS Is Cutting AI Debt Sale by More Than Half",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/blackstone-s-qts-is-cutting-ai-debt-sale-by-more-than-half",
+      "published": "2026-11-13T21:35:24Z",
+      "authors": "Menghan Xiao and Emily Graffeo",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Fed Sees Risks Tied to Elevated Asset Prices Partly Driven by AI",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-13/fed-sees-risks-tied-to-elevated-asset-prices-partly-driven-by-ai",
+      "published": "2026-11-13T21:00:00Z",
+      "authors": "Katanga Johnson",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Inside Jensen Huang’s Last Hours as Nvidia CEO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/inside-jensen-huang-s-last-hours-as-nvidia-ceo-video",
+      "published": "2026-11-13T20:47:47Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
     {
       "title": "Retail Investors Get Ready For Anthropic IPO",
       "url": "https://www.bloomberg.com/news/videos/2026-11-13/retail-investors-get-ready-for-anthropic-ipo-video",
