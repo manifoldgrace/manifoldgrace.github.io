@@ -1,0 +1,341 @@
+{
+  "schema_version": "0.1",
+  "date": "2026-11-14",
+  "scope": "first-pass mapping of selected linked pages in Projects & Architecture; not exhaustive",
+  "name_independent": true,
+  "source": "projects.html in manifoldgrace/manifoldgrace.github.io",
+  "status_legend": {
+    "observed": "Website-linked entry, not proof of software deployment",
+    "proposed": "Architectural candidate, not working connection",
+    "verified": "Requires code, tests and deployment evidence"
+  },
+  "families": [
+    "knowledge",
+    "evidence",
+    "assurance",
+    "interface",
+    "orchestration",
+    "ontology",
+    "operations",
+    "intelligence",
+    "societal",
+    "education"
+  ],
+  "projects": [
+    {
+      "id": "MG-001",
+      "title": "Research discovery",
+      "family": "knowledge",
+      "page": "ai-research-discovery.html",
+      "observed": "research specification",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-002",
+      "title": "Evidence verification and contradiction",
+      "family": "evidence",
+      "page": "evidence-verification-across-sectors.html",
+      "observed": "research specification",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-003",
+      "title": "Continuous AI assurance",
+      "family": "assurance",
+      "page": "continuous-agent-ai-assurance.html",
+      "observed": "research specification",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-004",
+      "title": "AI systems demonstrations",
+      "family": "interface",
+      "page": "ai-systems-demonstrations.html",
+      "observed": "browser demonstration index",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-005",
+      "title": "Agent workspace",
+      "family": "orchestration",
+      "page": "ai-agency/index.html",
+      "observed": "project page",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-006",
+      "title": "Historical as-of retrieval",
+      "family": "evidence",
+      "page": "historical-corridors-ai-recordkeeping.html",
+      "observed": "research specification",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-007",
+      "title": "Publication evidence archive",
+      "family": "knowledge",
+      "page": "publication-evidence-archive.html",
+      "observed": "documented reference implementation",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-008",
+      "title": "Archive research and lineage",
+      "family": "knowledge",
+      "page": "publication-archive-research.html",
+      "observed": "research page",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-009",
+      "title": "Research questions observatory",
+      "family": "knowledge",
+      "page": "research-questions-observatory.html",
+      "observed": "research page",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-010",
+      "title": "Government and oversight directory",
+      "family": "ontology",
+      "page": "government-arms.html",
+      "observed": "directory",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-011",
+      "title": "Comparative AI systems atlas",
+      "family": "ontology",
+      "page": "comparative-ai-systems-atlas.html",
+      "observed": "research page",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-012",
+      "title": "AI implementation roadmap",
+      "family": "orchestration",
+      "page": "ai-systems-implementation-roadmap.html",
+      "observed": "engineering plan",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-013",
+      "title": "Business process automation and ERP",
+      "family": "operations",
+      "page": "venture-systems.html",
+      "observed": "venture specification",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-014",
+      "title": "CRM and pipeline",
+      "family": "operations",
+      "page": "business-accelerator-salesforce-ai.html",
+      "observed": "project page",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-015",
+      "title": "Document and evidence organiser",
+      "family": "evidence",
+      "page": "evidence-timeline.html",
+      "observed": "project page",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-016",
+      "title": "Multimodal decision support",
+      "family": "intelligence",
+      "page": "multimodal-ai-perception-decision-support.html",
+      "observed": "research page",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-017",
+      "title": "Societal resilience adviser",
+      "family": "societal",
+      "page": "societal-resilience-ai-adviser.html",
+      "observed": "project page",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-018",
+      "title": "Competency and viva evaluation",
+      "family": "education",
+      "page": "ai-dissertation-viva-preparation-lab.html",
+      "observed": "project page",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    },
+    {
+      "id": "MG-019",
+      "title": "Architecture assurance pathways",
+      "family": "assurance",
+      "page": "project-architecture-assurance-pathways.html",
+      "observed": "research page",
+      "implementation": "not independently verified",
+      "integration": "not verified"
+    }
+  ],
+  "proposed_connections": [
+    {
+      "from": "MG-001",
+      "to": "MG-002",
+      "relation": "proposed technical integration",
+      "purpose": "research evidence validation",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-002",
+      "to": "MG-003",
+      "relation": "proposed technical integration",
+      "purpose": "assurance of claims",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-006",
+      "to": "MG-002",
+      "relation": "proposed technical integration",
+      "purpose": "temporal fact validation",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-007",
+      "to": "MG-006",
+      "relation": "proposed technical integration",
+      "purpose": "source timelines",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-009",
+      "to": "MG-001",
+      "relation": "proposed technical integration",
+      "purpose": "question-to-project research",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-010",
+      "to": "MG-017",
+      "relation": "proposed technical integration",
+      "purpose": "institutional context",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-011",
+      "to": "MG-003",
+      "relation": "proposed technical integration",
+      "purpose": "architecture evaluation",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-003",
+      "to": "MG-004",
+      "relation": "proposed technical integration",
+      "purpose": "QA presentation",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-012",
+      "to": "MG-005",
+      "relation": "proposed technical integration",
+      "purpose": "agent orchestration",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-013",
+      "to": "MG-014",
+      "relation": "proposed technical integration",
+      "purpose": "business workflow",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-015",
+      "to": "MG-002",
+      "relation": "proposed technical integration",
+      "purpose": "document evidence pipeline",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-016",
+      "to": "MG-003",
+      "relation": "proposed technical integration",
+      "purpose": "multimodal QA",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-018",
+      "to": "MG-003",
+      "relation": "proposed technical integration",
+      "purpose": "evaluation rubrics",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-019",
+      "to": "MG-003",
+      "relation": "proposed technical integration",
+      "purpose": "assurance methodology",
+      "status": "proposed — not implemented"
+    },
+    {
+      "from": "MG-005",
+      "to": "MG-002",
+      "relation": "proposed technical integration",
+      "purpose": "permissioned retrieval",
+      "status": "proposed — not implemented"
+    }
+  ],
+  "shared_capability_gaps": [
+    {
+      "id": "CAP-001",
+      "title": "Shared schema and taxonomy registry",
+      "status": "candidate shared capability — implementation not verified"
+    },
+    {
+      "id": "CAP-002",
+      "title": "Versioned API and event contracts",
+      "status": "candidate shared capability — implementation not verified"
+    },
+    {
+      "id": "CAP-003",
+      "title": "Identity, consent and permission broker",
+      "status": "candidate shared capability — implementation not verified"
+    },
+    {
+      "id": "CAP-004",
+      "title": "Evidence provenance and correction store",
+      "status": "candidate shared capability — implementation not verified"
+    },
+    {
+      "id": "CAP-005",
+      "title": "Independent QA runner and results registry",
+      "status": "candidate shared capability — implementation not verified"
+    },
+    {
+      "id": "CAP-006",
+      "title": "Cross-module integration and regression tests",
+      "status": "candidate shared capability — implementation not verified"
+    },
+    {
+      "id": "CAP-007",
+      "title": "Deployment status and incident monitor",
+      "status": "candidate shared capability — implementation not verified"
+    }
+  ]
+}
