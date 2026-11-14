@@ -54,3 +54,18 @@ body>main :is(.log-entry,.mg-ops-page,.hs,.fv,.pr,.fut){scroll-margin-top:72px}
 @media(prefers-reduced-motion:reduce){
   body>main :is(.card,.link-card,.hs-card,.mg-ops-step,.report,.article-card){transition:none}
 }
+
+/* Shared interior typography rhythm and compact long-form reading. Preserve page-specific interactive layouts. */
+body>main{--mg-copy-size:clamp(.865rem,.18vw + .83rem,.945rem);font-size:var(--mg-copy-size)}
+body>main :is(p,li,dd,dt){max-width:100%;overflow-wrap:break-word}
+body>main :is(h1,h2,h3,h4){text-wrap:balance}
+body>main :is(summary){cursor:pointer;min-height:28px}
+body>main :is(.scroll,.table-scroll,.table-wrap,.responsive-table){max-width:100%;overflow-x:auto}
+body>main :is(table){font-size:clamp(.76rem,.25vw + .72rem,.85rem)}
+body>main :is(th,td){padding-block:clamp(6px,.65vw,10px)}
+body>main :is(.panel,.card,.link-card){padding:clamp(12px,1.6vw,20px)}
+@media(max-width:700px){
+ body>main{--mg-copy-size:.865rem}
+ body>main :is(h1,h2,h3){overflow-wrap:break-word}
+ body>main :is(.panel,.card,.link-card){padding:12px}
+}
