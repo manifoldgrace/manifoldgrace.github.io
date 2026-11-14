@@ -1,0 +1,23 @@
+# Local credentials and configuration; never commit third-party tokens.
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+*.credentials.json
+*service-account*.json
+.secrets/
+secrets/
+.wrangler/
+.dev.vars
+.dev.vars.*
+# Browser automation session profiles, authentication cookies and tokens.
+.browser-profiles/
+.auth/
+# Local development artifacts.
+node_modules/
+dist/
+coverage/
+.DS_Store
