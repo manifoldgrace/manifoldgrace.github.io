@@ -1316,3 +1316,38 @@ body:not(:has(main.studio)) main :is(a,button,input,textarea,select,summary):foc
  body:not(:has(main.studio)) main :is(.page-intro,.intro,.lead){font-size:.91rem}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* 14 Nov 2026 — direct correction: genuinely compact type throughout the site.
+   Intentional large visuals and the Earth animation remain unchanged. */
+:root{
+ --mg-type-xs:clamp(.60rem,.08vw + .59rem,.66rem);
+ --mg-type-sm:clamp(.68rem,.12vw + .66rem,.75rem);
+ --mg-type-base:clamp(.75rem,.14vw + .73rem,.83rem);
+ --mg-type-lead:clamp(.79rem,.28vw + .76rem,.9rem);
+ --mg-type-h1:clamp(1.4rem,2.15vw,2.05rem);
+ --mg-type-h2:clamp(.98rem,1.2vw,1.2rem);
+ --mg-type-h3:clamp(.82rem,.6vw + .75rem,.98rem);
+}
+body{font-size:var(--mg-type-base);line-height:1.5}
+body:not(:has(main.studio)) main :is(p,li,dt,dd){line-height:1.52}
+body:not(:has(main.studio)) main h1{font-size:var(--mg-type-h1)!important;line-height:1.16!important}
+body:not(:has(main.studio)) main h2{font-size:var(--mg-type-h2)!important;line-height:1.26!important}
+body:not(:has(main.studio)) main h3{font-size:var(--mg-type-h3)!important;line-height:1.32!important}
+body:not(:has(main.studio)) main :is(.page-intro,.intro,.lead){font-size:var(--mg-type-lead)!important}
+body:not(:has(main.studio)) main :is(.eyebrow,.kicker,.section-label,.overline){font-size:var(--mg-type-xs)!important}
+body:not(:has(main.studio)) main :is(.card,.panel,.link-card) :is(p,li,small){font-size:var(--mg-type-base)}
+body:not(:has(main.studio)) main :is(th,td){font-size:clamp(.69rem,.18vw + .66rem,.79rem);line-height:1.43}
+body>header :is(.brand){font-size:clamp(1.02rem,1.7vw,1.43rem)}
+body>header :is(.nav-links,.site-nav-group>summary){font-size:var(--mg-type-sm)}
+body>footer,body>footer :is(a,summary){font-size:var(--mg-type-sm)}
+@media(max-width:700px){
+ :root{
+ --mg-type-xs:.6rem;--mg-type-sm:.68rem;--mg-type-base:.77rem;
+ --mg-type-lead:.81rem;--mg-type-h1:clamp(1.28rem,5vw,1.67rem);
+ --mg-type-h2:clamp(.98rem,3.7vw,1.12rem);
+ --mg-type-h3:.9rem
+ }
+ body:not(:has(main.studio)) main :is(p,li,dt,dd){line-height:1.48}
+ body:not(:has(main.studio)) main :is(.page-intro,.intro,.lead){font-size:.81rem!important}
+ body:not(:has(main.studio)) main :is(th,td){font-size:.69rem}
+}
