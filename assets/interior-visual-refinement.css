@@ -69,3 +69,13 @@ body>main :is(.panel,.card,.link-card){padding:clamp(12px,1.6vw,20px)}
  body>main :is(h1,h2,h3){overflow-wrap:break-word}
  body>main :is(.panel,.card,.link-card){padding:12px}
 }
+
+/* Monochrome interior alignment: subtle hierarchy, rounded controls, less surface contrast. */
+:root{--mg-interior-muted:#aaa;--mg-interior-hairline:#272727}
+body>main :is(.card,.link-card,.hs-card,.mg-ops-step,.report,.article-card,.panel){box-shadow:none!important;border-color:#272727!important;background-color:#101010}
+body>main :is(.card,.link-card,.hs-card,.mg-ops-step,.report,.article-card,.panel):hover{border-color:#383838!important}
+body>main :is(.card,.link-card,.hs-card,.mg-ops-step,.report,.article-card,.panel){border-radius:16px}
+body>main :is(details>summary){color:#d4d4d4}
+body>main :is(a,button,input,textarea,select,summary):focus-visible{outline-color:#b9b9b9}
+body>main :is(input:not([type=checkbox]):not([type=radio]),textarea,select){border-radius:12px}
+@media(max-width:700px){body>main :is(.card,.link-card,.hs-card,.mg-ops-step,.report,.article-card,.panel){border-radius:14px}}
