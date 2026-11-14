@@ -38,7 +38,7 @@ async function loadSnapshot(){
   if(!res.ok)return;
   const data=await res.json();
   if(data.source!=="GDELT DOC API"||!Array.isArray(data.articles))return;
-  snapshotRows=data.articles.filter(a=>a&&isHttp(a.url)&&a.title&&publisherFor(a.url));
+  snapshotRows=data.articles.filter(a=>a&&isHttp(a.url)&&a.title&&publisherFor(a.url)&&a.published&&Date.now()-new Date(a.published).getTime()<7*86400000);
   snapshotUpdated=data.updated||"";
   if(!state.stories.length){
    state.stories=snapshotForSelection();
@@ -96,11 +96,19 @@ E.providers.scrollLeft=ps;E.regions.scrollLeft=rs;
 E.views.querySelectorAll("[data-view]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.view===state.view)));
 }
 function renderStories(){
-E.feed.className="mg-news-story-area "+(state.view==="cards"?"mg-news-story-cards":"mg-news-story-list");
-const stories=visibleStories();
-if(state.busy && !stories.length){E.feed.innerHTML='<p class="mg-news-empty">Loading recently indexed news from the selected source…</p>';return;}
-if(!stories.length){E.feed.innerHTML='<p class="mg-news-empty">No recent indexed stories for this selection. Choose another newsroom or region, or visit the publisher directly.</p>';return;}
-E.feed.innerHTML=stories.map((a,i)=>'<article class="mg-news-story">'+(state.view==="cards"?(isHttp(a.image)?'<div class="mg-news-thumb"><img src="'+esc(a.image)+'" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest(\'.mg-news-thumb\').classList.add(\'mg-news-thumb-empty\');this.remove()"></div>':'<div class="mg-news-thumb mg-news-thumb-empty" aria-hidden="true">'+esc((PROVIDERS.find(p=>p[0]===a.provider)||["","NEWS"])[1])+'</div>'):'')+'<div class="mg-news-story-copy"><span class="mg-news-story-meta">'+esc(a.provider)+' · '+esc(a.region)+(a.classification==='search-keyword'?' (topic match)':'')+' · indexed '+esc(labelDate(a.published))+'</span><span class="mg-news-story-title">'+esc(a.title)+'</span></div><a class="mg-news-story-open" href="'+esc(a.url)+'" target="_blank" rel="noopener noreferrer" aria-label="Read '+esc(a.title)+' on '+esc(a.provider)+'">Read story ↗</a></article>').join("");
+ E.feed.className="mg-news-story-area "+(state.view==="cards"?"mg-news-story-cards":"mg-news-story-list");
+ const stories=visibleStories();
+ if(state.busy&&!stories.length){E.feed.innerHTML='<p class="mg-news-empty">Checking indexed publisher headlines…</p>';return}
+ if(!stories.length){
+  const direct=state.selected==="all"?"<a href=\"https://www.gdeltproject.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Browse original index</a>":"<a href=\""+esc(PROVIDERS[Number(state.selected)][2])+"\" target=\"_blank\" rel=\"noopener noreferrer\">Visit publisher</a>";
+  E.feed.innerHTML='<p class="mg-news-empty">No verified recent indexed stories available for this selection. '+direct+'.</p>';return;
+ }
+ E.feed.innerHTML=stories.map(a=>{
+  // Deliberately no publisher photograph: indexed social images do not supply re-use rights.
+  // Original neutral graphic preview is clearly identified as illustrative by CSS.
+  const thumb=state.view==="cards"?'<div class="mg-news-thumb mg-news-thumb-empty" aria-hidden="true"></div>':'';
+  return '<article class="mg-news-story">'+thumb+'<div class="mg-news-story-copy"><span class="mg-news-story-meta">'+esc(a.provider)+' · '+esc(a.region)+(a.classification==='search-keyword'?' (topic match)':'')+' · indexed '+esc(labelDate(a.published))+'</span><span class="mg-news-story-title">'+esc(a.title)+'</span></div><a class="mg-news-story-open" href="'+esc(a.url)+'" target="_blank" rel="noopener noreferrer" aria-label="Read '+esc(a.title)+' on '+esc(a.provider)+'">Read story ↗</a></article>';
+ }).join("");
 }
 function render(){
 renderControls();
@@ -130,7 +138,10 @@ if(!res.ok)throw Error("Unavailable "+res.status);
 const json=await res.json();
 if(v!==requestVersion)return;
 const rows=uniq((Array.isArray(json.articles)?json.articles:[]).map(fromGDELT));
-cache.set(query,rows);state.stories=rows;state.updated=new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:"Europe/London"});
+// Preserve recent verified publisher entries from the indexed snapshot when the live query
+// omits some outlets; never fabricate headlines or replace an empty response with older undated data.
+const combined=uniq([...rows,...snapshotForSelection()]);
+cache.set(query,combined);state.stories=combined;state.updated=new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:"Europe/London"});
 }catch(error){
 if(v!==requestVersion)return;
 if(!state.stories.length)state.stories=snapshotForSelection();
