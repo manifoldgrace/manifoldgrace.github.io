@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Manifold Grace canonical AI taxonomy v1.4 and source baseline."""
+"""Validate Manifold Grace canonical AI taxonomy v1.5 and source baseline."""
 import csv
 import json
 import re
@@ -7,8 +7,8 @@ import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "research/relational-awareness/ai-four-level-register-v1.4.json"
-EXPORT = ROOT / "research/relational-awareness/ai-four-level-register-v1.4.csv"
+DATA = ROOT / "research/relational-awareness/ai-four-level-register-v1.5.json"
+EXPORT = ROOT / "research/relational-awareness/ai-four-level-register-v1.5.csv"
 BASE = ROOT / "research/relational-awareness/source-baseline-v0.1.json"
 LEVELS = {1: "CAT", 2: "PAR", 3: "ALG", 4: "ARC"}
 BASELINE_IDS_URLS={
@@ -34,7 +34,7 @@ def check():
     baseline=json.loads(BASE.read_text(encoding="utf-8"))
     entries=data["entries"]
     sources=data["sources"]
-    assert data["schema_version"] == "1.4", "Wrong canonical schema version"
+    assert data["schema_version"] == "1.5", "Wrong canonical schema version"
     assert len(baseline["source_register"]) == 10, "Baseline source count changed"
     assert {s["id"]:s["url"] for s in baseline["source_register"]} == BASELINE_IDS_URLS, "Archived baseline modified"
     ids=[e["id"] for e in entries]
@@ -80,6 +80,14 @@ def check():
     for s in sources:
         assert s.get("evidence_status") in EVIDENCE, s["id"]+": invalid source status"
         assert s["evidence_status"]!="Independently Verified" or s.get("consulted_primary") is True, s["id"]+": source promotion without consultation"
+    rsf=by_id["ALG-019"]
+    rsf_source=source_by_id["SRC-009"]
+    assert "SRC-009" in rsf.get("source_ids",[]), "Dedicated Random Survival Forest record lacks foundational source"
+    assert "ALG-019" in rsf_source.get("maps_to_entry_ids",[]), "SRC-009 mapping is stale"
+    assert all(ref in by_id for src in sources for ref in src.get("maps_to_entry_ids",[])), "Source-to-entry reference missing"
+    for e in entries:
+        if e["record_state"]=="Active" and e["id"] in data.get("change_log_v15",{}).get("added_ids",[]):
+            assert e.get("primary_research_url") and e.get("primary_publication_year"), e["id"]+": new entry lacks bibliography"
     for s in baseline["source_register"]:
         assert s["id"] in source_by_id and source_by_id[s["id"]]["url"]==s["url"], "Source baseline drift: "+s["id"]
     for level,key in [(1,"categories"),(2,"paradigms"),(3,"methods"),(4,"architectures")]:
@@ -93,6 +101,8 @@ def check():
         assert row["Record state"]==e["record_state"], e["id"]+": CSV state mismatch"
         assert row["Replaced by"]==(e.get("replaced_by_id") or ""), e["id"]+": CSV redirect mismatch"
         assert row["Publication year"]==str(e.get("primary_publication_year") or ""), e["id"]+": publication year mismatch"
+        assert row["Scope"]==e["scope"], e["id"]+": scope mismatch"
+        assert row["Related IDs"]=="; ".join(e.get("related_ids",[])), e["id"]+": related cross-reference mismatch"
     print("PASS:",len(active),"active,",len(historical),"historical,",len(sources),"sources,",len(names),"name and alias keys, and matching CSV")
 
 if __name__=="__main__":
