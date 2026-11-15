@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-15T15:38:44Z",
+  "archive_updated_utc": "2026-11-15T21:01:55Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 11
+      "matches": 12
     },
     "Business": {
       "status": "ok",
-      "matches": 0
+      "matches": 1
     },
     "Industries": {
       "status": "ok",
@@ -17,11 +17,116 @@
     },
     "Markets": {
       "status": "ok",
-      "matches": 11
+      "matches": 12
     }
   },
-  "article_count": 81,
+  "article_count": 90,
   "articles": [
+    {
+      "title": "US, Allies Agree to Guard AI Supply Chains From China, FT Says",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/us-allies-agree-to-guard-ai-supply-chains-from-china-ft-says",
+      "published": "2026-11-15T20:16:10Z",
+      "authors": "Aidan Williams",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Huang Discusses Comeback as Nvidia Chief With Allies, FT Says",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/huang-discusses-comeback-as-nvidia-chief-with-allies-ft-says",
+      "published": "2026-11-15T19:14:41Z",
+      "authors": "Kevin Whitelaw",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic’s IPO Makes Dario Amodei the New Face of the AI Boom",
+      "url": "https://www.bloomberg.com/news/features/2026-11-15/anthropic-s-ipo-makes-dario-amodei-the-new-face-of-the-ai-boom",
+      "published": "2026-11-15T19:00:20Z",
+      "authors": "Bailey Lipschultz and Carmen Reinicke",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia Fallout, Next Mega IPO, FAA Router Failure",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-15/bloomberg-this-weekend-11-15-2026-video",
+      "published": "2026-11-15T16:53:51Z",
+      "authors": "",
+      "categories": [
+        "Governance & regulation",
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "House Chairman Says Huang Agrees to Testify But No Date Set Yet",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/house-chairman-says-huang-agrees-to-testify-but-no-date-set-yet",
+      "published": "2026-11-15T16:32:43Z",
+      "authors": "Aidan Williams",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "VC Firm Run by Madonna’s Manager Has $7 Billion Anthropic Stake",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/vc-firm-run-by-madonna-s-manager-has-7-billion-anthropic-stake",
+      "published": "2026-11-15T16:00:05Z",
+      "authors": "Natasha Mascarenhas",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Airlines Play Catchup, Bessent: Nvidia Needs ‘Dramatic Shakeup’",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-15/airlines-play-catchup-bessent-nvidia-needs-dramatic-shakeup",
+      "published": "2026-11-15T15:53:13Z",
+      "authors": "MONICA RIX",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "By The Way: Headlines You May Have Missed",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-15/by-the-way-headlines-you-may-have-missed-video",
+      "published": "2026-11-15T15:46:06Z",
+      "authors": "",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
     {
       "title": "Bessent Says Nvidia Needs ‘Dramatic Shakeup’ After Huang Ouster",
       "url": "https://www.bloomberg.com/news/articles/2026-11-15/bessent-says-nvidia-needs-dramatic-shakeup-after-huang-ouster",
@@ -57,6 +162,19 @@
       ],
       "feeds": [
         "Technology"
+      ]
+    },
+    {
+      "title": "Traders Turn to Kalshi Stock ‘Perps’ on Nvidia and SpaceX as Leverage Fears Grow",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/traders-turn-to-kalshi-stock-perps-on-nvidia-and-spacex-as-leverage-fears-grow",
+      "published": "2026-11-15T15:00:00Z",
+      "authors": "Bernard Goyder and Lydia Beyoud",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
       ]
     },
     {
