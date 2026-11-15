@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "GDELT DOC API",
   "source_url": "https://www.gdeltproject.org/",
-  "updated": "2026-11-14T22:19:22.184753Z",
+  "updated": "2026-11-15T06:21:28.225717Z",
   "providers": {
     "Al Jazeera": {
       "items": [
@@ -180,6 +180,14 @@
       "items": [
         {
           "provider": "The Guardian",
+          "url": "https://www.theguardian.com/society/ng-interactive/2026/nov/15/forgotten-australians-trauma-childrens-homes-orphanages-ntwnfb",
+          "title": "Im still trying to find out who I am : the little - understood plight of Forgotten Australians | Child protection",
+          "published": "2026-11-14T20:00:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "The Guardian",
           "url": "https://www.theguardian.com/uk-news/2026/nov/13/former-hamas-bodyguard-convicted-of-birmingham-knife-also-wanted-in-germany",
           "title": "Former Hamas bodyguard convicted of Birmingham knife crime also wanted in Germany",
           "published": "2026-11-13T18:00:00Z",
@@ -193,33 +201,9 @@
           "published": "2026-11-13T18:00:00Z",
           "region": "World",
           "classification": "publisher-url-path"
-        },
-        {
-          "provider": "The Guardian",
-          "url": "https://www.theguardian.com/news/2026/nov/12/russell-brand-accused-of-misconduct-by-six-more-women-according-to-report",
-          "title": "Russell Brand accused of misconduct by six more women , according to report",
-          "published": "2026-11-13T00:45:00Z",
-          "region": "World",
-          "classification": "publisher-url-path"
-        },
-        {
-          "provider": "The Guardian",
-          "url": "https://www.theguardian.com/us-news/2026/nov/12/california-nurse-release-ice-custody",
-          "title": "Calls grow for release of beloved California nurse detained by ICE :  We want her home  | ICE ( US Immigration and Customs Enforcement )",
-          "published": "2026-11-13T00:45:00Z",
-          "region": "World",
-          "classification": "publisher-url-path"
-        },
-        {
-          "provider": "The Guardian",
-          "url": "https://www.theguardian.com/world/2026/nov/13/indonesia-vice-president-diploma-resignation-explained",
-          "title": "Did Indonesia vice - president just resign because he didnt have a high school diploma ? | Indonesia",
-          "published": "2026-11-13T00:45:00Z",
-          "region": "World",
-          "classification": "publisher-url-path"
         }
       ],
-      "status": "stale"
+      "status": "indexed"
     },
     "NHK World Japan": {
       "items": [],
@@ -252,6 +236,14 @@
     }
   },
   "articles": [
+    {
+      "provider": "The Guardian",
+      "url": "https://www.theguardian.com/society/ng-interactive/2026/nov/15/forgotten-australians-trauma-childrens-homes-orphanages-ntwnfb",
+      "title": "Im still trying to find out who I am : the little - understood plight of Forgotten Australians | Child protection",
+      "published": "2026-11-14T20:00:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
     {
       "provider": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/2026/11/13/truck-and-bus-crash-in-indias-assam-state-kills-at-least-24-people",
@@ -373,30 +365,6 @@
       "classification": "publisher-url-path"
     },
     {
-      "provider": "The Guardian",
-      "url": "https://www.theguardian.com/news/2026/nov/12/russell-brand-accused-of-misconduct-by-six-more-women-according-to-report",
-      "title": "Russell Brand accused of misconduct by six more women , according to report",
-      "published": "2026-11-13T00:45:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "The Guardian",
-      "url": "https://www.theguardian.com/us-news/2026/nov/12/california-nurse-release-ice-custody",
-      "title": "Calls grow for release of beloved California nurse detained by ICE :  We want her home  | ICE ( US Immigration and Customs Enforcement )",
-      "published": "2026-11-13T00:45:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "The Guardian",
-      "url": "https://www.theguardian.com/world/2026/nov/13/indonesia-vice-president-diploma-resignation-explained",
-      "title": "Did Indonesia vice - president just resign because he didnt have a high school diploma ? | Indonesia",
-      "published": "2026-11-13T00:45:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
       "provider": "CNA",
       "url": "https://www.channelnewsasia.com/asia/why-india-and-pakistans-stock-markets-are-rallying-after-us-midterms-6544681",
       "title": "Why India and Pakistan stock markets are rallying after the US midterms",
@@ -447,11 +415,10 @@
     "Deutsche Welle: HTTP Error 429: Too Many Requests",
     "Euronews: HTTP Error 429: Too Many Requests",
     "France 24: HTTP Error 429: Too Many Requests",
-    "The Guardian: HTTP Error 429: Too Many Requests",
     "NHK World Japan: HTTP Error 429: Too Many Requests",
     "NPR: HTTP Error 429: Too Many Requests",
     "The New York Times: No indexed articles",
-    "Reuters: No indexed articles",
+    "Reuters: HTTP Error 429: Too Many Requests",
     "Sky News: HTTP Error 429: Too Many Requests"
   ]
 }
