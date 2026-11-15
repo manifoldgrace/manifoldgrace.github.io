@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-14T22:21:14Z",
+  "archive_updated_utc": "2026-11-15T06:24:10Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 13
+      "matches": 10
     },
     "Business": {
       "status": "ok",
-      "matches": 2
+      "matches": 0
     },
     "Industries": {
       "status": "ok",
@@ -20,8 +20,20 @@
       "matches": 8
     }
   },
-  "article_count": 66,
+  "article_count": 67,
   "articles": [
+    {
+      "title": "India Stock Market Rebounds as AI Trade Unwinds, Foreign Funds Return",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/india-stock-market-rebounds-as-ai-trade-unwinds-foreign-funds-return",
+      "published": "2026-11-15T00:00:00Z",
+      "authors": "Abhishek Vishnoi and Faseeh Mangi",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
     {
       "title": "Juicy 6% Yields Gain Appeal After Nvidia Drama: Credit Weekly",
       "url": "https://www.bloomberg.com/news/articles/2026-11-14/juicy-6-yields-gain-appeal-after-nvidia-drama-credit-weekly",
