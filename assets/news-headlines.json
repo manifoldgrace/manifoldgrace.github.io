@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "GDELT DOC API",
   "source_url": "https://www.gdeltproject.org/",
-  "updated": "2026-11-15T06:21:28.225717Z",
+  "updated": "2026-11-15T18:48:03.067033Z",
   "providers": {
     "Al Jazeera": {
       "items": [
@@ -143,34 +143,91 @@
       "items": [
         {
           "provider": "Deutsche Welle",
-          "url": "https://www.dw.com/en/does-gen-z-care-about-the-uns-big-climate-summit/audio-79944282",
-          "title": "Does Gen Z care about the UN big climate summit ?",
-          "published": "2026-11-13T18:00:00Z",
+          "url": "https://www.dw.com/pt-br/protestos-tomam-conta-de-portugal-contra-crise-habitacional/a-79949804",
+          "title": "Protestos tomam conta de Portugal contra crise habitacional",
+          "published": "2026-11-14T21:00:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         },
         {
           "provider": "Deutsche Welle",
-          "url": "https://www.dw.com/en/czechia-braces-for-massive-protest-against-public-media-reform-plans/a-79933533",
-          "title": "Czechia : Huge protest planned over public media reform",
-          "published": "2026-11-13T18:00:00Z",
+          "url": "https://www.dw.com/pt-br/agropecu%C3%A1ria-aposta-em-solo-compartilhado-com-pain%C3%A9is-solares/a-79950021",
+          "title": "Agropecuária compartilha solo com painéis solares",
+          "published": "2026-11-14T21:00:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         },
         {
           "provider": "Deutsche Welle",
-          "url": "https://www.dw.com/en/eu-leaders-urged-to-act-now-to-stay-ai-competitive-with-us-china/a-79937463",
-          "title": "AI : European leaders urged to  act now  to stay competitive",
-          "published": "2026-11-13T18:00:00Z",
+          "url": "https://www.dw.com/de/gaza-humanit%C3%A4re-lage-versch%C3%A4rft-sich-politische-l%C3%B6sung-bleibt-aus/a-79946973",
+          "title": "Gaza : Humanitäre Lage durch Regenfälle verschärft sich",
+          "published": "2026-11-14T21:00:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "Deutsche Welle",
+          "url": "https://www.dw.com/en/fact-check-iranian-content-farms-reach-millions/a-79934190",
+          "title": "Fact check :  Iranian  content farms reach millions",
+          "published": "2026-11-14T21:00:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "Deutsche Welle",
+          "url": "https://www.dw.com/ru/gubernatorom-alaski-vpervye-s-1998-goda-izbran-demokrat/a-79948971",
+          "title": "Губернатором Аляски впервые с 1998 года избран демократ",
+          "published": "2026-11-14T20:00:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         }
       ],
-      "status": "stale"
+      "status": "indexed"
     },
     "Euronews": {
-      "items": [],
-      "status": "unavailable"
+      "items": [
+        {
+          "provider": "Euronews",
+          "url": "https://es.euronews.com/2026/11/15/banos-termales-y-saunas-al-aire-libre-en-europa-para-disfrutar-del-invierno",
+          "title": "Baños termales y saunas al aire libre en Europa para disfrutar del invierno",
+          "published": "2026-11-15T07:45:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "Euronews",
+          "url": "https://www.euronews.com/2026/11/15/feeling-the-winter-chill-thermal-baths-and-scenic-outdoor-saunas-worth-visiting-in-europe",
+          "title": "Feeling the winter chill ? Thermal baths and scenic outdoor saunas worth visiting in Europe",
+          "published": "2026-11-15T07:45:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "Euronews",
+          "url": "https://es.euronews.com/2026/11/15/moscu-no-impondra-condiciones-a-la-ue-sobre-su-grupo-negociador-en-ucrania",
+          "title": "Moscú no impondrá condiciones a la UE sobre su grupo negociador en Ucrania",
+          "published": "2026-11-15T07:45:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "Euronews",
+          "url": "https://www.euronews.com/2026/11/15/hope-springs-eternal-in-award-winning-photos-showcasing-natures-resilience",
+          "title": "Hope springs eternal in award - winning photos showcasing nature resilience",
+          "published": "2026-11-15T07:45:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "Euronews",
+          "url": "https://www.euronews.com/2026/11/15/zelenskyy-questions-spacex-over-reported-starshield-speed-restrictions",
+          "title": "Zelenskyy questions SpaceX over reported Starshield speed restrictions",
+          "published": "2026-11-15T07:45:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        }
+      ],
+      "status": "indexed"
     },
     "France 24": {
       "items": [],
@@ -203,7 +260,7 @@
           "classification": "publisher-url-path"
         }
       ],
-      "status": "indexed"
+      "status": "stale"
     },
     "NHK World Japan": {
       "items": [],
@@ -236,6 +293,86 @@
     }
   },
   "articles": [
+    {
+      "provider": "Euronews",
+      "url": "https://es.euronews.com/2026/11/15/banos-termales-y-saunas-al-aire-libre-en-europa-para-disfrutar-del-invierno",
+      "title": "Baños termales y saunas al aire libre en Europa para disfrutar del invierno",
+      "published": "2026-11-15T07:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Euronews",
+      "url": "https://www.euronews.com/2026/11/15/feeling-the-winter-chill-thermal-baths-and-scenic-outdoor-saunas-worth-visiting-in-europe",
+      "title": "Feeling the winter chill ? Thermal baths and scenic outdoor saunas worth visiting in Europe",
+      "published": "2026-11-15T07:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Euronews",
+      "url": "https://es.euronews.com/2026/11/15/moscu-no-impondra-condiciones-a-la-ue-sobre-su-grupo-negociador-en-ucrania",
+      "title": "Moscú no impondrá condiciones a la UE sobre su grupo negociador en Ucrania",
+      "published": "2026-11-15T07:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Euronews",
+      "url": "https://www.euronews.com/2026/11/15/hope-springs-eternal-in-award-winning-photos-showcasing-natures-resilience",
+      "title": "Hope springs eternal in award - winning photos showcasing nature resilience",
+      "published": "2026-11-15T07:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Euronews",
+      "url": "https://www.euronews.com/2026/11/15/zelenskyy-questions-spacex-over-reported-starshield-speed-restrictions",
+      "title": "Zelenskyy questions SpaceX over reported Starshield speed restrictions",
+      "published": "2026-11-15T07:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Deutsche Welle",
+      "url": "https://www.dw.com/pt-br/protestos-tomam-conta-de-portugal-contra-crise-habitacional/a-79949804",
+      "title": "Protestos tomam conta de Portugal contra crise habitacional",
+      "published": "2026-11-14T21:00:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Deutsche Welle",
+      "url": "https://www.dw.com/pt-br/agropecu%C3%A1ria-aposta-em-solo-compartilhado-com-pain%C3%A9is-solares/a-79950021",
+      "title": "Agropecuária compartilha solo com painéis solares",
+      "published": "2026-11-14T21:00:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Deutsche Welle",
+      "url": "https://www.dw.com/de/gaza-humanit%C3%A4re-lage-versch%C3%A4rft-sich-politische-l%C3%B6sung-bleibt-aus/a-79946973",
+      "title": "Gaza : Humanitäre Lage durch Regenfälle verschärft sich",
+      "published": "2026-11-14T21:00:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Deutsche Welle",
+      "url": "https://www.dw.com/en/fact-check-iranian-content-farms-reach-millions/a-79934190",
+      "title": "Fact check :  Iranian  content farms reach millions",
+      "published": "2026-11-14T21:00:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Deutsche Welle",
+      "url": "https://www.dw.com/ru/gubernatorom-alaski-vpervye-s-1998-goda-izbran-demokrat/a-79948971",
+      "title": "Губернатором Аляски впервые с 1998 года избран демократ",
+      "published": "2026-11-14T20:00:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
     {
       "provider": "The Guardian",
       "url": "https://www.theguardian.com/society/ng-interactive/2026/nov/15/forgotten-australians-trauma-childrens-homes-orphanages-ntwnfb",
@@ -290,30 +427,6 @@
       "title": "Halifax Mooseheads look to make wiener dog race safer",
       "published": "2026-11-13T18:00:00Z",
       "region": "Americas",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "Deutsche Welle",
-      "url": "https://www.dw.com/en/does-gen-z-care-about-the-uns-big-climate-summit/audio-79944282",
-      "title": "Does Gen Z care about the UN big climate summit ?",
-      "published": "2026-11-13T18:00:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "Deutsche Welle",
-      "url": "https://www.dw.com/en/czechia-braces-for-massive-protest-against-public-media-reform-plans/a-79933533",
-      "title": "Czechia : Huge protest planned over public media reform",
-      "published": "2026-11-13T18:00:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "Deutsche Welle",
-      "url": "https://www.dw.com/en/eu-leaders-urged-to-act-now-to-stay-ai-competitive-with-us-china/a-79937463",
-      "title": "AI : European leaders urged to  act now  to stay competitive",
-      "published": "2026-11-13T18:00:00Z",
-      "region": "World",
       "classification": "publisher-url-path"
     },
     {
@@ -412,13 +525,12 @@
     "BBC News: HTTP Error 429: Too Many Requests",
     "CBC News: HTTP Error 429: Too Many Requests",
     "CNA: HTTP Error 429: Too Many Requests",
-    "Deutsche Welle: HTTP Error 429: Too Many Requests",
-    "Euronews: HTTP Error 429: Too Many Requests",
     "France 24: HTTP Error 429: Too Many Requests",
+    "The Guardian: HTTP Error 429: Too Many Requests",
     "NHK World Japan: HTTP Error 429: Too Many Requests",
     "NPR: HTTP Error 429: Too Many Requests",
-    "The New York Times: No indexed articles",
+    "The New York Times: HTTP Error 429: Too Many Requests",
     "Reuters: HTTP Error 429: Too Many Requests",
-    "Sky News: HTTP Error 429: Too Many Requests"
+    "Sky News: No indexed articles"
   ]
 }
