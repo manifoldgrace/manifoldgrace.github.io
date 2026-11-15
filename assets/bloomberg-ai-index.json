@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-15T06:24:10Z",
+  "archive_updated_utc": "2026-11-15T15:38:44Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 10
+      "matches": 11
     },
     "Business": {
       "status": "ok",
@@ -17,11 +17,187 @@
     },
     "Markets": {
       "status": "ok",
-      "matches": 8
+      "matches": 11
     }
   },
-  "article_count": 67,
+  "article_count": 81,
   "articles": [
+    {
+      "title": "Bessent Says Nvidia Needs ‘Dramatic Shakeup’ After Huang Ouster",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/bessent-says-nvidia-needs-dramatic-shakeup-after-huang-ouster",
+      "published": "2026-11-15T15:16:46Z",
+      "authors": "Tony Czuczka",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "White House Braces for Democratic Investigations",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-15/white-house-braces-for-democratic-investigations-video",
+      "published": "2026-11-15T15:14:45Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Apple Siri AI App Integrations Power Smart Glasses, iPhone Duo 2 Face ID Plan",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-15/apple-siri-ai-app-integrations-power-smart-glasses-iphone-duo-2-face-id-plan",
+      "published": "2026-11-15T15:00:01Z",
+      "authors": "Mark Gurman",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Congress Presses Nvidia Over China Chip Access",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-15/congress-presses-nvidia-over-china-chip-access-video",
+      "published": "2026-11-15T14:50:56Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia Sought Taipei’s Help Over Employee’s Chip Smuggling Case",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/nvidia-sought-taipei-s-help-over-employee-s-chip-smuggling-case",
+      "published": "2026-11-15T14:48:57Z",
+      "authors": "Mackenzie Hawkins",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "AI Investors Brace for Data Center Restrictions",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-15/ai-investors-brace-for-data-center-restrictions-video",
+      "published": "2026-11-15T14:39:27Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Crisis Reshapes Washington’s Tech Debate",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-15/nvidia-crisis-reshapes-washington-s-tech-debate-video",
+      "published": "2026-11-15T14:10:32Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic IPO Arrives at a Pivotal AI Moment",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-15/anthropic-ipo-arrives-at-a-pivotal-ai-moment-video",
+      "published": "2026-11-15T13:17:16Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia Crisis Complicates Trump’s China Trip",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-15/nvidia-crisis-complicates-trump-s-china-trip-video",
+      "published": "2026-11-15T13:05:46Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Can America’s Next Jobs Boom Build a Middle-Class Life?",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-15/can-america-s-next-jobs-boom-build-a-middle-class-life-video",
+      "published": "2026-11-15T13:03:36Z",
+      "authors": "",
+      "categories": [
+        "Workforce & society"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Trump Heads to Asia With Trade, Security at Stake",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-15/trump-heads-to-asia-with-trade-security-at-stake-video",
+      "published": "2026-11-15T12:52:36Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Firmus Plans to Raise $3 Billion After IPO Collapse, AFR Says",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/firmus-plans-to-raise-3-billion-after-ipo-collapse-afr-says",
+      "published": "2026-11-15T09:40:54Z",
+      "authors": "Ishika Mookerjee",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Korea’s Top Scorer in Tax Accountant Exam Admits to AI Cheating",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/korea-s-top-scorer-in-tax-accountant-exam-admits-to-ai-cheating",
+      "published": "2026-11-15T08:49:18Z",
+      "authors": "Yoolim Lee",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "State Street, Pictet Call Time on Europe’s Stock Market Rally",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/state-street-pictet-call-time-on-europe-s-stock-market-rally",
+      "published": "2026-11-15T08:00:00Z",
+      "authors": "Farah Elbahrawy",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
     {
       "title": "India Stock Market Rebounds as AI Trade Unwinds, Foreign Funds Return",
       "url": "https://www.bloomberg.com/news/articles/2026-11-15/india-stock-market-rebounds-as-ai-trade-unwinds-foreign-funds-return",
