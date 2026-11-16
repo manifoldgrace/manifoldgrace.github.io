@@ -1,6 +1,8 @@
 # Cross-border family updates
 
-**Drafted 16 November 2026 · Working research draft**
+**Drafted 16 November 2026 · Published work in progress**
+
+Published work in progress. Research is underway. The questions, evidence and paper structure may change as the work develops.
 
 ## Research question
 
