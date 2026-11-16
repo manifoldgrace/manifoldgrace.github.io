@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "GDELT DOC API",
   "source_url": "https://www.gdeltproject.org/",
-  "updated": "2026-11-16T06:20:32.417312Z",
+  "updated": "2026-11-16T21:58:26.794463Z",
   "providers": {
     "Al Jazeera": {
       "items": [
@@ -143,46 +143,46 @@
       "items": [
         {
           "provider": "Deutsche Welle",
-          "url": "https://www.dw.com/pt-br/protestos-tomam-conta-de-portugal-contra-crise-habitacional/a-79949804",
-          "title": "Protestos tomam conta de Portugal contra crise habitacional",
-          "published": "2026-11-14T21:00:00Z",
+          "url": "https://www.dw.com/sw/bajeti-ya-ujerumani-ya-2027-euro-bilioni-561-huku-gharama-za-ulinzi-na-pensheni-zikiongezeka/a-79950341",
+          "title": "Bajeti ya Ujerumani ya 2027 : Euro bilioni 561",
+          "published": "2026-11-16T08:15:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         },
         {
           "provider": "Deutsche Welle",
-          "url": "https://www.dw.com/pt-br/agropecu%C3%A1ria-aposta-em-solo-compartilhado-com-pain%C3%A9is-solares/a-79950021",
-          "title": "Agropecuária compartilha solo com painéis solares",
-          "published": "2026-11-14T21:00:00Z",
+          "url": "https://www.dw.com/sw/ukuaji-wa-uchumi-wa-ujerumani-warejea-huku-gharama-za-pensheni-na-mzigo-wa-deni-vikiongezeka/a-79953691",
+          "title": "Kwa nini ukuaji wa uchumi wa Ujerumani hautoshi ?",
+          "published": "2026-11-16T08:15:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         },
         {
           "provider": "Deutsche Welle",
-          "url": "https://www.dw.com/de/gaza-humanit%C3%A4re-lage-versch%C3%A4rft-sich-politische-l%C3%B6sung-bleibt-aus/a-79946973",
-          "title": "Gaza : Humanitäre Lage durch Regenfälle verschärft sich",
-          "published": "2026-11-14T21:00:00Z",
+          "url": "https://www.dw.com/es/una-ola-de-fieles-llega-a-lima-para-despedirse-del-papa-le%C3%B3n-xiv/a-79954606",
+          "title": "Una ola de fieles llega a Lima para despedirse de León XIV",
+          "published": "2026-11-16T08:15:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         },
         {
           "provider": "Deutsche Welle",
-          "url": "https://www.dw.com/en/fact-check-iranian-content-farms-reach-millions/a-79934190",
-          "title": "Fact check :  Iranian  content farms reach millions",
-          "published": "2026-11-14T21:00:00Z",
+          "url": "https://www.dw.com/es/once-muertos-en-un-incendio-en-isla-tur%C3%ADstica-en-tailandia/a-79954395",
+          "title": "Once muertos en un incendio en isla turística en Tailandia",
+          "published": "2026-11-16T08:15:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         },
         {
           "provider": "Deutsche Welle",
-          "url": "https://www.dw.com/ru/gubernatorom-alaski-vpervye-s-1998-goda-izbran-demokrat/a-79948971",
-          "title": "Губернатором Аляски впервые с 1998 года избран демократ",
-          "published": "2026-11-14T20:00:00Z",
+          "url": "https://www.dw.com/es/australia-diputada-que-perdi%C3%B3-sus-piernas-en-ataque-sale-del-hospital/a-79954367",
+          "title": "Australia : diputada que perdió sus piernas sale del hospital",
+          "published": "2026-11-16T08:15:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         }
       ],
-      "status": "stale"
+      "status": "indexed"
     },
     "Euronews": {
       "items": [
@@ -294,6 +294,46 @@
   },
   "articles": [
     {
+      "provider": "Deutsche Welle",
+      "url": "https://www.dw.com/sw/bajeti-ya-ujerumani-ya-2027-euro-bilioni-561-huku-gharama-za-ulinzi-na-pensheni-zikiongezeka/a-79950341",
+      "title": "Bajeti ya Ujerumani ya 2027 : Euro bilioni 561",
+      "published": "2026-11-16T08:15:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Deutsche Welle",
+      "url": "https://www.dw.com/sw/ukuaji-wa-uchumi-wa-ujerumani-warejea-huku-gharama-za-pensheni-na-mzigo-wa-deni-vikiongezeka/a-79953691",
+      "title": "Kwa nini ukuaji wa uchumi wa Ujerumani hautoshi ?",
+      "published": "2026-11-16T08:15:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Deutsche Welle",
+      "url": "https://www.dw.com/es/una-ola-de-fieles-llega-a-lima-para-despedirse-del-papa-le%C3%B3n-xiv/a-79954606",
+      "title": "Una ola de fieles llega a Lima para despedirse de León XIV",
+      "published": "2026-11-16T08:15:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Deutsche Welle",
+      "url": "https://www.dw.com/es/once-muertos-en-un-incendio-en-isla-tur%C3%ADstica-en-tailandia/a-79954395",
+      "title": "Once muertos en un incendio en isla turística en Tailandia",
+      "published": "2026-11-16T08:15:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "Deutsche Welle",
+      "url": "https://www.dw.com/es/australia-diputada-que-perdi%C3%B3-sus-piernas-en-ataque-sale-del-hospital/a-79954367",
+      "title": "Australia : diputada que perdió sus piernas sale del hospital",
+      "published": "2026-11-16T08:15:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
       "provider": "Euronews",
       "url": "https://es.euronews.com/2026/11/15/banos-termales-y-saunas-al-aire-libre-en-europa-para-disfrutar-del-invierno",
       "title": "Baños termales y saunas al aire libre en Europa para disfrutar del invierno",
@@ -330,46 +370,6 @@
       "url": "https://www.euronews.com/2026/11/15/zelenskyy-questions-spacex-over-reported-starshield-speed-restrictions",
       "title": "Zelenskyy questions SpaceX over reported Starshield speed restrictions",
       "published": "2026-11-15T07:45:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "Deutsche Welle",
-      "url": "https://www.dw.com/pt-br/protestos-tomam-conta-de-portugal-contra-crise-habitacional/a-79949804",
-      "title": "Protestos tomam conta de Portugal contra crise habitacional",
-      "published": "2026-11-14T21:00:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "Deutsche Welle",
-      "url": "https://www.dw.com/pt-br/agropecu%C3%A1ria-aposta-em-solo-compartilhado-com-pain%C3%A9is-solares/a-79950021",
-      "title": "Agropecuária compartilha solo com painéis solares",
-      "published": "2026-11-14T21:00:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "Deutsche Welle",
-      "url": "https://www.dw.com/de/gaza-humanit%C3%A4re-lage-versch%C3%A4rft-sich-politische-l%C3%B6sung-bleibt-aus/a-79946973",
-      "title": "Gaza : Humanitäre Lage durch Regenfälle verschärft sich",
-      "published": "2026-11-14T21:00:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "Deutsche Welle",
-      "url": "https://www.dw.com/en/fact-check-iranian-content-farms-reach-millions/a-79934190",
-      "title": "Fact check :  Iranian  content farms reach millions",
-      "published": "2026-11-14T21:00:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "Deutsche Welle",
-      "url": "https://www.dw.com/ru/gubernatorom-alaski-vpervye-s-1998-goda-izbran-demokrat/a-79948971",
-      "title": "Губернатором Аляски впервые с 1998 года избран демократ",
-      "published": "2026-11-14T20:00:00Z",
       "region": "World",
       "classification": "publisher-url-path"
     },
@@ -520,19 +520,18 @@
   ],
   "status": "partial",
   "failures": [
-    "Al Jazeera: No indexed articles",
+    "Al Jazeera: HTTP Error 429: Too Many Requests",
     "Associated Press: HTTP Error 429: Too Many Requests",
     "BBC News: HTTP Error 429: Too Many Requests",
     "CBC News: HTTP Error 429: Too Many Requests",
     "CNA: HTTP Error 429: Too Many Requests",
-    "Deutsche Welle: HTTP Error 429: Too Many Requests",
     "Euronews: HTTP Error 429: Too Many Requests",
     "France 24: HTTP Error 429: Too Many Requests",
     "The Guardian: HTTP Error 429: Too Many Requests",
     "NHK World Japan: HTTP Error 429: Too Many Requests",
     "NPR: HTTP Error 429: Too Many Requests",
-    "The New York Times: No indexed articles",
-    "Reuters: HTTP Error 429: Too Many Requests",
+    "The New York Times: HTTP Error 429: Too Many Requests",
+    "Reuters: No indexed articles",
     "Sky News: HTTP Error 429: Too Many Requests"
   ]
 }
