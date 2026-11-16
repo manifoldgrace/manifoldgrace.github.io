@@ -4,6 +4,18 @@
 
 Published work in progress. Research is underway. The questions, evidence and paper structure may change as the work develops.
 
+## Research so far
+
+**Question.** How do review bodies document cumulative impacts when activities have different disclosure duties or cross jurisdictional boundaries? [Archived question](https://manifoldgrace.github.io/research-questions-observatory.html#emerging-defence-questions) · [Research context](https://manifoldgrace.github.io/defence-accountability.html#marine-impact-accountability)
+
+**Evidence reviewed.** The [starting source](https://www.un.org/bbnjagreement/sites/default/files/2024-08/BBNJAgreementFactsheet4EIAs.pdf) anchors the current scope. The starting evidence section explains what it establishes.
+
+**Open gap.** The question remains open in this draft. A comparable study or case record that answers it would narrow or change the scope.
+
+**Next step and AI.** Compare public assessments and code which cumulative effects were considered, who supplied evidence and how information gaps were handled. AI can help locate and compare candidate evidence. Verify extracted claims against original records and log corrections.
+
+**Revision history.** Drafted 16 November 2026. Research summary added 16 November 2026.
+
 ## Research question
 
 How do review bodies document cumulative impacts when activities have different disclosure duties or cross jurisdictional boundaries?

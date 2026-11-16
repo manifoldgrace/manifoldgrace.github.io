@@ -4,6 +4,18 @@
 
 Published work in progress. Research is underway. The questions, evidence and paper structure may change as the work develops.
 
+## Research so far
+
+**Question.** What evidence makes remote operator and onboard software decisions independently reviewable after a civilian maritime incident? [Archived question](https://manifoldgrace.github.io/research-questions-observatory.html#emerging-defence-questions) · [Research context](https://manifoldgrace.github.io/defence-accountability.html#autonomous-vessel-oversight)
+
+**Evidence reviewed.** The [starting source](https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-adopts-mass-code.aspx) anchors the current scope. The starting evidence section explains what it establishes.
+
+**Open gap.** The question remains open in this draft. A comparable study or case record that answers it would narrow or change the scope.
+
+**Next step and AI.** Compare documented decision records with synthetic cases involving conflicting operator and software accounts. Measure whether reviewers agree on who made each decision. AI can help locate and compare candidate evidence. Verify extracted claims against original records and log corrections.
+
+**Revision history.** Drafted 16 November 2026. Research summary added 16 November 2026.
+
 ## Research question
 
 What evidence makes remote operator and onboard software decisions independently reviewable after a civilian maritime incident?

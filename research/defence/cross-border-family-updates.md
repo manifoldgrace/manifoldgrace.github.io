@@ -4,6 +4,18 @@
 
 Published work in progress. Research is underway. The questions, evidence and paper structure may change as the work develops.
 
+## Research so far
+
+**Question.** Who keeps families informed when a missing-person case spans multiple jurisdictions and the available records disagree? [Archived question](https://manifoldgrace.github.io/research-questions-observatory.html#emerging-defence-questions) · [Research context](https://manifoldgrace.github.io/defence-accountability.html#cross-border-family-updates)
+
+**Evidence reviewed.** The [starting source](https://ihl-databases.icrc.org/en/ihl-treaties/gcii-1949/article-18) anchors the current scope. The starting evidence section explains what it establishes.
+
+**Open gap.** The question remains open in this draft. A comparable study or case record that answers it would narrow or change the scope.
+
+**Next step and AI.** Trace a small public case sample and record transfers of responsibility, contradictions and gaps in documented family updates. AI can help locate and compare candidate evidence. Verify extracted claims against original records and log corrections.
+
+**Revision history.** Drafted 16 November 2026. Research summary added 16 November 2026.
+
 ## Research question
 
 Who keeps families informed when a missing-person case spans multiple jurisdictions and the available records disagree?
