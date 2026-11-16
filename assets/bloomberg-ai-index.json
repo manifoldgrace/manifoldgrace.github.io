@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-15T21:01:55Z",
+  "archive_updated_utc": "2026-11-16T02:01:57Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 12
+      "matches": 15
     },
     "Business": {
       "status": "ok",
-      "matches": 1
+      "matches": 6
     },
     "Industries": {
       "status": "ok",
@@ -17,11 +17,182 @@
     },
     "Markets": {
       "status": "ok",
-      "matches": 12
+      "matches": 5
     }
   },
-  "article_count": 90,
+  "article_count": 104,
   "articles": [
+    {
+      "title": "Morgan Stanley ‘Max Overweight’ Global Stocks on Intact AI Cycle",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/morgan-stanley-max-overweight-global-stocks-on-intact-ai-cycle",
+      "published": "2026-11-16T01:48:39Z",
+      "authors": "Winnie Hsu and Ruth Carson",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "FT: Huang Eyes Nvidia Comeback, Flight Chaos Fallout, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-16/ft-huang-eyes-nvidia-comeback-flight-chaos-fallout-more",
+      "published": "2026-11-16T01:45:57Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Kakao Prepares for Historic Split of Internet Empire in AI Chase",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/kakao-prepares-for-historic-split-of-internet-empire-in-ai-chase",
+      "published": "2026-11-16T01:10:04Z",
+      "authors": "Yoolim Lee",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bessent Nvidia Shakeup Call, Flight Chaos Lingers, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-16/bessent-nvidia-shakeup-call-flight-chaos-lingers-more",
+      "published": "2026-11-16T00:45:29Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Shares Primed to Steady as Investors Eye Comeback Report",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/nvidia-shares-primed-for-bounce-as-investors-eye-comeback-report",
+      "published": "2026-11-16T00:40:46Z",
+      "authors": "Carmeli Argana",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia’s CEO Search Draws Fire With Bessent’s ‘Shakeup’ Call",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-16/nvidia-s-ceo-search-scrutiny-including-from-bessent-video",
+      "published": "2026-11-16T00:31:46Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "SK Hynix Plans Chip Testing Hub to Boost Smaller Korean Players",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/sk-hynix-plans-chip-testing-hub-to-boost-smaller-korean-players",
+      "published": "2026-11-16T00:00:00Z",
+      "authors": "Yoolim Lee",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia’s CEO Search Draws Fire With Bessent’s ‘Shakeup’ Call",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/nvidia-s-ceo-search-draws-fire-with-bessent-s-call-for-shakeup",
+      "published": "2026-11-15T23:47:58Z",
+      "authors": "Michael Shepard and Tony Czuczka",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bessent Calls for Nvidia Shakeup, US Flight Chaos Fallout, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-15/bessent-calls-for-nvidia-shakeup-us-flight-chaos-fallout-more",
+      "published": "2026-11-15T23:47:04Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Taisei Launches $150 Million AI, Robotics Fund With Pegasus Tech Ventures",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/taisei-launches-150-million-ai-robotics-fund-with-pegasus-tech-ventures",
+      "published": "2026-11-15T23:01:55Z",
+      "authors": "Saritha Rai",
+      "categories": [
+        "Investment & markets",
+        "Workforce & society",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Tech Selloff Drags Asian Stocks Lower, Oil Drops: Markets Wrap",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/stock-market-today-dow-s-p-live-updates",
+      "published": "2026-11-15T22:11:32Z",
+      "authors": "Shikhar Balwani",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Bessent: Nvidia Needs Dramatic Shakeup, Flight Chaos Fallout",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-15/bessent-nvidia-needs-dramatic-shakeup-flight-chaos-fallout",
+      "published": "2026-11-15T22:01:41Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia CEO Search Heats Up as Bessent Urges Shakeup",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-15/nvidia-ceo-search-heats-up-as-bessent-urges-shakeup",
+      "published": "2026-11-15T21:30:40Z",
+      "authors": "Michelle Amponsah",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Pictet Adds Japan Stocks in Diversification Push After Midterms",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/pictet-adds-japan-stocks-in-diversification-push-after-midterms",
+      "published": "2026-11-15T21:00:00Z",
+      "authors": "Momoka Yokoyama",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
     {
       "title": "US, Allies Agree to Guard AI Supply Chains From China, FT Says",
       "url": "https://www.bloomberg.com/news/articles/2026-11-15/us-allies-agree-to-guard-ai-supply-chains-from-china-ft-says",
