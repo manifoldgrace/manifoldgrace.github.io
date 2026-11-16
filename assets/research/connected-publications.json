@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": null,
+  "updated_at": "2026-11-16T16:59:20.695180+00:00",
   "orcid": "0009-0005-9805-5273",
-  "sync_status": "seeded; automated refresh not yet run",
+  "sync_status": "refreshed 5 approved Zenodo records",
   "works": [
     {
       "id": "10.5281/zenodo.17266802",
-      "title": "The Chronological Ethical Self-Inventory (CESI v1.0)",
+      "title": "CESI v1.0 – A Reflective-Conceptual: The Chronological Ethical Self-Inventory (CESI)",
       "type": "Preprint",
       "year": 2025,
       "category": "Ethics & Frameworks",
@@ -22,7 +22,7 @@
     },
     {
       "id": "10.5281/zenodo.17294405",
-      "title": "Delegated Agency and the Moral Outsourcing of Automation",
+      "title": "A Draft on the Delegated Agency and the Moral Outsourcing of Automation: Ethics & the Wakeflow Ecosystem",
       "type": "Preprint",
       "year": 2025,
       "category": "AI Ethics & Governance",
@@ -30,7 +30,7 @@
     },
     {
       "id": "10.5281/zenodo.17439725",
-      "title": "London Smart Piezoelectric Flooring Pilot Dossier",
+      "title": "London Smart Piezoelectric Flooring Pilot Dossier: Turning London's Footsteps into Clean Energy",
       "type": "Project deliverable",
       "year": 2025,
       "category": "Applied Research & Infrastructure",
@@ -44,5 +44,7 @@
       "category": "Society & Sustainability",
       "url": "https://doi.org/10.5281/zenodo.17439986"
     }
-  ]
+  ],
+  "orcid_public_work_groups": 3,
+  "orcid_status": "readable"
 }
