@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-16T02:01:57Z",
+  "archive_updated_utc": "2026-11-16T09:37:04Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 15
+      "matches": 16
     },
     "Business": {
       "status": "ok",
-      "matches": 6
+      "matches": 7
     },
     "Industries": {
       "status": "ok",
@@ -20,8 +20,242 @@
       "matches": 5
     }
   },
-  "article_count": 104,
+  "article_count": 125,
   "articles": [
+    {
+      "title": "Baidu Posts Sixth Straight Sales Drop After AI Drag Persists",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/baidu-posts-sixth-straight-sales-drop-after-ai-drag-persists",
+      "published": "2026-11-16T09:06:42Z",
+      "authors": "Bloomberg News",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Asian Data Center Loan Syndication Is Delayed in Rare Deal Pause",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/asian-data-center-loan-syndication-is-delayed-in-rare-deal-pause",
+      "published": "2026-11-16T09:04:22Z",
+      "authors": "Aileen Chuang and Megawati Wijaya",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "The Impossible Trilemma That Hangs Over the Nvidia Crisis",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/the-impossible-trilemma-that-hangs-over-the-nvidia-crisis",
+      "published": "2026-11-16T09:00:07Z",
+      "authors": "Tracy Alloway and Joe Weisenthal",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Odd Lots: The Trilemma Hanging Over the Nvidia Crisis (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-16/odd-lots-the-trilemma-hanging-over-the-nvidia-crisis-podcast",
+      "published": "2026-11-16T09:00:00Z",
+      "authors": "Tracy Alloway and Joe Weisenthal",
+      "categories": [
+        "Governance & regulation",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Global Banks Back AI-Linked Asia Currencies to Lead Next Year",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/global-banks-back-ai-linked-asia-currencies-to-lead-next-year",
+      "published": "2026-11-16T08:48:05Z",
+      "authors": "Subhadip Sircar",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bessent Says Nvidia Leadership Needs 'Dramatic Shakeup'",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-16/bessent-says-nvidia-leadership-needs-dramatic-shakeup-video",
+      "published": "2026-11-16T08:41:56Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "European Stocks Fluctuate as AI Concerns Keep Investors on Edge",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/european-stocks-fluctuate-as-ai-concerns-keep-investors-on-edge",
+      "published": "2026-11-16T08:07:41Z",
+      "authors": "Rivaldo Jantjies",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Stock Movers: MiniMax, Z.AI, Insilico Medicine (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-16/stock-movers-minimax-z-ai-insilico-medicine-podcast",
+      "published": "2026-11-16T07:52:27Z",
+      "authors": "ANDREW GAVIN",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Faces Pressure: Morning Briefing Europe",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-16/nvidia-faces-pressure-morning-briefing-europe",
+      "published": "2026-11-16T07:37:24Z",
+      "authors": "Xue Lin Ho",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Tech Stocks Plunge as Investors Await Anthropic IPO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-16/tech-stocks-plunge-as-investors-await-anthropic-ipo-video",
+      "published": "2026-11-16T07:10:11Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Fallout, Anthropic IPO Squeeze Asian Chip Stocks Anew",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/nvidia-fallout-anthropic-listing-squeeze-asian-chip-stocks-anew",
+      "published": "2026-11-16T06:51:43Z",
+      "authors": "Charlotte Yang and Winnie Hsu",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "FTSE 100 Eyes Record on Anti-AI Trade Appeal",
+      "url": "https://www.bloomberg.com/news/live-blog/2026-11-16/ftse-100-live-updates-pound-gilts-tech-selloff-ai-what-s-moving-uk-markets-right-now-markets-today",
+      "published": "2026-11-16T06:47:56Z",
+      "authors": "Sam Unsted, Morwenna Coniam, Laura Avetisyan and Maya Thompson",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Global Investors Return to Indian Stocks After AI Trade Woes",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-16/global-investors-return-to-indian-stocks-after-ai-trade-woes",
+      "published": "2026-11-16T06:30:53Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "How Dual-Class Stock Entrenches Founder Control at Anthropic, SpaceX, Google",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/how-dual-class-stock-entrenches-founder-control-at-anthropic-spacex-google",
+      "published": "2026-11-16T05:00:08Z",
+      "authors": "Lu Wang",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "India to Benefit From Unwinding of AI Trade, Top Official Says",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/india-to-benefit-from-unwinding-of-ai-trade-top-official-says",
+      "published": "2026-11-16T04:32:06Z",
+      "authors": "Anup Roy",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bessent Nvidia Shakeup Call, Flight Disruptions Linger, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-16/bessent-nvidia-shakeup-call-flight-disruptions-linger-more",
+      "published": "2026-11-16T04:21:08Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "FT: Huang Discusses Nvidia Comeback, Flight Chaos Fallout, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-16/ft-huang-discusses-nvidia-comeback-flight-chaos-fallout-more",
+      "published": "2026-11-16T03:34:00Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia CEO Search Draws Fire, Lingering Flight Disruptions, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-16/nvidia-ceo-search-draws-fire-lingering-flight-disruptions-more",
+      "published": "2026-11-16T02:46:37Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Alibaba Unveils New Flagship AI Model in Riposte to US Rivals",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/alibaba-unveils-new-flagship-ai-model-in-riposte-to-us-rivals",
+      "published": "2026-11-16T02:00:00Z",
+      "authors": "Luz Ding",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
     {
       "title": "Morgan Stanley ‘Max Overweight’ Global Stocks on Intact AI Cycle",
       "url": "https://www.bloomberg.com/news/articles/2026-11-16/morgan-stanley-max-overweight-global-stocks-on-intact-ai-cycle",
@@ -114,6 +348,18 @@
       "authors": "Michael Shepard and Tony Czuczka",
       "categories": [
         "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Taiwan’s Currency Paradox: AI Boom Leaves Its Dollar Behind",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-15/new-taiwan-dollar-currency-paradox-ai-boom-twd-nt-tsmc-hon-hai",
+      "published": "2026-11-15T23:47:34Z",
+      "authors": "Chien-Hua Wan, Jiefei Liu and Argin Chang",
+      "categories": [
+        "AI industry"
       ],
       "feeds": [
         "Technology"
@@ -1293,6 +1539,20 @@
       ],
       "feeds": [
         "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia’s Biggest Risk Is Product Pace: Windsor",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-13/nvidia-s-biggest-risk-is-product-pace-windsor",
+      "published": "2026-11-13T12:41:23Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
       ]
     },
     {
