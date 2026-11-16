@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "GDELT DOC API",
   "source_url": "https://www.gdeltproject.org/",
-  "updated": "2026-11-15T18:48:03.067033Z",
+  "updated": "2026-11-16T06:20:32.417312Z",
   "providers": {
     "Al Jazeera": {
       "items": [
@@ -182,7 +182,7 @@
           "classification": "publisher-url-path"
         }
       ],
-      "status": "indexed"
+      "status": "stale"
     },
     "Euronews": {
       "items": [
@@ -227,7 +227,7 @@
           "classification": "publisher-url-path"
         }
       ],
-      "status": "indexed"
+      "status": "stale"
     },
     "France 24": {
       "items": [],
@@ -520,17 +520,19 @@
   ],
   "status": "partial",
   "failures": [
-    "Al Jazeera: HTTP Error 429: Too Many Requests",
+    "Al Jazeera: No indexed articles",
     "Associated Press: HTTP Error 429: Too Many Requests",
     "BBC News: HTTP Error 429: Too Many Requests",
     "CBC News: HTTP Error 429: Too Many Requests",
     "CNA: HTTP Error 429: Too Many Requests",
+    "Deutsche Welle: HTTP Error 429: Too Many Requests",
+    "Euronews: HTTP Error 429: Too Many Requests",
     "France 24: HTTP Error 429: Too Many Requests",
     "The Guardian: HTTP Error 429: Too Many Requests",
     "NHK World Japan: HTTP Error 429: Too Many Requests",
     "NPR: HTTP Error 429: Too Many Requests",
-    "The New York Times: HTTP Error 429: Too Many Requests",
+    "The New York Times: No indexed articles",
     "Reuters: HTTP Error 429: Too Many Requests",
-    "Sky News: No indexed articles"
+    "Sky News: HTTP Error 429: Too Many Requests"
   ]
 }
