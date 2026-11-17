@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-16T20:26:37Z",
+  "archive_updated_utc": "2026-11-17T04:28:32Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 14
+      "matches": 15
     },
     "Business": {
       "status": "ok",
-      "matches": 4
+      "matches": 11
     },
     "Industries": {
       "status": "ok",
@@ -20,8 +20,361 @@
       "matches": 6
     }
   },
-  "article_count": 148,
+  "article_count": 177,
   "articles": [
+    {
+      "title": "Impact of US Move to Curb Chip Access",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/impact-of-us-move-to-curb-chip-access-video",
+      "published": "2026-11-17T04:23:01Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "AI Concerns Linger in Asia, JPMorgan Resolves Tech Issue, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/ai-concerns-linger-in-asia-jpmorgan-resolves-tech-issue-more",
+      "published": "2026-11-17T04:20:58Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Bloomberg Law: Shareholders Sue Nvidia & Jensen Huang (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/bloomberg-law-shareholders-sue-nvidia-jensen-huang-podcast",
+      "published": "2026-11-17T04:16:02Z",
+      "authors": "JUNE GRASSO",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Frenzy Echoes Dot-Com Bubble, Says AustralianSuper CIO",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/anthropic-frenzy-echoes-dot-com-bubble-says-australiansuper-cio",
+      "published": "2026-11-17T04:15:41Z",
+      "authors": "Richard Henderson",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic IPO: What Australian Investors Need to Know",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/anthropic-ipo-what-australian-investors-need-to-know-video",
+      "published": "2026-11-17T04:10:08Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "AI Jitters Weigh on Asia, JPMorgan Tech Issue Resolved, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/ai-jitters-weigh-on-asia-jpmorgan-tech-issue-resolved-more",
+      "published": "2026-11-17T03:51:35Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "China AI Highflier Crashes 85% as Chip Fears Hit Model Makers",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/china-ai-highflier-crashes-85-as-chip-fears-hit-model-makers",
+      "published": "2026-11-17T03:50:54Z",
+      "authors": "Jeanny Yu",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Pimco Says AI Bond Spreads May Tighten as Data Center Boom Slows",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/pimco-says-ai-bond-spreads-may-tighten-as-data-center-boom-slows",
+      "published": "2026-11-17T03:49:51Z",
+      "authors": "Harry Suhartono",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bloomberg Daybreak Asia: Investor Appetite on AI (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/bloomberg-daybreak-asia-investor-appetite-on-ai-podcast",
+      "published": "2026-11-17T03:17:22Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "More Volatility Forecast for AI as Nvidia Earnings Loom",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/more-volatility-forecast-for-ai-as-nvidia-earnings-loom-video",
+      "published": "2026-11-17T02:32:11Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Markets Brace for Nvidia Earnings, United Outage Resolved, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/markets-brace-for-nvidia-earnings-united-outage-resolved-more",
+      "published": "2026-11-17T01:50:23Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "BoK's Yoon: AI Concerns Add to Korea Equity Volatility",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/bok-s-yoon-ai-concerns-add-to-korea-equity-volatility-video",
+      "published": "2026-11-17T01:46:26Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "China AI Stocks Sink as US Chip Curbs Hit Labs and Hyperscalers",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/chip-stocks-slide-as-us-sets-new-curbs-on-china-s-compute-access",
+      "published": "2026-11-17T00:22:19Z",
+      "authors": "Winnie Hsu",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Models & research"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Tech Under Pressure Ahead of Anthropic IPO, Stock Selloff Continues",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/the-close-11-16-2026-video",
+      "published": "2026-11-17T00:17:38Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Tripadvisor Loan Soars as $600 Million Payment Boosts Confidence",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/tripadvisor-loan-soars-as-600-million-payment-boosts-confidence",
+      "published": "2026-11-17T00:13:13Z",
+      "authors": "Dorothy Ma and Katherine Schwartz",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Big Take: All Eyes on Anthropic’s IPO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/big-take-all-eyes-on-anthropic-s-ipo-video",
+      "published": "2026-11-17T00:04:59Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "United Resolves Outage, Equities Sink Ahead of Nvidia Earnings",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/united-resolves-outage-equities-sink-ahead-of-nvidia-earnings",
+      "published": "2026-11-17T00:02:56Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Asia Data Center Hotbed Hit by US Chip Curbs as Trump Visits",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/asia-s-data-center-hotbed-hit-by-us-chip-curbs-as-trump-visits",
+      "published": "2026-11-16T23:55:29Z",
+      "authors": "Ramsey Al-Rikabi and Philip J. Heijmans",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Amid Nvidia Scandal, Trump Administration Moves to Restrict AI Chips",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-16/amid-nvidia-scandal-trump-administration-moves-to-restrict-ai-chips",
+      "published": "2026-11-16T23:16:33Z",
+      "authors": "David Rovella",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Faces a Longer Wait Than SpaceX to Join Stock Indexes",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/anthropic-faces-a-longer-wait-than-spacex-to-join-stock-indexes",
+      "published": "2026-11-16T23:06:22Z",
+      "authors": "Lu Wang",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "China’s Top AI Firms Limit Cyber Capabilities in Latest Models",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/china-s-top-ai-firms-limit-cyber-capabilities-in-latest-models",
+      "published": "2026-11-16T23:00:00Z",
+      "authors": "Luz Ding and Mark Anderson",
+      "categories": [
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic IPO on Heels of Nvidia Scandal Raises Questions About AI and Revenue",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/anthropic-ipo-on-heels-of-nvidia-scandal-raises-questions-about-ai-and-revenue",
+      "published": "2026-11-16T22:30:00Z",
+      "authors": "Sarah Holder, David Fox and Julia Press",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Big Take: All Eyes on Anthropic’s IPO (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-16/big-take-all-eyes-on-anthropic-s-ipo-podcast",
+      "published": "2026-11-16T22:25:02Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Macquarie data center warning, iron ore, NZ private credit: Australia Briefing",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-16/macquarie-data-center-warning-iron-ore-nz-private-credit-australia-briefing",
+      "published": "2026-11-16T22:20:04Z",
+      "authors": "Richard Henderson",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Asia Stock Selloff Enters Fourth Day, Oil Declines: Markets Wrap",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/stock-market-today-dow-s-p-live-updates",
+      "published": "2026-11-16T22:06:51Z",
+      "authors": "Shikhar Balwani",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Stock Movers: L3Harris, Nvidia, CG Oncology (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-16/stock-movers-l3harris-nvidia-cg-oncology-podcast",
+      "published": "2026-11-16T22:04:14Z",
+      "authors": "SEBASTIAN ESCOBAR",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "HSBC Sold $300 Million Troubled Data Center Loan at Discount",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/hsbc-sold-300-million-troubled-data-center-loan-at-discount",
+      "published": "2026-11-16T22:01:27Z",
+      "authors": "Reshmi Basu and Jeannine Amodeo",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Short Sellers Reap $24 Billion as Stock Extends Slide",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/nvidia-short-sellers-reap-24-billion-as-stock-extends-slide",
+      "published": "2026-11-16T21:55:00Z",
+      "authors": "Carmen Reinicke and Natalia Kniazhevich",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
     {
       "title": "Balance of Power: Trump Backs Huang’s Return to Nvidia (Podcast)",
       "url": "https://www.bloomberg.com/news/audio/2026-11-16/balance-of-power-trump-backs-huang-s-return-to-nvidia-podcast",
@@ -297,6 +650,18 @@
       ],
       "feeds": [
         "Business"
+      ]
+    },
+    {
+      "title": "Traders Pour Cash Into BlackRock’s India ETF as AI Rout Deepens",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/emerging-market-etfs-rise-for-2nd-week-in-982-mln-streak",
+      "published": "2026-11-16T11:00:29Z",
+      "authors": "Leda Alvim and Beatriz Amat",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
       ]
     },
     {
