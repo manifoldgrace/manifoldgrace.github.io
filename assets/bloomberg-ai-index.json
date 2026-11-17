@@ -1,27 +1,384 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-17T15:56:45Z",
+  "archive_updated_utc": "2026-11-17T23:29:39Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 14
+      "matches": 12
     },
     "Business": {
       "status": "ok",
-      "matches": 6
+      "matches": 13
     },
     "Industries": {
       "status": "ok",
-      "matches": 1
+      "matches": 0
     },
     "Markets": {
       "status": "ok",
-      "matches": 7
+      "matches": 9
     }
   },
-  "article_count": 204,
+  "article_count": 233,
   "articles": [
+    {
+      "title": "Nvidia Boosts Forecast, Huang's Return Ruled Out, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/nvidia-boosts-forecast-huang-s-return-ruled-out-more",
+      "published": "2026-11-17T23:17:58Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Chair Says Huang Isn't Coming Back as CEO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/nvidia-chair-says-huang-isn-t-coming-back-as-ceo-video",
+      "published": "2026-11-17T23:12:06Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Is Shooting for the IPO Pricing Moon: Evening Briefing Americas",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-17/anthropic-is-shooting-for-the-ipo-pricing-moon-evening-briefing-americas",
+      "published": "2026-11-17T22:52:44Z",
+      "authors": "David Rovella",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Apollo’s Rowan Says Insurance Will Power the $8 Trillion AI Boom",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/apollo-s-rowan-says-insurance-will-power-the-8-trillion-ai-boom",
+      "published": "2026-11-17T22:49:04Z",
+      "authors": "Laura Benitez and Joe Lovinger",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Canada Edges a Bit Closer to China as Carney and Xi Strike Another Deal",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-17/canada-edges-a-bit-closer-to-china-as-carney-and-xi-strike-another-deal",
+      "published": "2026-11-17T22:43:58Z",
+      "authors": "Laura Dhillon Kane and Brian Platt",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Bloomberg Businessweek Daily: Nvidia Earnings in Focus (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/bloomberg-businessweek-daily-nvidia-earnings-in-focus-podcast",
+      "published": "2026-11-17T22:39:57Z",
+      "authors": "SEBASTIAN ESCOBAR",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Stock Movers: Nvidia, CoreWeave, Nike (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/stock-movers-nvidia-coreweave-nike-podcast",
+      "published": "2026-11-17T22:39:16Z",
+      "authors": "DANIEL KARP",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Microsoft Executive Says Nvidia Drama Could Boost Rival Chips",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/microsoft-executive-says-nvidia-drama-could-boost-rival-chips",
+      "published": "2026-11-17T22:34:04Z",
+      "authors": "Brody Ford",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Pushback to OKXICE, Anthropic Perpetual Futures, 'Problem Gamblers'",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/bloomberg-crypto-11-17-2026-video",
+      "published": "2026-11-17T22:33:21Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bloomberg Businessweek Daily: Anthropic Guides IPO (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/bloomberg-businessweek-daily-anthropic-guides-ipo-podcast",
+      "published": "2026-11-17T22:32:46Z",
+      "authors": "SEBASTIAN ESCOBAR",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic IPO, Huang, Nvidia, GTA 6: Australia Briefing",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-17/anthropic-ipo-huang-nvidia-gta-6-australia-briefing",
+      "published": "2026-11-17T22:28:09Z",
+      "authors": "Richard Henderson",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Tops Estimates, Report: SEC Launches Nvidia Probe, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/nvidia-tops-estimates-report-sec-launches-nvidia-probe-more",
+      "published": "2026-11-17T22:17:41Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia's CEO Issues May Only Be the Tip of the Iceberg, Great Hill's Hayes Says",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/nvidia-issues-may-be-tip-of-iceberg-great-hill-s-hayes-video",
+      "published": "2026-11-17T22:11:26Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nasdaq, S&P 500 Futures Rise After Nvidia Earnings: Markets Wrap",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/stock-market-today-dow-s-p-live-updates",
+      "published": "2026-11-17T22:07:08Z",
+      "authors": "Anand Krishnamoorthy and Toby Alder",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Key Takeaways From Nvidia's First Results Since CEO Departure",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/nvidia-s-first-results-since-ceo-ouster-the-takeaways-video",
+      "published": "2026-11-17T21:49:31Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Delivers Solid Outlook in First Post-Huang Earnings",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/nvidia-gives-solid-outlook-in-first-post-huang-earnings-video",
+      "published": "2026-11-17T21:49:17Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Traders Exploiting Pricing Gaps In Pre-IPO Contracts",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/traders-exploiting-pricing-gaps-in-pre-ipo-contracts-video",
+      "published": "2026-11-17T21:39:05Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Delivers Solid Outlook in First Earnings Since Huang Exit",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-17/nvidia-delivers-solid-outlook-in-first-earnings-since-huang-exit",
+      "published": "2026-11-17T21:38:25Z",
+      "authors": "Michelle Amponsah",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Results Show Resilience, New Street's Chkaiban Says",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/nvidia-results-show-resilience-analyst-chkaiban-says-video",
+      "published": "2026-11-17T21:36:15Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Offering Anthropic Access Outside US: Wheeler",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/offering-anthropic-access-outside-us-wheeler-video",
+      "published": "2026-11-17T21:29:13Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia 3Q Beats, SEC Launches Probe",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/nvidia-3q-beats-sec-launches-probe",
+      "published": "2026-11-17T21:27:08Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "SEC Is Probing Nvidia Amid Jensen Huang’s Exit, WSJ Reports",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/sec-is-probing-nvidia-amid-jensen-huang-s-exit-wsj-reports",
+      "published": "2026-11-17T21:25:24Z",
+      "authors": "Megan Howard",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia Boosts Forecast While Quashing Idea of Huang’s Return",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/nvidia-delivers-solid-outlook-in-first-post-huang-earnings",
+      "published": "2026-11-17T21:24:23Z",
+      "authors": "Ian King",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Treasuries’ Big Short Sets Up ‘Pain Trade’ as Haven Bid Ramps Up",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/treasuries-big-short-sets-up-pain-trade-as-haven-bid-ramps-up",
+      "published": "2026-11-17T20:41:27Z",
+      "authors": "Edward Bolingbroke",
+      "categories": [
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Stock Movers: Nvidia, Nike, Klarna (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/stock-movers-nvidia-nike-klarna-podcast",
+      "published": "2026-11-17T20:28:32Z",
+      "authors": "JUAN TORRES",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Apple Working to Restore Systems, Huang Open to Return to Nvidia",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/apple-working-to-restore-systems-huang-open-to-return-to-nvidia",
+      "published": "2026-11-17T20:08:23Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "One of the Biggest Weeks in the AI Industry’s History",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-17/one-of-the-biggest-weeks-in-the-ai-industry-s-history",
+      "published": "2026-11-17T20:03:43Z",
+      "authors": "Joe Weisenthal and Tracy Alloway",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Trump Prepares for Power Flex at Putin-Xi Summit",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/trump-prepares-for-power-flex-at-putin-xi-summit-video",
+      "published": "2026-11-17T20:02:20Z",
+      "authors": "",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Trump-Xi APEC Meeting: AI Chips, Putin and What’s at Stake",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/trump-xi-apec-meeting-ai-chips-putin-and-what-s-at-stake",
+      "published": "2026-11-17T19:43:46Z",
+      "authors": "K Oanh Ha and Naomi Ng",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
     {
       "title": "Bloomberg Businessweek Daily: Global AI Chip Race (Podcast)",
       "url": "https://www.bloomberg.com/news/audio/2026-11-17/bloomberg-businessweek-daily-global-ai-chip-race-podcast",
