@@ -1,27 +1,357 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-17T04:28:32Z",
+  "archive_updated_utc": "2026-11-17T15:56:45Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 15
+      "matches": 14
     },
     "Business": {
       "status": "ok",
-      "matches": 11
+      "matches": 6
     },
     "Industries": {
       "status": "ok",
-      "matches": 0
+      "matches": 1
     },
     "Markets": {
       "status": "ok",
-      "matches": 6
+      "matches": 7
     }
   },
-  "article_count": 177,
+  "article_count": 204,
   "articles": [
+    {
+      "title": "Bloomberg Businessweek Daily: Global AI Chip Race (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/bloomberg-businessweek-daily-global-ai-chip-race-podcast",
+      "published": "2026-11-17T15:08:41Z",
+      "authors": "SEBASTIAN ESCOBAR",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Top AI Models Regularly Identify Civilians as Military Targets in Tests",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/top-ai-models-regularly-identify-civilians-as-military-targets-in-tests",
+      "published": "2026-11-17T15:00:38Z",
+      "authors": "Katrina Manson",
+      "categories": [
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Growth Guidance Is Pivotal Point to Watch, Luria Says",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/nvidia-growth-guidance-is-pivotal-point-to-watch-luria-video",
+      "published": "2026-11-17T14:56:34Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "SpaceX Debt for AI Chips to Hit Market as Soon as This Week",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/spacex-debt-for-ai-chips-to-hit-market-as-soon-as-this-week",
+      "published": "2026-11-17T14:53:10Z",
+      "authors": "Scott Carpenter, Carmen Arroyo and Brian Smith",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Bloomberg Surveillance: Nvidia and China (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/bloomberg-surveillance-nvidia-and-china-podcast",
+      "published": "2026-11-17T14:49:41Z",
+      "authors": "MEREDITH FRANK",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Banks Pause $480 Million Chip Loan Tied to China’s ByteDance",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/banks-pause-480-million-chip-loan-tied-to-china-s-bytedance",
+      "published": "2026-11-17T14:49:23Z",
+      "authors": "Kari Lindberg, Megawati Wijaya and Sheryl Tian Tong Lee",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Goldman Traders See Stocks Grinding Higher Despite Nvidia Risk",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/goldman-traders-see-stocks-grinding-higher-despite-nvidia-risk",
+      "published": "2026-11-17T14:44:08Z",
+      "authors": "Natalia Kniazhevich",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic Is Said to Guide IPO Price to Top of Range",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/anthropic-is-said-to-guide-ipo-price-to-top-of-range-video",
+      "published": "2026-11-17T14:27:35Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia-Backed Genesis AI Raises Funds at $3.5 Billion Valuation",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/nvidia-backed-genesis-ai-raises-funds-at-3-5-billion-valuation",
+      "published": "2026-11-17T14:00:46Z",
+      "authors": "Jennifer Sealy",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Said to Guide IPO Price to Top of Range or Above",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/anthropic-is-said-to-guide-ipo-price-to-top-of-range-or-above",
+      "published": "2026-11-17T14:00:08Z",
+      "authors": "Anthony Hughes and Bailey Lipschultz",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stocks Waver Ahead of Nvidia Earnings; Trump Kicks Off Asia Trip",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/bloomberg-brief-11-17-2026-video",
+      "published": "2026-11-17T13:55:29Z",
+      "authors": "",
+      "categories": [
+        "Governance & regulation",
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Trump Makes AI Push With Quad Leaders, Downplays Outages, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/trump-makes-ai-push-with-quad-leaders-downplays-outages-more",
+      "published": "2026-11-17T13:53:46Z",
+      "authors": "KAREN MOSKOW",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Vanguards of Healthcare: ProFound Uses AI to Map the Dark Genome",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/vanguards-of-healthcare-profound-uses-ai-to-map-the-dark-genome",
+      "published": "2026-11-17T13:29:31Z",
+      "authors": "Inigo Imaz Blanco",
+      "categories": [
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "ETF, CEF, Swap, Perp: Investors Get Slice of Anthropic Before IPO",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/etf-cef-swap-perp-investors-get-slice-of-anthropic-before-ipo",
+      "published": "2026-11-17T13:15:28Z",
+      "authors": "Yiqin Shen and Muyao Shen",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Tech Stocks Waver Before Nvidia’s First Earnings Post-Huang",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/nasdaq-100-futures-rise-as-investors-prepare-for-nvidia-results",
+      "published": "2026-11-17T13:13:35Z",
+      "authors": "Joel Leon",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Mexico Is Missing Out on AI Data Center Boom as Energy Crunch Bites",
+      "url": "https://www.bloomberg.com/news/features/2026-11-17/mexico-is-missing-out-on-ai-data-center-boom-as-energy-crunch-bites",
+      "published": "2026-11-17T13:00:06Z",
+      "authors": "Alex Vasquez",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Apollo’s Zelter Sees Nvidia as First Big Stress Test for AI",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-17/apollo-s-zelter-sees-nvidia-as-first-big-ai-stress-test-video",
+      "published": "2026-11-17T12:56:04Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Trump in Asia, Nvidia Forms Export Control Board Committee, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/trump-in-asia-nvidia-forms-export-control-board-committee-more",
+      "published": "2026-11-17T12:39:52Z",
+      "authors": "KAREN MOSKOW",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Emerging Stocks Drop As Nvidia Jitters Weigh on Asian Tech",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/emerging-stocks-drop-as-nvidia-jitters-weigh-on-asian-tech",
+      "published": "2026-11-17T12:20:44Z",
+      "authors": "Ray Ndlovu",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic IPO: Hedge Fund Coatue Has $10 Billion Stake in Claude Maker",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/anthropic-ipo-hedge-fund-coatue-has-10-billion-stake-in-claude-maker",
+      "published": "2026-11-17T12:10:03Z",
+      "authors": "Rebecca Torrence",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Futures Waver as Traders Await Next Milestone in Ai Trade",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-17/futures-waver-as-traders-await-next-milestone-in-ai-trade",
+      "published": "2026-11-17T12:05:28Z",
+      "authors": "Marcus Wright and Anna Boyne",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Sequoia, Greenoaks Lead Isomorphic Labs $5 Billion Funding Round",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/sequoia-greenoaks-lead-isomorphic-lab-s-5-billion-funding-round",
+      "published": "2026-11-17T11:50:03Z",
+      "authors": "Rebecca Torrence and Shirin Ghaffary",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Forms Export Control Board Committee After Chip Curbs",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/nvidia-forms-export-control-board-committee-after-chip-curbs",
+      "published": "2026-11-17T10:18:59Z",
+      "authors": "Mark Bergen",
+      "categories": [
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "European Stocks Extend Fall as Tech Drags; Deutsche Bank Slides",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/european-stocks-fall-as-us-chip-curbs-ignite-fresh-ai-selloff",
+      "published": "2026-11-17T08:30:44Z",
+      "authors": "Nil Codina Martinez",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "US Chip Curbs Force Xi to Weigh Response Before Trump Summit",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/us-chip-curbs-force-xi-to-weigh-response-before-trump-summit",
+      "published": "2026-11-17T07:30:47Z",
+      "authors": "Bloomberg News",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Envision Said to Weigh Adding Data Center Power Unit to IPO Plan",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/envision-said-to-consider-adding-data-center-power-to-ipo-plan",
+      "published": "2026-11-17T07:00:21Z",
+      "authors": "Akshat Rathi and Lili Pike",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Industries"
+      ]
+    },
     {
       "title": "Impact of US Move to Curb Chip Access",
       "url": "https://www.bloomberg.com/news/videos/2026-11-17/impact-of-us-move-to-curb-chip-access-video",
@@ -373,6 +703,19 @@
       ],
       "feeds": [
         "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Earnings Are Sideshow as Huang’s Ouster Looms Over Stock",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-16/nvidia-earnings-are-sideshow-as-huang-s-ouster-looms-over-market",
+      "published": "2026-11-16T21:31:41Z",
+      "authors": "Ryan Vlastelica",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
       ]
     },
     {
