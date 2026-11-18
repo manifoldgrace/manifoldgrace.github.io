@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-18T07:23:03Z",
+  "archive_updated_utc": "2026-11-18T17:14:23Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
@@ -9,19 +9,257 @@
     },
     "Business": {
       "status": "ok",
-      "matches": 18
+      "matches": 5
     },
     "Industries": {
       "status": "ok",
-      "matches": 0
+      "matches": 1
     },
     "Markets": {
       "status": "ok",
-      "matches": 8
+      "matches": 6
     }
   },
-  "article_count": 259,
+  "article_count": 278,
   "articles": [
+    {
+      "title": "Trump, Putin to Meet, Anthropic Shares Price Tonight, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/trump-putin-to-meet-anthropic-shares-price-tonight-more",
+      "published": "2026-11-18T17:06:04Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Argues to Wary Investors That It Can Thrive Without Huang",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/nvidia-argues-to-investors-it-can-thrive-without-huang-video",
+      "published": "2026-11-18T16:25:18Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nike Moves on Investor Day; Lowe's Reports Earnings | Stock Movers",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/nike-moves-on-investor-day-lowe-s-reports-earnings-video",
+      "published": "2026-11-18T16:19:57Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Viral Patel on AI’s Investment Boom",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/viral-patel-on-ai-s-investment-boom-video",
+      "published": "2026-11-18T16:08:30Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Was Jensen Huang’s Exit Premature?",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/was-jensen-huang-s-exit-premature-video",
+      "published": "2026-11-18T16:08:16Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic IPO: CFO Krishna Rao Helps Grow Startup Into AI Powerhouse",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/anthropic-s-low-profile-cfo-guides-firm-through-cone-of-uncertainty",
+      "published": "2026-11-18T16:01:12Z",
+      "authors": "Shirin Ghaffary and Natasha Mascarenhas",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Blackstone’s Jon Gray Calls Concerns About AI Bubble Overblown",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/blackstone-s-jon-gray-calls-concerns-about-ai-bubble-overblown",
+      "published": "2026-11-18T15:55:36Z",
+      "authors": "Joe Lovinger",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Bloomberg Surveillance: Nvidia Earnings (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/bloomberg-surveillance-nvidia-earnings-podcast",
+      "published": "2026-11-18T14:57:39Z",
+      "authors": "MEREDITH FRANK",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "NYC Comptroller Says Pensions Are Ready to Fight for AI Safety",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/nyc-comptroller-says-pensions-are-ready-to-fight-for-ai-safety",
+      "published": "2026-11-18T14:50:03Z",
+      "authors": "Olivia Raimonde and Jonathan Ferro",
+      "categories": [
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Union Nurses Tell Researchers That AI Can Make Their Jobs Harder",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/union-nurses-tell-researchers-that-ai-can-make-their-jobs-harder",
+      "published": "2026-11-18T14:40:15Z",
+      "authors": "Davey Alba",
+      "categories": [
+        "Workforce & society",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stocks Open Mixed, Trump at APEC, Nvidia DC Scrutiny, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/stocks-open-mixed-trump-at-apec-nvidia-dc-scrutiny-more",
+      "published": "2026-11-18T14:38:21Z",
+      "authors": "NATHAN HAGER",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "California’s Housing Push Is Helping Silicon Valley Billionaires Build Bigger",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-18/california-s-housing-push-is-helping-silicon-valley-billionaires-build-bigger",
+      "published": "2026-11-18T14:18:13Z",
+      "authors": "Christine Maurus",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Said to Guide IPO Pricing Above Market Range",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/anthropic-said-to-guide-ipo-pricing-above-market-range-video",
+      "published": "2026-11-18T14:06:41Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Ferguson CFO on AI Boom, Housing Pressure and $1.6 Billion Deal",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/ferguson-cfo-on-ai-growth-and-housing-pressure-video",
+      "published": "2026-11-18T13:33:34Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Elon Musk’s X Reaches Deal in South African Media Antitrust Case",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/elon-musk-s-x-reaches-deal-in-south-african-media-antitrust-case",
+      "published": "2026-11-18T13:29:12Z",
+      "authors": "Denene Erasmus",
+      "categories": [
+        "Governance & regulation",
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Industries"
+      ]
+    },
+    {
+      "title": "Tech Disruptors: WEKA on Rebuilding Storage for the Agentic Era",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/tech-disruptors-weka-on-rebuilding-storage-for-the-agentic-era",
+      "published": "2026-11-18T13:00:00Z",
+      "authors": "Aditya Somani",
+      "categories": [
+        "Models & research"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Tech Stocks Decline as Worries Remain For Nvidia After Earnings",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/us-stock-futures-rally-as-nvidia-results-ease-ai-trade-worries",
+      "published": "2026-11-18T12:34:46Z",
+      "authors": "Joel Leon",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Apple’s Haven Status Makes It One of Priciest Stocks in Market",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/apple-s-haven-status-makes-it-one-of-priciest-stocks-in-market",
+      "published": "2026-11-18T10:57:28Z",
+      "authors": "Ryan Vlastelica",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Tencent’s Profit Squeeze Exposes China’s AI Spending Dilemma",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/tencent-s-sales-miss-estimates-in-setback-for-founder-s-ai-push",
+      "published": "2026-11-18T08:36:54Z",
+      "authors": "Bloomberg News",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
     {
       "title": "Nvidia Raises Outlook, Peltola Wins Alaska Senate Race, More",
       "url": "https://www.bloomberg.com/news/audio/2026-11-18/nvidia-raises-outlook-peltola-wins-alaska-senate-race-more",
