@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-17T23:29:39Z",
+  "archive_updated_utc": "2026-11-18T07:23:03Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
@@ -9,7 +9,7 @@
     },
     "Business": {
       "status": "ok",
-      "matches": 13
+      "matches": 18
     },
     "Industries": {
       "status": "ok",
@@ -17,11 +17,324 @@
     },
     "Markets": {
       "status": "ok",
-      "matches": 9
+      "matches": 8
     }
   },
-  "article_count": 233,
+  "article_count": 259,
   "articles": [
+    {
+      "title": "Nvidia Raises Outlook, Peltola Wins Alaska Senate Race, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/nvidia-raises-outlook-peltola-wins-alaska-senate-race-more",
+      "published": "2026-11-18T07:11:36Z",
+      "authors": "ANDREW GAVIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Bloomberg Daybreak Europe: ‘We’ve Got This’ Says Nvidia(Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/bloomberg-daybreak-europe-we-ve-got-this-says-nvidia-podcast",
+      "published": "2026-11-18T06:48:35Z",
+      "authors": "JAMES WOOLCOCK",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Asian Stocks Waver After Nvidia Results",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/asian-stocks-waver-after-nvidia-results-video",
+      "published": "2026-11-18T06:47:45Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Muzinich CEO on Higher Rates and Private Credit Risks",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/muzinich-ceo-on-higher-rates-and-private-credit-risks-video",
+      "published": "2026-11-18T06:46:24Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Xi Jinping Speaks at APEC as Nvidia Posts Solid First Post-Huang Earnings",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/the-china-show-11-18-2026-video",
+      "published": "2026-11-18T06:39:59Z",
+      "authors": "",
+      "categories": [
+        "Governance & regulation",
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Delevska: Need a Strong Leader to Run Nvidia",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/delevska-need-a-strong-leader-to-run-nvidia-video",
+      "published": "2026-11-18T06:14:45Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic Crypto Bets Imply $1.7 Trillion Value Despite AI Rout",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/anthropic-crypto-bets-imply-1-7-trillion-value-despite-ai-rout",
+      "published": "2026-11-18T05:21:44Z",
+      "authors": "Matt Haldane",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Copper Extends Fall to Near Five-Month Low as Dollar Strengthens",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/copper-prices-industrial-metal-dollar-lme",
+      "published": "2026-11-18T05:16:25Z",
+      "authors": "Katharine Gemmell",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Peltola Wins Alaska Senate Election, Nvidia Upbeat Outlook, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/peltola-wins-alaska-senate-election-nvidia-upbeat-outlook-more",
+      "published": "2026-11-18T04:25:40Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Says It Can Thrive Without Jensen Huang",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/the-asia-trade-11-18-2026-video",
+      "published": "2026-11-18T04:21:09Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Peltola Wins Alaska Senate Race, Nvidia Raises Outlook, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/peltola-wins-alaska-senate-race-nvidia-raises-outlook-more",
+      "published": "2026-11-18T03:52:45Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Forecast Beats, Huang's Return Ruled Out, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/nvidia-forecast-beats-huang-s-return-ruled-out-more",
+      "published": "2026-11-18T03:01:30Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Bloomberg Daybreak Asia: Nvidia Boosts Forecast (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/bloomberg-daybreak-asia-nvidia-boosts-forecast-podcast",
+      "published": "2026-11-18T02:41:10Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Singapore to Deploy AI to Fight Scams, Boost Business Lending",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/singapore-to-deploy-ai-to-fight-scams-boost-business-lending",
+      "published": "2026-11-18T02:36:37Z",
+      "authors": "Rthvika Suvarna",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Xi, Putin Assail Economic Barriers Ahead of Summit With Trump",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/xi-warns-against-rampant-protectionism-ahead-of-trump-talks",
+      "published": "2026-11-18T02:25:09Z",
+      "authors": "Bloomberg News",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia Outlook Impresses, Board Shuts Door on Huang Return, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/nvidia-outlook-impresses-board-shuts-door-on-huang-return-more",
+      "published": "2026-11-18T01:53:38Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "The Bank of Nvidia Is Becoming More ‘Disciplined’ and Selective",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/the-bank-of-nvidia-is-becoming-more-disciplined-and-selective",
+      "published": "2026-11-18T01:41:06Z",
+      "authors": "Dina Bass and Ian King",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Malaysia Seeks Details From Anthropic Over AI Influence Campaign",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/malaysia-seeks-details-from-anthropic-over-ai-influence-campaign",
+      "published": "2026-11-18T01:09:18Z",
+      "authors": "Danial Azhar",
+      "categories": [
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Solid Outlook, Board Quashes Huang Return, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/nvidia-solid-outlook-board-quashes-huang-return-more",
+      "published": "2026-11-18T01:04:19Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Stocks End Lower For A 4th Straight Session, Nvidia Earnings",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/the-close-11-17-2026-video",
+      "published": "2026-11-18T00:25:26Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Boosts Forecast, Quashes Huang’s Return",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/nvidia-boosts-forecast-quashes-huang-s-return-video",
+      "published": "2026-11-18T00:24:17Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Strong Outlook, Board Rules Out Huang Return, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/nvidia-strong-outlook-board-rules-out-huang-return-more",
+      "published": "2026-11-18T00:12:08Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Stops Selling AI Chips to China Despite US Approval",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/interim-nvidia-ceo-says-it-s-no-longer-sending-ai-chips-to-china",
+      "published": "2026-11-18T00:09:05Z",
+      "authors": "Maggie Eastland",
+      "categories": [
+        "Infrastructure & chips",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Backers Sequoia, Lightspeed Set to Invest More in IPO",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/anthropic-backers-sequoia-lightspeed-set-to-invest-more-in-ipo",
+      "published": "2026-11-17T23:53:15Z",
+      "authors": "Natasha Mascarenhas",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Instant Reaction: Nvidia Beats Amid CEO Drama (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-17/instant-reaction-nvidia-beats-amid-ceo-drama-podcast",
+      "published": "2026-11-17T23:28:27Z",
+      "authors": "JUSTIN MILLINER",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
     {
       "title": "Nvidia Boosts Forecast, Huang's Return Ruled Out, More",
       "url": "https://www.bloomberg.com/news/audio/2026-11-17/nvidia-boosts-forecast-huang-s-return-ruled-out-more",
@@ -664,6 +977,20 @@
       "published": "2026-11-17T10:18:59Z",
       "authors": "Mark Bergen",
       "categories": [
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Clampdown on China Chip Loophole Puts Billions at Risk",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-17/clampdown-on-china-chip-loophole-puts-billions-in-loans-at-risk",
+      "published": "2026-11-17T08:33:20Z",
+      "authors": "Bloomberg News",
+      "categories": [
+        "Investment & markets",
         "Infrastructure & chips",
         "Safety & cybersecurity"
       ],
