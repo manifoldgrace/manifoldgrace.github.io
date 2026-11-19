@@ -1,27 +1,430 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-19T10:17:37Z",
+  "archive_updated_utc": "2026-11-19T20:32:07Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 14
+      "matches": 15
     },
     "Business": {
       "status": "ok",
-      "matches": 9
+      "matches": 11
     },
     "Industries": {
       "status": "ok",
-      "matches": 1
+      "matches": 0
     },
     "Markets": {
       "status": "ok",
-      "matches": 9
+      "matches": 10
     }
   },
-  "article_count": 342,
+  "article_count": 376,
   "articles": [
+    {
+      "title": "Anthropic Pares Gains After Debut, AI Jitters Rattle Wall Street",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-pares-gains-after-debut-ai-jitters-rattle-wall-street",
+      "published": "2026-11-19T20:24:38Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic a 'Once In a Lifetime' Investment, Says Sameer Dholakia",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-a-once-in-a-lifetime-investment-says-dholakia-video",
+      "published": "2026-11-19T20:09:51Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic IPO Said to Draw Over $9.4 Billion in Japan Order Book",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-ipo-said-to-draw-over-9-4-billion-in-japan-order-book",
+      "published": "2026-11-19T20:00:00Z",
+      "authors": "Yasutaka Tamura",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Fed's Barr Says Inflation Calls for Further Policy Adjustment",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/fed-s-barr-says-inflation-calls-for-policy-adjustment-video",
+      "published": "2026-11-19T19:59:01Z",
+      "authors": "",
+      "categories": [
+        "Governance & regulation",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Traders and Investors Want to Exercise Their Convictions: Bilal Little",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/traders-and-investors-act-on-convictions-bilal-little-video",
+      "published": "2026-11-19T19:47:41Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Big Checks and Big Blobs of Compute",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-19/big-checks-and-big-blobs-of-compute",
+      "published": "2026-11-19T19:42:17Z",
+      "authors": "Joe Weisenthal and Tracy Alloway",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic Shares Pare Gains After Rocketing in Debut",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-shares-pare-gains-after-rocketing-in-debut-video",
+      "published": "2026-11-19T19:38:01Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Retail Investors Dive Into Both Sides of the Anthropic Trade",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/retail-investors-dive-into-both-sides-of-the-anthropic-trade",
+      "published": "2026-11-19T19:27:20Z",
+      "authors": "Felice Maranz and Bernard Goyder",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Leveraged ETF Race Heats Up",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-leveraged-etf-race-heats-up-video",
+      "published": "2026-11-19T19:23:40Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic Pares Gains After Strong Debut, Trump, Xi, Putin Meet",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-pares-gains-after-strong-debut-trump-xi-putin-meet",
+      "published": "2026-11-19T19:19:30Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic IPO Sets New Standard: Rice Nelson",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-ipo-sets-new-standard-rice-nelson-video",
+      "published": "2026-11-19T19:17:07Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic Shares Soar Above IPO Price, Then Fall",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-shares-soar-above-ipo-price-then-fall-video",
+      "published": "2026-11-19T19:15:32Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic IPO Backs Up Private Valuations: Schlossman",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-ipo-backs-up-private-valuations-schlossman-video",
+      "published": "2026-11-19T19:11:45Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic Makes Historic Debut on Nasdaq",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/bloomberg-tech-11-19-2026-video",
+      "published": "2026-11-19T19:10:40Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic's Record-Breaking IPO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/bloomberg-markets-11-19-2026-video",
+      "published": "2026-11-19T19:00:20Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Google’s Gemini Can Now Control Mac Devices on Users’ Behalf",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/google-s-gemini-can-now-control-mac-devices-on-users-behalf",
+      "published": "2026-11-19T18:55:31Z",
+      "authors": "Natalie Lung",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bloomberg Tech: Anthropic Goes Public After IPO (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/bloomberg-tech-anthropic-goes-public-after-ipo-podcast",
+      "published": "2026-11-19T18:53:33Z",
+      "authors": "VITORIA ROGERIO",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nscale’s ByteDance Deal Faces Scrutiny Under US Chip Curbs",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/nscale-s-bytedance-deal-faces-scrutiny-under-us-chip-curbs",
+      "published": "2026-11-19T18:47:24Z",
+      "authors": "Olivia Solon and Henry Ren",
+      "categories": [
+        "Governance & regulation",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Balance of Power: Anthropic Debuts With Record IPO (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/balance-of-power-anthropic-debuts-with-record-ipo-podcast",
+      "published": "2026-11-19T18:45:32Z",
+      "authors": "JAMES MAHONEY",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Makes Trading Debut With Record Breaking IPO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-makes-trading-debut-with-record-breaking-ipo-video",
+      "published": "2026-11-19T18:39:48Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Pares Gains After Debut, Trump, Xi, Putin Meeting",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-pares-gains-after-debut-trump-xi-putin-meeting",
+      "published": "2026-11-19T18:31:16Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Instant Reaction: Anthropic Breaks IPO Record (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/instant-reaction-anthropic-breaks-ipo-record-podcast",
+      "published": "2026-11-19T18:27:24Z",
+      "authors": "JUSTIN MILLINER",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Makes History on Wall Street",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/open-interest-11-19-2026-video",
+      "published": "2026-11-19T18:14:41Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Begins Trading on Nasdaq at $111.50",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-begins-trading-on-nasdaq-at-111-50-video",
+      "published": "2026-11-19T18:05:47Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Merryn Talks Money: Anthropic's IPO and UK Rates (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/merryn-talks-money-anthropic-s-ipo-and-uk-rates-podcast",
+      "published": "2026-11-19T17:52:38Z",
+      "authors": "MOHSIS ANDAM",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Investor: IPO Is ‘Day One’ for AI Giant",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-investor-ipo-is-day-one-for-ai-giant-video",
+      "published": "2026-11-19T17:46:06Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Apple Has a Software Problem + Nvidia’s CEO Crisis with Joanna Stern",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/apple-has-a-software-problem-nvidia-s-ceo-crisis-with-joanna-stern",
+      "published": "2026-11-19T17:46:01Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Investor Sees Opportunity Beyond IPO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-investor-sees-opportunity-beyond-ipo-video",
+      "published": "2026-11-19T17:44:26Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Tech, Banking Leaders Converge on Austin to Tackle AI’s PR Crisis",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-19/tech-banking-leaders-converge-on-austin-to-tackle-ai-s-pr-crisis",
+      "published": "2026-11-19T17:30:26Z",
+      "authors": "Joe Lovinger and Julie Fine",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Debuts At 34% Above IPO, Trump, Xi, Putin Meet, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-debuts-at-34-above-ipo-trump-xi-putin-meet-more",
+      "published": "2026-11-19T17:24:40Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Opens at more than $111/Share, IPO At $83",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-opens-at-more-than-111-share-ipo-at-83",
+      "published": "2026-11-19T16:57:06Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Set to Open 30% Higher, AMD Sinks on Short Call, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-set-to-open-30-higher-amd-sinks-on-short-call-more",
+      "published": "2026-11-19T16:35:26Z",
+      "authors": "NATHAN HAGER",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Bitcoin Pares Gain as Anthropic Fails to Sustain Risk Appetite",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/bitcoin-bounces-back-into-green-ahead-of-anthropic-ipo",
+      "published": "2026-11-19T11:31:44Z",
+      "authors": "Micah Barkley and Emily Nicolle",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
     {
       "title": "IMF Chief Sees ‘Little Bit More’ AI Correction, Debt Risk Rise",
       "url": "https://www.bloomberg.com/news/videos/2026-11-19/imf-chief-little-bit-more-ai-correction-debt-risk-rise-video",
@@ -376,6 +779,18 @@
       ],
       "feeds": [
         "Technology"
+      ]
+    },
+    {
+      "title": "Copper Rebounds After Rout as Physical Tightness Persists",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/copper-rebounds-after-rout-as-physical-tightness-persists",
+      "published": "2026-11-19T01:14:36Z",
+      "authors": "Bloomberg News",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Markets"
       ]
     },
     {
