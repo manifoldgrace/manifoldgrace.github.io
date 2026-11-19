@@ -29,6 +29,36 @@ button:focus-visible,a:focus-visible,select:focus-visible{outline:2px solid var(
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 /* Chic, editorial research presentation: contrast, negative space, subtle highlights, no imitation of vintage desktop UI. */
 .pj-hero h1{font-kerning:normal;text-wrap:balance}.pj-hero:before{filter:blur(24px)}.pj-sidebar select{color-scheme:dark}.outcome-option:focus-visible,.case-index-item:focus-visible{outline:2px solid #d6e6ff;outline-offset:4px}@media (prefers-reduced-motion:no-preference){.case-title{animation:pjFadeIn .4s ease both}@keyframes pjFadeIn{from{opacity:.5;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}}
+
+/* Editorial luxury system: dark graphite, soft ivory, champagne. */
+:root{--p-accent:#e3c7a0;--p-muted:#c8beb0;--p-rule:#494038}
+body{background:#0c0b0a;color:#f6efe5}
+.pj-hero{background:linear-gradient(112deg,#0e0d0b 0%,#12100e 55%,#221a15 100%);padding-top:clamp(86px,12vw,168px)}
+.pj-hero:before{background:radial-gradient(ellipse at 50% 45%,rgba(197,156,104,.18),rgba(92,63,47,.06) 44%,transparent 70%);filter:blur(21px)}
+.pj-eyebrow,.section-index,.case-id,.issue-label,.feedback-eyebrow{font-size:.7rem;letter-spacing:.17em;font-weight:550}
+.pj-hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(4rem,11vw,10rem);letter-spacing:-.075em;line-height:.93;margin:36px 0 44px}
+.pj-hero h1 em{font-style:italic;color:var(--p-accent)}
+.pj-hero .lead{font:400 clamp(1.13rem,2.25vw,1.75rem)/1.54 Georgia,"Times New Roman",serif;color:#e6dacf}
+.pj-hero-meta{margin-top:64px}.pj-hero-meta span{color:#cbbdaf}
+.pj-mast h2,.pj-bottom h2,.case-title,.decision-prompt h3{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.05em}
+.pj-mast h2{font-size:clamp(2.2rem,5vw,4rem)}
+.pj-stat .num{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+.pj-progress-track{background:#43372d}.pj-progress-fill{background:var(--p-accent)}
+.pj-sidebar select{border-bottom-color:#847462}
+.case-index-item{border-bottom-color:#453b33;color:#a69b8d}.case-index-item.is-active{color:#fce6c6;border-bottom-color:var(--p-accent)}.case-index-item.is-done{color:#ddc6a7}
+.pj-utilities button,.pj-utilities a{color:#e3d2be}
+.case-title{font-size:clamp(2.65rem,6vw,6rem);line-height:1.06;margin:32px 0}.case-deck{color:#d1c5b8;line-height:1.8}
+.event-stream{margin-top:56px}.event-stream li{border-bottom-color:#453d34;padding:24px 0;color:#f1e8dd}
+.decision-prompt h3{font-size:clamp(1.75rem,3vw,2.65rem)}
+.outcome-option{color:#eee3d6;border-bottom-color:#554a3e}.outcome-option:hover:not(:disabled),.outcome-option.selected{color:var(--p-accent)}
+.selected .option-mark{background:var(--p-accent);box-shadow:inset 0 0 0 3px #0c0b0a}
+.action-next{background:var(--p-accent)!important;color:#21180e!important;border-radius:0;padding:15px 25px!important}
+.feedback{border-top-color:var(--p-accent)}.feedback.no{border-top-color:#e6af94}.feedback-eyebrow,.feedback-grid span{color:var(--p-accent)}.feedback.no .feedback-eyebrow{color:#e6af94}
+.feedback>p,.feedback-grid p,.pj-bottom p{color:#dbcebf}
+.pj-bottom{background:#100e0c;padding-top:60px}.pj-bottom h2{font-size:clamp(2.4rem,5vw,4rem)}
+.pj-bottom a,.pj-mast a{color:var(--p-accent)}
+button:focus-visible,a:focus-visible,select:focus-visible{outline-color:var(--p-accent)}
+@media(max-width:520px){.pj-hero h1{font-size:clamp(4rem,17vw,6.5rem);margin:32px 0}.pj-hero-meta{margin-top:42px}.case-title{font-size:clamp(2.7rem,11vw,4rem)}}
 </style></head><body>
 <header><div class="wrap shell-head"><a href="/" class="brand">Manifold Grace</a><nav data-site-nav aria-label="Main navigation"></nav></div></header>
 <main><section class="pj-hero"><div class="pj-wrap"><p class="pj-eyebrow">Manifold Grace / Research Intelligence / v0.1</p>
