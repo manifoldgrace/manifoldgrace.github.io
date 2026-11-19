@@ -1,0 +1,355 @@
+{
+  "schema_version": "1.0",
+  "title": "Procedural Justice Intelligence Lab Synthetic Benchmark",
+  "date": "2026-11-19",
+  "status": "Initial author-labelled dataset; independent expert review outstanding",
+  "evaluation_note": "Four-way synthetic scenario classification. Reference labels are author-generated hypotheses, not professional adjudications.",
+  "labels": {
+    "potential-departure": "Potential procedural departure",
+    "justified": "Justified decision",
+    "insufficient-evidence": "Insufficient evidence",
+    "corrected": "Correction completed"
+  },
+  "cases": [
+    {
+      "id": "PJ-001",
+      "sector": "Education",
+      "title": "Secondary upload and grade cap",
+      "events": [
+        "Work submitted before deadline",
+        "Later replacement uploaded",
+        "Cap based only on later timestamp"
+      ],
+      "expected": "potential-departure",
+      "pivot": "Review both timestamps and the rule for replacement uploads",
+      "counterpoint": "Earlier version may not have been assessable",
+      "rationale": "The available synthetic facts point to a potentially incorrect procedural action. Independent rule and evidence checks remain necessary.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-002",
+      "sector": "Education",
+      "title": "Properly notified reassessment",
+      "events": [
+        "First attempt failed",
+        "Second attempt formally offered and notified",
+        "Deadline expired"
+      ],
+      "expected": "justified",
+      "pivot": "Preserve the notice and check for any distinct late evidence",
+      "counterpoint": "A new relevant event could require review",
+      "rationale": "The stated synthetic record supports this procedural outcome; dissatisfaction alone is not a breach.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-003",
+      "sector": "Data access",
+      "title": "Late extension notification",
+      "events": [
+        "Request acknowledged",
+        "Original deadline passed",
+        "Extension communicated only afterwards"
+      ],
+      "expected": "potential-departure",
+      "pivot": "Check full receipt and extension-notice timeline",
+      "counterpoint": "Identity verification can change the start date",
+      "rationale": "The available synthetic facts point to a potentially incorrect procedural action. Independent rule and evidence checks remain necessary.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-004",
+      "sector": "Employment",
+      "title": "Unclear policy version",
+      "events": [
+        "Rating disputed",
+        "Reviewer cites a newer policy",
+        "Transitional terms unavailable"
+      ],
+      "expected": "insufficient-evidence",
+      "pivot": "Locate the operative policy and transitional provisions",
+      "counterpoint": "New rules may lawfully apply retrospectively",
+      "rationale": "The synthetic record omits a decisive fact or rule needed for a defensible classification.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-005",
+      "sector": "Finance",
+      "title": "Account correction delivered",
+      "events": [
+        "Ledger error found",
+        "Correction agreed",
+        "Balance and charges reconciled"
+      ],
+      "expected": "corrected",
+      "pivot": "Verify downstream records reflect the correction",
+      "counterpoint": "Secondary charges may persist",
+      "rationale": "A documented corrective action resolved the identified procedural defect, subject to any remaining consequential issues.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-006",
+      "sector": "Administration",
+      "title": "Unverified emailed evidence",
+      "events": [
+        "Applicant reports emailing work",
+        "No sent file or receipt survives",
+        "Portal shows no upload"
+      ],
+      "expected": "insufficient-evidence",
+      "pivot": "Seek headers and contemporaneous alternative-route decision",
+      "counterpoint": "System deletion could explain missing records",
+      "rationale": "The synthetic record omits a decisive fact or rule needed for a defensible classification.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-007",
+      "sector": "Housing",
+      "title": "Closure mistaken for merits",
+      "events": [
+        "Initial appeal rejected as late",
+        "Later office claims underlying issues determined",
+        "First letter excludes them"
+      ],
+      "expected": "potential-departure",
+      "pivot": "Map issue-by-issue what was actually decided",
+      "counterpoint": "Later submission can still be out of scope",
+      "rationale": "The available synthetic facts point to a potentially incorrect procedural action. Independent rule and evidence checks remain necessary.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-008",
+      "sector": "Education",
+      "title": "Alternative route accepted",
+      "events": [
+        "Portal outage logged",
+        "Alternative email route authorised",
+        "Readable attachment accepted"
+      ],
+      "expected": "corrected",
+      "pivot": "Audit notification and parity of access",
+      "counterpoint": "Other students may not have learned of the route",
+      "rationale": "A documented corrective action resolved the identified procedural defect, subject to any remaining consequential issues.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-009",
+      "sector": "Employment",
+      "title": "Clearly communicated time bar",
+      "events": [
+        "Deadline clearly notified",
+        "Request received much later",
+        "No new basis for extension"
+      ],
+      "expected": "justified",
+      "pivot": "Explain reasons and any distinct available route",
+      "counterpoint": "A notification error would change the conclusion",
+      "rationale": "The stated synthetic record supports this procedural outcome; dissatisfaction alone is not a breach.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-010",
+      "sector": "Student finance",
+      "title": "Conflicting student records",
+      "events": [
+        "Two systems disagree",
+        "Departments dispute source",
+        "Underlying event log missing"
+      ],
+      "expected": "insufficient-evidence",
+      "pivot": "Reconstruct authoritative update history",
+      "counterpoint": "One system could be an intentional delayed mirror",
+      "rationale": "The synthetic record omits a decisive fact or rule needed for a defensible classification.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-011",
+      "sector": "Employment",
+      "title": "Partial outcome marked fully resolved",
+      "events": [
+        "Three issues separately lodged",
+        "Only one answered",
+        "Dashboard says all closed"
+      ],
+      "expected": "potential-departure",
+      "pivot": "Restore accurate issue-level dispositions",
+      "counterpoint": "Unseen correspondence might resolve the remainder",
+      "rationale": "The available synthetic facts point to a potentially incorrect procedural action. Independent rule and evidence checks remain necessary.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-012",
+      "sector": "Licensing",
+      "title": "Correction before expiry",
+      "events": [
+        "Calculation error found",
+        "Applicant notified promptly",
+        "Corrected licence issued"
+      ],
+      "expected": "corrected",
+      "pivot": "Ensure the replacement record propagates",
+      "counterpoint": "Old records may persist downstream",
+      "rationale": "A documented corrective action resolved the identified procedural defect, subject to any remaining consequential issues.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-013",
+      "sector": "Finance",
+      "title": "Genuinely repetitive appeal",
+      "events": [
+        "New complaint repeats same facts and remedy",
+        "Prior merits decision covers both",
+        "Reasoned comparison supplied"
+      ],
+      "expected": "justified",
+      "pivot": "Explain reopening thresholds and retain comparison",
+      "counterpoint": "A truly new event would change the analysis",
+      "rationale": "The stated synthetic record supports this procedural outcome; dissatisfaction alone is not a breach.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-014",
+      "sector": "Administration",
+      "title": "Missing outage logs",
+      "events": [
+        "Person reports platform fault",
+        "Logs missing after migration",
+        "No independent technical proof"
+      ],
+      "expected": "insufficient-evidence",
+      "pivot": "Seek migration and retention records",
+      "counterpoint": "Lawful log deletion may still impede review",
+      "rationale": "The synthetic record omits a decisive fact or rule needed for a defensible classification.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-015",
+      "sector": "Education",
+      "title": "Reassessment opportunity omitted",
+      "events": [
+        "Rules allow another attempt",
+        "Attempt history confirms eligibility",
+        "No offer or new deadline sent"
+      ],
+      "expected": "potential-departure",
+      "pivot": "Check exceptions and preserve an available assessment route",
+      "counterpoint": "An exception may disqualify the attempt",
+      "rationale": "The available synthetic facts point to a potentially incorrect procedural action. Independent rule and evidence checks remain necessary.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-016",
+      "sector": "Benefits",
+      "title": "Reviewable refusal",
+      "events": [
+        "Required information requested with accessible deadline",
+        "Not received",
+        "Reasoned decision and review route given"
+      ],
+      "expected": "justified",
+      "pivot": "Confirm proportionality of requested information",
+      "counterpoint": "Requirement itself could be defective",
+      "rationale": "The stated synthetic record supports this procedural outcome; dissatisfaction alone is not a breach.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-017",
+      "sector": "Education",
+      "title": "Deadline protected during review",
+      "events": [
+        "Disputed mark under investigation",
+        "Protective extension communicated",
+        "Review completed before new deadline"
+      ],
+      "expected": "corrected",
+      "pivot": "Record the protective extension and outcome",
+      "counterpoint": "Underlying mark can still be wrong",
+      "rationale": "A documented corrective action resolved the identified procedural defect, subject to any remaining consequential issues.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-018",
+      "sector": "Public services",
+      "title": "Responsibility unclear",
+      "events": [
+        "Two offices acknowledge enquiry",
+        "Neither identifies decision authority",
+        "Delegation documents absent"
+      ],
+      "expected": "insufficient-evidence",
+      "pivot": "Map statutory authority and referrals",
+      "counterpoint": "One office may have redirected appropriately",
+      "rationale": "The synthetic record omits a decisive fact or rule needed for a defensible classification.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-019",
+      "sector": "Finance",
+      "title": "Reopening correctly declined",
+      "events": [
+        "Detailed merits decision issued",
+        "Same documents resubmitted",
+        "No material new ground identified"
+      ],
+      "expected": "justified",
+      "pivot": "Retain reasons and explain review threshold",
+      "counterpoint": "Later evidence would require fresh scrutiny",
+      "rationale": "The stated synthetic record supports this procedural outcome; dissatisfaction alone is not a breach.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    },
+    {
+      "id": "PJ-020",
+      "sector": "Licensing",
+      "title": "Erroneous duplicate corrected",
+      "events": [
+        "New application concerns later statutory period",
+        "Automated system flags duplicate",
+        "Human reviewer restores processing"
+      ],
+      "expected": "corrected",
+      "pivot": "Audit temporal classifier and correction record",
+      "counterpoint": "Other duplicate classifications may still be sound",
+      "rationale": "A documented corrective action resolved the identified procedural defect, subject to any remaining consequential issues.",
+      "evidence_status": "Synthetic facts supplied; do not treat as a real-world finding",
+      "source_type": "fictional",
+      "synthetic": true
+    }
+  ]
+}
