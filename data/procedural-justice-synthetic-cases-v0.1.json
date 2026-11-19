@@ -1,0 +1,395 @@
+{
+  "title": "Synthetic Administrative Decision Chains Benchmark",
+  "version": "0.1.0",
+  "created": "2026-11-19",
+  "status": "synthetic research fixture; not validated or tested against AI",
+  "provenance": "All cases and F-R rules are invented for evaluation; no case is a depiction of any person's records or a binding legal interpretation.",
+  "labels": [
+    "likely_departure",
+    "rule_compliant",
+    "insufficient_evidence"
+  ],
+  "case_count": 20,
+  "cases": [
+    {
+      "id": "PJ-001",
+      "title": "Appeal deadline after service outage",
+      "domain": "education",
+      "gold_label": "likely_departure",
+      "remedy_status": "lost",
+      "fictional_rule": {
+        "id": "F-R1",
+        "text": "If the designated portal is unavailable on the final day, a timely logged attempt extends the deadline by five working days."
+      },
+      "evidence_summary": "A portal incident report confirms outage on the final day. A submission attempt was logged before closure. An appeal received two days later was rejected as late.",
+      "reference_reasoning": "The logged attempt satisfies the fictional extension rule; refusing solely on ordinary deadline ignores its exception.",
+      "review_pivot": "Accept under extended limit and examine appeal scope.",
+      "uncertainty_or_countercheck": "Timestamp authenticity should be checked.",
+      "tags": [
+        "deadline",
+        "portal"
+      ]
+    },
+    {
+      "id": "PJ-002",
+      "title": "Clear deadline and late submission",
+      "domain": "education",
+      "gold_label": "rule_compliant",
+      "remedy_status": "not_available",
+      "fictional_rule": {
+        "id": "F-R2",
+        "text": "Appeals close 20 days after notice; extensions require a documented exceptional event."
+      },
+      "evidence_summary": "Delivery and receipt of notice are confirmed. No exception is claimed. Appeal was submitted on day 34.",
+      "reference_reasoning": "Deadline rejection follows the specified rule; dissatisfaction alone is not an exception.",
+      "review_pivot": "Explain the deadline and applicable next-stage options.",
+      "uncertainty_or_countercheck": "Verify any subsequent independent request separately.",
+      "tags": [
+        "deadline",
+        "compliant"
+      ]
+    },
+    {
+      "id": "PJ-003",
+      "title": "Approved alternative submission rejected",
+      "domain": "education",
+      "gold_label": "likely_departure",
+      "remedy_status": "lost",
+      "fictional_rule": {
+        "id": "F-R3",
+        "text": "Where an alternative channel is formally approved before the deadline, receipt through that channel counts as timely submission."
+      },
+      "evidence_summary": "Approval email authorises a named alternate inbox; attached work arrives before deadline. Assessor rejects it for not being on the portal.",
+      "reference_reasoning": "An approved channel cannot be disregarded solely because it is non-standard.",
+      "review_pivot": "Record the received submission and apply the same assessment criteria.",
+      "uncertainty_or_countercheck": "Verify file integrity and approval scope.",
+      "tags": [
+        "alternative_channel",
+        "assessment"
+      ]
+    },
+    {
+      "id": "PJ-004",
+      "title": "Unconfirmed alternate-channel permission",
+      "domain": "education",
+      "gold_label": "insufficient_evidence",
+      "remedy_status": "unknown",
+      "fictional_rule": {
+        "id": "F-R4",
+        "text": "Assessment must be uploaded through the portal unless an authorised exception is recorded."
+      },
+      "evidence_summary": "Student reports emailing coursework on time. Copy of message exists, but receiving address, attachment and exception authorisation are not verified.",
+      "reference_reasoning": "Emailing alone neither proves an authorised exception nor rules out a duty to consider one.",
+      "review_pivot": "Retrieve original sent and received metadata and the relevant procedural decision.",
+      "uncertainty_or_countercheck": "Do not declare either compliance or breach from this extract.",
+      "tags": [
+        "alternative_channel",
+        "uncertain"
+      ]
+    },
+    {
+      "id": "PJ-005",
+      "title": "Later upload governed by an explicit rule",
+      "domain": "education",
+      "gold_label": "rule_compliant",
+      "remedy_status": "not_available",
+      "fictional_rule": {
+        "id": "F-R5",
+        "text": "The final successfully uploaded version determines the submission timestamp; the rule is displayed before replacement confirmation."
+      },
+      "evidence_summary": "Initial upload is timely; replacement occurs nine days late. Confirmation screen explicitly warns that replacement updates the timestamp.",
+      "reference_reasoning": "Applying the later timestamp follows the stated fictional rule, assuming evidence of the warning.",
+      "review_pivot": "Explain penalty calculation and retain both submission records.",
+      "uncertainty_or_countercheck": "Separate fairness criticism from rule compliance.",
+      "tags": [
+        "upload",
+        "compliant"
+      ]
+    },
+    {
+      "id": "PJ-006",
+      "title": "First valid submission should govern",
+      "domain": "education",
+      "gold_label": "likely_departure",
+      "remedy_status": "lost",
+      "fictional_rule": {
+        "id": "F-R6",
+        "text": "A timely valid first upload fixes timeliness; later replacements affect content but not lateness."
+      },
+      "evidence_summary": "First file was successfully received before deadline. Later replacement is treated as a fresh late submission and capped.",
+      "reference_reasoning": "Cap conflicts with the rule fixing timeliness at the first valid upload.",
+      "review_pivot": "Recalculate the penalty using the original timestamp.",
+      "uncertainty_or_countercheck": "Check first upload validity and potential content changes.",
+      "tags": [
+        "upload",
+        "assessment"
+      ]
+    },
+    {
+      "id": "PJ-007",
+      "title": "Verified system corruption and fallback",
+      "domain": "education",
+      "gold_label": "likely_departure",
+      "remedy_status": "lost",
+      "fictional_rule": {
+        "id": "F-R7",
+        "text": "When the submission service corrupts a timely file and contemporaneous readable material exists, the case must be reviewed for a valid replacement opportunity."
+      },
+      "evidence_summary": "System log identifies platform corruption. A matching readable file was held in an authorised fallback inbox before deadline. Work marked absent without review.",
+      "reference_reasoning": "Explicit system-error rule was not applied to the evidence.",
+      "review_pivot": "Reconstruct content and reopen the valid-submission decision.",
+      "uncertainty_or_countercheck": "Verify matching file hashes and channel authorisation.",
+      "tags": [
+        "systems",
+        "assessment"
+      ]
+    },
+    {
+      "id": "PJ-008",
+      "title": "Unreadable file without audit trail",
+      "domain": "education",
+      "gold_label": "insufficient_evidence",
+      "remedy_status": "unknown",
+      "fictional_rule": {
+        "id": "F-R8",
+        "text": "A documented technical failure can permit reconstruction; otherwise staff must seek evidence before attributing the cause."
+      },
+      "evidence_summary": "Assessment file cannot be opened. No platform log, original message or error report is available.",
+      "reference_reasoning": "Cause is unknown; neither applicant fault nor institution fault is established.",
+      "review_pivot": "Preserve available artifacts and request technical investigation.",
+      "uncertainty_or_countercheck": "Avoid asserting corrupted systems without forensic support.",
+      "tags": [
+        "systems",
+        "uncertain"
+      ]
+    },
+    {
+      "id": "PJ-009",
+      "title": "Reassessment offer never issued",
+      "domain": "education",
+      "gold_label": "likely_departure",
+      "remedy_status": "lost",
+      "fictional_rule": {
+        "id": "F-R9",
+        "text": "Eligible applicants receive a reassessment notice and reasonable submission period before the stated academic-year cutoff."
+      },
+      "evidence_summary": "Eligibility is confirmed; internal decision notes no reassessment message was sent. Record nevertheless closes as deadline missed.",
+      "reference_reasoning": "Closing an uncommunicated opportunity conflicts with the notice requirement.",
+      "review_pivot": "Issue valid notice and restore the permitted attempt.",
+      "uncertainty_or_countercheck": "Recheck eligibility and any alternative contact attempt.",
+      "tags": [
+        "reassessment",
+        "deadline"
+      ]
+    },
+    {
+      "id": "PJ-010",
+      "title": "Permitted attempts exhausted",
+      "domain": "education",
+      "gold_label": "rule_compliant",
+      "remedy_status": "not_available",
+      "fictional_rule": {
+        "id": "F-R10",
+        "text": "A maximum of two completed assessment attempts is allowed absent an approved exceptional decision."
+      },
+      "evidence_summary": "Two completed attempts, both communicated, are documented. No approved extra attempt appears.",
+      "reference_reasoning": "Declining a third attempt follows the fictional limit.",
+      "review_pivot": "Provide a clear attempts statement and information on any separate route.",
+      "uncertainty_or_countercheck": "Do not infer a further entitlement from hardship alone.",
+      "tags": [
+        "reassessment",
+        "compliant"
+      ]
+    },
+    {
+      "id": "PJ-011",
+      "title": "Disputed extension justification",
+      "domain": "public_services",
+      "gold_label": "insufficient_evidence",
+      "remedy_status": "unknown",
+      "fictional_rule": {
+        "id": "F-R11",
+        "text": "Late review is allowed when an exceptional event materially prevents timely filing and is evidenced."
+      },
+      "evidence_summary": "A late applicant mentions a disruption, but relevant dates and supporting documentation are absent.",
+      "reference_reasoning": "Materiality and exception eligibility cannot be assessed from this extract.",
+      "review_pivot": "Ask proportionate clarifying questions before a final eligibility assessment.",
+      "uncertainty_or_countercheck": "Do not presume the explanation false.",
+      "tags": [
+        "deadline",
+        "uncertain"
+      ]
+    },
+    {
+      "id": "PJ-012",
+      "title": "Procedural closure becomes merits finding",
+      "domain": "education",
+      "gold_label": "likely_departure",
+      "remedy_status": "lost",
+      "fictional_rule": {
+        "id": "F-R12",
+        "text": "A review outcome must enumerate issues determined; a procedural rejection decides timeliness only."
+      },
+      "evidence_summary": "First review explicitly considered only lateness. Later office records all underlying academic allegations as investigated and rejected.",
+      "reference_reasoning": "The later disposition exceeds the scope actually decided.",
+      "review_pivot": "Correct issue-level statuses and route any genuinely distinct issues.",
+      "uncertainty_or_countercheck": "This need not automatically reopen the original case.",
+      "tags": [
+        "closure",
+        "provenance"
+      ]
+    },
+    {
+      "id": "PJ-013",
+      "title": "True repeat of a determined matter",
+      "domain": "financial_services",
+      "gold_label": "rule_compliant",
+      "remedy_status": "not_available",
+      "fictional_rule": {
+        "id": "F-R13",
+        "text": "An identical issue based on the same facts and final decision may be closed as repetitive with reasons."
+      },
+      "evidence_summary": "The same requester resubmits a previously determined transaction dispute without new event or evidence. Issue comparison is documented.",
+      "reference_reasoning": "Duplicate classification matches the specified rule.",
+      "review_pivot": "Provide concise closure reasons and permitted new-evidence route.",
+      "uncertainty_or_countercheck": "Avoid assuming repetition in different factual circumstances.",
+      "tags": [
+        "duplicate",
+        "compliant"
+      ]
+    },
+    {
+      "id": "PJ-014",
+      "title": "New record event mislabelled duplicate",
+      "domain": "public_services",
+      "gold_label": "likely_departure",
+      "remedy_status": "lost",
+      "fictional_rule": {
+        "id": "F-R14",
+        "text": "A later independent record-correction decision must be distinguished from an earlier merits complaint."
+      },
+      "evidence_summary": "Prior complaint concerned an award outcome; new complaint concerns a later inaccurate status entry. Both marked duplicate without comparison.",
+      "reference_reasoning": "The later administrative decision is distinct under the fictional categorisation rule.",
+      "review_pivot": "Open the separate record issue or explain an applicable route.",
+      "uncertainty_or_countercheck": "Check whether any prior decision truly covered the later entry.",
+      "tags": [
+        "duplicate",
+        "records"
+      ]
+    },
+    {
+      "id": "PJ-015",
+      "title": "Late notification of data-access extension",
+      "domain": "public_services",
+      "gold_label": "likely_departure",
+      "remedy_status": "lost",
+      "fictional_rule": {
+        "id": "F-R15",
+        "text": "A request extension must be communicated within the original 30-day response window."
+      },
+      "evidence_summary": "Request receipt and ordinary deadline are recorded. First extension notice is sent after day 30. Complete correspondence register confirms no earlier notice.",
+      "reference_reasoning": "Notification timing breaches the express fictional extension-notice requirement.",
+      "review_pivot": "Acknowledge overdue notification, complete access and examine resulting practical consequences.",
+      "uncertainty_or_countercheck": "Distinguish a procedural violation from the completeness of eventual data.",
+      "tags": [
+        "data_access",
+        "deadline"
+      ]
+    },
+    {
+      "id": "PJ-016",
+      "title": "Valid timely data-access extension",
+      "domain": "public_services",
+      "gold_label": "rule_compliant",
+      "remedy_status": "preserved",
+      "fictional_rule": {
+        "id": "F-R16",
+        "text": "Complex requests may be extended if notice and reasons are provided during the initial response period."
+      },
+      "evidence_summary": "The controller provides extension reasons on day 18 and discloses the relevant records within the extended period.",
+      "reference_reasoning": "The specified time and notice requirements were met.",
+      "review_pivot": "Record compliance and offer a route to query missing material.",
+      "uncertainty_or_countercheck": "Completeness would be a separate issue if challenged.",
+      "tags": [
+        "data_access",
+        "compliant"
+      ]
+    },
+    {
+      "id": "PJ-017",
+      "title": "Contradictory outcome records",
+      "domain": "education",
+      "gold_label": "likely_departure",
+      "remedy_status": "preserved",
+      "fictional_rule": {
+        "id": "F-R17",
+        "text": "Two conflicting final outcomes may not be relied upon until source records are reconciled."
+      },
+      "evidence_summary": "Two official systems display conflicting marks. A refusal relies on one entry without checking the other.",
+      "reference_reasoning": "Using unverified conflicting information contradicts the reconciliation rule.",
+      "review_pivot": "Pause consequential reliance and audit the source-of-truth record.",
+      "uncertainty_or_countercheck": "Do not invent which mark is correct.",
+      "tags": [
+        "records",
+        "provenance"
+      ]
+    },
+    {
+      "id": "PJ-018",
+      "title": "Unclear classification under parallel routes",
+      "domain": "employment",
+      "gold_label": "insufficient_evidence",
+      "remedy_status": "unknown",
+      "fictional_rule": {
+        "id": "F-R18",
+        "text": "A new complaint requires a new decision or duty, not merely differently worded concerns."
+      },
+      "evidence_summary": "Two submissions appear similar but their referenced decisions and remedies are incomplete in the extract.",
+      "reference_reasoning": "Insufficient information to classify as repeat or independent matter.",
+      "review_pivot": "Create issue comparison and request missing decision dates.",
+      "uncertainty_or_countercheck": "Do not recommend a new claim as automatically admissible.",
+      "tags": [
+        "duplicate",
+        "uncertain"
+      ]
+    },
+    {
+      "id": "PJ-019",
+      "title": "Responsibility split blocks correction",
+      "domain": "public_services",
+      "gold_label": "likely_departure",
+      "remedy_status": "lost",
+      "fictional_rule": {
+        "id": "F-R19",
+        "text": "Where two units share a record-correction workflow, a named coordinating office must take ownership within ten working days."
+      },
+      "evidence_summary": "Each unit redirects the requester to the other over six weeks. No coordinator was assigned, and the correction window expires.",
+      "reference_reasoning": "Failure to appoint an owner breaches the fictional coordination rule.",
+      "review_pivot": "Assign owner, preserve correction rights and review the expired window.",
+      "uncertainty_or_countercheck": "Confirm handoffs and actual availability of a remedy.",
+      "tags": [
+        "fragmentation",
+        "deadline"
+      ]
+    },
+    {
+      "id": "PJ-020",
+      "title": "Error recognised and corrected before cutoff",
+      "domain": "employment",
+      "gold_label": "rule_compliant",
+      "remedy_status": "preserved",
+      "fictional_rule": {
+        "id": "F-R20",
+        "text": "When a disputed classification is confirmed erroneous, staff must correct it within ten working days and notify the applicant."
+      },
+      "evidence_summary": "Error is acknowledged on day 2, corrected on day 5, and the individual is notified before the downstream deadline.",
+      "reference_reasoning": "Corrective workflow follows the rule and preserves the opportunity.",
+      "review_pivot": "Record closure and retain correction provenance.",
+      "uncertainty_or_countercheck": "Subsequent harms, if any, are a separate inquiry.",
+      "tags": [
+        "correction",
+        "compliant"
+      ]
+    }
+  ]
+}
