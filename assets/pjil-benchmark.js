@@ -14,7 +14,7 @@ function render(){
  $("#answered").textContent=answerCount()+" / "+total;
  $("#correct").textContent=String(correct);
  $("#percent").textContent=answerCount()?Math.round(100*correct/answerCount())+"%":"—";
- $("#progress-fill").style.width=(answerCount()/total*100)+"%";
+ $("#progress-fill").style.width=(answerCount()/total*100)+"%"; $(".pj-progress-track").setAttribute("aria-valuenow",String(answerCount()));
  $("#case-index").innerHTML=list.map(({c:x,i})=>'<button type="button" class="case-index-item '+(i===active?"is-active ":"")+(answers[x.id]?"is-done":"")+'" data-index="'+i+'" aria-label="Open case '+escape(x.id)+'" '+(i===active?'aria-current="step"':"")+'><span class="index-dot"></span><span>'+escape(x.id.slice(-3))+'</span></button>').join("");
  $("#case-index").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{active=+b.dataset.index;render();}));
  const pick=done||null;
