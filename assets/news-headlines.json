@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "GDELT DOC API",
   "source_url": "https://www.gdeltproject.org/",
-  "updated": "2026-11-19T07:18:23.116586Z",
+  "updated": "2026-11-19T20:29:43.082557Z",
   "providers": {
     "Al Jazeera": {
       "items": [
