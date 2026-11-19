@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-18T17:14:23Z",
+  "archive_updated_utc": "2026-11-19T00:20:02Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 12
+      "matches": 15
     },
     "Business": {
       "status": "ok",
-      "matches": 5
+      "matches": 13
     },
     "Industries": {
       "status": "ok",
@@ -17,11 +17,424 @@
     },
     "Markets": {
       "status": "ok",
-      "matches": 6
+      "matches": 7
     }
   },
-  "article_count": 278,
+  "article_count": 311,
   "articles": [
+    {
+      "title": "Anthropic Raises $3 Billion in Japan Tranche of US Mega IPO",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-raises-3-billion-in-japan-tranche-of-us-mega-ipo",
+      "published": "2026-11-19T00:10:13Z",
+      "authors": "Yasutaka Tamura",
+      "categories": [
+        "Governance & regulation",
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Alibaba’s AI Ambitions Face Steep Challenge in US Chip Controls",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/alibaba-s-ai-ambitions-face-steep-challenge-in-us-chip-controls",
+      "published": "2026-11-19T00:00:21Z",
+      "authors": "Jeanny Yu",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Turmoil Spurs Valuation Rethink of Japan’s AI Shares",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/nvidia-turmoil-spurs-valuation-rethink-of-japan-s-ai-shares",
+      "published": "2026-11-18T23:50:00Z",
+      "authors": "Hideyuki Sano",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Sets IPO Price, Fed Officials Expect Hikes, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/anthropic-sets-ipo-price-fed-officials-expect-hikes-more",
+      "published": "2026-11-18T23:44:50Z",
+      "authors": "BRENDAN GAMBESKI",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Ex-Google Engineer May Face New Charges Over Bets on Gemini 3.0",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/ex-google-engineer-may-face-new-charges-over-bets-on-gemini-3-0",
+      "published": "2026-11-18T23:44:22Z",
+      "authors": "Chris Dolmetsch and Daniele Lepido",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "CoreWeave’s McBee Favors Data Center Spending Over Repaying Debt",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/coreweave-s-mcbee-favors-data-center-spending-over-repaying-debt",
+      "published": "2026-11-18T23:37:25Z",
+      "authors": "Carmen Arroyo",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Jane Fraser on IPO Pipeline, AI, & Interest Rate Outlook",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/jane-fraser-on-ipo-pipeline-ai-interest-rate-outlook-video",
+      "published": "2026-11-18T23:31:48Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "How Anthropic Can Capture $30 Trillion",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/opinion-how-anthropic-can-capture-30-trillion-video",
+      "published": "2026-11-18T23:01:05Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "CATL CEO Pitches Plan to Power Data Centers as New Growth Engine",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/catl-ceo-pitches-plan-to-power-data-centers-as-new-growth-engine",
+      "published": "2026-11-18T23:00:01Z",
+      "authors": "Bloomberg News",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Said to Price Its IPO at $83 a Share",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-18/anthropic-said-to-price-its-ipo-at-83-a-share",
+      "published": "2026-11-18T22:59:24Z",
+      "authors": "David Rovella",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Former SEC Chair Gary Gensler Warns Anthropic’s Cash Flow Poses Big Risk To AI Economy",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/fmr-sec-chair-gary-gensler-nvidia-misled-the-public-video",
+      "published": "2026-11-18T22:53:04Z",
+      "authors": "",
+      "categories": [
+        "Governance & regulation",
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic to Price IPO at $83/Share, Fed Expects More Hikes",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/anthropic-to-price-ipo-at-83-share-fed-expects-more-hikes",
+      "published": "2026-11-18T22:52:34Z",
+      "authors": "BRENDAN GAMBESKI",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Eddie Best on Expectations for Anthropic’s IPO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/eddie-best-on-expectations-for-anthropic-s-ipo-video",
+      "published": "2026-11-18T22:47:54Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Alberta Plans to Set 600-Meter Buffer Between AI Data Centers, Homes",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-18/alberta-plans-to-set-600-meter-buffer-between-ai-data-centers-homes",
+      "published": "2026-11-18T22:45:31Z",
+      "authors": "Robert Tuttle and Laura Dhillon Kane",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "New Work Foundation CEO on Helping Young Workers in an AI World",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/how-young-workers-are-building-careers-in-an-ai-world-video",
+      "published": "2026-11-18T22:43:11Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia’s Outlook Cut to Stable by Moody’s on Governance Concerns",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/moody-s-lowers-nvidia-s-ratings-outlook-to-stable-from-positive",
+      "published": "2026-11-18T22:29:01Z",
+      "authors": "Davide Barbuscia",
+      "categories": [
+        "Governance & regulation",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic IPO Signals Strong AI Appetite, Harbor Capital's Menne Says",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/anthropic-ipo-signals-strong-ai-appetite-harbor-capital-video",
+      "published": "2026-11-18T22:24:46Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stock Movers: Nvidia, Okta, Take-Two Interactive (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/stock-movers-nvidia-okta-take-two-interactive-podcast",
+      "published": "2026-11-18T22:07:42Z",
+      "authors": "SEBASTIAN ESCOBAR",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nasdaq Futures Rise After Anthropic IPO Pricing: Markets Wrap",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/stock-market-today-dow-s-p-live-updates",
+      "published": "2026-11-18T22:07:41Z",
+      "authors": "Anand Krishnamoorthy",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic Said To Price IPO at $83/Share, Fed Agrees on Hikes",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/anthropic-said-to-price-ipo-at-83-share-fed-agrees-on-hikes",
+      "published": "2026-11-18T22:02:17Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic IPO, Nvidia, David Jones: Australia Briefing",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-18/anthropic-ipo-nvidia-david-jones-australia-briefing",
+      "published": "2026-11-18T21:57:07Z",
+      "authors": "Carmeli Argana",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Is Positive for IPO Market, Fraser Says",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/anthropic-is-positive-for-ipo-market-fraser-says-video",
+      "published": "2026-11-18T21:54:35Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Set for Record After Pricing IPO at $83 Per Share",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-18/anthropic-set-for-record-after-pricing-ipo-at-83-per-share",
+      "published": "2026-11-18T21:43:50Z",
+      "authors": "Samantha Stewart",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Is Said to Price IPO at $83 Per Share",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-18/anthropic-is-said-to-price-ipo-at-83-per-share-video",
+      "published": "2026-11-18T21:36:53Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stephanomics: Is China Winning the Important AI Race? (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/stephanomics-is-china-winning-the-important-ai-race-podcast",
+      "published": "2026-11-18T21:24:10Z",
+      "authors": "SOMMER SAADI",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Palo Alto Networks Buys Applied Compute in $4.5 Billion Deal",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/palo-alto-networks-to-buy-applied-compute-in-4-5-billion-deal",
+      "published": "2026-11-18T21:19:57Z",
+      "authors": "Lynn Doan and Ignacio Gonzalez",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stocks Close Mixed, Anthropic Said To Price IPO at $83/Share",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/stocks-close-mixed-anthropic-said-to-price-ipo-at-83-share",
+      "published": "2026-11-18T21:17:23Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Stock Movers: Take-Two, Nvidia, Humana (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/stock-movers-take-two-nvidia-humana-podcast",
+      "published": "2026-11-18T21:15:59Z",
+      "authors": "SEBASTIAN ESCOBAR",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic IPO Raises $81.3 Billion to Top SpaceX’s Record Debut",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/anthropic-is-said-to-price-ipo-at-83-per-share",
+      "published": "2026-11-18T21:09:49Z",
+      "authors": "Natasha Mascarenhas and Bailey Lipschultz",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Asia Centric: JP Morgan on AI CapEx and the Tech Deal Boom",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-18/asia-centric-jp-morgan-on-ai-capex-and-the-tech-deal-boom",
+      "published": "2026-11-18T21:00:00Z",
+      "authors": "Clara Chen",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Meta Pauses Zuckerberg Share Plan During Investor Legal Fight",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/meta-pauses-zuckerberg-share-plan-during-investor-legal-fight",
+      "published": "2026-11-18T20:45:15Z",
+      "authors": "Sabrina Willmer",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Sizes Up Arm CEO Haas in Search for Huang Successor",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/arm-ceo-rene-haas-approached-by-nvidia-board-s-recruitment-firm",
+      "published": "2026-11-18T18:45:41Z",
+      "authors": "Ian King",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Texas Resumes Data Center Environmental Permits After Pause",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/texas-regulators-resuming-data-center-environmental-permits",
+      "published": "2026-11-18T17:16:17Z",
+      "authors": "Julian Hast",
+      "categories": [
+        "Governance & regulation",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
     {
       "title": "Trump, Putin to Meet, Anthropic Shares Price Tonight, More",
       "url": "https://www.bloomberg.com/news/audio/2026-11-18/trump-putin-to-meet-anthropic-shares-price-tonight-more",
