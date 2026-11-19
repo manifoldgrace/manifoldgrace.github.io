@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-19T00:20:02Z",
+  "archive_updated_utc": "2026-11-19T10:17:37Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 15
+      "matches": 14
     },
     "Business": {
       "status": "ok",
-      "matches": 13
+      "matches": 9
     },
     "Industries": {
       "status": "ok",
@@ -17,11 +17,379 @@
     },
     "Markets": {
       "status": "ok",
-      "matches": 7
+      "matches": 9
     }
   },
-  "article_count": 311,
+  "article_count": 342,
   "articles": [
+    {
+      "title": "IMF Chief Sees ‘Little Bit More’ AI Correction, Debt Risk Rise",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/imf-chief-little-bit-more-ai-correction-debt-risk-rise-video",
+      "published": "2026-11-19T10:05:20Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Xi-Trump-Putin Opening Remarks, Anthropic's Record IPO, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/xi-trump-putin-opening-remarks-anthropic-s-record-ipo-more",
+      "published": "2026-11-19T09:45:01Z",
+      "authors": "ANDREW GAVIN",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic IPO: $1.1 Billion of Shares Sold to European Retail Investors",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-ipo-1-1-billion-of-shares-sold-to-european-retail-investors",
+      "published": "2026-11-19T09:36:51Z",
+      "authors": "Pablo Mayo Cerqueiro",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "This Is The Problem With AI's Most Bullish Chart",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/this-is-the-problem-with-ai-s-most-bullish-chart",
+      "published": "2026-11-19T09:00:04Z",
+      "authors": "Joe Weisenthal and Tracy Alloway",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Odd Lots: AI’s Credit Crunch Moment (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/odd-lots-ai-s-credit-crunch-moment-podcast",
+      "published": "2026-11-19T09:00:00Z",
+      "authors": "Joe Weisenthal and Tracy Alloway",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nasdaq Futures Rally on Anthropic, Trump-Xi-Putin Meet, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/nasdaq-futures-rally-on-anthropic-trump-xi-putin-meet-more",
+      "published": "2026-11-19T08:43:58Z",
+      "authors": "ANDREW GAVIN",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Amundi CIO Mortier Shifts 2027 Strategy Away From Big Tech",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/amundi-s-mortier-shifts-2027-strategy-away-from-big-tech-video",
+      "published": "2026-11-19T08:43:11Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "US Futures Surge on Anthropic IPO, Trump Meets Xi & Putin, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/us-futures-surge-on-anthropic-ipo-trump-meets-xi-putin-more",
+      "published": "2026-11-19T08:24:31Z",
+      "authors": "ANDREW GAVIN",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "ITU: Focus On Ensuring Syria Becomes a Digital Hub",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/itu-focus-on-ensuring-syria-becomes-a-digital-hub-video",
+      "published": "2026-11-19T08:19:17Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "European Stocks Rebound as Anthropic IPO Revives the AI Trade",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/european-stocks-rebound-as-anthropic-ipo-revives-the-ai-trade",
+      "published": "2026-11-19T08:17:24Z",
+      "authors": "Rivaldo Jantjies",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Tops SpaceX With $107.3B Raise as Trump and Xi Meet at APEC",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/horizons-middle-east-africa-11-19-2026-video",
+      "published": "2026-11-19T08:14:21Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Hong Kong Family Office Unwinds $3.9 Billion of Bets Around AI",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/hong-kong-family-office-unwinds-3-9-billion-of-bets-around-ai",
+      "published": "2026-11-19T07:58:37Z",
+      "authors": "Diana Li",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Path to a Year-End Stock Rally Looks Clearer After Anthropic",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/the-path-to-a-year-end-rally-looks-clearer-taking-stock",
+      "published": "2026-11-19T07:21:24Z",
+      "authors": "Michael Msika and Sagarika Jaisinghani",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic Raises Record $107.3 Billion IPO Surpassing SpaceX",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-19/anthropic-raises-record-107-3-billion-ipo-surpassing-spacex",
+      "published": "2026-11-19T07:16:29Z",
+      "authors": "Joe Flynn",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "US Tech Stocks Are Set to Rally as Anthropic IPO Boosts AI Trade",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/us-stock-futures-jump-on-blockbuster-reception-to-anthropic-ipo",
+      "published": "2026-11-19T07:09:16Z",
+      "authors": "Sagarika Jaisinghani and Carmeli Argana",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Trump Argues Against Global Regulation of AI",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/trump-argues-against-global-regulation-of-ai-video",
+      "published": "2026-11-19T07:03:30Z",
+      "authors": "",
+      "categories": [
+        "Governance & regulation"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bloomberg Daybreak Europe: Anthropic Breaks IPO Record (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/bloomberg-daybreak-europe-anthropic-breaks-ipo-record-podcast",
+      "published": "2026-11-19T06:58:10Z",
+      "authors": "TIWA ADEBAYO",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Shatters IPO Record, Nvidia Sizes Up Arm CEO, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-shatters-ipo-record-nvidia-sizes-up-arm-ceo-more",
+      "published": "2026-11-19T06:46:44Z",
+      "authors": "ANDREW GAVIN",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Raises $107.3 Billion in Watershed AI Debut",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/anthropic-raises-107-3-billion-in-watershed-ai-debut-video",
+      "published": "2026-11-19T06:39:26Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Lores Says AI Commerce Is an Opportunity for PayPal",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/lores-says-ai-commerce-is-an-opportunity-for-paypal-video",
+      "published": "2026-11-19T05:31:37Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "South Korean Watchdog Asks Financial Firms to Report AI Exposure",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/south-korean-watchdog-asks-financial-firms-to-report-ai-exposure",
+      "published": "2026-11-19T05:22:45Z",
+      "authors": "Haram Lim",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Trump, Xi, Putin Set to Meet, Anthropic Record IPO, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/trump-xi-putin-set-to-meet-anthropic-record-ipo-more",
+      "published": "2026-11-19T05:04:49Z",
+      "authors": "BRENDAN GAMBESKI",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Inside Google's AI Race with Ruth Porat",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/alphabet-s-ruth-porat-on-the-ai-investment-frenzy-video",
+      "published": "2026-11-19T05:02:02Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Wallenberg Investments Takes Minority Stake in AI Firm Algoryx",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/wallenberg-investments-takes-minority-stake-in-ai-firm-algoryx",
+      "published": "2026-11-19T05:00:00Z",
+      "authors": "Charles Daly",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "IEA Sees Data Center Boom Pushing Power Grids to the Limit",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/iea-sees-data-center-boom-pushing-power-grids-to-the-limit",
+      "published": "2026-11-19T05:00:00Z",
+      "authors": "William Mathis",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Industries"
+      ]
+    },
+    {
+      "title": "Anthropic Shares Indicated Up to 24% Higher on Gray Market",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-shares-indicated-more-than-20-higher-on-gray-markets",
+      "published": "2026-11-19T05:00:00Z",
+      "authors": "Bailey Lipschultz and Sangmi Cha",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic IPO Raises $107.3B, Trump Speaks at APEC Summit, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-ipo-raises-107-3b-trump-speaks-at-apec-summit-more",
+      "published": "2026-11-19T03:50:58Z",
+      "authors": "BRENDAN GAMBESKI",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "China’s Challenge to Dollar Dominance Supercharged by Rate Gap, AI Financing",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-19/china-s-challenge-to-dollar-dominance-supercharged-by-rate-gap-ai-financing",
+      "published": "2026-11-19T03:45:55Z",
+      "authors": "Julia Zhong, Tiffany Ap and Katherine Doherty",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "GFTN's Mohanty on Fintech, Anthropic IPO",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/gftn-s-mohanty-on-fintech-anthropic-ipo-video",
+      "published": "2026-11-19T03:44:53Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "The Biggest Winners in Anthropic’s Landmark Public Offering",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/the-biggest-winners-in-anthropic-s-landmark-public-offering",
+      "published": "2026-11-19T00:59:34Z",
+      "authors": "Natasha Mascarenhas and Rebecca Torrence",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
     {
       "title": "Anthropic Raises $3 Billion in Japan Tranche of US Mega IPO",
       "url": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-raises-3-billion-in-japan-tranche-of-us-mega-ipo",
@@ -408,6 +776,18 @@
       ],
       "feeds": [
         "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Leveraged ETF Race Heats Up Even Before Stock’s Debut",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-18/anthropic-leveraged-etf-race-heats-up-even-before-stock-s-debut",
+      "published": "2026-11-18T19:49:06Z",
+      "authors": "Emma Haidar and Micah Barkley",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
       ]
     },
     {
