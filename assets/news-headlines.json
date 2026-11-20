@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "GDELT DOC API",
   "source_url": "https://www.gdeltproject.org/",
-  "updated": "2026-11-19T20:29:43.082557Z",
+  "updated": "2026-11-20T07:06:42.068375Z",
   "providers": {
     "Al Jazeera": {
       "items": [
@@ -61,46 +61,46 @@
       "items": [
         {
           "provider": "CBC News",
-          "url": "https://www.cbc.ca/news/canada/nova-scotia/atlantic-canadian-dachshund-rescue-halifax-mooseheads-race-9.7419610",
-          "title": "Halifax Mooseheads look to make wiener dog race safer",
-          "published": "2026-11-13T18:00:00Z",
-          "region": "Americas",
-          "classification": "publisher-url-path"
-        },
-        {
-          "provider": "CBC News",
-          "url": "https://www.cbc.ca/news/canada/edmonton/hkn-oilers-goaltending-9.7419605",
-          "title": "Oiler Tristan Jarry continues team strong goaltending in win over Flyers",
-          "published": "2026-11-13T00:45:00Z",
-          "region": "Americas",
-          "classification": "publisher-url-path"
-        },
-        {
-          "provider": "CBC News",
-          "url": "https://www.cbc.ca/player/play/video/9.7420104",
-          "title": "Longtime city councillors say goodbye at final council meeting before next term begins",
-          "published": "2026-11-13T00:45:00Z",
+          "url": "https://www.cbc.ca/radio/asithappens/grand-theft-auto-evolution-9.7428823",
+          "title": "Original Grand Theft Auto writer says GTA VI is  something close to a miracle",
+          "published": "2026-11-20T03:45:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         },
         {
           "provider": "CBC News",
-          "url": "https://www.cbc.ca/news/canada/edmonton/edmonton-henday-fatal-crash-charges-9.7419908",
-          "title": "Charges laid in deadly Henday crash that killed father , injured daughter",
-          "published": "2026-11-13T00:45:00Z",
+          "url": "https://www.cbc.ca/arts/commotion/why-the-snl-sister-sketch-hit-such-a-nerve-9.7428036",
+          "title": "Why the SNL Sister sketch hit such a nerve",
+          "published": "2026-11-20T02:45:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "CBC News",
+          "url": "https://www.cbc.ca/news/canada/toronto/crypto-king-kidnapping-trial-defence-9.7429201",
+          "title": "Crypto King  faked kidnapping , created video for sympathy , defence says",
+          "published": "2026-11-20T02:45:00Z",
           "region": "Americas",
           "classification": "publisher-url-path"
         },
         {
           "provider": "CBC News",
-          "url": "https://www.cbc.ca/player/play/video/9.7419870",
-          "title": "Ottawa artist celebrates Cree ancestry with exhibit at Canadian Museum of History",
-          "published": "2026-11-13T00:45:00Z",
+          "url": "https://www.cbc.ca/news/canada/windsor/windsor-er-wait-time-mei-numbers-9.7428842",
+          "title": "Windsor ER wait times , visit times , among the longest in Ontario , new report shows",
+          "published": "2026-11-20T02:45:00Z",
+          "region": "Americas",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "CBC News",
+          "url": "https://www.cbc.ca/player/play/video/9.7428936",
+          "title": "HDGH president disagrees with Village at the Barn concept",
+          "published": "2026-11-20T02:45:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         }
       ],
-      "status": "stale"
+      "status": "indexed"
     },
     "CNA": {
       "items": [
@@ -294,6 +294,46 @@
   },
   "articles": [
     {
+      "provider": "CBC News",
+      "url": "https://www.cbc.ca/radio/asithappens/grand-theft-auto-evolution-9.7428823",
+      "title": "Original Grand Theft Auto writer says GTA VI is  something close to a miracle",
+      "published": "2026-11-20T03:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "CBC News",
+      "url": "https://www.cbc.ca/arts/commotion/why-the-snl-sister-sketch-hit-such-a-nerve-9.7428036",
+      "title": "Why the SNL Sister sketch hit such a nerve",
+      "published": "2026-11-20T02:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "CBC News",
+      "url": "https://www.cbc.ca/news/canada/toronto/crypto-king-kidnapping-trial-defence-9.7429201",
+      "title": "Crypto King  faked kidnapping , created video for sympathy , defence says",
+      "published": "2026-11-20T02:45:00Z",
+      "region": "Americas",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "CBC News",
+      "url": "https://www.cbc.ca/news/canada/windsor/windsor-er-wait-time-mei-numbers-9.7428842",
+      "title": "Windsor ER wait times , visit times , among the longest in Ontario , new report shows",
+      "published": "2026-11-20T02:45:00Z",
+      "region": "Americas",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "CBC News",
+      "url": "https://www.cbc.ca/player/play/video/9.7428936",
+      "title": "HDGH president disagrees with Village at the Barn concept",
+      "published": "2026-11-20T02:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
       "provider": "Deutsche Welle",
       "url": "https://www.dw.com/sw/bajeti-ya-ujerumani-ya-2027-euro-bilioni-561-huku-gharama-za-ulinzi-na-pensheni-zikiongezeka/a-79950341",
       "title": "Bajeti ya Ujerumani ya 2027 : Euro bilioni 561",
@@ -422,14 +462,6 @@
       "classification": "publisher-url-path"
     },
     {
-      "provider": "CBC News",
-      "url": "https://www.cbc.ca/news/canada/nova-scotia/atlantic-canadian-dachshund-rescue-halifax-mooseheads-race-9.7419610",
-      "title": "Halifax Mooseheads look to make wiener dog race safer",
-      "published": "2026-11-13T18:00:00Z",
-      "region": "Americas",
-      "classification": "publisher-url-path"
-    },
-    {
       "provider": "The Guardian",
       "url": "https://www.theguardian.com/uk-news/2026/nov/13/former-hamas-bodyguard-convicted-of-birmingham-knife-also-wanted-in-germany",
       "title": "Former Hamas bodyguard convicted of Birmingham knife crime also wanted in Germany",
@@ -442,38 +474,6 @@
       "url": "https://www.theguardian.com/society/2026/nov/13/no-10-considering-expanding-under-25s-benefits-overhaul-to-older-age-groups",
       "title": "No 10 considering expanding under - 25s benefits overhaul to older age groups",
       "published": "2026-11-13T18:00:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "CBC News",
-      "url": "https://www.cbc.ca/news/canada/edmonton/hkn-oilers-goaltending-9.7419605",
-      "title": "Oiler Tristan Jarry continues team strong goaltending in win over Flyers",
-      "published": "2026-11-13T00:45:00Z",
-      "region": "Americas",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "CBC News",
-      "url": "https://www.cbc.ca/player/play/video/9.7420104",
-      "title": "Longtime city councillors say goodbye at final council meeting before next term begins",
-      "published": "2026-11-13T00:45:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "CBC News",
-      "url": "https://www.cbc.ca/news/canada/edmonton/edmonton-henday-fatal-crash-charges-9.7419908",
-      "title": "Charges laid in deadly Henday crash that killed father , injured daughter",
-      "published": "2026-11-13T00:45:00Z",
-      "region": "Americas",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "CBC News",
-      "url": "https://www.cbc.ca/player/play/video/9.7419870",
-      "title": "Ottawa artist celebrates Cree ancestry with exhibit at Canadian Museum of History",
-      "published": "2026-11-13T00:45:00Z",
       "region": "World",
       "classification": "publisher-url-path"
     },
@@ -523,7 +523,6 @@
     "Al Jazeera: HTTP Error 429: Too Many Requests",
     "Associated Press: HTTP Error 429: Too Many Requests",
     "BBC News: HTTP Error 429: Too Many Requests",
-    "CBC News: HTTP Error 429: Too Many Requests",
     "CNA: HTTP Error 429: Too Many Requests",
     "Deutsche Welle: HTTP Error 429: Too Many Requests",
     "Euronews: HTTP Error 429: Too Many Requests",
