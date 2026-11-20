@@ -1,27 +1,392 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-20T12:51:33Z",
+  "archive_updated_utc": "2026-11-20T21:47:58Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 14
+      "matches": 15
     },
     "Business": {
       "status": "ok",
-      "matches": 7
+      "matches": 8
     },
     "Industries": {
       "status": "ok",
-      "matches": 2
+      "matches": 1
     },
     "Markets": {
       "status": "ok",
       "matches": 8
     }
   },
-  "article_count": 443,
+  "article_count": 472,
   "articles": [
+    {
+      "title": "Victor Peng Sees AI, Quantum Computing as Long-Term Opportunities",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/victor-peng-sees-ai-quantum-as-long-term-opportunities-video",
+      "published": "2026-11-20T21:36:56Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic IPO Could Mark End of the AI Trade",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/anthropic-ipo-could-mark-end-of-the-ai-trade-video",
+      "published": "2026-11-20T21:35:36Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Stocks Close Lower on AI Selloff, Rate Hike No Longer Priced In",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/stocks-close-lower-on-ai-selloff-rate-hike-no-longer-priced-in",
+      "published": "2026-11-20T21:13:36Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic CEO Vacations at Italian Resort After Public Listing",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/anthropic-ceo-vacations-at-italian-resort-after-public-listing",
+      "published": "2026-11-20T20:57:42Z",
+      "authors": "Daniele Lepido and Tiago Ramos Alfaro",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "New Zealand Dollar Hits Lowest Since Global Financial Crisis",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/new-zealand-dollar-hits-lowest-since-global-financial-crisis",
+      "published": "2026-11-20T20:57:36Z",
+      "authors": "Matthew Burgess and Anya Andrianova",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Cognition in Talks for $75 Billion Value With New Funding",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/cognition-in-talks-for-75-billion-value-with-new-funding",
+      "published": "2026-11-20T20:47:55Z",
+      "authors": "Rebecca Torrence",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Employees Complained About Huang's Behavior Years Ago",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/nvidia-staff-complained-about-huang-s-behavior-years-ago-video",
+      "published": "2026-11-20T20:33:16Z",
+      "authors": "",
+      "categories": [
+        "Governance & regulation",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stock Movers: Anthropic, Nvidia, GAP (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/stock-movers-anthropic-nvidia-gap-podcast",
+      "published": "2026-11-20T20:15:34Z",
+      "authors": "MARC BRANDT",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic’s IPO Drew More Retail Investor Demand Than SpaceX",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/anthropic-s-ipo-drew-more-retail-investor-demand-than-spacex",
+      "published": "2026-11-20T20:12:00Z",
+      "authors": "Anthony Hughes",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Wall Street Regulator Probes Nvidia Accounting, Reuters Says",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/wall-street-regulator-probing-nvidia-s-accounting-reuters-says",
+      "published": "2026-11-20T19:48:49Z",
+      "authors": "Megan Howard",
+      "categories": [
+        "Governance & regulation",
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "S&P 500 In Correction Territory on AI Selloff, Anthropic Sinks",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/s-p-500-in-correction-territory-on-ai-selloff-anthropic-sinks",
+      "published": "2026-11-20T19:15:28Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Odd Lots: Minerva Co-Founder on the Risks of “Abliterated” Models",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/minerva-co-founder-on-the-risks-of-abliterated-models-video",
+      "published": "2026-11-20T19:15:10Z",
+      "authors": "",
+      "categories": [
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Falls After Blockbuster Debut as Tech Sells Off",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/anthropic-falls-after-blockbuster-debut-as-tech-sell-off-video",
+      "published": "2026-11-20T18:42:06Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Altruist’s Wenk on AI and the Next Era of Financial Advice",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/altruist-s-wenk-on-ai-next-era-of-financial-advice-video",
+      "published": "2026-11-20T18:41:17Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Slides as AI Selloff Deepens",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/bloomberg-tech-11-20-2026-video",
+      "published": "2026-11-20T18:36:42Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Investor Sees Huge Runway Beyond Coding",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/anthropic-investor-sees-huge-runway-beyond-coding-video",
+      "published": "2026-11-20T18:36:26Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Big Take: Can Anthropic Weather a Shifting AI Landscape?",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/big-take-can-anthropic-weather-a-shifting-ai-landscape-video",
+      "published": "2026-11-20T18:24:08Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Employees Complained About Huang’s Behavior Years Ago",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/nvidia-employees-complained-about-huang-s-behavior-years-ago",
+      "published": "2026-11-20T18:20:28Z",
+      "authors": "Brian Baxter (BLAW), Maggie Eastland and Ian King",
+      "categories": [
+        "Governance & regulation",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Slips as AI Selloff Spreads",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/open-interest-11-20-2026-video",
+      "published": "2026-11-20T18:04:26Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bloomberg Tech: AI Trade Tumbles as Anthropic Retreats (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/bloomberg-tech-ai-trade-tumbles-as-anthropic-retreats-podcast",
+      "published": "2026-11-20T17:44:19Z",
+      "authors": "BRENDAN GAMBESKI",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "S&P 500 Falls Into Correction Territory, Anthropic Slide Deepens",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/s-p-500-falls-into-correction-territory-anthropic-slide-deepens",
+      "published": "2026-11-20T17:17:47Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "AI Selloff Spurs Haven Demand for Yen, Franc as Dollar Slips",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/ai-selloff-boosts-haven-demand-for-yen-franc-as-dollar-slips",
+      "published": "2026-11-20T17:00:06Z",
+      "authors": "Melos Ambaye, Victor Swezey and Cole Lipsky",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Trump to Hold News Conference, Anthropic Drags Nasdaq, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/trump-to-hold-news-conference-anthropic-drags-nasdaq-more",
+      "published": "2026-11-20T16:27:22Z",
+      "authors": "NATHAN HAGER",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Founder to Donate to Trump Accounts Following IPO, Bessent Says",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/bessent-says-an-anthropic-founder-to-donate-will-trump-accounts",
+      "published": "2026-11-20T16:23:24Z",
+      "authors": "Yash Roy",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stock Movers: Anthropic, Intuit, & Gap (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/stock-movers-anthropic-intuit-gap-podcast",
+      "published": "2026-11-20T16:14:07Z",
+      "authors": "MARC BRANDT",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic IPO Is Resetting What It Means To Be Rich in San Francisco",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-20/anthropic-ipo-is-resetting-what-it-means-to-be-rich-in-san-francisco",
+      "published": "2026-11-20T16:01:01Z",
+      "authors": "Felipe Marques and Samantha Stewart",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "US Credit-Fear Hits 8-Month High as Tech Angst Roils Markets",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/ai-credit-risk-gauges-worsen-as-tech-selloff-roils-markets",
+      "published": "2026-11-20T15:38:52Z",
+      "authors": "Caleb Mutua and Emily Graffeo",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Slides 9.1% to Shrink IPO Gain as AI Trade Unravels",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/anthropic-share-slump-nearly-erases-ipo-pop-as-ai-trade-unravels",
+      "published": "2026-11-20T14:36:49Z",
+      "authors": "Carmen Reinicke, Julien Ponthus and Neil Campling",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Stock Rout Deepens as AI Trade Falters; S&P 500 in Correction",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/us-stock-futures-dip-as-anthropic-premiere-disappoints-investors",
+      "published": "2026-11-20T13:26:57Z",
+      "authors": "Judy Lagrou and Geoffrey Morgan",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
     {
       "title": "Anthropic Sinks 10%, Trump to Hold News Conference, More",
       "url": "https://www.bloomberg.com/news/audio/2026-11-20/anthropic-sinks-10-trump-to-hold-news-conference-more",
