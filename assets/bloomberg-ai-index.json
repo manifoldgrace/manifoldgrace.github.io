@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-20T03:10:18Z",
+  "archive_updated_utc": "2026-11-20T12:51:33Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
@@ -9,19 +9,328 @@
     },
     "Business": {
       "status": "ok",
-      "matches": 17
+      "matches": 7
     },
     "Industries": {
       "status": "ok",
-      "matches": 1
+      "matches": 2
     },
     "Markets": {
       "status": "ok",
-      "matches": 10
+      "matches": 8
     }
   },
-  "article_count": 417,
+  "article_count": 443,
   "articles": [
+    {
+      "title": "Anthropic Sinks 10%, Trump to Hold News Conference, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/anthropic-sinks-10-trump-to-hold-news-conference-more",
+      "published": "2026-11-20T12:46:25Z",
+      "authors": "NATHAN HAGER",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Here's Why Many Are Buying AI Firms They Can’t Control (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/here-s-why-many-are-buying-ai-firms-they-can-t-control-podcast",
+      "published": "2026-11-20T12:34:32Z",
+      "authors": "JAMES WOOLCOCK",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "AI Trade Unravels; Anthropic Drops After Strong Debut",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/bloomberg-brief-11-20-2026-video",
+      "published": "2026-11-20T12:25:22Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Nvidia Turmoil Leaves Few Stock Market Winners in Sea of Losers",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/nvidia-turmoil-leaves-few-stock-market-winners-in-sea-of-losers",
+      "published": "2026-11-20T12:21:00Z",
+      "authors": "Carmen Reinicke and Rainier Harris",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Stock Rout’s Spread Beyond Tech Carries Warning From Dotcom-Era",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/stock-rout-s-spread-beyond-tech-carries-warning-from-dotcom-era",
+      "published": "2026-11-20T11:50:13Z",
+      "authors": "Ruhell Amin and Michael Msika",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "AI Trade Falters as Anthropic Points Lower on Second Day",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-20/ai-trade-falters-as-anthropic-points-lower-on-second-day",
+      "published": "2026-11-20T11:47:10Z",
+      "authors": "Tiago Ramos Alfaro",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Skepticism About AI Is Crushing Stock Prices Around the World",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-20/skepticism-about-ai-is-crushing-stock-prices-around-the-world",
+      "published": "2026-11-20T11:39:58Z",
+      "authors": "Phil Serafino",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic Drops, AI Fear Hits Stocks, Trump Summit Fallout, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/anthropic-drops-ai-fear-hits-stocks-trump-summit-fallout-more",
+      "published": "2026-11-20T11:34:31Z",
+      "authors": "ANDREW GAVIN",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Slumps as AI Selloff Deepens",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/the-pulse-with-francine-lacqua-11-20-2026-video",
+      "published": "2026-11-20T11:29:50Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic’s Record IPO Isn’t Enough to Save the AI Trade",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-20/anthropic-s-record-ipo-isn-t-enough-to-save-the-ai-trade",
+      "published": "2026-11-20T11:28:01Z",
+      "authors": "Bailey Lipschultz and Natasha Mascarenhas",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Morgan Stanley Sees Telecoms Using Muse-Style AI to Fight Rivals",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/morgan-stanley-sees-telecoms-using-muse-style-ai-to-fight-rivals",
+      "published": "2026-11-20T11:25:41Z",
+      "authors": "Rodrigo Orihuela and Clara Hernanz Lizarraga",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "JPMorgan’s Katrina Dudley Sees Opportunities Beyond Big Tech",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/jpmorgan-s-dudley-sees-opportunities-beyond-big-tech-video",
+      "published": "2026-11-20T11:24:37Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Franklin Templeton Sees Opportunities in AI Beneficiaries",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/franklin-templeton-sees-opportunity-in-ai-beneficiaries-video",
+      "published": "2026-11-20T11:19:06Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "AI Slump Engulfs Global Stocks, Anthropic Drops, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/ai-slump-engulfs-global-stocks-anthropic-drops-more",
+      "published": "2026-11-20T10:37:01Z",
+      "authors": "ANDREW GAVIN",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Drops After IPO Pop, UK-EU Summit, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/anthropic-drops-after-ipo-pop-uk-eu-summit-more",
+      "published": "2026-11-20T10:29:32Z",
+      "authors": "ANDREW GAVIN",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Slumps in Premarket Trading",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/anthropic-slumps-in-premarket-trading-video",
+      "published": "2026-11-20T09:59:11Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Schroders Sees 'Healthy Correction' in Markets",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/schroders-sees-healthy-correction-in-markets-video",
+      "published": "2026-11-20T09:31:43Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "US Chip Curbs Ignite Fresh AI Jitters: Market Snapshot",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/us-chip-curbs-ignite-fresh-ai-jitters-market-snapshot-video",
+      "published": "2026-11-20T09:30:02Z",
+      "authors": "",
+      "categories": [
+        "Governance & regulation",
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "AI’s Billions and Slick Pledges Heap Pressure on Pharma Veterans",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/ai-s-billions-and-slick-pledges-heap-pressure-on-pharma-veterans",
+      "published": "2026-11-20T09:30:00Z",
+      "authors": "Naomi Kresge, Ashleigh Furlong, Sonja Wind and Fabienne Kinzelmann",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Industries"
+      ]
+    },
+    {
+      "title": "Anthropic IPO Sparks Broad Stock Rout as Investors Sell Everything",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-20/anthropic-ipo-sparks-broad-stock-rout-as-investors-sell-everything",
+      "published": "2026-11-20T09:16:59Z",
+      "authors": "Samson Ellis",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "How an American AI Company Uses Chinese Open-Weight Models",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/how-a-us-ai-company-uses-chinese-open-weight-models-video",
+      "published": "2026-11-20T09:12:02Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Ex-Alibaba Star’s AI Startup Doubles Valuation to $5 Billion",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/ex-alibaba-star-s-ai-startup-doubles-valuation-to-5-billion",
+      "published": "2026-11-20T08:25:04Z",
+      "authors": "Bloomberg News",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "SK Hynix to Become Top Kioxia Holder in AI Memory Shuffle",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/sk-hynix-to-be-kioxia-s-top-shareholder-after-bond-conversion",
+      "published": "2026-11-20T07:16:51Z",
+      "authors": "Yoolim Lee",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Nvidia Scandal Fallout Creates Opening for India AI Hopefuls",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/nvidia-scandal-fallout-india-ai-yotta-ambani-adani-am-intelligence-e2e-networks",
+      "published": "2026-11-20T06:38:40Z",
+      "authors": "Saritha Rai and Sankalp Phartiyal",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Treasury Two-Year Yields Sink Most Since 2025 as AI Worries Bite",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/treasuries-eye-longest-rally-in-five-months-on-haven-demand",
+      "published": "2026-11-20T04:33:23Z",
+      "authors": "Alice Atkins, Matthew Burgess and David Finnerty",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
     {
       "title": "Copper Rout Deepens as AI Selloff Wreaks Havoc in Metals Markets",
       "url": "https://www.bloomberg.com/news/articles/2026-11-20/copper-rout-deepens-as-ai-selloff-wreaks-havoc-in-metals-markets",
@@ -902,6 +1211,19 @@
       ],
       "feeds": [
         "Business"
+      ]
+    },
+    {
+      "title": "SpaceX Wraps Up $32 Billion of AI Chip Debt at Yields Topping 8%",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/spacex-eyes-at-least-32-billion-ai-chip-debt-sale-on-thursday",
+      "published": "2026-11-19T15:07:20Z",
+      "authors": "Brian Smith, Davide Barbuscia and Caleb Mutua",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
       ]
     },
     {
