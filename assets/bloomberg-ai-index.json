@@ -1,27 +1,519 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-19T20:32:07Z",
+  "archive_updated_utc": "2026-11-20T03:10:18Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 15
+      "matches": 14
     },
     "Business": {
       "status": "ok",
-      "matches": 11
+      "matches": 17
     },
     "Industries": {
       "status": "ok",
-      "matches": 0
+      "matches": 1
     },
     "Markets": {
       "status": "ok",
       "matches": 10
     }
   },
-  "article_count": 376,
+  "article_count": 417,
   "articles": [
+    {
+      "title": "Copper Rout Deepens as AI Selloff Wreaks Havoc in Metals Markets",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/copper-rout-deepens-as-ai-selloff-wreaks-havoc-in-metals-markets",
+      "published": "2026-11-20T03:03:05Z",
+      "authors": "Bloomberg News",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Trump Offers Xi a Helping Hand on Escalator",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/trump-offers-xi-a-helping-hand-on-escalator-video",
+      "published": "2026-11-20T03:01:17Z",
+      "authors": "",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic's Historic IPO Debuts, California Probes Nvidia, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/anthropic-s-historic-ipo-debuts-california-probes-nvidia-more",
+      "published": "2026-11-20T02:52:34Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Taiwan Stocks Plunge Again to Head for Worst Week Since 1991",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/taiwan-stocks-taiex-twse-1991-ai-chips-tsmc-hon-hai-foxconn",
+      "published": "2026-11-20T02:29:57Z",
+      "authors": "Charlotte Yang",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Hong Kong Stocks Fall 20% From 2026 High as AI Selloff Spreads",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/hong-kong-stocks-hang-seng-hsi-hkex-2026-ai-selloff-bear-market",
+      "published": "2026-11-20T02:29:50Z",
+      "authors": "Bloomberg News",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic (ANT) IPO on Nasdaq Overcame AI Fears and Warnings",
+      "url": "https://www.bloomberg.com/news/features/2026-11-20/anthropic-ant-ipo-on-nasdaq-overcame-ai-fears-and-warnings",
+      "published": "2026-11-20T02:16:42Z",
+      "authors": "Natasha Mascarenhas, Bailey Lipschultz, Shirin Ghaffary and Ryan Gould",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic's Record Debut, California Investigates Nvidia, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/anthropic-s-record-debut-california-investigates-nvidia-more",
+      "published": "2026-11-20T02:02:33Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Asian Chip Stocks Slide as Anthropic IPO Fails to Dispel AI Woes",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/asian-chip-stocks-slide-as-anthropic-ipo-fails-to-dispel-ai-woes",
+      "published": "2026-11-20T01:49:55Z",
+      "authors": "Momoka Yokoyama, Winnie Hsu and Charlotte Yang",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Australian Pension Funds Confront Their Latest Rival: AI Agents",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/australian-pension-funds-confront-their-latest-rival-ai-agents",
+      "published": "2026-11-20T01:19:16Z",
+      "authors": "Amy Bainbridge",
+      "categories": [
+        "Governance & regulation",
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Minotaur's Rosenberg: Anthropic IPO Fuels Wider AI Trade",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/minotaur-s-rosenberg-anthropic-ipo-fuels-wider-ai-trade-video",
+      "published": "2026-11-20T01:08:27Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Emerging-Market Stocks Head for Bear Market on AI-Led Tech Slide",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/emerging-market-stocks-set-for-bear-market-on-ai-led-tech-slide",
+      "published": "2026-11-20T01:05:34Z",
+      "authors": "Prima Wirayani",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Strong Trading Debut, California Subpoenas Nvidia",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/anthropic-strong-trading-debut-california-subpoenas-nvidia",
+      "published": "2026-11-20T00:52:46Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Japanese Shares Slide as AI Concerns Overshadow Anthropic Debut",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/japanese-shares-slide-amid-uncertainty-around-the-ai-trade-mwo9cqcj",
+      "published": "2026-11-20T00:45:42Z",
+      "authors": "Aya Wagatsuma and Kentaro Tsutsumi",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Shares Drop Post-Market on Apple’s AI Agent Plans",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/anthropic-shares-drop-post-market-on-apple-s-ai-agent-plans",
+      "published": "2026-11-20T00:40:04Z",
+      "authors": "Winnie Hsu",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Could a Jensen Huang-Style Scandal Happen at Apple?",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/could-a-jensen-huang-style-scandal-happen-at-apple-video",
+      "published": "2026-11-20T00:31:22Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips",
+        "Workforce & society"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Bloomberg Businessweek Daily: Apple to Build AI Agent (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/bloomberg-businessweek-daily-apple-to-build-ai-agent-podcast",
+      "published": "2026-11-20T00:29:25Z",
+      "authors": "VITORIA ROGERIO",
+      "categories": [
+        "Models & research"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Dollar Heads for Fourth Week of Gains Following Anthropic IPO",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/dollar-heads-for-fourth-week-of-gains-following-anthropic-ipo",
+      "published": "2026-11-20T00:20:47Z",
+      "authors": "Melos Ambaye",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Anthropic Trading Debut, California Probes Nvidia, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-trading-debut-california-probes-nvidia-more",
+      "published": "2026-11-19T23:58:02Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Gold Set for Worst Week Since March on Hawkish Fed, AI Selloff",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/gold-set-for-worst-week-since-march-on-hawkish-fed-ai-selloff",
+      "published": "2026-11-19T23:56:03Z",
+      "authors": "Yihui Xie",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Stock Movers: Anthropic, Gap, Intuit (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/stock-movers-anthropic-gap-intuit-podcast",
+      "published": "2026-11-19T23:47:32Z",
+      "authors": "VITORIA ROGERIO",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "The City at the Center of AI",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/the-city-at-the-center-of-ai-video",
+      "published": "2026-11-19T23:46:32Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic IPO’s Australia Tranche Said About 10 Times Subscribed",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-ipo-raises-only-110-million-from-australian-investors",
+      "published": "2026-11-19T23:35:17Z",
+      "authors": "Richard Henderson and Carmeli Argana",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "Bloomberg Businessweek Daily: Anthropic IPO (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/bloomberg-businessweek-daily-anthropic-ipo-podcast",
+      "published": "2026-11-19T23:28:55Z",
+      "authors": "VITORIA ROGERIO",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic IPO: AI Firm’s Debut Fails to Save Wall Street’s AI Hype",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-19/anthropic-ipo-ai-firm-s-debut-fails-to-save-wall-street-s-ai-hype",
+      "published": "2026-11-19T23:27:36Z",
+      "authors": "Michaela Kwoka-Coleman",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Propagate Co-CEO on New Sam Bankman-Fried Docuseries",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/propagate-co-ceo-on-new-sam-bankman-fried-docuseries-video",
+      "published": "2026-11-19T23:04:50Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic's Strong Debut, Apple Working on AI Agent, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-s-strong-debut-apple-working-on-ai-agent-more",
+      "published": "2026-11-19T23:03:49Z",
+      "authors": "MARUFUL HOSSAIN",
+      "categories": [
+        "Models & research"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic’s Historic IPO Debuts",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-19/the-close-11-19-2026-video",
+      "published": "2026-11-19T23:02:31Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "CATL, Innolight May Join Hong Kong Tech Index in Major AI Revamp",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/catl-innolight-may-join-hong-kong-tech-index-in-major-ai-revamp",
+      "published": "2026-11-19T23:00:00Z",
+      "authors": "Charlotte Yang",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "AI Cloud CEO Hits ‘Rock Bottom’ in Race to Endure Chip Curbs",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/ai-cloud-ceo-hits-rock-bottom-in-race-to-survive-chip-crisis",
+      "published": "2026-11-19T23:00:00Z",
+      "authors": "David Ramli, Gao Yuan and Sheryl Tian Tong Lee",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Founders’ Lock-Up Restrictions and Future AI Trade",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/anthropic-founders-lock-up-restrictions-and-future-ai-trade",
+      "published": "2026-11-19T22:55:59Z",
+      "authors": "Sarah Holder",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Carney Wireless Comments Stoke Speculation About Telus Merger Approval",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-19/carney-wireless-comments-stoke-speculation-about-telus-merger-approval",
+      "published": "2026-11-19T22:47:34Z",
+      "authors": "Melissa Shin and Erik Hertzberg",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Big Take: A Red-Letter Day for Anthropic (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/big-take-a-red-letter-day-for-anthropic-podcast",
+      "published": "2026-11-19T22:34:53Z",
+      "authors": "",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "California Probing If Nvidia Misled Investors on China Risks",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/california-probing-if-nvidia-misled-investors-over-china-risks",
+      "published": "2026-11-19T22:31:14Z",
+      "authors": "Erik Larson",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Anthropic Closes 17% Over IPO Price, Stocks Fall on AI Concerns",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-closes-17-over-ipo-price-stocks-fall-on-ai-concerns",
+      "published": "2026-11-19T22:09:56Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Stocks Set for Worst Run Since 2023, Havens Gain: Markets Wrap",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/stock-market-today-dow-s-p-live-updates",
+      "published": "2026-11-19T22:03:40Z",
+      "authors": "Anand Krishnamoorthy and Winnie Hsu",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "RBA Rate Cut Bets, Anthropic IPO, David Jones: Australia Briefing",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-19/rba-rate-cut-bets-anthropic-ipo-david-jones-australia-briefing",
+      "published": "2026-11-19T21:56:39Z",
+      "authors": "David Finnerty and Nasteho Said",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Arizona AG Asks to Delay Vote on $50 Billion SpaceX Data Center",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/arizona-ag-asks-to-delay-vote-on-50-billion-spacex-data-center",
+      "published": "2026-11-19T21:52:08Z",
+      "authors": "Madlin Mekelburg",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Industries"
+      ]
+    },
+    {
+      "title": "Anthropic Pops After Record Offering",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-19/anthropic-pops-after-record-offering",
+      "published": "2026-11-19T21:35:20Z",
+      "authors": "Samantha Stewart",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Stock Movers: Anthropic, AMD, Williams-Sonoma (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/stock-movers-anthropic-amd-williams-sonoma-podcast",
+      "published": "2026-11-19T21:32:23Z",
+      "authors": "VITORIA ROGERIO",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Stocks Close Lower on AI Jitters, Anthropic IPO Has Strong Debut",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-19/stocks-close-lower-on-ai-jitters-anthropic-ipo-has-strong-debut",
+      "published": "2026-11-19T21:12:24Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
     {
       "title": "Anthropic Pares Gains After Debut, AI Jitters Rattle Wall Street",
       "url": "https://www.bloomberg.com/news/audio/2026-11-19/anthropic-pares-gains-after-debut-ai-jitters-rattle-wall-street",
@@ -420,6 +912,19 @@
       "categories": [
         "Investment & markets",
         "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Alibaba Expects Growth Rebound as Its Chips Offset US Curbs",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-19/alibaba-s-revenue-beats-estimates-during-china-s-ai-boom",
+      "published": "2026-11-19T10:13:14Z",
+      "authors": "Luz Ding",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
       ],
       "feeds": [
         "Technology"
