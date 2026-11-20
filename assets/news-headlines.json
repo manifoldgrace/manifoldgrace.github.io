@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "GDELT DOC API",
   "source_url": "https://www.gdeltproject.org/",
-  "updated": "2026-11-20T07:06:42.068375Z",
+  "updated": "2026-11-20T20:07:37.285685Z",
   "providers": {
     "Al Jazeera": {
       "items": [
@@ -100,7 +100,7 @@
           "classification": "publisher-url-path"
         }
       ],
-      "status": "indexed"
+      "status": "stale"
     },
     "CNA": {
       "items": [
@@ -237,30 +237,46 @@
       "items": [
         {
           "provider": "The Guardian",
-          "url": "https://www.theguardian.com/society/ng-interactive/2026/nov/15/forgotten-australians-trauma-childrens-homes-orphanages-ntwnfb",
-          "title": "Im still trying to find out who I am : the little - understood plight of Forgotten Australians | Child protection",
-          "published": "2026-11-14T20:00:00Z",
+          "url": "https://www.theguardian.com/food/2026/nov/20/benjamina-ebuehi-recipe-maple-custard-tart",
+          "title": "Benjamina Ebuehi recipe for maple custard tart | Food",
+          "published": "2026-11-20T06:45:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         },
         {
           "provider": "The Guardian",
-          "url": "https://www.theguardian.com/uk-news/2026/nov/13/former-hamas-bodyguard-convicted-of-birmingham-knife-also-wanted-in-germany",
-          "title": "Former Hamas bodyguard convicted of Birmingham knife crime also wanted in Germany",
-          "published": "2026-11-13T18:00:00Z",
+          "url": "https://www.theguardian.com/uk-news/2026/nov/20/lion-academy-trust-children-palestine-badges-prevent-london",
+          "title": "Academy trust pays out after Prevent threat over children Palestine badges | Prevent strategy",
+          "published": "2026-11-20T06:45:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         },
         {
           "provider": "The Guardian",
-          "url": "https://www.theguardian.com/society/2026/nov/13/no-10-considering-expanding-under-25s-benefits-overhaul-to-older-age-groups",
-          "title": "No 10 considering expanding under - 25s benefits overhaul to older age groups",
-          "published": "2026-11-13T18:00:00Z",
+          "url": "https://www.theguardian.com/travel/2026/nov/20/winter-christmas-city-breaks-europe-readers-travel-tips",
+          "title": "The place becomes a jewellery box of glittering light : reader favourite winter city breaks in Europe | City breaks",
+          "published": "2026-11-20T06:45:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "The Guardian",
+          "url": "https://www.theguardian.com/commentisfree/2026/nov/20/posh-salt-scandal-pinch-german-maldon",
+          "title": "Why I take this posh salt scandal with a pinch of you know what | Thea Everett",
+          "published": "2026-11-20T06:45:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "The Guardian",
+          "url": "https://www.theguardian.com/environment/2026/nov/20/country-diary-its-been-a-strange-year-for-seasons-now-our-fungi-are-in-disarray",
+          "title": "Country diary : It been a strange year for seasons – now our fungi are in disarray | Fungi",
+          "published": "2026-11-20T06:15:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         }
       ],
-      "status": "stale"
+      "status": "indexed"
     },
     "NHK World Japan": {
       "items": [],
@@ -293,6 +309,46 @@
     }
   },
   "articles": [
+    {
+      "provider": "The Guardian",
+      "url": "https://www.theguardian.com/food/2026/nov/20/benjamina-ebuehi-recipe-maple-custard-tart",
+      "title": "Benjamina Ebuehi recipe for maple custard tart | Food",
+      "published": "2026-11-20T06:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "The Guardian",
+      "url": "https://www.theguardian.com/uk-news/2026/nov/20/lion-academy-trust-children-palestine-badges-prevent-london",
+      "title": "Academy trust pays out after Prevent threat over children Palestine badges | Prevent strategy",
+      "published": "2026-11-20T06:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "The Guardian",
+      "url": "https://www.theguardian.com/travel/2026/nov/20/winter-christmas-city-breaks-europe-readers-travel-tips",
+      "title": "The place becomes a jewellery box of glittering light : reader favourite winter city breaks in Europe | City breaks",
+      "published": "2026-11-20T06:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/20/posh-salt-scandal-pinch-german-maldon",
+      "title": "Why I take this posh salt scandal with a pinch of you know what | Thea Everett",
+      "published": "2026-11-20T06:45:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "The Guardian",
+      "url": "https://www.theguardian.com/environment/2026/nov/20/country-diary-its-been-a-strange-year-for-seasons-now-our-fungi-are-in-disarray",
+      "title": "Country diary : It been a strange year for seasons – now our fungi are in disarray | Fungi",
+      "published": "2026-11-20T06:15:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
     {
       "provider": "CBC News",
       "url": "https://www.cbc.ca/radio/asithappens/grand-theft-auto-evolution-9.7428823",
@@ -414,14 +470,6 @@
       "classification": "publisher-url-path"
     },
     {
-      "provider": "The Guardian",
-      "url": "https://www.theguardian.com/society/ng-interactive/2026/nov/15/forgotten-australians-trauma-childrens-homes-orphanages-ntwnfb",
-      "title": "Im still trying to find out who I am : the little - understood plight of Forgotten Australians | Child protection",
-      "published": "2026-11-14T20:00:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
       "provider": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/2026/11/13/truck-and-bus-crash-in-indias-assam-state-kills-at-least-24-people",
       "title": "Truck and bus crash in India Assam state kills at least 24 people | Transport News",
@@ -457,22 +505,6 @@
       "provider": "Al Jazeera",
       "url": "https://www.aljazeera.com/news/2026/11/13/russias-demands-come-from-different-reality-as-war-efforts-stagnates",
       "title": "Ukraine claims record 3 , 000 Russian casualties in one day as war drags on",
-      "published": "2026-11-13T18:00:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "The Guardian",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/13/former-hamas-bodyguard-convicted-of-birmingham-knife-also-wanted-in-germany",
-      "title": "Former Hamas bodyguard convicted of Birmingham knife crime also wanted in Germany",
-      "published": "2026-11-13T18:00:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "The Guardian",
-      "url": "https://www.theguardian.com/society/2026/nov/13/no-10-considering-expanding-under-25s-benefits-overhaul-to-older-age-groups",
-      "title": "No 10 considering expanding under - 25s benefits overhaul to older age groups",
       "published": "2026-11-13T18:00:00Z",
       "region": "World",
       "classification": "publisher-url-path"
@@ -523,11 +555,11 @@
     "Al Jazeera: HTTP Error 429: Too Many Requests",
     "Associated Press: HTTP Error 429: Too Many Requests",
     "BBC News: HTTP Error 429: Too Many Requests",
+    "CBC News: HTTP Error 429: Too Many Requests",
     "CNA: HTTP Error 429: Too Many Requests",
     "Deutsche Welle: HTTP Error 429: Too Many Requests",
     "Euronews: HTTP Error 429: Too Many Requests",
     "France 24: HTTP Error 429: Too Many Requests",
-    "The Guardian: HTTP Error 429: Too Many Requests",
     "NHK World Japan: HTTP Error 429: Too Many Requests",
     "NPR: HTTP Error 429: Too Many Requests",
     "The New York Times: HTTP Error 429: Too Many Requests",
