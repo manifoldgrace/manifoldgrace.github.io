@@ -1,27 +1,248 @@
 {
   "schema_version": 1,
   "source": "Bloomberg RSS metadata",
-  "archive_updated_utc": "2026-11-20T21:47:58Z",
+  "archive_updated_utc": "2026-11-21T03:12:16Z",
   "feed_status": {
     "Technology": {
       "status": "ok",
-      "matches": 15
+      "matches": 14
     },
     "Business": {
       "status": "ok",
-      "matches": 8
+      "matches": 11
     },
     "Industries": {
       "status": "ok",
-      "matches": 1
+      "matches": 0
     },
     "Markets": {
       "status": "ok",
       "matches": 8
     }
   },
-  "article_count": 472,
+  "article_count": 490,
   "articles": [
+    {
+      "title": "Stocks Close Lower on AI Selloff, Anthropic Gives Up Gains, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-21/stocks-close-lower-on-ai-selloff-anthropic-gives-up-gains-more-mwptyueo",
+      "published": "2026-11-21T03:10:33Z",
+      "authors": "ED KALEGI",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Stocks Close Lower on AI Selloff, Anthropic Gives Up Gains, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-21/stocks-close-lower-on-ai-selloff-anthropic-gives-up-gains-more",
+      "published": "2026-11-21T01:19:09Z",
+      "authors": "ED KALEGI",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Anthropic Researcher Claims to Solve Riemann Problem With Claude",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-21/anthropic-researcher-claims-to-solve-riemann-problem-with-claude",
+      "published": "2026-11-21T00:17:14Z",
+      "authors": "Elena Eisenstadt and Rachel Metz",
+      "categories": [
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Wall Street Week | Gaming Blockbuster, Healthcare Costs, Cybersecurity Meets AI",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-21/wall-street-week-gaming-blockbuster-cybersecurity-video",
+      "published": "2026-11-21T00:13:38Z",
+      "authors": "",
+      "categories": [
+        "Governance & regulation",
+        "Safety & cybersecurity"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stock Movers: Anthropic, Nvidia, UnitedHealth Group (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/stock-movers-anthropic-nvidia-unitedhealth-group-podcast",
+      "published": "2026-11-20T23:42:52Z",
+      "authors": "DANIEL KARP",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Tony Wang on CrowdStrike-Zscaler Deal, AI Trade",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/tony-wang-on-crowdstrike-zscaler-deal-ai-trade-video",
+      "published": "2026-11-20T23:27:12Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "Stocks Close Lower on AI Selloff, Anthropic Gives Up Gains, More",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/stocks-close-lower-on-ai-selloff-anthropic-gives-up-gains-more",
+      "published": "2026-11-20T23:15:06Z",
+      "authors": "ED KALEGI",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Markets, Anthropic Plummet on AI Fear: Evening Briefing Americas",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-20/markets-anthropic-plummet-on-ai-fear-evening-briefing-americas",
+      "published": "2026-11-20T23:10:41Z",
+      "authors": "David Rovella",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Hindlian Advisory CEO on AI & Anthropic Market Sell-off",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/hindlian-advisory-ceo-on-ai-anthropic-market-sell-off-video",
+      "published": "2026-11-20T22:58:38Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "The Mark Walter Probe Is Reverberating Through Insurance, Sports and AI",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/the-mark-walter-probe-is-reverberating-through-insurance-sports-and-ai",
+      "published": "2026-11-20T22:55:30Z",
+      "authors": "David Gura",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Bloomberg Businessweek Daily: AI Transforms World (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/bloomberg-businessweek-daily-ai-transforms-world-podcast",
+      "published": "2026-11-20T22:43:11Z",
+      "authors": "BRENDAN GAMBESKI",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Big Take: Walter Probe Hits Insurance, Sports and AI (Podcast)",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/big-take-walter-probe-hits-insurance-sports-and-ai-podcast",
+      "published": "2026-11-20T22:38:38Z",
+      "authors": "",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Scribe CEO Jennifer Smith on AI Usage in the Workplace",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/scribe-ceo-jennifer-smith-on-ai-usage-in-the-workplace-video",
+      "published": "2026-11-20T22:38:25Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Models & research"
+      ],
+      "feeds": [
+        "Technology"
+      ]
+    },
+    {
+      "title": "S&P/TSX Composite Corrects as AI Worries Hammer Markets",
+      "url": "https://www.bloomberg.com/news/newsletters/2026-11-20/s-p-tsx-composite-corrects-as-ai-worries-hammer-markets",
+      "published": "2026-11-20T22:32:42Z",
+      "authors": "Derek Decloet and Geoffrey Morgan",
+      "categories": [
+        "Investment & markets"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Trump Says Huang Should Return to Nvidia After ‘Big Apology’",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/trump-huang-should-return-to-nvidia-after-big-apology-video",
+      "published": "2026-11-20T22:31:45Z",
+      "authors": "",
+      "categories": [
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "S&P, Dow In Correction, Nasdaq Negative, Anthropic Loses Gains",
+      "url": "https://www.bloomberg.com/news/audio/2026-11-20/s-p-dow-in-correction-nasdaq-negative-anthropic-loses-gains",
+      "published": "2026-11-20T22:17:49Z",
+      "authors": "AMY MORRIS",
+      "categories": [
+        "AI industry"
+      ],
+      "feeds": [
+        "Business"
+      ]
+    },
+    {
+      "title": "Nvidia Plunges as SEC Probe Deepens AI Market Selloff | Closing Bell",
+      "url": "https://www.bloomberg.com/news/videos/2026-11-20/nvidia-plunges-on-sec-probe-closing-bell-video",
+      "published": "2026-11-20T22:08:59Z",
+      "authors": "",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
+    {
+      "title": "AI Euphoria Gives Way to Fear And ‘Face-Ripping Volatility’",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-20/wall-street-nears-breaking-point-as-fear-grips-global-markets",
+      "published": "2026-11-20T21:52:00Z",
+      "authors": "Lu Wang, Natalia Kniazhevich and Vildana Hajric",
+      "categories": [
+        "Investment & markets",
+        "Infrastructure & chips"
+      ],
+      "feeds": [
+        "Markets"
+      ]
+    },
     {
       "title": "Victor Peng Sees AI, Quantum Computing as Long-Term Opportunities",
       "url": "https://www.bloomberg.com/news/videos/2026-11-20/victor-peng-sees-ai-quantum-as-long-term-opportunities-video",
