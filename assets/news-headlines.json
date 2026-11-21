@@ -2,7 +2,7 @@
   "schema_version": 1,
   "source": "GDELT DOC API",
   "source_url": "https://www.gdeltproject.org/",
-  "updated": "2026-11-20T20:07:37.285685Z",
+  "updated": "2026-11-21T06:59:16.635873Z",
   "providers": {
     "Al Jazeera": {
       "items": [
@@ -237,41 +237,41 @@
       "items": [
         {
           "provider": "The Guardian",
+          "url": "https://www.theguardian.com/australia-news/ng-interactive/2026/nov/21/padre-dave-the-minister-flies-to-outback-stations",
+          "title": "We dont talk about the God stuff : a day with Padre Dave , the outback flying minister | Rural and regional Australia",
+          "published": "2026-11-21T00:30:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "The Guardian",
+          "url": "https://www.theguardian.com/business/2026/nov/20/bayer-roundup-cancer-litigation",
+          "title": "Judge approves $7 . 25bn Bayer payout to settle claims that Roundup causes cancer",
+          "published": "2026-11-21T00:30:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "The Guardian",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/21/homebirth-insurance-rules-midwives-fear-freebirth-rise-ntwnfb",
+          "title": "Angela home birth could be upended by Australia new insurance rules . Midwives fear it will drive women to freebirths | Health",
+          "published": "2026-11-21T00:30:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "The Guardian",
+          "url": "https://www.theguardian.com/australia-news/2026/nov/20/brand-what-rhymes-with-blunt-and-female-loneliness",
+          "title": "Five Great Reads : Brand , the first  weird Bond  and female loneliness |",
+          "published": "2026-11-21T00:30:00Z",
+          "region": "World",
+          "classification": "publisher-url-path"
+        },
+        {
+          "provider": "The Guardian",
           "url": "https://www.theguardian.com/food/2026/nov/20/benjamina-ebuehi-recipe-maple-custard-tart",
           "title": "Benjamina Ebuehi recipe for maple custard tart | Food",
           "published": "2026-11-20T06:45:00Z",
-          "region": "World",
-          "classification": "publisher-url-path"
-        },
-        {
-          "provider": "The Guardian",
-          "url": "https://www.theguardian.com/uk-news/2026/nov/20/lion-academy-trust-children-palestine-badges-prevent-london",
-          "title": "Academy trust pays out after Prevent threat over children Palestine badges | Prevent strategy",
-          "published": "2026-11-20T06:45:00Z",
-          "region": "World",
-          "classification": "publisher-url-path"
-        },
-        {
-          "provider": "The Guardian",
-          "url": "https://www.theguardian.com/travel/2026/nov/20/winter-christmas-city-breaks-europe-readers-travel-tips",
-          "title": "The place becomes a jewellery box of glittering light : reader favourite winter city breaks in Europe | City breaks",
-          "published": "2026-11-20T06:45:00Z",
-          "region": "World",
-          "classification": "publisher-url-path"
-        },
-        {
-          "provider": "The Guardian",
-          "url": "https://www.theguardian.com/commentisfree/2026/nov/20/posh-salt-scandal-pinch-german-maldon",
-          "title": "Why I take this posh salt scandal with a pinch of you know what | Thea Everett",
-          "published": "2026-11-20T06:45:00Z",
-          "region": "World",
-          "classification": "publisher-url-path"
-        },
-        {
-          "provider": "The Guardian",
-          "url": "https://www.theguardian.com/environment/2026/nov/20/country-diary-its-been-a-strange-year-for-seasons-now-our-fungi-are-in-disarray",
-          "title": "Country diary : It been a strange year for seasons – now our fungi are in disarray | Fungi",
-          "published": "2026-11-20T06:15:00Z",
           "region": "World",
           "classification": "publisher-url-path"
         }
@@ -311,41 +311,41 @@
   "articles": [
     {
       "provider": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/ng-interactive/2026/nov/21/padre-dave-the-minister-flies-to-outback-stations",
+      "title": "We dont talk about the God stuff : a day with Padre Dave , the outback flying minister | Rural and regional Australia",
+      "published": "2026-11-21T00:30:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/nov/20/bayer-roundup-cancer-litigation",
+      "title": "Judge approves $7 . 25bn Bayer payout to settle claims that Roundup causes cancer",
+      "published": "2026-11-21T00:30:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/21/homebirth-insurance-rules-midwives-fear-freebirth-rise-ntwnfb",
+      "title": "Angela home birth could be upended by Australia new insurance rules . Midwives fear it will drive women to freebirths | Health",
+      "published": "2026-11-21T00:30:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/20/brand-what-rhymes-with-blunt-and-female-loneliness",
+      "title": "Five Great Reads : Brand , the first  weird Bond  and female loneliness |",
+      "published": "2026-11-21T00:30:00Z",
+      "region": "World",
+      "classification": "publisher-url-path"
+    },
+    {
+      "provider": "The Guardian",
       "url": "https://www.theguardian.com/food/2026/nov/20/benjamina-ebuehi-recipe-maple-custard-tart",
       "title": "Benjamina Ebuehi recipe for maple custard tart | Food",
       "published": "2026-11-20T06:45:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "The Guardian",
-      "url": "https://www.theguardian.com/uk-news/2026/nov/20/lion-academy-trust-children-palestine-badges-prevent-london",
-      "title": "Academy trust pays out after Prevent threat over children Palestine badges | Prevent strategy",
-      "published": "2026-11-20T06:45:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "The Guardian",
-      "url": "https://www.theguardian.com/travel/2026/nov/20/winter-christmas-city-breaks-europe-readers-travel-tips",
-      "title": "The place becomes a jewellery box of glittering light : reader favourite winter city breaks in Europe | City breaks",
-      "published": "2026-11-20T06:45:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/20/posh-salt-scandal-pinch-german-maldon",
-      "title": "Why I take this posh salt scandal with a pinch of you know what | Thea Everett",
-      "published": "2026-11-20T06:45:00Z",
-      "region": "World",
-      "classification": "publisher-url-path"
-    },
-    {
-      "provider": "The Guardian",
-      "url": "https://www.theguardian.com/environment/2026/nov/20/country-diary-its-been-a-strange-year-for-seasons-now-our-fungi-are-in-disarray",
-      "title": "Country diary : It been a strange year for seasons – now our fungi are in disarray | Fungi",
-      "published": "2026-11-20T06:15:00Z",
       "region": "World",
       "classification": "publisher-url-path"
     },
@@ -559,11 +559,11 @@
     "CNA: HTTP Error 429: Too Many Requests",
     "Deutsche Welle: HTTP Error 429: Too Many Requests",
     "Euronews: HTTP Error 429: Too Many Requests",
-    "France 24: HTTP Error 429: Too Many Requests",
+    "France 24: No indexed articles",
     "NHK World Japan: HTTP Error 429: Too Many Requests",
     "NPR: HTTP Error 429: Too Many Requests",
     "The New York Times: HTTP Error 429: Too Many Requests",
-    "Reuters: HTTP Error 429: Too Many Requests",
+    "Reuters: No indexed articles",
     "Sky News: HTTP Error 429: Too Many Requests"
   ]
 }
